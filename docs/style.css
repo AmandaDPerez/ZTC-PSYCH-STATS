@@ -104,20 +104,19 @@ figcaption {
 }
 
 /* Sidebar */
-#bookdown-nav {
+.book .book-summary {
   background-color: #e6f7ff; /* Light blue */
-  border-right: 1px solid #ccc;
 }
 
-#bookdown-nav .bookdown-nav-title {
+.book .book-summary .summary-title {
   background-color: #cceeff; /* Slightly darker blue */
   color: #333;
 }
 
-#bookdown-nav a {
+.book .book-summary a {
   color: #007bff; /* Link color */
 }
 
-#bookdown-nav a:hover {
+.book .book-summary a:hover {
   background-color: #b3e0ff; /* Hover color */
 }
