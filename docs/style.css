@@ -102,3 +102,22 @@ figcaption {
   margin-top: 10px;
   font-style: italic;
 }
+
+/* Sidebar */
+#bookdown-nav {
+  background-color: #e6f7ff; /* Light blue */
+  border-right: 1px solid #ccc;
+}
+
+#bookdown-nav .bookdown-nav-title {
+  background-color: #cceeff; /* Slightly darker blue */
+  color: #333;
+}
+
+#bookdown-nav a {
+  color: #007bff; /* Link color */
+}
+
+#bookdown-nav a:hover {
+  background-color: #b3e0ff; /* Hover color */
+}
