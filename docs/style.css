@@ -106,15 +106,18 @@ figcaption {
 /* Sidebar */
 .book .book-summary {
   background-color: #e6f7ff; /* Light blue */
+  font-family: "Times New Roman", Times, serif; /* Font */
 }
 
 .book .book-summary .summary-title {
   background-color: #cceeff; /* Slightly darker blue */
   color: #333;
+  font-family: "Times New Roman", Times, serif; /* Font */
 }
 
 .book .book-summary a {
   color: #007bff; /* Link color */
+  font-family: "Times New Roman", Times, serif; /* Font */
 }
 
 .book .book-summary a:hover {
