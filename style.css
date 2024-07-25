@@ -1,14 +1,104 @@
-p.caption {
-  color: #777;
-  margin-top: 10px;
+/* General Text */
+body {
+  font-family: "Times New Roman", Times, serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
+
+/* Paragraph Captions */
+p.caption {
+  color: #555;
+  margin-top: 15px;
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+/* Inline Code */
 p code {
   white-space: inherit;
+  background-color: #f9f9f9;
+  padding: 2px 4px;
+  border-radius: 4px;
 }
+
+/* Code Blocks */
 pre {
   word-break: normal;
   word-wrap: normal;
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 4px;
 }
+
 pre code {
   white-space: inherit;
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Georgia", serif;
+  color: #333;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 2.2em;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.8em;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 8px;
+}
+
+h3 {
+  font-size: 1.6em;
+}
+
+h4 {
+  font-size: 1.4em;
+}
+
+h5 {
+  font-size: 1.2em;
+}
+
+h6 {
+  font-size: 1em;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+/* Figures */
+figure {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+figcaption {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 10px;
+  font-style: italic;
 }
