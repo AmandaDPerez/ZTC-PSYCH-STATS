@@ -17,3 +17,8 @@ before-you-install
 installing-r-studio-on-windows
 installing-r-studio-on-macos
 verify-installation-1
+understanding-the-r-studio-interface
+the-r-studio-layout
+purpose-of-each-pane
+navigating-and-customizing-the-interface
+best-practices
