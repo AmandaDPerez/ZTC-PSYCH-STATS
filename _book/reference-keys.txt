@@ -1,0 +1,14 @@
+understanding-people-through-data
+what-you-will-learn
+emphasis-on-psychological-research
+hands-on-learning-with-r-and-r-studio
+introduction-to-r-and-r-studio
+what-is-r
+features-of-r
+what-is-r-studio
+why-use-r-studio
+r-and-r-studio-in-psychological-research
+installing-r
+installing-r-on-windows
+installing-r-on-macos
+verify-installation

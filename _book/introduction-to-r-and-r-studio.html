@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 1 Introduction to R and R Studio | Introduction to Psychological Statistics</title>
+  <meta name="description" content="Chapter 1 Introduction to R and R Studio | Introduction to Psychological Statistics" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 1 Introduction to R and R Studio | Introduction to Psychological Statistics" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 1 Introduction to R and R Studio | Introduction to Psychological Statistics" />
+  
+  
+  
+
+<meta name="author" content="A.D.Perez, PhD" />
+
+
+<meta name="date" content="2024-08-07" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<p class="toc-title">Table of Contents</p>
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome to the Online Book for Psychological Statistics</a>
+<ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#understanding-people-through-data"><i class="fa fa-check"></i><b>0.1</b> Understanding People Through Data</a></li>
+<li class="chapter" data-level="0.2" data-path="index.html"><a href="index.html#what-you-will-learn"><i class="fa fa-check"></i><b>0.2</b> What You Will Learn</a></li>
+<li class="chapter" data-level="0.3" data-path="index.html"><a href="index.html#emphasis-on-psychological-research"><i class="fa fa-check"></i><b>0.3</b> Emphasis on Psychological Research</a></li>
+<li class="chapter" data-level="0.4" data-path="index.html"><a href="index.html#hands-on-learning-with-r-and-r-studio"><i class="fa fa-check"></i><b>0.4</b> Hands-On Learning with R and R Studio</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="introduction-to-r-and-r-studio.html"><a href="introduction-to-r-and-r-studio.html"><i class="fa fa-check"></i><b>1</b> Introduction to R and R Studio</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="introduction-to-r-and-r-studio.html"><a href="introduction-to-r-and-r-studio.html#what-is-r"><i class="fa fa-check"></i><b>1.1</b> What is R?</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="introduction-to-r-and-r-studio.html"><a href="introduction-to-r-and-r-studio.html#features-of-r"><i class="fa fa-check"></i><b>1.1.1</b> Features of R</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="introduction-to-r-and-r-studio.html"><a href="introduction-to-r-and-r-studio.html#what-is-r-studio"><i class="fa fa-check"></i><b>1.2</b> What is R Studio?</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="introduction-to-r-and-r-studio.html"><a href="introduction-to-r-and-r-studio.html#why-use-r-studio"><i class="fa fa-check"></i><b>1.2.1</b> Why Use R Studio?</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="introduction-to-r-and-r-studio.html"><a href="introduction-to-r-and-r-studio.html#r-and-r-studio-in-psychological-research"><i class="fa fa-check"></i><b>1.3</b> R and R Studio in Psychological Research</a></li>
+<li class="chapter" data-level="1.4" data-path="introduction-to-r-and-r-studio.html"><a href="introduction-to-r-and-r-studio.html#installing-r"><i class="fa fa-check"></i><b>1.4</b> Installing R</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="introduction-to-r-and-r-studio.html"><a href="introduction-to-r-and-r-studio.html#installing-r-on-windows"><i class="fa fa-check"></i><b>1.4.1</b> Installing R on Windows</a></li>
+<li class="chapter" data-level="1.4.2" data-path="introduction-to-r-and-r-studio.html"><a href="introduction-to-r-and-r-studio.html#installing-r-on-macos"><i class="fa fa-check"></i><b>1.4.2</b> Installing R on macOS</a></li>
+<li class="chapter" data-level="1.4.3" data-path="introduction-to-r-and-r-studio.html"><a href="introduction-to-r-and-r-studio.html#verify-installation"><i class="fa fa-check"></i><b>1.4.3</b> Verify Installation</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<p>Please see the <a href="https://bookdown.org">bookdown documentation</a> for more information.</p>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to Psychological Statistics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="introduction-to-r-and-r-studio" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Chapter 1</span> Introduction to R and R Studio<a href="introduction-to-r-and-r-studio.html#introduction-to-r-and-r-studio" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Welcome to the beginning of your journey into the world of statistical analysis with R and R Studio. This section will introduce you to the fundamental concepts and tools you’ll use throughout this course to explore and analyze data.</p>
+<div id="what-is-r" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> What is R?<a href="introduction-to-r-and-r-studio.html#what-is-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>R is a powerful statistical programming language used widely by statisticians, data scientists, and researchers to analyze and visualize data. It’s open source, which means it is free to use, and has a vast community of users and developers who contribute to its continuous development.</p>
+<p><img src="images/r-proj-site.png" alt="Screenshot of R Project website" /> <em>Screenshot of the R Project homepage, where R can be downloaded.</em></p>
+<div id="features-of-r" class="section level3 hasAnchor" number="1.1.1">
+<h3><span class="header-section-number">1.1.1</span> Features of R<a href="introduction-to-r-and-r-studio.html#features-of-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong>Statistical Analysis</strong>: Provides a wide array of techniques for data analysis, including linear and nonlinear modeling, classical statistical tests, time-series analysis, classification, clustering, and more.</li>
+<li><strong>Graphics</strong>: Boasts high-quality graphics capabilities that allow for the creation of well-designed publications and interactive visualizations for the web.</li>
+<li><strong>Packages</strong>: Comes with a comprehensive ecosystem of packages, available through the Comprehensive R Archive Network (CRAN), which extend R’s capabilities to handle tasks related to psychological research and beyond.</li>
+<li><strong>Programming</strong>: Supports both procedural programming with functions and object-oriented programming with generic functions.</li>
+<li><strong>Community Support</strong>: Has a large, active community offering support through mailing lists, forums, and blogs.</li>
+</ul>
+</div>
+</div>
+<div id="what-is-r-studio" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> What is R Studio?<a href="introduction-to-r-and-r-studio.html#what-is-r-studio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>R Studio is an integrated development environment (IDE) for R. It provides a user-friendly interface that makes using R easier and more efficient. R Studio includes a console, syntax-highlighting editor that supports direct code execution, and tools for plotting, history, debugging, and workspace management.</p>
+<p><img src="images/r-studio.png" alt="Screenshot of R Studio Interface" /> <em>Overview of the R Studio interface.</em></p>
+<div id="why-use-r-studio" class="section level3 hasAnchor" number="1.2.1">
+<h3><span class="header-section-number">1.2.1</span> Why Use R Studio?<a href="introduction-to-r-and-r-studio.html#why-use-r-studio" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong>Ease of Use</strong>: The R Studio environment organizes everything you need to write code, visualize data, and debug errors in one place.</li>
+<li><strong>Productivity Tools</strong>: Features like code completion, snippets, and the ability to directly output graphs enhance productivity.</li>
+<li><strong>Project Management</strong>: Simplifies the process of managing files associated with specific projects, making it easy to handle multiple, complex research projects.</li>
+<li><strong>Reproducibility</strong>: Encourages reproducible research by integrating well with R Markdown, which allows you to create dynamic reports that blend R code with narrative text and output.</li>
+</ul>
+</div>
+</div>
+<div id="r-and-r-studio-in-psychological-research" class="section level2 hasAnchor" number="1.3">
+<h2><span class="header-section-number">1.3</span> R and R Studio in Psychological Research<a href="introduction-to-r-and-r-studio.html#r-and-r-studio-in-psychological-research" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In psychological research, R and R Studio play a critical role in:
+- <strong>Data Collection and Cleaning</strong>: Handling and cleaning raw data from experiments or surveys.
+- <strong>Statistical Testing</strong>: Performing t-tests, ANOVA, regression analyses, and more sophisticated statistical models.
+- <strong>Data Visualization</strong>: Creating compelling visualizations to explore data trends and communicate results.
+- <strong>Reproducible Research</strong>: Producing reproducible analyses that can be shared and verified by others, enhancing the transparency and credibility of research findings.</p>
+<p><img src="images/ch1-Rplot.png" alt="Example of Data Visualization in R" /> <em>Example of a data visualization created in R.</em></p>
+<p>In the next sections, we will guide you through installing R and R Studio on your system and begin exploring their capabilities through practical exercises. This foundation will set you up for success as you dive deeper into the statistical techniques and tools that will be covered throughout this course.</p>
+</div>
+<div id="installing-r" class="section level2 hasAnchor" number="1.4">
+<h2><span class="header-section-number">1.4</span> Installing R<a href="introduction-to-r-and-r-studio.html#installing-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>To utilize R and R Studio for your statistical analysis, the first step is to install R. R is the underlying statistical computing environment, while R Studio provides an integrated development environment (IDE) for R. Below are the detailed instructions for installing R on Windows and macOS.</p>
+<div id="installing-r-on-windows" class="section level3 hasAnchor" number="1.4.1">
+<h3><span class="header-section-number">1.4.1</span> Installing R on Windows<a href="introduction-to-r-and-r-studio.html#installing-r-on-windows" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Follow these steps to install R on a Windows computer:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Visit the CRAN Website</strong>: Go to the Comprehensive R Archive Network (CRAN) at <a href="https://cran.r-project.org">https://cran.r-project.org</a>. This website hosts the R software and its documentation.</p></li>
+<li><p><strong>Download R for Windows</strong>: Click on the link titled “Download R for Windows”. This will take you to the Windows download page.</p>
+<div class="float">
+<img src="images/r-windows.png" alt="CRAN Homepage" />
+<div class="figcaption">CRAN Homepage</div>
+</div></li>
+<li><p><strong>Install R Base</strong>: On the download page, click “install R for the first time” to navigate to the base distribution page. There, download the latest version of R by clicking the link at the top of the page.</p>
+<div class="float">
+<img src="images/r-windows-1st.png" alt="Download R for Windows" />
+<div class="figcaption">Download R for Windows</div>
+</div></li>
+<li><p><strong>Run the Installer</strong>: Once the download is complete, open the executable file to start the installation process. Follow the prompts in the installer, accepting the default settings for a standard installation.</p></li>
+<li><p><strong>Complete the Installation</strong>: After following the installation prompts, click ‘Finish’ to complete the installation.</p></li>
+</ol>
+</div>
+<div id="installing-r-on-macos" class="section level3 hasAnchor" number="1.4.2">
+<h3><span class="header-section-number">1.4.2</span> Installing R on macOS<a href="introduction-to-r-and-r-studio.html#installing-r-on-macos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Follow these steps to install R on a macOS computer:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Visit the CRAN Website</strong>: Navigate to <a href="https://cran.r-project.org">https://cran.r-project.org</a> to access the CRAN homepage.</p></li>
+<li><p><strong>Download R for macOS</strong>: Click on the “Download R for (Mac) OS X” link to go to the macOS download page.</p>
+<div class="float">
+<img src="images/r-mac.png" alt="CRAN Homepage" />
+<div class="figcaption">CRAN Homepage</div>
+</div></li>
+<li><p><strong>Install R Package</strong>: On the macOS download page, select the package suitable for your version of macOS. Click on the link to download the <code>.pkg</code> installer file.</p>
+<div class="float">
+<img src="images/r-mac-version.png" alt="Download R for macOS" />
+<div class="figcaption">Download R for macOS</div>
+</div></li>
+<li><p><strong>Run the Installer</strong>: After the download is complete, double-click on the <code>.pkg</code> file to open the installer. Follow the on-screen instructions, accepting the default options where suggested.</p></li>
+<li><p><strong>Complete the Installation</strong>: Proceed through the installer by clicking ‘Continue’ and then ‘Install’. You may need to enter your administrator password. Click ‘Finish’ once the installation process completes.</p></li>
+</ol>
+</div>
+<div id="verify-installation" class="section level3 hasAnchor" number="1.4.3">
+<h3><span class="header-section-number">1.4.3</span> Verify Installation<a href="introduction-to-r-and-r-studio.html#verify-installation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>After installing R on your system, it’s a good idea to verify that it was installed correctly:</p>
+<ul>
+<li><strong>Open R</strong>: Search for R in your applications (Windows) or use Spotlight (macOS) to find and launch R.</li>
+<li><strong>Check Version</strong>: In the R console, type <code>version</code> and press Enter. This will display information about the R version installed on your computer.</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="introduction-to-r-and-r-studio.html#cb1-1" tabindex="-1"></a>version</span></code></pre></div>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/AmandaDPerez/ZTC-RM/edit/main/01-R-intro.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/AmandaDPerez/ZTC-RM/blob/main/01-R-intro.Rmd",
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
