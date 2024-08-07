@@ -1,0 +1,90 @@
+::: foreword
+# Appendix: Answers to Chapter Exercises
+
+This appendix provides solutions to the exercises given at the end of each chapter. These solutions are intended to help you verify your work and understand the correct approach to each task.
+
+## Answers to Chapter 1 Exercises
+
+### Exercise 1: Familiarization with R Studio
+
+1.  **Create a new R script and save it**
+    -   Open R Studio, go to `File > New File > R Script`. This will open a new script tab in the Source Pane.
+    -   Save the script by clicking `File > Save As...`, and name it `practice_script.R`.
+2.  **Write and run a simple calculation**
+    -   In the script, write the following line of code:
+
+        ``` r
+        8 * 9
+        ```
+
+    -   To run this line, place your cursor on the line and press `Ctrl + Enter` (Windows) or `Cmd + Enter` (macOS).
+3.  **Comment your code**
+    -   Add a comment above the code explaining what it does:
+
+        ``` r
+        # This code calculates the product of 8 and 9
+        8 * 9
+        ```
+
+### Exercise 2: Basic Data Entry and Operation
+
+1.  **Create a vector of numbers**
+    -   Write the following line in an R script to create the vector:
+
+        ``` r
+        numbers <- 1:10
+        ```
+2.  **Calculate the sum of the vector**
+    -   To calculate and print the sum, add this line to your script:
+
+        ``` r
+        print(sum(numbers))
+        ```
+3.  **Save the script**
+    -   Ensure your work is saved in the script `practice_script.R` or in a new script file if preferred.
+
+### Exercise 3: Introduction to R Markdown
+
+1.  **Create a new R Markdown document**
+    -   Go to `File > New File > R Markdown...`, provide a title "My First R Markdown", and fill in your name as the author.
+2.  **Write a brief introduction**
+    -   In the document, use the following Markdown syntax:
+
+        ``` markdown
+        # About Me
+        This is a brief introduction about myself.
+        - I am learning R and R Studio.
+        - I enjoy data analysis.
+        **Bold Fact**: I aim to be a data scientist.
+        ```
+3.  **Embed a chunk of R code**
+    -   Include a code chunk that calculates the square of 12:
+
+```{r}
+12^2
+```
+
+4.  **Knit the document to HTML**
+    -   Click the `Knit` button and select `Knit to HTML`. Save the output in your project directory.
+
+### Exercise 4: Exploring the Help Pane
+
+1.  **Find help on the `plot` function**
+    -   In the Console, type `?plot` and press Enter. Review the help file that appears in the Help pane.
+2.  **Write a command to plot a graph**
+    -   In an R script, add the following line to plot a graph:
+
+        ``` r
+        plot(1:10, 1:10)
+        ```
+3.  **Add a title to the plot**
+    -   Modify the plot command to include a title:
+
+        ``` r
+        plot(1:10, 1:10, main = "Simple Linear Plot")
+        ```
+
+------------------------------------------------------------------------
+
+This appendix will be continuously updated as new exercises and chapters are added to the textbook, providing a comprehensive resource for students to check their work and ensure they understand the material thoroughly.
+:::
