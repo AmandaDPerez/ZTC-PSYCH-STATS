@@ -1,3 +1,10 @@
-down-the-rabbit-hole
+welcome-to-the-online-book-for-psychological-statistics
+understanding-people-through-data
+what-you-will-learn
+emphasis-on-psychological-research
+hands-on-learning-with-r-and-r-studio
+chapter-1-introduction-to-psychological-statistics
+section-1.1-background
+section-1.2-importance-of-statistics
 the-pool-of-tears
 a-caucus-race-and-a-long-tale
