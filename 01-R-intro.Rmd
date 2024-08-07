@@ -92,3 +92,52 @@ After installing R on your system, it's a good idea to verify that it was instal
 ```{r, eval=FALSE}
 version
 ```
+
+## Installing R Studio
+
+Once R is installed on your computer, the next step is to install R Studio, which will serve as your primary interface for writing and running R scripts. Here are step-by-step instructions to install R Studio on both Windows and macOS.
+
+### Before You Install
+
+Before installing R Studio, make sure that:
+- **R is Installed**: R Studio requires R to be installed on your computer. If you haven't installed R yet, please refer to the previous section for instructions.
+- **System Requirements**: Check the R Studio website for the latest system requirements to ensure compatibility with your operating system.
+
+### Installing R Studio on Windows
+
+Follow these steps to install R Studio on a Windows computer:
+
+1. **Download R Studio**: Visit the Posit website at [https://posit.co/download/rstudio-desktop/](https://posit.co/download/rstudio-desktop/) and navigate to the Download R Studio Desktop section. Click on the "Download RStudio Desktop for Windows" button.
+
+   ![Download R Studio for Windows](images/r-studio-windows.png)
+
+2. **Run the Installer**: After the download is complete, open the executable file to start the installation process. You may receive a security warning; click 'Run' to proceed.
+
+3. **Follow the Installation Prompts**: The installer will guide you through the setup process. Accept the license agreement and keep the default installation settings unless you have specific preferences.
+
+4. **Complete the Installation**: Click 'Finish' to complete the installation process. R Studio should now be installed on your computer.
+
+### Installing R Studio on macOS
+
+Follow these steps to install R Studio on a macOS computer:
+
+1. **Download R Studio**: Visit the Posit website at [https://posit.co/download/rstudio-desktop/](https://posit.co/download/rstudio-desktop/) and navigate to the Downloads table. Select the macOS linked file to download R Studio Desktop
+
+   ![Download R Studio for macOS](images/r-studio-mac.png)
+
+2. **Open the Installer**: After the download, locate the `.dmg` file in your Downloads folder and double-click to open it.
+
+3. **Drag R Studio to Applications**: A new window will open showing the R Studio icon. Drag this icon to your Applications folder to install the application.
+
+4. **Complete the Installation**: Double-click R Studio from your Applications folder to ensure it opens correctly and completes any setup it requires the first time it runs.
+
+### Verify Installation
+
+To verify that R Studio is correctly installed:
+- **Launch R Studio**: Open R Studio from your Applications menu (Windows) or your Applications folder (macOS).
+- **Check for R Version**: In the R Studio console, you should see the version of R that is being used by R Studio. 
+
+```{r, eval=FALSE}
+sessionInfo()  # This will print out your R session information, including R version.
+
+```

@@ -12,3 +12,8 @@ installing-r
 installing-r-on-windows
 installing-r-on-macos
 verify-installation
+installing-r-studio
+before-you-install
+installing-r-studio-on-windows
+installing-r-studio-on-macos
+verify-installation-1
