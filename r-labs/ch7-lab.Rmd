@@ -1,0 +1,76 @@
+---
+title: "Weekly Lab Homework Assignment: Computation"
+author: "Your Name"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: pdf_document
+---
+
+*Replace "Your Name" with your actual name.*
+
+## Objective:
+
+In this lab, you will practice creating APA-compliant graphs using ggplot2. Please complete each exercise by filling in the code chunks and interpreting the resulting graphs. Once you have completed the exercises, knit this document to PDF and submit it as instructed. Make sure your YAML header includes a title, your name, and the date.
+
+### Exercise 1: Creating an APA-Compliant Bar Graph
+
+**Dataset**: Use the built-in `iris` dataset to compare the mean sepal length across different species.
+
+**Tasks**:  
+1. Create a bar graph that shows the average sepal length for each species in the `iris` dataset.  
+2. Add error bars representing the standard error of the mean.  
+3. Apply APA formatting, including a descriptive title, axis labels, and removing unnecessary grid lines.  
+4. **Interpretation**: Describe which species has the longest average sepal length and which has the shortest. Discuss the reliability of these comparisons based on the error bars.
+
+```{r, warning = F, message = F}
+# Load ggplot2
+library(ggplot2)
+
+# Create the APA-compliant bar graph
+
+```
+
+**Interpretation**:     
+
+
+### Exercise 2: Modifying a ggplot2 Scatter Plot
+
+**Dataset**: Use the built-in `mtcars` dataset to create a scatter plot of `hp` (horsepower) versus `qsec` (quarter-mile time).
+
+**Tasks**:  
+1. Create a scatter plot showing the relationship between horsepower and quarter-mile time.  
+2. Add a line that summarizes the overall trend in the data (a line that shows the general direction the data points are heading).  
+3. Apply APA formatting to ensure the plot is clear and professional.  
+4. **Interpretation**: Explain whether cars with higher horsepower tend to have faster or slower quarter-mile times based on the direction of the trend line.
+
+```{r}
+# Create the APA-compliant scatter plot
+
+```
+
+**Interpretation**:   
+
+### Exercise 3: Creating an APA-Compliant Line Graph
+
+**Dataset**: Use the built-in `airquality` dataset to create a line graph showing the trend of average temperature (`Temp`) over the months (`Month`).
+
+**Tasks**:  
+1. Calculate the average temperature for each month in the `airquality` dataset.  
+2. Create a line graph that shows the trend of average temperature over the months.  
+3. Apply APA formatting, ensuring the title is centered, axis labels are clear, and the graph is free of unnecessary grid lines.  
+4. **Interpretation**: Describe how temperature changes over the months. Identify which month has the highest average temperature and discuss any patterns you observe.
+
+```{r}
+# Calculate average temperature by month
+
+
+# Create the APA-compliant line graph
+
+```
+
+**Interpretation**: 
+
+
+
+**Submission Instructions:**
+
+Ensure to knit your document to PDF format, checking that all content is correctly displayed before submission. Submit this PDF to Canvas Assignments.

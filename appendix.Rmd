@@ -585,6 +585,106 @@ pairs.panels(multi_var_data,
      - **Square Root Transformation**: Stabilizes variance, making the spread of the data more consistent across different values. Useful for data where variability increases with the value.
      - **Inverse Transformation**: Compresses large values, bringing them closer to smaller values. Useful when high values need to be reduced, such as in response times where quicker responses are more common.
 
+## Answers to Chapter 7 Practice Exercises
+
+### Exercise 1: Create an APA-Compliant Bar Graph
+
+**Objective**: Create a bar graph comparing the mean values of a categorical variable, including error bars to represent variability.
+
+**Solution**:
+
+```{r, warning = F, message = F}
+library(ggplot2)
+
+# Create the APA-compliant bar graph
+ggplot(mtcars, aes(x = factor(am), y = mpg)) +
+  geom_bar(stat = "summary", fun = "mean", fill = "lightblue", color = "black") +
+  geom_errorbar(stat = "summary", fun.data = "mean_se", width = 0.2, color = "black") +
+  labs(title = "Average MPG by Transmission Type",
+       x = "Transmission (0 = Automatic, 1 = Manual)",
+       y = "Miles Per Gallon") +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(size = 14, face = "bold", hjust = 0.5),
+    axis.title = element_text(size = 12),
+    axis.text = element_text(size = 10),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.border = element_rect(color = "black", size = 0.5, fill = NA)
+  )
+```
+
+**Explanation**:  
+- The `factor(am)` converts the transmission variable into a factor for categorical comparison.  
+- `geom_bar()` creates the bar graph, while `geom_errorbar()` adds error bars representing the standard error of the mean.  
+- APA formatting is applied using `theme_minimal()` with additional customization to meet APA standards.
+
+### Exercise 2: Modify a Basic ggplot2 Plot to Meet APA Standards
+
+**Objective**: Modify a basic scatter plot to adhere to APA formatting guidelines.
+
+**Solution**:
+
+```{r}
+# Create the basic scatter plot
+ggplot(mtcars, aes(x = wt, y = mpg)) +
+  geom_point(size = 3) +
+  labs(title = "Scatter Plot of Weight and MPG",
+       x = "Weight (1000 lbs)",
+       y = "Miles Per Gallon") +
+  geom_smooth(method = "lm", se = FALSE, color = "black", linetype = "dashed", size = 0.7) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(size = 14, face = "bold", hjust = 0.5),
+    axis.title = element_text(size = 12),
+    axis.text = element_text(size = 10),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.border = element_rect(color = "black", size = 0.5, fill = NA)
+  )
+```
+
+**Explanation**:  
+- A basic scatter plot is created with `geom_point()`.  
+- A trend line is added using `geom_smooth(method = "lm", se = FALSE)`.  
+- The plot is customized to meet APA standards by adjusting font sizes, adding a dashed trend line, and removing unnecessary grid lines.
+
+### Exercise 3: Create an APA-Compliant Line Graph and Save It as a High-Resolution Image
+
+**Objective**: Create a line graph comparing trends across groups, and save the graph as a high-resolution image.
+
+**Solution**:
+
+```{r}
+# Create the APA-compliant line graph
+p <- ggplot(mtcars, aes(x = wt, y = mpg, color = factor(cyl))) +
+  geom_line(size = 1, linetype = "solid") +
+  labs(title = "MPG vs. Weight by Cylinder Count",
+       x = "Weight (1000 lbs)",
+       y = "Miles Per Gallon",
+       color = "Cylinders") +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(size = 14, face = "bold", hjust = 0.5),
+    axis.title = element_text(size = 12),
+    axis.text = element_text(size = 10),
+    legend.title = element_text(size = 12),
+    legend.text = element_text(size = 10),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.border = element_rect(color = "black", size = 0.5, fill = NA),
+    legend.position = "right"
+  )
+
+# Save the graph as a high-resolution PNG file
+ggsave("mpg_vs_weight_by_cyl.png", plot = p, width = 8, height = 6, dpi = 300)
+```
+
+**Explanation**:  
+- The line graph is created using `geom_line()`, with different colors representing different cylinder counts.  
+- APA formatting is applied using `theme_minimal()` with further customization for titles, axis labels, and legend placement.  
+- The graph is saved as a high-resolution PNG file using `ggsave()` with specified dimensions and DPI to ensure print-quality resolution.
+
 
 ------------------------------------------------------------------------
 
