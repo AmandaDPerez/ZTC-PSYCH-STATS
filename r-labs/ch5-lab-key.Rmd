@@ -1,0 +1,149 @@
+---
+title: "Weekly Lab Homework Assignment: Computation"
+author: "Your Name"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: pdf_document
+---
+
+*Replace "Your Name" with your actual name.*
+
+## Objective:
+
+This lab assignment aims to reinforce your understanding of data cleaning and descriptive analysis using the `dplyr` and `psych` packages in R. You will apply these concepts through practical exercises, focusing on using and stacking `dplyr` functions with the `%>%` operator.
+
+## Instructions:
+
+1.  Complete each exercise by writing the necessary R code.
+
+2.  Ensure you use the `%>%` operator to chain multiple `dplyr` functions together.
+
+3.  Interpret the results for each exercise.
+
+4.  Knit your R Markdown file to a PDF and submit it as per the submission instructions.
+
+## Homework Exercises:
+
+### Exercise 1: Cleaning Data with `dplyr`
+
+Clean a dataset using various `dplyr` functions.
+
+1.  Use the following dataset for the exercise:
+
+```{r}
+data <- data.frame(
+  participant_id = 1:10,
+  reaction_time = c(250, 340, 295, NA, 310, 275, 325, 290, 360, NA),
+  gender = c("M", "F", "F", "M", "M", "F", "M", "F", "M", "F"),
+  accuracy = c(95, 87, 92, 88, 94, 91, 85, 89, 93, NA)
+)
+
+print(data)
+```
+
+2.  Clean the dataset by performing the following steps:
+
+    -   Remove rows with missing values.
+
+    -   Rename the `reaction_time` column to `response_time`.
+
+    -   Create a new column `performance_group` based on `accuracy` (High if `accuracy` \>= 90, otherwise Low).
+
+    -   Remove outliers from the `response_time` column.
+
+    -   Relevel the `performance_group` column to set "Low" as the reference level.
+
+```{r, warning = F, message  F}
+# Load necessary package
+library(dplyr)
+
+# Remove rows with missing values
+cleaned_data <- data %>%
+  filter(!is.na(reaction_time) & !is.na(accuracy)) %>%
+  # Rename the reaction_time column
+  rename(response_time = reaction_time) %>%
+  # Create a new column performance_group
+  mutate(performance_group = ifelse(accuracy >= 90, "High", "Low")) %>%
+  # Remove outliers from the response_time column
+  filter(response_time >= (quantile(response_time, 0.25) - 1.5 * IQR(response_time)) & 
+         response_time <= (quantile(response_time, 0.75) + 1.5 * IQR(response_time))) %>%
+  # Relevel the performance_group column
+  mutate(performance_group = relevel(factor(performance_group), ref = "Low"))
+
+# View the cleaned data
+print(cleaned_data)
+
+```
+
+**Interpretation**: Describe the changes made to the dataset, such as the number of rows removed due to missing values, the new column created, and any outliers removed.
+
+## Exercise 2: Generating Descriptive Statistics with `psych`
+
+Generate descriptive statistics for a dataset.
+
+1.  Use the following dataset for the exercise:
+
+```{r}
+study_hours <- data.frame(
+  participant_id = 1:10,
+  hours = c(5, 6, 4, 7, 5, 3, 8, 6, 5, 7)
+)
+
+```
+
+2.  Generate descriptive statistics using the `describe()` function from the `psych` package.
+
+```{r, warning = F, message = F}
+#load the psych package
+library(psych)
+
+# Generate descriptive statistics
+describe(study_hours)
+
+```
+
+-   **Interpretation**: Explain the descriptive statistics obtained, such as the mean, standard deviation, skewness, and kurtosis of the `hours` variable.
+
+## Exercise 3: Visualizing Data with `psych`
+
+Create graphical summaries of a dataset using the `psych` package.
+
+1.  Use the following dataset for the exercise:
+
+```{r}
+experiment_data <- data.frame(
+  response_time = c(250, 340, 295, 310, 275, 325, 290, 360, 285, 310),
+  accuracy = c(95, 87, 92, 88, 94, 91, 85, 89, 93, 90),
+  age = c(23, 35, 29, 22, 30, 31, 27, 40, 24, 32)
+)
+
+```
+
+-   Create a correlation plot using the `corPlot()` function.
+
+```{r}
+# Create the correlation plot
+corMatrix <- cor(experiment_data)
+corPlot(corMatrix, numbers = TRUE, main = "Correlation Matrix")
+
+```
+
+-   **Interpretation**: Describe the correlation coefficients displayed in the plot, indicating the strength and direction of relationships between variables.
+
+-   Create pair panels using the `pairs.panels()` function.
+
+```{r}
+# Create the pair panels
+pairs.panels(experiment_data, 
+             method = "pearson",  # correlation method
+             hist.col = "blue",    # histogram color
+             density = TRUE,       # add density plots
+             ellipses = TRUE       # add correlation ellipses
+)
+
+```
+
+**Interpretation**: Explain the scatterplots, histograms, and correlation coefficients in the pair panels, highlighting any notable patterns or relationships.
+
+**Submission Instructions:**
+
+Ensure to knit your document to PDF format, checking that all content is correctly displayed before submission. Submit this PDF to Canvas Assignments.

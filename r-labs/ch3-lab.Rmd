@@ -1,0 +1,133 @@
+---
+title: "Weekly Lab Homework Assignment: Measurement Errors in Psychological Research"
+author: "Your Name"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: pdf_document
+---
+
+*Replace "Your Name" with your actual name.*
+
+## Objective:
+
+Reinforce your understanding of reliability, validity, and data collection errors through hands-on exercises using R. Apply statistical methods to simulate data, calculate various types of reliability and validity, and interpret the outcomes.
+
+## Setup:
+
+Prepare your RStudio environment by installing and loading the necessary packages:
+
+```{r}
+# Install and load required packages
+if(!require(psych)) {
+    install.packages("psych", dependencies=TRUE)
+}
+library(psych)
+```
+
+## Homework Exercises:
+
+### Exercise 1: Test-Retest Reliability
+
+Evaluate test-retest reliability for a psychological test administered twice.
+
+**Task**:
+
+1.  Simulate test scores for 50 participants at two time points.
+
+2.  Calculate the Pearson correlation coefficient.
+
+3.  Interpret the test-retest reliability of the scores.
+
+```{r}
+set.seed(2024)
+scores_time1 <- rnorm(50, mean=100, sd=10)
+scores_time2 <- scores_time1 + rnorm(50, mean=0, sd=5)
+
+# Insert your code below
+
+```
+
+**Write your interpretation here**
+
+### Exercise 2: Internal Consistency
+
+Assess internal consistency of a psychological scale.
+
+**Task**:
+
+1.  Simulate responses for 100 participants on a 10-item scale.
+
+2.  Calculate Cronbach's alpha.
+
+```{r}
+responses <- as.data.frame(matrix(rnorm(1000, mean=3, sd=1), ncol=10))
+
+## Insert your code below
+
+```
+
+**Write your interpretation here**
+
+#### Exercise 3: Inter-Rater Reliability
+
+Measure agreement between two raters.
+
+**Task**:
+
+1.  Simulate two sets of ratings for 30 subjects.
+
+2.  Calculate Cohen's Kappa.
+
+```{r}
+rater1 <- sample(1:5, 30, replace=TRUE)
+rater2 <- sample(1:5, 30, replace=TRUE)
+
+## Insert your code below
+
+```
+
+**Write your interpretation here**
+
+#### Exercise 4: Convergent Validity
+
+Investigate convergent validity of a new test.
+
+**Task**:
+
+1.  Simulate scores for a new test and an established test.
+
+2.  Calculate the correlation to assess convergent validity.
+
+```{r}
+new_test_scores <- rnorm(100, mean=50, sd=10)
+established_test_scores <- new_test_scores * 1.1 + rnorm(100, mean=0, sd=5)
+
+## Insert your code below
+
+```
+
+**Write your interpretation here**
+
+#### Exercise 5: Divergent Validity
+
+Explore divergent validity by examining the relationship between measures of unrelated constructs.
+
+**Task**:
+
+1.  Simulate scores for a test of social anxiety and a test of mathematical ability.
+
+2.  Calculate the correlation to evaluate divergent validity.
+
+```{r}
+social_anxiety_scores <- rnorm(100, mean=50, sd=10)
+math_ability_scores <- rnorm(100, mean=50, sd=10)
+
+# Assess divergent validity by calculating the correlation
+## Insert your code below
+
+```
+
+**Write your interpretation here**
+
+#### Submission Instructions:
+
+Ensure to knit your document to PDF format, checking that all content is correctly displayed before submission. Submit this PDF to Canvas Assignments.

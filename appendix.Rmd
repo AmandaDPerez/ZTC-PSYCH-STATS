@@ -84,6 +84,364 @@ This appendix provides solutions to the exercises given at the end of each chapt
         plot(1:10, 1:10, main = "Simple Linear Plot")
         ```
 
+## Answers to Chapter 2 Exercises
+
+### Answers to Exercise 1: Identifying Data Types
+
+1.  **Scenario Analysis**:
+    -   **Children at playground**: The data collection method used here is **observational data**. The psychologist is observing natural behaviors without intervening or manipulating the environment.
+    -   **Evening diary entries**: This scenario uses **self-report data** as participants are providing personal accounts of their feelings and activities.
+    -   **Noise level manipulation**: This is an example of **experimental manipulation**, where a variable (noise level) is deliberately changed to observe its effect on another variable (productivity).
+
+### Answers to Exercise 2: Designing a Study
+
+1.  **Study Design**:
+    -   **Research Question**: Does listening to classical music while studying improve memory recall?
+    -   **Type of Data**: Experimental manipulation.
+    -   **Data Collection Method**: Participants are randomly assigned to two groups. One group studies in silence while the other listens to classical music. Afterwards, both groups take a memory test based on the material studied.
+    -   **Ethical Considerations**: Ensure that participants are aware they can withdraw at any time and that all data collected will be confidential. Consider any potential stress or anxiety induced by test conditions and address these in the study design.
+
+### Answers to Exercise 3: Evaluating Research
+
+1.  **Research Evaluation**:
+    -   **Type of Data Used**: Assuming the study involves assessing the effects of sleep on cognitive performance using different sleep interventions, the data type would likely be **experimental manipulation**.
+    -   **Potential Biases**: If the study does not adequately randomize participants or control for other factors affecting sleep (like caffeine intake or room conditions), results could be biased.
+    -   **Influence on Conclusions**: The use of experimental manipulation allows the researcher to make stronger causal claims about the effect of sleep on cognitive performance compared to observational or self-report data. However, biases and experimental design flaws can undermine these claims.
+
+## Answers to Chapter 3 Exercises
+
+### Answers to Exercise 1: Evaluating Reliability
+
+1.  **Scenario Analysis**:
+    -   **Answer**: The Pearson correlation coefficient of 0.65 indicates moderate test-retest reliability. While this isn't considered low, for measures of psychological constructs such as self-esteem, a higher coefficient (typically 0.7 or above) is generally preferred to ensure consistency over time. A coefficient of 0.65 might suggest that the questionnaire could benefit from further refinement to improve reliability.
+
+### Answers to Exercise 2: Assessing Validity
+
+1.  **Scenario Development**:
+    -   **Answer**: Steps to validate the aptitude test could include:
+        -   **Developing a Hypothesis**: Predict that high scores on the aptitude test correlate with higher academic performance in college.
+        -   **Collecting Data**: Gather test scores from incoming college students and their subsequent grade point averages (GPAs) at the end of their first year.
+        -   **Statistical Analysis**: Perform a correlation analysis to assess the relationship between test scores and GPAs.
+        -   **Interpreting Results**: A strong positive correlation would indicate good predictive validity of the aptitude test for college success.
+
+### Answers to Exercise 3: Identifying and Addressing Data Collection Errors
+
+1.  **Problem Solving**:
+    -   **Answer**: The miscalibration of the sleep quality device could lead to inaccurate data, potentially skewing the study results. To mitigate this impact:
+        -   **Re-calibrate the device**: Immediately correct the calibration error for future data collection.
+        -   **Analyze impacted data**: Assess the extent of the data affected by the miscalibration and consider excluding or adjusting this data in the analysis.
+        -   **Transparency in Reporting**: Disclose the issue and the steps taken to address it in any publications or presentations involving this research.
+
+### Answers to Exercise 4: Triangulation to Enhance Validity
+
+1.  **Critical Thinking**:
+    -   **Answer**: Using multiple data sources like surveys, observations, and performance metrics helps enhance the construct validity of the study. This triangulation approach allows for validation of the findings through different perspectives, reducing the bias that might be present if only one method were used. Each method complements the others, providing a more holistic view of student engagement.
+
+### Answers to Exercise 5: Role Play on Ethical Data Collection
+
+1.  **Discussion**:
+    -   **Answer**: Key procedures and safeguards might include:
+        -   **Informed Consent**: Ensure all participants are fully aware of the nature of the data being collected and its intended use. Obtain written consent.
+        -   **Anonymity and Confidentiality**: Assign codes to participants instead of using names and store personal data securely. Ensure that any reports or publications do not allow individual participants to be identified.
+        -   **Minimizing Harm**: Be sensitive to how questions about personal health might affect participants and provide support resources as necessary.
+
+### Answers to Exercise 6: Real-World Application
+
+1.  **Application**:
+    -   **Answer**: This exercise is subjective and would depend on the specific study chosen. Generally, the answer should include an evaluation of the methods section for clarity on measurement tools, reliability coefficients, validity assertions, and a discussion on how well the study accounted for potential data collection errors. Suggestions for improvement might include more rigorous reliability testing, additional validation studies, or enhanced error checking procedures.
+
+## Answers to Chapter 4 Practice Exercises
+
+### Exercise 1: Calculating Descriptive Statistics
+
+**Dataset**: `c(55, 65, 75, 85, 95, 105, 115, 125, 135, 145)`
+
+```{r}
+# Sample data vector
+scores <- c(55, 65, 75, 85, 95, 105, 115, 125, 135, 145)
+
+# Calculate mean
+mean_score <- mean(scores)
+print(paste("Mean:", mean_score))
+
+# Calculate median
+median_score <- median(scores)
+print(paste("Median:", median_score))
+
+# Calculate mode
+get_mode <- function(x) {
+  uniqv <- unique(x)
+  uniqv[which.max(tabulate(match(x, uniqv)))]
+}
+mode_score <- get_mode(scores)
+print(paste("Mode:", mode_score))
+
+# Calculate variance
+variance_value <- var(scores)
+print(paste("Variance:", variance_value))
+
+# Calculate standard deviation
+std_deviation <- sd(scores)
+print(paste("Standard Deviation:", std_deviation))
+
+# Identify outliers using IQR
+Q1 <- quantile(scores, 0.25)
+Q3 <- quantile(scores, 0.75)
+IQR <- Q3 - Q1
+lower_bound <- Q1 - 1.5 * IQR
+upper_bound <- Q3 + 1.5 * IQR
+outliers <- scores[scores < lower_bound | scores > upper_bound]
+
+print(paste("Outliers:", paste(outliers, collapse = ", ")))
+
+```
+
+**Interpretation**:
+
+-   **Mean**: 100
+
+-   **Median**: 100
+
+-   **Mode**: Since all values are unique, there is no mode in this dataset.
+
+-   **Variance**: 1100
+
+-   **Standard Deviation**: 33.16625
+
+-   **Outliers**: There are no outliers in this dataset as all values lie within the lower and upper bounds.
+
+### Exercise 2: Understanding the Normal Distribution
+
+Assume a psychological test follows a normal distribution with a mean of 100 and a standard deviation of 15.
+
+```{r}
+# Parameters
+mean <- 100
+sd <- 15
+
+# Probability of a score less than 85
+prob_less_than_85 <- pnorm(85, mean, sd)
+print(paste("Probability of a score less than 85:", prob_less_than_85))
+
+# Probability of a score between 85 and 115
+prob_between_85_and_115 <- pnorm(115, mean, sd) - pnorm(85, mean, sd)
+print(paste("Probability of a score between 85 and 115:", prob_between_85_and_115))
+
+```
+
+**Interpretation**:
+
+-   **Probability of a score less than 85**: 0.1586553 (or 15.87%)
+
+-   **Probability of a score between 85 and 115**: 0.6826895 (or 68.27%)
+
+### Exercise 3: Applying the T-Distribution
+
+You are conducting a small-scale study with 12 participants.
+
+```{r}
+# Degrees of freedom
+df <- 11  # for n = 12, df = n - 1
+
+# Probability of a t-score less than 1.5
+prob_less_than_1_5 <- pt(1.5, df)
+print(paste("Probability of a t-score less than 1.5:", prob_less_than_1_5))
+
+# Probability of a t-score between -1 and 1
+prob_between_minus1_and_1 <- pt(1, df) - pt(-1, df)
+print(paste("Probability of a t-score between -1 and 1:", prob_between_minus1_and_1))
+```
+
+**Interpretation**:
+
+-   **Probability of a t-score less than 1.5**: 0.9180312 (or 91.80%)
+
+-   **Probability of a t-score between -1 and 1**: 0.5764421 (or 57.64%)
+
+### Exercise 4: Defining and Simulating Sample Spaces
+
+Define a sample space for a study where participants can choose between three types of exercises (Yoga, Pilates, Aerobics). Simulate responses from 100 participants.
+
+```{r}
+# Define the sample space
+sample_space <- c("Yoga", "Pilates", "Aerobics")
+
+# Simulate responses from 100 participants
+set.seed(123)  # For reproducibility
+responses <- sample(sample_space, 100, replace = TRUE)
+
+# Display the first 10 responses
+print(responses[1:10])
+
+# Analyze the frequency of each exercise choice
+exercise_frequency <- table(responses)
+print(exercise_frequency)
+```
+
+**Interpretation**:
+
+-   **Sample Space**: {Yoga, Pilates, Aerobics}
+
+-   **Simulated Responses (first 10)**: ["Pilates", "Yoga", "Yoga", "Yoga", "Aerobics", "Yoga", "Yoga", "Yoga", "Pilates", "Yoga"]
+
+-   **Frequency Analysis**:
+
+    -   Yoga: 34
+
+    -   Pilates: 37
+
+    -   Aerobics: 29
+
+This analysis shows the distribution of exercise preferences among the 100 participants, providing insights into the most and least popular choices.
+
+## Answers to Chapter 5 Practice Exercises
+
+### Exercise 1: Importing Data
+
+```{r, eval = F}
+# Load necessary package
+library(dplyr)
+
+# Set working directory
+setwd("path/to/your/folder")
+
+# Import the CSV file
+survey_data <- read.csv("survey_data.csv")
+
+# View the first few rows of the data
+head(survey_data)
+```
+
+```{r, eval = F}
+# Install and load the readxl package
+install.packages("readxl")
+library(readxl)
+
+# Import the Excel file
+experiment_data <- read_excel("experiment_data.xlsx")
+
+# View the first few rows of the data
+head(experiment_data)
+
+```
+
+### Exercise 2: Cleaning Data with dplyr
+
+```{r}
+# Sample data
+data <- data.frame(
+  id = 1:10,
+  age = c(23, 35, 42, NA, 30, 34, 21, 40, 29, 31),
+  gender = c("M", "F", "F", "M", "M", "F", "M", "F", "M", "F"),
+  score = c(80, 85, 78, 90, 85, 75, 88, 92, 84, NA)
+)
+
+# Remove rows with missing values
+cleaned_data <- data %>%
+  filter(!is.na(age) & !is.na(score)) %>%
+  # Rename the age column
+  rename(participant_age = age) %>%
+  # Create a new column age_group
+  mutate(age_group = ifelse(participant_age > 30, "Above 30", "30 or Below")) %>%
+  # Remove outliers from the score column
+  filter(score >= (quantile(score, 0.25) - 1.5 * IQR(score)) & score <= (quantile(score, 0.75) + 1.5 * IQR(score))) %>%
+  # Relevel the age_group column
+  mutate(age_group = relevel(factor(age_group), ref = "30 or Below"))
+
+# View the cleaned data
+print(cleaned_data)
+
+```
+
+**Interpretation**:
+
+-   Rows with missing values in the `age` and `score` columns were removed.
+
+-   The `age` column was renamed to `participant_age`.
+
+-   A new column `age_group` was created, categorizing participants as "Above 30" or "30 or Below".
+
+-   Outliers in the `score` column were removed using the IQR method.
+
+-   The `age_group` column was re-leveled to set "30 or Below" as the reference level.
+
+### Exercise 3: Generating Descriptive Statistics with `psych`
+
+```{r, message = F, warning = F}
+# Sample data
+test_scores <- data.frame(
+  id = 1:10,
+  score = c(85, 90, 78, 92, 88, 76, 95, 89, 84, 91)
+)
+
+# Load the psych package
+library(psych)
+
+# Generate descriptive statistics
+describe(test_scores)
+
+```
+
+**Interpretation**:
+
+-   The `describe()` function provides a comprehensive summary of the `test_scores` dataset.
+
+-   Mean: The average test score.
+
+-   Standard Deviation: The variability of the test scores.
+
+-   Skewness: The symmetry of the distribution.
+
+-   Kurtosis: The peakedness of the distribution.
+
+### Exercise 4: Visualizing Data with psych
+
+```{r}
+# Sample data
+multi_var_data <- data.frame(
+  score = c(85, 90, 78, 92, 88, 76, 95, 89, 84, 91),
+  age = c(23, 25, 22, 24, 26, 21, 27, 25, 23, 24),
+  study_hours = c(5, 6, 4, 6, 5, 3, 7, 6, 5, 6)
+)
+
+# Create the correlation plot
+corMatrix <- cor(multi_var_data)
+corPlot(corMatrix, numbers = TRUE, main = "Correlation Matrix")
+```
+
+**Interpretation**:
+
+-   The correlation coefficients indicate the strength and direction of the relationships between variables.
+
+-   Positive correlations: Variables increase together.
+
+-   Negative correlations: One variable increases while the other decreases.
+
+-   The numbers and colors help visualize these relationships.
+
+```{r}
+# Create the pair panels
+pairs.panels(multi_var_data, 
+             method = "pearson",  # correlation method
+             hist.col = "blue",    # histogram color
+             density = TRUE,       # add density plots
+             ellipses = TRUE       # add correlation ellipses
+)
+
+```
+
+**Interpretation**:
+
+-   Scatterplots in the lower triangle show relationships between pairs of variables.
+
+-   Histograms on the diagonal show the distribution of each variable.
+
+-   Correlation coefficients in the upper triangle indicate the strength and direction of relationships.
+
+-   Density plots add information about data concentration.
+
+-   Correlation ellipses provide a visual representation of confidence intervals for the correlations.
+
 ------------------------------------------------------------------------
 
 This appendix will be continuously updated as new exercises and chapters are added to the textbook, providing a comprehensive resource for students to check their work and ensure they understand the material thoroughly.

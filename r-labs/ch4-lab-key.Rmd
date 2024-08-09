@@ -1,0 +1,156 @@
+---
+title: "Weekly Lab Homework Assignment: Descriptive Statistics and Probability"
+author: "Your Name"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: pdf_document
+---
+
+*Replace "Your Name" with your actual name.*
+
+## Objective:
+
+This lab assignment aims to reinforce your understanding of descriptive statistics, calculating probabilities, and identifying sample spaces. You will apply these concepts to practical problems using R.
+
+## Homework Exercises:
+
+### Exercise 1: Analyzing Descriptive Statistics
+
+-   **Task**: Given a dataset of reaction times, calculate the mean, median, mode, variance, standard deviation, and identify any outliers.
+
+-   **Dataset**: Use the following reaction times (in milliseconds) for the analysis: `c(250, 340, 295, 305, 285, 330, 365, 300, 310, 290, 295, 285, 360, 370, 275, 325, 335, 350, 280, 290)`.
+
+-   **Instructions**:
+
+    1.  Calculate the mean, median, and mode.
+
+    2.  Calculate the variance and standard deviation.
+
+    3.  Identify any outliers using the IQR method.
+
+    4.  Write the R code to perform these calculations and interpret the results.
+
+```{r}
+# Sample data vector
+reaction_times <- c(250, 340, 295, 305, 285, 330, 365, 300, 310, 290, 295, 285, 360, 370, 275, 325, 335, 350, 280, 290)
+
+# Calculate mean
+mean_reaction <- mean(reaction_times)
+print(paste("Mean:", mean_reaction))
+
+# Calculate median
+median_reaction <- median(reaction_times)
+print(paste("Median:", median_reaction))
+
+# Calculate mode
+get_mode <- function(x) {
+  uniqv <- unique(x)
+  uniqv[which.max(tabulate(match(x, uniqv)))]
+}
+mode_reaction <- get_mode(reaction_times)
+print(paste("Mode:", mode_reaction))
+
+# Calculate variance
+variance_reaction <- var(reaction_times)
+print(paste("Variance:", variance_reaction))
+
+# Calculate standard deviation
+std_deviation_reaction <- sd(reaction_times)
+print(paste("Standard Deviation:", std_deviation_reaction))
+
+# Identify outliers using IQR
+Q1 <- quantile(reaction_times, 0.25)
+Q3 <- quantile(reaction_times, 0.75)
+IQR <- Q3 - Q1
+lower_bound <- Q1 - 1.5 * IQR
+upper_bound <- Q3 + 1.5 * IQR
+outliers <- reaction_times[reaction_times < lower_bound | reaction_times > upper_bound]
+
+print(paste("Outliers:", paste(outliers, collapse = ", ")))
+
+```
+
+**Write your interpretation here**
+
+### Exercise 2: Calculating Probabilities with the Normal Distribution
+
+-   **Task**: Assume reaction times in a cognitive task follow a normal distribution with a mean of 300 ms and a standard deviation of 50 ms. Calculate the probability that a randomly selected individual has a reaction time:
+
+    1.  Less than 250 ms.
+
+    2.  Between 250 ms and 350 ms.
+
+    3.  More than 400 ms.
+
+-   **Instructions**:
+
+    1.  Use the `pnorm` function in R to calculate these probabilities.
+
+    2.  Write the R code for these calculations and explain what each probability means.
+
+```{r}
+# Parameters
+mean <- 300
+sd <- 50
+
+# Probability of a reaction time less than 250 ms
+prob_less_than_250 <- pnorm(250, mean, sd)
+print(paste("Probability of a reaction time less than 250 ms:", prob_less_than_250))
+
+# Probability of a reaction time between 250 ms and 350 ms
+prob_between_250_and_350 <- pnorm(350, mean, sd) - pnorm(250, mean, sd)
+print(paste("Probability of a reaction time between 250 ms and 350 ms:", prob_between_250_and_350))
+
+# Probability of a reaction time more than 400 ms
+prob_more_than_400 <- 1 - pnorm(400, mean, sd)
+print(paste("Probability of a reaction time more than 400 ms:", prob_more_than_400))
+
+```
+
+**Write your interpretation here**
+
+### Exercise 3: Applying the T-Distribution
+
+-   **Task**: You conducted a small-scale study with 8 participants measuring their anxiety levels on a scale of 1 to 10. Calculate the probability of a t-score being less than 2 and between -1 and 1 using the t-distribution.
+
+-   **Instructions**:
+
+    1.  Define the degrees of freedom for your study.
+
+    2.  Use the `pt` function in R to calculate these probabilities.
+
+    3.  Write the R code for these calculations and discuss how the results might differ if a normal distribution were assumed.
+
+### Exercise 4: Defining and Simulating Sample Spaces
+
+-   **Task**: Define a sample space for a study where participants choose their favorite relaxation activity (Reading, Music, Exercise, Meditation). Simulate responses from 40 participants.
+
+-   **Instructions**:
+
+    1.  Define the sample space.
+
+    2.  Use the `sample` function in R to simulate the responses.
+
+    3.  Analyze the frequency of each relaxation activity choice.
+
+    4.  Write the R code to perform these tasks and summarize your findings.
+
+```{r}
+# Degrees of freedom
+df <- 7  # for n = 8, df = n - 1
+
+# Probability of a t-score less than 2
+prob_less_than_2 <- pt(2, df)
+print(paste("Probability of a t-score less than 2:", prob_less_than_2))
+
+# Probability of a t-score between -1 and 1
+prob_between_minus1_and_1 <- pt(1, df) - pt(-1, df)
+print(paste("Probability of a t-score between -1 and 1:", prob_between_minus1_and_1))
+
+```
+
+**Write your interpretation here**
+
+
+#### Submission Instructions:
+
+Ensure to knit your document to PDF format, checking that all content is correctly displayed before submission. Submit this PDF to Canvas Assignments.

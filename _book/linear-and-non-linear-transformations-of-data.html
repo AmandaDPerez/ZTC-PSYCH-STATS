@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 1 Introduction to R and R Studio | Introduction to Psychological Statistics</title>
-  <meta name="description" content="Chapter 1 Introduction to R and R Studio | Introduction to Psychological Statistics" />
+  <title>Chapter 6 Linear and Non-Linear Transformations of Data | Introduction to Psychological Statistics</title>
+  <meta name="description" content="Chapter 6 Linear and Non-Linear Transformations of Data | Introduction to Psychological Statistics" />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 1 Introduction to R and R Studio | Introduction to Psychological Statistics" />
+  <meta property="og:title" content="Chapter 6 Linear and Non-Linear Transformations of Data | Introduction to Psychological Statistics" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 1 Introduction to R and R Studio | Introduction to Psychological Statistics" />
+  <meta name="twitter:title" content="Chapter 6 Linear and Non-Linear Transformations of Data | Introduction to Psychological Statistics" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="types-of-data-psychologists-collect.html"/>
+<link rel="prev" href="computation.html"/>
+<link rel="next" href="appendix-answers-to-chapter-exercises.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -475,548 +475,56 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="introduction-to-r-and-r-studio" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">Chapter 1</span> Introduction to R and R Studio<a href="introduction-to-r-and-r-studio.html#introduction-to-r-and-r-studio" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Welcome to the beginning of your journey into the world of statistical analysis with R and R Studio.
-This section will introduce you to the fundamental concepts and tools you’ll use throughout this course to explore and analyze data.</p>
-<div id="what-is-r" class="section level2 hasAnchor" number="1.1">
-<h2><span class="header-section-number">1.1</span> What is R?<a href="introduction-to-r-and-r-studio.html#what-is-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>R is a powerful statistical programming language used widely by statisticians, data scientists, and researchers to analyze and visualize data.
-It’s open source, which means it is free to use, and has a vast community of users and developers who contribute to its continuous development.</p>
-<p><img src="images/r-proj-site.png" alt="Screenshot of R Project website" /> <em>Screenshot of the R Project homepage, where R can be downloaded.</em></p>
-<div id="features-of-r" class="section level3 hasAnchor" number="1.1.1">
-<h3><span class="header-section-number">1.1.1</span> Features of R<a href="introduction-to-r-and-r-studio.html#features-of-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li><strong>Statistical Analysis</strong>: Provides a wide array of techniques for data analysis, including linear and nonlinear modeling, classical statistical tests, time-series analysis, classification, clustering, and more.</li>
-<li><strong>Graphics</strong>: Boasts high-quality graphics capabilities that allow for the creation of well-designed publications and interactive visualizations for the web.</li>
-<li><strong>Packages</strong>: Comes with a comprehensive ecosystem of packages, available through the Comprehensive R Archive Network (CRAN), which extend R’s capabilities to handle tasks related to psychological research and beyond.</li>
-<li><strong>Programming</strong>: Supports both procedural programming with functions and object-oriented programming with generic functions.</li>
-<li><strong>Community Support</strong>: Has a large, active community offering support through mailing lists, forums, and blogs.</li>
-</ul>
-</div>
-</div>
-<div id="what-is-r-studio" class="section level2 hasAnchor" number="1.2">
-<h2><span class="header-section-number">1.2</span> What is R Studio?<a href="introduction-to-r-and-r-studio.html#what-is-r-studio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>R Studio is an integrated development environment (IDE) for R.
-It provides a user-friendly interface that makes using R easier and more efficient.
-R Studio includes a console, syntax-highlighting editor that supports direct code execution, and tools for plotting, history, debugging, and workspace management.</p>
-<p><img src="images/r-studio.png" alt="Screenshot of R Studio Interface" /> <em>Overview of the R Studio interface.</em></p>
-<div id="why-use-r-studio" class="section level3 hasAnchor" number="1.2.1">
-<h3><span class="header-section-number">1.2.1</span> Why Use R Studio?<a href="introduction-to-r-and-r-studio.html#why-use-r-studio" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li><strong>Ease of Use</strong>: The R Studio environment organizes everything you need to write code, visualize data, and debug errors in one place.</li>
-<li><strong>Productivity Tools</strong>: Features like code completion, snippets, and the ability to directly output graphs enhance productivity.</li>
-<li><strong>Project Management</strong>: Simplifies the process of managing files associated with specific projects, making it easy to handle multiple, complex research projects.</li>
-<li><strong>Reproducibility</strong>: Encourages reproducible research by integrating well with R Markdown, which allows you to create dynamic reports that blend R code with narrative text and output.</li>
-</ul>
-</div>
-</div>
-<div id="r-and-r-studio-in-psychological-research" class="section level2 hasAnchor" number="1.3">
-<h2><span class="header-section-number">1.3</span> R and R Studio in Psychological Research<a href="introduction-to-r-and-r-studio.html#r-and-r-studio-in-psychological-research" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In psychological research, R and R Studio play a critical role in: - <strong>Data Collection and Cleaning</strong>: Handling and cleaning raw data from experiments or surveys.
-- <strong>Statistical Testing</strong>: Performing t-tests, ANOVA, regression analyses, and more sophisticated statistical models.
-- <strong>Data Visualization</strong>: Creating compelling visualizations to explore data trends and communicate results.
-- <strong>Reproducible Research</strong>: Producing reproducible analyses that can be shared and verified by others, enhancing the transparency and credibility of research findings.</p>
-<p><img src="images/ch1-Rplot.png" alt="Example of Data Visualization in R" /> <em>Example of a data visualization created in R.</em></p>
-<p>In the next sections, we will guide you through installing R and R Studio on your system and begin exploring their capabilities through practical exercises.
-This foundation will set you up for success as you dive deeper into the statistical techniques and tools that will be covered throughout this course.</p>
-</div>
-<div id="installing-r" class="section level2 hasAnchor" number="1.4">
-<h2><span class="header-section-number">1.4</span> Installing R<a href="introduction-to-r-and-r-studio.html#installing-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>To utilize R and R Studio for your statistical analysis, the first step is to install R.
-R is the underlying statistical computing environment, while R Studio provides an integrated development environment (IDE) for R.
-Below are the detailed instructions for installing R on Windows and macOS.</p>
-<div id="installing-r-on-windows" class="section level3 hasAnchor" number="1.4.1">
-<h3><span class="header-section-number">1.4.1</span> Installing R on Windows<a href="introduction-to-r-and-r-studio.html#installing-r-on-windows" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Follow these steps to install R on a Windows computer:</p>
+<div id="linear-and-non-linear-transformations-of-data" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Linear and Non-Linear Transformations of Data<a href="linear-and-non-linear-transformations-of-data.html#linear-and-non-linear-transformations-of-data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="chapter-overview" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Chapter Overview<a href="linear-and-non-linear-transformations-of-data.html#chapter-overview" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In the realm of psychological research and data analysis, transforming data is a crucial step to ensure accurate and meaningful interpretations. Chapter 6 delves into the concepts of linear and non-linear transformations of data, focusing on two primary techniques: mean-centering and Z-scores. These transformations play a vital role in preparing data for statistical analysis, making it easier to interpret results and draw valid conclusions.</p>
+<p>This chapter is designed to provide a comprehensive understanding of these transformations, enriched with practical examples, real-world applications, and hands-on exercises using R. By the end of this chapter, you will be able to:</p>
 <ol style="list-style-type: decimal">
-<li><p><strong>Visit the CRAN Website</strong>: Go to the Comprehensive R Archive Network (CRAN) at <a href="https://cran.r-project.org" class="uri">https://cran.r-project.org</a>.
-This website hosts the R software and its documentation.</p></li>
-<li><p><strong>Download R for Windows</strong>: Click on the link titled “Download R for Windows”.
-This will take you to the Windows download page.</p>
-<div class="float">
-<img src="images/r-windows.png" alt="CRAN Homepage" />
-<div class="figcaption">CRAN Homepage</div>
-</div></li>
-<li><p><strong>Install R Base</strong>: On the download page, click “install R for the first time” to navigate to the base distribution page.
-There, download the latest version of R by clicking the link at the top of the page.</p>
-<div class="float">
-<img src="images/r-windows-1st.png" alt="Download R for Windows" />
-<div class="figcaption">Download R for Windows</div>
-</div></li>
-<li><p><strong>Run the Installer</strong>: Once the download is complete, open the executable file to start the installation process.
-Follow the prompts in the installer, accepting the default settings for a standard installation.</p></li>
-<li><p><strong>Complete the Installation</strong>: After following the installation prompts, click ‘Finish’ to complete the installation.</p></li>
+<li><p><strong>Understand the Importance of Data Transformation</strong>: Learn why transforming data is essential in statistical analysis and how it can impact your results.</p></li>
+<li><p><strong>Perform Mean-Centering</strong>: Understand the concept of mean-centering, its mathematical formulation, and its application in psychological research. You will learn how to perform mean-centering in R and visualize its effects on data.</p></li>
+<li><p><strong>Calculate Z-Scores</strong>: Grasp the concept of Z-scores, their importance in standardizing data, and their role in comparing different datasets. You will learn to compute Z-scores in R and interpret their meaning.</p></li>
+<li><p><strong>Combine Transformations</strong>: Explore how mean-centering and Z-scores can be used together to enhance data analysis. Practical examples will illustrate the benefits of combining these transformations.</p></li>
+<li><p><strong>Apply Non-Linear Transformations</strong>: Discover various types of non-linear transformations, such as logarithmic, square root, and inverse transformations. Understand when and why to use these transformations and how to implement them in R.</p></li>
+<li><p><strong>Interpret Real-World Examples</strong>: Through practical examples and real-world applications, you will see how these transformations are used in psychological research and other fields.</p></li>
+<li><p><strong>Hands-On Practice</strong>: Engage in exercises designed to reinforce your understanding of the concepts covered. These exercises will provide an opportunity to apply transformations to real datasets and interpret the results.</p></li>
 </ol>
-</div>
-<div id="installing-r-on-macos" class="section level3 hasAnchor" number="1.4.2">
-<h3><span class="header-section-number">1.4.2</span> Installing R on macOS<a href="introduction-to-r-and-r-studio.html#installing-r-on-macos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Follow these steps to install R on a macOS computer:</p>
-<ol style="list-style-type: decimal">
-<li><p><strong>Visit the CRAN Website</strong>: Navigate to <a href="https://cran.r-project.org" class="uri">https://cran.r-project.org</a> to access the CRAN homepage.</p></li>
-<li><p><strong>Download R for macOS</strong>: Click on the “Download R for (Mac) OS X” link to go to the macOS download page.</p>
-<div class="float">
-<img src="images/r-mac.png" alt="CRAN Homepage" />
-<div class="figcaption">CRAN Homepage</div>
-</div></li>
-<li><p><strong>Install R Package</strong>: On the macOS download page, select the package suitable for your version of macOS.
-Click on the link to download the <code>.pkg</code> installer file.</p>
-<div class="float">
-<img src="images/r-mac-version.png" alt="Download R for macOS" />
-<div class="figcaption">Download R for macOS</div>
-</div></li>
-<li><p><strong>Run the Installer</strong>: After the download is complete, double-click on the <code>.pkg</code> file to open the installer.
-Follow the on-screen instructions, accepting the default options where suggested.</p></li>
-<li><p><strong>Complete the Installation</strong>: Proceed through the installer by clicking ‘Continue’ and then ‘Install’.
-You may need to enter your administrator password.
-Click ‘Finish’ once the installation process completes.</p></li>
-</ol>
-</div>
-<div id="verify-installation" class="section level3 hasAnchor" number="1.4.3">
-<h3><span class="header-section-number">1.4.3</span> Verify Installation<a href="introduction-to-r-and-r-studio.html#verify-installation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>After installing R on your system, it’s a good idea to verify that it was installed correctly:</p>
+<div id="key-topics-covered" class="section level4 hasAnchor" number="6.1.0.1">
+<h4><span class="header-section-number">6.1.0.1</span> Key Topics Covered<a href="linear-and-non-linear-transformations-of-data.html#key-topics-covered" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>
-<li><strong>Open R</strong>: Search for R in your applications (Windows) or use Spotlight (macOS) to find and launch R.</li>
-<li><strong>Check Version</strong>: In the R console, type <code>version</code> and press Enter. This will display information about the R version installed on your computer.</li>
-</ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="introduction-to-r-and-r-studio.html#cb1-1" tabindex="-1"></a>version</span></code></pre></div>
-</div>
-</div>
-<div id="installing-r-studio" class="section level2 hasAnchor" number="1.5">
-<h2><span class="header-section-number">1.5</span> Installing R Studio<a href="introduction-to-r-and-r-studio.html#installing-r-studio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Once R is installed on your computer, the next step is to install R Studio, which will serve as your primary interface for writing and running R scripts.
-Here are step-by-step instructions to install R Studio on both Windows and macOS.</p>
-<div id="before-you-install" class="section level3 hasAnchor" number="1.5.1">
-<h3><span class="header-section-number">1.5.1</span> Before You Install<a href="introduction-to-r-and-r-studio.html#before-you-install" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Before installing R Studio, make sure that: - <strong>R is Installed</strong>: R Studio requires R to be installed on your computer.
-If you haven’t installed R yet, please refer to the previous section for instructions.
-- <strong>System Requirements</strong>: Check the R Studio website for the latest system requirements to ensure compatibility with your operating system.</p>
-</div>
-<div id="installing-r-studio-on-windows" class="section level3 hasAnchor" number="1.5.2">
-<h3><span class="header-section-number">1.5.2</span> Installing R Studio on Windows<a href="introduction-to-r-and-r-studio.html#installing-r-studio-on-windows" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Follow these steps to install R Studio on a Windows computer:</p>
-<ol style="list-style-type: decimal">
-<li><p><strong>Download R Studio</strong>: Visit the Posit website at <a href="https://posit.co/download/rstudio-desktop/" class="uri">https://posit.co/download/rstudio-desktop/</a> and navigate to the Download R Studio Desktop section.
-Click on the “Download RStudio Desktop for Windows” button.</p>
-<div class="float">
-<img src="images/r-studio-windows.png" alt="Download R Studio for Windows" />
-<div class="figcaption">Download R Studio for Windows</div>
-</div></li>
-<li><p><strong>Run the Installer</strong>: After the download is complete, open the executable file to start the installation process.
-You may receive a security warning; click ‘Run’ to proceed.</p></li>
-<li><p><strong>Follow the Installation Prompts</strong>: The installer will guide you through the setup process.
-Accept the license agreement and keep the default installation settings unless you have specific preferences.</p></li>
-<li><p><strong>Complete the Installation</strong>: Click ‘Finish’ to complete the installation process.
-R Studio should now be installed on your computer.</p></li>
-</ol>
-</div>
-<div id="installing-r-studio-on-macos" class="section level3 hasAnchor" number="1.5.3">
-<h3><span class="header-section-number">1.5.3</span> Installing R Studio on macOS<a href="introduction-to-r-and-r-studio.html#installing-r-studio-on-macos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Follow these steps to install R Studio on a macOS computer:</p>
-<ol style="list-style-type: decimal">
-<li><p><strong>Download R Studio</strong>: Visit the Posit website at <a href="https://posit.co/download/rstudio-desktop/" class="uri">https://posit.co/download/rstudio-desktop/</a> and navigate to the Downloads table.
-Select the macOS linked file to download R Studio Desktop</p>
-<div class="float">
-<img src="images/r-studio-mac.png" alt="Download R Studio for macOS" />
-<div class="figcaption">Download R Studio for macOS</div>
-</div></li>
-<li><p><strong>Open the Installer</strong>: After the download, locate the <code>.dmg</code> file in your Downloads folder and double-click to open it.</p></li>
-<li><p><strong>Drag R Studio to Applications</strong>: A new window will open showing the R Studio icon.
-Drag this icon to your Applications folder to install the application.</p></li>
-<li><p><strong>Complete the Installation</strong>: Double-click R Studio from your Applications folder to ensure it opens correctly and completes any setup it requires the first time it runs.</p></li>
-</ol>
-</div>
-<div id="verify-installation-1" class="section level3 hasAnchor" number="1.5.4">
-<h3><span class="header-section-number">1.5.4</span> Verify Installation<a href="introduction-to-r-and-r-studio.html#verify-installation-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>To verify that R Studio is correctly installed: - <strong>Launch R Studio</strong>: Open R Studio from your Applications menu (Windows) or your Applications folder (macOS).
-- <strong>Check for R Version</strong>: In the R Studio console, you should see the version of R that is being used by R Studio.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="introduction-to-r-and-r-studio.html#cb2-1" tabindex="-1"></a><span class="fu">sessionInfo</span>()  <span class="co"># This will print out your R session information, including R version.</span></span></code></pre></div>
-</div>
-</div>
-<div id="understanding-the-r-studio-interface" class="section level2 hasAnchor" number="1.6">
-<h2><span class="header-section-number">1.6</span> Understanding the R Studio Interface<a href="introduction-to-r-and-r-studio.html#understanding-the-r-studio-interface" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>R Studio is a powerful integrated development environment (IDE) designed to make working with R more efficient and user-friendly.
-Understanding the layout and functionalities of the R Studio interface is crucial for effective data analysis.
-This section will guide you through the various components of the R Studio interface.</p>
-<div id="the-r-studio-layout" class="section level3 hasAnchor" number="1.6.1">
-<h3><span class="header-section-number">1.6.1</span> The R Studio Layout<a href="introduction-to-r-and-r-studio.html#the-r-studio-layout" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>R Studio’s interface is divided into four main panes, each serving distinct functions that are essential for various aspects of programming and data analysis.
-Here’s an overview of these panes and their default configurations:</p>
-<p><img src="images/r-studio.png" alt="R Studio Interface" /> <em>Overview of the R Studio interface.</em></p>
-</div>
-<div id="purpose-of-each-pane" class="section level3 hasAnchor" number="1.6.2">
-<h3><span class="header-section-number">1.6.2</span> Purpose of Each Pane<a href="introduction-to-r-and-r-studio.html#purpose-of-each-pane" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ol style="list-style-type: decimal">
-<li><strong>Console Pane</strong>
+<li><p><strong>Mean-Centering</strong></p>
 <ul>
-<li><strong>Description</strong>: This is where R scripts are executed. You can type R commands directly into the console and see the output of these commands.</li>
-<li><strong>Importance</strong>: It’s crucial for trying out quick commands and viewing their output immediately. <img src="images/r-console.png" alt="Console Pane" /></li>
+<li><p>Definition and importance</p></li>
+<li><p>Mathematical formula</p></li>
+<li><p>Practical examples</p></li>
+<li><p>Real-world applications</p></li>
+<li><p>R code implementation</p></li>
 </ul></li>
-<li><strong>Source Pane</strong>
+<li><p><strong>Z-Scores</strong></p>
 <ul>
-<li><strong>Description</strong>: This pane is used for writing and editing scripts. Scripts are essentially files containing a series of R commands.</li>
-<li><strong>Importance</strong>: The source pane allows for more complex script development, which can be saved, shared, and run repeatedly. <img src="images/r-source.png" alt="Source Pane" /></li>
+<li><p>Definition and importance</p></li>
+<li><p>Mathematical formula</p></li>
+<li><p>Practical examples</p></li>
+<li><p>Real-world applications</p></li>
+<li><p>R code implementation</p></li>
 </ul></li>
-<li><strong>Environment/History Pane</strong>
+<li><p><strong>Combining Transformations</strong></p>
 <ul>
-<li><strong>Description</strong>: The Environment tab shows the current working dataset and variables stored in memory. The History tab tracks the commands that have been executed.</li>
-<li><strong>Importance</strong>: This pane is vital for managing the objects in your current R session and reviewing or re-running previous commands. <img src="images/r-env.png" alt="Environment/History Pane" /></li>
+<li><p>Mean-centering and Z-scores together</p></li>
+<li><p>Practical example</p></li>
+<li><p>R code implementation</p></li>
 </ul></li>
-<li><strong>Files/Plots/Packages/Help/Viewer Pane</strong>
+<li><p><strong>Non-Linear Transformations</strong></p>
 <ul>
-<li><strong>Description</strong>: This multifunctional pane allows users to navigate files, view plots, manage R packages, access R documentation (Help), and view web content (Viewer).</li>
-<li><strong>Importance</strong>: It supports a wide range of activities from managing the files related to your projects, visualizing data outputs, installing and loading libraries, seeking help on functions, and displaying HTML content. <img src="images/r-help.png" alt="Files/Plots Pane" /></li>
+<li><p>Introduction to non-linear transformations</p></li>
+<li><p>Types of non-linear transformations</p></li>
+<li><p>Practical examples</p></li>
+<li><p>Real-world applications</p></li>
+<li><p>R code implementation</p></li>
 </ul></li>
-</ol>
-</div>
-<div id="navigating-and-customizing-the-interface" class="section level3 hasAnchor" number="1.6.3">
-<h3><span class="header-section-number">1.6.3</span> Navigating and Customizing the Interface<a href="introduction-to-r-and-r-studio.html#navigating-and-customizing-the-interface" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>R Studio’s layout is highly customizable.
-You can adjust the size and location of the panes according to your preferences:</p>
-<ul>
-<li><strong>Resizing Panes</strong>: You can resize any pane by dragging the borders between them.</li>
-<li><strong>Repositioning Panes</strong>: Under the <code>Tools</code> menu, select <code>Global Options</code>, then <code>Pane Layout</code> to customize the arrangement of the workspace.</li>
-<li><strong>Customizing Appearance</strong>: Change the theme of your R Studio interface by navigating to <code>Tools</code> &gt; <code>Global Options</code> &gt; <code>Appearance</code>. You can select different editor themes and adjust font size to suit your visual preferences.</li>
 </ul>
-</div>
-<div id="best-practices" class="section level3 hasAnchor" number="1.6.4">
-<h3><span class="header-section-number">1.6.4</span> Best Practices<a href="introduction-to-r-and-r-studio.html#best-practices" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li><strong>Familiarize Early</strong>: Spend some time exploring and customizing the R Studio interface to suit your workflow. This familiarity will increase your productivity.</li>
-<li><strong>Keyboard Shortcuts</strong>: Learn and utilize R Studio keyboard shortcuts to speed up your coding and navigation. You can find a list of shortcuts by pressing <code>Alt + Shift + K</code>.</li>
-</ul>
-<hr />
-<p>Understanding the layout and functionality of the R Studio interface is the first step toward mastering R for statistical analysis.
-As you become more familiar with these tools, you’ll find that R Studio enhances your efficiency and effectiveness in data analysis tasks.</p>
-</div>
-</div>
-<div id="basics-of-using-r-studio" class="section level2 hasAnchor" number="1.7">
-<h2><span class="header-section-number">1.7</span> Basics of Using R Studio<a href="introduction-to-r-and-r-studio.html#basics-of-using-r-studio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>R Studio enhances the usability of R by providing an organized work environment with powerful tools for data analysis and script management.
-This section will guide you through creating and managing R scripts and documents, and provide a thorough introduction to using R Markdown for your assignments.</p>
-<div id="creating-and-saving-r-scripts" class="section level3 hasAnchor" number="1.7.1">
-<h3><span class="header-section-number">1.7.1</span> Creating and Saving R Scripts<a href="introduction-to-r-and-r-studio.html#creating-and-saving-r-scripts" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div id="creating-a-new-script" class="section level4 hasAnchor" number="1.7.1.1">
-<h4><span class="header-section-number">1.7.1.1</span> Creating a New Script<a href="introduction-to-r-and-r-studio.html#creating-a-new-script" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>To begin scripting in R:</p>
-<ol style="list-style-type: decimal">
-<li><strong>Open R Studio</strong> and click on <code>File</code> in the menu bar.</li>
-<li>Select <code>New File</code> and then <code>R Script</code>. This will open a new script tab in the Source Pane.</li>
-</ol>
-<div class="float">
-<img src="path/to/your/screenshot_create_new_script.png" alt="Create New R Script" />
-<div class="figcaption">Create New R Script</div>
-</div>
-</div>
-<div id="saving-scripts" class="section level4 hasAnchor" number="1.7.1.2">
-<h4><span class="header-section-number">1.7.1.2</span> Saving Scripts<a href="introduction-to-r-and-r-studio.html#saving-scripts" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>To save your script:</p>
-<ol style="list-style-type: decimal">
-<li>Click on the floppy disk icon or press <code>Ctrl + S</code> (Windows) or <code>Cmd + S</code> (macOS).</li>
-<li>Choose a location on your computer, name your file, and ensure it has the <code>.R</code> extension.</li>
-</ol>
-<div class="float">
-<img src="path/to/your/screenshot_save_script.png" alt="Save R Script" />
-<div class="figcaption">Save R Script</div>
-</div>
-</div>
-</div>
-<div id="writing-and-executing-code" class="section level3 hasAnchor" number="1.7.2">
-<h3><span class="header-section-number">1.7.2</span> Writing and Executing Code<a href="introduction-to-r-and-r-studio.html#writing-and-executing-code" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div id="writing-code" class="section level4 hasAnchor" number="1.7.2.1">
-<h4><span class="header-section-number">1.7.2.1</span> Writing Code<a href="introduction-to-r-and-r-studio.html#writing-code" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<ul>
-<li>Write your R code in the Source Pane. This should be used for scripts that you might want to save, reuse, or share.</li>
-<li>Avoid writing scripts directly in the Console as it is meant for temporary tests and does not save your commands.</li>
-</ul>
-</div>
-<div id="executing-code" class="section level4 hasAnchor" number="1.7.2.2">
-<h4><span class="header-section-number">1.7.2.2</span> Executing Code<a href="introduction-to-r-and-r-studio.html#executing-code" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<ul>
-<li>To run code from the Source Pane, select the line(s) of code you want to execute and press <code>Ctrl + Enter</code> (Windows) or <code>Cmd + Enter</code> (macOS).</li>
-<li>The results will appear in the Console Pane.</li>
-</ul>
-</div>
-</div>
-<div id="importing-data" class="section level3 hasAnchor" number="1.7.3">
-<h3><span class="header-section-number">1.7.3</span> Importing Data<a href="introduction-to-r-and-r-studio.html#importing-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>To import data into R Studio:</p>
-<ol style="list-style-type: decimal">
-<li>Use the <code>read.csv()</code> function for CSV files: <code>data &lt;- read.csv("path/to/your/datafile.csv")</code></li>
-<li>You can also use the Import Dataset feature in the Environment Pane for a GUI approach.</li>
-</ol>
-<div class="float">
-<img src="path/to/your/screenshot_import_data.png" alt="Import Data" />
-<div class="figcaption">Import Data</div>
-</div>
-</div>
-<div id="using-r-markdown-for-assignments" class="section level3 hasAnchor" number="1.7.4">
-<h3><span class="header-section-number">1.7.4</span> Using R Markdown for Assignments<a href="introduction-to-r-and-r-studio.html#using-r-markdown-for-assignments" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>R Markdown allows you to integrate text, code, and their outputs into a single document.</p>
-<div id="what-is-r-markdown" class="section level4 hasAnchor" number="1.7.4.1">
-<h4><span class="header-section-number">1.7.4.1</span> What is R Markdown?<a href="introduction-to-r-and-r-studio.html#what-is-r-markdown" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>R Markdown files, ending in <code>.Rmd</code>, let you create dynamic documents, presentations, and reports from R.
-It integrates your R code with Markdown text and can output to formats like PDF, HTML, and Word.</p>
-</div>
-<div id="basic-markdown-syntax" class="section level4 hasAnchor" number="1.7.4.2">
-<h4><span class="header-section-number">1.7.4.2</span> Basic Markdown Syntax<a href="introduction-to-r-and-r-studio.html#basic-markdown-syntax" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<ul>
-<li><strong>Headers</strong>: <code>#</code> for main headers, <code>##</code> for subheaders</li>
-<li><strong>Bold</strong>: <code>**bold text**</code></li>
-<li><strong>Italics</strong>: <code>*italicized text*</code></li>
-<li><strong>Lists</strong>: Use <code>-</code> or <code>*</code> for unordered lists and <code>1.</code>, <code>2.</code>, etc., for ordered lists.</li>
-<li><strong>Links</strong>: <code>[Link text](URL)</code></li>
-<li><strong>Images</strong>: <code>![Alt text](path/to/image)</code></li>
-<li><strong>Code</strong>: Use backticks <code>`</code> for inline code and triple backticks <code>```</code> for code blocks.</li>
-</ul>
-</div>
-<div id="creating-an-r-markdown-file" class="section level4 hasAnchor" number="1.7.4.3">
-<h4><span class="header-section-number">1.7.4.3</span> Creating an R Markdown File<a href="introduction-to-r-and-r-studio.html#creating-an-r-markdown-file" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<ol style="list-style-type: decimal">
-<li>Go to <code>File &gt; New File &gt; R Markdown...</code>.</li>
-<li>Fill out the dialog box (title, author, and output format).</li>
-</ol>
-<div class="float">
-<img src="path/to/your/screenshot_new_rmarkdown.png" alt="New R Markdown File" />
-<div class="figcaption">New R Markdown File</div>
-</div>
-</div>
-<div id="writing-in-r-markdown" class="section level4 hasAnchor" number="1.7.4.4">
-<h4><span class="header-section-number">1.7.4.4</span> Writing in R Markdown<a href="introduction-to-r-and-r-studio.html#writing-in-r-markdown" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<ul>
-<li>Write narrative text using Markdown.</li>
-<li>Insert code chunks using triple backticks and <code>r</code> to start each chunk:</li>
-</ul>
-<p>```<code>{r}</code></p>
-<ul>
-<li>Insert triple backticks to close a code chunk.<br />
-</li>
-<li>A code chunk will look like this:<br />
-<img src="path/to/your/screenshot_new_rmarkdown.png" alt="R Markdown Code Chunk" /></li>
-</ul>
-</div>
-</div>
-</div>
-<div id="using-r-markdown-for-assignments-1" class="section level2 hasAnchor" number="1.8">
-<h2><span class="header-section-number">1.8</span> Using R Markdown for Assignments<a href="introduction-to-r-and-r-studio.html#using-r-markdown-for-assignments-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>R Markdown allows you to integrate text, code, and their outputs into a single document, making it an invaluable tool for creating dynamic reports and presentations.
-Here, we’ll explore how to use R Markdown effectively in your assignments.</p>
-<div id="what-is-r-markdown-1" class="section level3 hasAnchor" number="1.8.1">
-<h3><span class="header-section-number">1.8.1</span> What is R Markdown?<a href="introduction-to-r-and-r-studio.html#what-is-r-markdown-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>R Markdown files, ending in <code>.Rmd</code>, allow you to integrate narrative text with embedded R code chunks in a single document.
-It supports dynamic output generation in multiple formats, including HTML, PDF, and Word, making it ideal for academic and professional presentations.</p>
-</div>
-<div id="benefits-of-using-r-markdown" class="section level3 hasAnchor" number="1.8.2">
-<h3><span class="header-section-number">1.8.2</span> Benefits of Using R Markdown<a href="introduction-to-r-and-r-studio.html#benefits-of-using-r-markdown" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li><strong>Reproducibility</strong>: Automatically reproduce your findings by rerunning the R code embedded in your document.</li>
-<li><strong>Dynamic Reporting</strong>: Update data results and text simultaneously, ensuring consistency and accuracy in reports.</li>
-<li><strong>Versatility</strong>: Generate reports in various formats from a single source file, tailored for different audiences.</li>
-</ul>
-</div>
-<div id="basic-structure-of-an-r-markdown-document" class="section level3 hasAnchor" number="1.8.3">
-<h3><span class="header-section-number">1.8.3</span> Basic Structure of an R Markdown Document<a href="introduction-to-r-and-r-studio.html#basic-structure-of-an-r-markdown-document" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>An R Markdown document is composed of three main parts:</p>
-<ul>
-<li><strong>YAML Header</strong>: Specifies document settings such as title, output formats, and options.</li>
-<li><strong>Narrative Text</strong>: Written using Markdown for formatting.</li>
-<li><strong>Code Chunks</strong>: Embedded R code that can be executed to produce results directly in the document.</li>
-</ul>
-<div id="yaml-header" class="section level4 hasAnchor" number="1.8.3.1">
-<h4><span class="header-section-number">1.8.3.1</span> YAML Header<a href="introduction-to-r-and-r-studio.html#yaml-header" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Here’s an example YAML header that specifies the document title, author, and desired output formats:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb3-1"><a href="introduction-to-r-and-r-studio.html#cb3-1" tabindex="-1"></a><span class="pp">---</span></span>
-<span id="cb3-2"><a href="introduction-to-r-and-r-studio.html#cb3-2" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Your Analysis Report&quot;</span></span>
-<span id="cb3-3"><a href="introduction-to-r-and-r-studio.html#cb3-3" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Your Name&quot;</span></span>
-<span id="cb3-4"><a href="introduction-to-r-and-r-studio.html#cb3-4" tabindex="-1"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;2024-08-07&quot;</span></span>
-<span id="cb3-5"><a href="introduction-to-r-and-r-studio.html#cb3-5" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span></span>
-<span id="cb3-6"><a href="introduction-to-r-and-r-studio.html#cb3-6" tabindex="-1"></a><span class="at">  </span><span class="fu">html_document</span><span class="kw">:</span></span>
-<span id="cb3-7"><a href="introduction-to-r-and-r-studio.html#cb3-7" tabindex="-1"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb3-8"><a href="introduction-to-r-and-r-studio.html#cb3-8" tabindex="-1"></a><span class="at">    </span><span class="fu">toc_float</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb3-9"><a href="introduction-to-r-and-r-studio.html#cb3-9" tabindex="-1"></a><span class="at">  </span><span class="fu">pdf_document</span><span class="kw">:</span></span>
-<span id="cb3-10"><a href="introduction-to-r-and-r-studio.html#cb3-10" tabindex="-1"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb3-11"><a href="introduction-to-r-and-r-studio.html#cb3-11" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
-</div>
-<div id="creating-an-r-markdown-file-1" class="section level4 hasAnchor" number="1.8.3.2">
-<h4><span class="header-section-number">1.8.3.2</span> Creating an R Markdown File<a href="introduction-to-r-and-r-studio.html#creating-an-r-markdown-file-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>To create an R Markdown file in R Studio:</p>
-<ol style="list-style-type: decimal">
-<li>Click <code>File</code> &gt; <code>New File</code> &gt; <code>R Markdown...</code>.</li>
-<li>Provide the title and author name, and select the default output format.</li>
-</ol>
-</div>
-<div id="writing-markdown" class="section level4 hasAnchor" number="1.8.3.3">
-<h4><span class="header-section-number">1.8.3.3</span> Writing Markdown<a href="introduction-to-r-and-r-studio.html#writing-markdown" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents.
-Here are some basics:</p>
-<ul>
-<li><strong>Headings</strong>: <code>#</code> for level 1 header, <code>##</code> for level 2, and so on.</li>
-<li><strong>Bold</strong>: <code>**bold text**</code></li>
-<li><strong>Italics</strong>: <code>*italicized text*</code></li>
-<li><strong>Lists</strong>: <code>-</code> or <code>*</code> for bullet points, <code>1.</code>, <code>2.</code>, etc., for numbered lists.</li>
-<li><strong>Links</strong>: <code>[text](URL)</code></li>
-<li><strong>Images</strong>: <code>![description](path)</code></li>
-</ul>
-</div>
-<div id="including-code-chunks" class="section level4 hasAnchor" number="1.8.3.4">
-<h4><span class="header-section-number">1.8.3.4</span> Including Code Chunks<a href="introduction-to-r-and-r-studio.html#including-code-chunks" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Insert R code within your narrative by enclosing it in triple backticks:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="introduction-to-r-and-r-studio.html#cb4-1" tabindex="-1"></a><span class="fu">summary</span>(cars)</span></code></pre></div>
-<pre><code>##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00</code></pre>
-</div>
-</div>
-<div id="knitting-documents" class="section level3 hasAnchor" number="1.8.4">
-<h3><span class="header-section-number">1.8.4</span> Knitting Documents<a href="introduction-to-r-and-r-studio.html#knitting-documents" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Knitting refers to the process of converting an R Markdown file into a specified output format.
-To knit your document:</p>
-<ul>
-<li>Click the <code>Knit</code> button in R Studio and choose the output format (HTML, PDF, or Word).</li>
-<li>R Studio will execute the embedded R code chunks and generate the final document.</li>
-</ul>
-<div id="output-file-location" class="section level4 hasAnchor" number="1.8.4.1">
-<h4><span class="header-section-number">1.8.4.1</span> Output File Location<a href="introduction-to-r-and-r-studio.html#output-file-location" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Knitted files are saved in the same directory as the <code>.Rmd</code> file by default.
-Use the Files pane in R Studio to navigate and find these documents.</p>
-</div>
-</div>
-<div id="best-practices-1" class="section level3 hasAnchor" number="1.8.5">
-<h3><span class="header-section-number">1.8.5</span> Best Practices<a href="introduction-to-r-and-r-studio.html#best-practices-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li><strong>Regularly Save Your Work</strong>: Ensure you save your <code>.Rmd</code> file frequently.</li>
-<li><strong>Version Control</strong>: Use version control systems like Git to manage changes and collaborate effectively.</li>
-<li><strong>Document Your Code</strong>: Comment your R code within chunks to explain what each part does.</li>
-</ul>
-<hr />
-<p>R Markdown is a robust tool for statistical analysis and report generation.
-Mastering its use will enhance the clarity and impact of your research presentations and assignments.</p>
-</div>
-</div>
-<div id="best-practices-2" class="section level2 hasAnchor" number="1.9">
-<h2><span class="header-section-number">1.9</span> Best Practices<a href="introduction-to-r-and-r-studio.html#best-practices-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Effective use of R Studio and R Markdown involves more than just knowing the tools; it also requires adopting practices that enhance productivity, ensure reproducibility, and maintain the quality of your work.
-This section outlines some best practices that you should follow when working with R and R Markdown.</p>
-<div id="keep-scripts-organized" class="section level3 hasAnchor" number="1.9.1">
-<h3><span class="header-section-number">1.9.1</span> Keep Scripts Organized<a href="introduction-to-r-and-r-studio.html#keep-scripts-organized" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Organization is key to managing complex projects, especially when dealing with numerous datasets and scripts.</p>
-<ul>
-<li><strong>Project Folders</strong>: Create separate folders for each project to keep files related to that project together.</li>
-<li><strong>Descriptive Filenames</strong>: Use clear and descriptive filenames that reflect the content or purpose of each script or dataset.</li>
-</ul>
-</div>
-<div id="comment-your-code" class="section level3 hasAnchor" number="1.9.2">
-<h3><span class="header-section-number">1.9.2</span> Comment Your Code<a href="introduction-to-r-and-r-studio.html#comment-your-code" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Comments are crucial for explaining what your code does, both to others and to your future self.</p>
-<ul>
-<li><strong>Clarity</strong>: Write comments that clearly explain the purpose of each section of your code.</li>
-<li><strong>Consistency</strong>: Develop a consistent style for your comments, such as starting each comment with a capital letter and ending with a period.</li>
-<li><strong>Coverage</strong>: Comment liberally throughout your code to explain why you made certain coding choices.</li>
-</ul>
-<div class="sourceCode" id="cb6"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb6-1"><a href="introduction-to-r-and-r-studio.html#cb6-1" tabindex="-1"></a><span class="fu"># Calculate mean speed - this is used for initial speed analysis</span></span>
-<span id="cb6-2"><a href="introduction-to-r-and-r-studio.html#cb6-2" tabindex="-1"></a>mean_speed &lt;- mean(data$speed)</span></code></pre></div>
-</div>
-<div id="use-version-control" class="section level3 hasAnchor" number="1.9.3">
-<h3><span class="header-section-number">1.9.3</span> Use Version Control<a href="introduction-to-r-and-r-studio.html#use-version-control" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Version control systems like Git are invaluable for managing changes to your documents and code, especially in collaborative projects.</p>
-<ul>
-<li><p><strong>Track Changes</strong>: Use Git to track changes in your scripts, allowing you to revert to previous versions if necessary.</p></li>
-<li><p><strong>Collaboration</strong>: Version control makes collaborating on projects easier, as it allows multiple people to work on the same files without conflict.</p></li>
-<li><p><strong>Backup</strong>: Regularly push your changes to a remote repository like GitHub for backup and sharing purposes.</p></li>
-</ul>
-</div>
-<div id="regularly-save-and-backup-your-work" class="section level3 hasAnchor" number="1.9.4">
-<h3><span class="header-section-number">1.9.4</span> Regularly Save and Backup Your Work<a href="introduction-to-r-and-r-studio.html#regularly-save-and-backup-your-work" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Losing data or scripts can be a significant setback, so regular backups are essential.</p>
-<ul>
-<li><p><strong>Local Backups</strong>: Regularly save your work on your local machine.
-Consider setting up automated backups if available.</p></li>
-<li><p><strong>Remote Backups</strong>: Use cloud storage services or remote servers to keep a backup of your work.
-This protects against local hardware failures.</p></li>
-</ul>
-</div>
-<div id="write-readable-and-maintainable-code" class="section level3 hasAnchor" number="1.9.5">
-<h3><span class="header-section-number">1.9.5</span> Write Readable and Maintainable Code<a href="introduction-to-r-and-r-studio.html#write-readable-and-maintainable-code" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Readable code is more maintainable, easier to share with others, and easier to debug.</p>
-<ul>
-<li><p><strong>Formatting</strong>: Use consistent indentation and spacing in your scripts.</p></li>
-<li><p><strong>Simplify</strong>: Break complex operations into simpler steps that are easier to understand and test.</p></li>
-</ul>
-</div>
-<div id="document-your-processes" class="section level3 hasAnchor" number="1.9.6">
-<h3><span class="header-section-number">1.9.6</span> Document Your Processes<a href="introduction-to-r-and-r-studio.html#document-your-processes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Documentation is not just about commenting on your code; it also involves keeping records of your research processes and decisions.</p>
-<ul>
-<li><p><strong>Codebooks</strong>: Create codebooks for your datasets, describing each variable and how it is coded.</p></li>
-<li><p><strong>Research Diary</strong>: Keep a diary of your research decisions, especially why certain analyses were chosen and what the outcomes were.</p></li>
-</ul>
-</div>
-<div id="knit-documents-regularly" class="section level3 hasAnchor" number="1.9.7">
-<h3><span class="header-section-number">1.9.7</span> Knit Documents Regularly<a href="introduction-to-r-and-r-studio.html#knit-documents-regularly" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>For R Markdown documents, regular knitting can help you catch errors and see the effects of your code changes in the output document.</p>
-<ul>
-<li><strong>Iterative Knitting</strong>: Knit your document after significant changes to ensure that your document compiles correctly and your changes produce the expected results.</li>
-</ul>
-</div>
-<div id="optimize-workflow-in-r-studio" class="section level3 hasAnchor" number="1.9.8">
-<h3><span class="header-section-number">1.9.8</span> Optimize Workflow in R Studio<a href="introduction-to-r-and-r-studio.html#optimize-workflow-in-r-studio" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>R Studio offers many tools to optimize your workflow:</p>
-<ul>
-<li><p><strong>R Studio Projects</strong>: Use R Studio Projects to manage all files associated with a project in one place.</p></li>
-<li><p><strong>Keyboard Shortcuts</strong>: Learn and use keyboard shortcuts in R Studio to speed up your workflow. (Example - Insert a chunk: Ctrl + Alt + I (Windows) or Cmd + Option + I (Mac))</p></li>
-</ul>
-<hr />
-<p>Adopting these best practices will help you use R Studio and R Markdown more effectively, enhancing the quality of your work and making your data analysis process more efficient and reproducible.</p>
-</div>
-</div>
-<div id="chapter-summary" class="section level2 hasAnchor" number="1.10">
-<h2><span class="header-section-number">1.10</span> Chapter Summary<a href="introduction-to-r-and-r-studio.html#chapter-summary" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In this chapter, you have learned the fundamental skills necessary to begin working with R and R Studio. We explored the R Studio interface, detailing the purpose of each pane and how they contribute to an effective work environment. Additionally, we introduced R Markdown, a powerful tool for integrating code and documentation, which you’ll use for creating dynamic reports and presentations.</p>
-<p>We covered the basics of creating and saving R scripts, the importance of organizing your work, and best practices for writing clean, understandable code. Understanding these foundational concepts is crucial as they form the backbone of any data analysis project in R.</p>
-</div>
-<div id="exercises" class="section level2 hasAnchor" number="1.11">
-<h2><span class="header-section-number">1.11</span> Exercises<a href="introduction-to-r-and-r-studio.html#exercises" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>To reinforce what you’ve learned in this chapter, try completing the following exercises:</p>
-<div id="exercise-1-familiarization-with-r-studio" class="section level3 hasAnchor" number="1.11.1">
-<h3><span class="header-section-number">1.11.1</span> Exercise 1: Familiarization with R Studio<a href="introduction-to-r-and-r-studio.html#exercise-1-familiarization-with-r-studio" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ol style="list-style-type: decimal">
-<li>Create a new R script and save it with the name <code>practice_script.R</code>.</li>
-<li>In your new script, write a simple calculation, such as <code>8 * 9</code>, and run this line of code using R Studio.</li>
-<li>Use the comment functionality to note what the code does.</li>
-</ol>
-</div>
-<div id="exercise-2-basic-data-entry-and-operation" class="section level3 hasAnchor" number="1.11.2">
-<h3><span class="header-section-number">1.11.2</span> Exercise 2: Basic Data Entry and Operation<a href="introduction-to-r-and-r-studio.html#exercise-2-basic-data-entry-and-operation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ol style="list-style-type: decimal">
-<li>Create a vector of numbers from 1 to 10 and assign it to a variable named <code>numbers</code>.</li>
-<li>Calculate the sum of the vector and print the result in the console.</li>
-<li>Write the commands into an R script and save it.</li>
-</ol>
-</div>
-<div id="exercise-3-introduction-to-r-markdown" class="section level3 hasAnchor" number="1.11.3">
-<h3><span class="header-section-number">1.11.3</span> Exercise 3: Introduction to R Markdown<a href="introduction-to-r-and-r-studio.html#exercise-3-introduction-to-r-markdown" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ol style="list-style-type: decimal">
-<li>Create a new R Markdown document titled “My First R Markdown”.</li>
-<li>Write a brief introduction about yourself using Markdown syntax (include at least one header, one list, and bold text).</li>
-<li>Embed a chunk of R code that calculates the square of 12.</li>
-<li>Knit the document to HTML and save the output.</li>
-</ol>
-</div>
-<div id="exercise-4-exploring-the-help-pane" class="section level3 hasAnchor" number="1.11.4">
-<h3><span class="header-section-number">1.11.4</span> Exercise 4: Exploring the Help Pane<a href="introduction-to-r-and-r-studio.html#exercise-4-exploring-the-help-pane" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ol style="list-style-type: decimal">
-<li>Use the Help pane to find help on the <code>plot</code> function.</li>
-<li>In a new R script, write a command to plot a simple graph using <code>plot(1:10, 1:10)</code>.</li>
-<li>Add a title to the plot by referring to the help documentation.</li>
-</ol>
-</div>
-<div id="conclusion" class="section level3 hasAnchor" number="1.11.5">
-<h3><span class="header-section-number">1.11.5</span> Conclusion<a href="introduction-to-r-and-r-studio.html#conclusion" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>By completing these exercises, you will enhance your familiarity with R and R Studio’s basic functions and capabilities. This practice will prepare you for more complex operations and analyses in upcoming chapters. Ensure to regularly save and organize your scripts as you progress through the course.</p>
+<p>By transforming data effectively, researchers can uncover patterns and relationships that might be obscured in the raw data, leading to more robust and reliable conclusions. This chapter will equip you with the knowledge and skills necessary to perform these transformations and apply them in your research projects.</p>
 
 </div>
 </div>
@@ -1026,8 +534,8 @@ This protects against local hardware failures.</p></li>
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="types-of-data-psychologists-collect.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="computation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="appendix-answers-to-chapter-exercises.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -1058,7 +566,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/AmandaDPerez/ZTC-RM/edit/main/01-R-intro.Rmd",
+"link": "https://github.com/AmandaDPerez/ZTC-RM/edit/main/06-transformations.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -1066,7 +574,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/AmandaDPerez/ZTC-RM/blob/main/01-R-intro.Rmd",
+"link": "https://github.com/AmandaDPerez/ZTC-RM/blob/main/06-transformations.Rmd",
 "text": null
 },
 "download": null,
