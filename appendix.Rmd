@@ -442,6 +442,150 @@ pairs.panels(multi_var_data,
 
 -   Correlation ellipses provide a visual representation of confidence intervals for the correlations.
 
+## Answers to Chapter 6 Practice Exercises
+
+### Exercise 1: Mean-Centering
+
+**Dataset**:
+- `expenses <- c(1200, 1500, 1100, 1800, 1300, 1700, 1250, 1400, 1600, 1350)`
+
+**Tasks and Answers**:
+
+1. **Calculate the mean of the expenses**:
+   ```r
+   mean_expenses <- mean(expenses)
+   mean_expenses
+   # Answer: 1425
+   ```
+
+2. **Mean-center the dataset by subtracting the mean from each value**:
+   ```r
+   mean_centered_expenses <- expenses - mean_expenses
+   mean_centered_expenses
+   # Answer: -225, 75, -325, 375, -125, 275, -175, -25, 175, -75
+   ```
+
+3. **Plot the original and mean-centered expenses on the same graph**:
+   ```r
+   y_limits <- range(c(expenses, mean_centered_expenses))
+   plot(expenses, type = "b", col = "blue", ylab = "Expenses", xlab = "Month", main = "Original vs Mean-Centered Expenses", ylim = y_limits)
+   lines(mean_centered_expenses, type = "b", col = "red")
+   legend("topright", legend = c("Original", "Mean-Centered"), col = c("blue", "red"), lty = 1)
+   ```
+
+4. **Interpretation**:
+   - **Answer**: A positive mean-centered value indicates that the expense for that month is above the average expense, while a negative value indicates that the expense is below the average. Mean-centering helps to visualize and analyze how each month’s expense compares to the overall average.
+
+### Exercise 2: Z-Scores
+
+**Dataset**:
+- `test_scores <- c(65, 78, 82, 91, 70, 88, 75, 95, 80, 85)`
+
+**Tasks and Answers**:
+
+1. **Calculate the mean and standard deviation of the test scores**:
+   ```r
+   mean_test_scores <- mean(test_scores)
+   sd_test_scores <- sd(test_scores)
+   mean_test_scores
+   sd_test_scores
+   # Answer: Mean = 79.9, Standard Deviation = 9.9
+   ```
+
+2. **Compute the Z-scores for each test score**:
+   ```r
+   z_scores <- (test_scores - mean_test_scores) / sd_test_scores
+   z_scores
+   # Answer: -1.50, -0.19, 0.21, 1.11, -0.99, 0.82, -0.50, 1.53, 0.01, 0.51
+   ```
+
+3. **Create a histogram of the Z-scores and add a vertical line at Z = 0**:
+   ```r
+   hist(z_scores, breaks = 10, col = "blue", xlab = "Z-Scores", main = "Histogram of Z-Scores")
+   abline(v = 0, col = "red", lwd = 2)
+   ```
+
+4. **Interpretation**:
+   - **Answer**: A Z-score greater than 0 indicates that the test score is above the average, while a Z-score less than 0 indicates that the test score is below the average. Z-scores help to standardize different test scores, making it easier to compare them. Outliers are typically identified as Z-scores beyond ±2 or ±3.
+
+### Exercise 3: Combining Mean-Centering and Z-Scores
+
+**Dataset**:
+- `reaction_times <- c(250, 340, 295, 310, 275, 325, 290, 360, 285, 310)`
+
+**Tasks and Answers**:
+
+1. **Mean-center the reaction times**:
+   ```r
+   mean_reaction_time <- mean(reaction_times)
+   mean_centered_times <- reaction_times - mean_reaction_time
+   mean_centered_times
+   # Answer: -51, 39, -6, 9, -26, 24, -11, 59, -16, 9
+   ```
+
+2. **Calculate the Z-scores for the mean-centered reaction times**:
+   ```r
+   sd_reaction_time <- sd(reaction_times)
+   z_scores_centered <- mean_centered_times / sd_reaction_time
+   z_scores_centered
+   # Answer: -1.42, 1.08, -0.17, 0.25, -0.73, 0.68, -0.31, 1.68, -0.45, 0.25
+   ```
+
+3. **Plot the original reaction times, mean-centered times, and Z-scores on separate graphs**:
+   ```r
+   par(mfrow = c(3, 1))
+   plot(reaction_times, type = "b", col = "blue", ylab = "Reaction Times", xlab = "Index", main = "Original Reaction Times")
+   plot(mean_centered_times, type = "b", col = "green", ylab = "Mean-Centered", xlab = "Index", main = "Mean-Centered Reaction Times")
+   plot(z_scores_centered, type = "b", col = "red", ylab = "Z-Scores", xlab = "Index", main = "Z-Scores of Mean-Centered Reaction Times")
+   ```
+
+4. **Interpretation**:
+   - **Answer**: Mean-centering adjusts the reaction times by subtracting the average, making it easier to see how each participant's time compares to the average. Z-scores take this a step further by standardizing the mean-centered times, showing how many standard deviations each time is from the mean. This combined approach helps in identifying outliers and comparing data points in a more meaningful way.
+
+### Exercise 4: Non-Linear Transformations
+
+**Dataset**:
+- `income <- c(30, 45, 70, 120, 25, 60, 100, 85, 40, 300)`
+
+**Tasks and Answers**:
+
+1. **Apply a logarithmic transformation to the income data**:
+   ```r
+   log_income <- log(income)
+   log_income
+   # Answer: 3.40, 3.81, 4.25, 4.79, 3.22, 4.09, 4.61, 4.44, 3.69, 5.70
+   ```
+
+2. **Apply a square root transformation to the income data**:
+   ```r
+   sqrt_income <- sqrt(income)
+   sqrt_income
+   # Answer: 5.48, 6.71, 8.37, 10.95, 5.00, 7.75, 10.00, 9.22, 6.32, 17.32
+   ```
+
+3. **Apply an inverse transformation to the income data**:
+   ```r
+   inv_income <- 1 / income
+   inv_income
+   # Answer: 0.0333, 0.0222, 0.0143, 0.0083, 0.0400, 0.0167, 0.0100, 0.0118, 0.0250, 0.0033
+   ```
+
+4. **Plot histograms of the original and transformed datasets**:
+   ```r
+   par(mfrow = c(2, 2))
+   hist(income, breaks = 10, col = "blue", xlab = "Income", main = "Original Income")
+   hist(log_income, breaks = 10, col = "green", xlab = "Log(Income)", main = "Log Transformed Income")
+   hist(sqrt_income, breaks = 10, col = "orange", xlab = "Sqrt(Income)", main = "Square Root Transformed Income")
+   hist(inv_income, breaks = 10, col = "red", xlab = "1/Income", main = "Inverse Transformed Income")
+   ```
+
+5. **Interpretation**:
+   - **Answer**: 
+     - **Logarithmic Transformation**: Reduces skewness by pulling in large values, making the distribution more balanced. Useful when dealing with right-skewed data, such as income.
+     - **Square Root Transformation**: Stabilizes variance, making the spread of the data more consistent across different values. Useful for data where variability increases with the value.
+     - **Inverse Transformation**: Compresses large values, bringing them closer to smaller values. Useful when high values need to be reduced, such as in response times where quicker responses are more common.
+
+
 ------------------------------------------------------------------------
 
 This appendix will be continuously updated as new exercises and chapters are added to the textbook, providing a comprehensive resource for students to check their work and ensure they understand the material thoroughly.

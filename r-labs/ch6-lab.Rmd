@@ -1,0 +1,124 @@
+---
+title: "Weekly Lab Homework Assignment: Computation"
+author: "Your Name"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: pdf_document
+---
+
+*Replace "Your Name" with your actual name.*
+
+## Objective:
+
+In this lab, you will apply data transformation techniques, including mean-centering, calculating Z-scores, and performing non-linear transformations on various datasets. Please complete the exercises by filling in the code chunks and answering the interpretation questions. Once completed, knit this document to PDF and submit it as instructed.
+
+### Exercise 1: Mean-Centering
+
+**Dataset**: - Simulated data on the number of hours spent studying per week: `r   study_hours <- c(15, 22, 18, 25, 20, 28, 24, 19, 23, 26)`
+
+**Tasks**:\
+1. Calculate the mean of the study hours.\
+2. Mean-center the dataset by subtracting the mean from each value.\
+3. Plot the original and mean-centered study hours on the same graph.\
+4. **Interpretation**: Explain what the mean-centered values tell you about the amount of time each student spent studying compared to the average.
+
+```{r}
+study_hours <- c(15, 22, 18, 25, 20, 28, 24, 19, 23, 26)
+
+# Calculate the mean of the study hours
+
+
+# Mean-center the study hours
+
+
+# Plot the original and mean-centered study hours
+
+
+```
+
+**Interpretation:** 
+
+### Exercise 2: Calculating Z-Scores
+
+**Dataset**: - Simulated data on students' reaction times (in milliseconds): `r   reaction_times <- c(350, 420, 310, 390, 370, 450, 380, 340, 400, 360)`
+
+**Tasks**:\
+1. Calculate the mean and standard deviation of the reaction times.\
+2. Compute the Z-scores for each reaction time.\
+3. Plot the Z-scores on a line graph.\
+4. **Interpretation**: Discuss what a Z-score greater than 0 or less than 0 indicates about a reaction time relative to the average.
+
+```{r}
+reaction_times <- c(350, 420, 310, 390, 370, 450, 380, 340, 400, 360)
+
+# Calculate the mean and standard deviation of the reaction times
+
+
+# Compute the Z-scores
+
+
+# Plot the Z-scores
+
+
+```
+
+**Interpretation:** 
+
+### Exercise 3: Non-Linear Transformations
+
+**Dataset**: - Simulated data on annual sales figures (in thousands of dollars): `r   sales <- c(200, 450, 700, 1200, 300, 800, 1100, 900, 400, 1500)`
+
+**Tasks**:\
+1. Apply a logarithmic transformation to the sales data.\
+2. Apply a square root transformation to the sales data.\
+3. Plot histograms of the original and transformed sales data.\
+4. **Interpretation**: Compare the distributions of the original and transformed data. Explain how each transformation affects the spread and shape of the data.
+
+```{r}
+sales <- c(200, 450, 700, 1200, 300, 800, 1100, 900, 400, 1500)
+
+# Apply a logarithmic transformation
+
+
+# Apply a square root transformation
+
+
+# Plot histograms of the original and transformed sales data
+
+
+```
+
+**Interpretation:**
+
+-   **Logarithmic Transformation:** The log transformation reduces the skewness of the sales data, making the distribution more balanced. It is particularly useful for right-skewed data with a few very large values.
+
+-   **Square Root Transformation:** The square root transformation also reduces skewness and stabilizes variance, but to a lesser extent than the log transformation. This transformation is useful when there is less extreme skewness in the data.
+
+-   Both transformations make the data more suitable for further analysis by reducing the influence of outliers and stabilizing variance across different ranges of data.
+
+### Exercise 4: Combining Transformations
+
+**Dataset**: - Simulated data on daily step counts: `r   step_counts <- c(8000, 10500, 9200, 11500, 10000, 12500, 11000, 9500, 10200, 12000)`
+
+**Tasks**: 1. Mean-center the step counts.\
+2. Calculate the Z-scores for the mean-centered step counts.\
+3. Plot the original, mean-centered, and Z-scores on separate graphs.\
+4. **Interpretation**: Explain how the combination of mean-centering and Z-scores helps in understanding the step count data compared to looking at the original data alone.
+
+```{r}
+step_counts <- c(8000, 10500, 9200, 11500, 10000, 12500, 11000, 9500, 10200, 12000)
+
+# Mean-center the step counts
+
+
+# Calculate the Z-scores for the mean-centered step counts
+
+
+# Plot the original, mean-centered, and Z-scores
+
+```
+
+**Interpretation:** 
+
+**Submission Instructions:**
+
+Ensure to knit your document to PDF format, checking that all content is correctly displayed before submission. Submit this PDF to Canvas Assignments.

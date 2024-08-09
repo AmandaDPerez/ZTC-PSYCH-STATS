@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 6 Linear and Non-Linear Transformations of Data | Introduction to Psychological Statistics</title>
-  <meta name="description" content="Chapter 6 Linear and Non-Linear Transformations of Data | Introduction to Psychological Statistics" />
+  <title>Chapter 7 GGPLOT2 and Graphing Data in APA Formatting | Introduction to Psychological Statistics</title>
+  <meta name="description" content="Chapter 7 GGPLOT2 and Graphing Data in APA Formatting | Introduction to Psychological Statistics" />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 6 Linear and Non-Linear Transformations of Data | Introduction to Psychological Statistics" />
+  <meta property="og:title" content="Chapter 7 GGPLOT2 and Graphing Data in APA Formatting | Introduction to Psychological Statistics" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 6 Linear and Non-Linear Transformations of Data | Introduction to Psychological Statistics" />
+  <meta name="twitter:title" content="Chapter 7 GGPLOT2 and Graphing Data in APA Formatting | Introduction to Psychological Statistics" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="computation.html"/>
-<link rel="next" href="ggplot2-and-graphing-data-in-apa-formatting.html"/>
+<link rel="prev" href="linear-and-non-linear-transformations-of-data.html"/>
+<link rel="next" href="appendix-answers-to-chapter-exercises.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -530,611 +530,59 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="linear-and-non-linear-transformations-of-data" class="section level1 hasAnchor" number="6">
-<h1><span class="header-section-number">Chapter 6</span> Linear and Non-Linear Transformations of Data<a href="linear-and-non-linear-transformations-of-data.html#linear-and-non-linear-transformations-of-data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="chapter-overview" class="section level2 hasAnchor" number="6.1">
-<h2><span class="header-section-number">6.1</span> Chapter Overview<a href="linear-and-non-linear-transformations-of-data.html#chapter-overview" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In the realm of psychological research and data analysis, transforming data is a crucial step to ensure accurate and meaningful interpretations. Chapter 6 delves into the concepts of linear and non-linear transformations of data, focusing on two primary techniques: mean-centering and Z-scores. These transformations play a vital role in preparing data for statistical analysis, making it easier to interpret results and draw valid conclusions.</p>
-<p>This chapter is designed to provide a comprehensive understanding of these transformations, enriched with practical examples, real-world applications, and hands-on exercises using R. By the end of this chapter, you will be able to:</p>
+<div id="ggplot2-and-graphing-data-in-apa-formatting" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">Chapter 7</span> GGPLOT2 and Graphing Data in APA Formatting<a href="ggplot2-and-graphing-data-in-apa-formatting.html#ggplot2-and-graphing-data-in-apa-formatting" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="chapter-overview-introduction-to-data-visualization" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Chapter Overview: Introduction to Data Visualization<a href="ggplot2-and-graphing-data-in-apa-formatting.html#chapter-overview-introduction-to-data-visualization" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="importance-of-graphing-in-research" class="section level3 hasAnchor" number="7.1.1">
+<h3><span class="header-section-number">7.1.1</span> Importance of Graphing in Research<a href="ggplot2-and-graphing-data-in-apa-formatting.html#importance-of-graphing-in-research" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Graphing, or data visualization, is a fundamental aspect of psychological research. It serves as a powerful tool to summarize complex datasets and convey findings in a clear, concise, and visually appealing manner. In the realm of psychological science, where researchers often deal with large amounts of data, effective visualization is crucial for several reasons:</p>
 <ol style="list-style-type: decimal">
-<li><p><strong>Understand the Importance of Data Transformation</strong>: Learn why transforming data is essential in statistical analysis and how it can impact your results.</p></li>
-<li><p><strong>Perform Mean-Centering</strong>: Understand the concept of mean-centering, its mathematical formulation, and its application in psychological research. You will learn how to perform mean-centering in R and visualize its effects on data.</p></li>
-<li><p><strong>Calculate Z-Scores</strong>: Grasp the concept of Z-scores, their importance in standardizing data, and their role in comparing different datasets. You will learn to compute Z-scores in R and interpret their meaning.</p></li>
-<li><p><strong>Combine Transformations</strong>: Explore how mean-centering and Z-scores can be used together to enhance data analysis. Practical examples will illustrate the benefits of combining these transformations.</p></li>
-<li><p><strong>Apply Non-Linear Transformations</strong>: Discover various types of non-linear transformations, such as logarithmic, square root, and inverse transformations. Understand when and why to use these transformations and how to implement them in R.</p></li>
-<li><p><strong>Interpret Real-World Examples</strong>: Through practical examples and real-world applications, you will see how these transformations are used in psychological research and other fields.</p></li>
-<li><p><strong>Hands-On Practice</strong>: Engage in exercises designed to reinforce your understanding of the concepts covered. These exercises will provide an opportunity to apply transformations to real datasets and interpret the results.</p></li>
+<li><strong>Enhancing Understanding</strong>:
+<ul>
+<li>Graphs help to make sense of data by transforming raw numbers into visual representations, making patterns, trends, and relationships easier to identify and understand. Whether it’s tracking changes over time, comparing groups, or highlighting correlations, a well-crafted graph can quickly convey the essence of the data.</li>
+</ul></li>
+<li><strong>Communicating Results</strong>:
+<ul>
+<li>In research, it’s not just about discovering new insights; it’s also about communicating those findings to others—whether that’s peers, policymakers, or the public. Graphs are a universal language that transcends technical jargon, allowing researchers to effectively communicate their results to a broad audience. A clear and accurate graph can often tell a story more compellingly than a table of numbers ever could.</li>
+</ul></li>
+<li><strong>Supporting Evidence</strong>:
+<ul>
+<li>Graphs are often used to support the conclusions drawn from statistical analyses. They provide a visual confirmation of the trends and patterns identified in the data, helping to bolster the credibility of the research. In many cases, journals and conferences require visual representations of data to accompany statistical results, making graphing an essential skill for researchers.</li>
+</ul></li>
 </ol>
-<div id="key-topics-covered" class="section level4 hasAnchor" number="6.1.0.1">
-<h4><span class="header-section-number">6.1.0.1</span> Key Topics Covered<a href="linear-and-non-linear-transformations-of-data.html#key-topics-covered" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<ul>
-<li><p><strong>Mean-Centering</strong></p>
-<ul>
-<li><p>Definition and importance</p></li>
-<li><p>Mathematical formula</p></li>
-<li><p>Practical examples</p></li>
-<li><p>Real-world applications</p></li>
-<li><p>R code implementation</p></li>
-</ul></li>
-<li><p><strong>Z-Scores</strong></p>
-<ul>
-<li><p>Definition and importance</p></li>
-<li><p>Mathematical formula</p></li>
-<li><p>Practical examples</p></li>
-<li><p>Real-world applications</p></li>
-<li><p>R code implementation</p></li>
-</ul></li>
-<li><p><strong>Combining Transformations</strong></p>
-<ul>
-<li><p>Mean-centering and Z-scores together</p></li>
-<li><p>Practical example</p></li>
-<li><p>R code implementation</p></li>
-</ul></li>
-<li><p><strong>Non-Linear Transformations</strong></p>
-<ul>
-<li><p>Introduction to non-linear transformations</p></li>
-<li><p>Types of non-linear transformations</p></li>
-<li><p>Practical examples</p></li>
-<li><p>Real-world applications</p></li>
-<li><p>R code implementation</p></li>
-</ul></li>
-</ul>
-<p>By transforming data effectively, researchers can uncover patterns and relationships that might be obscured in the raw data, leading to more robust and reliable conclusions. This chapter will equip you with the knowledge and skills necessary to perform these transformations and apply them in your research projects.</p>
 </div>
-</div>
-<div id="mean-centering" class="section level2 hasAnchor" number="6.2">
-<h2><span class="header-section-number">6.2</span> Mean-Centering<a href="linear-and-non-linear-transformations-of-data.html#mean-centering" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="definition-and-importance-1" class="section level3 hasAnchor" number="6.2.1">
-<h3><span class="header-section-number">6.2.1</span> Definition and Importance<a href="linear-and-non-linear-transformations-of-data.html#definition-and-importance-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Mean-centering is a simple but powerful technique used to adjust data by subtracting the average (mean) of the dataset from each individual data point. This transformation helps to focus on the differences between data points rather than their absolute values, making it easier to compare and interpret the data.</p>
-<p><strong>Why is Mean-Centering Important?</strong></p>
+<div id="common-types-of-graphs-in-psychological-research" class="section level3 hasAnchor" number="7.1.2">
+<h3><span class="header-section-number">7.1.2</span> Common Types of Graphs in Psychological Research<a href="ggplot2-and-graphing-data-in-apa-formatting.html#common-types-of-graphs-in-psychological-research" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Psychological research frequently relies on several key types of graphs to present data. Each type serves a different purpose and is selected based on the nature of the data and the research question. Here are the most common types:</p>
 <ol style="list-style-type: decimal">
-<li><strong>Understanding Data Differences</strong>:
+<li><strong>Bar Graphs</strong>:
 <ul>
-<li>When you mean-center data, you’re essentially asking, “How does each individual data point compare to the average?” This is useful in many types of analysis because it helps you see patterns and relationships more clearly.</li>
+<li><strong>Purpose</strong>: Bar graphs are used to compare the values of different groups or categories. They are particularly useful when you want to show the differences between discrete categories, such as the mean scores of different groups in an experiment.</li>
+<li><strong>Example</strong>: A bar graph might be used to display the average test scores of students in different teaching methods.</li>
 </ul></li>
-<li><strong>Preparing Data for Further Analysis</strong>:
+<li><strong>Line Graphs</strong>:
 <ul>
-<li>Mean-centering is often a first step before conducting more complex analyses, as it simplifies the data and makes it easier to work with. For example, if you were comparing test scores between two groups, mean-centering those scores would help you see how each group performs relative to the average.</li>
+<li><strong>Purpose</strong>: Line graphs are ideal for showing trends over time or the relationship between two continuous variables. They are often used when the data points are related in a sequential order, such as time-series data.</li>
+<li><strong>Example</strong>: A line graph could be used to track changes in anxiety levels over several weeks of a treatment program.</li>
 </ul></li>
-</ol>
-</div>
-<div id="mathematical-formula" class="section level3 hasAnchor" number="6.2.2">
-<h3><span class="header-section-number">6.2.2</span> Mathematical Formula<a href="linear-and-non-linear-transformations-of-data.html#mathematical-formula" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The mathematical formula for mean-centering is straightforward. For each data point <span class="math inline">\(X_i\)</span> in a dataset, the mean-centered value <span class="math inline">\(X_{\text{centered}, i}\)</span> is calculated by subtracting the mean <span class="math inline">\(\bar{X}\)</span> of the dataset from the original value:</p>
-<p><span class="math display">\[
-X_{\text{centered}} = X - \bar{X}
-\]</span></p>
-<p>Where: - <span class="math inline">\(X\)</span> is the original value. - <span class="math inline">\(\bar{X}\)</span> is the mean of the dataset. - <span class="math inline">\(X_{\text{centered}}\)</span> is the mean-centered value.</p>
-</div>
-<div id="practical-examples" class="section level3 hasAnchor" number="6.2.3">
-<h3><span class="header-section-number">6.2.3</span> Practical Examples<a href="linear-and-non-linear-transformations-of-data.html#practical-examples" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Example 1: Mean-Centering a Dataset of Students’ Test Scores</strong></p>
-<p>Imagine you have a list of students’ test scores, and you want to see how each student’s score compares to the average score. Here’s how you can do that with mean-centering:</p>
-<p><strong>Dataset</strong>: - Scores: 85, 90, 78, 92, 88, 76, 95, 89, 84, 91</p>
-<p>First, calculate the average (mean) score:</p>
-<p><span class="math display">\[
-\bar{X} = \frac{85 + 90 + 78 + 92 + 88 + 76 + 95 + 89 + 84 + 91}{10} = 86.8
-\]</span></p>
-<p>Next, subtract this mean from each student’s score to get the mean-centered values. This will show how each score compares to the average.</p>
-<p><strong>Example 2: Mean-Centering a Dataset of Reaction Times in a Cognitive Experiment</strong></p>
-<p>Suppose you’re conducting a cognitive experiment where you measure how quickly participants respond to a stimulus. You have the following reaction times (in milliseconds):</p>
-<p><strong>Dataset</strong>: - Reaction Times: 250, 340, 295, 310, 275, 325, 290, 360, 285, 310</p>
-<p>To mean-center these reaction times, start by calculating the average reaction time:</p>
-<p><span class="math display">\[
-\bar{X} = \frac{250 + 340 + 295 + 310 + 275 + 325 + 290 + 360 + 285 + 310}{10} = 304
-\]</span></p>
-<p>Then, subtract this average from each reaction time to see how quickly or slowly each participant responded compared to the average.</p>
-</div>
-<div id="real-world-applications" class="section level3 hasAnchor" number="6.2.4">
-<h3><span class="header-section-number">6.2.4</span> Real-World Applications<a href="linear-and-non-linear-transformations-of-data.html#real-world-applications" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ol style="list-style-type: decimal">
-<li><strong>Comparing Groups with Different Starting Points</strong>:
+<li><strong>Scatter Plots</strong>:
 <ul>
-<li>Mean-centering is often used in research to make comparisons between groups easier. For instance, if you were comparing stress levels in two different groups of people, and one group started with higher stress levels than the other, mean-centering their stress scores would help you see how much each group’s stress changed relative to their own starting point.</li>
+<li><strong>Purpose</strong>: Scatter plots are used to examine the relationship between two continuous variables. Each point on the graph represents an observation, allowing researchers to see patterns, correlations, or outliers.</li>
+<li><strong>Example</strong>: A scatter plot might be used to explore the relationship between hours studied and exam scores among students.</li>
 </ul></li>
-<li><strong>Simplifying Data Interpretation</strong>:
+<li><strong>Histograms</strong>:
 <ul>
-<li>When you have data from multiple sources or categories, mean-centering helps you focus on the relative differences within those categories rather than being distracted by the overall level of the data. This makes it easier to understand and interpret the results.</li>
+<li><strong>Purpose</strong>: Histograms are used to show the distribution of a single continuous variable. They help to visualize the frequency of data points within specified ranges, providing insights into the shape of the data distribution.</li>
+<li><strong>Example</strong>: A histogram could be used to display the distribution of reaction times in a cognitive experiment.</li>
+</ul></li>
+<li><strong>Box Plots</strong>:
+<ul>
+<li><strong>Purpose</strong>: Box plots (or box-and-whisker plots) are used to summarize the distribution of a dataset, showing the median, quartiles, and potential outliers. They are particularly useful for comparing distributions across different groups.</li>
+<li><strong>Example</strong>: A box plot might be used to compare the distribution of stress scores across different age groups.</li>
 </ul></li>
 </ol>
-</div>
-<div id="r-code-implementation" class="section level3 hasAnchor" number="6.2.5">
-<h3><span class="header-section-number">6.2.5</span> R Code Implementation<a href="linear-and-non-linear-transformations-of-data.html#r-code-implementation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Demonstrating Mean-Centering with R Code</strong></p>
-<p>Let’s use R to mean-center the dataset of students’ test scores.</p>
-<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="linear-and-non-linear-transformations-of-data.html#cb96-1" tabindex="-1"></a><span class="co"># Sample data: Students&#39; test scores</span></span>
-<span id="cb96-2"><a href="linear-and-non-linear-transformations-of-data.html#cb96-2" tabindex="-1"></a>scores <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">85</span>, <span class="dv">90</span>, <span class="dv">78</span>, <span class="dv">92</span>, <span class="dv">88</span>, <span class="dv">76</span>, <span class="dv">95</span>, <span class="dv">89</span>, <span class="dv">84</span>, <span class="dv">91</span>)</span>
-<span id="cb96-3"><a href="linear-and-non-linear-transformations-of-data.html#cb96-3" tabindex="-1"></a></span>
-<span id="cb96-4"><a href="linear-and-non-linear-transformations-of-data.html#cb96-4" tabindex="-1"></a><span class="co"># Calculate the mean of the scores</span></span>
-<span id="cb96-5"><a href="linear-and-non-linear-transformations-of-data.html#cb96-5" tabindex="-1"></a>mean_scores <span class="ot">&lt;-</span> <span class="fu">mean</span>(scores)</span>
-<span id="cb96-6"><a href="linear-and-non-linear-transformations-of-data.html#cb96-6" tabindex="-1"></a></span>
-<span id="cb96-7"><a href="linear-and-non-linear-transformations-of-data.html#cb96-7" tabindex="-1"></a><span class="co"># Mean-centering the scores</span></span>
-<span id="cb96-8"><a href="linear-and-non-linear-transformations-of-data.html#cb96-8" tabindex="-1"></a>mean_centered_scores <span class="ot">&lt;-</span> scores <span class="sc">-</span> mean_scores</span>
-<span id="cb96-9"><a href="linear-and-non-linear-transformations-of-data.html#cb96-9" tabindex="-1"></a></span>
-<span id="cb96-10"><a href="linear-and-non-linear-transformations-of-data.html#cb96-10" tabindex="-1"></a><span class="co"># Display the mean-centered scores</span></span>
-<span id="cb96-11"><a href="linear-and-non-linear-transformations-of-data.html#cb96-11" tabindex="-1"></a>mean_centered_scores</span></code></pre></div>
-<pre><code>##  [1]  -1.8   3.2  -8.8   5.2   1.2 -10.8   8.2   2.2  -2.8   4.2</code></pre>
-<p><strong>Output</strong>: The output will show the mean-centered values, which indicate how each student’s score compares to the average score. A positive value means the score is above average, while a negative value means it’s below average.</p>
-<p><strong>Plotting the Original and Mean-Centered Data</strong></p>
-<p>To better visualize the effect of mean-centering, you can plot both the original and mean-centered scores.</p>
-<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="linear-and-non-linear-transformations-of-data.html#cb98-1" tabindex="-1"></a><span class="co"># Display the mean-centered scores</span></span>
-<span id="cb98-2"><a href="linear-and-non-linear-transformations-of-data.html#cb98-2" tabindex="-1"></a>mean_centered_scores</span></code></pre></div>
-<pre><code>##  [1]  -1.8   3.2  -8.8   5.2   1.2 -10.8   8.2   2.2  -2.8   4.2</code></pre>
-<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="linear-and-non-linear-transformations-of-data.html#cb100-1" tabindex="-1"></a><span class="co"># Determine y-axis limits to accommodate both original and mean-centered data</span></span>
-<span id="cb100-2"><a href="linear-and-non-linear-transformations-of-data.html#cb100-2" tabindex="-1"></a>y_limits <span class="ot">&lt;-</span> <span class="fu">range</span>(<span class="fu">c</span>(scores, mean_centered_scores))</span>
-<span id="cb100-3"><a href="linear-and-non-linear-transformations-of-data.html#cb100-3" tabindex="-1"></a></span>
-<span id="cb100-4"><a href="linear-and-non-linear-transformations-of-data.html#cb100-4" tabindex="-1"></a><span class="co"># Plotting original and mean-centered data</span></span>
-<span id="cb100-5"><a href="linear-and-non-linear-transformations-of-data.html#cb100-5" tabindex="-1"></a><span class="fu">plot</span>(scores, <span class="at">type =</span> <span class="st">&quot;b&quot;</span>, <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Scores&quot;</span>, <span class="at">xlab =</span> <span class="st">&quot;Index&quot;</span>, <span class="at">main =</span> <span class="st">&quot;Original vs Mean-Centered Scores&quot;</span>, <span class="at">ylim =</span> y_limits)</span>
-<span id="cb100-6"><a href="linear-and-non-linear-transformations-of-data.html#cb100-6" tabindex="-1"></a><span class="fu">lines</span>(mean_centered_scores, <span class="at">type =</span> <span class="st">&quot;b&quot;</span>, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>)</span>
-<span id="cb100-7"><a href="linear-and-non-linear-transformations-of-data.html#cb100-7" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">&quot;topright&quot;</span>, <span class="at">legend =</span> <span class="fu">c</span>(<span class="st">&quot;Original&quot;</span>, <span class="st">&quot;Mean-Centered&quot;</span>), <span class="at">col =</span> <span class="fu">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;red&quot;</span>), <span class="at">lty =</span> <span class="dv">1</span>)</span></code></pre></div>
-<p><img src="psych-stats-book_files/figure-html/unnamed-chunk-44-1.png" width="672" /></p>
-<p>In this plot, the blue line represents the original scores, while the red line represents the mean-centered scores. Notice how the mean-centered scores are centered around zero, making it easy to see how each student’s performance compares to the average.</p>
-<p>This section has introduced the concept of mean-centering, explained its importance, and demonstrated its application using practical examples and R code. By mean-centering your data, you can more easily compare and interpret individual data points relative to the group as a whole. This is a valuable tool in data analysis, helping to reveal patterns and relationships that might otherwise be hidden.</p>
-</div>
-</div>
-<div id="z-scores" class="section level2 hasAnchor" number="6.3">
-<h2><span class="header-section-number">6.3</span> Z-Scores<a href="linear-and-non-linear-transformations-of-data.html#z-scores" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="definition-and-importance-2" class="section level3 hasAnchor" number="6.3.1">
-<h3><span class="header-section-number">6.3.1</span> Definition and Importance<a href="linear-and-non-linear-transformations-of-data.html#definition-and-importance-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Z-scores are a statistical measure that describe a value’s position relative to the mean of a group of values, measured in terms of standard deviations from the mean. In simpler terms, a Z-score tells you how “unusual” or “typical” a value is compared to the rest of the data.</p>
-<p><strong>Why Are Z-Scores Important?</strong></p>
-<ol style="list-style-type: decimal">
-<li><strong>Standardizing Data for Fair Comparison</strong>:
-<ul>
-<li>Z-scores allow you to compare different datasets or different groups within a dataset, even if they have different means or variations. By converting data to Z-scores, you’re essentially putting everything on the same scale.</li>
-</ul></li>
-<li><strong>Understanding Relative Position</strong>:
-<ul>
-<li>Z-scores help you see whether a value is above or below the average, and by how much. This is useful when you want to understand how an individual score compares to the group as a whole.</li>
-</ul></li>
-</ol>
-</div>
-<div id="mathematical-formula-1" class="section level3 hasAnchor" number="6.3.2">
-<h3><span class="header-section-number">6.3.2</span> Mathematical Formula<a href="linear-and-non-linear-transformations-of-data.html#mathematical-formula-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The formula for calculating a Z-score is:</p>
-<p><span class="math display">\[
-Z = \frac{X - \bar{X}}{\sigma}
-\]</span></p>
-<p>Where: - <span class="math inline">\(X\)</span> is the original value. - <span class="math inline">\(\bar{X}\)</span> is the mean of the dataset. - <span class="math inline">\(\sigma\)</span> is the standard deviation of the dataset. - <span class="math inline">\(Z\)</span> is the Z-score, which tells you how many standard deviations the value <span class="math inline">\(X\)</span> is from the mean.</p>
-</div>
-<div id="practical-examples-1" class="section level3 hasAnchor" number="6.3.3">
-<h3><span class="header-section-number">6.3.3</span> Practical Examples<a href="linear-and-non-linear-transformations-of-data.html#practical-examples-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Example 1: Calculating Z-Scores for a Dataset of Exam Scores</strong></p>
-<p>Imagine you have a list of exam scores and want to know how each student’s score compares to the average. Z-scores can help you do this by showing how much each score differs from the average.</p>
-<p><strong>Dataset</strong>: - Scores: 85, 90, 78, 92, 88, 76, 95, 89, 84, 91</p>
-<p>First, calculate the mean (<span class="math inline">\(\bar{X}\)</span>) and standard deviation (<span class="math inline">\(\sigma\)</span>) of the scores:</p>
-<p><span class="math display">\[
-\bar{X} = \frac{85 + 90 + 78 + 92 + 88 + 76 + 95 + 89 + 84 + 91}{10} = 86.8
-\]</span></p>
-<p><span class="math display">\[
-\sigma = \sqrt{\frac{(85-86.8)^2 + (90-86.8)^2 + \dots + (91-86.8)^2}{10}} = 5.67
-\]</span></p>
-<p>Next, calculate the Z-score for each score to see how far each one is from the average:</p>
-<p><span class="math display">\[
-Z = \frac{85 - 86.8}{5.67} = -0.32
-\]</span></p>
-<p><strong>Example 2: Using Z-Scores to Compare Heights of Individuals from Different Age Groups</strong></p>
-<p>Let’s say you have height data for people in different age groups. By converting their heights to Z-scores, you can compare how tall someone is relative to others in their age group.</p>
-<p><strong>Dataset</strong>: - Heights: 160, 170, 165, 175, 168, 172, 169, 166, 171, 167</p>
-<p>For each age group, you calculate the mean and standard deviation, then convert the heights to Z-scores to see how each individual compares to their peers.</p>
-</div>
-<div id="real-world-applications-1" class="section level3 hasAnchor" number="6.3.4">
-<h3><span class="header-section-number">6.3.4</span> Real-World Applications<a href="linear-and-non-linear-transformations-of-data.html#real-world-applications-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ol style="list-style-type: decimal">
-<li><strong>Identifying Outliers</strong>:
-<ul>
-<li>Z-scores are often used to spot outliers in a dataset. If a Z-score is very high or very low (typically beyond ±2 or ±3), it indicates that the value is much higher or lower than the average and might be considered an outlier.</li>
-</ul></li>
-<li><strong>Comparing Scores in Psychological Assessments</strong>:
-<ul>
-<li>In psychological testing, Z-scores can be used to compare an individual’s score to a standard or normative sample. For example, Z-scores can show how a person’s test results compare to the average results of a larger population.</li>
-</ul></li>
-</ol>
-</div>
-<div id="r-code-implementation-1" class="section level3 hasAnchor" number="6.3.5">
-<h3><span class="header-section-number">6.3.5</span> R Code Implementation<a href="linear-and-non-linear-transformations-of-data.html#r-code-implementation-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Demonstrating Calculation of Z-Scores with R Code</strong></p>
-<p>Let’s calculate the Z-scores for our exam scores dataset.</p>
-<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="linear-and-non-linear-transformations-of-data.html#cb101-1" tabindex="-1"></a><span class="co"># Sample data: Exam scores</span></span>
-<span id="cb101-2"><a href="linear-and-non-linear-transformations-of-data.html#cb101-2" tabindex="-1"></a>scores <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">85</span>, <span class="dv">90</span>, <span class="dv">78</span>, <span class="dv">92</span>, <span class="dv">88</span>, <span class="dv">76</span>, <span class="dv">95</span>, <span class="dv">89</span>, <span class="dv">84</span>, <span class="dv">91</span>)</span>
-<span id="cb101-3"><a href="linear-and-non-linear-transformations-of-data.html#cb101-3" tabindex="-1"></a></span>
-<span id="cb101-4"><a href="linear-and-non-linear-transformations-of-data.html#cb101-4" tabindex="-1"></a><span class="co"># Calculate the mean of the scores</span></span>
-<span id="cb101-5"><a href="linear-and-non-linear-transformations-of-data.html#cb101-5" tabindex="-1"></a>mean_scores <span class="ot">&lt;-</span> <span class="fu">mean</span>(scores)</span>
-<span id="cb101-6"><a href="linear-and-non-linear-transformations-of-data.html#cb101-6" tabindex="-1"></a></span>
-<span id="cb101-7"><a href="linear-and-non-linear-transformations-of-data.html#cb101-7" tabindex="-1"></a><span class="co"># Calculate the standard deviation of the scores</span></span>
-<span id="cb101-8"><a href="linear-and-non-linear-transformations-of-data.html#cb101-8" tabindex="-1"></a>sd_scores <span class="ot">&lt;-</span> <span class="fu">sd</span>(scores)</span>
-<span id="cb101-9"><a href="linear-and-non-linear-transformations-of-data.html#cb101-9" tabindex="-1"></a></span>
-<span id="cb101-10"><a href="linear-and-non-linear-transformations-of-data.html#cb101-10" tabindex="-1"></a><span class="co"># Calculate the Z-scores</span></span>
-<span id="cb101-11"><a href="linear-and-non-linear-transformations-of-data.html#cb101-11" tabindex="-1"></a>z_scores <span class="ot">&lt;-</span> (scores <span class="sc">-</span> mean_scores) <span class="sc">/</span> sd_scores</span>
-<span id="cb101-12"><a href="linear-and-non-linear-transformations-of-data.html#cb101-12" tabindex="-1"></a></span>
-<span id="cb101-13"><a href="linear-and-non-linear-transformations-of-data.html#cb101-13" tabindex="-1"></a><span class="co"># Display the Z-scores</span></span>
-<span id="cb101-14"><a href="linear-and-non-linear-transformations-of-data.html#cb101-14" tabindex="-1"></a>z_scores</span></code></pre></div>
-<pre><code>##  [1] -0.2956519  0.5256035 -1.4454095  0.8541056  0.1971013 -1.7739117
-##  [7]  1.3468589  0.3613524 -0.4599030  0.6898545</code></pre>
-<p><strong>Output</strong>: The output will show the Z-scores for each student’s exam score. A Z-score above 0 means the score is above average, while a Z-score below 0 means it is below average.</p>
-<p><strong>Visualizing Z-Scores Using a Standard Normal Distribution</strong></p>
-<p>To better understand how these Z-scores are distributed, we can plot them on a histogram.</p>
-<div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="linear-and-non-linear-transformations-of-data.html#cb103-1" tabindex="-1"></a><span class="co"># Plotting Z-scores</span></span>
-<span id="cb103-2"><a href="linear-and-non-linear-transformations-of-data.html#cb103-2" tabindex="-1"></a><span class="fu">hist</span>(z_scores, <span class="at">breaks =</span> <span class="dv">10</span>, <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>, <span class="at">xlab =</span> <span class="st">&quot;Z-Scores&quot;</span>, <span class="at">main =</span> <span class="st">&quot;Histogram of Z-Scores&quot;</span>)</span>
-<span id="cb103-3"><a href="linear-and-non-linear-transformations-of-data.html#cb103-3" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v =</span> <span class="dv">0</span>, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code></pre></div>
-<p><img src="psych-stats-book_files/figure-html/unnamed-chunk-46-1.png" width="672" /></p>
-<p>In this plot:</p>
-<ul>
-<li><p>The histogram shows the spread of Z-scores.</p></li>
-<li><p>The red vertical line at <span class="math inline">\(Z = 0\)</span> represents the mean. Scores to the right of this line are above average, and those to the left are below</p></li>
-</ul>
-<p>This section has provided a simplified explanation of Z-scores, their purpose, and practical examples of how they are calculated and used. Z-scores are a valuable tool for standardizing data, making it easier to compare values across different datasets, and for identifying outliers in your data.</p>
-</div>
-</div>
-<div id="combining-transformations" class="section level2 hasAnchor" number="6.4">
-<h2><span class="header-section-number">6.4</span> Combining Transformations<a href="linear-and-non-linear-transformations-of-data.html#combining-transformations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="mean-centering-and-z-scores-together" class="section level3 hasAnchor" number="6.4.1">
-<h3><span class="header-section-number">6.4.1</span> Mean-Centering and Z-Scores Together<a href="linear-and-non-linear-transformations-of-data.html#mean-centering-and-z-scores-together" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Sometimes, when analyzing data, you might want to apply both mean-centering and Z-scores to the same dataset. Each transformation has its own purpose, and when used together, they can give you a deeper understanding of your data.</p>
-<p><strong>Why Use Both Mean-Centering and Z-Scores?</strong></p>
-<ol style="list-style-type: decimal">
-<li><strong>Mean-Centering</strong>:
-<ul>
-<li>Mean-centering is useful for adjusting your data so that the mean of the dataset is zero. This makes it easier to understand how each data point compares to the average.</li>
-</ul></li>
-<li><strong>Z-Scores</strong>:
-<ul>
-<li>Z-scores go a step further by not only centering the data around zero but also scaling it based on the standard deviation. This standardization allows you to see how far each data point is from the mean in terms of standard deviations, making it easier to compare values across different datasets or groups.</li>
-</ul></li>
-</ol>
-<p><strong>When to Combine Them?</strong> - You might combine these transformations when you want to center your data (subtract the mean) and also standardize it (divide by the standard deviation). This is particularly useful when you need to compare data points from different groups or when you’re preparing data for certain statistical analyses.</p>
-</div>
-<div id="practical-example-1" class="section level3 hasAnchor" number="6.4.2">
-<h3><span class="header-section-number">6.4.2</span> Practical Example<a href="linear-and-non-linear-transformations-of-data.html#practical-example-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Example: Combining Mean-Centering and Z-Scores in a Dataset of Reaction Times</strong></p>
-<p>Let’s say you’re working with reaction time data from an experiment. You want to know not only how each participant’s reaction time compares to the average (mean-centering) but also how it compares in terms of standard deviations from the mean (Z-scores).</p>
-<p><strong>Dataset</strong>: - Reaction Times (in milliseconds): 250, 340, 295, 310, 275, 325, 290, 360, 285, 310</p>
-<p>First, you’ll mean-center the data to see how each reaction time compares to the average reaction time. Then, you’ll calculate the Z-scores to understand how each reaction time compares to the overall distribution of times in terms of standard deviations.</p>
-</div>
-<div id="r-code-implementation-2" class="section level3 hasAnchor" number="6.4.3">
-<h3><span class="header-section-number">6.4.3</span> R Code Implementation<a href="linear-and-non-linear-transformations-of-data.html#r-code-implementation-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Let’s walk through how to perform both transformations using R.</p>
-<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="linear-and-non-linear-transformations-of-data.html#cb104-1" tabindex="-1"></a><span class="co"># Sample data: Reaction times in milliseconds</span></span>
-<span id="cb104-2"><a href="linear-and-non-linear-transformations-of-data.html#cb104-2" tabindex="-1"></a>reaction_times <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">250</span>, <span class="dv">340</span>, <span class="dv">295</span>, <span class="dv">310</span>, <span class="dv">275</span>, <span class="dv">325</span>, <span class="dv">290</span>, <span class="dv">360</span>, <span class="dv">285</span>, <span class="dv">310</span>)</span>
-<span id="cb104-3"><a href="linear-and-non-linear-transformations-of-data.html#cb104-3" tabindex="-1"></a></span>
-<span id="cb104-4"><a href="linear-and-non-linear-transformations-of-data.html#cb104-4" tabindex="-1"></a><span class="co"># Step 1: Calculate the mean of the reaction times</span></span>
-<span id="cb104-5"><a href="linear-and-non-linear-transformations-of-data.html#cb104-5" tabindex="-1"></a>mean_reaction_time <span class="ot">&lt;-</span> <span class="fu">mean</span>(reaction_times)</span>
-<span id="cb104-6"><a href="linear-and-non-linear-transformations-of-data.html#cb104-6" tabindex="-1"></a></span>
-<span id="cb104-7"><a href="linear-and-non-linear-transformations-of-data.html#cb104-7" tabindex="-1"></a><span class="co"># Step 2: Mean-center the reaction times</span></span>
-<span id="cb104-8"><a href="linear-and-non-linear-transformations-of-data.html#cb104-8" tabindex="-1"></a>mean_centered_times <span class="ot">&lt;-</span> reaction_times <span class="sc">-</span> mean_reaction_time</span>
-<span id="cb104-9"><a href="linear-and-non-linear-transformations-of-data.html#cb104-9" tabindex="-1"></a></span>
-<span id="cb104-10"><a href="linear-and-non-linear-transformations-of-data.html#cb104-10" tabindex="-1"></a><span class="co"># Step 3: Calculate the standard deviation of the original reaction times</span></span>
-<span id="cb104-11"><a href="linear-and-non-linear-transformations-of-data.html#cb104-11" tabindex="-1"></a>sd_reaction_time <span class="ot">&lt;-</span> <span class="fu">sd</span>(reaction_times)</span>
-<span id="cb104-12"><a href="linear-and-non-linear-transformations-of-data.html#cb104-12" tabindex="-1"></a></span>
-<span id="cb104-13"><a href="linear-and-non-linear-transformations-of-data.html#cb104-13" tabindex="-1"></a><span class="co"># Step 4: Calculate Z-scores for the mean-centered reaction times</span></span>
-<span id="cb104-14"><a href="linear-and-non-linear-transformations-of-data.html#cb104-14" tabindex="-1"></a>z_scores_centered <span class="ot">&lt;-</span> mean_centered_times <span class="sc">/</span> sd_reaction_time</span>
-<span id="cb104-15"><a href="linear-and-non-linear-transformations-of-data.html#cb104-15" tabindex="-1"></a></span>
-<span id="cb104-16"><a href="linear-and-non-linear-transformations-of-data.html#cb104-16" tabindex="-1"></a><span class="co"># Display the mean-centered reaction times</span></span>
-<span id="cb104-17"><a href="linear-and-non-linear-transformations-of-data.html#cb104-17" tabindex="-1"></a>mean_centered_times</span></code></pre></div>
-<pre><code>##  [1] -54  36  -9   6 -29  21 -14  56 -19   6</code></pre>
-<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="linear-and-non-linear-transformations-of-data.html#cb106-1" tabindex="-1"></a><span class="co"># Display the Z-scores for the mean-centered reaction times</span></span>
-<span id="cb106-2"><a href="linear-and-non-linear-transformations-of-data.html#cb106-2" tabindex="-1"></a>z_scores_centered</span></code></pre></div>
-<pre><code>##  [1] -1.6762608  1.1175072 -0.2793768  0.1862512 -0.9002141  0.6518792
-##  [7] -0.4345861  1.7383445 -0.5897954  0.1862512</code></pre>
-<p><strong>Output</strong>:</p>
-<ul>
-<li><p>The <code>mean_centered_times</code> will show how each reaction time differs from the average reaction time.</p></li>
-<li><p>The <code>z_scores_centered</code> will show how many standard deviations each mean-centered reaction time is from the mean.</p></li>
-</ul>
-<p><strong>Visualizing the Transformations</strong></p>
-<p>To better understand the effects of these transformations, let’s plot the original reaction times, the mean-centered reaction times, and the Z-scores.</p>
-<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="linear-and-non-linear-transformations-of-data.html#cb108-1" tabindex="-1"></a><span class="co"># Plotting original, mean-centered, and Z-scores</span></span>
-<span id="cb108-2"><a href="linear-and-non-linear-transformations-of-data.html#cb108-2" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">1</span>))  <span class="co"># Set up the plotting area to have 3 plots, one above the other</span></span>
-<span id="cb108-3"><a href="linear-and-non-linear-transformations-of-data.html#cb108-3" tabindex="-1"></a></span>
-<span id="cb108-4"><a href="linear-and-non-linear-transformations-of-data.html#cb108-4" tabindex="-1"></a><span class="co"># Plot original reaction times</span></span>
-<span id="cb108-5"><a href="linear-and-non-linear-transformations-of-data.html#cb108-5" tabindex="-1"></a><span class="fu">plot</span>(reaction_times, <span class="at">type =</span> <span class="st">&quot;b&quot;</span>, <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Reaction Times&quot;</span>, <span class="at">xlab =</span> <span class="st">&quot;Index&quot;</span>, <span class="at">main =</span> <span class="st">&quot;Original Reaction Times&quot;</span>)</span>
-<span id="cb108-6"><a href="linear-and-non-linear-transformations-of-data.html#cb108-6" tabindex="-1"></a></span>
-<span id="cb108-7"><a href="linear-and-non-linear-transformations-of-data.html#cb108-7" tabindex="-1"></a><span class="co"># Plot mean-centered reaction times</span></span>
-<span id="cb108-8"><a href="linear-and-non-linear-transformations-of-data.html#cb108-8" tabindex="-1"></a><span class="fu">plot</span>(mean_centered_times, <span class="at">type =</span> <span class="st">&quot;b&quot;</span>, <span class="at">col =</span> <span class="st">&quot;green&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Mean-Centered&quot;</span>, <span class="at">xlab =</span> <span class="st">&quot;Index&quot;</span>, <span class="at">main =</span> <span class="st">&quot;Mean-Centered Reaction Times&quot;</span>)</span>
-<span id="cb108-9"><a href="linear-and-non-linear-transformations-of-data.html#cb108-9" tabindex="-1"></a></span>
-<span id="cb108-10"><a href="linear-and-non-linear-transformations-of-data.html#cb108-10" tabindex="-1"></a><span class="co"># Plot Z-scores of mean-centered reaction times</span></span>
-<span id="cb108-11"><a href="linear-and-non-linear-transformations-of-data.html#cb108-11" tabindex="-1"></a><span class="fu">plot</span>(z_scores_centered, <span class="at">type =</span> <span class="st">&quot;b&quot;</span>, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Z-Scores&quot;</span>, <span class="at">xlab =</span> <span class="st">&quot;Index&quot;</span>, <span class="at">main =</span> <span class="st">&quot;Z-Scores of Mean-Centered Reaction Times&quot;</span>)</span></code></pre></div>
-<p><img src="psych-stats-book_files/figure-html/unnamed-chunk-48-1.png" width="672" /></p>
-<p><strong>Explanation of the Plots</strong>:</p>
-<ol style="list-style-type: decimal">
-<li><p><strong>Original Reaction Times (Blue)</strong>:</p>
-<ul>
-<li>This plot shows the raw reaction times as they were originally measured.</li>
-</ul></li>
-<li><p><strong>Mean-Centered Reaction Times (Green)</strong>:</p>
-<ul>
-<li>This plot shows the reaction times after subtracting the average reaction time. The data is now centered around zero, making it easier to see how each time compares to the average.</li>
-</ul></li>
-<li><p><strong>Z-Scores of Mean-Centered Reaction Times (Red)</strong>:</p>
-<ul>
-<li>This plot shows the reaction times after both mean-centering and standardizing them. The Z-scores tell you how far each mean-centered time is from the average in terms of standard deviations, making it easier to identify outliers or unusual reaction times.</li>
-</ul></li>
-</ol>
-</div>
-<div id="summary" class="section level3 hasAnchor" number="6.4.4">
-<h3><span class="header-section-number">6.4.4</span> Summary<a href="linear-and-non-linear-transformations-of-data.html#summary" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>By combining mean-centering and Z-scores, you gain a more nuanced understanding of your data. Mean-centering adjusts the data so that the average is zero, highlighting deviations from the mean. Z-scores take this a step further by scaling these deviations in terms of standard deviations, allowing for easier comparison across different datasets or groups. This combined approach is particularly useful in psychological research and data analysis, where understanding relative differences and standardizing data are key to drawing accurate conclusions.</p>
-</div>
-</div>
-<div id="non-linear-transformations" class="section level2 hasAnchor" number="6.5">
-<h2><span class="header-section-number">6.5</span> Non-Linear Transformations<a href="linear-and-non-linear-transformations-of-data.html#non-linear-transformations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="introduction-to-non-linear-transformations" class="section level3 hasAnchor" number="6.5.1">
-<h3><span class="header-section-number">6.5.1</span> Introduction to Non-Linear Transformations<a href="linear-and-non-linear-transformations-of-data.html#introduction-to-non-linear-transformations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>In data analysis, not all data behaves in a simple, straightforward way. Sometimes, the relationship between variables is not linear, meaning that the data doesn’t follow a straight line when graphed. In such cases, non-linear transformations can be helpful. These transformations change the scale or distribution of the data in a way that makes it easier to analyze and interpret.</p>
-<p><strong>When and Why Are Non-Linear Transformations Used?</strong></p>
-<ol style="list-style-type: decimal">
-<li><strong>Handling Skewed Data</strong>:
-<ul>
-<li>Sometimes, data can be skewed, meaning that it is not evenly distributed. For example, if most people in a dataset earn a low income, but a few people earn very high incomes, the data will be right-skewed. Non-linear transformations, like the logarithmic transformation, can help to “pull in” extreme values and make the distribution more balanced.</li>
-</ul></li>
-<li><strong>Stabilizing Variance</strong>:
-<ul>
-<li>In some datasets, the variability (or spread) of the data might change depending on the value of the variable. For instance, reaction times might have more variability for slower responses than for faster ones. A square root transformation can stabilize this variance, making the data easier to analyze.</li>
-</ul></li>
-<li><strong>Meeting Assumptions of Statistical Tests</strong>:
-<ul>
-<li>Many statistical tests assume that the data follows a normal distribution (a bell-shaped curve). Non-linear transformations can help make the data conform more closely to these assumptions, which makes the results of statistical tests more reliable.</li>
-</ul></li>
-</ol>
-</div>
-<div id="types-of-non-linear-transformations" class="section level3 hasAnchor" number="6.5.2">
-<h3><span class="header-section-number">6.5.2</span> Types of Non-Linear Transformations<a href="linear-and-non-linear-transformations-of-data.html#types-of-non-linear-transformations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>There are several common types of non-linear transformations, each useful in different situations:</p>
-<ol style="list-style-type: decimal">
-<li><strong>Logarithmic Transformation</strong>
-<ul>
-<li><p>The logarithmic transformation (often simply called a “log transformation”) is used to reduce the impact of extreme values in a dataset. It is particularly useful for right-skewed data, where a few very large values dominate the dataset.</p></li>
-<li><p><strong>Formula</strong>: <span class="math display">\[
-Y_{\text{log}} = \log(X)
-\]</span></p></li>
-<li><p><strong>Example</strong>: If you have income data where most people earn between $30,000 and $50,000 but a few people earn millions, applying a log transformation can make the distribution of incomes more normal.</p></li>
-</ul></li>
-<li><strong>Square Root Transformation</strong>
-<ul>
-<li><p>The square root transformation is often used to stabilize variance. It’s useful when the data has a wider spread at higher values.</p></li>
-<li><p><strong>Formula</strong>:</p></li>
-</ul></li>
-</ol>
-<p><span class="math display">\[
-Y_{\text{sqrt}} = \sqrt{X}
-\]</span></p>
-<ul>
-<li><strong>Example</strong>: If you have reaction time data where the variability increases with longer times, applying a square root transformation can reduce this variability, making the data more consistent.</li>
-</ul>
-<ol start="3" style="list-style-type: decimal">
-<li><strong>Inverse Transformation</strong>
-<ul>
-<li><p>The inverse transformation is used to “flip” the data and reduce the impact of large values. This transformation is useful when high values in the dataset need to be “compressed.”</p></li>
-<li><p><strong>Formula</strong>:</p></li>
-</ul></li>
-</ol>
-<p><span class="math display">\[
-Y_{\text{inv}} = \frac{1}{X}
-\]</span></p>
-<ul>
-<li><strong>Example</strong>: Inverting the data can help with situations where large values need to be brought closer to smaller values, such as with response times in tasks where quicker responses are more common.</li>
-</ul>
-</div>
-<div id="practical-examples-2" class="section level3 hasAnchor" number="6.5.3">
-<h3><span class="header-section-number">6.5.3</span> Practical Examples<a href="linear-and-non-linear-transformations-of-data.html#practical-examples-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Example 1: Logarithmic Transformation of Income Data to Reduce Skewness</strong></p>
-<p>Let’s consider a dataset of annual incomes where most people earn between $30,000 and $50,000, but a few earn much more, even up to $1,000,000. This type of data is likely to be right-skewed. Applying a logarithmic transformation can help “pull in” the higher incomes and make the distribution more balanced.</p>
-<p><strong>Example 2: Square Root Transformation of Reaction Time Data to Stabilize Variance</strong></p>
-<p>Imagine you’re analyzing reaction times in an experiment, and you notice that the variability of response times is larger for slower responses. By applying a square root transformation, you can stabilize the variance, making the data easier to interpret and analyze.</p>
-</div>
-<div id="real-world-applications-2" class="section level3 hasAnchor" number="6.5.4">
-<h3><span class="header-section-number">6.5.4</span> Real-World Applications<a href="linear-and-non-linear-transformations-of-data.html#real-world-applications-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ol style="list-style-type: decimal">
-<li><p><strong>Use in Psychological Research</strong>:</p>
-<ul>
-<li>In psychological studies, non-linear transformations are often used to meet the assumptions of statistical tests. For example, when analyzing response times or survey data, researchers might use square root or log transformations to normalize the data.</li>
-</ul></li>
-<li><p><strong>Application in Economic Data</strong>:</p>
-<ul>
-<li>Economic data, such as income or wealth distributions, are often heavily skewed. Logarithmic transformations are commonly used in economics to handle these skewed distributions, making the data more suitable for analysis and interpretation.</li>
-</ul></li>
-</ol>
-</div>
-<div id="r-code-implementation-3" class="section level3 hasAnchor" number="6.5.5">
-<h3><span class="header-section-number">6.5.5</span> R Code Implementation<a href="linear-and-non-linear-transformations-of-data.html#r-code-implementation-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Let’s walk through how to apply these non-linear transformations using R.</p>
-<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="linear-and-non-linear-transformations-of-data.html#cb109-1" tabindex="-1"></a><span class="co"># Sample data: Income data in thousands of dollars</span></span>
-<span id="cb109-2"><a href="linear-and-non-linear-transformations-of-data.html#cb109-2" tabindex="-1"></a>income <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">30</span>, <span class="dv">45</span>, <span class="dv">70</span>, <span class="dv">120</span>, <span class="dv">25</span>, <span class="dv">60</span>, <span class="dv">100</span>, <span class="dv">85</span>, <span class="dv">40</span>, <span class="dv">300</span>)</span>
-<span id="cb109-3"><a href="linear-and-non-linear-transformations-of-data.html#cb109-3" tabindex="-1"></a></span>
-<span id="cb109-4"><a href="linear-and-non-linear-transformations-of-data.html#cb109-4" tabindex="-1"></a><span class="co"># Logarithmic Transformation</span></span>
-<span id="cb109-5"><a href="linear-and-non-linear-transformations-of-data.html#cb109-5" tabindex="-1"></a>log_income <span class="ot">&lt;-</span> <span class="fu">log</span>(income)</span>
-<span id="cb109-6"><a href="linear-and-non-linear-transformations-of-data.html#cb109-6" tabindex="-1"></a></span>
-<span id="cb109-7"><a href="linear-and-non-linear-transformations-of-data.html#cb109-7" tabindex="-1"></a><span class="co"># Square Root Transformation</span></span>
-<span id="cb109-8"><a href="linear-and-non-linear-transformations-of-data.html#cb109-8" tabindex="-1"></a>sqrt_income <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(income)</span>
-<span id="cb109-9"><a href="linear-and-non-linear-transformations-of-data.html#cb109-9" tabindex="-1"></a></span>
-<span id="cb109-10"><a href="linear-and-non-linear-transformations-of-data.html#cb109-10" tabindex="-1"></a><span class="co"># Inverse Transformation</span></span>
-<span id="cb109-11"><a href="linear-and-non-linear-transformations-of-data.html#cb109-11" tabindex="-1"></a>inv_income <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">/</span> income</span>
-<span id="cb109-12"><a href="linear-and-non-linear-transformations-of-data.html#cb109-12" tabindex="-1"></a></span>
-<span id="cb109-13"><a href="linear-and-non-linear-transformations-of-data.html#cb109-13" tabindex="-1"></a><span class="co"># Display the transformed data</span></span>
-<span id="cb109-14"><a href="linear-and-non-linear-transformations-of-data.html#cb109-14" tabindex="-1"></a>log_income</span></code></pre></div>
-<pre><code>##  [1] 3.401197 3.806662 4.248495 4.787492 3.218876 4.094345 4.605170 4.442651
-##  [9] 3.688879 5.703782</code></pre>
-<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="linear-and-non-linear-transformations-of-data.html#cb111-1" tabindex="-1"></a>sqrt_income</span></code></pre></div>
-<pre><code>##  [1]  5.477226  6.708204  8.366600 10.954451  5.000000  7.745967 10.000000
-##  [8]  9.219544  6.324555 17.320508</code></pre>
-<div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb113-1"><a href="linear-and-non-linear-transformations-of-data.html#cb113-1" tabindex="-1"></a>inv_income</span></code></pre></div>
-<pre><code>##  [1] 0.033333333 0.022222222 0.014285714 0.008333333 0.040000000 0.016666667
-##  [7] 0.010000000 0.011764706 0.025000000 0.003333333</code></pre>
-<p><strong>Output</strong>:</p>
-<ul>
-<li><p><code>log_income</code>: This will show the income data after applying a logarithmic transformation. The larger values will be “pulled in,” reducing the skewness of the data.</p></li>
-<li><p><code>sqrt_income</code>: This will show the income data after applying a square root transformation. This transformation helps stabilize variance in the data.</p></li>
-<li><p><code>inv_income</code>: This will show the income data after applying an inverse transformation. The largest values will be compressed more than the smaller ones.</p></li>
-</ul>
-<p><strong>Visualizing the Transformations</strong></p>
-<p>To see how these transformations affect the data, let’s plot the original and transformed datasets.</p>
-<div class="sourceCode" id="cb115"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb115-1"><a href="linear-and-non-linear-transformations-of-data.html#cb115-1" tabindex="-1"></a><span class="co"># Set up the plotting area to have 2x2 plots</span></span>
-<span id="cb115-2"><a href="linear-and-non-linear-transformations-of-data.html#cb115-2" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">2</span>))</span>
-<span id="cb115-3"><a href="linear-and-non-linear-transformations-of-data.html#cb115-3" tabindex="-1"></a></span>
-<span id="cb115-4"><a href="linear-and-non-linear-transformations-of-data.html#cb115-4" tabindex="-1"></a><span class="co"># Plot original income data</span></span>
-<span id="cb115-5"><a href="linear-and-non-linear-transformations-of-data.html#cb115-5" tabindex="-1"></a><span class="fu">hist</span>(income, <span class="at">breaks =</span> <span class="dv">10</span>, <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>, <span class="at">xlab =</span> <span class="st">&quot;Income&quot;</span>, <span class="at">main =</span> <span class="st">&quot;Original Income&quot;</span>)</span>
-<span id="cb115-6"><a href="linear-and-non-linear-transformations-of-data.html#cb115-6" tabindex="-1"></a></span>
-<span id="cb115-7"><a href="linear-and-non-linear-transformations-of-data.html#cb115-7" tabindex="-1"></a><span class="co"># Plot log-transformed income data</span></span>
-<span id="cb115-8"><a href="linear-and-non-linear-transformations-of-data.html#cb115-8" tabindex="-1"></a><span class="fu">hist</span>(log_income, <span class="at">breaks =</span> <span class="dv">10</span>, <span class="at">col =</span> <span class="st">&quot;green&quot;</span>, <span class="at">xlab =</span> <span class="st">&quot;Log(Income)&quot;</span>, <span class="at">main =</span> <span class="st">&quot;Log Transformed Income&quot;</span>)</span>
-<span id="cb115-9"><a href="linear-and-non-linear-transformations-of-data.html#cb115-9" tabindex="-1"></a></span>
-<span id="cb115-10"><a href="linear-and-non-linear-transformations-of-data.html#cb115-10" tabindex="-1"></a><span class="co"># Plot square root-transformed income data</span></span>
-<span id="cb115-11"><a href="linear-and-non-linear-transformations-of-data.html#cb115-11" tabindex="-1"></a><span class="fu">hist</span>(sqrt_income, <span class="at">breaks =</span> <span class="dv">10</span>, <span class="at">col =</span> <span class="st">&quot;orange&quot;</span>, <span class="at">xlab =</span> <span class="st">&quot;Sqrt(Income)&quot;</span>, <span class="at">main =</span> <span class="st">&quot;Square Root Transformed Income&quot;</span>)</span>
-<span id="cb115-12"><a href="linear-and-non-linear-transformations-of-data.html#cb115-12" tabindex="-1"></a></span>
-<span id="cb115-13"><a href="linear-and-non-linear-transformations-of-data.html#cb115-13" tabindex="-1"></a><span class="co"># Plot inverse-transformed income data</span></span>
-<span id="cb115-14"><a href="linear-and-non-linear-transformations-of-data.html#cb115-14" tabindex="-1"></a><span class="fu">hist</span>(inv_income, <span class="at">breaks =</span> <span class="dv">10</span>, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>, <span class="at">xlab =</span> <span class="st">&quot;1/Income&quot;</span>, <span class="at">main =</span> <span class="st">&quot;Inverse Transformed Income&quot;</span>)</span></code></pre></div>
-<p><img src="psych-stats-book_files/figure-html/unnamed-chunk-50-1.png" width="672" /></p>
-<p><strong>Explanation of the Plots</strong>:</p>
-<ol style="list-style-type: decimal">
-<li><p><strong>Original Income Data (Blue)</strong>:</p>
-<ul>
-<li>This plot shows the original distribution of income data, which might be skewed if there are a few very large values.</li>
-</ul></li>
-<li><p><strong>Log-Transformed Income Data (Green)</strong>:</p>
-<ul>
-<li>The log transformation reduces the impact of the large incomes, resulting in a more balanced distribution.</li>
-</ul></li>
-<li><p><strong>Square Root-Transformed Income Data (Orange)</strong>:</p>
-<ul>
-<li>The square root transformation helps stabilize the variance, making the spread of the data more consistent across different income levels.</li>
-</ul></li>
-<li><p><strong>Inverse-Transformed Income Data (Red)</strong>:</p>
-<ul>
-<li>The inverse transformation compresses the larger values, flipping and bringing them closer to the smaller values.</li>
-</ul></li>
-</ol>
-</div>
-<div id="summary-1" class="section level3 hasAnchor" number="6.5.6">
-<h3><span class="header-section-number">6.5.6</span> Summary<a href="linear-and-non-linear-transformations-of-data.html#summary-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Non-linear transformations are powerful tools that allow you to handle skewed data, stabilize variance, and meet the assumptions of statistical tests. By applying transformations like logarithmic, square root, or inverse, you can make your data more suitable for analysis and easier to interpret. These techniques are commonly used in psychological research, economics, and other fields where data may not always follow a straightforward, linear pattern.</p>
-</div>
-</div>
-<div id="chapter-summary-5" class="section level2 hasAnchor" number="6.6">
-<h2><span class="header-section-number">6.6</span> Chapter Summary<a href="linear-and-non-linear-transformations-of-data.html#chapter-summary-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In this chapter, we explored various data transformation techniques, focusing on both linear and non-linear transformations. These transformations are essential tools in data analysis, helping to prepare and modify data to meet the assumptions of statistical tests, reduce skewness, stabilize variance, and make data more interpretable.</p>
-<p><strong>Key Takeaways:</strong></p>
-<ol style="list-style-type: decimal">
-<li><strong>Mean-Centering</strong>:
-<ul>
-<li><strong>Definition</strong>: Mean-centering involves subtracting the mean of the dataset from each data point, effectively centering the data around zero.</li>
-<li><strong>Importance</strong>: It simplifies the interpretation of data by focusing on how each value compares to the average, and it is often used as a preparatory step in data analysis.</li>
-<li><strong>Application</strong>: Mean-centering is particularly useful when comparing groups or preparing data for more complex analyses.</li>
-</ul></li>
-<li><strong>Z-Scores</strong>:
-<ul>
-<li><strong>Definition</strong>: A Z-score standardizes data by measuring how far a value is from the mean, in terms of standard deviations.</li>
-<li><strong>Importance</strong>: Z-scores allow for direct comparison between different datasets or groups, even if they have different means or variances. They also help identify outliers.</li>
-<li><strong>Application</strong>: Z-scores are widely used in psychological assessments and in any analysis where comparing standardized values is important.</li>
-</ul></li>
-<li><strong>Combining Transformations</strong>:
-<ul>
-<li><strong>Purpose</strong>: Combining mean-centering and Z-scores provides a more nuanced understanding of data, particularly when both centering and scaling are needed.</li>
-<li><strong>Application</strong>: This combination is useful in various analytical contexts, especially when preparing data for regression analysis or other statistical tests.</li>
-</ul></li>
-<li><strong>Non-Linear Transformations</strong>:
-<ul>
-<li><strong>Logarithmic Transformation</strong>: Reduces skewness by pulling in extreme values, making data more normally distributed.</li>
-<li><strong>Square Root Transformation</strong>: Stabilizes variance, especially useful for data where variability increases with the value.</li>
-<li><strong>Inverse Transformation</strong>: Compresses large values, useful when dealing with data that has extreme high values.</li>
-<li><strong>Importance</strong>: Non-linear transformations are crucial when data does not meet the assumptions of linearity or normality, and they are often applied in psychological research, economics, and other fields dealing with skewed or heteroscedastic data.</li>
-</ul></li>
-</ol>
-<p><strong>Practical Application</strong>:
-Throughout the chapter, we demonstrated how to apply these transformations using R, providing practical examples and R code implementations. These examples showed how transformations can make data more suitable for analysis, ultimately leading to more accurate and meaningful results.</p>
-<p><strong>Conclusion</strong>:
-Data transformations, whether linear or non-linear, are powerful tools that can greatly enhance the clarity and reliability of your data analysis. By understanding when and how to apply these transformations, you can ensure that your data is in the best possible shape for whatever statistical tests or analyses you plan to perform. As you move forward in your studies, remember that mastering these foundational techniques will be invaluable in your research and data analysis endeavors.</p>
-</div>
-<div id="practice-exercises-4" class="section level2 hasAnchor" number="6.7">
-<h2><span class="header-section-number">6.7</span> Practice Exercises<a href="linear-and-non-linear-transformations-of-data.html#practice-exercises-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>These exercises are designed to reinforce your understanding of the concepts covered in this chapter, including mean-centering, Z-scores, and non-linear transformations. For each exercise, you will apply these transformations to provided datasets, interpret the results, and understand their implications.</p>
-<div id="exercise-1-mean-centering" class="section level3 hasAnchor" number="6.7.1">
-<h3><span class="header-section-number">6.7.1</span> Exercise 1: Mean-Centering<a href="linear-and-non-linear-transformations-of-data.html#exercise-1-mean-centering" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Dataset</strong>:
-- A dataset of monthly expenses (in dollars): <code>expenses &lt;- c(1200, 1500, 1100, 1800, 1300, 1700, 1250, 1400, 1600, 1350)</code></p>
-<p><strong>Tasks</strong>:<br />
-1. Calculate the mean of the expenses.<br />
-2. Mean-center the dataset by subtracting the mean from each value.<br />
-3. Plot the original and mean-centered expenses on the same graph.<br />
-4. <strong>Interpretation</strong>: Describe how the mean-centered values relate to the average expense. What does a positive or negative mean-centered value indicate?</p>
-<div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb116-1"><a href="linear-and-non-linear-transformations-of-data.html#cb116-1" tabindex="-1"></a>expenses <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1200</span>, <span class="dv">1500</span>, <span class="dv">1100</span>, <span class="dv">1800</span>, <span class="dv">1300</span>, <span class="dv">1700</span>, <span class="dv">1250</span>, <span class="dv">1400</span>, <span class="dv">1600</span>, <span class="dv">1350</span>)</span>
-<span id="cb116-2"><a href="linear-and-non-linear-transformations-of-data.html#cb116-2" tabindex="-1"></a><span class="co"># Calculate the mean of the expenses</span></span>
-<span id="cb116-3"><a href="linear-and-non-linear-transformations-of-data.html#cb116-3" tabindex="-1"></a></span>
-<span id="cb116-4"><a href="linear-and-non-linear-transformations-of-data.html#cb116-4" tabindex="-1"></a></span>
-<span id="cb116-5"><a href="linear-and-non-linear-transformations-of-data.html#cb116-5" tabindex="-1"></a><span class="co"># Mean-center the expenses</span></span>
-<span id="cb116-6"><a href="linear-and-non-linear-transformations-of-data.html#cb116-6" tabindex="-1"></a></span>
-<span id="cb116-7"><a href="linear-and-non-linear-transformations-of-data.html#cb116-7" tabindex="-1"></a></span>
-<span id="cb116-8"><a href="linear-and-non-linear-transformations-of-data.html#cb116-8" tabindex="-1"></a><span class="co"># Plot the original and mean-centered expenses</span></span>
-<span id="cb116-9"><a href="linear-and-non-linear-transformations-of-data.html#cb116-9" tabindex="-1"></a></span>
-<span id="cb116-10"><a href="linear-and-non-linear-transformations-of-data.html#cb116-10" tabindex="-1"></a><span class="co"># Interpretation: Provide your answer here</span></span></code></pre></div>
-</div>
-<div id="exercise-2-z-scores" class="section level3 hasAnchor" number="6.7.2">
-<h3><span class="header-section-number">6.7.2</span> Exercise 2: Z-Scores<a href="linear-and-non-linear-transformations-of-data.html#exercise-2-z-scores" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Dataset</strong>:
-- A dataset of test scores: <code>test_scores &lt;- c(65, 78, 82, 91, 70, 88, 75, 95, 80, 85)</code></p>
-<p><strong>Tasks</strong>:<br />
-1. Calculate the mean and standard deviation of the test scores.<br />
-2. Compute the Z-scores for each test score.<br />
-3. Create a histogram of the Z-scores and add a vertical line at Z = 0.<br />
-4. <strong>Interpretation</strong>: Explain what a Z-score greater than 0 or less than 0 indicates about a test score relative to the average. How would you identify outliers using Z-scores?</p>
-<div class="sourceCode" id="cb117"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb117-1"><a href="linear-and-non-linear-transformations-of-data.html#cb117-1" tabindex="-1"></a>test_scores <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">65</span>, <span class="dv">78</span>, <span class="dv">82</span>, <span class="dv">91</span>, <span class="dv">70</span>, <span class="dv">88</span>, <span class="dv">75</span>, <span class="dv">95</span>, <span class="dv">80</span>, <span class="dv">85</span>)</span>
-<span id="cb117-2"><a href="linear-and-non-linear-transformations-of-data.html#cb117-2" tabindex="-1"></a></span>
-<span id="cb117-3"><a href="linear-and-non-linear-transformations-of-data.html#cb117-3" tabindex="-1"></a><span class="co"># Calculate the mean and standard deviation of the test scores</span></span>
-<span id="cb117-4"><a href="linear-and-non-linear-transformations-of-data.html#cb117-4" tabindex="-1"></a></span>
-<span id="cb117-5"><a href="linear-and-non-linear-transformations-of-data.html#cb117-5" tabindex="-1"></a></span>
-<span id="cb117-6"><a href="linear-and-non-linear-transformations-of-data.html#cb117-6" tabindex="-1"></a><span class="co"># Compute the Z-scores</span></span>
-<span id="cb117-7"><a href="linear-and-non-linear-transformations-of-data.html#cb117-7" tabindex="-1"></a></span>
-<span id="cb117-8"><a href="linear-and-non-linear-transformations-of-data.html#cb117-8" tabindex="-1"></a></span>
-<span id="cb117-9"><a href="linear-and-non-linear-transformations-of-data.html#cb117-9" tabindex="-1"></a><span class="co"># Create a histogram of the Z-scores</span></span>
-<span id="cb117-10"><a href="linear-and-non-linear-transformations-of-data.html#cb117-10" tabindex="-1"></a></span>
-<span id="cb117-11"><a href="linear-and-non-linear-transformations-of-data.html#cb117-11" tabindex="-1"></a><span class="co"># Interpretation: Provide your answer here</span></span></code></pre></div>
-</div>
-<div id="exercise-3-combining-mean-centering-and-z-scores" class="section level3 hasAnchor" number="6.7.3">
-<h3><span class="header-section-number">6.7.3</span> Exercise 3: Combining Mean-Centering and Z-Scores<a href="linear-and-non-linear-transformations-of-data.html#exercise-3-combining-mean-centering-and-z-scores" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Dataset</strong>:
-- A dataset of reaction times (in milliseconds): <code>reaction_times &lt;- c(250, 340, 295, 310, 275, 325, 290, 360, 285, 310)</code></p>
-<p><strong>Tasks</strong>:<br />
-1. Mean-center the reaction times.<br />
-2. Calculate the Z-scores for the mean-centered reaction times.<br />
-3. Plot the original reaction times, mean-centered times, and Z-scores on separate graphs.<br />
-4. <strong>Interpretation</strong>: Discuss the effect of applying both transformations. How do the Z-scores help you understand the reaction times in comparison to the mean-centered data?</p>
-<div class="sourceCode" id="cb118"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb118-1"><a href="linear-and-non-linear-transformations-of-data.html#cb118-1" tabindex="-1"></a>reaction_times <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">250</span>, <span class="dv">340</span>, <span class="dv">295</span>, <span class="dv">310</span>, <span class="dv">275</span>, <span class="dv">325</span>, <span class="dv">290</span>, <span class="dv">360</span>, <span class="dv">285</span>, <span class="dv">310</span>)</span>
-<span id="cb118-2"><a href="linear-and-non-linear-transformations-of-data.html#cb118-2" tabindex="-1"></a></span>
-<span id="cb118-3"><a href="linear-and-non-linear-transformations-of-data.html#cb118-3" tabindex="-1"></a><span class="co"># Mean-center the reaction times</span></span>
-<span id="cb118-4"><a href="linear-and-non-linear-transformations-of-data.html#cb118-4" tabindex="-1"></a></span>
-<span id="cb118-5"><a href="linear-and-non-linear-transformations-of-data.html#cb118-5" tabindex="-1"></a></span>
-<span id="cb118-6"><a href="linear-and-non-linear-transformations-of-data.html#cb118-6" tabindex="-1"></a><span class="co"># Calculate the Z-scores for the mean-centered reaction times</span></span>
-<span id="cb118-7"><a href="linear-and-non-linear-transformations-of-data.html#cb118-7" tabindex="-1"></a></span>
-<span id="cb118-8"><a href="linear-and-non-linear-transformations-of-data.html#cb118-8" tabindex="-1"></a></span>
-<span id="cb118-9"><a href="linear-and-non-linear-transformations-of-data.html#cb118-9" tabindex="-1"></a><span class="co"># Plot the original reaction times, mean-centered times, and Z-scores</span></span>
-<span id="cb118-10"><a href="linear-and-non-linear-transformations-of-data.html#cb118-10" tabindex="-1"></a></span>
-<span id="cb118-11"><a href="linear-and-non-linear-transformations-of-data.html#cb118-11" tabindex="-1"></a></span>
-<span id="cb118-12"><a href="linear-and-non-linear-transformations-of-data.html#cb118-12" tabindex="-1"></a><span class="co"># Interpretation: Provide your answer here</span></span></code></pre></div>
-</div>
-<div id="exercise-4-non-linear-transformations" class="section level3 hasAnchor" number="6.7.4">
-<h3><span class="header-section-number">6.7.4</span> Exercise 4: Non-Linear Transformations<a href="linear-and-non-linear-transformations-of-data.html#exercise-4-non-linear-transformations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Dataset</strong>:
-- A dataset of annual incomes (in thousands of dollars): <code>income &lt;- c(30, 45, 70, 120, 25, 60, 100, 85, 40, 300)</code></p>
-<p><strong>Tasks</strong>:<br />
-1. Apply a logarithmic transformation to the income data.<br />
-2. Apply a square root transformation to the income data.<br />
-3. Apply an inverse transformation to the income data.<br />
-4. Plot histograms of the original and transformed datasets.<br />
-5. <strong>Interpretation</strong>: Compare the distributions of the original and transformed data. How does each transformation affect the spread and shape of the data? When might each transformation be most useful?</p>
-<div class="sourceCode" id="cb119"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb119-1"><a href="linear-and-non-linear-transformations-of-data.html#cb119-1" tabindex="-1"></a>income <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">30</span>, <span class="dv">45</span>, <span class="dv">70</span>, <span class="dv">120</span>, <span class="dv">25</span>, <span class="dv">60</span>, <span class="dv">100</span>, <span class="dv">85</span>, <span class="dv">40</span>, <span class="dv">300</span>)</span>
-<span id="cb119-2"><a href="linear-and-non-linear-transformations-of-data.html#cb119-2" tabindex="-1"></a></span>
-<span id="cb119-3"><a href="linear-and-non-linear-transformations-of-data.html#cb119-3" tabindex="-1"></a><span class="co"># Apply a logarithmic transformation</span></span>
-<span id="cb119-4"><a href="linear-and-non-linear-transformations-of-data.html#cb119-4" tabindex="-1"></a></span>
-<span id="cb119-5"><a href="linear-and-non-linear-transformations-of-data.html#cb119-5" tabindex="-1"></a></span>
-<span id="cb119-6"><a href="linear-and-non-linear-transformations-of-data.html#cb119-6" tabindex="-1"></a><span class="co"># Apply a square root transformation</span></span>
-<span id="cb119-7"><a href="linear-and-non-linear-transformations-of-data.html#cb119-7" tabindex="-1"></a></span>
-<span id="cb119-8"><a href="linear-and-non-linear-transformations-of-data.html#cb119-8" tabindex="-1"></a></span>
-<span id="cb119-9"><a href="linear-and-non-linear-transformations-of-data.html#cb119-9" tabindex="-1"></a><span class="co"># Apply an inverse transformation</span></span>
-<span id="cb119-10"><a href="linear-and-non-linear-transformations-of-data.html#cb119-10" tabindex="-1"></a></span>
-<span id="cb119-11"><a href="linear-and-non-linear-transformations-of-data.html#cb119-11" tabindex="-1"></a></span>
-<span id="cb119-12"><a href="linear-and-non-linear-transformations-of-data.html#cb119-12" tabindex="-1"></a><span class="co"># Plot histograms of the original and transformed data</span></span>
-<span id="cb119-13"><a href="linear-and-non-linear-transformations-of-data.html#cb119-13" tabindex="-1"></a></span>
-<span id="cb119-14"><a href="linear-and-non-linear-transformations-of-data.html#cb119-14" tabindex="-1"></a></span>
-<span id="cb119-15"><a href="linear-and-non-linear-transformations-of-data.html#cb119-15" tabindex="-1"></a><span class="co"># Interpretation: Provide your answer here</span></span></code></pre></div>
+<p>In this chapter, we will explore the basics of creating these types of graphs using the powerful ggplot2 package in R. We will start with the fundamentals, ensuring you have a solid understanding of how to construct and customize these visualizations. Later, we will focus on how to adjust these graphs to adhere to APA formatting guidelines, which is essential for presenting your research in a professional and standardized manner.</p>
 
 </div>
 </div>
@@ -1144,8 +592,8 @@ Data transformations, whether linear or non-linear, are powerful tools that can 
           </div>
         </div>
       </div>
-<a href="computation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="ggplot2-and-graphing-data-in-apa-formatting.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="linear-and-non-linear-transformations-of-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="appendix-answers-to-chapter-exercises.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -1176,7 +624,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/AmandaDPerez/ZTC-RM/edit/main/06-transformations.Rmd",
+"link": "https://github.com/AmandaDPerez/ZTC-RM/edit/main/07-graphing.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -1184,7 +632,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/AmandaDPerez/ZTC-RM/blob/main/06-transformations.Rmd",
+"link": "https://github.com/AmandaDPerez/ZTC-RM/blob/main/07-graphing.Rmd",
 "text": null
 },
 "download": null,
