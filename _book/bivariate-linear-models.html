@@ -23,7 +23,7 @@
 <meta name="author" content="A.D.Perez, PhD" />
 
 
-<meta name="date" content="2024-08-08" />
+<meta name="date" content="2024-08-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -543,6 +543,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.5.2" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#building-your-own-bivariate-linear-model-in-r"><i class="fa fa-check"></i><b>8.5.2</b> Building Your Own Bivariate Linear Model in R</a></li>
 <li class="chapter" data-level="8.5.3" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#limitations-and-considerations"><i class="fa fa-check"></i><b>8.5.3</b> Limitations and Considerations</a></li>
 </ul></li>
+<li class="chapter" data-level="8.6" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#chapter-summary-7"><i class="fa fa-check"></i><b>8.6</b> Chapter Summary</a></li>
+<li class="chapter" data-level="8.7" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#practice-exercises-6"><i class="fa fa-check"></i><b>8.7</b> Practice Exercises</a>
+<ul>
+<li class="chapter" data-level="8.7.1" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#exercise-1-create-a-simple-bivariate-linear-model"><i class="fa fa-check"></i><b>8.7.1</b> Exercise 1: Create a Simple Bivariate Linear Model</a></li>
+<li class="chapter" data-level="8.7.2" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#exercise-2-analyze-residuals-to-assess-model-fit"><i class="fa fa-check"></i><b>8.7.2</b> Exercise 2: Analyze Residuals to Assess Model Fit</a></li>
+<li class="chapter" data-level="8.7.3" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#exercise-3-apply-bivariate-linear-models-to-a-real-world-dataset"><i class="fa fa-check"></i><b>8.7.3</b> Exercise 3: Apply Bivariate Linear Models to a Real-World Dataset</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html"><i class="fa fa-check"></i><b>9</b> Appendix: Answers to Chapter Exercises</a>
 <ul>
@@ -594,6 +601,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.7.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-create-an-apa-compliant-bar-graph-1"><i class="fa fa-check"></i><b>9.7.1</b> Exercise 1: Create an APA-Compliant Bar Graph</a></li>
 <li class="chapter" data-level="9.7.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-modify-a-basic-ggplot2-plot-to-meet-apa-standards-1"><i class="fa fa-check"></i><b>9.7.2</b> Exercise 2: Modify a Basic ggplot2 Plot to Meet APA Standards</a></li>
 <li class="chapter" data-level="9.7.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-create-an-apa-compliant-line-graph-and-save-it-as-a-high-resolution-image-1"><i class="fa fa-check"></i><b>9.7.3</b> Exercise 3: Create an APA-Compliant Line Graph and Save It as a High-Resolution Image</a></li>
+</ul></li>
+<li class="chapter" data-level="9.8" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-8-practice-exercises"><i class="fa fa-check"></i><b>9.8</b> Answers to Chapter 8 Practice Exercises</a>
+<ul>
+<li class="chapter" data-level="9.8.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-create-a-simple-bivariate-linear-model-1"><i class="fa fa-check"></i><b>9.8.1</b> Exercise 1: Create a Simple Bivariate Linear Model</a></li>
+<li class="chapter" data-level="9.8.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-analyze-residuals-to-assess-model-fit-1"><i class="fa fa-check"></i><b>9.8.2</b> Exercise 2: Analyze Residuals to Assess Model Fit</a></li>
+<li class="chapter" data-level="9.8.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-apply-bivariate-linear-models-to-a-real-world-dataset-1"><i class="fa fa-check"></i><b>9.8.3</b> Exercise 3: Apply Bivariate Linear Models to a Real-World Dataset</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -1204,6 +1217,136 @@ The “best fit” line in a bivariate linear model is the line that most closel
 - <strong>Logistic Regression</strong>: Used when the outcome variable is categorical (e.g., predicting whether a person will experience anxiety based on multiple factors).</p>
 <p><strong>Summary</strong></p>
 <p>While bivariate linear models are a foundational tool in psychological research, understanding their limitations and knowing when to apply more advanced models is crucial for drawing accurate and meaningful conclusions. By considering these factors, researchers can select the most appropriate model for their data and research questions.</p>
+</div>
+</div>
+<div id="chapter-summary-7" class="section level2 hasAnchor" number="8.6">
+<h2><span class="header-section-number">8.6</span> Chapter Summary<a href="bivariate-linear-models.html#chapter-summary-7" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In this chapter, we delved into the essential concepts and practical applications of bivariate linear models, a powerful tool for understanding relationships between two continuous variables. We began by introducing the idea of bivariate relationships, emphasizing how these models help psychologists and researchers quantify and interpret the connections between variables such as self-esteem and academic performance or anxiety levels and sleep quality.</p>
+<p>We explored the key components of a linear model: the intercept, slope, and correlation. The intercept (<code>b0</code>) provides the baseline value of the outcome variable when the predictor is zero, while the slope (<code>b1</code>) indicates how much the outcome changes with each one-unit increase in the predictor. The correlation coefficient further helps us understand the strength and direction of the relationship between the variables.</p>
+<p>Residuals, the differences between observed and predicted values, were highlighted as a critical tool for assessing the fit of a linear model. By examining residuals, we can determine whether our model is appropriate or if it might be missing important aspects of the data. We also discussed what to do when residuals show patterns, suggesting that a more complex model might be necessary.</p>
+<p>The chapter then provided a hands-on guide to building and interpreting bivariate linear models in R, using simulated data to explore a relationship between stress and sleep. This practical approach demonstrated how to create a model, interpret its output, and visualize the results, ensuring that you can apply these techniques to your own research.</p>
+<p>Finally, we addressed the limitations and considerations when using bivariate linear models, including the assumptions of linearity and homoscedasticity, the impact of outliers, and the distinction between correlation and causation. We also briefly touched on more advanced models that can handle more complex relationships, guiding you on when to use these alternatives.</p>
+<p>By mastering the concepts and techniques covered in this chapter, you are now equipped to use bivariate linear models to explore and understand relationships in your data, making informed decisions in your psychological research. Remember that while bivariate linear models are powerful, they are just one tool in your statistical toolkit, and knowing when and how to use them appropriately is key to conducting rigorous and meaningful research.</p>
+</div>
+<div id="practice-exercises-6" class="section level2 hasAnchor" number="8.7">
+<h2><span class="header-section-number">8.7</span> Practice Exercises<a href="bivariate-linear-models.html#practice-exercises-6" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>These practice exercises are designed to reinforce your understanding of bivariate linear models by applying the concepts learned in this chapter. Each exercise will guide you through creating, interpreting, and assessing linear models using real or simulated data.</p>
+<div id="exercise-1-create-a-simple-bivariate-linear-model" class="section level3 hasAnchor" number="8.7.1">
+<h3><span class="header-section-number">8.7.1</span> Exercise 1: Create a Simple Bivariate Linear Model<a href="bivariate-linear-models.html#exercise-1-create-a-simple-bivariate-linear-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Objective</strong>: Create a bivariate linear model using the provided dataset, and interpret the slope, intercept, and residuals.</p>
+<p><strong>Dataset</strong>: Suppose you are provided with a dataset that includes information on the number of hours students study per week and their corresponding exam scores. The data is as follows:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Hours Studied (x)</th>
+<th>Exam Score (y)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2</td>
+<td>68</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>72</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>78</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>85</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td>90</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>95</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tasks</strong>:<br />
+1. <strong>Create the Linear Model</strong>: Use the <code>lm()</code> function in R to create a linear model that predicts exam scores based on the number of hours studied.<br />
+2. <strong>Interpret the Slope and Intercept</strong>: Explain what the slope and intercept tell you about the relationship between hours studied and exam scores.<br />
+3. <strong>Calculate and Interpret Residuals</strong>: Calculate the residuals for each data point and discuss what they indicate about the model’s accuracy.</p>
+<p><strong>R Code Starter</strong>:</p>
+<div class="sourceCode" id="cb189"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb189-1"><a href="bivariate-linear-models.html#cb189-1" tabindex="-1"></a><span class="co"># Simulating the provided data</span></span>
+<span id="cb189-2"><a href="bivariate-linear-models.html#cb189-2" tabindex="-1"></a>hours_studied <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">10</span>)</span>
+<span id="cb189-3"><a href="bivariate-linear-models.html#cb189-3" tabindex="-1"></a>exam_scores <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">68</span>, <span class="dv">72</span>, <span class="dv">78</span>, <span class="dv">85</span>, <span class="dv">90</span>, <span class="dv">95</span>)</span>
+<span id="cb189-4"><a href="bivariate-linear-models.html#cb189-4" tabindex="-1"></a></span>
+<span id="cb189-5"><a href="bivariate-linear-models.html#cb189-5" tabindex="-1"></a><span class="co"># Creating the linear model</span></span>
+<span id="cb189-6"><a href="bivariate-linear-models.html#cb189-6" tabindex="-1"></a></span>
+<span id="cb189-7"><a href="bivariate-linear-models.html#cb189-7" tabindex="-1"></a></span>
+<span id="cb189-8"><a href="bivariate-linear-models.html#cb189-8" tabindex="-1"></a><span class="co"># Viewing the summary of the model</span></span>
+<span id="cb189-9"><a href="bivariate-linear-models.html#cb189-9" tabindex="-1"></a></span>
+<span id="cb189-10"><a href="bivariate-linear-models.html#cb189-10" tabindex="-1"></a></span>
+<span id="cb189-11"><a href="bivariate-linear-models.html#cb189-11" tabindex="-1"></a><span class="co"># Calculating the residuals</span></span>
+<span id="cb189-12"><a href="bivariate-linear-models.html#cb189-12" tabindex="-1"></a></span>
+<span id="cb189-13"><a href="bivariate-linear-models.html#cb189-13" tabindex="-1"></a></span>
+<span id="cb189-14"><a href="bivariate-linear-models.html#cb189-14" tabindex="-1"></a><span class="co"># Displaying residuals</span></span></code></pre></div>
+<p><strong>Questions</strong>:<br />
+- What is the slope of the model, and what does it tell you about the relationship between study hours and exam scores?<br />
+- What is the intercept, and how would you interpret it in the context of this data?<br />
+- Are the residuals small or large? What do they tell you about the accuracy of the model?</p>
+</div>
+<div id="exercise-2-analyze-residuals-to-assess-model-fit" class="section level3 hasAnchor" number="8.7.2">
+<h3><span class="header-section-number">8.7.2</span> Exercise 2: Analyze Residuals to Assess Model Fit<a href="bivariate-linear-models.html#exercise-2-analyze-residuals-to-assess-model-fit" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Objective</strong>: Analyze the residuals of a linear model to assess its fit and discuss any patterns you observe.</p>
+<p><strong>Dataset</strong>: Continuing with the dataset from Exercise 1, analyze the residuals to determine if the model fits the data well.</p>
+<p><strong>Tasks</strong>:
+1. <strong>Plot the Residuals</strong>: Create a residual plot to visually inspect the residuals.<br />
+2. <strong>Assess Residual Patterns</strong>: Look for any patterns in the residuals and discuss what they might indicate about the model.<br />
+3. <strong>Conclusion</strong>: Based on your analysis, discuss whether the linear model is appropriate for this data.</p>
+<p><strong>R Code Starter</strong>:</p>
+<div class="sourceCode" id="cb190"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb190-1"><a href="bivariate-linear-models.html#cb190-1" tabindex="-1"></a><span class="co"># Plotting the residuals</span></span></code></pre></div>
+<p><strong>Questions</strong>:<br />
+- Do the residuals appear to be randomly distributed, or do you notice any patterns?<br />
+- What does the pattern (or lack of pattern) in the residuals suggest about the fit of the model?<br />
+- Based on the residuals, do you think the linear model is a good fit for the data? Why or why not?</p>
+</div>
+<div id="exercise-3-apply-bivariate-linear-models-to-a-real-world-dataset" class="section level3 hasAnchor" number="8.7.3">
+<h3><span class="header-section-number">8.7.3</span> Exercise 3: Apply Bivariate Linear Models to a Real-World Dataset<a href="bivariate-linear-models.html#exercise-3-apply-bivariate-linear-models-to-a-real-world-dataset" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Objective</strong>: Apply what you’ve learned to analyze a real-world psychological dataset and interpret the results of your linear model.</p>
+<p><strong>Dataset</strong>: The dataset includes information on participants’ anxiety levels (measured on a scale from 0 to 100) and the number of hours they sleep each night.</p>
+<p><strong>Tasks</strong>:<br />
+1. <strong>Create the Linear Model</strong>: Fit a linear model that predicts sleep hours based on anxiety levels.<br />
+2. <strong>Interpret the Results</strong>: Interpret the slope, intercept, and p-value of the model.<br />
+3. <strong>Assess the Residuals</strong>: Plot the residuals and discuss whether the linear model is appropriate for this data.<br />
+4. <strong>Conclusion</strong>: Provide a summary of your findings, including whether there is a significant relationship between anxiety levels and sleep quality, and whether the linear model fits the data well.</p>
+<p><strong>R Code Starter</strong>:</p>
+<div class="sourceCode" id="cb191"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb191-1"><a href="bivariate-linear-models.html#cb191-1" tabindex="-1"></a><span class="co"># Simulating the dataset</span></span>
+<span id="cb191-2"><a href="bivariate-linear-models.html#cb191-2" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb191-3"><a href="bivariate-linear-models.html#cb191-3" tabindex="-1"></a>anxiety <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">50</span>, <span class="at">sd =</span> <span class="dv">15</span>)  <span class="co"># Anxiety scores (0 to 100)</span></span>
+<span id="cb191-4"><a href="bivariate-linear-models.html#cb191-4" tabindex="-1"></a>sleep_hours <span class="ot">&lt;-</span> <span class="dv">8</span> <span class="sc">-</span> <span class="fl">0.04</span> <span class="sc">*</span> anxiety <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span>)  <span class="co"># Sleep hours</span></span>
+<span id="cb191-5"><a href="bivariate-linear-models.html#cb191-5" tabindex="-1"></a></span>
+<span id="cb191-6"><a href="bivariate-linear-models.html#cb191-6" tabindex="-1"></a><span class="co"># Combining into a data frame</span></span>
+<span id="cb191-7"><a href="bivariate-linear-models.html#cb191-7" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(anxiety, sleep_hours)</span>
+<span id="cb191-8"><a href="bivariate-linear-models.html#cb191-8" tabindex="-1"></a></span>
+<span id="cb191-9"><a href="bivariate-linear-models.html#cb191-9" tabindex="-1"></a><span class="co"># Viewing the first few rows of the dataset</span></span>
+<span id="cb191-10"><a href="bivariate-linear-models.html#cb191-10" tabindex="-1"></a><span class="fu">head</span>(data)</span></code></pre></div>
+<pre><code>##    anxiety sleep_hours
+## 1 41.59287    5.625879
+## 2 46.54734    6.394990
+## 3 73.38062    4.818083
+## 4 51.05763    5.610152
+## 5 51.93932    4.970809
+## 6 75.72597    4.925933</code></pre>
+<div class="sourceCode" id="cb193"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb193-1"><a href="bivariate-linear-models.html#cb193-1" tabindex="-1"></a><span class="co"># Creating the linear model</span></span>
+<span id="cb193-2"><a href="bivariate-linear-models.html#cb193-2" tabindex="-1"></a></span>
+<span id="cb193-3"><a href="bivariate-linear-models.html#cb193-3" tabindex="-1"></a></span>
+<span id="cb193-4"><a href="bivariate-linear-models.html#cb193-4" tabindex="-1"></a><span class="co"># Viewing the summary of the model</span></span>
+<span id="cb193-5"><a href="bivariate-linear-models.html#cb193-5" tabindex="-1"></a></span>
+<span id="cb193-6"><a href="bivariate-linear-models.html#cb193-6" tabindex="-1"></a></span>
+<span id="cb193-7"><a href="bivariate-linear-models.html#cb193-7" tabindex="-1"></a><span class="co"># Plotting the residuals</span></span></code></pre></div>
+<p><strong>Questions</strong>:
+- What does the slope of the model tell you about the relationship between anxiety levels and sleep hours?<br />
+- Is the relationship statistically significant (based on the p-value)? What does this mean in the context of the study?<br />
+- Are the residuals randomly distributed, or do they show a pattern? What does this tell you about the appropriateness of the linear model?<br />
+- What conclusions can you draw from your analysis regarding the impact of anxiety on sleep quality?</p>
 
 </div>
 </div>

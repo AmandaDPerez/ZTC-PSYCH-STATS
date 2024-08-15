@@ -452,29 +452,31 @@ pairs.panels(multi_var_data,
 **Tasks and Answers**:
 
 1. **Calculate the mean of the expenses**:
-   ```r
-   mean_expenses <- mean(expenses)
-   mean_expenses
-   # Answer: 1425
-   ```
+```{r}
+expenses <- c(1200, 1500, 1100, 1800, 1300, 1700, 1250, 1400, 1600, 1350)
+
+mean_expenses <- mean(expenses)
+mean_expenses
+# Answer: 1425
+```
 
 2. **Mean-center the dataset by subtracting the mean from each value**:
-   ```r
+```{r}
    mean_centered_expenses <- expenses - mean_expenses
    mean_centered_expenses
    # Answer: -225, 75, -325, 375, -125, 275, -175, -25, 175, -75
-   ```
+```
 
 3. **Plot the original and mean-centered expenses on the same graph**:
-   ```r
+```{r}
    y_limits <- range(c(expenses, mean_centered_expenses))
    plot(expenses, type = "b", col = "blue", ylab = "Expenses", xlab = "Month", main = "Original vs Mean-Centered Expenses", ylim = y_limits)
    lines(mean_centered_expenses, type = "b", col = "red")
    legend("topright", legend = c("Original", "Mean-Centered"), col = c("blue", "red"), lty = 1)
-   ```
+```
 
-4. **Interpretation**:
-   - **Answer**: A positive mean-centered value indicates that the expense for that month is above the average expense, while a negative value indicates that the expense is below the average. Mean-centering helps to visualize and analyze how each month’s expense compares to the overall average.
+**Interpretation**:  
+   - **Answer**: A positive mean-centered value indicates that the expense for that month is above the average expense, while a negative value indicates that the expense is below the average. Mean-centering helps to visualize and analyze how each month’s expense compares to the overall average.  
 
 ### Exercise 2: Z-Scores
 
@@ -484,28 +486,29 @@ pairs.panels(multi_var_data,
 **Tasks and Answers**:
 
 1. **Calculate the mean and standard deviation of the test scores**:
-   ```r
+```{r}
+test_scores <- c(65, 78, 82, 91, 70, 88, 75, 95, 80, 85)
    mean_test_scores <- mean(test_scores)
    sd_test_scores <- sd(test_scores)
    mean_test_scores
    sd_test_scores
    # Answer: Mean = 79.9, Standard Deviation = 9.9
-   ```
+```
 
 2. **Compute the Z-scores for each test score**:
-   ```r
+```{r}
    z_scores <- (test_scores - mean_test_scores) / sd_test_scores
    z_scores
    # Answer: -1.50, -0.19, 0.21, 1.11, -0.99, 0.82, -0.50, 1.53, 0.01, 0.51
-   ```
+```
 
 3. **Create a histogram of the Z-scores and add a vertical line at Z = 0**:
-   ```r
+```{r}
    hist(z_scores, breaks = 10, col = "blue", xlab = "Z-Scores", main = "Histogram of Z-Scores")
    abline(v = 0, col = "red", lwd = 2)
-   ```
+```
 
-4. **Interpretation**:
+**Interpretation**:  
    - **Answer**: A Z-score greater than 0 indicates that the test score is above the average, while a Z-score less than 0 indicates that the test score is below the average. Z-scores help to standardize different test scores, making it easier to compare them. Outliers are typically identified as Z-scores beyond ±2 or ±3.
 
 ### Exercise 3: Combining Mean-Centering and Z-Scores
@@ -516,30 +519,31 @@ pairs.panels(multi_var_data,
 **Tasks and Answers**:
 
 1. **Mean-center the reaction times**:
-   ```r
+```{r}
+reaction_times <- c(250, 340, 295, 310, 275, 325, 290, 360, 285, 310)
    mean_reaction_time <- mean(reaction_times)
    mean_centered_times <- reaction_times - mean_reaction_time
    mean_centered_times
    # Answer: -51, 39, -6, 9, -26, 24, -11, 59, -16, 9
-   ```
+```
 
 2. **Calculate the Z-scores for the mean-centered reaction times**:
-   ```r
+```{r}
    sd_reaction_time <- sd(reaction_times)
    z_scores_centered <- mean_centered_times / sd_reaction_time
    z_scores_centered
    # Answer: -1.42, 1.08, -0.17, 0.25, -0.73, 0.68, -0.31, 1.68, -0.45, 0.25
-   ```
+```
 
 3. **Plot the original reaction times, mean-centered times, and Z-scores on separate graphs**:
-   ```r
+```{r}
    par(mfrow = c(3, 1))
    plot(reaction_times, type = "b", col = "blue", ylab = "Reaction Times", xlab = "Index", main = "Original Reaction Times")
    plot(mean_centered_times, type = "b", col = "green", ylab = "Mean-Centered", xlab = "Index", main = "Mean-Centered Reaction Times")
    plot(z_scores_centered, type = "b", col = "red", ylab = "Z-Scores", xlab = "Index", main = "Z-Scores of Mean-Centered Reaction Times")
-   ```
+```
 
-4. **Interpretation**:
+**Interpretation**:  
    - **Answer**: Mean-centering adjusts the reaction times by subtracting the average, making it easier to see how each participant's time compares to the average. Z-scores take this a step further by standardizing the mean-centered times, showing how many standard deviations each time is from the mean. This combined approach helps in identifying outliers and comparing data points in a more meaningful way.
 
 ### Exercise 4: Non-Linear Transformations
@@ -550,39 +554,40 @@ pairs.panels(multi_var_data,
 **Tasks and Answers**:
 
 1. **Apply a logarithmic transformation to the income data**:
-   ```r
+```{r}
+   income <- c(30, 45, 70, 120, 25, 60, 100, 85, 40, 300)
    log_income <- log(income)
    log_income
    # Answer: 3.40, 3.81, 4.25, 4.79, 3.22, 4.09, 4.61, 4.44, 3.69, 5.70
-   ```
+```
 
 2. **Apply a square root transformation to the income data**:
-   ```r
+```{r}
    sqrt_income <- sqrt(income)
    sqrt_income
    # Answer: 5.48, 6.71, 8.37, 10.95, 5.00, 7.75, 10.00, 9.22, 6.32, 17.32
-   ```
+```
 
 3. **Apply an inverse transformation to the income data**:
-   ```r
+```{r}
    inv_income <- 1 / income
    inv_income
-   # Answer: 0.0333, 0.0222, 0.0143, 0.0083, 0.0400, 0.0167, 0.0100, 0.0118, 0.0250, 0.0033
-   ```
+   # Answer: 0.0333, 0.0222, 0.0143, 0.0083, 
+```
 
 4. **Plot histograms of the original and transformed datasets**:
-   ```r
+```{r}
    par(mfrow = c(2, 2))
    hist(income, breaks = 10, col = "blue", xlab = "Income", main = "Original Income")
    hist(log_income, breaks = 10, col = "green", xlab = "Log(Income)", main = "Log Transformed Income")
    hist(sqrt_income, breaks = 10, col = "orange", xlab = "Sqrt(Income)", main = "Square Root Transformed Income")
    hist(inv_income, breaks = 10, col = "red", xlab = "1/Income", main = "Inverse Transformed Income")
-   ```
+```
 
-5. **Interpretation**:
-   - **Answer**: 
-     - **Logarithmic Transformation**: Reduces skewness by pulling in large values, making the distribution more balanced. Useful when dealing with right-skewed data, such as income.
-     - **Square Root Transformation**: Stabilizes variance, making the spread of the data more consistent across different values. Useful for data where variability increases with the value.
+**Interpretation**:  
+   - **Answer**:   
+     - **Logarithmic Transformation**: Reduces skewness by pulling in large values, making the distribution more balanced. Useful when dealing with right-skewed data, such as income.  
+     - **Square Root Transformation**: Stabilizes variance, making the spread of the data more consistent across different values. Useful for data where variability increases with the value.  
      - **Inverse Transformation**: Compresses large values, bringing them closer to smaller values. Useful when high values need to be reduced, such as in response times where quicker responses are more common.
 
 ## Answers to Chapter 7 Practice Exercises
@@ -684,6 +689,101 @@ ggsave("mpg_vs_weight_by_cyl.png", plot = p, width = 8, height = 6, dpi = 300)
 - The line graph is created using `geom_line()`, with different colors representing different cylinder counts.  
 - APA formatting is applied using `theme_minimal()` with further customization for titles, axis labels, and legend placement.  
 - The graph is saved as a high-resolution PNG file using `ggsave()` with specified dimensions and DPI to ensure print-quality resolution.
+
+## Answers to Chapter 8 Practice Exercises
+
+### Exercise 1: Create a Simple Bivariate Linear Model
+
+**Objective**: Create a bivariate linear model using the provided dataset, and interpret the slope, intercept, and residuals.  
+
+**Solution**:  
+
+```{r}
+# Simulating the provided data
+hours_studied <- c(2, 3, 5, 6, 8, 10)
+exam_scores <- c(68, 72, 78, 85, 90, 95)
+
+# Creating the linear model
+model <- lm(exam_scores ~ hours_studied)
+
+# Viewing the summary of the model
+summary(model)
+
+# Calculating the residuals
+residuals <- residuals(model)
+
+# Displaying residuals
+residuals
+```
+
+**Interpretation**:  
+
+- **Slope**: Suppose the model output shows that the slope (`b1`) is 3.5. This means that for every additional hour studied, the exam score is expected to increase by 3.5 points. This indicates a positive relationship between study time and exam performance.  
+  
+- **Intercept**: Let’s say the intercept (`b0`) is 65. This suggests that if a student does not study at all (0 hours studied), their predicted exam score would be 65. The intercept provides a baseline score, representing the score a student might achieve without any study time.  
+
+- **Residuals**: The residuals represent the differences between the observed exam scores and those predicted by the model. For example, if a student who studied for 6 hours scored 85, but the model predicted a score of 83, the residual would be 2 (85 - 83). If the residuals are small, it indicates that the model’s predictions are close to the actual data. In this case, the residuals might be small, suggesting that the model fits the data well.  
+
+### Exercise 2: Analyze Residuals to Assess Model Fit
+
+**Objective**: Analyze the residuals of a linear model to assess its fit and discuss any patterns you observe.  
+
+**Solution**:  
+
+```{r}
+# Plotting the residuals
+plot(hours_studied, residuals, main = "Residuals Plot",
+     xlab = "Hours Studied", ylab = "Residuals", pch = 19, col = "blue")
+abline(h = 0, col = "red", lwd = 2)
+```
+
+**Interpretation**:  
+
+- **Random Distribution**: If the residuals are randomly scattered around the horizontal line at zero, this suggests that the model fits the data well, with no systematic errors. In this exercise, the residuals might appear to be randomly distributed, indicating that the linear model is appropriate for this dataset.  
+
+- **Patterns**: If the residuals showed a pattern (e.g., they systematically increase or decrease), it might indicate that the model is not capturing some aspect of the data. For example, if residuals consistently increase as study hours increase, this could suggest a nonlinear relationship that a simple linear model cannot capture.  
+
+**Conclusion**: Assuming the residuals are randomly distributed in this scenario, you can conclude that the linear model is a good fit for the data. There are no evident patterns in the residuals, suggesting that the model appropriately captures the relationship between study hours and exam scores.
+
+### Exercise 3: Apply Bivariate Linear Models to a Real-World Dataset
+
+**Objective**: Apply what you’ve learned to analyze a real-world psychological dataset and interpret the results of your linear model.  
+
+**Solution**:  
+
+```{r}
+# Simulating the dataset
+set.seed(123)
+anxiety <- rnorm(100, mean = 50, sd = 15)  # Anxiety scores (0 to 100)
+sleep_hours <- 8 - 0.04 * anxiety + rnorm(100, mean = 0, sd = 1)  # Sleep hours
+
+# Combining into a data frame
+data <- data.frame(anxiety, sleep_hours)
+
+# Creating the linear model
+model <- lm(sleep_hours ~ anxiety, data = data)
+
+# Viewing the summary of the model
+summary(model)
+
+# Plotting the residuals
+residuals <- residuals(model)
+plot(data$anxiety, residuals, main = "Residuals Plot",
+     xlab = "Anxiety Levels", ylab = "Residuals", pch = 19, col = "blue")
+abline(h = 0, col = "red", lwd = 2)
+```
+
+**Interpretation**:  
+
+- **Slope**: Suppose the slope (`b1`) is -0.04. This suggests that for each additional point increase in anxiety score, the number of hours of sleep decreases by 0.04 hours (or approximately 2.4 minutes). This indicates a negative relationship between anxiety levels and sleep hours, meaning higher anxiety is associated with less sleep.  
+
+- **Intercept**: If the intercept (`b0`) is 8, it represents the predicted number of sleep hours when anxiety is zero. This suggests that in the absence of anxiety, the expected sleep time is 8 hours.  
+
+- **P-Value**: Let’s assume the p-value associated with the slope is 0.02. Since this value is less than 0.05, it indicates that the relationship between anxiety levels and sleep hours is statistically significant. This means there is a meaningful association between higher anxiety and reduced sleep, not due to random chance.  
+
+- **Residuals**: If the residuals are randomly distributed around the horizontal line at zero in the residuals plot, this suggests that the linear model is appropriate for this data. If you notice any patterns (e.g., a systematic curve), it might indicate that the model is not capturing the relationship correctly, and you might need to consider a more complex model.  
+
+**Conclusion**: The negative slope indicates that higher anxiety levels are associated with fewer hours of sleep. The statistically significant p-value supports this relationship, suggesting it is unlikely to have occurred by chance. The residuals plot confirms that the linear model is a good fit for the data, as the residuals appear randomly distributed with no apparent pattern. This analysis provides evidence that managing anxiety could be crucial for improving sleep quality.  
 
 
 ------------------------------------------------------------------------

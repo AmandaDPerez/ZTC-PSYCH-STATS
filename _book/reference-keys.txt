@@ -354,6 +354,11 @@ real-world-application-of-bivariate-linear-models
 practical-examples-in-psychological-research
 building-your-own-bivariate-linear-model-in-r
 limitations-and-considerations
+chapter-summary-7
+practice-exercises-6
+exercise-1-create-a-simple-bivariate-linear-model
+exercise-2-analyze-residuals-to-assess-model-fit
+exercise-3-apply-bivariate-linear-models-to-a-real-world-dataset
 appendix-answers-to-chapter-exercises
 answers-to-chapter-1-exercises
 exercise-1-familiarization-with-r-studio-1
@@ -390,3 +395,7 @@ answers-to-chapter-7-practice-exercises
 exercise-1-create-an-apa-compliant-bar-graph-1
 exercise-2-modify-a-basic-ggplot2-plot-to-meet-apa-standards-1
 exercise-3-create-an-apa-compliant-line-graph-and-save-it-as-a-high-resolution-image-1
+answers-to-chapter-8-practice-exercises
+exercise-1-create-a-simple-bivariate-linear-model-1
+exercise-2-analyze-residuals-to-assess-model-fit-1
+exercise-3-apply-bivariate-linear-models-to-a-real-world-dataset-1

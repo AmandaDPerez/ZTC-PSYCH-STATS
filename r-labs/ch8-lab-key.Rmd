@@ -1,0 +1,257 @@
+---
+title: "Weekly Lab Homework Assignment: Bivariate Models"
+author: "Your Name"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: pdf_document
+---
+
+*Replace "Your Name" with your actual name.*
+
+### Instructions
+
+In this lab, you will practice creating and interpreting bivariate linear models using various datasets. For each exercise, follow the provided instructions to build a linear model, interpret the slope, and analyze the residuals. Remember to follow the format for interpreting the slope:
+
+> ***"For every one unit increase in (X/IV), Y (Outcome/DV) increases/decreases by (SLOPE VALUE)."***
+
+For the above format, it will be EITHER increases OR decreases depending on the sign of the slope (positive or negative).
+
+### Exercise 1: Relationship Between Daily Exercise and Happiness
+
+**Dataset**: You are provided with a dataset that includes the number of hours people spend exercising daily and their happiness scores on a scale from 0 to 100.
+
+**Simulate the Data**:
+
+```{r}
+set.seed(101)
+daily_exercise <- rnorm(100, mean = 1, sd = 0.5)  # Hours of daily exercise
+happiness <- 50 + 5 * daily_exercise + rnorm(100, mean = 0, sd = 5)  # Happiness scores
+
+# Combine into a data frame
+exercise_data <- data.frame(daily_exercise, happiness)
+
+# View the first few rows
+head(exercise_data)
+```
+
+**Tasks**:
+
+1\. **Create the Linear Model**: Build a linear model to predict happiness based on daily exercise.
+
+2\. **Interpret the Slope**: Interpret the slope of the model using the provided format.
+
+3\. **Plot the Residuals**: Analyze the residuals and discuss whether the linear model is appropriate.
+
+```{r}
+# Create the linear model
+model_exercise <- lm(happiness ~ daily_exercise, data = exercise_data)
+
+# View the summary of the model
+summary(model_exercise)
+
+# Interpret the slope
+# The slope value is extracted from the summary output
+slope_exercise <- coef(model_exercise)[2]
+
+# Plot the residuals
+residuals_exercise <- residuals(model_exercise)
+plot(exercise_data$daily_exercise, residuals_exercise, 
+     main = "Residuals Plot for Exercise vs. Happiness",
+     xlab = "Daily Exercise (Hours)", ylab = "Residuals", pch = 19, col = "blue")
+abline(h = 0, col = "red", lwd = 2)
+```
+
+**Interpretation**: - Interpret the slope using the format: "For every one unit increase in study time, academic performance increases/decreases by [SLOPE VALUE]."
+
+### Exercise 2: Relationship Between Screen Time and Sleep Quality
+
+**Dataset**: You have data on the number of hours of screen time before bed and sleep quality scores (0 to 100).
+
+**Simulate the Data**:
+
+```{r}
+set.seed(102)
+screen_time <- rnorm(100, mean = 3, sd = 1)  # Hours of screen time before bed
+sleep_quality <- 80 - 4 * screen_time + rnorm(100, mean = 0, sd = 8)  # Sleep quality scores
+
+# Combine into a data frame
+sleep_data <- data.frame(screen_time, sleep_quality)
+
+# View the first few rows
+head(sleep_data)
+```
+
+**Tasks**:
+
+1\. **Create the Linear Model**: Build a linear model to predict sleep quality based on screen time.
+
+2\. **Interpret the Slope**: Interpret the slope of the model using the provided format.
+
+3\. **Plot the Residuals**: Analyze the residuals and discuss whether the linear model is appropriate.
+
+```{r}
+# Create the linear model
+model_sleep <- lm(sleep_quality ~ screen_time, data = sleep_data)
+
+# View the summary of the model
+summary(model_sleep)
+
+# Interpret the slope
+# The slope value is extracted from the summary output
+slope_sleep <- coef(model_sleep)[2]
+
+# Plot the residuals
+residuals_sleep <- residuals(model_sleep)
+plot(sleep_data$screen_time, residuals_sleep, 
+     main = "Residuals Plot for Screen Time vs. Sleep Quality",
+     xlab = "Screen Time (Hours)", ylab = "Residuals", pch = 19, col = "purple")
+abline(h = 0, col = "red", lwd = 2)
+```
+
+**Interpretation**: - Interpret the slope using the format: "For every one unit increase in study time, academic performance increases/decreases by [SLOPE VALUE]."
+
+
+### Exercise 3: Relationship Between Coffee Consumption and Productivity
+
+**Dataset**: You are given data on the number of cups of coffee consumed daily and productivity scores at work (0 to 100).
+
+**Simulate the Data**:
+
+```{r}
+set.seed(103)
+coffee_consumption <- rpois(100, lambda = 3)  # Number of cups of coffee
+productivity <- 60 + 2.5 * coffee_consumption + rnorm(100, mean = 0, sd = 7)  # Productivity scores
+
+# Combine into a data frame
+coffee_data <- data.frame(coffee_consumption, productivity)
+
+# View the first few rows
+head(coffee_data)
+```
+
+**Tasks**:
+
+1\. **Create the Linear Model**: Build a linear model to predict productivity based on coffee consumption.
+
+2\. **Interpret the Slope**: Interpret the slope of the model using the provided format.
+
+3\. **Plot the Residuals**: Analyze the residuals and discuss whether the linear model is appropriate.
+
+```{r}
+# Create the linear model
+model_coffee <- lm(productivity ~ coffee_consumption, data = coffee_data)
+
+# View the summary of the model
+summary(model_coffee)
+
+# Interpret the slope
+# The slope value is extracted from the summary output
+slope_coffee <- coef(model_coffee)[2]
+
+# Plot the residuals
+residuals_coffee <- residuals(model_coffee)
+plot(coffee_data$coffee_consumption, residuals_coffee, 
+     main = "Residuals Plot for Coffee Consumption vs. Productivity",
+     xlab = "Cups of Coffee", ylab = "Residuals", pch = 19, col = "green")
+abline(h = 0, col = "red", lwd = 2)
+```
+
+**Interpretation**: - Interpret the slope using the format: "For every one unit increase in study time, academic performance increases/decreases by [SLOPE VALUE]."
+
+
+### Exercise 4: Relationship Between Social Media Usage and Loneliness
+
+**Dataset**: This dataset includes information on the number of hours spent on social media daily and participants' loneliness scores (0 to 100).
+
+**Simulate the Data**:
+
+```{r}
+set.seed(104)
+social_media <- rnorm(100, mean = 2, sd = 1)  # Hours of social media use
+loneliness <- 40 + 7 * social_media + rnorm(100, mean = 0, sd = 6)  # Loneliness scores
+
+# Combine into a data frame
+social_media_data <- data.frame(social_media, loneliness)
+
+# View the first few rows
+head(social_media_data)
+```
+
+**Tasks**:
+
+1\. **Create the Linear Model**: Build a linear model to predict loneliness based on social media usage.
+
+2\. **Interpret the Slope**: Interpret the slope of the model using the provided format.
+
+3\. **Plot the Residuals**: Analyze the residuals and discuss whether the linear model is appropriate.
+
+```{r}
+# Create the linear model
+model_social_media <- lm(loneliness ~ social_media, data = social_media_data)
+
+# View the summary of the model
+summary(model_social_media)
+
+# Interpret the slope
+# The slope value is extracted from the summary output
+slope_social_media <- coef(model_social_media)[2]
+
+# Plot the residuals
+residuals_social_media <- residuals(model_social_media)
+plot(social_media_data$social_media, residuals_social_media, 
+     main = "Residuals Plot for Social Media Usage vs. Loneliness",
+     xlab = "Social Media Usage (Hours)", ylab = "Residuals", pch = 19, col = "orange")
+abline(h = 0, col = "red", lwd = 2)
+```
+
+**Interpretation**: - Interpret the slope using the format: "For every one unit increase in study time, academic performance increases/decreases by [SLOPE VALUE]."
+
+
+### Exercise 5: Relationship Between Study Time and Academic Performance
+
+**Dataset**: This dataset includes data on the number of hours students study per week and their academic performance scores (0 to 100).
+
+**Simulate the Data**:
+
+```{r}
+set.seed(105)
+study_time <- rnorm(100, mean = 5, sd = 2)  # Hours of study per week
+academic_performance <- 70 + 3 * study_time + rnorm(100, mean = 0, sd = 10)  # Academic performance scores
+
+# Combine into a data frame
+study_data <- data.frame(study_time, academic_performance)
+
+# View the first few rows
+head(study_data)
+```
+
+**Tasks**:\
+1. **Create the Linear Model**: Build a linear model to predict academic performance based on study time.
+
+2\. **Interpret the Slope**: Interpret the slope of the model using the provided format.
+
+3\. **Plot the Residuals**: Analyze the residuals and discuss whether the linear model is appropriate.
+
+```{r}
+# Create the linear model
+model_study <- lm(academic_performance ~ study_time, data = study_data)
+
+# View the summary of the model
+summary(model_study)
+
+# Interpret the slope
+# The slope value is extracted from the summary output
+slope_study <- coef(model_study)[2]
+
+# Plot the residuals
+residuals_study <- residuals(model_study)
+plot(study_data$study_time, residuals_study, 
+     main = "Residuals Plot for Study Time vs. Academic Performance",
+     xlab = "Study Time (Hours per Week)", ylab = "Residuals", pch = 19, col = "red")
+abline(h = 0, col = "blue", lwd = 2)
+```
+
+**Interpretation**: - Interpret the slope using the format: "For every one unit increase in study time, academic performance increases/decreases by [SLOPE VALUE]."
+
+**Submission Instructions:**
+
+Ensure to knit your document to PDF format, checking that all content is correctly displayed before submission. Submit this PDF to Canvas Assignments.
