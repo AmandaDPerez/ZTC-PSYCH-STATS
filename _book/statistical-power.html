@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 8 Bivariate Linear Models | Introduction to Psychological Statistics</title>
-  <meta name="description" content="Chapter 8 Bivariate Linear Models | Introduction to Psychological Statistics" />
+  <title>Chapter 10 Statistical Power | Introduction to Psychological Statistics</title>
+  <meta name="description" content="Chapter 10 Statistical Power | Introduction to Psychological Statistics" />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 8 Bivariate Linear Models | Introduction to Psychological Statistics" />
+  <meta property="og:title" content="Chapter 10 Statistical Power | Introduction to Psychological Statistics" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 8 Bivariate Linear Models | Introduction to Psychological Statistics" />
+  <meta name="twitter:title" content="Chapter 10 Statistical Power | Introduction to Psychological Statistics" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="ggplot2-and-graphing-data-in-apa-formatting.html"/>
-<link rel="next" href="goodness-of-fit.html"/>
+<link rel="prev" href="goodness-of-fit.html"/>
+<link rel="next" href="appendix-answers-to-chapter-exercises.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -733,725 +733,544 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="bivariate-linear-models" class="section level1 hasAnchor" number="8">
-<h1><span class="header-section-number">Chapter 8</span> Bivariate Linear Models<a href="bivariate-linear-models.html#bivariate-linear-models" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="what-are-bivariate-linear-models" class="section level2 hasAnchor" number="8.1">
-<h2><span class="header-section-number">8.1</span> What Are Bivariate Linear Models?<a href="bivariate-linear-models.html#what-are-bivariate-linear-models" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><strong>Bivariate linear models</strong> are statistical tools that allow researchers to examine the relationship between two continuous variables. In psychology and other fields, understanding how one variable relates to another is often crucial for drawing meaningful conclusions from data. For example, you might want to know if there is a relationship between the number of hours a student studies and their exam scores, or between a person’s age and their reaction time in a cognitive task.</p>
-<p>At its core, a bivariate linear model aims to describe the relationship between these two variables using a straight line. This line, known as the “regression line” or “line of best fit,” is determined by the data and provides a way to summarize the relationship in a simple, interpretable manner.</p>
+<div id="statistical-power" class="section level1 hasAnchor" number="10">
+<h1><span class="header-section-number">Chapter 10</span> Statistical Power<a href="statistical-power.html#statistical-power" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="introduction-to-statistical-power" class="section level2 hasAnchor" number="10.1">
+<h2><span class="header-section-number">10.1</span> Introduction to Statistical Power<a href="statistical-power.html#introduction-to-statistical-power" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="definition-of-statistical-power" class="section level3 hasAnchor" number="10.1.1">
+<h3><span class="header-section-number">10.1.1</span> Definition of Statistical Power<a href="statistical-power.html#definition-of-statistical-power" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Explanation of Statistical Power</strong></p>
+<p>Statistical power is a fundamental concept in research methodology that reflects the probability of correctly rejecting a false null hypothesis. In simpler terms, it’s the likelihood that a study will detect an effect when there is one to be detected. Imagine you’re testing a new therapy for anxiety. If the therapy truly works, statistical power tells you how likely it is that your study will show that the therapy is effective, rather than missing the effect due to chance.</p>
+<p>To break it down:
+- <strong>Null Hypothesis (H₀)</strong>: This is the default assumption in statistics that there is no effect or difference. In the context of our therapy example, the null hypothesis would be that the new therapy has no impact on anxiety levels.
+- <strong>Alternative Hypothesis (H₁)</strong>: This is the opposite of the null hypothesis, suggesting that there is an effect. In our example, the alternative hypothesis would be that the new therapy does reduce anxiety levels.
+- <strong>Statistical Power</strong>: This is the probability that the study will reject the null hypothesis when it is false, meaning the study correctly identifies the therapy as effective if it truly is.</p>
+<p>A study with high statistical power has a greater chance of detecting true effects, which is crucial for advancing psychological theory and practice. Conversely, a study with low power may fail to detect these effects, leading to incorrect conclusions and potentially stalling progress in the field.</p>
+<p><strong>Importance of Statistical Power in Psychological Research</strong></p>
+<p>In psychological research, where studies often explore complex and subtle human behaviors, ensuring adequate statistical power is essential. Consider a scenario where a researcher is studying the effect of a cognitive-behavioral intervention on reducing stress. If the study is underpowered—meaning it lacks sufficient power—the researcher might conclude that the intervention has no effect, even when it actually does. This can have serious implications:</p>
 <ul>
-<li><strong>Two Continuous Variables</strong>: In a bivariate linear model, both the predictor (independent) variable and the outcome (dependent) variable are continuous. Continuous variables can take any value within a range. For example, “hours studied” can range from 0 to any number, and “exam score” can range from 0 to 100.</li>
-<li><strong>Linear Relationship</strong>: The relationship described by a bivariate linear model is linear, meaning that as one variable increases or decreases, the other variable tends to increase or decrease in a consistent, proportional manner. The strength and direction of this relationship are captured by the slope of the line.</li>
+<li><p><strong>Missed Opportunities</strong>: Underpowered studies can lead to missed opportunities for effective interventions. In our example, an underpowered study might lead practitioners to dismiss a potentially beneficial therapy, depriving individuals of a treatment that could improve their well-being.</p></li>
+<li><p><strong>Waste of Resources</strong>: Conducting studies that are unlikely to detect true effects wastes time, money, and effort. These resources could be better spent on studies with sufficient power that can contribute meaningful findings to the field.</p></li>
+<li><p><strong>Impact on Theory and Practice</strong>: Low-powered studies contribute to the replication crisis in psychology, where many published findings cannot be replicated in subsequent studies. This undermines the credibility of psychological science and hinders the development of robust theories.</p></li>
 </ul>
-<p>Understanding relationships between variables is fundamental in psychological research. For instance, psychologists might explore whether higher levels of stress are associated with lower levels of sleep, or if a particular therapy is associated with improved mental health outcomes. Bivariate linear models provide a straightforward way to explore and quantify these relationships.</p>
-<p><strong>Examples from Everyday Life</strong>:
-- <strong>Hours Studied and Exam Scores</strong>: Imagine you are studying for an exam, and you want to know if studying more hours is likely to result in a higher score. By plotting your study hours against your exam scores and fitting a line, you can see if there is a positive relationship—meaning that more study hours generally lead to higher exam scores.
-- <strong>Age and Reaction Time</strong>: Another example could be examining the relationship between age and reaction time. As people age, their reaction time might increase (indicating slower responses). A bivariate linear model could help visualize and quantify this relationship, showing whether older individuals tend to have slower reaction times than younger individuals.</p>
-<p>By examining these relationships, bivariate linear models allow researchers to make predictions and gain insights into how variables interact with each other.</p>
-<div id="why-use-bivariate-linear-models" class="section level3 hasAnchor" number="8.1.1">
-<h3><span class="header-section-number">8.1.1</span> Why Use Bivariate Linear Models?<a href="bivariate-linear-models.html#why-use-bivariate-linear-models" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Bivariate linear models are incredibly useful in testing hypotheses and making predictions about the relationships between two variables. When researchers have a theory that one variable might influence another, they can use a bivariate linear model to test this theory and determine if the data supports their hypothesis.</p>
-<p><strong>Relevance of Bivariate Linear Models in Testing Hypotheses</strong>:
-- <strong>Hypothesis Testing</strong>: Suppose a psychologist hypothesizes that increased physical activity is associated with reduced anxiety levels. By collecting data on individuals’ physical activity and their anxiety scores, the psychologist can use a bivariate linear model to test whether there is a significant relationship between these two variables. The model will help determine if higher physical activity levels predict lower anxiety scores.
-- <strong>Prediction</strong>: Bivariate linear models also allow researchers to make predictions about one variable based on the value of another. For instance, if there is a known relationship between study hours and exam scores, you could predict a student’s exam score based on the number of hours they studied.</p>
-<p><strong>Practical Examples</strong>:
-- <strong>Predicting Exam Scores</strong>: If you know that, historically, each additional hour of study leads to an increase in exam score, you can use this relationship to predict future exam scores for students based on how many hours they study.
-- <strong>Understanding Correlations</strong>: Bivariate linear models help researchers understand correlations between variables. For example, if there is a positive correlation between self-esteem and academic performance, a linear model can quantify how much of an increase in self-esteem might be associated with an increase in academic performance.</p>
-<p><strong>The Goal of Finding a “Best Fit” Line</strong>:
-The “best fit” line in a bivariate linear model is the line that most closely approximates the data points in the dataset. The goal is to find the line that minimizes the distance between the observed data points and the line itself. This line represents the average relationship between the two variables.</p>
+<p><strong>Relationship Between Power, Sample Size, Effect Size, and Significance Level</strong></p>
+<p>Several factors influence statistical power, and understanding their interplay is key to designing studies that are capable of detecting true effects:</p>
 <ul>
-<li><strong>Best Fit Line</strong>: The best fit line is essentially a summary of the relationship between the two variables. It provides a simple equation that can be used to predict the outcome variable based on the predictor variable. For example, if you know the relationship between hours studied and exam scores, you can use the equation of the line to predict a student’s score based on the number of hours they studied.</li>
-<li><strong>Interpretability</strong>: One of the key advantages of bivariate linear models is their interpretability. The model provides a clear and straightforward way to understand how one variable relates to another, which can be crucial for making informed decisions in research and everyday life.</li>
+<li><p><strong>Sample Size</strong>: The number of participants in a study directly impacts its power. Larger sample sizes increase power because they reduce the standard error, making it easier to detect differences or effects. For example, in a study on the effects of a new educational program on student performance, a larger sample size would increase the likelihood of detecting an improvement in scores if the program is effective.</p></li>
+<li><p><strong>Effect Size</strong>: Effect size measures the magnitude of the difference or relationship being studied. Larger effect sizes are easier to detect, resulting in higher power. In the context of psychological research, an effect size might represent the difference in anxiety levels between a treatment group and a control group. Studies aiming to detect smaller effects require more power (often through larger sample sizes) to ensure that the effect is not missed.</p></li>
+<li><p><strong>Significance Level (Alpha)</strong>: The significance level is the threshold at which we decide whether an effect is statistically significant, typically set at 0.05. Lowering the significance level (e.g., to 0.01) reduces the likelihood of a Type I error (false positive) but also decreases power. Conversely, increasing the significance level raises power but increases the risk of Type I errors. Researchers must balance these considerations when designing studies.</p></li>
 </ul>
-<p>In summary, bivariate linear models are powerful tools for understanding and predicting relationships between variables. By finding the best fit line that summarizes the relationship, researchers can make meaningful inferences and test hypotheses that advance our understanding of various phenomena in psychology and other fields.</p>
+<p>In essence, achieving sufficient power is a balancing act. Researchers need to consider the expected effect size, the available sample size, and the chosen significance level. By carefully planning these elements, they can design studies that are more likely to yield meaningful and reliable results.</p>
+</div>
+<div id="the-role-of-power-in-psychological-research" class="section level3 hasAnchor" number="10.1.2">
+<h3><span class="header-section-number">10.1.2</span> The Role of Power in Psychological Research<a href="statistical-power.html#the-role-of-power-in-psychological-research" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Discussion on Why Understanding Power is Critical for Designing Robust Psychological Studies</strong></p>
+<p>Understanding and calculating statistical power is not just a technical detail—it’s a critical step in designing robust and credible psychological studies. Power impacts every stage of the research process, from study design to data collection and interpretation of results.</p>
+<ul>
+<li><p><strong>Designing Effective Studies</strong>: When researchers understand power, they can design studies that are adequately equipped to detect true effects. This means determining an appropriate sample size, selecting measures with sufficient sensitivity, and considering the expected effect size. For instance, if a psychologist is studying the impact of mindfulness on reducing symptoms of depression, understanding power helps them design a study with a sample size large enough to detect even small improvements in mood.</p></li>
+<li><p><strong>Interpreting Results</strong>: Power also plays a crucial role in interpreting results. A study with low power might fail to detect an effect that actually exists, leading to a Type II error (false negative). On the other hand, high power reduces the risk of such errors, allowing researchers to be more confident in their findings. In the context of psychological interventions, this confidence can influence clinical decisions, policy-making, and further research.</p></li>
+<li><p><strong>Reproducibility and Replication</strong>: The replication crisis in psychology has highlighted the importance of power. Many studies with low power have produced findings that could not be replicated, casting doubt on the reliability of psychological science. Ensuring adequate power from the outset increases the likelihood that research findings are robust and can be reproduced in future studies.</p></li>
+</ul>
+<p><strong>Real-World Examples Where Low Power Led to Non-Significant Results, and the Implications for Psychological Theory and Practice</strong></p>
+<p>There have been numerous instances in psychological research where low power has led to non-significant results, with far-reaching implications:</p>
+<ul>
+<li><p><strong>The Case of Social Priming</strong>: Social priming studies, which explore how subtle cues can influence behavior, have often been criticized for being underpowered. Many initial studies reported significant effects, but subsequent replication attempts failed to produce the same results, largely due to low power. This has led to debates about the validity of social priming as a concept and has underscored the need for adequately powered studies in this area.</p></li>
+<li><p><strong>Interventions in Clinical Psychology</strong>: In clinical psychology, underpowered studies can have particularly serious consequences. Consider a study testing a new therapy for PTSD. If the study is underpowered and fails to detect the therapy’s effectiveness, the therapy might be wrongly dismissed, and patients could be deprived of a potentially life-changing treatment. Moreover, the publication of non-significant results from underpowered studies can discourage further research into promising therapies, delaying advances in treatment.</p></li>
+<li><p><strong>Impacts on Meta-Analysis</strong>: Low-powered studies also affect meta-analyses, which aggregate data from multiple studies to draw broader conclusions. If many of the included studies are underpowered, the meta-analysis might produce a misleading effect size estimate, impacting theory and practice across the field. This can lead to the perpetuation of false theories or the overlooking of true effects, hindering scientific progress.</p></li>
+</ul>
+<p><strong>Conclusion</strong></p>
+<p>Statistical power is a critical component of psychological research, influencing study design, the interpretation of results, and the reproducibility of findings. By understanding and appropriately calculating power, researchers can ensure that their studies are capable of detecting true effects, contributing meaningful and reliable knowledge to the field of psychology.</p>
 </div>
 </div>
-<div id="creating-linear-models-to-test-hypotheses" class="section level2 hasAnchor" number="8.2">
-<h2><span class="header-section-number">8.2</span> Creating Linear Models to Test Hypotheses<a href="bivariate-linear-models.html#creating-linear-models-to-test-hypotheses" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In this section, we will explore how linear models can be used to test hypotheses about relationships between variables. We will break down the concept of a linear equation and walk through the process of creating a simple linear model. Additionally, we will introduce the idea of hypothesis testing within the context of linear models, helping you understand how researchers determine whether the relationships they observe are meaningful.</p>
-<div id="the-concept-of-a-linear-model" class="section level3 hasAnchor" number="8.2.1">
-<h3><span class="header-section-number">8.2.1</span> The Concept of a Linear Model<a href="bivariate-linear-models.html#the-concept-of-a-linear-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>What is a Linear Model?</strong></p>
-<p>A <strong>linear model</strong> is a mathematical tool used to describe the relationship between two variables. The relationship is represented by a straight line, which can be expressed by the equation:</p>
-<p><span class="math display">\[ y = mx + b \]</span></p>
+<div id="understanding-type-i-and-type-ii-errors" class="section level2 hasAnchor" number="10.2">
+<h2><span class="header-section-number">10.2</span> Understanding Type I and Type II Errors<a href="statistical-power.html#understanding-type-i-and-type-ii-errors" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Statistical decision-making in psychological research often revolves around balancing two types of errors: Type I and Type II. These errors occur when conclusions are drawn from data that may or may not reflect the true state of the world. Understanding these errors is crucial for researchers to interpret their findings accurately and to design studies that minimize the likelihood of making incorrect decisions.</p>
+<div id="type-i-error-false-positive" class="section level3 hasAnchor" number="10.2.1">
+<h3><span class="header-section-number">10.2.1</span> Type I Error (False Positive)<a href="statistical-power.html#type-i-error-false-positive" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Definition and Explanation of Type I Error</strong></p>
+<p>A Type I error occurs when a researcher incorrectly rejects the null hypothesis when it is, in fact, true. In other words, the researcher concludes that there is an effect or difference when none actually exists. This is also known as a “false positive” because the test suggests a positive result (e.g., detecting an effect) where there is none.</p>
+<p>For example, imagine a study testing a new drug for reducing anxiety. The null hypothesis (H₀) might state that the drug has no effect on anxiety levels. A Type I error would occur if the researcher concludes that the drug is effective in reducing anxiety when, in reality, it has no impact. This mistake could lead to the drug being prescribed to patients unnecessarily, with potential risks and costs.</p>
+<p><strong>The Consequences of Type I Errors in Psychological Research</strong></p>
+<p>Type I errors can have significant consequences in psychological research, particularly when the findings influence clinical practice, policy decisions, or future research directions:</p>
 <ul>
-<li><strong>y</strong>: This is the outcome variable, also known as the dependent variable. It’s what you’re trying to predict or explain. For example, if you’re interested in predicting exam scores, then <code>y</code> would represent the exam score.</li>
-<li><strong>x</strong>: This is the predictor variable, also known as the independent variable. It’s the variable you believe influences the outcome. Continuing with the example, <code>x</code> might represent the number of hours studied.</li>
-<li><strong>m</strong>: This is the slope of the line. The slope tells you how much <code>y</code> changes for each unit change in <code>x</code>. In other words, it shows the relationship between the predictor and outcome variables. If <code>m</code> is positive, as <code>x</code> increases, <code>y</code> increases as well; if <code>m</code> is negative, as <code>x</code> increases, <code>y</code> decreases.</li>
-<li><strong>b</strong>: This is the intercept, or the point where the line crosses the y-axis. The intercept represents the value of <code>y</code> when <code>x</code> is zero. In the context of our example, <code>b</code> would be the predicted exam score if the student studied for zero hours.</li>
+<li><p><strong>False Beliefs</strong>: Type I errors can lead to the establishment of false beliefs in the scientific community. For instance, if a psychological intervention is incorrectly deemed effective due to a Type I error, subsequent research and practice might be based on this incorrect assumption, wasting resources and potentially causing harm.</p></li>
+<li><p><strong>Replication Issues</strong>: Studies that report false positives are often difficult to replicate. When other researchers attempt to replicate the findings, they may fail to find the same effect, leading to questions about the reliability of the original study. This contributes to the replication crisis in psychology, where many published findings cannot be consistently reproduced.</p></li>
+<li><p><strong>Ethical Concerns</strong>: In applied settings, such as clinical psychology, a Type I error could result in the adoption of ineffective or even harmful interventions. For example, if a therapy is incorrectly found to be beneficial due to a Type I error, patients might receive this therapy instead of more effective treatments, potentially prolonging their suffering.</p></li>
 </ul>
-<p>Let’s consider a simple, relatable example:</p>
-<p><strong>Example</strong>: Predicting Exam Scores Based on Hours Studied</p>
-<p>Imagine you’re a student who wants to know how the number of hours you study might affect your exam score. You’ve collected some data from your own study habits and exam scores over the past semester. Here’s how you can create a linear model to represent this relationship:</p>
-<ol style="list-style-type: decimal">
-<li><p><strong>Collect Data</strong>: You start by gathering data on how many hours you studied for each exam and the corresponding scores you received. Let’s say you have the following data:</p>
-<table>
-<thead>
-<tr class="header">
-<th>Hours Studied (x)</th>
-<th>Exam Score (y)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>2</td>
-<td>70</td>
-</tr>
-<tr class="even">
-<td>4</td>
-<td>75</td>
-</tr>
-<tr class="odd">
-<td>6</td>
-<td>80</td>
-</tr>
-<tr class="even">
-<td>8</td>
-<td>85</td>
-</tr>
-<tr class="odd">
-<td>10</td>
-<td>90</td>
-</tr>
-</tbody>
-</table></li>
-<li><p><strong>Plot the Data</strong>: Before creating the model, you can plot the data on a graph, with the number of hours studied on the x-axis and the exam score on the y-axis. You’ll see that as the number of hours studied increases, the exam score also increases.</p></li>
-<li><p><strong>Fit a Line</strong>: Next, you want to find the line that best fits the data points. This line represents the linear model. The line can be described by the equation:</p>
-<p><span class="math display">\[ \text{Exam Score} = (m \times \text{Hours Studied}) + b \]</span></p>
+<p><strong>Factors That Influence the Likelihood of Type I Errors</strong></p>
+<p>The likelihood of committing a Type I error is directly related to the significance level (alpha) chosen by the researcher:</p>
 <ul>
-<li>Based on the data, suppose you find that the slope (<code>m</code>) is 2.5 and the intercept (<code>b</code>) is 65. This gives you the equation:</li>
+<li><p><strong>Significance Level (Alpha)</strong>: The significance level is the threshold for determining whether a result is statistically significant. Commonly set at 0.05, alpha represents the probability of making a Type I error. For example, if alpha is set at 0.05, there is a 5% chance of rejecting the null hypothesis when it is actually true. Lowering the alpha level (e.g., to 0.01) reduces the likelihood of a Type I error but also makes it harder to detect true effects.</p></li>
+<li><p><strong>Multiple Comparisons</strong>: When researchers perform multiple statistical tests on the same dataset, the likelihood of committing a Type I error increases. This is known as the problem of multiple comparisons or the “multiple testing problem.” Without appropriate adjustments (e.g., Bonferroni correction), the more tests conducted, the higher the chance of finding at least one statistically significant result by chance.</p></li>
+<li><p><strong>Bias and Research Practices</strong>: Poor research practices, such as data dredging (p-hacking) or selective reporting of significant results, can increase the likelihood of Type I errors. These practices inflate the apparent significance of findings, leading to false positives.</p></li>
 </ul>
-<p><span class="math display">\[ \text{Exam Score} = 2.5 \times \text{Hours Studied} + 65 \]</span></p></li>
-<li><p><strong>Interpret the Model</strong>: This equation tells you that for every additional hour you study, your exam score is expected to increase by 2.5 points. If you study for zero hours, the model predicts that you would score 65 points on the exam.</p></li>
-<li><p><strong>Use the Model to Make Predictions</strong>: Now, you can use this model to predict your exam score based on how many hours you plan to study. For example, if you plan to study for 7 hours, you can plug that into the equation:</p>
-<p><span class="math display">\[ \text{Exam Score} = 2.5 \times 7 + 65 = 82.5 \]</span></p>
-<p>The model predicts that if you study for 7 hours, you can expect to score around 82.5 points on the exam.</p></li>
-</ol>
-<p>This simple linear model allows you to quantify the relationship between hours studied and exam scores, helping you make informed decisions about how much time to dedicate to studying.</p>
 </div>
-<div id="hypothesis-testing-with-linear-models" class="section level3 hasAnchor" number="8.2.2">
-<h3><span class="header-section-number">8.2.2</span> Hypothesis Testing with Linear Models<a href="bivariate-linear-models.html#hypothesis-testing-with-linear-models" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>What is Hypothesis Testing?</strong></p>
-<p>Hypothesis testing is a method used by researchers to determine whether the relationships they observe in data are statistically significant or could have occurred by chance. When using a linear model, you’re often testing a hypothesis about whether there is a meaningful relationship between the predictor variable (<code>x</code>) and the outcome variable (<code>y</code>).</p>
-<p><strong>Statistical Significance</strong>:</p>
-<p>When you create a linear model, you’re interested in whether the slope (<code>m</code>) is significantly different from zero. If the slope is zero, it means there is no relationship between <code>x</code> and <code>y</code>; if it’s not zero, there is a relationship.</p>
+<div id="type-ii-error-false-negative" class="section level3 hasAnchor" number="10.2.2">
+<h3><span class="header-section-number">10.2.2</span> Type II Error (False Negative)<a href="statistical-power.html#type-ii-error-false-negative" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Definition and Explanation of Type II Error</strong></p>
+<p>A Type II error occurs when a researcher fails to reject the null hypothesis when it is actually false. In other words, the researcher concludes that there is no effect or difference when one actually exists. This is also known as a “false negative” because the test fails to detect a true effect.</p>
+<p>For example, consider a study examining whether a new teaching method improves student performance. The null hypothesis (H₀) might state that the teaching method has no effect on performance. A Type II error would occur if the researcher concludes that the method is ineffective, even though it actually does improve performance. As a result, the potentially beneficial teaching method might be dismissed or overlooked.</p>
+<p><strong>The Consequences of Type II Errors in Psychological Research</strong></p>
+<p>Type II errors can also have serious consequences, particularly when they lead to missed opportunities for advancements in psychological theory and practice:</p>
 <ul>
-<li><strong>Null Hypothesis (H0)</strong>: The slope (<code>m</code>) is equal to zero, meaning there is no relationship between the two variables.</li>
-<li><strong>Alternative Hypothesis (H1)</strong>: The slope (<code>m</code>) is not equal to zero, meaning there is a relationship between the two variables.</li>
+<li><p><strong>Missed Discoveries</strong>: Type II errors can result in missed discoveries of important psychological effects or relationships. For instance, if a researcher fails to detect the impact of early childhood interventions on long-term cognitive development, this could delay the implementation of programs that could benefit children.</p></li>
+<li><p><strong>Ineffective Interventions</strong>: In clinical settings, a Type II error might lead to the incorrect conclusion that a therapy or intervention is ineffective. As a result, patients might be deprived of a treatment that could have improved their condition.</p></li>
+<li><p><strong>Wasted Resources</strong>: When true effects go undetected, valuable research resources, including time and funding, are wasted. This can slow scientific progress and limit the ability of researchers to build on previous findings.</p></li>
 </ul>
-<p>To determine whether to accept or reject the null hypothesis, we look at the <strong>p-value</strong>.</p>
-<p><strong>What is a P-Value?</strong></p>
-<p>The <strong>p-value</strong> is a number that helps you decide whether the observed relationship in your data is statistically significant. It tells you the probability of obtaining your observed results (or something more extreme) if the null hypothesis were true.</p>
+<p><strong>Factors That Influence the Likelihood of Type II Errors</strong></p>
+<p>The likelihood of committing a Type II error is influenced by several factors, including statistical power and sample size:</p>
 <ul>
-<li><strong>Low p-value (&lt; 0.05)</strong>: There is strong evidence against the null hypothesis, so you reject the null hypothesis. This means you have a statistically significant relationship between the variables.</li>
-<li><strong>High p-value (&gt; 0.05)</strong>: There is not enough evidence to reject the null hypothesis, so you fail to reject the null hypothesis. This means the relationship between the variables might not be significant.</li>
+<li><p><strong>Statistical Power</strong>: Statistical power is the probability of correctly rejecting a false null hypothesis (i.e., detecting a true effect). Power is directly related to the likelihood of avoiding a Type II error. A study with low power has a higher risk of failing to detect a true effect, leading to a Type II error. Increasing power (e.g., by increasing sample size) reduces the likelihood of a Type II error.</p></li>
+<li><p><strong>Sample Size</strong>: Larger sample sizes increase the power of a study, making it more likely to detect true effects. Conversely, studies with small sample sizes are more prone to Type II errors because they may not have enough data to reveal meaningful differences or relationships.</p></li>
+<li><p><strong>Effect Size</strong>: The magnitude of the effect being studied (effect size) also influences the likelihood of a Type II error. Larger effect sizes are easier to detect, reducing the chance of a Type II error. Conversely, smaller effect sizes require more power to detect, and studies with insufficient power may fail to identify these effects.</p></li>
 </ul>
-<p><strong>Example</strong>: Testing the Relationship Between Physical Activity and Stress Levels</p>
-<p>Let’s say a researcher wants to know if there is a significant relationship between physical activity and stress levels. The hypothesis is that more physical activity is associated with lower stress levels.</p>
-<ol style="list-style-type: decimal">
-<li><p><strong>Collect Data</strong>: The researcher collects data from a group of participants, recording the number of hours they engage in physical activity each week (<code>x</code>) and their stress levels on a scale from 0 to 100 (<code>y</code>).</p></li>
-<li><p><strong>Create a Linear Model</strong>: The researcher fits a linear model to the data:</p>
-<p><span class="math display">\[ \text{Stress Level} = m \times \text{Physical Activity} + b \]</span></p>
-<p>Suppose the researcher finds that <code>m = -3</code> and <code>b = 70</code>. This suggests that for each additional hour of physical activity, stress levels decrease by 3 points.</p></li>
-<li><p><strong>Hypothesis Testing</strong>: The researcher calculates a p-value to determine whether the slope of -3 is significantly different from zero.</p>
+</div>
+<div id="balancing-type-i-and-type-ii-errors" class="section level3 hasAnchor" number="10.2.3">
+<h3><span class="header-section-number">10.2.3</span> Balancing Type I and Type II Errors<a href="statistical-power.html#balancing-type-i-and-type-ii-errors" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Discussion on the Trade-Off Between Type I and Type II Errors</strong></p>
+<p>In research, there is often a trade-off between Type I and Type II errors. Reducing the likelihood of one type of error typically increases the likelihood of the other:</p>
 <ul>
-<li><strong>P-value &lt; 0.05</strong>: If the p-value is less than 0.05, the researcher rejects the null hypothesis and concludes that there is a significant relationship between physical activity and stress levels. In this case, the more physically active people are, the lower their stress levels tend to be.</li>
-<li><strong>P-value &gt; 0.05</strong>: If the p-value is greater than 0.05, the researcher fails to reject the null hypothesis and concludes that the relationship between physical activity and stress levels is not statistically significant.</li>
-</ul></li>
-<li><p><strong>Interpret the Results</strong>: If the relationship is significant, the researcher might suggest that increasing physical activity could be an effective way to reduce stress. If the relationship is not significant, the researcher might look for other factors that could be influencing stress levels.</p></li>
-</ol>
-<p><strong>Summary of Hypothesis Testing with Linear Models</strong>:</p>
-<p>Hypothesis testing with linear models allows researchers to determine whether the relationships they observe in data are statistically significant. By examining the slope of the line and calculating the p-value, researchers can make informed decisions about the nature of the relationship between variables, helping to advance knowledge in psychology and other fields.</p>
-<p>In the next sections, we will explore the individual components of a linear model in greater detail, helping you to understand how each part contributes to the overall model and what it means in the context of your data.</p>
+<li><p><strong>Reducing Type I Errors</strong>: Lowering the significance level (alpha) reduces the likelihood of committing a Type I error. However, this also makes it more difficult to detect true effects, increasing the likelihood of a Type II error. For example, if a researcher lowers alpha from 0.05 to 0.01 to reduce the chance of a false positive, they may inadvertently increase the risk of failing to detect a true effect (false negative).</p></li>
+<li><p><strong>Reducing Type II Errors</strong>: Increasing the power of a study (e.g., by increasing sample size) reduces the likelihood of committing a Type II error. However, this also increases the risk of Type I errors, especially if multiple comparisons are made without appropriate corrections. In practice, researchers must carefully consider the balance between these errors when designing studies.</p></li>
+</ul>
+<p><strong>How Adjusting the Significance Level Affects Both Type I and Type II Errors</strong></p>
+<p>The significance level (alpha) is a key factor in balancing Type I and Type II errors. Adjusting alpha has the following effects:</p>
+<ul>
+<li><p><strong>Lowering Alpha</strong>: Setting a more stringent alpha level (e.g., 0.01 instead of 0.05) reduces the probability of a Type I error but increases the risk of a Type II error. This approach is often used in high-stakes research where false positives could have serious consequences, such as in clinical trials for new medications.</p></li>
+<li><p><strong>Raising Alpha</strong>: Setting a higher alpha level (e.g., 0.10 instead of 0.05) increases the probability of detecting true effects (reducing Type II errors) but also increases the risk of false positives (Type I errors). This approach might be used in exploratory research where detecting potential effects is prioritized over avoiding false positives.</p></li>
+</ul>
+<p><strong>Examples of Psychological Research Scenarios</strong></p>
+<p>Different research contexts may require prioritizing the minimization of one type of error over the other:</p>
+<ul>
+<li><p><strong>Prioritizing Minimizing Type I Errors</strong>: In a clinical trial for a new drug, minimizing Type I errors is crucial because a false positive could lead to the approval and widespread use of an ineffective or harmful drug. Researchers might set a very stringent alpha level (e.g., 0.01) to ensure that only truly effective treatments are identified as such.</p></li>
+<li><p><strong>Prioritizing Minimizing Type II Errors</strong>: In exploratory research on a new psychological intervention, researchers might prioritize minimizing Type II errors to ensure that potentially beneficial effects are not overlooked. They might set a more lenient alpha level (e.g., 0.10) to increase the likelihood of detecting true effects, even at the risk of some false positives.</p></li>
+</ul>
+<p>In conclusion, understanding and balancing Type I and Type II errors is critical in psychological research. By carefully considering the trade-offs between these errors, researchers can design studies that are both robust and ethical, contributing to the advancement of psychological science while minimizing the risks of incorrect conclusions.</p>
 </div>
 </div>
-<div id="components-of-a-bivariate-linear-model" class="section level2 hasAnchor" number="8.3">
-<h2><span class="header-section-number">8.3</span> Components of a Bivariate Linear Model<a href="bivariate-linear-models.html#components-of-a-bivariate-linear-model" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In a bivariate linear model, there are three key components that help describe the relationship between two variables: the intercept, the slope, and the correlation coefficient. Understanding each of these components is crucial for interpreting what the model tells you about the data.</p>
-<div id="intercept-b0" class="section level3 hasAnchor" number="8.3.1">
-<h3><span class="header-section-number">8.3.1</span> Intercept (b0)<a href="bivariate-linear-models.html#intercept-b0" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>What is the Intercept?</strong></p>
-<p>The <strong>intercept</strong> is the point where the line of best fit crosses the y-axis on a graph. In mathematical terms, it’s represented as <code>b0</code> in the equation of the line:</p>
-<p><span class="math display">\[ y = b1 \times x + b0 \]</span></p>
-<ul>
-<li><strong>y</strong>: This is the outcome variable, or the variable you are trying to predict or explain.</li>
-<li><strong>x</strong>: This is the predictor variable, the variable you believe influences the outcome.</li>
-<li><strong>b1</strong>: This is the slope, which we’ll discuss shortly.</li>
-<li><strong>b0</strong>: This is the intercept, the value of <code>y</code> when <code>x</code> is zero.</li>
-</ul>
-<p><strong>What Does the Intercept Represent?</strong></p>
-<p>The intercept (<code>b0</code>) tells you the expected value of the outcome variable when the predictor variable is zero. Essentially, it answers the question: “What would the outcome be if the predictor had no effect (i.e., was zero)?”</p>
-<p><strong>Real-World Example</strong>:</p>
-<p>Let’s go back to our example of predicting exam scores based on hours studied.</p>
-<p>Suppose you have the following linear model equation:</p>
-<p><span class="math display">\[ \text{Exam Score} = 2.5 \times \text{Hours Studied} + 65 \]</span></p>
-<ul>
-<li><strong>b0 (Intercept) = 65</strong>: This means that if a student doesn’t study at all (0 hours studied), their predicted exam score would be 65.</li>
-</ul>
-<p>The intercept gives you a starting point for your predictions. It’s like asking, “If nothing happens (no study time), what can I expect?”</p>
-<p><strong>Why is the Intercept Important?</strong></p>
-<p>The intercept is crucial because it anchors the entire model. Without it, the line of best fit wouldn’t have a defined starting point. It’s particularly useful when you want to understand the baseline level of your outcome variable. For example, if you know that a student who studies zero hours is predicted to score 65, you can begin to understand the impact of studying on improving that score.</p>
+<div id="factors-affecting-power" class="section level2 hasAnchor" number="10.3">
+<h2><span class="header-section-number">10.3</span> Factors Affecting Power<a href="statistical-power.html#factors-affecting-power" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Statistical power is influenced by several key factors that researchers must carefully consider when designing a study. Understanding how these factors interact can help ensure that a study has sufficient power to detect true effects and yield meaningful results.</p>
+<div id="sample-size" class="section level3 hasAnchor" number="10.3.1">
+<h3><span class="header-section-number">10.3.1</span> Sample Size<a href="statistical-power.html#sample-size" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Explanation of How Increasing the Sample Size Increases Power</strong></p>
+<p>Sample size is one of the most critical factors affecting the power of a study. In general, increasing the sample size increases the power of a study because it reduces the standard error of the mean, making it easier to detect differences or effects.</p>
+<p>When you have a larger sample, the estimates of the population parameters (such as the mean or proportion) become more precise. This precision leads to narrower confidence intervals and a greater ability to detect statistically significant differences or relationships. In other words, with a larger sample size, the study is more likely to correctly reject the null hypothesis when it is false, thereby increasing power.</p>
+<p>For example, imagine you are conducting a study to test the effectiveness of a new therapy for depression. If you have a small sample size, individual variations in response to the therapy might obscure the true effect, making it harder to detect a statistically significant difference between the treatment group and the control group. By increasing the sample size, you reduce the impact of these individual variations, increasing the likelihood that the study will detect the true effect of the therapy if it exists.</p>
+<p><strong>Practical Considerations for Determining an Adequate Sample Size in Psychological Studies</strong></p>
+<p>Determining the appropriate sample size for a study requires careful consideration of several factors, including the expected effect size, the desired power level, the significance level (alpha), and the study design. Researchers often use power analysis to calculate the required sample size, ensuring that the study is adequately powered to detect the effects of interest.</p>
+<p>Practical considerations include:
+- <strong>Resource Constraints</strong>: Researchers must balance the need for a large enough sample size with the practical limitations of time, funding, and participant availability. In some cases, it may be necessary to prioritize certain outcomes or focus on the most critical research questions to optimize the use of available resources.
+- <strong>Ethical Considerations</strong>: Enrolling more participants than necessary can be ethically problematic, especially in studies involving potentially invasive or burdensome procedures. Researchers must aim to enroll the minimum number of participants required to achieve sufficient power while avoiding unnecessary participant burden.
+- <strong>Study Design</strong>: Different study designs require different sample sizes. For example, a within-subjects design, where each participant serves as their own control, typically requires a smaller sample size than a between-subjects design, where participants are divided into separate groups.</p>
+<p><strong>Example: Calculating Required Sample Size for a Study on the Effectiveness of a New Therapy</strong></p>
+<p>Suppose you are planning a study to test the effectiveness of a new cognitive-behavioral therapy (CBT) for reducing anxiety. Based on previous research, you estimate that the effect size of the therapy is moderate (Cohen’s d = 0.5). You want to achieve a power level of 0.80 (80%) with a significance level of 0.05.</p>
+<p>Using a power analysis calculator or software like G*Power, you input the expected effect size (0.5), desired power (0.80), and alpha (0.05). The output suggests that you need approximately 64 participants per group to detect the effect with adequate power. If you have two groups (CBT vs. control), you would need a total sample size of 128 participants.</p>
+<p>This calculation ensures that your study is sufficiently powered to detect a moderate effect of the therapy on anxiety, reducing the risk of committing a Type II error.</p>
 </div>
-<div id="slopes-b1" class="section level3 hasAnchor" number="8.3.2">
-<h3><span class="header-section-number">8.3.2</span> Slope(s) (b1)<a href="bivariate-linear-models.html#slopes-b1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>What is the Slope?</strong></p>
-<p>The <strong>slope</strong> is the part of the linear equation that tells you how much the outcome variable (y) changes for each one-unit change in the predictor variable (x). In our equation, the slope is represented as <code>b1</code>:</p>
-<p><span class="math display">\[ y = b1 \times x + b0 \]</span></p>
-<p><strong>What Does the Slope Represent?</strong></p>
-<p>The slope (<code>b1</code>) shows the strength and direction of the relationship between the two variables. It answers the question: “How much does <code>y</code> change when <code>x</code> increases by one unit?”</p>
-<p><strong>Real-World Example</strong>:</p>
-<p>Continuing with our exam score example:</p>
-<p><span class="math display">\[ \text{Exam Score} = 2.5 \times \text{Hours Studied} + 65 \]</span></p>
-<ul>
-<li><strong>b1 (Slope) = 2.5</strong>: This means that for every additional hour a student studies, their exam score is expected to increase by 2.5 points.</li>
-</ul>
-<p>The slope gives you insight into how much influence the predictor variable has on the outcome variable. If the slope is steep, small changes in the predictor lead to large changes in the outcome.</p>
-<p><strong>Positive vs. Negative Slopes</strong>:</p>
-<ul>
-<li><strong>Positive Slope</strong>: If <code>b1</code> is positive, as <code>x</code> increases, <code>y</code> also increases. For example, as hours studied increases, exam scores increase.</li>
-<li><strong>Negative Slope</strong>: If <code>b1</code> is negative, as <code>x</code> increases, <code>y</code> decreases. For example, if the slope were negative, it would mean that as hours studied increases, exam scores decrease, which might be the case if students were over-studying and burning out.</li>
-</ul>
-<p><strong>Why is the Slope Important?</strong></p>
-<p>The slope is critical for understanding the relationship between the variables. It tells you not just whether there is a relationship, but also how strong that relationship is and in what direction. For instance, if the slope were 10 instead of 2.5, it would suggest that studying has a much larger impact on exam scores.</p>
+<div id="effect-size" class="section level3 hasAnchor" number="10.3.2">
+<h3><span class="header-section-number">10.3.2</span> Effect Size<a href="statistical-power.html#effect-size" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Definition of Effect Size as a Measure of the Strength of a Relationship or the Magnitude of an Effect</strong></p>
+<p>Effect size is a quantitative measure of the strength of a relationship between variables or the magnitude of an effect observed in a study. Unlike p-values, which simply indicate whether an effect is statistically significant, effect size provides insight into the practical significance or importance of the effect.</p>
+<p>There are several types of effect size measures, depending on the statistical test used:
+- <strong>Cohen’s d</strong>: Measures the difference between two means, expressed in standard deviation units. It is commonly used in t-tests and ANOVA.
+- <strong>Pearson’s r</strong>: Measures the strength and direction of a linear relationship between two continuous variables. It is used in correlation analyses.
+- <strong>Odds ratio (OR)</strong>: Measures the odds of an event occurring in one group compared to another. It is often used in logistic regression.</p>
+<p>Effect size is crucial because it helps researchers understand the practical implications of their findings. For example, a statistically significant effect with a small effect size may not be meaningful in real-world terms, whereas a large effect size indicates a stronger, more impactful relationship or difference.</p>
+<p><strong>How Larger Effect Sizes Increase the Power of a Study</strong></p>
+<p>Larger effect sizes increase the power of a study because they are easier to detect with statistical tests. When the effect size is large, the difference between groups or the strength of the relationship between variables is more pronounced, making it more likely that the statistical test will identify the effect as significant.</p>
+<p>For instance, if a new treatment for PTSD has a large effect size (e.g., Cohen’s d = 0.8), the difference between the treatment group and the control group is substantial. This substantial difference makes it more likely that the study will detect the effect, even with a relatively small sample size. In contrast, smaller effect sizes require larger sample sizes to achieve the same level of power because the differences or relationships are more subtle and harder to detect.</p>
+<p><strong>Example: Understanding Effect Size in the Context of a Psychological Intervention</strong></p>
+<p>Imagine you are evaluating the effectiveness of a mindfulness-based intervention for reducing stress. You conduct a study with two groups: one group receives the mindfulness intervention, and the other serves as a control group. After the intervention, you find that the mindfulness group has an average stress reduction of 10 points, while the control group has a reduction of only 2 points. The standard deviation of stress reduction scores is 5.</p>
+<p>Using Cohen’s d, you calculate the effect size:</p>
+<div class="sourceCode" id="cb211"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb211-1"><a href="statistical-power.html#cb211-1" tabindex="-1"></a><span class="co"># Cohen&#39;s d calculation</span></span>
+<span id="cb211-2"><a href="statistical-power.html#cb211-2" tabindex="-1"></a>mean_difference <span class="ot">&lt;-</span> <span class="dv">10</span> <span class="sc">-</span> <span class="dv">2</span></span>
+<span id="cb211-3"><a href="statistical-power.html#cb211-3" tabindex="-1"></a>pooled_sd <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb211-4"><a href="statistical-power.html#cb211-4" tabindex="-1"></a>cohens_d <span class="ot">&lt;-</span> mean_difference <span class="sc">/</span> pooled_sd</span>
+<span id="cb211-5"><a href="statistical-power.html#cb211-5" tabindex="-1"></a>cohens_d</span></code></pre></div>
+<pre><code>## [1] 1.6</code></pre>
+<p>With Cohen’s d = 1.6, the effect size is large, indicating that the mindfulness intervention has a substantial impact on reducing stress. This large effect size increases the power of your study, making it more likely that the difference between the groups will be detected as statistically significant.</p>
 </div>
-<div id="correlations" class="section level3 hasAnchor" number="8.3.3">
-<h3><span class="header-section-number">8.3.3</span> Correlations<a href="bivariate-linear-models.html#correlations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>What is a Correlation Coefficient?</strong></p>
-<p>The <strong>correlation coefficient</strong> is a statistical measure that describes the strength and direction of the linear relationship between two variables. It’s a number that ranges from -1 to +1:</p>
+<div id="significance-level-alpha" class="section level3 hasAnchor" number="10.3.3">
+<h3><span class="header-section-number">10.3.3</span> Significance Level (Alpha)<a href="statistical-power.html#significance-level-alpha" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Explanation of How the Significance Level Affects Power</strong></p>
+<p>The significance level, often denoted as alpha (α), is the threshold used to determine whether a result is statistically significant. It represents the probability of committing a Type I error (rejecting the null hypothesis when it is true). Commonly set at 0.05, alpha reflects a 5% risk of making a false positive conclusion.</p>
+<p>The significance level directly affects the power of a study. Lowering alpha (e.g., from 0.05 to 0.01) reduces the likelihood of a Type I error, but it also reduces power because the criteria for significance become more stringent. As a result, the study is less likely to detect true effects, increasing the risk of a Type II error.</p>
+<p>Conversely, raising alpha (e.g., from 0.05 to 0.10) increases the power of the study because it makes it easier to achieve statistical significance. However, this comes at the cost of a higher risk of Type I errors, meaning there is a greater chance of concluding that an effect exists when it does not.</p>
+<p><strong>The Trade-Off Between Setting a Lower Alpha to Reduce Type I Errors and the Impact on Power</strong></p>
+<p>Researchers must carefully balance the trade-off between Type I and Type II errors when setting the significance level. In some contexts, minimizing Type I errors is paramount, while in others, detecting true effects is the priority.</p>
 <ul>
-<li><strong>+1</strong>: A perfect positive linear relationship. As one variable increases, the other increases in a perfectly predictable way.</li>
-<li><strong>-1</strong>: A perfect negative linear relationship. As one variable increases, the other decreases in a perfectly predictable way.</li>
-<li><strong>0</strong>: No linear relationship. Changes in one variable do not predict changes in the other.</li>
+<li><p><strong>Lower Alpha</strong>: In high-stakes research, such as clinical trials for new medications, researchers often set a lower alpha (e.g., 0.01) to minimize the risk of approving an ineffective or harmful treatment. This reduces the likelihood of Type I errors but requires a larger sample size or larger effect size to maintain adequate power.</p></li>
+<li><p><strong>Higher Alpha</strong>: In exploratory research, where the goal is to identify potential effects or relationships for further investigation, researchers might set a higher alpha (e.g., 0.10) to increase the chances of detecting true effects. This approach accepts a higher risk of Type I errors in exchange for greater power and a reduced risk of missing important findings.</p></li>
 </ul>
-<p><strong>Understanding the Correlation Coefficient</strong>:</p>
-<ul>
-<li><strong>Positive Correlation</strong>: If the correlation coefficient is positive (e.g., +0.8), it means that as one variable increases, the other also tends to increase. For example, as the number of hours studied increases, exam scores tend to increase.</li>
-<li><strong>Negative Correlation</strong>: If the correlation coefficient is negative (e.g., -0.6), it means that as one variable increases, the other tends to decrease. For example, as age increases, reaction time might decrease, meaning older individuals have slower reaction times.</li>
-<li><strong>Magnitude of Correlation</strong>: The closer the correlation coefficient is to +1 or -1, the stronger the linear relationship between the two variables. A coefficient close to 0 indicates a weak or no linear relationship.</li>
-</ul>
-<p><strong>Real-World Example</strong>:</p>
-<p>Consider a study examining the relationship between age and reaction time. Researchers might find a correlation coefficient of -0.7:</p>
-<ul>
-<li><strong>Correlation = -0.7</strong>: This indicates a strong negative relationship, meaning that as age increases, reaction time tends to slow down (reaction time increases). The closer the correlation is to -1, the stronger this relationship is.</li>
-</ul>
-<p><strong>Why is Correlation Important in Linear Models?</strong></p>
-<p>The correlation coefficient complements the slope by quantifying the strength of the relationship between the two variables. While the slope tells you the direction and rate of change, the correlation coefficient tells you how well the predictor variable explains changes in the outcome variable.</p>
-<p>When interpreting a linear model, it’s important to consider both the slope and the correlation. A strong slope with a high correlation suggests a reliable, meaningful relationship, while a weak slope with a low correlation suggests that the relationship may not be as strong or that other factors are at play.</p>
-<p><strong>Summary of Components</strong>:</p>
-<ul>
-<li><strong>Intercept (b0)</strong>: The starting point of the model, telling you the expected value of the outcome variable when the predictor is zero.</li>
-<li><strong>Slope (b1)</strong>: The rate of change in the outcome variable for each one-unit change in the predictor variable, showing the direction and strength of the relationship.</li>
-<li><strong>Correlation</strong>: The overall strength and direction of the relationship between the two variables, providing a measure of how well the linear model fits the data.</li>
-</ul>
-<p>By understanding these components, you can interpret the results of a bivariate linear model more effectively, making informed decisions based on the relationships within your data.</p>
+<p><strong>Example: Choosing an Appropriate Alpha Level for a High-Stakes Psychological Study</strong></p>
+<p>Consider a study testing the safety and efficacy of a new drug for treating severe depression. The consequences of a Type I error (falsely concluding that the drug is effective) could be severe, leading to widespread use of an ineffective or harmful treatment. To minimize this risk, researchers might set alpha at 0.01 instead of 0.05.</p>
+<p>However, lowering alpha to 0.01 reduces the study’s power, making it harder to detect a true effect. To compensate, the researchers might increase the sample size or ensure that the study is adequately powered to detect even small effects. This careful consideration of alpha, power, and sample size ensures that the study balances the need for rigor with the ability to detect meaningful effects.</p>
+<p>In summary, the significance level is a crucial factor in determining the power of a study. Researchers must consider the specific context and goals of their research when setting alpha, balancing the need to minimize Type I errors with the importance of detecting true effects.</p>
 </div>
 </div>
-<div id="residuals" class="section level2 hasAnchor" number="8.4">
-<h2><span class="header-section-number">8.4</span> Residuals<a href="bivariate-linear-models.html#residuals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In this section, we’ll explore residuals, an essential concept in understanding how well a linear model fits the data. We’ll explain what residuals are, why they matter, and how to visualize them using plots in R.</p>
-<div id="what-are-residuals" class="section level3 hasAnchor" number="8.4.1">
-<h3><span class="header-section-number">8.4.1</span> What Are Residuals?<a href="bivariate-linear-models.html#what-are-residuals" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>What Are Residuals?</strong></p>
-<p>Residuals are the differences between the observed values (the actual data points) and the values predicted by the linear model. These residuals represent the “error” in the model, showing how much the model’s predictions deviate from the actual data.</p>
-<p>For any given data point, the residual can be calculated using the formula:</p>
-<p><span class="math display">\[ \text{Residual} = \text{Observed Value} - \text{Predicted Value} \]</span></p>
-<ul>
-<li><strong>Observed Value</strong>: This is the actual value of the outcome variable (y) for a particular data point.</li>
-<li><strong>Predicted Value</strong>: This is the value that the linear model predicts for the outcome variable (y) based on the predictor variable (x) and the equation of the line.</li>
-</ul>
-<p><strong>Introduction to the Concept of “Error” in a Model</strong></p>
-<p>No model is perfect, which is why the concept of residuals is so important. Residuals represent the “error” in the model—how much the actual data deviates from what the model predicts. The goal is to minimize these residuals, making the model as accurate as possible.</p>
-<p><strong>Example: Calculating Residuals in a Simple Linear Model</strong></p>
-<p>Let’s revisit our example of predicting exam scores based on hours studied. Suppose we have the following data:</p>
-<table style="width:100%;">
-<colgroup>
-<col width="19%" />
-<col width="33%" />
-<col width="27%" />
-<col width="19%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Hours Studied (x)</th>
-<th>Exam Score (Observed Value) (y)</th>
-<th>Predicted Exam Score (y’)</th>
-<th>Residual (y - y’)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>2</td>
-<td>70</td>
-<td>70</td>
-<td>0</td>
-</tr>
-<tr class="even">
-<td>4</td>
-<td>75</td>
-<td>75</td>
-<td>0</td>
-</tr>
-<tr class="odd">
-<td>6</td>
-<td>85</td>
-<td>80</td>
-<td>5</td>
-</tr>
-<tr class="even">
-<td>8</td>
-<td>88</td>
-<td>85</td>
-<td>3</td>
-</tr>
-<tr class="odd">
-<td>10</td>
-<td>90</td>
-<td>90</td>
-<td>0</td>
-</tr>
-</tbody>
-</table>
-<p>In this example, if a student studied for 6 hours, the actual exam score was 85, but the model predicted a score of 80. The residual is 5, indicating that the model underpredicted by 5 points. Similarly, for 8 hours of study, the residual is 3 points.</p>
-<p>To visualize these residuals, let’s plot them in R.</p>
-<div class="sourceCode" id="cb176"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb176-1"><a href="bivariate-linear-models.html#cb176-1" tabindex="-1"></a><span class="co"># Simulating data</span></span>
-<span id="cb176-2"><a href="bivariate-linear-models.html#cb176-2" tabindex="-1"></a>hours_studied <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">10</span>)</span>
-<span id="cb176-3"><a href="bivariate-linear-models.html#cb176-3" tabindex="-1"></a>exam_scores <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">70</span>, <span class="dv">75</span>, <span class="dv">85</span>, <span class="dv">88</span>, <span class="dv">90</span>)</span>
-<span id="cb176-4"><a href="bivariate-linear-models.html#cb176-4" tabindex="-1"></a></span>
-<span id="cb176-5"><a href="bivariate-linear-models.html#cb176-5" tabindex="-1"></a><span class="co"># Creating a linear model</span></span>
-<span id="cb176-6"><a href="bivariate-linear-models.html#cb176-6" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(exam_scores <span class="sc">~</span> hours_studied)</span>
-<span id="cb176-7"><a href="bivariate-linear-models.html#cb176-7" tabindex="-1"></a></span>
-<span id="cb176-8"><a href="bivariate-linear-models.html#cb176-8" tabindex="-1"></a><span class="co"># Predicting values</span></span>
-<span id="cb176-9"><a href="bivariate-linear-models.html#cb176-9" tabindex="-1"></a>predicted_scores <span class="ot">&lt;-</span> <span class="fu">predict</span>(model)</span>
-<span id="cb176-10"><a href="bivariate-linear-models.html#cb176-10" tabindex="-1"></a></span>
-<span id="cb176-11"><a href="bivariate-linear-models.html#cb176-11" tabindex="-1"></a><span class="co"># Calculating residuals</span></span>
-<span id="cb176-12"><a href="bivariate-linear-models.html#cb176-12" tabindex="-1"></a>residuals <span class="ot">&lt;-</span> exam_scores <span class="sc">-</span> predicted_scores</span>
-<span id="cb176-13"><a href="bivariate-linear-models.html#cb176-13" tabindex="-1"></a></span>
-<span id="cb176-14"><a href="bivariate-linear-models.html#cb176-14" tabindex="-1"></a><span class="co"># Plotting the data</span></span>
-<span id="cb176-15"><a href="bivariate-linear-models.html#cb176-15" tabindex="-1"></a><span class="fu">plot</span>(hours_studied, exam_scores, <span class="at">main =</span> <span class="st">&quot;Exam Scores vs. Hours Studied&quot;</span>,</span>
-<span id="cb176-16"><a href="bivariate-linear-models.html#cb176-16" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;Hours Studied&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Exam Scores&quot;</span>, <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>)</span>
-<span id="cb176-17"><a href="bivariate-linear-models.html#cb176-17" tabindex="-1"></a><span class="fu">abline</span>(model, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>)</span>
-<span id="cb176-18"><a href="bivariate-linear-models.html#cb176-18" tabindex="-1"></a></span>
-<span id="cb176-19"><a href="bivariate-linear-models.html#cb176-19" tabindex="-1"></a><span class="co"># Adding residual lines</span></span>
-<span id="cb176-20"><a href="bivariate-linear-models.html#cb176-20" tabindex="-1"></a><span class="fu">segments</span>(hours_studied, exam_scores, hours_studied, predicted_scores, <span class="at">col =</span> <span class="st">&quot;green&quot;</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code></pre></div>
-<p><img src="psych-stats-book_files/figure-html/unnamed-chunk-104-1.png" width="672" /></p>
-<p>This plot shows the relationship between hours studied and exam scores, with the red line representing the linear model. The green lines are the residuals, showing the distance between the actual exam scores and the scores predicted by the model.</p>
+<div id="calculating-power-in-r" class="section level2 hasAnchor" number="10.4">
+<h2><span class="header-section-number">10.4</span> Calculating Power in R<a href="statistical-power.html#calculating-power-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Understanding and calculating power is essential in psychological research to ensure that studies are designed with sufficient sensitivity to detect meaningful effects. Power analysis, a statistical tool used to determine the sample size required to achieve a desired level of power, is a critical step in study planning. This section will guide you through the process of conducting power analysis in R, using different study designs as examples.</p>
+<div id="introduction-to-power-analysis" class="section level3 hasAnchor" number="10.4.1">
+<h3><span class="header-section-number">10.4.1</span> Introduction to Power Analysis<a href="statistical-power.html#introduction-to-power-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Overview of Power Analysis as a Tool for Determining Sample Size</strong></p>
+<p>Power analysis is a statistical technique used to determine the minimum sample size needed for a study to detect an effect of a given size with a specified level of confidence. The main components of a power analysis are:
+- <strong>Effect Size</strong>: The magnitude of the effect or difference you expect to find.
+- <strong>Significance Level (Alpha)</strong>: The threshold for determining statistical significance, commonly set at 0.05.
+- <strong>Power</strong>: The probability of correctly rejecting the null hypothesis when it is false (typically desired to be 0.80 or 80%).</p>
+<p>Power analysis is not only useful for calculating sample size but also for understanding the relationship between power, effect size, sample size, and significance level. By adjusting these parameters, researchers can design studies that are appropriately powered to detect effects of interest.</p>
+<p><strong>Importance of Conducting a Power Analysis Before Collecting Data in Psychological Research</strong></p>
+<p>Conducting a power analysis before collecting data is crucial for several reasons:
+- <strong>Ethical Considerations</strong>: Ensuring that a study is adequately powered helps prevent the unethical use of participant time and resources. Conducting an underpowered study may result in inconclusive results, wasting resources and potentially leading to misleading conclusions.
+- <strong>Study Design</strong>: Power analysis informs the design of the study by providing a clear understanding of the sample size required to detect the desired effect. This can prevent the need for post-hoc adjustments or additional data collection, which can complicate the analysis and interpretation of results.
+- <strong>Resource Allocation</strong>: Knowing the required sample size in advance allows researchers to plan and allocate resources more effectively, ensuring that the study is feasible and manageable.</p>
+<p>In psychological research, where effects are often subtle and sample sizes are sometimes limited, conducting a power analysis is especially important to ensure that the study has a reasonable chance of detecting true effects.</p>
 </div>
-<div id="importance-of-residuals-in-model-evaluation" class="section level3 hasAnchor" number="8.4.2">
-<h3><span class="header-section-number">8.4.2</span> Importance of Residuals in Model Evaluation<a href="bivariate-linear-models.html#importance-of-residuals-in-model-evaluation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Why Are Residuals Important?</strong></p>
-<p>Residuals play a crucial role in evaluating the fit of a linear model. By analyzing the residuals, we can assess how well the model represents the data.</p>
-<ul>
-<li><strong>Fit of the Model</strong>: A good model will have small, random residuals that are evenly distributed around zero. This indicates that the model’s predictions are close to the actual data points.</li>
-<li><strong>Model Accuracy</strong>: The smaller the residuals, the closer the model’s predictions are to the actual values, which enhances the model’s accuracy.</li>
-</ul>
-<p><strong>Example: Visualizing Residuals in a Scatter Plot</strong></p>
-<p>Visualizing residuals helps you understand where the model is accurate and where it might be off. A common way to do this is by plotting the residuals against the predictor variable.</p>
-<div class="sourceCode" id="cb177"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb177-1"><a href="bivariate-linear-models.html#cb177-1" tabindex="-1"></a><span class="co"># Plotting residuals</span></span>
-<span id="cb177-2"><a href="bivariate-linear-models.html#cb177-2" tabindex="-1"></a><span class="fu">plot</span>(hours_studied, residuals, <span class="at">main =</span> <span class="st">&quot;Residuals Plot&quot;</span>,</span>
-<span id="cb177-3"><a href="bivariate-linear-models.html#cb177-3" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;Hours Studied&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Residuals&quot;</span>, <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">col =</span> <span class="st">&quot;purple&quot;</span>)</span>
-<span id="cb177-4"><a href="bivariate-linear-models.html#cb177-4" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code></pre></div>
-<p><img src="psych-stats-book_files/figure-html/unnamed-chunk-105-1.png" width="672" /></p>
-<p>In this residuals plot:
-- The x-axis represents the predictor variable (hours studied).
-- The y-axis represents the residuals (the difference between actual and predicted exam scores).
-- The red line at y = 0 represents perfect prediction (no residual).</p>
-<p>If the residuals are randomly scattered around the red line without any clear pattern, this suggests that the model is appropriate and has captured the relationship well. However, if the residuals show a systematic pattern (e.g., they increase or decrease consistently), it suggests that the model might not be capturing all aspects of the relationship.</p>
-</div>
-<div id="checking-for-patterns-in-residuals" class="section level3 hasAnchor" number="8.4.3">
-<h3><span class="header-section-number">8.4.3</span> Checking for Patterns in Residuals<a href="bivariate-linear-models.html#checking-for-patterns-in-residuals" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Why Check for Patterns in Residuals?</strong></p>
-<p>Checking for patterns in residuals is important because it helps you determine whether the linear model is appropriate for the data. Ideally, residuals should be randomly distributed around zero, indicating that the model has captured the relationship well.</p>
-<p><strong>What Patterns Should You Look For?</strong></p>
-<ul>
-<li><strong>Random Distribution</strong>: If residuals are randomly scattered around zero, it indicates that the model is fitting the data well.</li>
-<li><strong>Systematic Patterns</strong>: If residuals show a pattern (e.g., they form a curve or systematically increase/decrease), it might suggest that the relationship isn’t linear and that a different model might be more appropriate.</li>
-</ul>
-<p><strong>Example: Identifying Potential Issues with a Model Based on Residual Patterns</strong></p>
-<p>Let’s say you’re examining the residuals from a model predicting stress levels based on physical activity. You might plot the residuals and notice a systematic pattern:</p>
-<div class="sourceCode" id="cb178"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb178-1"><a href="bivariate-linear-models.html#cb178-1" tabindex="-1"></a><span class="co"># Example: Simulating residuals with a pattern</span></span>
-<span id="cb178-2"><a href="bivariate-linear-models.html#cb178-2" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
-<span id="cb178-3"><a href="bivariate-linear-models.html#cb178-3" tabindex="-1"></a>activity <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span></span>
-<span id="cb178-4"><a href="bivariate-linear-models.html#cb178-4" tabindex="-1"></a>stress <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">100</span>, <span class="dv">95</span>, <span class="dv">90</span>, <span class="dv">87</span>, <span class="dv">85</span>, <span class="dv">80</span>, <span class="dv">78</span>, <span class="dv">76</span>, <span class="dv">75</span>, <span class="dv">74</span>) <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">10</span>, <span class="at">sd =</span> <span class="dv">2</span>)</span>
-<span id="cb178-5"><a href="bivariate-linear-models.html#cb178-5" tabindex="-1"></a>model2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(stress <span class="sc">~</span> activity)</span>
-<span id="cb178-6"><a href="bivariate-linear-models.html#cb178-6" tabindex="-1"></a>predicted_stress <span class="ot">&lt;-</span> <span class="fu">predict</span>(model2)</span>
-<span id="cb178-7"><a href="bivariate-linear-models.html#cb178-7" tabindex="-1"></a>residuals2 <span class="ot">&lt;-</span> stress <span class="sc">-</span> predicted_stress</span>
-<span id="cb178-8"><a href="bivariate-linear-models.html#cb178-8" tabindex="-1"></a></span>
-<span id="cb178-9"><a href="bivariate-linear-models.html#cb178-9" tabindex="-1"></a><span class="co"># Plotting residuals</span></span>
-<span id="cb178-10"><a href="bivariate-linear-models.html#cb178-10" tabindex="-1"></a><span class="fu">plot</span>(activity, residuals2, <span class="at">main =</span> <span class="st">&quot;Residuals Plot with a Pattern&quot;</span>,</span>
-<span id="cb178-11"><a href="bivariate-linear-models.html#cb178-11" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;Physical Activity&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Residuals&quot;</span>, <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">col =</span> <span class="st">&quot;orange&quot;</span>)</span>
-<span id="cb178-12"><a href="bivariate-linear-models.html#cb178-12" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code></pre></div>
-<p><img src="psych-stats-book_files/figure-html/unnamed-chunk-106-1.png" width="672" /></p>
-<p>If you notice that the residuals aren’t randomly distributed but instead form a curve or pattern, it might indicate that a simple linear model isn’t the best fit for the data. The model might be systematically over- or under-predicting the outcome for certain ranges of the predictor variable.</p>
-<p><strong>Summary of Residuals</strong>:</p>
-<ul>
-<li><strong>Residuals</strong> represent the differences between observed and predicted values, highlighting the errors in a model’s predictions.</li>
-<li><strong>Minimizing residuals</strong> is crucial for improving model accuracy, as smaller residuals indicate a better fit.</li>
-<li><strong>Visualizing residuals</strong> helps you assess whether the model is appropriate, with random residuals suggesting a good fit and patterns indicating potential issues.</li>
-</ul>
-<p>By understanding and analyzing residuals, you can gain deeper insights into the performance of your linear model and identify areas for improvement.</p>
-</div>
-<div id="example-residuals-with-a-pattern-non-normal-distribution" class="section level3 hasAnchor" number="8.4.4">
-<h3><span class="header-section-number">8.4.4</span> Example: Residuals with a Pattern (Non-Normal Distribution)<a href="bivariate-linear-models.html#example-residuals-with-a-pattern-non-normal-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Sometimes, when you plot the residuals of your model, you might notice that they are not randomly scattered around zero. Instead, they might show a pattern, indicating that the model is not fully capturing the relationship between the variables. This can suggest that a simple linear model might not be appropriate.</p>
-<p>Let’s go through an example where the residuals show a clear pattern, indicating potential issues with the model.</p>
-<p><strong>Simulated Example with a Pattern in Residuals</strong></p>
-<p>Suppose we have data on the relationship between the amount of physical activity (measured in hours per week) and stress levels (measured on a scale from 0 to 100). We suspect that more physical activity might reduce stress levels, but the relationship might not be perfectly linear.</p>
-<p>We’ll simulate some data where the relationship between physical activity and stress levels is quadratic rather than linear, meaning that after a certain point, additional physical activity doesn’t continue to reduce stress as effectively.</p>
-<div class="sourceCode" id="cb179"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb179-1"><a href="bivariate-linear-models.html#cb179-1" tabindex="-1"></a><span class="co"># Simulating data with a quadratic relationship</span></span>
-<span id="cb179-2"><a href="bivariate-linear-models.html#cb179-2" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
-<span id="cb179-3"><a href="bivariate-linear-models.html#cb179-3" tabindex="-1"></a>activity <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">20</span></span>
-<span id="cb179-4"><a href="bivariate-linear-models.html#cb179-4" tabindex="-1"></a>stress <span class="ot">&lt;-</span> <span class="dv">100</span> <span class="sc">-</span> <span class="dv">5</span> <span class="sc">*</span> activity <span class="sc">+</span> <span class="fl">0.5</span> <span class="sc">*</span> activity<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">20</span>, <span class="at">sd =</span> <span class="dv">5</span>)</span>
-<span id="cb179-5"><a href="bivariate-linear-models.html#cb179-5" tabindex="-1"></a></span>
-<span id="cb179-6"><a href="bivariate-linear-models.html#cb179-6" tabindex="-1"></a><span class="co"># Creating a linear model</span></span>
-<span id="cb179-7"><a href="bivariate-linear-models.html#cb179-7" tabindex="-1"></a>model3 <span class="ot">&lt;-</span> <span class="fu">lm</span>(stress <span class="sc">~</span> activity)</span>
-<span id="cb179-8"><a href="bivariate-linear-models.html#cb179-8" tabindex="-1"></a>predicted_stress <span class="ot">&lt;-</span> <span class="fu">predict</span>(model3)</span>
-<span id="cb179-9"><a href="bivariate-linear-models.html#cb179-9" tabindex="-1"></a>residuals3 <span class="ot">&lt;-</span> stress <span class="sc">-</span> predicted_stress</span>
-<span id="cb179-10"><a href="bivariate-linear-models.html#cb179-10" tabindex="-1"></a></span>
-<span id="cb179-11"><a href="bivariate-linear-models.html#cb179-11" tabindex="-1"></a><span class="co"># Plotting the original data</span></span>
-<span id="cb179-12"><a href="bivariate-linear-models.html#cb179-12" tabindex="-1"></a><span class="fu">plot</span>(activity, stress, <span class="at">main =</span> <span class="st">&quot;Stress Levels vs. Physical Activity&quot;</span>,</span>
-<span id="cb179-13"><a href="bivariate-linear-models.html#cb179-13" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;Physical Activity (Hours per Week)&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Stress Levels&quot;</span>, <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>)</span>
-<span id="cb179-14"><a href="bivariate-linear-models.html#cb179-14" tabindex="-1"></a><span class="fu">abline</span>(model3, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code></pre></div>
-<p><img src="psych-stats-book_files/figure-html/unnamed-chunk-107-1.png" width="672" /></p>
-<p>In the plot above, we’ve simulated data with a quadratic relationship, but we’ve fitted a simple linear model (the red line). Now, let’s plot the residuals to see if there’s a pattern.</p>
-<div class="sourceCode" id="cb180"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb180-1"><a href="bivariate-linear-models.html#cb180-1" tabindex="-1"></a><span class="co"># Plotting residuals with a pattern</span></span>
-<span id="cb180-2"><a href="bivariate-linear-models.html#cb180-2" tabindex="-1"></a><span class="fu">plot</span>(activity, residuals3, <span class="at">main =</span> <span class="st">&quot;Residuals Plot Showing a Pattern&quot;</span>,</span>
-<span id="cb180-3"><a href="bivariate-linear-models.html#cb180-3" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;Physical Activity (Hours per Week)&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Residuals&quot;</span>, <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">col =</span> <span class="st">&quot;purple&quot;</span>)</span>
-<span id="cb180-4"><a href="bivariate-linear-models.html#cb180-4" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code></pre></div>
-<p><img src="psych-stats-book_files/figure-html/unnamed-chunk-108-1.png" width="672" /></p>
-<p><strong>Interpreting the Residuals Plot</strong></p>
-<p>In the residuals plot:</p>
-<ul>
-<li>The residuals are not randomly scattered around the horizontal line at zero.</li>
-<li>Instead, they show a curved pattern, indicating that the model systematically underpredicts stress at low levels of activity and overpredicts it at higher levels.</li>
-</ul>
-<p>This pattern suggests that the linear model is not adequately capturing the true relationship between physical activity and stress. Specifically, the quadratic nature of the relationship means that a simple straight line (linear model) isn’t flexible enough to fit the data well.</p>
-<p><strong>What to Do About It</strong></p>
-<p>When you encounter a pattern in the residuals like this, it indicates that a linear model might not be the best choice. Here are some steps you can take:</p>
-<ol style="list-style-type: decimal">
-<li><strong>Consider a Polynomial Model</strong>:
-<ul>
-<li>Since the residuals suggest a quadratic relationship, you might consider fitting a polynomial model that includes a squared term for the predictor variable.</li>
-<li>This would allow the model to account for the curvature in the data.</li>
-</ul></li>
-</ol>
-<div class="sourceCode" id="cb181"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb181-1"><a href="bivariate-linear-models.html#cb181-1" tabindex="-1"></a><span class="co"># Fitting a quadratic (polynomial) model</span></span>
-<span id="cb181-2"><a href="bivariate-linear-models.html#cb181-2" tabindex="-1"></a>model_poly <span class="ot">&lt;-</span> <span class="fu">lm</span>(stress <span class="sc">~</span> activity <span class="sc">+</span> <span class="fu">I</span>(activity<span class="sc">^</span><span class="dv">2</span>))</span>
-<span id="cb181-3"><a href="bivariate-linear-models.html#cb181-3" tabindex="-1"></a>predicted_stress_poly <span class="ot">&lt;-</span> <span class="fu">predict</span>(model_poly)</span>
-<span id="cb181-4"><a href="bivariate-linear-models.html#cb181-4" tabindex="-1"></a></span>
-<span id="cb181-5"><a href="bivariate-linear-models.html#cb181-5" tabindex="-1"></a><span class="co"># Plotting the quadratic model</span></span>
-<span id="cb181-6"><a href="bivariate-linear-models.html#cb181-6" tabindex="-1"></a><span class="fu">plot</span>(activity, stress, <span class="at">main =</span> <span class="st">&quot;Stress Levels vs. Physical Activity with Quadratic Fit&quot;</span>,</span>
-<span id="cb181-7"><a href="bivariate-linear-models.html#cb181-7" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;Physical Activity (Hours per Week)&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Stress Levels&quot;</span>, <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>)</span>
-<span id="cb181-8"><a href="bivariate-linear-models.html#cb181-8" tabindex="-1"></a><span class="fu">lines</span>(activity, predicted_stress_poly, <span class="at">col =</span> <span class="st">&quot;green&quot;</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code></pre></div>
-<p><img src="psych-stats-book_files/figure-html/unnamed-chunk-109-1.png" width="672" /></p>
-<p>In this plot, the green line represents the quadratic fit, which better captures the curvature in the data compared to the linear model.</p>
-<ol start="2" style="list-style-type: decimal">
-<li><strong>Re-check the Residuals</strong>:
-<ul>
-<li>After fitting a more appropriate model, it’s essential to check the residuals again to ensure that they are now randomly distributed and that the model is a better fit for the data.</li>
-</ul></li>
-</ol>
-<div class="sourceCode" id="cb182"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb182-1"><a href="bivariate-linear-models.html#cb182-1" tabindex="-1"></a><span class="co"># Plotting residuals of the quadratic model</span></span>
-<span id="cb182-2"><a href="bivariate-linear-models.html#cb182-2" tabindex="-1"></a>residuals_poly <span class="ot">&lt;-</span> <span class="fu">residuals</span>(model_poly)</span>
-<span id="cb182-3"><a href="bivariate-linear-models.html#cb182-3" tabindex="-1"></a><span class="fu">plot</span>(activity, residuals_poly, <span class="at">main =</span> <span class="st">&quot;Residuals of Quadratic Model&quot;</span>,</span>
-<span id="cb182-4"><a href="bivariate-linear-models.html#cb182-4" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;Physical Activity (Hours per Week)&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Residuals&quot;</span>, <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">col =</span> <span class="st">&quot;green&quot;</span>)</span>
-<span id="cb182-5"><a href="bivariate-linear-models.html#cb182-5" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code></pre></div>
-<p><img src="psych-stats-book_files/figure-html/unnamed-chunk-110-1.png" width="672" /></p>
-<p>In the residuals plot for the quadratic model, the residuals should now be more randomly scattered around zero, indicating a better fit.</p>
-<ol start="3" style="list-style-type: decimal">
-<li><strong>Consider Other Models</strong>:
-<ul>
-<li>If a polynomial model doesn’t resolve the issue, consider exploring other types of models, such as logarithmic or exponential models, depending on the nature of the data.</li>
-</ul></li>
-</ol>
-<p><strong>Summary</strong></p>
-<p>In this section, we’ve seen that residuals are a powerful diagnostic tool for understanding the fit of a linear model. When residuals show a clear pattern rather than being randomly distributed, it suggests that the model isn’t fully capturing the relationship between the variables. By identifying and addressing these patterns—such as by using a polynomial model—you can improve the accuracy and reliability of your predictions.</p>
-</div>
-</div>
-<div id="real-world-application-of-bivariate-linear-models" class="section level2 hasAnchor" number="8.5">
-<h2><span class="header-section-number">8.5</span> Real-World Application of Bivariate Linear Models<a href="bivariate-linear-models.html#real-world-application-of-bivariate-linear-models" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Bivariate linear models are widely used in psychological research to explore and understand relationships between variables. In this section, we’ll dive into practical examples of how these models are applied in psychology, walk through creating a bivariate linear model in R, and discuss the limitations and considerations of using these models.</p>
-<div id="practical-examples-in-psychological-research" class="section level3 hasAnchor" number="8.5.1">
-<h3><span class="header-section-number">8.5.1</span> Practical Examples in Psychological Research<a href="bivariate-linear-models.html#practical-examples-in-psychological-research" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Overview of Bivariate Linear Models in Psychological Research</strong></p>
-<p>Bivariate linear models are powerful tools that psychologists use to analyze the relationships between two variables. These models help researchers understand how one variable might predict or influence another, allowing for insights into behaviors, attitudes, and outcomes. The simplicity and interpretability of bivariate linear models make them especially useful in psychological studies.</p>
-<p><strong>Examples of Studies Using Bivariate Linear Models</strong></p>
-<ol style="list-style-type: decimal">
-<li><strong>Self-Esteem and Academic Performance</strong>:
-<ul>
-<li>A researcher might hypothesize that higher self-esteem is associated with better academic performance. By collecting data on students’ self-esteem scores and their GPA, a bivariate linear model can be used to explore whether there is a significant positive relationship between these two variables.</li>
-<li>The model could help determine if students with higher self-esteem tend to have higher GPAs, potentially informing interventions to improve academic outcomes by boosting self-esteem.</li>
-</ul></li>
-<li><strong>Anxiety Levels and Sleep Quality</strong>:
-<ul>
-<li>Another common research question might involve the relationship between anxiety levels and sleep quality. A psychologist might gather data on participants’ anxiety scores and the number of hours they sleep each night.</li>
-<li>Using a bivariate linear model, the researcher could test whether higher anxiety levels predict poorer sleep quality (e.g., fewer hours of sleep), which could have important implications for treatment strategies aimed at reducing anxiety to improve sleep.</li>
-</ul></li>
-<li><strong>Exercise and Depression</strong>:
-<ul>
-<li>In a study examining the effects of exercise on mental health, researchers might look at the relationship between the number of hours spent exercising each week and depression scores. A bivariate linear model could reveal whether increased physical activity is associated with lower levels of depression.</li>
-</ul></li>
-</ol>
-<p>These examples illustrate how bivariate linear models are used in psychological research to explore important relationships between variables. By quantifying these relationships, researchers can make data-driven decisions and develop effective interventions.</p>
-</div>
-<div id="building-your-own-bivariate-linear-model-in-r" class="section level3 hasAnchor" number="8.5.2">
-<h3><span class="header-section-number">8.5.2</span> Building Your Own Bivariate Linear Model in R<a href="bivariate-linear-models.html#building-your-own-bivariate-linear-model-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Step-by-Step Guide to Creating a Bivariate Linear Model in R</strong></p>
-<p>Now that we’ve explored some practical examples, let’s walk through the process of creating a bivariate linear model in R using a real dataset. We’ll use a psychological dataset to explore a simple relationship between two variables.</p>
-<p><strong>Example: Exploring the Relationship Between Stress and Sleep</strong></p>
-<p>Let’s say we’re interested in examining whether higher levels of stress are associated with poorer sleep quality. We have a dataset that includes participants’ stress scores and the number of hours they sleep each night.</p>
-<p>Here’s how to build a bivariate linear model to analyze this relationship:</p>
-<ol style="list-style-type: decimal">
-<li><strong>Load the Data</strong>:
-<ul>
-<li>First, load your dataset into R. For this example, let’s simulate some data.</li>
-</ul></li>
-</ol>
-<div class="sourceCode" id="cb183"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb183-1"><a href="bivariate-linear-models.html#cb183-1" tabindex="-1"></a><span class="co"># Simulating a psychological dataset</span></span>
-<span id="cb183-2"><a href="bivariate-linear-models.html#cb183-2" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
-<span id="cb183-3"><a href="bivariate-linear-models.html#cb183-3" tabindex="-1"></a>stress <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">50</span>, <span class="at">sd =</span> <span class="dv">10</span>)  <span class="co"># Stress scores (out of 100)</span></span>
-<span id="cb183-4"><a href="bivariate-linear-models.html#cb183-4" tabindex="-1"></a>sleep_hours <span class="ot">&lt;-</span> <span class="dv">8</span> <span class="sc">-</span> <span class="fl">0.05</span> <span class="sc">*</span> stress <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span>)  <span class="co"># Sleep hours</span></span>
-<span id="cb183-5"><a href="bivariate-linear-models.html#cb183-5" tabindex="-1"></a></span>
-<span id="cb183-6"><a href="bivariate-linear-models.html#cb183-6" tabindex="-1"></a><span class="co"># Combine into a data frame</span></span>
-<span id="cb183-7"><a href="bivariate-linear-models.html#cb183-7" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(stress, sleep_hours)</span></code></pre></div>
-<ol start="2" style="list-style-type: decimal">
-<li><strong>Visualize the Data</strong>:
-<ul>
-<li>Before fitting the model, it’s helpful to visualize the data to get a sense of the relationship.</li>
-</ul></li>
-</ol>
-<div class="sourceCode" id="cb184"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb184-1"><a href="bivariate-linear-models.html#cb184-1" tabindex="-1"></a><span class="co"># Plotting the data</span></span>
-<span id="cb184-2"><a href="bivariate-linear-models.html#cb184-2" tabindex="-1"></a><span class="fu">plot</span>(data<span class="sc">$</span>stress, data<span class="sc">$</span>sleep_hours, <span class="at">main =</span> <span class="st">&quot;Stress vs. Sleep Hours&quot;</span>,</span>
-<span id="cb184-3"><a href="bivariate-linear-models.html#cb184-3" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;Stress Scores&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Sleep Hours&quot;</span>, <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>)</span></code></pre></div>
-<p><img src="psych-stats-book_files/figure-html/unnamed-chunk-112-1.png" width="672" /></p>
-<ol start="3" style="list-style-type: decimal">
-<li><strong>Create the Linear Model</strong>:
-<ul>
-<li>Use the <code>lm()</code> function in R to create a linear model that predicts sleep hours based on stress scores.</li>
-</ul></li>
-</ol>
-<div class="sourceCode" id="cb185"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb185-1"><a href="bivariate-linear-models.html#cb185-1" tabindex="-1"></a><span class="co"># Creating the linear model</span></span>
-<span id="cb185-2"><a href="bivariate-linear-models.html#cb185-2" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(sleep_hours <span class="sc">~</span> stress, <span class="at">data =</span> data)</span></code></pre></div>
-<ol start="4" style="list-style-type: decimal">
-<li><strong>Interpret the Model Output</strong>:
-<ul>
-<li>After fitting the model, use the <code>summary()</code> function to view the model’s output and interpret the coefficients, p-values, and residuals.</li>
-</ul></li>
-</ol>
-<div class="sourceCode" id="cb186"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb186-1"><a href="bivariate-linear-models.html#cb186-1" tabindex="-1"></a><span class="co"># Viewing the model summary</span></span>
-<span id="cb186-2"><a href="bivariate-linear-models.html#cb186-2" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code></pre></div>
+<div id="step-by-step-guide-to-conducting-power-analysis-in-r" class="section level3 hasAnchor" number="10.4.2">
+<h3><span class="header-section-number">10.4.2</span> Step-by-Step Guide to Conducting Power Analysis in R<a href="statistical-power.html#step-by-step-guide-to-conducting-power-analysis-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Using the <code>pwr</code> Package in R to Calculate Power for Different Study Designs</strong></p>
+<p>The <code>pwr</code> package in R is a versatile tool for conducting power analysis across various study designs. Below, we’ll walk through examples of power analysis for different study designs, including t-tests and ANOVA.</p>
+<p><strong>Example 1: Power Analysis for a Two-Sample t-Test</strong></p>
+<p>Suppose you are planning a between-subjects experiment to examine the impact of mindfulness training on stress levels. You want to compare stress levels between two groups: one that receives mindfulness training and a control group. You expect a moderate effect size (Cohen’s d = 0.5) and want to achieve 80% power with a significance level of 0.05.</p>
+<p>Here’s how you would conduct the power analysis in R:</p>
+<div class="sourceCode" id="cb213"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb213-1"><a href="statistical-power.html#cb213-1" tabindex="-1"></a><span class="co"># Load the pwr package</span></span>
+<span id="cb213-2"><a href="statistical-power.html#cb213-2" tabindex="-1"></a><span class="fu">library</span>(pwr)</span>
+<span id="cb213-3"><a href="statistical-power.html#cb213-3" tabindex="-1"></a></span>
+<span id="cb213-4"><a href="statistical-power.html#cb213-4" tabindex="-1"></a><span class="co"># Perform power analysis for a two-sample t-test</span></span>
+<span id="cb213-5"><a href="statistical-power.html#cb213-5" tabindex="-1"></a>pwr_t_test <span class="ot">&lt;-</span> <span class="fu">pwr.t.test</span>(<span class="at">d =</span> <span class="fl">0.5</span>, <span class="at">power =</span> <span class="fl">0.80</span>, <span class="at">sig.level =</span> <span class="fl">0.05</span>, <span class="at">type =</span> <span class="st">&quot;two.sample&quot;</span>)</span>
+<span id="cb213-6"><a href="statistical-power.html#cb213-6" tabindex="-1"></a></span>
+<span id="cb213-7"><a href="statistical-power.html#cb213-7" tabindex="-1"></a><span class="co"># Output the result</span></span>
+<span id="cb213-8"><a href="statistical-power.html#cb213-8" tabindex="-1"></a>pwr_t_test</span></code></pre></div>
 <pre><code>## 
-## Call:
-## lm(formula = sleep_hours ~ stress, data = data)
+##      Two-sample t test power calculation 
 ## 
-## Residuals:
-##     Min      1Q  Median      3Q     Max 
-## -1.9073 -0.6835 -0.0875  0.5806  3.2904 
+##               n = 63.76561
+##               d = 0.5
+##       sig.level = 0.05
+##           power = 0.8
+##     alternative = two.sided
 ## 
-## Coefficients:
-##             Estimate Std. Error t value Pr(&gt;|t|)    
-## (Intercept)  8.15956    0.55265  14.764  &lt; 2e-16 ***
-## stress      -0.05525    0.01069  -5.169 1.24e-06 ***
-## ---
-## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## NOTE: n is number in *each* group</code></pre>
+<p><strong>Interpretation</strong>:
+- The output will show the required sample size per group. For example, if the result indicates a sample size of 64 per group, you would need a total of 128 participants (64 in each group) to achieve 80% power with a moderate effect size and a significance level of 0.05.
+- This analysis helps ensure that your study is designed with enough participants to detect the expected effect, reducing the likelihood of a Type II error.</p>
+<p><strong>Example 2: Power Analysis for a One-Way ANOVA</strong></p>
+<p>Now, suppose you are planning a study with three different groups, each receiving a different type of intervention for reducing anxiety. You want to use a one-way ANOVA to compare the mean anxiety levels across the three groups. You expect a medium effect size (Cohen’s f = 0.25) and want to achieve 80% power with a significance level of 0.05.</p>
+<p>Here’s how to conduct the power analysis for this ANOVA in R:</p>
+<div class="sourceCode" id="cb215"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb215-1"><a href="statistical-power.html#cb215-1" tabindex="-1"></a><span class="co"># Perform power analysis for a one-way ANOVA</span></span>
+<span id="cb215-2"><a href="statistical-power.html#cb215-2" tabindex="-1"></a>pwr_anova <span class="ot">&lt;-</span> <span class="fu">pwr.anova.test</span>(<span class="at">k =</span> <span class="dv">3</span>, <span class="at">f =</span> <span class="fl">0.25</span>, <span class="at">power =</span> <span class="fl">0.80</span>, <span class="at">sig.level =</span> <span class="fl">0.05</span>)</span>
+<span id="cb215-3"><a href="statistical-power.html#cb215-3" tabindex="-1"></a></span>
+<span id="cb215-4"><a href="statistical-power.html#cb215-4" tabindex="-1"></a><span class="co"># Output the result</span></span>
+<span id="cb215-5"><a href="statistical-power.html#cb215-5" tabindex="-1"></a>pwr_anova</span></code></pre></div>
+<pre><code>## 
+##      Balanced one-way analysis of variance power calculation 
 ## 
-## Residual standard error: 0.9707 on 98 degrees of freedom
-## Multiple R-squared:  0.2142, Adjusted R-squared:  0.2062 
-## F-statistic: 26.72 on 1 and 98 DF,  p-value: 1.242e-06</code></pre>
-<p><strong>Understanding the Output</strong>:</p>
+##               k = 3
+##               n = 52.3966
+##               f = 0.25
+##       sig.level = 0.05
+##           power = 0.8
+## 
+## NOTE: n is number in each group</code></pre>
+<p><strong>Interpretation</strong>:
+- The output will indicate the total sample size needed across all groups. For instance, if the result suggests a total sample size of 159, you would divide this number by 3 to find that each group requires approximately 53 participants.
+- This power analysis ensures that your ANOVA is adequately powered to detect differences between the groups if they exist.</p>
+<p><strong>Example 3: Power Analysis for a Correlation Study</strong></p>
+<p>Suppose you are investigating the correlation between self-esteem and academic performance among college students. You expect a moderate correlation (Pearson’s r = 0.30) and want to achieve 80% power with a significance level of 0.05.</p>
+<p>Here’s how to perform the power analysis for the correlation study:</p>
+<div class="sourceCode" id="cb217"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb217-1"><a href="statistical-power.html#cb217-1" tabindex="-1"></a><span class="co"># Perform power analysis for a correlation study</span></span>
+<span id="cb217-2"><a href="statistical-power.html#cb217-2" tabindex="-1"></a>pwr_corr <span class="ot">&lt;-</span> <span class="fu">pwr.r.test</span>(<span class="at">r =</span> <span class="fl">0.30</span>, <span class="at">power =</span> <span class="fl">0.80</span>, <span class="at">sig.level =</span> <span class="fl">0.05</span>)</span>
+<span id="cb217-3"><a href="statistical-power.html#cb217-3" tabindex="-1"></a></span>
+<span id="cb217-4"><a href="statistical-power.html#cb217-4" tabindex="-1"></a><span class="co"># Output the result</span></span>
+<span id="cb217-5"><a href="statistical-power.html#cb217-5" tabindex="-1"></a>pwr_corr</span></code></pre></div>
+<pre><code>## 
+##      approximate correlation power calculation (arctangh transformation) 
+## 
+##               n = 84.07364
+##               r = 0.3
+##       sig.level = 0.05
+##           power = 0.8
+##     alternative = two.sided</code></pre>
+<p><strong>Interpretation</strong>:
+- The output will provide the required sample size. For example, if the result suggests a sample size of 85, you would need 85 participants to achieve 80% power for detecting a correlation of 0.30 with a significance level of 0.05.
+- This power analysis helps ensure that your study has enough participants to reliably detect the expected correlation between self-esteem and academic performance.</p>
+<p><strong>Interpreting the Output of a Power Analysis and Making Decisions Based on the Results</strong></p>
+<p>After conducting a power analysis, it’s important to interpret the output carefully and use it to guide your study design:</p>
 <ul>
-<li><strong>Coefficients</strong>:
-<ul>
-<li><strong>Intercept (b0)</strong>: This is the predicted value of sleep hours when the stress score is zero. It represents the baseline level of sleep when there is no stress.</li>
-<li><strong>Slope (b1)</strong>: This coefficient tells us how much sleep hours change for each one-unit increase in stress. A negative slope would suggest that as stress increases, sleep decreases.</li>
-</ul></li>
-<li><strong>P-Values</strong>:
-<ul>
-<li>The p-value associated with the slope helps you determine whether the relationship between stress and sleep is statistically significant. If the p-value is less than 0.05, you can conclude that there is a significant relationship between the two variables.</li>
-</ul></li>
-<li><strong>Residuals</strong>:
-<ul>
-<li>The residuals are the differences between the observed sleep hours and the sleep hours predicted by the model. You can plot the residuals to check for patterns, as discussed in the previous section.</li>
-</ul></li>
+<li><p><strong>Sample Size</strong>: The primary output of a power analysis is the required sample size. If the calculated sample size is feasible given your resources, you can proceed with confidence that your study is appropriately powered. If the required sample size is too large to be practical, you may need to reconsider the effect size, significance level, or study design.</p></li>
+<li><p><strong>Feasibility</strong>: Consider whether the sample size required for adequate power is achievable. If recruiting a large number of participants is not feasible, you may need to adjust your study design (e.g., simplifying the design, focusing on a larger expected effect size) or accept a lower power level, understanding the associated risks.</p></li>
+<li><p><strong>Ethical Considerations</strong>: Ensure that the sample size is neither too small to detect meaningful effects nor so large that it imposes unnecessary burdens on participants. Ethical research practices require a balance between scientific rigor and respect for participant welfare.</p></li>
 </ul>
-<ol start="5" style="list-style-type: decimal">
-<li><strong>Visualize the Fitted Model</strong>:
-<ul>
-<li>To better understand the model, you can add the regression line to the scatter plot.</li>
-</ul></li>
-</ol>
-<div class="sourceCode" id="cb188"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb188-1"><a href="bivariate-linear-models.html#cb188-1" tabindex="-1"></a><span class="co"># Adding the regression line to the plot</span></span>
-<span id="cb188-2"><a href="bivariate-linear-models.html#cb188-2" tabindex="-1"></a><span class="fu">plot</span>(data<span class="sc">$</span>stress, data<span class="sc">$</span>sleep_hours, <span class="at">main =</span> <span class="st">&quot;Stress vs. Sleep Hours with Regression Line&quot;</span>,</span>
-<span id="cb188-3"><a href="bivariate-linear-models.html#cb188-3" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;Stress Scores&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Sleep Hours&quot;</span>, <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>)</span>
-<span id="cb188-4"><a href="bivariate-linear-models.html#cb188-4" tabindex="-1"></a><span class="fu">abline</span>(model, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code></pre></div>
-<p><img src="psych-stats-book_files/figure-html/unnamed-chunk-115-1.png" width="672" /></p>
-<p>In this plot, the red line represents the linear relationship between stress and sleep as modeled by the regression equation.</p>
-<p><strong>Summary</strong>:</p>
-<p>By following these steps, you can create and interpret a bivariate linear model in R, allowing you to explore relationships between variables in your own psychological research.</p>
+<p>By conducting power analysis before data collection, researchers can design studies that are both scientifically rigorous and ethically responsible, maximizing the chances of detecting true effects and contributing valuable knowledge to the field of psychology.</p>
 </div>
-<div id="limitations-and-considerations" class="section level3 hasAnchor" number="8.5.3">
-<h3><span class="header-section-number">8.5.3</span> Limitations and Considerations<a href="bivariate-linear-models.html#limitations-and-considerations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Understanding the Limitations of Bivariate Linear Models</strong></p>
-<p>While bivariate linear models are powerful tools, they come with certain limitations that you should be aware of:</p>
+</div>
+<div id="practical-considerations-and-challenges" class="section level2 hasAnchor" number="10.5">
+<h2><span class="header-section-number">10.5</span> Practical Considerations and Challenges<a href="statistical-power.html#practical-considerations-and-challenges" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>While calculating statistical power and determining the appropriate sample size are essential steps in the research process, several practical challenges can arise when trying to achieve adequate power in psychological studies. Understanding these challenges and developing strategies to address them is crucial for conducting rigorous and ethical research.</p>
+<div id="common-challenges-in-achieving-adequate-power" class="section level3 hasAnchor" number="10.5.1">
+<h3><span class="header-section-number">10.5.1</span> Common Challenges in Achieving Adequate Power<a href="statistical-power.html#common-challenges-in-achieving-adequate-power" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Limited Resources</strong></p>
+<p>One of the most common challenges researchers face is limited resources, including funding, time, and access to participants. Conducting a study with a sufficiently large sample size often requires significant financial and logistical support, which may not always be available, especially for early-career researchers or those working in resource-limited settings.</p>
+<ul>
+<li><strong>Funding Constraints</strong>: Recruiting a large sample can be expensive, especially if the study requires incentives for participants, specialized equipment, or extensive data collection efforts.</li>
+<li><strong>Time Constraints</strong>: Larger studies typically require more time for recruitment, data collection, and analysis. This can be a significant barrier when working under tight deadlines, such as for grant-funded projects or academic requirements.</li>
+<li><strong>Participant Availability</strong>: In some fields of psychological research, finding enough participants who meet the study criteria can be challenging. This is particularly true for studies involving specific populations, such as individuals with rare psychological conditions or those requiring longitudinal follow-up.</li>
+</ul>
+<p><strong>Recruitment Difficulties</strong></p>
+<p>Recruitment difficulties are another major challenge in achieving adequate power. Even when researchers have planned for a large sample size, difficulties in recruiting participants can lead to an underpowered study.</p>
+<ul>
+<li><strong>Population-Specific Challenges</strong>: Some populations are harder to recruit than others. For example, studies involving vulnerable populations, such as individuals with severe mental health conditions, may face ethical and practical challenges in recruitment.</li>
+<li><strong>Geographical and Demographic Barriers</strong>: Geographic location and demographic factors can also impact recruitment. Studies conducted in rural areas or targeting specific demographic groups may struggle to find a sufficient number of participants.</li>
+<li><strong>Participant Dropout</strong>: In longitudinal studies, participant dropout over time can reduce the sample size, leading to an underpowered study. This is a particular concern in studies with multiple follow-up assessments or those requiring ongoing participant commitment.</li>
+</ul>
+<p><strong>Practical Constraints</strong></p>
+<p>Beyond funding and recruitment, there are several practical constraints that can affect the ability to achieve adequate power in a study.</p>
+<ul>
+<li><strong>Study Design</strong>: Complex study designs, such as those involving multiple groups or repeated measures, may require larger sample sizes to maintain adequate power. Researchers must balance the need for a robust design with the practicalities of data collection and analysis.</li>
+<li><strong>Measurement Sensitivity</strong>: The sensitivity of the measures used in the study can impact power. If the measures are not sensitive enough to detect the expected effects, even a large sample size may not be sufficient to achieve adequate power.</li>
+</ul>
+<p><strong>Strategies for Addressing These Challenges in Psychological Research</strong></p>
+<p>To overcome these challenges, researchers can adopt several strategies:</p>
+<ul>
+<li><strong>Pilot Studies</strong>: Conducting a pilot study can help researchers refine their study design, identify potential recruitment challenges, and estimate effect sizes more accurately. This can lead to more precise power calculations and better planning for the full-scale study.</li>
+<li><strong>Collaboration and Networking</strong>: Collaborating with other researchers or institutions can help address resource limitations. By pooling resources, sharing participant pools, or conducting multi-site studies, researchers can achieve the necessary sample sizes more effectively.</li>
+<li><strong>Adaptive Designs</strong>: Adaptive study designs allow researchers to modify aspects of the study, such as the sample size, based on interim data analysis. This approach can help ensure that the study remains adequately powered as it progresses.</li>
+<li><strong>Recruitment Strategies</strong>: Developing effective recruitment strategies, such as targeted advertising, community engagement, or partnerships with organizations, can help overcome recruitment challenges. Offering appropriate incentives and ensuring clear communication about the study’s goals and benefits can also enhance recruitment efforts.</li>
+<li><strong>Retention Efforts</strong>: In longitudinal studies, implementing strategies to minimize participant dropout is crucial. Regular follow-ups, providing support or incentives, and maintaining communication with participants can help retain them throughout the study.</li>
+</ul>
+</div>
+<div id="ethical-considerations-2" class="section level3 hasAnchor" number="10.5.2">
+<h3><span class="header-section-number">10.5.2</span> Ethical Considerations<a href="statistical-power.html#ethical-considerations-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>The Ethical Implications of Conducting Underpowered Studies in Psychology</strong></p>
+<p>Conducting underpowered studies in psychology has significant ethical implications. When a study is underpowered, it has a lower probability of detecting a true effect, leading to inconclusive or misleading results. This not only wastes resources but also has broader implications for the field and society.</p>
+<ul>
+<li><strong>Wasted Resources</strong>: Underpowered studies consume valuable resources, including time, funding, and participant efforts, without contributing meaningful findings to the field. This is particularly problematic when the research involves vulnerable populations, as their participation in the study should yield valuable insights.</li>
+<li><strong>Misinformation</strong>: If an underpowered study fails to detect a true effect, it may lead to the erroneous conclusion that there is no effect. This misinformation can mislead other researchers, policymakers, and practitioners, potentially delaying progress in understanding and addressing important psychological phenomena.</li>
+<li><strong>Reproducibility Crisis</strong>: The reproducibility crisis in psychology has been exacerbated by underpowered studies. When studies are underpowered, even statistically significant findings are less likely to be replicated in subsequent research, undermining the credibility of psychological science.</li>
+</ul>
+<p><strong>The Responsibility of Researchers to Ensure Adequately Powered Studies</strong></p>
+<p>Given these ethical concerns, researchers have a responsibility to ensure that their studies are adequately powered to contribute meaningful and reliable findings to the field of psychology. This responsibility extends to all stages of the research process, from planning and design to data collection and analysis.</p>
+<ul>
+<li><strong>Conducting Power Analysis</strong>: Researchers should conduct power analyses during the planning phase to determine the appropriate sample size needed to achieve adequate power. This step is critical for ensuring that the study is capable of detecting the effects it aims to investigate.</li>
+<li><strong>Transparent Reporting</strong>: Researchers should transparently report the results of their power analyses, including the assumptions made (e.g., expected effect size, significance level) and the resulting sample size. This transparency allows others to assess the study’s power and contributes to the overall credibility of the research.</li>
+<li><strong>Avoiding P-Hacking</strong>: To maintain ethical standards, researchers should avoid practices such as p-hacking, where data is manipulated or selectively reported to achieve statistically significant results. Instead, researchers should prioritize methodological rigor and the ethical responsibility to produce reliable findings.</li>
+<li><strong>Considering Alternative Approaches</strong>: If achieving adequate power is not feasible due to resource constraints or other challenges, researchers should consider alternative approaches, such as conducting a meta-analysis of existing studies or focusing on larger effect sizes that require smaller sample sizes. These approaches can help ensure that the research remains meaningful and ethically sound.</li>
+</ul>
+<p>In summary, while achieving adequate power in psychological studies can be challenging, it is essential for producing reliable and ethical research. Researchers must be aware of the practical challenges and ethical implications of underpowered studies and take proactive steps to address these issues, ensuring that their work contributes valuable knowledge to the field and benefits society.</p>
+</div>
+</div>
+<div id="real-world-applications-of-power-analysis-in-psychology" class="section level2 hasAnchor" number="10.6">
+<h2><span class="header-section-number">10.6</span> Real-World Applications of Power Analysis in Psychology<a href="statistical-power.html#real-world-applications-of-power-analysis-in-psychology" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Statistical power analysis is more than just a theoretical concept—it has real-world implications that can significantly impact the outcomes of psychological research. By examining hypothetical case studies and best practices, we can better understand the crucial role that power analysis plays in designing robust studies and interpreting results.</p>
+<div id="hypothetical-case-studies" class="section level3 hasAnchor" number="10.6.1">
+<h3><span class="header-section-number">10.6.1</span> Hypothetical Case Studies<a href="statistical-power.html#hypothetical-case-studies" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Case Study 1: The Impact of Mindfulness on Anxiety</strong></p>
+<p>Imagine a researcher who is interested in studying the impact of mindfulness meditation on reducing anxiety levels among college students. The researcher believes that mindfulness could be an effective tool for helping students manage stress and anxiety, particularly during exam periods.</p>
+<p><strong>Initial Study Design</strong>:
+- The researcher plans a study with two groups: one that receives mindfulness training and a control group that does not.
+- Without conducting a power analysis, the researcher recruits 20 students for each group, believing this sample size will be sufficient to detect a difference in anxiety levels.</p>
+<p><strong>Study Outcome</strong>:
+- After completing the study, the researcher finds no statistically significant difference in anxiety levels between the two groups. The p-value is 0.07, just above the common significance threshold of 0.05.
+- Disappointed, the researcher concludes that mindfulness training does not have a significant impact on reducing anxiety.</p>
+<p><strong>Power Analysis Post-Hoc</strong>:
+- After discussing the results with colleagues, the researcher realizes that the study might have been underpowered. They perform a post-hoc power analysis and discover that, given the small sample size and the expected effect size (Cohen’s d = 0.3), the study only had about 40% power to detect a significant effect.
+- The researcher learns that to achieve 80% power, they would have needed approximately 60 students per group.</p>
+<p><strong>Lessons Learned</strong>:
+- <strong>Importance of Adequate Sample Size</strong>: This case illustrates the risk of drawing incorrect conclusions from an underpowered study. The lack of significant results may have been due to the small sample size, rather than the ineffectiveness of mindfulness.
+- <strong>Need for Power Analysis in Planning</strong>: Conducting a power analysis before data collection would have informed the researcher of the need for a larger sample size, potentially leading to more conclusive results. The failure to detect a significant effect may have been avoided if the study had been adequately powered.</p>
+<p><strong>Case Study 2: Evaluating a New Cognitive Behavioral Therapy (CBT) for Depression</strong></p>
+<p>A clinical psychologist is testing a new form of CBT designed to be more effective in treating depression in older adults. The psychologist is eager to see if this new approach will outperform the standard treatment.</p>
+<p><strong>Initial Study Design</strong>:
+- The psychologist designs a study with two treatment groups: one receiving the new CBT and the other receiving the standard treatment. The expected effect size is small (Cohen’s d = 0.2), as improvements in depression are often subtle.
+- The psychologist recruits 50 participants per group without performing a power analysis, assuming that this number will be adequate based on previous studies.</p>
+<p><strong>Study Outcome</strong>:
+- The results show a small, non-significant difference between the groups, with the new CBT group showing slightly greater improvements in depression scores. However, the p-value is 0.10, leading the psychologist to conclude that the new CBT is not significantly better than the standard treatment.</p>
+<p><strong>Power Analysis Post-Hoc</strong>:
+- After reviewing the study, the psychologist performs a post-hoc power analysis and finds that the study had only 50% power to detect the small effect size. To achieve 80% power, they would have needed approximately 200 participants per group.
+- The psychologist realizes that the study was likely underpowered, and the non-significant result does not necessarily mean that the new CBT is ineffective.</p>
+<p><strong>Lessons Learned</strong>:
+- <strong>Impact of Small Effect Sizes</strong>: In psychological research, where effect sizes are often small, adequate power is critical for detecting meaningful differences. Underpowered studies with small effect sizes are particularly prone to Type II errors (false negatives).
+- <strong>Revisiting Study Design</strong>: The psychologist learns the importance of revisiting the study design and conducting a power analysis before recruiting participants. This ensures that the study is designed with sufficient power to detect even small effects.</p>
+<p><strong>Case Study 3: The Role of Social Support in Stress Reduction</strong></p>
+<p>A researcher is exploring the relationship between social support and stress reduction in high-stress professions, such as emergency responders. The researcher believes that social support plays a crucial role in mitigating stress, but the exact effect size is unknown.</p>
+<p><strong>Initial Study Design</strong>:
+- The researcher plans a correlational study to examine the relationship between levels of social support (measured through a questionnaire) and stress levels (measured through cortisol levels).
+- The researcher recruits 100 participants without performing a power analysis, hoping that this sample size will be adequate to detect the correlation.</p>
+<p><strong>Study Outcome</strong>:
+- The study finds a weak, non-significant correlation between social support and stress reduction (r = 0.15, p = 0.12).
+- The researcher concludes that social support may not be as important in stress reduction as previously thought.</p>
+<p><strong>Power Analysis Post-Hoc</strong>:
+- After consulting with a statistician, the researcher conducts a post-hoc power analysis and discovers that the study had only 30% power to detect a correlation of 0.15. To achieve 80% power, a sample size of approximately 350 participants would have been needed.
+- The researcher realizes that the study was underpowered to detect the small correlation and that the non-significant result should be interpreted with caution.</p>
+<p><strong>Lessons Learned</strong>:
+- <strong>Critical Role of Power Analysis in Correlational Studies</strong>: In studies examining correlations, especially when the expected correlation is small, power analysis is crucial for determining an adequate sample size.
+- <strong>Reassessing Study Findings</strong>: The researcher learns to reassess the findings in light of the power analysis, understanding that the lack of significance may have been due to insufficient power rather than a true lack of relationship.</p>
+</div>
+<div id="best-practices-for-ensuring-adequate-power" class="section level3 hasAnchor" number="10.6.2">
+<h3><span class="header-section-number">10.6.2</span> Best Practices for Ensuring Adequate Power<a href="statistical-power.html#best-practices-for-ensuring-adequate-power" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Tips for Researchers on Planning Studies with Sufficient Power</strong></p>
+<p>To avoid the pitfalls illustrated by the hypothetical case studies, researchers should follow these best practices to ensure that their studies are adequately powered:</p>
 <ol style="list-style-type: decimal">
-<li><strong>Linearity Assumption</strong>:
-<ul>
-<li>Bivariate linear models assume that the relationship between the two variables is linear. However, not all relationships are linear. If the relationship is nonlinear (e.g., quadratic or exponential), the linear model may not fit the data well, leading to inaccurate predictions and misleading conclusions.</li>
-</ul></li>
-<li><strong>Homoscedasticity</strong>:
-<ul>
-<li>Homoscedasticity refers to the assumption that the residuals (errors) have constant variance across all levels of the predictor variable. If the residuals show a pattern where their variance increases or decreases with the predictor variable, this indicates heteroscedasticity, which can violate the assumptions of the linear model and affect the accuracy of the results.</li>
-</ul></li>
-<li><strong>Outliers</strong>:
-<ul>
-<li>Outliers are data points that fall far outside the range of the rest of the data. They can have a large influence on the slope and intercept of the linear model, potentially distorting the results. It’s important to check for and address outliers before interpreting the model.</li>
-</ul></li>
-<li><strong>Causality</strong>:
-<ul>
-<li>A significant relationship between two variables in a bivariate linear model does not imply causality. Just because two variables are related does not mean that one causes the other. There could be other variables, not included in the model, that influence the relationship.</li>
-</ul></li>
+<li><p><strong>Conduct a Power Analysis Early</strong>: Power analysis should be an integral part of the study design process. By calculating the required sample size before data collection, researchers can ensure that their study is capable of detecting the effects they are investigating.</p></li>
+<li><p><strong>Use Realistic Effect Sizes</strong>: When conducting a power analysis, use realistic estimates of the expected effect size based on prior research or pilot studies. Overestimating the effect size can lead to an underpowered study if the actual effect is smaller than anticipated.</p></li>
+<li><p><strong>Plan for Recruitment Challenges</strong>: Consider potential recruitment challenges and plan accordingly. If recruiting a large sample is difficult, explore alternative designs that require smaller samples, such as within-subjects designs, or focus on larger effect sizes.</p></li>
+<li><p><strong>Be Transparent About Power</strong>: Researchers should transparently report the results of their power analyses, including the assumptions made and the resulting sample size. This transparency helps others assess the robustness of the study and contributes to the overall credibility of the research.</p></li>
+<li><p><strong>Adjust for Multiple Comparisons</strong>: If your study involves multiple statistical tests, adjust your significance level to account for the increased risk of Type I errors. This can be done using techniques like the Bonferroni correction, but remember that this may require a larger sample size to maintain adequate power.</p></li>
+<li><p><strong>Consider Pilot Studies</strong>: Conducting a pilot study can help refine your estimates of effect size and other parameters, leading to more accurate power calculations. Pilot studies can also help identify potential logistical challenges that may impact recruitment or data collection.</p></li>
 </ol>
-<p><strong>When Is a Linear Model Appropriate?</strong></p>
-<p>A linear model is appropriate when:<br />
-- The relationship between the variables is approximately linear (as assessed by visual inspection and residual plots).<br />
-- The residuals are homoscedastic and normally distributed.<br />
-- There are no significant outliers that unduly influence the model.</p>
-<p><strong>Advanced Models for More Complex Relationships</strong></p>
-<p>When a simple linear model is not appropriate, you might consider more advanced models, such as:<br />
-- <strong>Polynomial Regression</strong>: Useful for modeling relationships that have a curvature, where the effect of the predictor on the outcome variable changes at different levels of the predictor.<br />
-- <strong>Multiple Regression</strong>: Involves more than one predictor variable and allows for the examination of how multiple factors jointly influence the outcome.<br />
-- <strong>Logistic Regression</strong>: Used when the outcome variable is categorical (e.g., predicting whether a person will experience anxiety based on multiple factors).</p>
-<p><strong>Summary</strong></p>
-<p>While bivariate linear models are a foundational tool in psychological research, understanding their limitations and knowing when to apply more advanced models is crucial for drawing accurate and meaningful conclusions. By considering these factors, researchers can select the most appropriate model for their data and research questions.</p>
+<p><strong>Importance of Transparency in Reporting Power Analyses in Psychological Research Publications</strong></p>
+<p>Transparency in reporting power analyses is essential for advancing psychological science. When researchers clearly document their power analyses, including the assumptions and decisions made during the study design process, they contribute to the field in several important ways:</p>
+<ul>
+<li><p><strong>Reproducibility</strong>: Transparent reporting allows other researchers to replicate the study with a clear understanding of the original design’s power considerations. This contributes to the reproducibility of psychological research, which is critical for building a reliable evidence base.</p></li>
+<li><p><strong>Critical Appraisal</strong>: Clear documentation of power analyses enables peer reviewers and readers to critically appraise the study’s findings. Knowing that a study was adequately powered increases confidence in the results, while acknowledging potential limitations in power allows for a more nuanced interpretation of non-significant findings.</p></li>
+<li><p><strong>Ethical Integrity</strong>: Transparent reporting of power analyses demonstrates ethical integrity, showing that the researcher has taken the necessary steps to design a study that is both scientifically rigorous and respectful of participants’ time and effort.</p></li>
+</ul>
+<p>In summary, power analysis is a vital component of research planning that ensures studies are designed with sufficient sensitivity to detect true effects. By learning from hypothetical case studies and following best practices, researchers can design robust, ethically sound studies that contribute meaningful knowledge to the field of psychology.</p>
 </div>
 </div>
-<div id="chapter-summary-7" class="section level2 hasAnchor" number="8.6">
-<h2><span class="header-section-number">8.6</span> Chapter Summary<a href="bivariate-linear-models.html#chapter-summary-7" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In this chapter, we delved into the essential concepts and practical applications of bivariate linear models, a powerful tool for understanding relationships between two continuous variables. We began by introducing the idea of bivariate relationships, emphasizing how these models help psychologists and researchers quantify and interpret the connections between variables such as self-esteem and academic performance or anxiety levels and sleep quality.</p>
-<p>We explored the key components of a linear model: the intercept, slope, and correlation. The intercept (<code>b0</code>) provides the baseline value of the outcome variable when the predictor is zero, while the slope (<code>b1</code>) indicates how much the outcome changes with each one-unit increase in the predictor. The correlation coefficient further helps us understand the strength and direction of the relationship between the variables.</p>
-<p>Residuals, the differences between observed and predicted values, were highlighted as a critical tool for assessing the fit of a linear model. By examining residuals, we can determine whether our model is appropriate or if it might be missing important aspects of the data. We also discussed what to do when residuals show patterns, suggesting that a more complex model might be necessary.</p>
-<p>The chapter then provided a hands-on guide to building and interpreting bivariate linear models in R, using simulated data to explore a relationship between stress and sleep. This practical approach demonstrated how to create a model, interpret its output, and visualize the results, ensuring that you can apply these techniques to your own research.</p>
-<p>Finally, we addressed the limitations and considerations when using bivariate linear models, including the assumptions of linearity and homoscedasticity, the impact of outliers, and the distinction between correlation and causation. We also briefly touched on more advanced models that can handle more complex relationships, guiding you on when to use these alternatives.</p>
-<p>By mastering the concepts and techniques covered in this chapter, you are now equipped to use bivariate linear models to explore and understand relationships in your data, making informed decisions in your psychological research. Remember that while bivariate linear models are powerful, they are just one tool in your statistical toolkit, and knowing when and how to use them appropriately is key to conducting rigorous and meaningful research.</p>
+<div id="chapter-summary-9" class="section level2 hasAnchor" number="10.7">
+<h2><span class="header-section-number">10.7</span> Chapter Summary<a href="statistical-power.html#chapter-summary-9" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="recap-of-key-concepts" class="section level3 hasAnchor" number="10.7.1">
+<h3><span class="header-section-number">10.7.1</span> Recap of Key Concepts<a href="statistical-power.html#recap-of-key-concepts" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In this chapter, we delved into the essential concept of statistical power and its critical role in psychological research. Statistical power is the probability of correctly rejecting a false null hypothesis, which means detecting a true effect when it exists. Adequate power is vital for ensuring that research findings are reliable and meaningful.</p>
+<p>We explored the interplay between statistical power, sample size, effect size, and significance level (alpha). Understanding how these factors interact is crucial for designing studies that are both scientifically robust and ethically responsible. We also discussed the implications of Type I errors (false positives) and Type II errors (false negatives) in research. While a Type I error leads to incorrectly concluding that an effect exists when it does not, a Type II error results in missing a true effect.</p>
+<p>The chapter highlighted the importance of conducting power analyses before data collection to determine the appropriate sample size needed to achieve the desired power level. Through hypothetical case studies, we saw how underpowered studies can lead to inconclusive or misleading results, underscoring the need for careful planning and consideration of power in research design.</p>
+<p>Practical challenges, such as limited resources and recruitment difficulties, were discussed, along with strategies for addressing these challenges to achieve adequate power. Additionally, we emphasized the ethical implications of conducting underpowered studies and the responsibility of researchers to design studies that contribute meaningful findings to the field.</p>
 </div>
-<div id="practice-exercises-6" class="section level2 hasAnchor" number="8.7">
-<h2><span class="header-section-number">8.7</span> Practice Exercises<a href="bivariate-linear-models.html#practice-exercises-6" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>These practice exercises are designed to reinforce your understanding of bivariate linear models by applying the concepts learned in this chapter. Each exercise will guide you through creating, interpreting, and assessing linear models using real or simulated data.</p>
-<div id="exercise-1-create-a-simple-bivariate-linear-model" class="section level3 hasAnchor" number="8.7.1">
-<h3><span class="header-section-number">8.7.1</span> Exercise 1: Create a Simple Bivariate Linear Model<a href="bivariate-linear-models.html#exercise-1-create-a-simple-bivariate-linear-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Objective</strong>: Create a bivariate linear model using the provided dataset, and interpret the slope, intercept, and residuals.</p>
-<p><strong>Dataset</strong>: Suppose you are provided with a dataset that includes information on the number of hours students study per week and their corresponding exam scores. The data is as follows:</p>
-<table>
-<thead>
-<tr class="header">
-<th>Hours Studied (x)</th>
-<th>Exam Score (y)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>2</td>
-<td>68</td>
-</tr>
-<tr class="even">
-<td>3</td>
-<td>72</td>
-</tr>
-<tr class="odd">
-<td>5</td>
-<td>78</td>
-</tr>
-<tr class="even">
-<td>6</td>
-<td>85</td>
-</tr>
-<tr class="odd">
-<td>8</td>
-<td>90</td>
-</tr>
-<tr class="even">
-<td>10</td>
-<td>95</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Tasks</strong>:<br />
-1. <strong>Create the Linear Model</strong>: Use the <code>lm()</code> function in R to create a linear model that predicts exam scores based on the number of hours studied.<br />
-2. <strong>Interpret the Slope and Intercept</strong>: Explain what the slope and intercept tell you about the relationship between hours studied and exam scores.<br />
-3. <strong>Calculate and Interpret Residuals</strong>: Calculate the residuals for each data point and discuss what they indicate about the model’s accuracy.</p>
-<p><strong>R Code Starter</strong>:</p>
-<div class="sourceCode" id="cb189"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb189-1"><a href="bivariate-linear-models.html#cb189-1" tabindex="-1"></a><span class="co"># Simulating the provided data</span></span>
-<span id="cb189-2"><a href="bivariate-linear-models.html#cb189-2" tabindex="-1"></a>hours_studied <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">10</span>)</span>
-<span id="cb189-3"><a href="bivariate-linear-models.html#cb189-3" tabindex="-1"></a>exam_scores <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">68</span>, <span class="dv">72</span>, <span class="dv">78</span>, <span class="dv">85</span>, <span class="dv">90</span>, <span class="dv">95</span>)</span>
-<span id="cb189-4"><a href="bivariate-linear-models.html#cb189-4" tabindex="-1"></a></span>
-<span id="cb189-5"><a href="bivariate-linear-models.html#cb189-5" tabindex="-1"></a><span class="co"># Creating the linear model</span></span>
-<span id="cb189-6"><a href="bivariate-linear-models.html#cb189-6" tabindex="-1"></a></span>
-<span id="cb189-7"><a href="bivariate-linear-models.html#cb189-7" tabindex="-1"></a></span>
-<span id="cb189-8"><a href="bivariate-linear-models.html#cb189-8" tabindex="-1"></a><span class="co"># Viewing the summary of the model</span></span>
-<span id="cb189-9"><a href="bivariate-linear-models.html#cb189-9" tabindex="-1"></a></span>
-<span id="cb189-10"><a href="bivariate-linear-models.html#cb189-10" tabindex="-1"></a></span>
-<span id="cb189-11"><a href="bivariate-linear-models.html#cb189-11" tabindex="-1"></a><span class="co"># Calculating the residuals</span></span>
-<span id="cb189-12"><a href="bivariate-linear-models.html#cb189-12" tabindex="-1"></a></span>
-<span id="cb189-13"><a href="bivariate-linear-models.html#cb189-13" tabindex="-1"></a></span>
-<span id="cb189-14"><a href="bivariate-linear-models.html#cb189-14" tabindex="-1"></a><span class="co"># Displaying residuals</span></span></code></pre></div>
-<p><strong>Questions</strong>:<br />
-- What is the slope of the model, and what does it tell you about the relationship between study hours and exam scores?<br />
-- What is the intercept, and how would you interpret it in the context of this data?<br />
-- Are the residuals small or large? What do they tell you about the accuracy of the model?</p>
+<div id="final-thoughts" class="section level3 hasAnchor" number="10.7.2">
+<h3><span class="header-section-number">10.7.2</span> Final Thoughts<a href="statistical-power.html#final-thoughts" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Statistical power is not just a technical detail; it is a cornerstone of ethical and scientifically rigorous research. Ensuring that a study is adequately powered is fundamental to producing reliable results that can advance psychological theory and practice. Without sufficient power, studies risk yielding inconclusive findings, wasting resources, and potentially misleading the scientific community.</p>
+<p>Researchers are encouraged to consider power as a central component of their research planning. By conducting power analyses, understanding the factors that influence power, and transparently reporting these considerations, researchers can design studies that are more likely to detect true effects and contribute valuable knowledge to the field of psychology.</p>
+<p>As the field continues to grapple with challenges such as the replication crisis, the importance of adequately powered studies cannot be overstated. By prioritizing power in study design, researchers can help build a more robust, reliable, and ethically sound body of psychological research.</p>
 </div>
-<div id="exercise-2-analyze-residuals-to-assess-model-fit" class="section level3 hasAnchor" number="8.7.2">
-<h3><span class="header-section-number">8.7.2</span> Exercise 2: Analyze Residuals to Assess Model Fit<a href="bivariate-linear-models.html#exercise-2-analyze-residuals-to-assess-model-fit" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Objective</strong>: Analyze the residuals of a linear model to assess its fit and discuss any patterns you observe.</p>
-<p><strong>Dataset</strong>: Continuing with the dataset from Exercise 1, analyze the residuals to determine if the model fits the data well.</p>
-<p><strong>Tasks</strong>:<br />
-1. <strong>Plot the Residuals</strong>: Create a residual plot to visually inspect the residuals.<br />
-2. <strong>Assess Residual Patterns</strong>: Look for any patterns in the residuals and discuss what they might indicate about the model.<br />
-3. <strong>Conclusion</strong>: Based on your analysis, discuss whether the linear model is appropriate for this data.</p>
-<p><strong>R Code Starter</strong>:</p>
-<div class="sourceCode" id="cb190"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb190-1"><a href="bivariate-linear-models.html#cb190-1" tabindex="-1"></a><span class="co"># Plotting the residuals</span></span></code></pre></div>
-<p><strong>Questions</strong>:<br />
-- Do the residuals appear to be randomly distributed, or do you notice any patterns?<br />
-- What does the pattern (or lack of pattern) in the residuals suggest about the fit of the model?<br />
-- Based on the residuals, do you think the linear model is a good fit for the data? Why or why not?</p>
 </div>
-<div id="exercise-3-apply-bivariate-linear-models-to-a-real-world-dataset" class="section level3 hasAnchor" number="8.7.3">
-<h3><span class="header-section-number">8.7.3</span> Exercise 3: Apply Bivariate Linear Models to a Real-World Dataset<a href="bivariate-linear-models.html#exercise-3-apply-bivariate-linear-models-to-a-real-world-dataset" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Objective</strong>: Apply what you’ve learned to analyze a real-world psychological dataset and interpret the results of your linear model.</p>
-<p><strong>Dataset</strong>: The dataset includes information on participants’ anxiety levels (measured on a scale from 0 to 100) and the number of hours they sleep each night.</p>
-<p><strong>Tasks</strong>:<br />
-1. <strong>Create the Linear Model</strong>: Fit a linear model that predicts sleep hours based on anxiety levels.<br />
-2. <strong>Interpret the Results</strong>: Interpret the slope, intercept, and p-value of the model.<br />
-3. <strong>Assess the Residuals</strong>: Plot the residuals and discuss whether the linear model is appropriate for this data.<br />
-4. <strong>Conclusion</strong>: Provide a summary of your findings, including whether there is a significant relationship between anxiety levels and sleep quality, and whether the linear model fits the data well.</p>
-<p><strong>R Code Starter</strong>:</p>
-<div class="sourceCode" id="cb191"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb191-1"><a href="bivariate-linear-models.html#cb191-1" tabindex="-1"></a><span class="co"># Simulating the dataset</span></span>
-<span id="cb191-2"><a href="bivariate-linear-models.html#cb191-2" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
-<span id="cb191-3"><a href="bivariate-linear-models.html#cb191-3" tabindex="-1"></a>anxiety <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">50</span>, <span class="at">sd =</span> <span class="dv">15</span>)  <span class="co"># Anxiety scores (0 to 100)</span></span>
-<span id="cb191-4"><a href="bivariate-linear-models.html#cb191-4" tabindex="-1"></a>sleep_hours <span class="ot">&lt;-</span> <span class="dv">8</span> <span class="sc">-</span> <span class="fl">0.04</span> <span class="sc">*</span> anxiety <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span>)  <span class="co"># Sleep hours</span></span>
-<span id="cb191-5"><a href="bivariate-linear-models.html#cb191-5" tabindex="-1"></a></span>
-<span id="cb191-6"><a href="bivariate-linear-models.html#cb191-6" tabindex="-1"></a><span class="co"># Combining into a data frame</span></span>
-<span id="cb191-7"><a href="bivariate-linear-models.html#cb191-7" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(anxiety, sleep_hours)</span>
-<span id="cb191-8"><a href="bivariate-linear-models.html#cb191-8" tabindex="-1"></a></span>
-<span id="cb191-9"><a href="bivariate-linear-models.html#cb191-9" tabindex="-1"></a><span class="co"># Viewing the first few rows of the dataset</span></span>
-<span id="cb191-10"><a href="bivariate-linear-models.html#cb191-10" tabindex="-1"></a><span class="fu">head</span>(data)</span></code></pre></div>
-<pre><code>##    anxiety sleep_hours
-## 1 41.59287    5.625879
-## 2 46.54734    6.394990
-## 3 73.38062    4.818083
-## 4 51.05763    5.610152
-## 5 51.93932    4.970809
-## 6 75.72597    4.925933</code></pre>
-<div class="sourceCode" id="cb193"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb193-1"><a href="bivariate-linear-models.html#cb193-1" tabindex="-1"></a><span class="co"># Creating the linear model</span></span>
-<span id="cb193-2"><a href="bivariate-linear-models.html#cb193-2" tabindex="-1"></a></span>
-<span id="cb193-3"><a href="bivariate-linear-models.html#cb193-3" tabindex="-1"></a></span>
-<span id="cb193-4"><a href="bivariate-linear-models.html#cb193-4" tabindex="-1"></a><span class="co"># Viewing the summary of the model</span></span>
-<span id="cb193-5"><a href="bivariate-linear-models.html#cb193-5" tabindex="-1"></a></span>
-<span id="cb193-6"><a href="bivariate-linear-models.html#cb193-6" tabindex="-1"></a></span>
-<span id="cb193-7"><a href="bivariate-linear-models.html#cb193-7" tabindex="-1"></a><span class="co"># Plotting the residuals</span></span></code></pre></div>
-<p><strong>Questions</strong>:
-- What does the slope of the model tell you about the relationship between anxiety levels and sleep hours?<br />
-- Is the relationship statistically significant (based on the p-value)? What does this mean in the context of the study?<br />
-- Are the residuals randomly distributed, or do they show a pattern? What does this tell you about the appropriateness of the linear model?<br />
-- What conclusions can you draw from your analysis regarding the impact of anxiety on sleep quality?</p>
+<div id="practice-exercises-8" class="section level2 hasAnchor" number="10.8">
+<h2><span class="header-section-number">10.8</span> Practice Exercises<a href="statistical-power.html#practice-exercises-8" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="exercise-1-calculate-the-statistical-power-of-a-study-using-a-given-dataset-and-interpret-the-results" class="section level3 hasAnchor" number="10.8.1">
+<h3><span class="header-section-number">10.8.1</span> Exercise 1: Calculate the Statistical Power of a Study Using a Given Dataset and Interpret the Results<a href="statistical-power.html#exercise-1-calculate-the-statistical-power-of-a-study-using-a-given-dataset-and-interpret-the-results" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Instructions</strong>:<br />
+1. Assume you are analyzing a dataset where you are testing the effectiveness of a new therapy on reducing anxiety levels. The dataset has 40 participants divided equally into a treatment group and a control group.<br />
+2. The effect size (Cohen’s d) is estimated to be 0.6, and the significance level (alpha) is 0.05.<br />
+3. Use the <code>pwr</code> package in R to calculate the statistical power of the study.<br />
+4. Interpret the results in terms of the study’s ability to detect a true effect.</p>
+<div class="sourceCode" id="cb219"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb219-1"><a href="statistical-power.html#cb219-1" tabindex="-1"></a><span class="co"># Load the pwr package</span></span>
+<span id="cb219-2"><a href="statistical-power.html#cb219-2" tabindex="-1"></a><span class="fu">library</span>(pwr)</span>
+<span id="cb219-3"><a href="statistical-power.html#cb219-3" tabindex="-1"></a></span>
+<span id="cb219-4"><a href="statistical-power.html#cb219-4" tabindex="-1"></a><span class="co"># Calculate the statistical power</span></span>
+<span id="cb219-5"><a href="statistical-power.html#cb219-5" tabindex="-1"></a>power_result <span class="ot">&lt;-</span> <span class="fu">pwr.t.test</span>(<span class="at">n =</span> <span class="dv">20</span>, <span class="at">d =</span> <span class="fl">0.6</span>, <span class="at">sig.level =</span> <span class="fl">0.05</span>, <span class="at">type =</span> <span class="st">&quot;two.sample&quot;</span>)</span>
+<span id="cb219-6"><a href="statistical-power.html#cb219-6" tabindex="-1"></a></span>
+<span id="cb219-7"><a href="statistical-power.html#cb219-7" tabindex="-1"></a><span class="co"># Output the result</span></span>
+<span id="cb219-8"><a href="statistical-power.html#cb219-8" tabindex="-1"></a>power_result</span></code></pre></div>
+<pre><code>## 
+##      Two-sample t test power calculation 
+## 
+##               n = 20
+##               d = 0.6
+##       sig.level = 0.05
+##           power = 0.4560341
+##     alternative = two.sided
+## 
+## NOTE: n is number in *each* group</code></pre>
+<p><strong>Interpretation</strong>:
+Calculate the power and explain whether the study has sufficient power to detect the expected effect of the therapy on anxiety levels.</p>
+</div>
+<div id="exercise-2-conduct-a-power-analysis-in-r-to-determine-the-required-sample-size-for-a-psychological-experiment-with-a-specified-effect-size-and-significance-level" class="section level3 hasAnchor" number="10.8.2">
+<h3><span class="header-section-number">10.8.2</span> Exercise 2: Conduct a Power Analysis in R to Determine the Required Sample Size for a Psychological Experiment with a Specified Effect Size and Significance Level<a href="statistical-power.html#exercise-2-conduct-a-power-analysis-in-r-to-determine-the-required-sample-size-for-a-psychological-experiment-with-a-specified-effect-size-and-significance-level" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Instructions</strong>:<br />
+1. You are planning a study to compare the effects of two different teaching methods on student performance. You expect a moderate effect size (Cohen’s d = 0.5) and want to achieve 80% power with a significance level of 0.05.<br />
+2. Use the <code>pwr</code> package in R to determine the required sample size per group.</p>
+<div class="sourceCode" id="cb221"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb221-1"><a href="statistical-power.html#cb221-1" tabindex="-1"></a><span class="co"># Load the pwr package</span></span>
+<span id="cb221-2"><a href="statistical-power.html#cb221-2" tabindex="-1"></a><span class="fu">library</span>(pwr)</span>
+<span id="cb221-3"><a href="statistical-power.html#cb221-3" tabindex="-1"></a></span>
+<span id="cb221-4"><a href="statistical-power.html#cb221-4" tabindex="-1"></a><span class="co"># Calculate the required sample size</span></span>
+<span id="cb221-5"><a href="statistical-power.html#cb221-5" tabindex="-1"></a>sample_size <span class="ot">&lt;-</span> <span class="fu">pwr.t.test</span>(<span class="at">d =</span> <span class="fl">0.5</span>, <span class="at">power =</span> <span class="fl">0.80</span>, <span class="at">sig.level =</span> <span class="fl">0.05</span>, <span class="at">type =</span> <span class="st">&quot;two.sample&quot;</span>)</span>
+<span id="cb221-6"><a href="statistical-power.html#cb221-6" tabindex="-1"></a></span>
+<span id="cb221-7"><a href="statistical-power.html#cb221-7" tabindex="-1"></a><span class="co"># Output the result</span></span>
+<span id="cb221-8"><a href="statistical-power.html#cb221-8" tabindex="-1"></a>sample_size</span></code></pre></div>
+<pre><code>## 
+##      Two-sample t test power calculation 
+## 
+##               n = 63.76561
+##               d = 0.5
+##       sig.level = 0.05
+##           power = 0.8
+##     alternative = two.sided
+## 
+## NOTE: n is number in *each* group</code></pre>
+<p><strong>Interpretation</strong>:<br />
+Calculate the required sample size and explain why this sample size is necessary to achieve the desired power in your study.</p>
+</div>
+<div id="exercise-3-analyze-a-scenario-where-a-type-i-error-occurred-in-a-psychological-study" class="section level3 hasAnchor" number="10.8.3">
+<h3><span class="header-section-number">10.8.3</span> Exercise 3: Analyze a Scenario Where a Type I Error Occurred in a Psychological Study<a href="statistical-power.html#exercise-3-analyze-a-scenario-where-a-type-i-error-occurred-in-a-psychological-study" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Instructions</strong>:<br />
+1. Consider a scenario where researchers concluded that a new intervention significantly reduces symptoms of depression based on a p-value of 0.03. However, further studies failed to replicate this finding.<br />
+2. Discuss the potential consequences of this Type I error and suggest how the study design could have been improved to reduce the likelihood of a Type I error.</p>
+<p><strong>Guidelines</strong>:<br />
+- Discuss the implications of publishing a false positive, including the impact on future research, clinical practice, and the credibility of the field.<br />
+- Consider how lowering the significance level or using a larger sample size might have helped reduce the risk of a Type I error.</p>
+</div>
+<div id="exercise-4-analyze-a-scenario-where-a-type-ii-error-occurred-in-a-psychological-study" class="section level3 hasAnchor" number="10.8.4">
+<h3><span class="header-section-number">10.8.4</span> Exercise 4: Analyze a Scenario Where a Type II Error Occurred in a Psychological Study<a href="statistical-power.html#exercise-4-analyze-a-scenario-where-a-type-ii-error-occurred-in-a-psychological-study" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Instructions</strong>:<br />
+1. Consider a scenario where a study testing a new therapy for PTSD failed to find a significant effect, with a p-value of 0.08. The study had a small sample size and was underpowered.<br />
+2. Discuss the potential consequences of this Type II error and suggest strategies to increase power in future studies.</p>
+<p><strong>Guidelines</strong>:
+- Discuss the missed opportunity to identify an effective therapy and the ethical implications of potentially depriving patients of a beneficial treatment.<br />
+- Suggest strategies to increase power, such as increasing the sample size, using a more sensitive measure, or conducting a more targeted power analysis before the study.</p>
+</div>
+<div id="exercise-5-compare-the-impact-of-changing-the-sample-size-effect-size-and-significance-level-on-power-using-different-hypothetical-scenarios-in-r" class="section level3 hasAnchor" number="10.8.5">
+<h3><span class="header-section-number">10.8.5</span> Exercise 5: Compare the Impact of Changing the Sample Size, Effect Size, and Significance Level on Power Using Different Hypothetical Scenarios in R<a href="statistical-power.html#exercise-5-compare-the-impact-of-changing-the-sample-size-effect-size-and-significance-level-on-power-using-different-hypothetical-scenarios-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Instructions</strong>:<br />
+1. Use the <code>pwr</code> package in R to explore how changes in sample size, effect size, and significance level affect the power of a study.<br />
+2. Create three different hypothetical scenarios and compare their power:<br />
+- Scenario 1: Small effect size (Cohen’s d = 0.2), small sample size (n = 15 per group), alpha = 0.05.<br />
+- Scenario 2: Moderate effect size (Cohen’s d = 0.5), medium sample size (n = 30 per group), alpha = 0.05.<br />
+- Scenario 3: Large effect size (Cohen’s d = 0.8), large sample size (n = 50 per group), alpha = 0.01.</p>
+<div class="sourceCode" id="cb223"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb223-1"><a href="statistical-power.html#cb223-1" tabindex="-1"></a><span class="co"># Load the pwr package</span></span>
+<span id="cb223-2"><a href="statistical-power.html#cb223-2" tabindex="-1"></a><span class="fu">library</span>(pwr)</span>
+<span id="cb223-3"><a href="statistical-power.html#cb223-3" tabindex="-1"></a></span>
+<span id="cb223-4"><a href="statistical-power.html#cb223-4" tabindex="-1"></a><span class="co"># Scenario 1: Small effect size, small sample size</span></span>
+<span id="cb223-5"><a href="statistical-power.html#cb223-5" tabindex="-1"></a>power_scenario1 <span class="ot">&lt;-</span> <span class="fu">pwr.t.test</span>(<span class="at">n =</span> <span class="dv">15</span>, <span class="at">d =</span> <span class="fl">0.2</span>, <span class="at">sig.level =</span> <span class="fl">0.05</span>, <span class="at">type =</span> <span class="st">&quot;two.sample&quot;</span>)</span>
+<span id="cb223-6"><a href="statistical-power.html#cb223-6" tabindex="-1"></a>power_scenario1</span></code></pre></div>
+<pre><code>## 
+##      Two-sample t test power calculation 
+## 
+##               n = 15
+##               d = 0.2
+##       sig.level = 0.05
+##           power = 0.08264676
+##     alternative = two.sided
+## 
+## NOTE: n is number in *each* group</code></pre>
+<div class="sourceCode" id="cb225"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb225-1"><a href="statistical-power.html#cb225-1" tabindex="-1"></a><span class="co"># Scenario 2: Moderate effect size, medium sample size</span></span>
+<span id="cb225-2"><a href="statistical-power.html#cb225-2" tabindex="-1"></a>power_scenario2 <span class="ot">&lt;-</span> <span class="fu">pwr.t.test</span>(<span class="at">n =</span> <span class="dv">30</span>, <span class="at">d =</span> <span class="fl">0.5</span>, <span class="at">sig.level =</span> <span class="fl">0.05</span>, <span class="at">type =</span> <span class="st">&quot;two.sample&quot;</span>)</span>
+<span id="cb225-3"><a href="statistical-power.html#cb225-3" tabindex="-1"></a>power_scenario2</span></code></pre></div>
+<pre><code>## 
+##      Two-sample t test power calculation 
+## 
+##               n = 30
+##               d = 0.5
+##       sig.level = 0.05
+##           power = 0.4778965
+##     alternative = two.sided
+## 
+## NOTE: n is number in *each* group</code></pre>
+<div class="sourceCode" id="cb227"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb227-1"><a href="statistical-power.html#cb227-1" tabindex="-1"></a><span class="co"># Scenario 3: Large effect size, large sample size, lower alpha</span></span>
+<span id="cb227-2"><a href="statistical-power.html#cb227-2" tabindex="-1"></a>power_scenario3 <span class="ot">&lt;-</span> <span class="fu">pwr.t.test</span>(<span class="at">n =</span> <span class="dv">50</span>, <span class="at">d =</span> <span class="fl">0.8</span>, <span class="at">sig.level =</span> <span class="fl">0.01</span>, <span class="at">type =</span> <span class="st">&quot;two.sample&quot;</span>)</span>
+<span id="cb227-3"><a href="statistical-power.html#cb227-3" tabindex="-1"></a>power_scenario3</span></code></pre></div>
+<pre><code>## 
+##      Two-sample t test power calculation 
+## 
+##               n = 50
+##               d = 0.8
+##       sig.level = 0.01
+##           power = 0.912465
+##     alternative = two.sided
+## 
+## NOTE: n is number in *each* group</code></pre>
+<p><strong>Interpretation</strong>:<br />
+Compare the power of the three scenarios and discuss how changes in sample size, effect size, and significance level impact the ability of the study to detect true effects.</p>
 
 </div>
 </div>
@@ -1461,8 +1280,8 @@ The “best fit” line in a bivariate linear model is the line that most closel
           </div>
         </div>
       </div>
-<a href="ggplot2-and-graphing-data-in-apa-formatting.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="goodness-of-fit.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="goodness-of-fit.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="appendix-answers-to-chapter-exercises.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -1493,7 +1312,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/AmandaDPerez/ZTC-RM/edit/main/08-bivariate.Rmd",
+"link": "https://github.com/AmandaDPerez/ZTC-RM/edit/main/10-power.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -1501,7 +1320,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/AmandaDPerez/ZTC-RM/blob/main/08-bivariate.Rmd",
+"link": "https://github.com/AmandaDPerez/ZTC-RM/blob/main/10-power.Rmd",
 "text": null
 },
 "download": null,

@@ -785,6 +785,153 @@ abline(h = 0, col = "red", lwd = 2)
 
 **Conclusion**: The negative slope indicates that higher anxiety levels are associated with fewer hours of sleep. The statistically significant p-value supports this relationship, suggesting it is unlikely to have occurred by chance. The residuals plot confirms that the linear model is a good fit for the data, as the residuals appear randomly distributed with no apparent pattern. This analysis provides evidence that managing anxiety could be crucial for improving sleep quality.  
 
+## Answers to Chapter 9 Practice Exercises
+
+### Exercise 1: Chi-Square Goodness of Fit Test
+
+```{r}
+# Observed and expected frequencies
+observed <- c(40, 35, 25)
+expected <- c(33.3, 33.3, 33.3)
+
+# Perform Chi-Square test
+chi_square_test <- chisq.test(observed, p = expected / sum(expected))
+chi_square_test
+```
+
+**Interpretation**:  
+- **Chi-Square Statistic**: The test will output the Chi-Square statistic. A large value suggests that the observed frequencies differ significantly from the expected frequencies.  
+- **P-Value**: If the p-value is less than 0.05, reject the null hypothesis and conclude that the observed frequencies are significantly different from the expected frequencies.  
+
+### Exercise 2: Calculating R-Squared
+
+```{r}
+# Data for regression analysis
+study_hours <- c(4, 6, 8, 10, 12, 14, 16, 18, 20)
+exam_scores <- c(55, 60, 65, 70, 75, 80, 85, 90, 95)
+
+# Fit linear regression model
+model <- lm(exam_scores ~ study_hours)
+
+# Calculate R-squared
+summary(model)$r.squared
+```
+
+**Interpretation**:  
+- **R-Squared**: If R-squared is close to 1, it indicates that the model explains a large proportion of the variance in exam scores. If it’s closer to 0, the model explains very little of the variance.  
+
+### Exercise 3: F-Test for Comparing Models
+
+```{r}
+# Data for regression analysis
+hours_of_sleep <- c(5, 6, 7, 8, 5, 6, 7, 8, 9)
+caffeine_intake <- c(3, 2, 4, 5, 2, 3, 5, 6, 7)
+reaction_time <- c(12, 10, 9, 8, 13, 11, 10, 9, 7)
+
+# Fit simple model
+model1 <- lm(reaction_time ~ hours_of_sleep)
+
+# Fit more complex model
+model2 <- lm(reaction_time ~ hours_of_sleep + caffeine_intake)
+
+# Perform F-test to compare models
+anova(model1, model2)
+```
+
+**Interpretation**:  
+- **F-Statistic**: A higher F-statistic indicates that the more complex model explains significantly more variance than the simpler model.  
+- **P-Value**: If the p-value is less than 0.05, the more complex model provides a significantly better fit.  
+
+### Exercise 4: Visualizing the F-Distribution
+
+```{r}
+# Load ggplot2
+library(ggplot2)
+
+# Define F-values
+f_values <- seq(0, 5, length.out = 100)
+
+# Plot F-distribution for different degrees of freedom
+plot_df <- data.frame(
+  F_Values = f_values,
+  DF1_5_DF2_10 = df(f_values, df1 = 5, df2 = 10),
+  DF1_10_DF2_20 = df(f_values, df1 = 10, df2 = 20)
+)
+
+ggplot(plot_df, aes(x = F_Values)) +
+  geom_line(aes(y = DF1_5_DF2_10, color = "DF1 = 5, DF2 = 10")) +
+  geom_line(aes(y = DF1_10_DF2_20, color = "DF1 = 10, DF2 = 20")) +
+  labs(title = "F-Distribution for Different Degrees of Freedom",
+       x = "F-Value",
+       y = "Density",
+       color = "Degrees of Freedom") +
+  theme_minimal()
+```
+
+**Interpretation**:  
+- The shape of the F-distribution changes depending on the degrees of freedom. More degrees of freedom result in a distribution that is closer to normal, with a higher peak and narrower spread. This influences the critical value used in the F-test, making it easier or harder to achieve statistical significance.
+
+### Exercise 5: Comprehensive Analysis
+
+**Step 1: Chi-Square Test**
+```{r}
+observed_frequencies <- c(30, 45, 25)
+expected_frequencies <- c(33.3, 33.3, 33.3)
+
+chi_square_test <- chisq.test(observed_frequencies, p = expected_frequencies / sum(expected_frequencies))
+chi_square_test
+```
+
+
+**Step 2: R-Squared Calculation**
+
+```{r}
+study_hours <- c(3, 5, 7, 9, 11, 13, 15, 17, 19)
+exam_scores <- c(50, 55, 60, 65, 70, 75, 80, 85, 90)
+
+model <- lm(exam_scores ~ study_hours)
+summary(model)$r.squared
+```
+
+**Step 3: F-Test**
+```{r}
+stress_levels <- c(7, 8, 6, 9, 7, 8, 6, 7, 9)
+social_support <- c(5, 6, 4, 8, 5, 6, 7, 8, 9)
+
+model1 <- lm(stress_levels ~ study_hours)
+model2 <- lm(stress_levels ~ study_hours + social_support)
+
+anova(model1, model2)
+```
+
+**Interpretation**: Write a comprehensive report summarizing the findings from the Chi-Square test, R-squared calculation, and F-test. Discuss how these results contribute to understanding the factors influencing the dependent variables and the overall goodness of fit for the models.
+
+## Answers to Chapter 10 Practice Exercises
+
+### Exercise 1: Power Calculation Interpretation
+
+- The power calculation output will show a power value (e.g., 0.73). If the power is less than 0.80, the study is underpowered, meaning there is a higher risk of not detecting a true effect. Ideally, the study should have a power of at least 0.80 to ensure a reasonable chance of detecting the expected effect.
+
+### Exercise 2: Sample Size Calculation Interpretation
+
+- The output will show the required sample size per group (e.g., 64). This sample size is necessary to achieve 80% power, meaning that with this number of participants, you have an 80% chance of detecting a true effect if it exists.
+
+### Exercise 3: Type I Error Analysis Interpretation
+
+- **Potential Consequences**: Publishing a false positive can mislead other researchers, lead to ineffective interventions being adopted in clinical practice, and damage the credibility of the field.  
+- **Improvement Suggestions**: The study design could have been improved by using a more stringent significance level (e.g., 0.01) or increasing the sample size to ensure that any detected effect was more likely to be genuine.
+
+### Exercise 4: Type II Error Analysis Interpretation
+
+- **Potential Consequences**: Missing a true effect means that a potentially effective therapy might be dismissed, depriving patients of a beneficial treatment. This could delay advancements in treatment for PTSD.  
+- **Strategies to Increase Power**: Increasing the sample size, using more sensitive measures, and conducting a thorough power analysis before the study could help reduce the risk of Type II errors.
+
+### Exercise 5: Power Comparison Interpretation
+
+- **Scenario 1**: With a small effect size, small sample size, and alpha = 0.05, the power is likely to be very low (e.g., 0.20), indicating a high risk of Type II error.  
+- **Scenario 2**: With a moderate effect size and medium sample size, the power should be around 0.80, which is adequate for detecting the effect.  
+- **Scenario 3**: With a large effect size, large sample size, and lower alpha, the power will be very high (e.g., 0.90 or higher), indicating a strong likelihood of detecting a true effect if it exists.
+
 
 ------------------------------------------------------------------------
 

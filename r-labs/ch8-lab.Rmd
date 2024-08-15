@@ -60,9 +60,7 @@ plot(exercise_data$daily_exercise, residuals_exercise,
 abline(h = 0, col = "red", lwd = 2)
 ```
 
-**Interpretation**: - For every one unit increase in daily exercise, happiness increased by 6.16 points."  
-  
-**Residuals:** The residuals appear randomly scattered around zero in the residuals plot, indicating that the linear model is appropriate and fits the data well.
+**Interpretation**: - Interpret the slope using the format: "For every one unit increase in study time, academic performance increases/decreases by [SLOPE VALUE]."
 
 ### Exercise 2: Relationship Between Screen Time and Sleep Quality
 
@@ -109,10 +107,7 @@ plot(sleep_data$screen_time, residuals_sleep,
 abline(h = 0, col = "red", lwd = 2)
 ```
 
-**Slope:** "For every one unit increase in screen time, sleep quality decreased by 3.18 points."  
-  
-**Residuals:** The residuals appear randomly scattered around zero in the residuals plot, suggesting that the linear model is appropriate and adequately captures the relationship between screen time and sleep quality.
-
+**Interpretation**: - Interpret the slope using the format: "For every one unit increase in study time, academic performance increases/decreases by [SLOPE VALUE]."
 
 ### Exercise 3: Relationship Between Coffee Consumption and Productivity
 
@@ -159,9 +154,7 @@ plot(coffee_data$coffee_consumption, residuals_coffee,
 abline(h = 0, col = "red", lwd = 2)
 ```
 
-**Slope:** For every one unit increase in coffee consumption, productivity increased by 2.57 points.  
-  
-**Residuals:** The residuals are randomly distributed around zero, which indicates that the linear model is appropriate for predicting productivity based on coffee consumption.
+**Interpretation**: - Interpret the slope using the format: "For every one unit increase in study time, academic performance increases/decreases by [SLOPE VALUE]."
 
 
 ### Exercise 4: Relationship Between Social Media Usage and Loneliness
@@ -209,9 +202,7 @@ plot(social_media_data$social_media, residuals_social_media,
 abline(h = 0, col = "red", lwd = 2)
 ```
 
-**Slope:** For every one unit increase in social media usage, loneliness increased by 6.61 points.  
-  
-**Residuals:** The residuals plot shows no obvious pattern, indicating that the linear model is a good fit for predicting loneliness based on social media usage.
+**Interpretation**: - Interpret the slope using the format: "For every one unit increase in study time, academic performance increases/decreases by [SLOPE VALUE]."
 
 
 ### Exercise 5: Relationship Between Study Time and Academic Performance
@@ -258,9 +249,7 @@ plot(study_data$study_time, residuals_study,
 abline(h = 0, col = "blue", lwd = 2)
 ```
 
-**Slope:** For every one unit increase in study time, academic performance increased by 2.43 points.  
-  
-**Residuals:** The residuals are randomly distributed around zero, suggesting that the linear model appropriately captures the relationship between study time and academic performance.
+**Interpretation**: - Interpret the slope using the format: "For every one unit increase in study time, academic performance increases/decreases by [SLOPE VALUE]."
 
 **Submission Instructions:**
 
