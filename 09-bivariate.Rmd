@@ -525,7 +525,7 @@ Let's revisit our example of predicting exam scores based on hours
 studied. Suppose we have the following data:
 
 | Hours Studied (x) | Exam Score (Observed Value) (y) | Predicted Exam Score (y') | Residual (y - y') |
-|----------------|----------------------|------------------|----------------|
+|-------------------|---------------------------------|---------------------------|-------------------|
 | 2                 | 70                              | 70                        | 0                 |
 | 4                 | 75                              | 75                        | 0                 |
 | 6                 | 85                              | 80                        | 5                 |

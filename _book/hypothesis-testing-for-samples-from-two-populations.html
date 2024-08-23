@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 5 Computation | Introduction to Psychological Statistics</title>
-  <meta name="description" content="Chapter 5 Computation | Introduction to Psychological Statistics" />
+  <title>Chapter 8 Hypothesis Testing for Samples from Two Populations | Introduction to Psychological Statistics</title>
+  <meta name="description" content="Chapter 8 Hypothesis Testing for Samples from Two Populations | Introduction to Psychological Statistics" />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 5 Computation | Introduction to Psychological Statistics" />
+  <meta property="og:title" content="Chapter 8 Hypothesis Testing for Samples from Two Populations | Introduction to Psychological Statistics" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 5 Computation | Introduction to Psychological Statistics" />
+  <meta name="twitter:title" content="Chapter 8 Hypothesis Testing for Samples from Two Populations | Introduction to Psychological Statistics" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="descriptive-statistics-and-basic-probability-in-psychological-research.html"/>
-<link rel="next" href="linear-and-non-linear-transformations-of-data.html"/>
+<link rel="prev" href="ggplot2-and-graphing-data-in-apa-formatting.html"/>
+<link rel="next" href="bivariate-linear-models.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -741,737 +741,75 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="computation" class="section level1 hasAnchor" number="5">
-<h1><span class="header-section-number">Chapter 5</span> Computation<a href="computation.html#computation" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="overview-of-the-importance-of-data-computation-and-manipulation-in-psychological-research" class="section level2 hasAnchor" number="5.1">
-<h2><span class="header-section-number">5.1</span> Overview of the Importance of Data Computation and Manipulation in Psychological Research<a href="computation.html#overview-of-the-importance-of-data-computation-and-manipulation-in-psychological-research" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In psychological research, data computation and manipulation are crucial steps that transform raw data into meaningful information. These processes allow researchers to clean, organize, and analyze data effectively, leading to more accurate and reliable conclusions.</p>
+<div id="hypothesis-testing-for-samples-from-two-populations" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">Chapter 8</span> Hypothesis Testing for Samples from Two Populations<a href="hypothesis-testing-for-samples-from-two-populations.html#hypothesis-testing-for-samples-from-two-populations" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="introduction-to-hypothesis-testing" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> Introduction to Hypothesis Testing<a href="hypothesis-testing-for-samples-from-two-populations.html#introduction-to-hypothesis-testing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="overview-of-hypothesis-testing" class="section level3 hasAnchor" number="8.1.1">
+<h3><span class="header-section-number">8.1.1</span> Overview of Hypothesis Testing<a href="hypothesis-testing-for-samples-from-two-populations.html#overview-of-hypothesis-testing" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Explanation of the Purpose and Process of Hypothesis Testing in Comparing Two Populations</strong></p>
+<p>Hypothesis testing is a fundamental concept in statistics that allows researchers to make decisions or inferences about a population based on sample data. In psychological research, hypothesis testing is particularly important when comparing two groups or populations to determine whether there is a statistically significant difference between them.</p>
+<p>Imagine you are a psychologist studying the effects of a new therapy for anxiety. You have two groups: one group receives the new therapy, and the other group does not (perhaps they receive a standard treatment or no treatment at all). After collecting data on anxiety levels from both groups, you want to know whether the new therapy is genuinely more effective than the alternative. Hypothesis testing provides a structured way to answer this question by evaluating whether the observed difference in anxiety levels is likely due to the therapy itself or if it could have occurred by random chance.</p>
+<p>The process of hypothesis testing involves several key steps:
+1. <strong>Formulating Hypotheses</strong>: You start by stating two competing hypotheses: the null hypothesis (H₀), which assumes no difference or effect, and the alternative hypothesis (H₁), which suggests that there is a difference or effect.
+2. <strong>Collecting Data</strong>: You then collect data from your two groups (e.g., anxiety scores after the therapy).
+3. <strong>Calculating a Test Statistic</strong>: Using the data, you calculate a test statistic (such as a t-value) that summarizes the difference between the two groups.
+4. <strong>Determining the p-Value</strong>: The test statistic is used to calculate a p-value, which tells you the probability of observing the data if the null hypothesis were true.
+5. <strong>Making a Decision</strong>: Finally, you compare the p-value to a predetermined significance level (alpha, often set at 0.05). If the p-value is smaller than alpha, you reject the null hypothesis and conclude that there is a statistically significant difference between the groups.</p>
+<p><strong>Importance of Hypothesis Testing in Psychological Research</strong></p>
+<p>In psychological research, hypothesis testing is crucial for making informed decisions based on data. It helps researchers determine whether an observed effect (such as the impact of a therapy, educational intervention, or social program) is likely to be genuine or if it could have occurred by chance.</p>
+<p>Hypothesis testing is particularly important when comparing different groups, such as:
+- <strong>Treatment vs. Control</strong>: For example, testing whether a new drug reduces symptoms of depression more effectively than a placebo.
+- <strong>Male vs. Female</strong>: For example, examining whether there are gender differences in cognitive abilities or stress responses.
+- <strong>Pre- vs. Post-Intervention</strong>: For example, assessing whether a training program improves performance before and after the intervention.</p>
+<p>By applying hypothesis testing, psychologists can draw conclusions that are statistically valid, helping to advance our understanding of human behavior and mental processes.</p>
 </div>
-<div id="importance-of-data-computation-and-manipulation" class="section level2 hasAnchor" number="5.2">
-<h2><span class="header-section-number">5.2</span> Importance of Data Computation and Manipulation<a href="computation.html#importance-of-data-computation-and-manipulation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ol style="list-style-type: decimal">
-<li><p><strong>Data Cleaning</strong>:</p>
+<div id="null-and-alternative-hypotheses" class="section level3 hasAnchor" number="8.1.2">
+<h3><span class="header-section-number">8.1.2</span> Null and Alternative Hypotheses<a href="hypothesis-testing-for-samples-from-two-populations.html#null-and-alternative-hypotheses" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Definition and Explanation of the Null Hypothesis (H₀) and the Alternative Hypothesis (H₁)</strong></p>
+<p>At the core of hypothesis testing are two competing hypotheses: the null hypothesis (H₀) and the alternative hypothesis (H₁).</p>
 <ul>
-<li><p>Ensures the accuracy and consistency of data.</p></li>
-<li><p>Involves identifying and correcting errors, handling missing values, and removing outliers.</p></li>
-<li><p>Prevents erroneous results that can arise from flawed data.</p></li>
-</ul></li>
-<li><p><strong>Data Organization</strong>:</p>
-<ul>
-<li><p>Facilitates easier analysis and interpretation.</p></li>
-<li><p>Involves structuring data in a logical format, such as tidy data principles where each variable forms a column and each observation forms a row.</p></li>
-<li><p>Enhances the readability and usability of the dataset.</p></li>
-</ul></li>
-<li><p><strong>Data Transformation</strong>:</p>
-<ul>
-<li><p>Involves converting data into a suitable format for analysis.</p></li>
-<li><p>Includes normalization, aggregation, and creating new variables.</p></li>
-<li><p>Enables the application of various statistical techniques and models.</p></li>
-</ul></li>
-<li><p><strong>Data Exploration</strong>:</p>
-<ul>
-<li><p>Provides insights into data distributions, relationships, and patterns.</p></li>
-<li><p>Utilizes descriptive statistics and visualization techniques.</p></li>
-<li><p>Helps in forming hypotheses and guiding further analysis.</p></li>
-</ul></li>
-<li><p><strong>Ensuring Reproducibility</strong>:</p>
-<ul>
-<li><p>Essential for validating and replicating research findings.</p></li>
-<li><p>Involves documenting and sharing data manipulation steps and analysis scripts.</p></li>
-<li><p>Enhances transparency and credibility of the research.</p></li>
-</ul></li>
-</ol>
-<p>By systematically computing and manipulating data, psychological researchers can ensure the integrity of their data, leading to more robust and credible research outcomes.</p>
-</div>
-<div id="brief-introduction-to-rs-capabilities-for-data-handling" class="section level2 hasAnchor" number="5.3">
-<h2><span class="header-section-number">5.3</span> Brief Introduction to R’s Capabilities for Data Handling<a href="computation.html#brief-introduction-to-rs-capabilities-for-data-handling" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>R is a powerful statistical programming language widely used in psychological research for data handling, analysis, and visualization. Its extensive package ecosystem and versatile functions make it an ideal tool for various data manipulation tasks.</p>
-<div id="key-capabilities-of-r-for-data-handling" class="section level3 hasAnchor" number="5.3.1">
-<h3><span class="header-section-number">5.3.1</span> Key Capabilities of R for Data Handling<a href="computation.html#key-capabilities-of-r-for-data-handling" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ol style="list-style-type: decimal">
-<li><p><strong>Data Importation</strong>:</p>
-<ul>
-<li><p>R can import data from various sources, including CSV files, Excel files, databases, and web APIs.</p></li>
-<li><p>Functions such as <code>read.csv()</code>, <code>read_excel()</code>, and <code>dbConnect()</code> facilitate data importation.</p></li>
-</ul></li>
-<li><p><strong>Data Cleaning</strong>:</p>
-<ul>
-<li><p>R provides functions to handle missing values (<code>na.omit()</code>, <code>is.na()</code>), detect and remove outliers, and correct data entry errors.</p></li>
-<li><p>The <code>dplyr</code> package offers a range of functions (<code>mutate()</code>, <code>filter()</code>, <code>select()</code>, <code>rename()</code>) for efficient data cleaning.</p></li>
-</ul></li>
-<li><p><strong>Data Transformation</strong>:</p>
-<ul>
-<li><p>R allows for data transformation through functions like <code>mutate()</code> for creating new variables, <code>summarize()</code> for aggregation, and <code>spread()</code>/<code>gather()</code> for reshaping data.</p></li>
-<li><p>The <code>tidyverse</code> package is particularly useful for data transformation tasks.</p></li>
-</ul></li>
-<li><p><strong>Data Visualization</strong>:</p>
-<ul>
-<li><p>R supports various visualization techniques through packages like <code>ggplot2</code>, <code>lattice</code>, and <code>plotly</code>.</p></li>
-<li><p>These packages enable the creation of informative plots such as histograms, scatter plots, and boxplots.</p></li>
-</ul></li>
-<li><p><strong>Statistical Analysis</strong>:</p>
-<ul>
-<li><p>R is equipped with numerous statistical functions and models, including t-tests, ANOVA, regression analysis, and more.</p></li>
-<li><p>The <code>stats</code> package provides foundational statistical functions, while specialized packages like <code>psych</code> offer additional tools for psychological research.</p></li>
-</ul></li>
-<li><p><strong>Reproducibility</strong>:</p>
-<ul>
-<li><p>RMarkdown and <code>knitr</code> allow for the creation of dynamic documents that integrate code, output, and narrative text.</p></li>
-<li><p>These tools facilitate reproducible research by enabling researchers to document and share their analysis workflows.</p></li>
-</ul></li>
-</ol>
-</div>
-</div>
-<div id="importing-data-from-excel-files" class="section level2 hasAnchor" number="5.4">
-<h2><span class="header-section-number">5.4</span> Importing Data from Excel Files<a href="computation.html#importing-data-from-excel-files" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In psychological research, data is often stored in Excel files, either in CSV (.csv) format or Excel Workbook (.xlsx) format. Importing this data into R is a crucial first step in data analysis. This section covers the process of importing data from both .csv and .xlsx files using R.</p>
-<div id="importing-.csv-files" class="section level3 hasAnchor" number="5.4.1">
-<h3><span class="header-section-number">5.4.1</span> Importing .csv Files<a href="computation.html#importing-.csv-files" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>CSV (Comma-Separated Values) files are a common format for storing tabular data. They are simple text files where each line represents a row in the table, and columns are separated by commas.</p>
-<div id="step-by-step-guide-to-importing-.csv-files" class="section level4 hasAnchor" number="5.4.1.1">
-<h4><span class="header-section-number">5.4.1.1</span> Step-by-Step Guide to Importing .csv Files<a href="computation.html#step-by-step-guide-to-importing-.csv-files" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<ol style="list-style-type: decimal">
-<li><p><strong>Prepare the CSV File</strong>: Ensure the CSV file is properly formatted with a header row containing column names.</p></li>
-<li><p><strong>Set the Working Directory</strong>: Set the working directory in R to the location of the CSV file.</p></li>
-<li><p><strong>Use <code>read.csv()</code> Function</strong>: Use the <code>read.csv()</code> function to read the data into R.</p></li>
-</ol>
-<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="computation.html#cb52-1" tabindex="-1"></a><span class="co"># Set the working directory to the location of your CSV file</span></span>
-<span id="cb52-2"><a href="computation.html#cb52-2" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;path/to/your/folder&quot;</span>)</span>
-<span id="cb52-3"><a href="computation.html#cb52-3" tabindex="-1"></a></span>
-<span id="cb52-4"><a href="computation.html#cb52-4" tabindex="-1"></a><span class="co"># Import the CSV file</span></span>
-<span id="cb52-5"><a href="computation.html#cb52-5" tabindex="-1"></a>data_csv <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;your_file.csv&quot;</span>)</span>
-<span id="cb52-6"><a href="computation.html#cb52-6" tabindex="-1"></a></span>
-<span id="cb52-7"><a href="computation.html#cb52-7" tabindex="-1"></a><span class="co"># View the first few rows of the data</span></span>
-<span id="cb52-8"><a href="computation.html#cb52-8" tabindex="-1"></a><span class="fu">head</span>(data_csv)</span></code></pre></div>
-<p>Suppose you have a CSV file named “study_data.csv” containing participant responses to a psychological survey.</p>
-<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="computation.html#cb53-1" tabindex="-1"></a><span class="co"># Set the working directory</span></span>
-<span id="cb53-2"><a href="computation.html#cb53-2" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;path/to/your/folder&quot;</span>)</span>
-<span id="cb53-3"><a href="computation.html#cb53-3" tabindex="-1"></a></span>
-<span id="cb53-4"><a href="computation.html#cb53-4" tabindex="-1"></a><span class="co"># Import the CSV file</span></span>
-<span id="cb53-5"><a href="computation.html#cb53-5" tabindex="-1"></a>study_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;study_data.csv&quot;</span>)</span>
-<span id="cb53-6"><a href="computation.html#cb53-6" tabindex="-1"></a></span>
-<span id="cb53-7"><a href="computation.html#cb53-7" tabindex="-1"></a><span class="co"># View the first few rows of the data</span></span>
-<span id="cb53-8"><a href="computation.html#cb53-8" tabindex="-1"></a><span class="fu">head</span>(study_data)</span></code></pre></div>
-<p>This code sets the working directory, imports the CSV file, and displays the first few rows of the dataset.</p>
-</div>
-</div>
-<div id="importing-.xlsx-files" class="section level3 hasAnchor" number="5.4.2">
-<h3><span class="header-section-number">5.4.2</span> Importing .xlsx Files<a href="computation.html#importing-.xlsx-files" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Excel Workbook (.xlsx) files are another common format for storing data. They can contain multiple sheets and more complex formatting than CSV files. The <code>readxl</code> package in R allows for easy import of .xlsx files.</p>
-<div id="step-by-step-guide-to-importing-.xlsx-files" class="section level4 hasAnchor" number="5.4.2.1">
-<h4><span class="header-section-number">5.4.2.1</span> Step-by-Step Guide to Importing .xlsx Files<a href="computation.html#step-by-step-guide-to-importing-.xlsx-files" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<ol style="list-style-type: decimal">
-<li><p><strong>Install and Load the <code>readxl</code> Package</strong>: If you haven’t already installed the <code>readxl</code> package, you can do so using <code>install.packages()</code>.</p></li>
-<li><p><strong>Use <code>read_excel()</code> Function</strong>: Use the <code>read_excel()</code> function to read the data from the Excel file.</p></li>
-</ol>
-<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="computation.html#cb54-1" tabindex="-1"></a><span class="co"># Install the readxl package (if not already installed)</span></span>
-<span id="cb54-2"><a href="computation.html#cb54-2" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;readxl&quot;</span>)</span>
-<span id="cb54-3"><a href="computation.html#cb54-3" tabindex="-1"></a></span>
-<span id="cb54-4"><a href="computation.html#cb54-4" tabindex="-1"></a><span class="co"># Load the readxl package</span></span>
-<span id="cb54-5"><a href="computation.html#cb54-5" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb54-6"><a href="computation.html#cb54-6" tabindex="-1"></a></span>
-<span id="cb54-7"><a href="computation.html#cb54-7" tabindex="-1"></a><span class="co"># Import the Excel file</span></span>
-<span id="cb54-8"><a href="computation.html#cb54-8" tabindex="-1"></a>data_xlsx <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">&quot;path/to/your/file.xlsx&quot;</span>)</span>
-<span id="cb54-9"><a href="computation.html#cb54-9" tabindex="-1"></a></span>
-<span id="cb54-10"><a href="computation.html#cb54-10" tabindex="-1"></a><span class="co"># View the first few rows of the data</span></span>
-<span id="cb54-11"><a href="computation.html#cb54-11" tabindex="-1"></a><span class="fu">head</span>(data_xlsx)</span></code></pre></div>
-<p>Suppose you have an Excel file named “experiment_data.xlsx” with multiple sheets. You can specify the sheet to read from using the sheet argument.</p>
-<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="computation.html#cb55-1" tabindex="-1"></a><span class="co"># Load the readxl package</span></span>
-<span id="cb55-2"><a href="computation.html#cb55-2" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb55-3"><a href="computation.html#cb55-3" tabindex="-1"></a></span>
-<span id="cb55-4"><a href="computation.html#cb55-4" tabindex="-1"></a><span class="co"># Import the Excel file, reading from the first sheet by default</span></span>
-<span id="cb55-5"><a href="computation.html#cb55-5" tabindex="-1"></a>experiment_data <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">&quot;experiment_data.xlsx&quot;</span>)</span>
-<span id="cb55-6"><a href="computation.html#cb55-6" tabindex="-1"></a></span>
-<span id="cb55-7"><a href="computation.html#cb55-7" tabindex="-1"></a><span class="co"># View the first few rows of the data</span></span>
-<span id="cb55-8"><a href="computation.html#cb55-8" tabindex="-1"></a><span class="fu">head</span>(experiment_data)</span>
-<span id="cb55-9"><a href="computation.html#cb55-9" tabindex="-1"></a></span>
-<span id="cb55-10"><a href="computation.html#cb55-10" tabindex="-1"></a><span class="co"># Import data from a specific sheet</span></span>
-<span id="cb55-11"><a href="computation.html#cb55-11" tabindex="-1"></a>experiment_data_sheet2 <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">&quot;experiment_data.xlsx&quot;</span>, <span class="at">sheet =</span> <span class="st">&quot;Sheet2&quot;</span>)</span>
-<span id="cb55-12"><a href="computation.html#cb55-12" tabindex="-1"></a></span>
-<span id="cb55-13"><a href="computation.html#cb55-13" tabindex="-1"></a><span class="co"># View the first few rows of the data from Sheet2</span></span>
-<span id="cb55-14"><a href="computation.html#cb55-14" tabindex="-1"></a><span class="fu">head</span>(experiment_data_sheet2)</span></code></pre></div>
-<p>This code demonstrates how to import data from an Excel file and how to read data from a specific sheet within the file.</p>
-</div>
-</div>
-<div id="conclusion-15" class="section level3 hasAnchor" number="5.4.3">
-<h3><span class="header-section-number">5.4.3</span> Conclusion<a href="computation.html#conclusion-15" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Importing data from Excel files into R is a fundamental step in data analysis. Whether dealing with simple CSV files or complex Excel Workbooks, R provides powerful functions to efficiently read and handle this data. In the next section, we will explore techniques for cleaning the imported data to ensure its accuracy and readiness for analysis.</p>
-</div>
-</div>
-<div id="cleaning-data" class="section level2 hasAnchor" number="5.5">
-<h2><span class="header-section-number">5.5</span> Cleaning Data<a href="computation.html#cleaning-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Cleaning data is a crucial step in the data analysis process, ensuring that your data is accurate, consistent, and ready for analysis. The <code>dplyr</code> package in R provides a powerful and intuitive set of functions for data manipulation, making it easier to clean and prepare your data.</p>
-<div id="introduction-to-dplyr" class="section level3 hasAnchor" number="5.5.1">
-<h3><span class="header-section-number">5.5.1</span> Introduction to <code>dplyr</code><a href="computation.html#introduction-to-dplyr" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><code>dplyr</code> is part of the tidyverse, a collection of R packages designed for data science. It provides a set of functions that are specifically designed for data manipulation tasks, including filtering, selecting, mutating, summarizing, arranging data, removing outliers, and releveling categorical factors.</p>
-<div id="installing-and-loading-dplyr" class="section level4 hasAnchor" number="5.5.1.1">
-<h4><span class="header-section-number">5.5.1.1</span> Installing and Loading <code>dplyr</code><a href="computation.html#installing-and-loading-dplyr" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="computation.html#cb56-1" tabindex="-1"></a><span class="co"># Install the dplyr package (if not already installed)</span></span>
-<span id="cb56-2"><a href="computation.html#cb56-2" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(dplyr)){<span class="fu">install.packages</span>(<span class="st">&quot;dplyr&quot;</span>, <span class="at">dependencies=</span><span class="cn">TRUE</span>)}</span></code></pre></div>
-<pre><code>## Loading required package: dplyr</code></pre>
-<pre><code>## Warning: package &#39;dplyr&#39; was built under R version 4.3.3</code></pre>
-<pre><code>## 
-## Attaching package: &#39;dplyr&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:stats&#39;:
-## 
-##     filter, lag</code></pre>
-<pre><code>## The following objects are masked from &#39;package:base&#39;:
-## 
-##     intersect, setdiff, setequal, union</code></pre>
-<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="computation.html#cb62-1" tabindex="-1"></a><span class="co"># Load the dplyr package</span></span>
-<span id="cb62-2"><a href="computation.html#cb62-2" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
-</div>
-</div>
-<div id="key-dplyr-functions-for-data-cleaning" class="section level3 hasAnchor" number="5.5.2">
-<h3><span class="header-section-number">5.5.2</span> Key <code>dplyr</code> Functions for Data Cleaning<a href="computation.html#key-dplyr-functions-for-data-cleaning" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ol style="list-style-type: decimal">
-<li><p><strong><code>filter()</code></strong>: Subset rows based on conditions.</p></li>
-<li><p><strong><code>select()</code></strong>: Select columns by name.</p></li>
-<li><p><strong><code>rename()</code></strong>: Rename columns.</p></li>
-<li><p><strong><code>mutate()</code></strong>: Create new columns or modify existing ones.</p></li>
-<li><p><strong><code>arrange()</code></strong>: Arrange rows by column values.</p></li>
-<li><p><strong><code>summarize()</code></strong>: Summarize multiple values to a single value.</p></li>
-<li><p><strong><code>group_by()</code></strong>: Group data by one or more variables.</p></li>
-<li><p><strong><code>remove_outliers()</code></strong>: Custom function to remove outliers.</p></li>
-<li><p><strong><code>relevel()</code></strong>: Relevel categorical factors for meaningful analysis.</p></li>
-</ol>
-<div id="filter-subsetting-rows" class="section level4 hasAnchor" number="5.5.2.1">
-<h4><span class="header-section-number">5.5.2.1</span> 1. <code>filter()</code>: Subsetting Rows<a href="computation.html#filter-subsetting-rows" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>The <code>filter()</code> function is used to subset rows based on one or more conditions.</p>
-<p><strong>Example</strong>: Filter rows where the age is greater than 30.</p>
-<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="computation.html#cb63-1" tabindex="-1"></a><span class="co"># Sample data</span></span>
-<span id="cb63-2"><a href="computation.html#cb63-2" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb63-3"><a href="computation.html#cb63-3" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>,</span>
-<span id="cb63-4"><a href="computation.html#cb63-4" tabindex="-1"></a>  <span class="at">age =</span> <span class="fu">c</span>(<span class="dv">23</span>, <span class="dv">35</span>, <span class="dv">42</span>, <span class="dv">28</span>, <span class="dv">30</span>, <span class="dv">34</span>, <span class="dv">21</span>, <span class="dv">40</span>, <span class="dv">29</span>, <span class="dv">31</span>)</span>
-<span id="cb63-5"><a href="computation.html#cb63-5" tabindex="-1"></a>)</span>
-<span id="cb63-6"><a href="computation.html#cb63-6" tabindex="-1"></a></span>
-<span id="cb63-7"><a href="computation.html#cb63-7" tabindex="-1"></a><span class="co"># Filter rows where age is greater than 30</span></span>
-<span id="cb63-8"><a href="computation.html#cb63-8" tabindex="-1"></a>filtered_data <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
-<span id="cb63-9"><a href="computation.html#cb63-9" tabindex="-1"></a>  <span class="fu">filter</span>(age <span class="sc">&gt;</span> <span class="dv">30</span>)</span>
-<span id="cb63-10"><a href="computation.html#cb63-10" tabindex="-1"></a></span>
-<span id="cb63-11"><a href="computation.html#cb63-11" tabindex="-1"></a><span class="fu">print</span>(filtered_data)</span></code></pre></div>
-<pre><code>##   id age
-## 1  2  35
-## 2  3  42
-## 3  6  34
-## 4  8  40
-## 5 10  31</code></pre>
-</div>
-<div id="select-selecting-columns" class="section level4 hasAnchor" number="5.5.2.2">
-<h4><span class="header-section-number">5.5.2.2</span> 2. <code>select()</code>: Selecting Columns<a href="computation.html#select-selecting-columns" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>The <code>select()</code> function is used to select specific columns from a dataset.</p>
-<p><strong>Example</strong>: Select the id and age columns.</p>
-<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="computation.html#cb65-1" tabindex="-1"></a><span class="co"># Select id and age columns</span></span>
-<span id="cb65-2"><a href="computation.html#cb65-2" tabindex="-1"></a>selected_data <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
-<span id="cb65-3"><a href="computation.html#cb65-3" tabindex="-1"></a>  <span class="fu">select</span>(id, age)</span>
-<span id="cb65-4"><a href="computation.html#cb65-4" tabindex="-1"></a></span>
-<span id="cb65-5"><a href="computation.html#cb65-5" tabindex="-1"></a><span class="fu">print</span>(selected_data)</span></code></pre></div>
-<pre><code>##    id age
-## 1   1  23
-## 2   2  35
-## 3   3  42
-## 4   4  28
-## 5   5  30
-## 6   6  34
-## 7   7  21
-## 8   8  40
-## 9   9  29
-## 10 10  31</code></pre>
-</div>
-<div id="rename-renaming-columns" class="section level4 hasAnchor" number="5.5.2.3">
-<h4><span class="header-section-number">5.5.2.3</span> 3. <code>rename()</code>: Renaming Columns<a href="computation.html#rename-renaming-columns" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>The <code>rename()</code> function is used to rename columns in a dataset.</p>
-<p><strong>Example</strong>: Rename the column <code>age</code> to <code>participant_age</code>.</p>
-<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="computation.html#cb67-1" tabindex="-1"></a><span class="co"># Rename age to participant_age</span></span>
-<span id="cb67-2"><a href="computation.html#cb67-2" tabindex="-1"></a>renamed_data <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
-<span id="cb67-3"><a href="computation.html#cb67-3" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">participant_age =</span> age)</span>
-<span id="cb67-4"><a href="computation.html#cb67-4" tabindex="-1"></a></span>
-<span id="cb67-5"><a href="computation.html#cb67-5" tabindex="-1"></a><span class="fu">print</span>(renamed_data)</span></code></pre></div>
-<pre><code>##    id participant_age
-## 1   1              23
-## 2   2              35
-## 3   3              42
-## 4   4              28
-## 5   5              30
-## 6   6              34
-## 7   7              21
-## 8   8              40
-## 9   9              29
-## 10 10              31</code></pre>
-</div>
-<div id="mutate-creating-or-modifying-columns" class="section level4 hasAnchor" number="5.5.2.4">
-<h4><span class="header-section-number">5.5.2.4</span> 4. <code>mutate()</code>: Creating or Modifying Columns<a href="computation.html#mutate-creating-or-modifying-columns" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>The <code>mutate()</code> function is used to create new columns or modify existing ones.</p>
-<p><strong>Example</strong>: Create a new column <code>age_group</code> based on the age.</p>
-<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="computation.html#cb69-1" tabindex="-1"></a><span class="co"># Create a new column age_group</span></span>
-<span id="cb69-2"><a href="computation.html#cb69-2" tabindex="-1"></a>mutated_data <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
-<span id="cb69-3"><a href="computation.html#cb69-3" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">age_group =</span> <span class="fu">ifelse</span>(age <span class="sc">&gt;</span> <span class="dv">30</span>, <span class="st">&quot;Above 30&quot;</span>, <span class="st">&quot;30 or Below&quot;</span>))</span>
-<span id="cb69-4"><a href="computation.html#cb69-4" tabindex="-1"></a></span>
-<span id="cb69-5"><a href="computation.html#cb69-5" tabindex="-1"></a><span class="fu">print</span>(mutated_data)</span></code></pre></div>
-<pre><code>##    id age   age_group
-## 1   1  23 30 or Below
-## 2   2  35    Above 30
-## 3   3  42    Above 30
-## 4   4  28 30 or Below
-## 5   5  30 30 or Below
-## 6   6  34    Above 30
-## 7   7  21 30 or Below
-## 8   8  40    Above 30
-## 9   9  29 30 or Below
-## 10 10  31    Above 30</code></pre>
-</div>
-<div id="arrange-arranging-rows" class="section level4 hasAnchor" number="5.5.2.5">
-<h4><span class="header-section-number">5.5.2.5</span> 5. <code>arrange()</code>: Arranging Rows<a href="computation.html#arrange-arranging-rows" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>The <code>arrange()</code> function is used to sort rows by column values.</p>
-<p><strong>Example</strong>: Arrange rows by age in descending order.</p>
-<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="computation.html#cb71-1" tabindex="-1"></a><span class="co"># Arrange rows by age in descending order</span></span>
-<span id="cb71-2"><a href="computation.html#cb71-2" tabindex="-1"></a>arranged_data <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
-<span id="cb71-3"><a href="computation.html#cb71-3" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(age))</span>
-<span id="cb71-4"><a href="computation.html#cb71-4" tabindex="-1"></a></span>
-<span id="cb71-5"><a href="computation.html#cb71-5" tabindex="-1"></a><span class="fu">print</span>(arranged_data)</span></code></pre></div>
-<pre><code>##    id age
-## 1   3  42
-## 2   8  40
-## 3   2  35
-## 4   6  34
-## 5  10  31
-## 6   5  30
-## 7   9  29
-## 8   4  28
-## 9   1  23
-## 10  7  21</code></pre>
-</div>
-<div id="summarize-summarizing-values" class="section level4 hasAnchor" number="5.5.2.6">
-<h4><span class="header-section-number">5.5.2.6</span> 6. <code>summarize()</code>: Summarizing Values<a href="computation.html#summarize-summarizing-values" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>The <code>summarize()</code> function is used to summarize multiple values into a single value.</p>
-<p><strong>Example</strong>: Calculate the average age.</p>
-<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="computation.html#cb73-1" tabindex="-1"></a><span class="co"># Calculate the average age</span></span>
-<span id="cb73-2"><a href="computation.html#cb73-2" tabindex="-1"></a>summary_data <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
-<span id="cb73-3"><a href="computation.html#cb73-3" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">average_age =</span> <span class="fu">mean</span>(age))</span>
-<span id="cb73-4"><a href="computation.html#cb73-4" tabindex="-1"></a></span>
-<span id="cb73-5"><a href="computation.html#cb73-5" tabindex="-1"></a><span class="fu">print</span>(summary_data)</span></code></pre></div>
-<pre><code>##   average_age
-## 1        31.3</code></pre>
-</div>
-<div id="group_by-grouping-data" class="section level4 hasAnchor" number="5.5.2.7">
-<h4><span class="header-section-number">5.5.2.7</span> 7. <code>group_by()</code>: Grouping Data<a href="computation.html#group_by-grouping-data" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>The <code>group_by()</code> function is used to group data by one or more variables, often used in conjunction with <code>summarize()</code>.</p>
-<p><strong>Example</strong>: Group data by <code>age_group</code> and calculate the average age for each group.</p>
-<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="computation.html#cb75-1" tabindex="-1"></a><span class="co"># Group by age_group and calculate average age for each group</span></span>
-<span id="cb75-2"><a href="computation.html#cb75-2" tabindex="-1"></a>grouped_data <span class="ot">&lt;-</span> mutated_data <span class="sc">%&gt;%</span></span>
-<span id="cb75-3"><a href="computation.html#cb75-3" tabindex="-1"></a>  <span class="fu">group_by</span>(age_group) <span class="sc">%&gt;%</span></span>
-<span id="cb75-4"><a href="computation.html#cb75-4" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">average_age =</span> <span class="fu">mean</span>(age))</span>
-<span id="cb75-5"><a href="computation.html#cb75-5" tabindex="-1"></a></span>
-<span id="cb75-6"><a href="computation.html#cb75-6" tabindex="-1"></a><span class="fu">print</span>(grouped_data)</span></code></pre></div>
-<pre><code>## # A tibble: 2 × 2
-##   age_group   average_age
-##   &lt;chr&gt;             &lt;dbl&gt;
-## 1 30 or Below        26.2
-## 2 Above 30           36.4</code></pre>
-</div>
-<div id="removing-outliers" class="section level4 hasAnchor" number="5.5.2.8">
-<h4><span class="header-section-number">5.5.2.8</span> 8. Removing Outliers<a href="computation.html#removing-outliers" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Outliers can skew your analysis and lead to misleading results. Removing outliers helps in obtaining a more accurate representation of the data.</p>
-<p><strong>Example</strong>: Removing outliers based on the IQR method.</p>
-<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="computation.html#cb77-1" tabindex="-1"></a><span class="co"># Custom function to remove outliers</span></span>
-<span id="cb77-2"><a href="computation.html#cb77-2" tabindex="-1"></a>remove_outliers <span class="ot">&lt;-</span> <span class="cf">function</span>(data, column) {</span>
-<span id="cb77-3"><a href="computation.html#cb77-3" tabindex="-1"></a>  Q1 <span class="ot">&lt;-</span> <span class="fu">quantile</span>(data[[column]], <span class="fl">0.25</span>)</span>
-<span id="cb77-4"><a href="computation.html#cb77-4" tabindex="-1"></a>  Q3 <span class="ot">&lt;-</span> <span class="fu">quantile</span>(data[[column]], <span class="fl">0.75</span>)</span>
-<span id="cb77-5"><a href="computation.html#cb77-5" tabindex="-1"></a>  IQR <span class="ot">&lt;-</span> Q3 <span class="sc">-</span> Q1</span>
-<span id="cb77-6"><a href="computation.html#cb77-6" tabindex="-1"></a>  lower_bound <span class="ot">&lt;-</span> Q1 <span class="sc">-</span> <span class="fl">1.5</span> <span class="sc">*</span> IQR</span>
-<span id="cb77-7"><a href="computation.html#cb77-7" tabindex="-1"></a>  upper_bound <span class="ot">&lt;-</span> Q3 <span class="sc">+</span> <span class="fl">1.5</span> <span class="sc">*</span> IQR</span>
-<span id="cb77-8"><a href="computation.html#cb77-8" tabindex="-1"></a>  data <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
-<span id="cb77-9"><a href="computation.html#cb77-9" tabindex="-1"></a>    <span class="fu">filter</span>(data[[column]] <span class="sc">&gt;=</span> lower_bound <span class="sc">&amp;</span> data[[column]] <span class="sc">&lt;=</span> upper_bound)</span>
-<span id="cb77-10"><a href="computation.html#cb77-10" tabindex="-1"></a>  <span class="fu">return</span>(data)</span>
-<span id="cb77-11"><a href="computation.html#cb77-11" tabindex="-1"></a>}</span>
-<span id="cb77-12"><a href="computation.html#cb77-12" tabindex="-1"></a></span>
-<span id="cb77-13"><a href="computation.html#cb77-13" tabindex="-1"></a><span class="co"># Remove outliers from the age column</span></span>
-<span id="cb77-14"><a href="computation.html#cb77-14" tabindex="-1"></a>data_no_outliers <span class="ot">&lt;-</span> <span class="fu">remove_outliers</span>(data, <span class="st">&quot;age&quot;</span>)</span>
-<span id="cb77-15"><a href="computation.html#cb77-15" tabindex="-1"></a></span>
-<span id="cb77-16"><a href="computation.html#cb77-16" tabindex="-1"></a><span class="fu">print</span>(data_no_outliers)</span></code></pre></div>
-<pre><code>##    id age
-## 1   1  23
-## 2   2  35
-## 3   3  42
-## 4   4  28
-## 5   5  30
-## 6   6  34
-## 7   7  21
-## 8   8  40
-## 9   9  29
-## 10 10  31</code></pre>
-</div>
-<div id="releveling-categorical-factors" class="section level4 hasAnchor" number="5.5.2.9">
-<h4><span class="header-section-number">5.5.2.9</span> 9. Releveling Categorical Factors<a href="computation.html#releveling-categorical-factors" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Releveling categorical factors ensures that the reference level is meaningful for your analysis. This is particularly important in regression models where the reference level serves as the baseline.</p>
-<p><strong>Example</strong>: Relevel the <code>age_group</code> column to set “30 or Below” as the reference level.</p>
-<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="computation.html#cb79-1" tabindex="-1"></a><span class="co"># Relevel age_group to set &quot;30 or Below&quot; as the reference level</span></span>
-<span id="cb79-2"><a href="computation.html#cb79-2" tabindex="-1"></a>mutated_data <span class="ot">&lt;-</span> mutated_data <span class="sc">%&gt;%</span></span>
-<span id="cb79-3"><a href="computation.html#cb79-3" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">age_group =</span> <span class="fu">relevel</span>(<span class="fu">factor</span>(age_group), <span class="at">ref =</span> <span class="st">&quot;30 or Below&quot;</span>))</span>
-<span id="cb79-4"><a href="computation.html#cb79-4" tabindex="-1"></a></span>
-<span id="cb79-5"><a href="computation.html#cb79-5" tabindex="-1"></a><span class="fu">print</span>(mutated_data)</span></code></pre></div>
-<pre><code>##    id age   age_group
-## 1   1  23 30 or Below
-## 2   2  35    Above 30
-## 3   3  42    Above 30
-## 4   4  28 30 or Below
-## 5   5  30 30 or Below
-## 6   6  34    Above 30
-## 7   7  21 30 or Below
-## 8   8  40    Above 30
-## 9   9  29 30 or Below
-## 10 10  31    Above 30</code></pre>
-</div>
-</div>
-<div id="practical-examples-of-data-cleaning" class="section level3 hasAnchor" number="5.5.3">
-<h3><span class="header-section-number">5.5.3</span> Practical Examples of Data Cleaning<a href="computation.html#practical-examples-of-data-cleaning" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Combining multiple <code>dplyr</code> functions can make complex data cleaning tasks straightforward.</p>
-<p><strong>Example 1</strong>: Cleaning a Survey Dataset</p>
-<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="computation.html#cb81-1" tabindex="-1"></a><span class="co"># Sample survey data</span></span>
-<span id="cb81-2"><a href="computation.html#cb81-2" tabindex="-1"></a>survey_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb81-3"><a href="computation.html#cb81-3" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>,</span>
-<span id="cb81-4"><a href="computation.html#cb81-4" tabindex="-1"></a>  <span class="at">age =</span> <span class="fu">c</span>(<span class="dv">23</span>, <span class="dv">35</span>, <span class="dv">42</span>, <span class="cn">NA</span>, <span class="dv">30</span>, <span class="dv">34</span>, <span class="dv">21</span>, <span class="dv">40</span>, <span class="dv">29</span>, <span class="dv">31</span>),</span>
-<span id="cb81-5"><a href="computation.html#cb81-5" tabindex="-1"></a>  <span class="at">gender =</span> <span class="fu">c</span>(<span class="st">&quot;M&quot;</span>, <span class="st">&quot;F&quot;</span>, <span class="st">&quot;F&quot;</span>, <span class="st">&quot;M&quot;</span>, <span class="st">&quot;M&quot;</span>, <span class="st">&quot;F&quot;</span>, <span class="st">&quot;M&quot;</span>, <span class="st">&quot;F&quot;</span>, <span class="st">&quot;M&quot;</span>, <span class="st">&quot;F&quot;</span>),</span>
-<span id="cb81-6"><a href="computation.html#cb81-6" tabindex="-1"></a>  <span class="at">score =</span> <span class="fu">c</span>(<span class="dv">80</span>, <span class="dv">85</span>, <span class="dv">78</span>, <span class="dv">90</span>, <span class="dv">85</span>, <span class="dv">75</span>, <span class="dv">88</span>, <span class="dv">92</span>, <span class="dv">84</span>, <span class="cn">NA</span>)</span>
-<span id="cb81-7"><a href="computation.html#cb81-7" tabindex="-1"></a>)</span>
-<span id="cb81-8"><a href="computation.html#cb81-8" tabindex="-1"></a></span>
-<span id="cb81-9"><a href="computation.html#cb81-9" tabindex="-1"></a><span class="co"># Clean the survey data</span></span>
-<span id="cb81-10"><a href="computation.html#cb81-10" tabindex="-1"></a>cleaned_survey_data <span class="ot">&lt;-</span> survey_data <span class="sc">%&gt;%</span></span>
-<span id="cb81-11"><a href="computation.html#cb81-11" tabindex="-1"></a>  <span class="co"># Remove rows with missing values</span></span>
-<span id="cb81-12"><a href="computation.html#cb81-12" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(age), <span class="sc">!</span><span class="fu">is.na</span>(score)) <span class="sc">%&gt;%</span></span>
-<span id="cb81-13"><a href="computation.html#cb81-13" tabindex="-1"></a>  <span class="co"># Rename columns</span></span>
-<span id="cb81-14"><a href="computation.html#cb81-14" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">participant_age =</span> age, <span class="at">test_score =</span> score) <span class="sc">%&gt;%</span></span>
-<span id="cb81-15"><a href="computation.html#cb81-15" tabindex="-1"></a>  <span class="co"># Create age_group column</span></span>
-<span id="cb81-16"><a href="computation.html#cb81-16" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">age_group =</span> <span class="fu">ifelse</span>(participant_age <span class="sc">&gt;</span> <span class="dv">30</span>, <span class="st">&quot;Above 30&quot;</span>, <span class="st">&quot;30 or Below&quot;</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb81-17"><a href="computation.html#cb81-17" tabindex="-1"></a>  <span class="co"># Remove outliers in test_score</span></span>
-<span id="cb81-18"><a href="computation.html#cb81-18" tabindex="-1"></a>  <span class="fu">remove_outliers</span>(<span class="st">&quot;test_score&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb81-19"><a href="computation.html#cb81-19" tabindex="-1"></a>  <span class="co"># Select relevant columns</span></span>
-<span id="cb81-20"><a href="computation.html#cb81-20" tabindex="-1"></a>  <span class="fu">select</span>(id, participant_age, gender, age_group, test_score) <span class="sc">%&gt;%</span></span>
-<span id="cb81-21"><a href="computation.html#cb81-21" tabindex="-1"></a>  <span class="co"># Arrange by test_score in descending order</span></span>
-<span id="cb81-22"><a href="computation.html#cb81-22" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(test_score))</span>
-<span id="cb81-23"><a href="computation.html#cb81-23" tabindex="-1"></a></span>
-<span id="cb81-24"><a href="computation.html#cb81-24" tabindex="-1"></a><span class="fu">print</span>(cleaned_survey_data)</span></code></pre></div>
-<pre><code>##   id participant_age gender   age_group test_score
-## 1  8              40      F    Above 30         92
-## 2  7              21      M 30 or Below         88
-## 3  2              35      F    Above 30         85
-## 4  5              30      M 30 or Below         85
-## 5  9              29      M 30 or Below         84
-## 6  1              23      M 30 or Below         80
-## 7  3              42      F    Above 30         78
-## 8  6              34      F    Above 30         75</code></pre>
-<p><strong>Example 2</strong>: Cleaning Experimental Data</p>
-<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="computation.html#cb83-1" tabindex="-1"></a><span class="co"># Sample experimental data</span></span>
-<span id="cb83-2"><a href="computation.html#cb83-2" tabindex="-1"></a>experiment_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb83-3"><a href="computation.html#cb83-3" tabindex="-1"></a>  <span class="at">subject_id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">15</span>,</span>
-<span id="cb83-4"><a href="computation.html#cb83-4" tabindex="-1"></a>  <span class="at">condition =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;Control&quot;</span>, <span class="st">&quot;Treatment&quot;</span>), <span class="at">length.out =</span> <span class="dv">15</span>),</span>
-<span id="cb83-5"><a href="computation.html#cb83-5" tabindex="-1"></a>  <span class="at">response_time =</span> <span class="fu">c</span>(<span class="dv">200</span>, <span class="dv">150</span>, <span class="dv">250</span>, <span class="dv">300</span>, <span class="dv">220</span>, <span class="dv">180</span>, <span class="dv">290</span>, <span class="dv">310</span>, <span class="dv">205</span>, <span class="dv">190</span>, <span class="dv">175</span>, <span class="dv">265</span>, <span class="dv">225</span>, <span class="dv">230</span>, <span class="dv">210</span>)</span>
-<span id="cb83-6"><a href="computation.html#cb83-6" tabindex="-1"></a>)</span>
-<span id="cb83-7"><a href="computation.html#cb83-7" tabindex="-1"></a></span>
-<span id="cb83-8"><a href="computation.html#cb83-8" tabindex="-1"></a><span class="co"># Clean the experimental data</span></span>
-<span id="cb83-9"><a href="computation.html#cb83-9" tabindex="-1"></a>cleaned_experiment_data <span class="ot">&lt;-</span> experiment_data <span class="sc">%&gt;%</span></span>
-<span id="cb83-10"><a href="computation.html#cb83-10" tabindex="-1"></a>  <span class="co"># Filter out response times greater than 300 ms</span></span>
-<span id="cb83-11"><a href="computation.html#cb83-11" tabindex="-1"></a>  <span class="fu">filter</span>(response_time <span class="sc">&lt;=</span> <span class="dv">300</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb83-12"><a href="computation.html#cb83-12" tabindex="-1"></a>  <span class="co"># Calculate mean response time by condition</span></span>
-<span id="cb83-13"><a href="computation.html#cb83-13" tabindex="-1"></a>  <span class="fu">group_by</span>(condition) <span class="sc">%&gt;%</span></span>
-<span id="cb83-14"><a href="computation.html#cb83-14" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">mean_response_time =</span> <span class="fu">mean</span>(response_time)) <span class="sc">%&gt;%</span></span>
-<span id="cb83-15"><a href="computation.html#cb83-15" tabindex="-1"></a>  <span class="co"># Relevel the condition factor to set Control as the reference level</span></span>
-<span id="cb83-16"><a href="computation.html#cb83-16" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">condition =</span> <span class="fu">relevel</span>(<span class="fu">factor</span>(condition), <span class="at">ref =</span> <span class="st">&quot;Control&quot;</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb83-17"><a href="computation.html#cb83-17" tabindex="-1"></a>  <span class="co"># Arrange by mean_response_time</span></span>
-<span id="cb83-18"><a href="computation.html#cb83-18" tabindex="-1"></a>  <span class="fu">arrange</span>(mean_response_time)</span>
-<span id="cb83-19"><a href="computation.html#cb83-19" tabindex="-1"></a></span>
-<span id="cb83-20"><a href="computation.html#cb83-20" tabindex="-1"></a><span class="fu">print</span>(cleaned_experiment_data)</span></code></pre></div>
-<pre><code>## # A tibble: 2 × 2
-##   condition mean_response_time
-##   &lt;fct&gt;                  &lt;dbl&gt;
-## 1 Treatment               219.
-## 2 Control                 222.</code></pre>
-</div>
-<div id="conclusion-16" class="section level3 hasAnchor" number="5.5.4">
-<h3><span class="header-section-number">5.5.4</span> Conclusion<a href="computation.html#conclusion-16" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Cleaning data is a vital step in ensuring the accuracy and reliability of your analysis. The <code>dplyr</code> package in R provides a suite of powerful functions to simplify and streamline this process, including removing outliers and releveling categorical factors. By mastering these functions, you can efficiently manipulate and prepare your data for analysis, leading to more robust and credible research outcomes. In the next section, we will explore techniques for describing data using the <code>psych</code> package, providing practical examples and hands-on exercises.</p>
-</div>
-</div>
-<div id="describing-data-using-the-psych-package" class="section level2 hasAnchor" number="5.6">
-<h2><span class="header-section-number">5.6</span> Describing Data Using the <code>psych</code> Package<a href="computation.html#describing-data-using-the-psych-package" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="overview-of-the-psych-package" class="section level3 hasAnchor" number="5.6.1">
-<h3><span class="header-section-number">5.6.1</span> Overview of the <code>psych</code> Package<a href="computation.html#overview-of-the-psych-package" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The <code>psych</code> package in R is designed to facilitate psychological research by providing tools for data analysis, including descriptive statistics, reliability analysis, and factor analysis. This package is widely used for its comprehensive functions that cater specifically to the needs of psychological researchers.</p>
-<div id="introduction-to-the-psych-package-and-its-functionalities" class="section level4 hasAnchor" number="5.6.1.1">
-<h4><span class="header-section-number">5.6.1.1</span> Introduction to the <code>psych</code> Package and its Functionalities<a href="computation.html#introduction-to-the-psych-package-and-its-functionalities" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>The <code>psych</code> package offers various functions to perform:</p>
-<ol style="list-style-type: decimal">
-<li><p><strong>Descriptive Statistics</strong>: Summarize data with measures such as mean, median, variance, standard deviation, and more.</p></li>
-<li><p><strong>Reliability Analysis</strong>: Assess the reliability of scales and measurements.</p></li>
-<li><p><strong>Factor Analysis</strong>: Conduct exploratory and confirmatory factor analysis.</p></li>
-<li><p><strong>Graphical Representations</strong>: Create visual summaries of data, including correlation matrices and pair panels.</p></li>
-</ol>
-</div>
-<div id="installation-and-loading-the-package" class="section level4 hasAnchor" number="5.6.1.2">
-<h4><span class="header-section-number">5.6.1.2</span> Installation and Loading the Package<a href="computation.html#installation-and-loading-the-package" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>To use the <code>psych</code> package, you need to install it (if not already installed) and then load it into your R session.</p>
-<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="computation.html#cb85-1" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(psych)){<span class="fu">install.packages</span>(<span class="st">&quot;psych&quot;</span>, <span class="at">dependencies=</span><span class="cn">TRUE</span>)}</span>
-<span id="cb85-2"><a href="computation.html#cb85-2" tabindex="-1"></a><span class="fu">library</span>(psych)</span></code></pre></div>
-</div>
-</div>
-<div id="descriptive-statistics-with-psych" class="section level3 hasAnchor" number="5.6.2">
-<h3><span class="header-section-number">5.6.2</span> Descriptive Statistics with <code>psych</code><a href="computation.html#descriptive-statistics-with-psych" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Generating descriptive statistics is a fundamental part of data analysis, providing insights into the central tendency, variability, and distribution of your data.</p>
-<div id="techniques-for-generating-descriptive-statistics" class="section level4 hasAnchor" number="5.6.2.1">
-<h4><span class="header-section-number">5.6.2.1</span> Techniques for Generating Descriptive Statistics<a href="computation.html#techniques-for-generating-descriptive-statistics" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>The <code>describe()</code> function in the <code>psych</code> package is a powerful tool for generating a comprehensive summary of your dataset. It provides various descriptive statistics, including:</p>
-<ul>
-<li><p>Mean</p></li>
-<li><p>Standard deviation</p></li>
-<li><p>Median</p></li>
-<li><p>Minimum and maximum values</p></li>
-<li><p>Range</p></li>
-<li><p>Skewness and kurtosis</p></li>
+<li><p><strong>Null Hypothesis (H₀)</strong>: The null hypothesis is a statement that assumes no effect, no difference, or no relationship between the variables being studied. It represents the default position or status quo. In our earlier example of testing a new therapy for anxiety, the null hypothesis might state: “There is no difference in anxiety levels between the group that received the new therapy and the group that did not.”</p></li>
+<li><p><strong>Alternative Hypothesis (H₁)</strong>: The alternative hypothesis is a statement that suggests there is an effect, a difference, or a relationship between the variables. It represents the researcher’s theory or what they aim to prove. Continuing with the anxiety therapy example, the alternative hypothesis might state: “The group that received the new therapy has lower anxiety levels than the group that did not.”</p></li>
 </ul>
-</div>
-<div id="practical-example-with-sample-data" class="section level4 hasAnchor" number="5.6.2.2">
-<h4><span class="header-section-number">5.6.2.2</span> Practical Example with Sample Data<a href="computation.html#practical-example-with-sample-data" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Let’s consider a dataset of participants’ test scores.</p>
-<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="computation.html#cb86-1" tabindex="-1"></a><span class="co"># Sample data</span></span>
-<span id="cb86-2"><a href="computation.html#cb86-2" tabindex="-1"></a>test_scores <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb86-3"><a href="computation.html#cb86-3" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>,</span>
-<span id="cb86-4"><a href="computation.html#cb86-4" tabindex="-1"></a>  <span class="at">score =</span> <span class="fu">c</span>(<span class="dv">85</span>, <span class="dv">90</span>, <span class="dv">78</span>, <span class="dv">92</span>, <span class="dv">88</span>, <span class="dv">76</span>, <span class="dv">95</span>, <span class="dv">89</span>, <span class="dv">84</span>, <span class="dv">91</span>)</span>
-<span id="cb86-5"><a href="computation.html#cb86-5" tabindex="-1"></a>)</span>
-<span id="cb86-6"><a href="computation.html#cb86-6" tabindex="-1"></a></span>
-<span id="cb86-7"><a href="computation.html#cb86-7" tabindex="-1"></a><span class="co"># Generate descriptive statistics</span></span>
-<span id="cb86-8"><a href="computation.html#cb86-8" tabindex="-1"></a><span class="fu">describe</span>(test_scores)</span></code></pre></div>
-<pre><code>##       vars  n mean   sd median trimmed  mad min max range  skew kurtosis   se
-## id       1 10  5.5 3.03    5.5    5.50 3.71   1  10     9  0.00    -1.56 0.96
-## score    2 10 86.8 6.09   88.5   87.12 5.19  76  95    19 -0.51    -1.15 1.93</code></pre>
-<p>This code generates a detailed summary of the <code>test_scores</code> dataset, providing a comprehensive overview of its statistical properties.</p>
-</div>
-</div>
-<div id="graphical-representations-with-psych" class="section level3 hasAnchor" number="5.6.3">
-<h3><span class="header-section-number">5.6.3</span> Graphical Representations with <code>psych</code><a href="computation.html#graphical-representations-with-psych" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Creating graphical summaries is essential for visualizing data patterns and relationships. The <code>psych</code> package provides several functions for this purpose.</p>
-<div id="techniques-for-creating-graphical-summaries" class="section level4 hasAnchor" number="5.6.3.1">
-<h4><span class="header-section-number">5.6.3.1</span> Techniques for Creating Graphical Summaries<a href="computation.html#techniques-for-creating-graphical-summaries" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Hypothesis testing involves using sample data to evaluate these hypotheses. Researchers generally aim to reject the null hypothesis in favor of the alternative hypothesis, thereby providing evidence that the effect or difference they are studying is real.</p>
+<p><strong>How Hypotheses Are Formulated When Comparing Two Populations</strong></p>
+<p>Formulating hypotheses is a critical step in hypothesis testing, as it sets the stage for the entire analysis. When comparing two populations, researchers typically formulate hypotheses that reflect the question they want to answer.</p>
+<p>Here are some common ways hypotheses might be formulated in psychological studies:</p>
 <ol style="list-style-type: decimal">
-<li><p><strong>Correlation Matrix Visualization</strong>: The <code>corPlot()</code> function visualizes the correlation matrix of a dataset.</p></li>
-<li><p><strong>Pair Panels</strong>: The <code>pairs.panels()</code> function creates scatterplot matrices with histograms and correlation coefficients.</p></li>
-</ol>
-</div>
-<div id="practical-example" class="section level4 hasAnchor" number="5.6.3.2">
-<h4><span class="header-section-number">5.6.3.2</span> Practical Example<a href="computation.html#practical-example" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Let’s visualize the relationships between multiple variables in a dataset.</p>
-<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="computation.html#cb88-1" tabindex="-1"></a><span class="co"># Sample data</span></span>
-<span id="cb88-2"><a href="computation.html#cb88-2" tabindex="-1"></a>multi_var_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb88-3"><a href="computation.html#cb88-3" tabindex="-1"></a>  <span class="at">score =</span> <span class="fu">c</span>(<span class="dv">85</span>, <span class="dv">90</span>, <span class="dv">78</span>, <span class="dv">92</span>, <span class="dv">88</span>, <span class="dv">76</span>, <span class="dv">95</span>, <span class="dv">89</span>, <span class="dv">84</span>, <span class="dv">91</span>),</span>
-<span id="cb88-4"><a href="computation.html#cb88-4" tabindex="-1"></a>  <span class="at">age =</span> <span class="fu">c</span>(<span class="dv">23</span>, <span class="dv">25</span>, <span class="dv">22</span>, <span class="dv">24</span>, <span class="dv">26</span>, <span class="dv">21</span>, <span class="dv">27</span>, <span class="dv">25</span>, <span class="dv">23</span>, <span class="dv">24</span>),</span>
-<span id="cb88-5"><a href="computation.html#cb88-5" tabindex="-1"></a>  <span class="at">study_hours =</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">5</span>, <span class="dv">3</span>, <span class="dv">7</span>, <span class="dv">6</span>, <span class="dv">5</span>, <span class="dv">6</span>)</span>
-<span id="cb88-6"><a href="computation.html#cb88-6" tabindex="-1"></a>)</span>
-<span id="cb88-7"><a href="computation.html#cb88-7" tabindex="-1"></a></span>
-<span id="cb88-8"><a href="computation.html#cb88-8" tabindex="-1"></a><span class="co"># Visualize the correlation matrix</span></span>
-<span id="cb88-9"><a href="computation.html#cb88-9" tabindex="-1"></a><span class="fu">corPlot</span>(<span class="fu">cor</span>(multi_var_data), <span class="at">numbers =</span> <span class="cn">TRUE</span>, <span class="at">main =</span> <span class="st">&quot;Correlation Matrix&quot;</span>)</span></code></pre></div>
-<p><img src="psych-stats-book_files/figure-html/unnamed-chunk-39-1.png" width="672" /></p>
-</div>
-<div id="reading-the-corplot-output" class="section level4 hasAnchor" number="5.6.3.3">
-<h4><span class="header-section-number">5.6.3.3</span> Reading the <code>corPlot()</code> Output<a href="computation.html#reading-the-corplot-output" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>The <code>corPlot()</code> function generates a visual representation of the correlation matrix for a dataset. Here’s how to interpret the different elements of the output:</p>
-<ol style="list-style-type: decimal">
-<li><p><strong>Correlation Coefficients</strong>: The numerical values in the matrix represent the correlation coefficients between pairs of variables. These coefficients quantify the strength and direction of the linear relationship between variables.</p>
+<li><strong>Two-Tailed Hypothesis</strong>: This type of hypothesis does not specify the direction of the difference. It simply states that there is a difference between the two groups.
 <ul>
-<li><p><strong>Correlation Coefficient (r)</strong>: The value ranges from -1 to 1.</p>
-<ul>
-<li><p><strong>r = 1</strong>: Perfect positive correlation.</p></li>
-<li><p><strong>r = -1</strong>: Perfect negative correlation.</p></li>
-<li><p><strong>r = 0</strong>: No correlation.</p></li>
+<li><strong>H₀</strong>: There is no difference in anxiety levels between the therapy group and the control group.</li>
+<li><strong>H₁</strong>: There is a difference in anxiety levels between the therapy group and the control group.</li>
 </ul></li>
-</ul></li>
-<li><p><strong>Color Coding</strong>: The cells in the matrix are color-coded to reflect the strength and direction of the correlations.</p>
+<li><strong>One-Tailed Hypothesis</strong>: This type of hypothesis specifies the direction of the expected difference.
 <ul>
-<li><p><strong>Positive Correlations</strong>: Shades of blue indicate positive correlations, with darker shades representing stronger correlations.</p></li>
-<li><p><strong>Negative Correlations</strong>: Shades of red indicate negative correlations, with darker shades representing stronger negative correlations.</p></li>
-</ul></li>
-<li><p><strong>Significance Levels</strong>: If the <code>numbers</code> argument is set to <code>TRUE</code>, the plot displays the correlation coefficients as numbers within the cells, helping you to identify the exact strength of each correlation.</p></li>
-</ol>
-<p><strong>Example Output Interpretation</strong>:</p>
-<ul>
-<li><p><strong>Diagonal Elements</strong>: The diagonal elements of the matrix represent the correlation of each variable with itself, which is always 1.</p></li>
-<li><p><strong>Off-Diagonal Elements</strong>: The off-diagonal elements show the correlation coefficients between pairs of variables. For instance, a cell showing a value of 0.75 between <code>study_hours</code> and <code>score</code> indicates a strong positive correlation.</p></li>
-<li><p><strong>Color Coding</strong>: If a cell is dark blue, it signifies a strong positive correlation, whereas a dark red cell signifies a strong negative correlation. Light colors indicate weaker correlations.</p></li>
-<li><p><strong>Numerical Values</strong>: The numbers within the cells provide the exact correlation coefficients, making it easy to identify and interpret the strength of the relationships.</p></li>
-<li><p><strong>Correlation between <code>score</code> and <code>study_hours</code></strong>: The correlation coefficient might be 0.75, displayed in a dark blue cell, indicating a strong positive correlation.</p></li>
-<li><p><strong>Correlation between <code>score</code> and <code>age</code></strong>: The correlation coefficient might be 0.30, displayed in a light blue cell, indicating a moderate positive correlation.</p></li>
-<li><p><strong>Correlation between <code>age</code> and <code>study_hours</code></strong>: The correlation coefficient might be -0.15, displayed in a light red cell, indicating a weak negative correlation.</p></li>
-</ul>
-<p>These interpretations help you understand how the variables in your dataset relate to one another, guiding further analysis and decision-making.</p>
-<div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb89-1"><a href="computation.html#cb89-1" tabindex="-1"></a><span class="fu">pairs.panels</span>(multi_var_data, </span>
-<span id="cb89-2"><a href="computation.html#cb89-2" tabindex="-1"></a>             <span class="at">method =</span> <span class="st">&quot;pearson&quot;</span>,  <span class="co"># correlation method</span></span>
-<span id="cb89-3"><a href="computation.html#cb89-3" tabindex="-1"></a>             <span class="at">hist.col =</span> <span class="st">&quot;blue&quot;</span>,    <span class="co"># histogram color</span></span>
-<span id="cb89-4"><a href="computation.html#cb89-4" tabindex="-1"></a>             <span class="at">density =</span> <span class="cn">TRUE</span>,       <span class="co"># add density plots</span></span>
-<span id="cb89-5"><a href="computation.html#cb89-5" tabindex="-1"></a>             <span class="at">ellipses =</span> <span class="cn">TRUE</span>       <span class="co"># add correlation ellipses</span></span>
-<span id="cb89-6"><a href="computation.html#cb89-6" tabindex="-1"></a>)</span></code></pre></div>
-<p><img src="psych-stats-book_files/figure-html/Create%20pair%20panels-1.png" width="672" /></p>
-<p>The <code>corPlot()</code> function displays a correlation matrix with correlation coefficients, while <code>pairs.panels()</code> creates a scatterplot matrix with histograms and density plots, providing a detailed visual summary of the relationships between variables.</p>
-</div>
-<div id="reading-the-pairs.panels-output" class="section level4 hasAnchor" number="5.6.3.4">
-<h4><span class="header-section-number">5.6.3.4</span> Reading the <code>pairs.panels()</code> Output<a href="computation.html#reading-the-pairs.panels-output" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>The <code>pairs.panels()</code> function generates a comprehensive visual summary of the relationships between multiple variables in a dataset. Here’s how to interpret the different elements of the output:</p>
-<ol style="list-style-type: decimal">
-<li><p><strong>Scatterplots (Lower Triangle)</strong>: The lower triangle of the matrix contains scatterplots for each pair of variables. Each scatterplot shows the relationship between two variables, allowing you to visually assess the strength and direction of their correlation.</p>
-<ul>
-<li><p><strong>Positive Correlation</strong>: If the points in the scatterplot form an upward sloping pattern, it indicates a positive correlation between the variables.</p></li>
-<li><p><strong>Negative Correlation</strong>: If the points form a downward sloping pattern, it indicates a negative correlation.</p></li>
-<li><p><strong>No Correlation</strong>: If the points are widely scattered with no discernible pattern, it suggests little to no correlation.</p></li>
-</ul></li>
-<li><p><strong>Histograms (Diagonal)</strong>: The diagonal of the matrix contains histograms for each variable. These histograms show the distribution of values for each variable, helping you to understand their central tendency, variability, and skewness.</p>
-<ul>
-<li><p><strong>Symmetric Distribution</strong>: A bell-shaped histogram suggests a normal distribution.</p></li>
-<li><p><strong>Skewed Distribution</strong>: A histogram with a long tail on one side indicates skewness in the data.</p></li>
-</ul></li>
-<li><p><strong>Correlation Coefficients (Upper Triangle)</strong>: The upper triangle of the matrix contains correlation coefficients for each pair of variables. These coefficients quantify the strength and direction of the linear relationship between variables.</p>
-<ul>
-<li><p><strong>Correlation Coefficient (r)</strong>: The value ranges from -1 to 1.</p>
-<ul>
-<li><p><strong>r = 1</strong>: Perfect positive correlation.</p></li>
-<li><p><strong>r = -1</strong>: Perfect negative correlation.</p></li>
-<li><p><strong>r = 0</strong>: No correlation.</p></li>
-</ul></li>
-<li><p><strong>Significance Levels</strong>: The size and color of the coefficients may indicate the significance level, helping you to identify which correlations are statistically significant.</p></li>
-</ul></li>
-<li><p><strong>Density Plots (Lower Triangle, if <code>density = TRUE</code>)</strong>: If the <code>density</code> argument is set to <code>TRUE</code>, density plots will be overlaid on the scatterplots. These plots show the density of data points, providing additional insight into the distribution of values.</p></li>
-<li><p><strong>Correlation Ellipses (Lower Triangle, if <code>ellipses = TRUE</code>)</strong>: If the <code>ellipses</code> argument is set to <code>TRUE</code>, ellipses will be drawn on the scatterplots. These ellipses represent confidence intervals for the correlation, helping you to visually assess the strength and direction of the relationship.</p></li>
-</ol>
-<ul>
-<li><p><strong>Scatterplots</strong>: You might see an upward slope between <code>study_hours</code> and <code>score</code>, indicating a positive correlation where increased study hours are associated with higher scores.</p></li>
-<li><p><strong>Histograms</strong>: The histogram for <code>age</code> might show a relatively uniform distribution, while the histogram for <code>study_hours</code> could indicate most participants study between 4 to 6 hours.</p></li>
-<li><p><strong>Correlation Coefficients</strong>: The coefficient between <code>score</code> and <code>study_hours</code> might be 0.75, suggesting a strong positive correlation. The coefficient between <code>age</code> and <code>score</code> might be lower, indicating a weaker relationship.</p></li>
-<li><p><strong>Density Plots</strong>: Overlaid on the scatterplots, these provide additional information about the concentration of data points.</p></li>
-<li><p><strong>Correlation Ellipses</strong>: Ellipses around the scatterplots indicate the confidence intervals, with tighter ellipses suggesting stronger correlations.</p></li>
-</ul>
-</div>
-</div>
-<div id="conclusion-17" class="section level3 hasAnchor" number="5.6.4">
-<h3><span class="header-section-number">5.6.4</span> Conclusion<a href="computation.html#conclusion-17" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The <code>psych</code> package in R offers a comprehensive set of tools for describing and visualizing data, making it invaluable for psychological research. By using functions like <code>describe()</code> for descriptive statistics and <code>pairs.panels()</code> for graphical representations, researchers can gain deeper insights into their data. In the next section, we will explore techniques for importing data from various sources and preparing it for analysis.</p>
-</div>
-</div>
-<div id="chapter-summary-4" class="section level2 hasAnchor" number="5.7">
-<h2><span class="header-section-number">5.7</span> Chapter Summary<a href="computation.html#chapter-summary-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>This chapter provided a comprehensive guide on the essential tasks involved in data computation and manipulation, focusing on the techniques and tools necessary for psychological research. We explored importing data, cleaning data using the <code>dplyr</code> package, and describing data using the <code>psych</code> package, each accompanied by detailed explanations and practical examples.</p>
-<div id="key-points-recap-2" class="section level3 hasAnchor" number="5.7.1">
-<h3><span class="header-section-number">5.7.1</span> Key Points Recap<a href="computation.html#key-points-recap-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ol style="list-style-type: decimal">
-<li><p><strong>Importance of Data Computation and Manipulation</strong>:</p>
-<ul>
-<li><p>Data computation and manipulation are critical steps in ensuring that data is accurate, consistent, and ready for analysis.</p></li>
-<li><p>These processes allow researchers to clean, organize, and analyze data effectively, leading to more reliable and meaningful conclusions.</p></li>
-</ul></li>
-<li><p><strong>Importing Data from Excel Files</strong>:</p>
-<ul>
-<li><p>We covered how to import data from both CSV (.csv) and Excel Workbook (.xlsx) files.</p></li>
-<li><p>Using <code>read.csv()</code> for CSV files and the <code>readxl</code> package for Excel files, we demonstrated practical examples to ensure seamless data importation.</p></li>
-</ul></li>
-<li><p><strong>Cleaning Data with <code>dplyr</code></strong>:</p>
-<ul>
-<li><p>The <code>dplyr</code> package provides powerful and intuitive functions for data manipulation tasks.</p></li>
-<li><p>Key functions include <code>filter()</code>, <code>select()</code>, <code>rename()</code>, <code>mutate()</code>, <code>arrange()</code>, <code>summarize()</code>, and <code>group_by()</code>.</p></li>
-<li><p>We also covered removing outliers using a custom function and releveling categorical factors for meaningful analysis.</p></li>
-<li><p>Practical examples illustrated how to apply these functions to clean and prepare data for analysis.</p></li>
-</ul></li>
-<li><p><strong>Describing Data Using the <code>psych</code> Package</strong>:</p>
-<ul>
-<li><p>The <code>psych</code> package offers tools for generating descriptive statistics and creating graphical summaries.</p></li>
-<li><p>Using the <code>describe()</code> function, we generated comprehensive summaries of datasets.</p></li>
-<li><p>The <code>pairs.panels()</code> function was used to create scatterplot matrices with histograms and correlation coefficients, providing detailed visual summaries of data relationships.</p></li>
-<li><p>The <code>corPlot()</code> function was used to visualize correlation matrices, with detailed explanations on how to interpret the output.</p></li>
+<li><strong>H₀</strong>: There is no difference or the therapy group has equal or higher anxiety levels compared to the control group.</li>
+<li><strong>H₁</strong>: The therapy group has lower anxiety levels than the control group.</li>
 </ul></li>
 </ol>
-</div>
-<div id="practical-applications-1" class="section level3 hasAnchor" number="5.7.2">
-<h3><span class="header-section-number">5.7.2</span> Practical Applications<a href="computation.html#practical-applications-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Throughout the chapter, practical examples demonstrated how to:</p>
+<p>The choice between a one-tailed and two-tailed hypothesis depends on the research question and the theoretical framework guiding the study. A one-tailed hypothesis is used when the researcher has a specific prediction about the direction of the effect, while a two-tailed hypothesis is used when the researcher is open to finding a difference in either direction.</p>
+<p><strong>Examples of Common Hypotheses in Psychological Studies</strong></p>
+<p>To make these concepts more concrete, let’s look at a few examples of hypotheses in psychological research:</p>
 <ul>
-<li><p>Import data from various file formats.</p></li>
-<li><p>Clean and prepare data using <code>dplyr</code>, including handling missing values, renaming variables, removing outliers, and releveling factors.</p></li>
-<li><p>Generate descriptive statistics and visualize data using the <code>psych</code> package, including scatterplot matrices and correlation plots.</p></li>
-</ul>
-</div>
-<div id="conclusion-18" class="section level3 hasAnchor" number="5.7.3">
-<h3><span class="header-section-number">5.7.3</span> Conclusion<a href="computation.html#conclusion-18" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>This chapter highlighted the importance of data computation and manipulation in psychological research. By mastering these techniques and tools, researchers can ensure that their data is well-prepared and accurately analyzed, leading to more robust and credible research outcomes. The knowledge and skills acquired in this chapter lay the foundation for more advanced data analysis techniques covered in subsequent chapters.</p>
-</div>
-</div>
-<div id="practice-exercises-3" class="section level2 hasAnchor" number="5.8">
-<h2><span class="header-section-number">5.8</span> Practice Exercises<a href="computation.html#practice-exercises-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>These exercises aim to test your understanding of data importation, cleaning, and descriptive analysis using the <code>dplyr</code> and <code>psych</code> packages in R. You will apply these concepts to practical problems, ensuring you can efficiently manipulate and describe data.</p>
-<div id="exercise-1-importing-data" class="section level3 hasAnchor" number="5.8.1">
-<h3><span class="header-section-number">5.8.1</span> Exercise 1: Importing Data<a href="computation.html#exercise-1-importing-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<li><strong>Example 1</strong>: A researcher is studying whether mindfulness meditation reduces stress levels more effectively than no intervention.
 <ul>
-<li><p><strong>Task</strong>: Import data from a CSV file and an Excel file.</p></li>
-<li><p><strong>Instructions</strong>:</p>
-<ol style="list-style-type: decimal">
-<li><p>Create a CSV file named <code>survey_data.csv</code> with the following columns: <code>id</code>, <code>age</code>, <code>gender</code>, <code>score</code>.</p></li>
-<li><p>Create an Excel file named <code>experiment_data.xlsx</code> with the following columns: <code>subject_id</code>, <code>condition</code>, <code>response_time</code>.</p></li>
-<li><p>Import both files into R.</p></li>
-</ol></li>
-</ul>
-</div>
-<div id="exercise-2-cleaning-data-with-dplyr" class="section level3 hasAnchor" number="5.8.2">
-<h3><span class="header-section-number">5.8.2</span> Exercise 2: Cleaning Data with <code>dplyr</code><a href="computation.html#exercise-2-cleaning-data-with-dplyr" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<li><strong>H₀</strong>: There is no difference in stress levels between the mindfulness group and the control group.</li>
+<li><strong>H₁</strong>: The mindfulness group has lower stress levels than the control group.</li>
+</ul></li>
+<li><strong>Example 2</strong>: A psychologist is investigating whether there is a gender difference in math test performance among high school students.
 <ul>
-<li><p><strong>Task</strong>: Clean a dataset using various <code>dplyr</code> functions.</p></li>
-<li><p><strong>Instructions</strong>:</p>
-<ol style="list-style-type: decimal">
-<li>Use the following dataset for the exercise:</li>
-</ol></li>
-</ul>
-<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="computation.html#cb90-1" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb90-2"><a href="computation.html#cb90-2" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>,</span>
-<span id="cb90-3"><a href="computation.html#cb90-3" tabindex="-1"></a>  <span class="at">age =</span> <span class="fu">c</span>(<span class="dv">23</span>, <span class="dv">35</span>, <span class="dv">42</span>, <span class="cn">NA</span>, <span class="dv">30</span>, <span class="dv">34</span>, <span class="dv">21</span>, <span class="dv">40</span>, <span class="dv">29</span>, <span class="dv">31</span>),</span>
-<span id="cb90-4"><a href="computation.html#cb90-4" tabindex="-1"></a>  <span class="at">gender =</span> <span class="fu">c</span>(<span class="st">&quot;M&quot;</span>, <span class="st">&quot;F&quot;</span>, <span class="st">&quot;F&quot;</span>, <span class="st">&quot;M&quot;</span>, <span class="st">&quot;M&quot;</span>, <span class="st">&quot;F&quot;</span>, <span class="st">&quot;M&quot;</span>, <span class="st">&quot;F&quot;</span>, <span class="st">&quot;M&quot;</span>, <span class="st">&quot;F&quot;</span>),</span>
-<span id="cb90-5"><a href="computation.html#cb90-5" tabindex="-1"></a>  <span class="at">score =</span> <span class="fu">c</span>(<span class="dv">80</span>, <span class="dv">85</span>, <span class="dv">78</span>, <span class="dv">90</span>, <span class="dv">85</span>, <span class="dv">75</span>, <span class="dv">88</span>, <span class="dv">92</span>, <span class="dv">84</span>, <span class="cn">NA</span>)</span>
-<span id="cb90-6"><a href="computation.html#cb90-6" tabindex="-1"></a>)</span></code></pre></div>
-<pre><code>2.  Clean the dataset by performing the following steps:
-
-    -   Remove rows with missing values.
-
-    -   Rename the `age` column to `participant_age`.
-
-    -   Create a new column `age_group` based on `participant_age` (Above 30 or 30 and Below).
-
-    -   Remove outliers from the `score` column.
-
-    -   Relevel the `age_group` column to set &quot;30 and Below&quot; as the reference level.</code></pre>
-</div>
-<div id="exercise-3-generating-descriptive-statistics-with-psych" class="section level3 hasAnchor" number="5.8.3">
-<h3><span class="header-section-number">5.8.3</span> Exercise 3: Generating Descriptive Statistics with <code>psych</code><a href="computation.html#exercise-3-generating-descriptive-statistics-with-psych" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<li><strong>H₀</strong>: There is no difference in math test performance between male and female students.</li>
+<li><strong>H₁</strong>: There is a difference in math test performance between male and female students.</li>
+</ul></li>
+<li><strong>Example 3</strong>: An educational researcher wants to know if a new teaching method improves reading comprehension compared to the traditional method.
 <ul>
-<li><p><strong>Task</strong>: Generate descriptive statistics for a dataset.</p></li>
-<li><p><strong>Instructions</strong>:</p>
-<ol style="list-style-type: decimal">
-<li>Use the following dataset for the exercise:</li>
-</ol></li>
+<li><strong>H₀</strong>: There is no difference in reading comprehension scores between students taught with the new method and those taught with the traditional method.</li>
+<li><strong>H₁</strong>: Students taught with the new method have higher reading comprehension scores than those taught with the traditional method.</li>
+</ul></li>
 </ul>
-<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="computation.html#cb92-1" tabindex="-1"></a>test_scores <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb92-2"><a href="computation.html#cb92-2" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>,</span>
-<span id="cb92-3"><a href="computation.html#cb92-3" tabindex="-1"></a>  <span class="at">score =</span> <span class="fu">c</span>(<span class="dv">85</span>, <span class="dv">90</span>, <span class="dv">78</span>, <span class="dv">92</span>, <span class="dv">88</span>, <span class="dv">76</span>, <span class="dv">95</span>, <span class="dv">89</span>, <span class="dv">84</span>, <span class="dv">91</span>)</span>
-<span id="cb92-4"><a href="computation.html#cb92-4" tabindex="-1"></a>)</span></code></pre></div>
-<pre><code>2.  Generate descriptive statistics using the `describe()` function from the `psych` package.</code></pre>
-</div>
-<div id="exercise-4-visualizing-data-with-psych" class="section level3 hasAnchor" number="5.8.4">
-<h3><span class="header-section-number">5.8.4</span> Exercise 4: Visualizing Data with <code>psych</code><a href="computation.html#exercise-4-visualizing-data-with-psych" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li><p><strong>Task</strong>: Create graphical summaries of a dataset using the <code>psych</code> package.</p></li>
-<li><p><strong>Instructions</strong>:</p>
-<ol style="list-style-type: decimal">
-<li>Use the following dataset for the exercise:</li>
-</ol></li>
-</ul>
-<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="computation.html#cb94-1" tabindex="-1"></a>multi_var_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb94-2"><a href="computation.html#cb94-2" tabindex="-1"></a>  <span class="at">score =</span> <span class="fu">c</span>(<span class="dv">85</span>, <span class="dv">90</span>, <span class="dv">78</span>, <span class="dv">92</span>, <span class="dv">88</span>, <span class="dv">76</span>, <span class="dv">95</span>, <span class="dv">89</span>, <span class="dv">84</span>, <span class="dv">91</span>),</span>
-<span id="cb94-3"><a href="computation.html#cb94-3" tabindex="-1"></a>  <span class="at">age =</span> <span class="fu">c</span>(<span class="dv">23</span>, <span class="dv">25</span>, <span class="dv">22</span>, <span class="dv">24</span>, <span class="dv">26</span>, <span class="dv">21</span>, <span class="dv">27</span>, <span class="dv">25</span>, <span class="dv">23</span>, <span class="dv">24</span>),</span>
-<span id="cb94-4"><a href="computation.html#cb94-4" tabindex="-1"></a>  <span class="at">study_hours =</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">5</span>, <span class="dv">3</span>, <span class="dv">7</span>, <span class="dv">6</span>, <span class="dv">5</span>, <span class="dv">6</span>)</span>
-<span id="cb94-5"><a href="computation.html#cb94-5" tabindex="-1"></a>)</span></code></pre></div>
-<pre><code>2.  Create a correlation plot using the `corPlot()` function.
-
-3.  Create pair panels using the `pairs.panels()` function.</code></pre>
+<p>In each of these examples, the null hypothesis represents the assumption of no effect or difference, while the alternative hypothesis reflects the researcher’s expectation or theory. The goal of hypothesis testing is to use data to determine whether the null hypothesis can be rejected in favor of the alternative hypothesis, thereby supporting the research hypothesis.</p>
+<p>By carefully formulating and testing hypotheses, researchers can draw meaningful conclusions that contribute to our understanding of psychological phenomena and inform practical applications in therapy, education, and beyond.</p>
 
 </div>
 </div>
@@ -1481,8 +819,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="descriptive-statistics-and-basic-probability-in-psychological-research.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="linear-and-non-linear-transformations-of-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="ggplot2-and-graphing-data-in-apa-formatting.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="bivariate-linear-models.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -1513,7 +851,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/AmandaDPerez/ZTC-RM/edit/main/05-computation.Rmd",
+"link": "https://github.com/AmandaDPerez/ZTC-RM/edit/main/08-two-samples.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -1521,7 +859,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/AmandaDPerez/ZTC-RM/blob/main/05-computation.Rmd",
+"link": "https://github.com/AmandaDPerez/ZTC-RM/blob/main/08-two-samples.Rmd",
 "text": null
 },
 "download": null,
