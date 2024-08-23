@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 9 Bivariate Linear Models | Introduction to Psychological Statistics</title>
-  <meta name="description" content="Chapter 9 Bivariate Linear Models | Introduction to Psychological Statistics" />
+  <title>Chapter 10 Bivariate Linear Models | Introduction to Psychological Statistics</title>
+  <meta name="description" content="Chapter 10 Bivariate Linear Models | Introduction to Psychological Statistics" />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 9 Bivariate Linear Models | Introduction to Psychological Statistics" />
+  <meta property="og:title" content="Chapter 10 Bivariate Linear Models | Introduction to Psychological Statistics" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 9 Bivariate Linear Models | Introduction to Psychological Statistics" />
+  <meta name="twitter:title" content="Chapter 10 Bivariate Linear Models | Introduction to Psychological Statistics" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="hypothesis-testing-for-samples-from-two-populations.html"/>
-<link rel="next" href="goodness-of-fit.html"/>
+<link rel="prev" href="correlations.html"/>
+<link rel="next" href="multiple-regression.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -520,206 +520,326 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.1.1" data-path="hypothesis-testing-for-samples-from-two-populations.html"><a href="hypothesis-testing-for-samples-from-two-populations.html#overview-of-hypothesis-testing"><i class="fa fa-check"></i><b>8.1.1</b> Overview of Hypothesis Testing</a></li>
 <li class="chapter" data-level="8.1.2" data-path="hypothesis-testing-for-samples-from-two-populations.html"><a href="hypothesis-testing-for-samples-from-two-populations.html#null-and-alternative-hypotheses"><i class="fa fa-check"></i><b>8.1.2</b> Null and Alternative Hypotheses</a></li>
 </ul></li>
+<li class="chapter" data-level="8.2" data-path="hypothesis-testing-for-samples-from-two-populations.html"><a href="hypothesis-testing-for-samples-from-two-populations.html#understanding-estimates-in-hypothesis-testing"><i class="fa fa-check"></i><b>8.2</b> Understanding Estimates in Hypothesis Testing</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="hypothesis-testing-for-samples-from-two-populations.html"><a href="hypothesis-testing-for-samples-from-two-populations.html#point-estimates"><i class="fa fa-check"></i><b>8.2.1</b> Point Estimates</a></li>
+<li class="chapter" data-level="8.2.2" data-path="hypothesis-testing-for-samples-from-two-populations.html"><a href="hypothesis-testing-for-samples-from-two-populations.html#standard-error"><i class="fa fa-check"></i><b>8.2.2</b> Standard Error</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html"><i class="fa fa-check"></i><b>9</b> Bivariate Linear Models</a>
+<li class="chapter" data-level="8.3" data-path="hypothesis-testing-for-samples-from-two-populations.html"><a href="hypothesis-testing-for-samples-from-two-populations.html#confidence-intervals-in-hypothesis-testing"><i class="fa fa-check"></i><b>8.3</b> Confidence Intervals in Hypothesis Testing</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#what-are-bivariate-linear-models"><i class="fa fa-check"></i><b>9.1</b> What Are Bivariate Linear Models?</a>
-<ul>
-<li class="chapter" data-level="9.1.1" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#why-use-bivariate-linear-models"><i class="fa fa-check"></i><b>9.1.1</b> Why Use Bivariate Linear Models?</a></li>
+<li class="chapter" data-level="8.3.1" data-path="hypothesis-testing-for-samples-from-two-populations.html"><a href="hypothesis-testing-for-samples-from-two-populations.html#introduction-to-confidence-intervals"><i class="fa fa-check"></i><b>8.3.1</b> Introduction to Confidence Intervals</a></li>
+<li class="chapter" data-level="8.3.2" data-path="hypothesis-testing-for-samples-from-two-populations.html"><a href="hypothesis-testing-for-samples-from-two-populations.html#calculating-confidence-intervals"><i class="fa fa-check"></i><b>8.3.2</b> Calculating Confidence Intervals</a></li>
+<li class="chapter" data-level="8.3.3" data-path="hypothesis-testing-for-samples-from-two-populations.html"><a href="hypothesis-testing-for-samples-from-two-populations.html#interpreting-confidence-intervals"><i class="fa fa-check"></i><b>8.3.3</b> Interpreting Confidence Intervals</a></li>
 </ul></li>
-<li class="chapter" data-level="9.2" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#creating-linear-models-to-test-hypotheses"><i class="fa fa-check"></i><b>9.2</b> Creating Linear Models to Test Hypotheses</a>
+<li class="chapter" data-level="8.4" data-path="hypothesis-testing-for-samples-from-two-populations.html"><a href="hypothesis-testing-for-samples-from-two-populations.html#t-tests-for-comparing-two-populations"><i class="fa fa-check"></i><b>8.4</b> t-Tests for Comparing Two Populations</a>
 <ul>
-<li class="chapter" data-level="9.2.1" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#the-concept-of-a-linear-model"><i class="fa fa-check"></i><b>9.2.1</b> The Concept of a Linear Model</a></li>
-<li class="chapter" data-level="9.2.2" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#hypothesis-testing-with-linear-models"><i class="fa fa-check"></i><b>9.2.2</b> Hypothesis Testing with Linear Models</a></li>
+<li class="chapter" data-level="8.4.1" data-path="hypothesis-testing-for-samples-from-two-populations.html"><a href="hypothesis-testing-for-samples-from-two-populations.html#introduction-to-t-tests"><i class="fa fa-check"></i><b>8.4.1</b> Introduction to t-Tests</a></li>
+<li class="chapter" data-level="8.4.2" data-path="hypothesis-testing-for-samples-from-two-populations.html"><a href="hypothesis-testing-for-samples-from-two-populations.html#independent-samples-t-test"><i class="fa fa-check"></i><b>8.4.2</b> Independent Samples t-Test</a></li>
+<li class="chapter" data-level="8.4.3" data-path="hypothesis-testing-for-samples-from-two-populations.html"><a href="hypothesis-testing-for-samples-from-two-populations.html#paired-samples-t-test"><i class="fa fa-check"></i><b>8.4.3</b> Paired Samples t-Test</a></li>
+<li class="chapter" data-level="8.4.4" data-path="hypothesis-testing-for-samples-from-two-populations.html"><a href="hypothesis-testing-for-samples-from-two-populations.html#interpreting-t-test-results"><i class="fa fa-check"></i><b>8.4.4</b> Interpreting t-Test Results</a></li>
 </ul></li>
-<li class="chapter" data-level="9.3" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#components-of-a-bivariate-linear-model"><i class="fa fa-check"></i><b>9.3</b> Components of a Bivariate Linear Model</a>
+<li class="chapter" data-level="8.5" data-path="hypothesis-testing-for-samples-from-two-populations.html"><a href="hypothesis-testing-for-samples-from-two-populations.html#understanding-significance-in-hypothesis-testing"><i class="fa fa-check"></i><b>8.5</b> Understanding Significance in Hypothesis Testing</a>
 <ul>
-<li class="chapter" data-level="9.3.1" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#intercept-b0"><i class="fa fa-check"></i><b>9.3.1</b> Intercept (b0)</a></li>
-<li class="chapter" data-level="9.3.2" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#slopes-b1"><i class="fa fa-check"></i><b>9.3.2</b> Slope(s) (b1)</a></li>
-<li class="chapter" data-level="9.3.3" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#correlations"><i class="fa fa-check"></i><b>9.3.3</b> Correlations</a></li>
+<li class="chapter" data-level="8.5.1" data-path="hypothesis-testing-for-samples-from-two-populations.html"><a href="hypothesis-testing-for-samples-from-two-populations.html#the-concept-of-statistical-significance"><i class="fa fa-check"></i><b>8.5.1</b> The Concept of Statistical Significance</a></li>
+<li class="chapter" data-level="8.5.2" data-path="hypothesis-testing-for-samples-from-two-populations.html"><a href="hypothesis-testing-for-samples-from-two-populations.html#p-values-and-their-interpretation"><i class="fa fa-check"></i><b>8.5.2</b> p-Values and Their Interpretation</a></li>
+<li class="chapter" data-level="8.5.3" data-path="hypothesis-testing-for-samples-from-two-populations.html"><a href="hypothesis-testing-for-samples-from-two-populations.html#the-role-of-effect-size-in-significance"><i class="fa fa-check"></i><b>8.5.3</b> The Role of Effect Size in Significance</a></li>
 </ul></li>
-<li class="chapter" data-level="9.4" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#residuals"><i class="fa fa-check"></i><b>9.4</b> Residuals</a>
+<li class="chapter" data-level="8.6" data-path="hypothesis-testing-for-samples-from-two-populations.html"><a href="hypothesis-testing-for-samples-from-two-populations.html#chapter-summary-7"><i class="fa fa-check"></i><b>8.6</b> Chapter Summary</a>
 <ul>
-<li class="chapter" data-level="9.4.1" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#what-are-residuals"><i class="fa fa-check"></i><b>9.4.1</b> What Are Residuals?</a></li>
-<li class="chapter" data-level="9.4.2" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#importance-of-residuals-in-model-evaluation"><i class="fa fa-check"></i><b>9.4.2</b> Importance of Residuals in Model Evaluation</a></li>
-<li class="chapter" data-level="9.4.3" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#checking-for-patterns-in-residuals"><i class="fa fa-check"></i><b>9.4.3</b> Checking for Patterns in Residuals</a></li>
-<li class="chapter" data-level="9.4.4" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#example-residuals-with-a-pattern-non-normal-distribution"><i class="fa fa-check"></i><b>9.4.4</b> Example: Residuals with a Pattern (Non-Normal Distribution)</a></li>
+<li class="chapter" data-level="8.6.1" data-path="hypothesis-testing-for-samples-from-two-populations.html"><a href="hypothesis-testing-for-samples-from-two-populations.html#recap-of-key-concepts"><i class="fa fa-check"></i><b>8.6.1</b> Recap of Key Concepts</a></li>
+<li class="chapter" data-level="8.6.2" data-path="hypothesis-testing-for-samples-from-two-populations.html"><a href="hypothesis-testing-for-samples-from-two-populations.html#final-thoughts"><i class="fa fa-check"></i><b>8.6.2</b> Final Thoughts</a></li>
 </ul></li>
-<li class="chapter" data-level="9.5" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#real-world-application-of-bivariate-linear-models"><i class="fa fa-check"></i><b>9.5</b> Real-World Application of Bivariate Linear Models</a>
+<li class="chapter" data-level="8.7" data-path="hypothesis-testing-for-samples-from-two-populations.html"><a href="hypothesis-testing-for-samples-from-two-populations.html#practice-exercises-6"><i class="fa fa-check"></i><b>8.7</b> Practice Exercises</a>
 <ul>
-<li class="chapter" data-level="9.5.1" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#practical-examples-in-psychological-research"><i class="fa fa-check"></i><b>9.5.1</b> Practical Examples in Psychological Research</a></li>
-<li class="chapter" data-level="9.5.2" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#building-your-own-bivariate-linear-model-in-r"><i class="fa fa-check"></i><b>9.5.2</b> Building Your Own Bivariate Linear Model in R</a></li>
-<li class="chapter" data-level="9.5.3" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#limitations-and-considerations"><i class="fa fa-check"></i><b>9.5.3</b> Limitations and Considerations</a></li>
-</ul></li>
-<li class="chapter" data-level="9.6" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#chapter-summary-7"><i class="fa fa-check"></i><b>9.6</b> Chapter Summary</a></li>
-<li class="chapter" data-level="9.7" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#practice-exercises-6"><i class="fa fa-check"></i><b>9.7</b> Practice Exercises</a>
-<ul>
-<li class="chapter" data-level="9.7.1" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#exercise-1-create-a-simple-bivariate-linear-model"><i class="fa fa-check"></i><b>9.7.1</b> Exercise 1: Create a Simple Bivariate Linear Model</a></li>
-<li class="chapter" data-level="9.7.2" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#exercise-2-analyze-residuals-to-assess-model-fit"><i class="fa fa-check"></i><b>9.7.2</b> Exercise 2: Analyze Residuals to Assess Model Fit</a></li>
-<li class="chapter" data-level="9.7.3" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#exercise-3-apply-bivariate-linear-models-to-a-real-world-dataset"><i class="fa fa-check"></i><b>9.7.3</b> Exercise 3: Apply Bivariate Linear Models to a Real-World Dataset</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="10" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html"><i class="fa fa-check"></i><b>10</b> Goodness of Fit</a>
-<ul>
-<li class="chapter" data-level="10.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#what-is-goodness-of-fit"><i class="fa fa-check"></i><b>10.1</b> What is Goodness of Fit?</a>
-<ul>
-<li class="chapter" data-level="10.1.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#why-goodness-of-fit-matters"><i class="fa fa-check"></i><b>10.1.1</b> Why Goodness of Fit Matters</a></li>
-</ul></li>
-<li class="chapter" data-level="10.2" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#chi-square"><i class="fa fa-check"></i><b>10.2</b> Chi-Square</a>
-<ul>
-<li class="chapter" data-level="10.2.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#understanding-the-chi-square-test"><i class="fa fa-check"></i><b>10.2.1</b> Understanding the Chi-Square Test</a></li>
-<li class="chapter" data-level="10.2.2" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#calculating-chi-square-in-r"><i class="fa fa-check"></i><b>10.2.2</b> Calculating Chi-Square in R</a></li>
-<li class="chapter" data-level="10.2.3" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#real-world-applications-3"><i class="fa fa-check"></i><b>10.2.3</b> Real-World Applications</a></li>
-</ul></li>
-<li class="chapter" data-level="10.3" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#r-squared"><i class="fa fa-check"></i><b>10.3</b> R-Squared</a>
-<ul>
-<li class="chapter" data-level="10.3.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#what-is-r-squared"><i class="fa fa-check"></i><b>10.3.1</b> What is R-Squared?</a></li>
-<li class="chapter" data-level="10.3.2" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#calculating-r-squared-in-r"><i class="fa fa-check"></i><b>10.3.2</b> Calculating R-Squared in R</a></li>
-<li class="chapter" data-level="10.3.3" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#adjusted-r-squared"><i class="fa fa-check"></i><b>10.3.3</b> Adjusted R-Squared</a></li>
-<li class="chapter" data-level="10.3.4" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#real-world-applications-4"><i class="fa fa-check"></i><b>10.3.4</b> Real-World Applications</a></li>
-</ul></li>
-<li class="chapter" data-level="10.4" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#the-f-test-for-comparing-models"><i class="fa fa-check"></i><b>10.4</b> The F-Test for Comparing Models</a>
-<ul>
-<li class="chapter" data-level="10.4.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#what-is-the-f-test"><i class="fa fa-check"></i><b>10.4.1</b> What is the F-Test?</a></li>
-<li class="chapter" data-level="10.4.2" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#performing-the-f-test-in-r"><i class="fa fa-check"></i><b>10.4.2</b> Performing the F-Test in R</a></li>
-</ul></li>
-<li class="chapter" data-level="10.5" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#understanding-the-f-distribution"><i class="fa fa-check"></i><b>10.5</b> Understanding the F-Distribution</a>
-<ul>
-<li class="chapter" data-level="10.5.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#what-is-the-f-distribution"><i class="fa fa-check"></i><b>10.5.1</b> What is the F-Distribution?</a></li>
-<li class="chapter" data-level="10.5.2" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#visualizing-the-f-distribution-in-r"><i class="fa fa-check"></i><b>10.5.2</b> Visualizing the F-Distribution in R</a></li>
-<li class="chapter" data-level="10.5.3" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#real-world-applications-5"><i class="fa fa-check"></i><b>10.5.3</b> Real-World Applications</a></li>
-</ul></li>
-<li class="chapter" data-level="10.6" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#putting-it-all-together-assessing-model-fit-in-practice"><i class="fa fa-check"></i><b>10.6</b> Putting It All Together – Assessing Model Fit in Practice</a>
-<ul>
-<li class="chapter" data-level="10.6.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#comprehensive-example"><i class="fa fa-check"></i><b>10.6.1</b> Comprehensive Example</a></li>
-<li class="chapter" data-level="10.6.2" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#best-practices-for-assessing-goodness-of-fit"><i class="fa fa-check"></i><b>10.6.2</b> Best Practices for Assessing Goodness of Fit</a></li>
-</ul></li>
-<li class="chapter" data-level="10.7" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#chapter-summary-8"><i class="fa fa-check"></i><b>10.7</b> Chapter Summary</a></li>
-<li class="chapter" data-level="10.8" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#practice-exercises-7"><i class="fa fa-check"></i><b>10.8</b> Practice Exercises</a>
-<ul>
-<li class="chapter" data-level="10.8.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#section-7-practice-exercises"><i class="fa fa-check"></i><b>10.8.1</b> Section 7: Practice Exercises</a></li>
+<li class="chapter" data-level="8.7.1" data-path="hypothesis-testing-for-samples-from-two-populations.html"><a href="hypothesis-testing-for-samples-from-two-populations.html#exercise-1-calculate-and-interpret-the-standard-error-for-a-sample-dataset-comparing-two-groups"><i class="fa fa-check"></i><b>8.7.1</b> Exercise 1: Calculate and Interpret the Standard Error for a Sample Dataset Comparing Two Groups</a></li>
+<li class="chapter" data-level="8.7.2" data-path="hypothesis-testing-for-samples-from-two-populations.html"><a href="hypothesis-testing-for-samples-from-two-populations.html#exercise-2-calculate-confidence-intervals-for-the-difference-between-two-sample-means-and-interpret-the-results"><i class="fa fa-check"></i><b>8.7.2</b> Exercise 2: Calculate Confidence Intervals for the Difference Between Two Sample Means and Interpret the Results</a></li>
+<li class="chapter" data-level="8.7.3" data-path="hypothesis-testing-for-samples-from-two-populations.html"><a href="hypothesis-testing-for-samples-from-two-populations.html#exercise-3-conduct-an-independent-samples-t-test-in-r-and-interpret-the-output"><i class="fa fa-check"></i><b>8.7.3</b> Exercise 3: Conduct an Independent Samples t-Test in R and Interpret the Output</a></li>
+<li class="chapter" data-level="8.7.4" data-path="hypothesis-testing-for-samples-from-two-populations.html"><a href="hypothesis-testing-for-samples-from-two-populations.html#exercise-4-conduct-a-paired-samples-t-test-in-r-and-interpret-the-output"><i class="fa fa-check"></i><b>8.7.4</b> Exercise 4: Conduct a Paired Samples t-Test in R and Interpret the Output</a></li>
+<li class="chapter" data-level="8.7.5" data-path="hypothesis-testing-for-samples-from-two-populations.html"><a href="hypothesis-testing-for-samples-from-two-populations.html#exercise-5-analyze-the-significance-and-effect-size-of-a-t-test-result-and-discuss-the-implications-for-the-studys-findings"><i class="fa fa-check"></i><b>8.7.5</b> Exercise 5: Analyze the Significance and Effect Size of a t-Test Result and Discuss the Implications for the Study’s Findings</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="statistical-power.html"><a href="statistical-power.html"><i class="fa fa-check"></i><b>11</b> Statistical Power</a>
+<li class="chapter" data-level="9" data-path="correlations.html"><a href="correlations.html"><i class="fa fa-check"></i><b>9</b> Correlations</a>
 <ul>
-<li class="chapter" data-level="11.1" data-path="statistical-power.html"><a href="statistical-power.html#introduction-to-statistical-power"><i class="fa fa-check"></i><b>11.1</b> Introduction to Statistical Power</a>
+<li class="chapter" data-level="9.1" data-path="correlations.html"><a href="correlations.html#introduction-to-correlations"><i class="fa fa-check"></i><b>9.1</b> Introduction to Correlations</a>
 <ul>
-<li class="chapter" data-level="11.1.1" data-path="statistical-power.html"><a href="statistical-power.html#definition-of-statistical-power"><i class="fa fa-check"></i><b>11.1.1</b> Definition of Statistical Power</a></li>
-<li class="chapter" data-level="11.1.2" data-path="statistical-power.html"><a href="statistical-power.html#the-role-of-power-in-psychological-research"><i class="fa fa-check"></i><b>11.1.2</b> The Role of Power in Psychological Research</a></li>
+<li class="chapter" data-level="9.1.1" data-path="correlations.html"><a href="correlations.html#what-is-a-correlation"><i class="fa fa-check"></i><b>9.1.1</b> What is a Correlation?</a></li>
+<li class="chapter" data-level="9.1.2" data-path="correlations.html"><a href="correlations.html#types-of-correlation"><i class="fa fa-check"></i><b>9.1.2</b> Types of Correlation</a></li>
 </ul></li>
-<li class="chapter" data-level="11.2" data-path="statistical-power.html"><a href="statistical-power.html#understanding-type-i-and-type-ii-errors"><i class="fa fa-check"></i><b>11.2</b> Understanding Type I and Type II Errors</a>
+<li class="chapter" data-level="9.2" data-path="correlations.html"><a href="correlations.html#calculating-correlation-in-r"><i class="fa fa-check"></i><b>9.2</b> Calculating Correlation in R</a>
 <ul>
-<li class="chapter" data-level="11.2.1" data-path="statistical-power.html"><a href="statistical-power.html#type-i-error-false-positive"><i class="fa fa-check"></i><b>11.2.1</b> Type I Error (False Positive)</a></li>
-<li class="chapter" data-level="11.2.2" data-path="statistical-power.html"><a href="statistical-power.html#type-ii-error-false-negative"><i class="fa fa-check"></i><b>11.2.2</b> Type II Error (False Negative)</a></li>
-<li class="chapter" data-level="11.2.3" data-path="statistical-power.html"><a href="statistical-power.html#balancing-type-i-and-type-ii-errors"><i class="fa fa-check"></i><b>11.2.3</b> Balancing Type I and Type II Errors</a></li>
+<li class="chapter" data-level="9.2.1" data-path="correlations.html"><a href="correlations.html#pearsons-correlation-coefficient"><i class="fa fa-check"></i><b>9.2.1</b> Pearson’s Correlation Coefficient</a></li>
+<li class="chapter" data-level="9.2.2" data-path="correlations.html"><a href="correlations.html#step-by-step-guide-to-calculating-correlation-in-r"><i class="fa fa-check"></i><b>9.2.2</b> Step-by-Step Guide to Calculating Correlation in R</a></li>
+<li class="chapter" data-level="9.2.3" data-path="correlations.html"><a href="correlations.html#visualizing-correlation-with-ggplot2"><i class="fa fa-check"></i><b>9.2.3</b> Visualizing Correlation with ggplot2</a></li>
 </ul></li>
-<li class="chapter" data-level="11.3" data-path="statistical-power.html"><a href="statistical-power.html#factors-affecting-power"><i class="fa fa-check"></i><b>11.3</b> Factors Affecting Power</a>
+<li class="chapter" data-level="9.3" data-path="correlations.html"><a href="correlations.html#understanding-the-size-of-effect"><i class="fa fa-check"></i><b>9.3</b> Understanding the Size of Effect</a>
 <ul>
-<li class="chapter" data-level="11.3.1" data-path="statistical-power.html"><a href="statistical-power.html#sample-size"><i class="fa fa-check"></i><b>11.3.1</b> Sample Size</a></li>
-<li class="chapter" data-level="11.3.2" data-path="statistical-power.html"><a href="statistical-power.html#effect-size"><i class="fa fa-check"></i><b>11.3.2</b> Effect Size</a></li>
-<li class="chapter" data-level="11.3.3" data-path="statistical-power.html"><a href="statistical-power.html#significance-level-alpha"><i class="fa fa-check"></i><b>11.3.3</b> Significance Level (Alpha)</a></li>
+<li class="chapter" data-level="9.3.1" data-path="correlations.html"><a href="correlations.html#interpreting-the-size-of-correlation"><i class="fa fa-check"></i><b>9.3.1</b> Interpreting the Size of Correlation</a></li>
+<li class="chapter" data-level="9.3.2" data-path="correlations.html"><a href="correlations.html#examples-of-effect-size-in-correlation"><i class="fa fa-check"></i><b>9.3.2</b> Examples of Effect Size in Correlation</a></li>
 </ul></li>
-<li class="chapter" data-level="11.4" data-path="statistical-power.html"><a href="statistical-power.html#calculating-power-in-r"><i class="fa fa-check"></i><b>11.4</b> Calculating Power in R</a>
+<li class="chapter" data-level="9.4" data-path="correlations.html"><a href="correlations.html#the-directionality-and-symmetry-of-correlation"><i class="fa fa-check"></i><b>9.4</b> The Directionality and Symmetry of Correlation</a>
 <ul>
-<li class="chapter" data-level="11.4.1" data-path="statistical-power.html"><a href="statistical-power.html#introduction-to-power-analysis"><i class="fa fa-check"></i><b>11.4.1</b> Introduction to Power Analysis</a></li>
-<li class="chapter" data-level="11.4.2" data-path="statistical-power.html"><a href="statistical-power.html#step-by-step-guide-to-conducting-power-analysis-in-r"><i class="fa fa-check"></i><b>11.4.2</b> Step-by-Step Guide to Conducting Power Analysis in R</a></li>
+<li class="chapter" data-level="9.4.1" data-path="correlations.html"><a href="correlations.html#no-directionality-in-correlation"><i class="fa fa-check"></i><b>9.4.1</b> No Directionality in Correlation</a></li>
+<li class="chapter" data-level="9.4.2" data-path="correlations.html"><a href="correlations.html#symmetry-of-correlation"><i class="fa fa-check"></i><b>9.4.2</b> Symmetry of Correlation</a></li>
 </ul></li>
-<li class="chapter" data-level="11.5" data-path="statistical-power.html"><a href="statistical-power.html#practical-considerations-and-challenges"><i class="fa fa-check"></i><b>11.5</b> Practical Considerations and Challenges</a>
+<li class="chapter" data-level="9.5" data-path="correlations.html"><a href="correlations.html#issues-with-correlations"><i class="fa fa-check"></i><b>9.5</b> Issues with Correlations</a>
 <ul>
-<li class="chapter" data-level="11.5.1" data-path="statistical-power.html"><a href="statistical-power.html#common-challenges-in-achieving-adequate-power"><i class="fa fa-check"></i><b>11.5.1</b> Common Challenges in Achieving Adequate Power</a></li>
-<li class="chapter" data-level="11.5.2" data-path="statistical-power.html"><a href="statistical-power.html#ethical-considerations-2"><i class="fa fa-check"></i><b>11.5.2</b> Ethical Considerations</a></li>
+<li class="chapter" data-level="9.5.1" data-path="correlations.html"><a href="correlations.html#the-third-variable-problem-confounders"><i class="fa fa-check"></i><b>9.5.1</b> The Third Variable Problem (Confounders)</a></li>
+<li class="chapter" data-level="9.5.2" data-path="correlations.html"><a href="correlations.html#directionality-problem"><i class="fa fa-check"></i><b>9.5.2</b> Directionality Problem</a></li>
+<li class="chapter" data-level="9.5.3" data-path="correlations.html"><a href="correlations.html#correlation-does-not-imply-causality"><i class="fa fa-check"></i><b>9.5.3</b> Correlation Does Not Imply Causality</a></li>
 </ul></li>
-<li class="chapter" data-level="11.6" data-path="statistical-power.html"><a href="statistical-power.html#real-world-applications-of-power-analysis-in-psychology"><i class="fa fa-check"></i><b>11.6</b> Real-World Applications of Power Analysis in Psychology</a>
+<li class="chapter" data-level="9.6" data-path="correlations.html"><a href="correlations.html#chapter-summary-8"><i class="fa fa-check"></i><b>9.6</b> Chapter Summary</a>
 <ul>
-<li class="chapter" data-level="11.6.1" data-path="statistical-power.html"><a href="statistical-power.html#hypothetical-case-studies"><i class="fa fa-check"></i><b>11.6.1</b> Hypothetical Case Studies</a></li>
-<li class="chapter" data-level="11.6.2" data-path="statistical-power.html"><a href="statistical-power.html#best-practices-for-ensuring-adequate-power"><i class="fa fa-check"></i><b>11.6.2</b> Best Practices for Ensuring Adequate Power</a></li>
+<li class="chapter" data-level="9.6.1" data-path="correlations.html"><a href="correlations.html#recap-of-key-concepts-1"><i class="fa fa-check"></i><b>9.6.1</b> Recap of Key Concepts</a></li>
+<li class="chapter" data-level="9.6.2" data-path="correlations.html"><a href="correlations.html#final-thoughts-1"><i class="fa fa-check"></i><b>9.6.2</b> Final Thoughts</a></li>
 </ul></li>
-<li class="chapter" data-level="11.7" data-path="statistical-power.html"><a href="statistical-power.html#chapter-summary-9"><i class="fa fa-check"></i><b>11.7</b> Chapter Summary</a>
+<li class="chapter" data-level="9.7" data-path="correlations.html"><a href="correlations.html#practice-exercises-7"><i class="fa fa-check"></i><b>9.7</b> Practice Exercises</a>
 <ul>
-<li class="chapter" data-level="11.7.1" data-path="statistical-power.html"><a href="statistical-power.html#recap-of-key-concepts"><i class="fa fa-check"></i><b>11.7.1</b> Recap of Key Concepts</a></li>
-<li class="chapter" data-level="11.7.2" data-path="statistical-power.html"><a href="statistical-power.html#final-thoughts"><i class="fa fa-check"></i><b>11.7.2</b> Final Thoughts</a></li>
-</ul></li>
-<li class="chapter" data-level="11.8" data-path="statistical-power.html"><a href="statistical-power.html#practice-exercises-8"><i class="fa fa-check"></i><b>11.8</b> Practice Exercises</a>
-<ul>
-<li class="chapter" data-level="11.8.1" data-path="statistical-power.html"><a href="statistical-power.html#exercise-1-calculate-the-statistical-power-of-a-study-using-a-given-dataset-and-interpret-the-results"><i class="fa fa-check"></i><b>11.8.1</b> Exercise 1: Calculate the Statistical Power of a Study Using a Given Dataset and Interpret the Results</a></li>
-<li class="chapter" data-level="11.8.2" data-path="statistical-power.html"><a href="statistical-power.html#exercise-2-conduct-a-power-analysis-in-r-to-determine-the-required-sample-size-for-a-psychological-experiment-with-a-specified-effect-size-and-significance-level"><i class="fa fa-check"></i><b>11.8.2</b> Exercise 2: Conduct a Power Analysis in R to Determine the Required Sample Size for a Psychological Experiment with a Specified Effect Size and Significance Level</a></li>
-<li class="chapter" data-level="11.8.3" data-path="statistical-power.html"><a href="statistical-power.html#exercise-3-analyze-a-scenario-where-a-type-i-error-occurred-in-a-psychological-study"><i class="fa fa-check"></i><b>11.8.3</b> Exercise 3: Analyze a Scenario Where a Type I Error Occurred in a Psychological Study</a></li>
-<li class="chapter" data-level="11.8.4" data-path="statistical-power.html"><a href="statistical-power.html#exercise-4-analyze-a-scenario-where-a-type-ii-error-occurred-in-a-psychological-study"><i class="fa fa-check"></i><b>11.8.4</b> Exercise 4: Analyze a Scenario Where a Type II Error Occurred in a Psychological Study</a></li>
-<li class="chapter" data-level="11.8.5" data-path="statistical-power.html"><a href="statistical-power.html#exercise-5-compare-the-impact-of-changing-the-sample-size-effect-size-and-significance-level-on-power-using-different-hypothetical-scenarios-in-r"><i class="fa fa-check"></i><b>11.8.5</b> Exercise 5: Compare the Impact of Changing the Sample Size, Effect Size, and Significance Level on Power Using Different Hypothetical Scenarios in R</a></li>
+<li class="chapter" data-level="9.7.1" data-path="correlations.html"><a href="correlations.html#exercise-1-calculate-and-interpret-the-pearson-correlation-coefficient-for-a-sample-dataset-in-r"><i class="fa fa-check"></i><b>9.7.1</b> Exercise 1: Calculate and Interpret the Pearson Correlation Coefficient for a Sample Dataset in R</a></li>
+<li class="chapter" data-level="9.7.2" data-path="correlations.html"><a href="correlations.html#exercise-2-create-a-scatter-plot-with-ggplot2-to-visualize-the-correlation-between-two-variables-and-add-a-trend-line"><i class="fa fa-check"></i><b>9.7.2</b> Exercise 2: Create a Scatter Plot with ggplot2 to Visualize the Correlation Between Two Variables and Add a Trend Line</a></li>
+<li class="chapter" data-level="9.7.3" data-path="correlations.html"><a href="correlations.html#exercise-3-analyze-the-size-of-the-correlation-and-discuss-its-practical-significance-in-a-psychological-context"><i class="fa fa-check"></i><b>9.7.3</b> Exercise 3: Analyze the Size of the Correlation and Discuss Its Practical Significance in a Psychological Context</a></li>
+<li class="chapter" data-level="9.7.4" data-path="correlations.html"><a href="correlations.html#exercise-4-discuss-the-potential-impact-of-a-third-variable-on-a-given-correlation-scenario-and-suggest-ways-to-control-for-it"><i class="fa fa-check"></i><b>9.7.4</b> Exercise 4: Discuss the Potential Impact of a Third Variable on a Given Correlation Scenario and Suggest Ways to Control for It</a></li>
+<li class="chapter" data-level="9.7.5" data-path="correlations.html"><a href="correlations.html#exercise-5-evaluate-a-correlation-study-and-discuss-why-correlation-does-not-imply-causality-using-specific-examples-from-the-chapter"><i class="fa fa-check"></i><b>9.7.5</b> Exercise 5: Evaluate a Correlation Study and Discuss Why Correlation Does Not Imply Causality, Using Specific Examples from the Chapter</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html"><i class="fa fa-check"></i><b>12</b> Appendix: Answers to Chapter Exercises</a>
+<li class="chapter" data-level="10" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html"><i class="fa fa-check"></i><b>10</b> Bivariate Linear Models</a>
 <ul>
-<li class="chapter" data-level="12.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-1-exercises"><i class="fa fa-check"></i><b>12.1</b> Answers to Chapter 1 Exercises</a>
+<li class="chapter" data-level="10.1" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#what-are-bivariate-linear-models"><i class="fa fa-check"></i><b>10.1</b> What Are Bivariate Linear Models?</a>
 <ul>
-<li class="chapter" data-level="12.1.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-familiarization-with-r-studio-1"><i class="fa fa-check"></i><b>12.1.1</b> Exercise 1: Familiarization with R Studio</a></li>
-<li class="chapter" data-level="12.1.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-basic-data-entry-and-operation-1"><i class="fa fa-check"></i><b>12.1.2</b> Exercise 2: Basic Data Entry and Operation</a></li>
-<li class="chapter" data-level="12.1.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-introduction-to-r-markdown-1"><i class="fa fa-check"></i><b>12.1.3</b> Exercise 3: Introduction to R Markdown</a></li>
-<li class="chapter" data-level="12.1.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-exploring-the-help-pane-1"><i class="fa fa-check"></i><b>12.1.4</b> Exercise 4: Exploring the Help Pane</a></li>
+<li class="chapter" data-level="10.1.1" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#why-use-bivariate-linear-models"><i class="fa fa-check"></i><b>10.1.1</b> Why Use Bivariate Linear Models?</a></li>
 </ul></li>
-<li class="chapter" data-level="12.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-2-exercises"><i class="fa fa-check"></i><b>12.2</b> Answers to Chapter 2 Exercises</a>
+<li class="chapter" data-level="10.2" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#creating-linear-models-to-test-hypotheses"><i class="fa fa-check"></i><b>10.2</b> Creating Linear Models to Test Hypotheses</a>
 <ul>
-<li class="chapter" data-level="12.2.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-exercise-1-identifying-data-types"><i class="fa fa-check"></i><b>12.2.1</b> Answers to Exercise 1: Identifying Data Types</a></li>
-<li class="chapter" data-level="12.2.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-exercise-2-designing-a-study"><i class="fa fa-check"></i><b>12.2.2</b> Answers to Exercise 2: Designing a Study</a></li>
-<li class="chapter" data-level="12.2.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-exercise-3-evaluating-research"><i class="fa fa-check"></i><b>12.2.3</b> Answers to Exercise 3: Evaluating Research</a></li>
+<li class="chapter" data-level="10.2.1" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#the-concept-of-a-linear-model"><i class="fa fa-check"></i><b>10.2.1</b> The Concept of a Linear Model</a></li>
+<li class="chapter" data-level="10.2.2" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#hypothesis-testing-with-linear-models"><i class="fa fa-check"></i><b>10.2.2</b> Hypothesis Testing with Linear Models</a></li>
 </ul></li>
-<li class="chapter" data-level="12.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-3-exercises"><i class="fa fa-check"></i><b>12.3</b> Answers to Chapter 3 Exercises</a>
+<li class="chapter" data-level="10.3" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#components-of-a-bivariate-linear-model"><i class="fa fa-check"></i><b>10.3</b> Components of a Bivariate Linear Model</a>
 <ul>
-<li class="chapter" data-level="12.3.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-exercise-1-evaluating-reliability"><i class="fa fa-check"></i><b>12.3.1</b> Answers to Exercise 1: Evaluating Reliability</a></li>
-<li class="chapter" data-level="12.3.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-exercise-2-assessing-validity"><i class="fa fa-check"></i><b>12.3.2</b> Answers to Exercise 2: Assessing Validity</a></li>
-<li class="chapter" data-level="12.3.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-exercise-3-identifying-and-addressing-data-collection-errors"><i class="fa fa-check"></i><b>12.3.3</b> Answers to Exercise 3: Identifying and Addressing Data Collection Errors</a></li>
-<li class="chapter" data-level="12.3.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-exercise-4-triangulation-to-enhance-validity"><i class="fa fa-check"></i><b>12.3.4</b> Answers to Exercise 4: Triangulation to Enhance Validity</a></li>
-<li class="chapter" data-level="12.3.5" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-exercise-5-role-play-on-ethical-data-collection"><i class="fa fa-check"></i><b>12.3.5</b> Answers to Exercise 5: Role Play on Ethical Data Collection</a></li>
-<li class="chapter" data-level="12.3.6" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-exercise-6-real-world-application"><i class="fa fa-check"></i><b>12.3.6</b> Answers to Exercise 6: Real-World Application</a></li>
+<li class="chapter" data-level="10.3.1" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#intercept-b0"><i class="fa fa-check"></i><b>10.3.1</b> Intercept (b0)</a></li>
+<li class="chapter" data-level="10.3.2" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#slopes-b1"><i class="fa fa-check"></i><b>10.3.2</b> Slope(s) (b1)</a></li>
+<li class="chapter" data-level="10.3.3" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#correlations-1"><i class="fa fa-check"></i><b>10.3.3</b> Correlations</a></li>
 </ul></li>
-<li class="chapter" data-level="12.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-4-practice-exercises"><i class="fa fa-check"></i><b>12.4</b> Answers to Chapter 4 Practice Exercises</a>
+<li class="chapter" data-level="10.4" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#residuals"><i class="fa fa-check"></i><b>10.4</b> Residuals</a>
 <ul>
-<li class="chapter" data-level="12.4.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-calculating-descriptive-statistics-1"><i class="fa fa-check"></i><b>12.4.1</b> Exercise 1: Calculating Descriptive Statistics</a></li>
-<li class="chapter" data-level="12.4.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-understanding-the-normal-distribution-1"><i class="fa fa-check"></i><b>12.4.2</b> Exercise 2: Understanding the Normal Distribution</a></li>
-<li class="chapter" data-level="12.4.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-applying-the-t-distribution-1"><i class="fa fa-check"></i><b>12.4.3</b> Exercise 3: Applying the T-Distribution</a></li>
-<li class="chapter" data-level="12.4.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-defining-and-simulating-sample-spaces-1"><i class="fa fa-check"></i><b>12.4.4</b> Exercise 4: Defining and Simulating Sample Spaces</a></li>
+<li class="chapter" data-level="10.4.1" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#what-are-residuals"><i class="fa fa-check"></i><b>10.4.1</b> What Are Residuals?</a></li>
+<li class="chapter" data-level="10.4.2" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#importance-of-residuals-in-model-evaluation"><i class="fa fa-check"></i><b>10.4.2</b> Importance of Residuals in Model Evaluation</a></li>
+<li class="chapter" data-level="10.4.3" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#checking-for-patterns-in-residuals"><i class="fa fa-check"></i><b>10.4.3</b> Checking for Patterns in Residuals</a></li>
+<li class="chapter" data-level="10.4.4" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#example-residuals-with-a-pattern-non-normal-distribution"><i class="fa fa-check"></i><b>10.4.4</b> Example: Residuals with a Pattern (Non-Normal Distribution)</a></li>
 </ul></li>
-<li class="chapter" data-level="12.5" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-5-practice-exercises"><i class="fa fa-check"></i><b>12.5</b> Answers to Chapter 5 Practice Exercises</a>
+<li class="chapter" data-level="10.5" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#real-world-application-of-bivariate-linear-models"><i class="fa fa-check"></i><b>10.5</b> Real-World Application of Bivariate Linear Models</a>
 <ul>
-<li class="chapter" data-level="12.5.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-importing-data-1"><i class="fa fa-check"></i><b>12.5.1</b> Exercise 1: Importing Data</a></li>
-<li class="chapter" data-level="12.5.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-cleaning-data-with-dplyr-1"><i class="fa fa-check"></i><b>12.5.2</b> Exercise 2: Cleaning Data with dplyr</a></li>
-<li class="chapter" data-level="12.5.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-generating-descriptive-statistics-with-psych-1"><i class="fa fa-check"></i><b>12.5.3</b> Exercise 3: Generating Descriptive Statistics with <code>psych</code></a></li>
-<li class="chapter" data-level="12.5.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-visualizing-data-with-psych-1"><i class="fa fa-check"></i><b>12.5.4</b> Exercise 4: Visualizing Data with psych</a></li>
+<li class="chapter" data-level="10.5.1" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#practical-examples-in-psychological-research"><i class="fa fa-check"></i><b>10.5.1</b> Practical Examples in Psychological Research</a></li>
+<li class="chapter" data-level="10.5.2" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#building-your-own-bivariate-linear-model-in-r"><i class="fa fa-check"></i><b>10.5.2</b> Building Your Own Bivariate Linear Model in R</a></li>
+<li class="chapter" data-level="10.5.3" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#limitations-and-considerations"><i class="fa fa-check"></i><b>10.5.3</b> Limitations and Considerations</a></li>
 </ul></li>
-<li class="chapter" data-level="12.6" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-6-practice-exercises"><i class="fa fa-check"></i><b>12.6</b> Answers to Chapter 6 Practice Exercises</a>
+<li class="chapter" data-level="10.6" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#chapter-summary-9"><i class="fa fa-check"></i><b>10.6</b> Chapter Summary</a></li>
+<li class="chapter" data-level="10.7" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#practice-exercises-8"><i class="fa fa-check"></i><b>10.7</b> Practice Exercises</a>
 <ul>
-<li class="chapter" data-level="12.6.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-mean-centering-1"><i class="fa fa-check"></i><b>12.6.1</b> Exercise 1: Mean-Centering</a></li>
-<li class="chapter" data-level="12.6.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-z-scores-1"><i class="fa fa-check"></i><b>12.6.2</b> Exercise 2: Z-Scores</a></li>
-<li class="chapter" data-level="12.6.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-combining-mean-centering-and-z-scores-1"><i class="fa fa-check"></i><b>12.6.3</b> Exercise 3: Combining Mean-Centering and Z-Scores</a></li>
-<li class="chapter" data-level="12.6.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-non-linear-transformations-1"><i class="fa fa-check"></i><b>12.6.4</b> Exercise 4: Non-Linear Transformations</a></li>
+<li class="chapter" data-level="10.7.1" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#exercise-1-create-a-simple-bivariate-linear-model"><i class="fa fa-check"></i><b>10.7.1</b> Exercise 1: Create a Simple Bivariate Linear Model</a></li>
+<li class="chapter" data-level="10.7.2" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#exercise-2-analyze-residuals-to-assess-model-fit"><i class="fa fa-check"></i><b>10.7.2</b> Exercise 2: Analyze Residuals to Assess Model Fit</a></li>
+<li class="chapter" data-level="10.7.3" data-path="bivariate-linear-models.html"><a href="bivariate-linear-models.html#exercise-3-apply-bivariate-linear-models-to-a-real-world-dataset"><i class="fa fa-check"></i><b>10.7.3</b> Exercise 3: Apply Bivariate Linear Models to a Real-World Dataset</a></li>
 </ul></li>
-<li class="chapter" data-level="12.7" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-7-practice-exercises"><i class="fa fa-check"></i><b>12.7</b> Answers to Chapter 7 Practice Exercises</a>
-<ul>
-<li class="chapter" data-level="12.7.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-create-an-apa-compliant-bar-graph-1"><i class="fa fa-check"></i><b>12.7.1</b> Exercise 1: Create an APA-Compliant Bar Graph</a></li>
-<li class="chapter" data-level="12.7.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-modify-a-basic-ggplot2-plot-to-meet-apa-standards-1"><i class="fa fa-check"></i><b>12.7.2</b> Exercise 2: Modify a Basic ggplot2 Plot to Meet APA Standards</a></li>
-<li class="chapter" data-level="12.7.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-create-an-apa-compliant-line-graph-and-save-it-as-a-high-resolution-image-1"><i class="fa fa-check"></i><b>12.7.3</b> Exercise 3: Create an APA-Compliant Line Graph and Save It as a High-Resolution Image</a></li>
 </ul></li>
-<li class="chapter" data-level="12.8" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-8-practice-exercises"><i class="fa fa-check"></i><b>12.8</b> Answers to Chapter 8 Practice Exercises</a>
+<li class="chapter" data-level="11" data-path="multiple-regression.html"><a href="multiple-regression.html"><i class="fa fa-check"></i><b>11</b> Multiple Regression</a>
 <ul>
-<li class="chapter" data-level="12.8.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-create-a-simple-bivariate-linear-model-1"><i class="fa fa-check"></i><b>12.8.1</b> Exercise 1: Create a Simple Bivariate Linear Model</a></li>
-<li class="chapter" data-level="12.8.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-analyze-residuals-to-assess-model-fit-1"><i class="fa fa-check"></i><b>12.8.2</b> Exercise 2: Analyze Residuals to Assess Model Fit</a></li>
-<li class="chapter" data-level="12.8.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-apply-bivariate-linear-models-to-a-real-world-dataset-1"><i class="fa fa-check"></i><b>12.8.3</b> Exercise 3: Apply Bivariate Linear Models to a Real-World Dataset</a></li>
+<li class="chapter" data-level="11.1" data-path="multiple-regression.html"><a href="multiple-regression.html#introduction-to-multiple-regression"><i class="fa fa-check"></i><b>11.1</b> Introduction to Multiple Regression</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="multiple-regression.html"><a href="multiple-regression.html#what-is-multiple-regression"><i class="fa fa-check"></i><b>11.1.1</b> What is Multiple Regression?</a></li>
+<li class="chapter" data-level="11.1.2" data-path="multiple-regression.html"><a href="multiple-regression.html#why-use-multiple-regression"><i class="fa fa-check"></i><b>11.1.2</b> Why Use Multiple Regression?</a></li>
 </ul></li>
-<li class="chapter" data-level="12.9" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-9-practice-exercises"><i class="fa fa-check"></i><b>12.9</b> Answers to Chapter 9 Practice Exercises</a>
+<li class="chapter" data-level="11.2" data-path="multiple-regression.html"><a href="multiple-regression.html#understanding-main-effects-in-multiple-regression"><i class="fa fa-check"></i><b>11.2</b> Understanding Main Effects in Multiple Regression</a>
 <ul>
-<li class="chapter" data-level="12.9.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-chi-square-goodness-of-fit-test-1"><i class="fa fa-check"></i><b>12.9.1</b> Exercise 1: Chi-Square Goodness of Fit Test</a></li>
-<li class="chapter" data-level="12.9.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-calculating-r-squared"><i class="fa fa-check"></i><b>12.9.2</b> Exercise 2: Calculating R-Squared</a></li>
-<li class="chapter" data-level="12.9.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-f-test-for-comparing-models"><i class="fa fa-check"></i><b>12.9.3</b> Exercise 3: F-Test for Comparing Models</a></li>
-<li class="chapter" data-level="12.9.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-visualizing-the-f-distribution"><i class="fa fa-check"></i><b>12.9.4</b> Exercise 4: Visualizing the F-Distribution</a></li>
-<li class="chapter" data-level="12.9.5" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-5-comprehensive-analysis-1"><i class="fa fa-check"></i><b>12.9.5</b> Exercise 5: Comprehensive Analysis</a></li>
+<li class="chapter" data-level="11.2.1" data-path="multiple-regression.html"><a href="multiple-regression.html#the-concept-of-main-effects"><i class="fa fa-check"></i><b>11.2.1</b> The Concept of Main Effects</a></li>
+<li class="chapter" data-level="11.2.2" data-path="multiple-regression.html"><a href="multiple-regression.html#interpreting-main-effects-in-multiple-regression"><i class="fa fa-check"></i><b>11.2.2</b> Interpreting Main Effects in Multiple Regression</a></li>
 </ul></li>
-<li class="chapter" data-level="12.10" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-10-practice-exercises"><i class="fa fa-check"></i><b>12.10</b> Answers to Chapter 10 Practice Exercises</a>
+<li class="chapter" data-level="11.3" data-path="multiple-regression.html"><a href="multiple-regression.html#calculating-and-interpreting-multiple-regression-in-r"><i class="fa fa-check"></i><b>11.3</b> Calculating and Interpreting Multiple Regression in R</a>
 <ul>
-<li class="chapter" data-level="12.10.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-power-calculation-interpretation"><i class="fa fa-check"></i><b>12.10.1</b> Exercise 1: Power Calculation Interpretation</a></li>
-<li class="chapter" data-level="12.10.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-sample-size-calculation-interpretation"><i class="fa fa-check"></i><b>12.10.2</b> Exercise 2: Sample Size Calculation Interpretation</a></li>
-<li class="chapter" data-level="12.10.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-type-i-error-analysis-interpretation"><i class="fa fa-check"></i><b>12.10.3</b> Exercise 3: Type I Error Analysis Interpretation</a></li>
-<li class="chapter" data-level="12.10.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-type-ii-error-analysis-interpretation"><i class="fa fa-check"></i><b>12.10.4</b> Exercise 4: Type II Error Analysis Interpretation</a></li>
-<li class="chapter" data-level="12.10.5" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-5-power-comparison-interpretation"><i class="fa fa-check"></i><b>12.10.5</b> Exercise 5: Power Comparison Interpretation</a></li>
+<li class="chapter" data-level="11.3.1" data-path="multiple-regression.html"><a href="multiple-regression.html#step-by-step-guide-to-running-a-multiple-regression-in-r"><i class="fa fa-check"></i><b>11.3.1</b> Step-by-Step Guide to Running a Multiple Regression in R</a></li>
+<li class="chapter" data-level="11.3.2" data-path="multiple-regression.html"><a href="multiple-regression.html#interpreting-the-output-of-a-multiple-regression-model"><i class="fa fa-check"></i><b>11.3.2</b> Interpreting the Output of a Multiple Regression Model</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="multiple-regression.html"><a href="multiple-regression.html#understanding-suppression-in-multiple-regression"><i class="fa fa-check"></i><b>11.4</b> Understanding Suppression in Multiple Regression</a>
+<ul>
+<li class="chapter" data-level="11.4.1" data-path="multiple-regression.html"><a href="multiple-regression.html#what-is-suppression"><i class="fa fa-check"></i><b>11.4.1</b> What is Suppression?</a></li>
+<li class="chapter" data-level="11.4.2" data-path="multiple-regression.html"><a href="multiple-regression.html#identifying-suppression-effects"><i class="fa fa-check"></i><b>11.4.2</b> Identifying Suppression Effects</a></li>
+<li class="chapter" data-level="11.4.3" data-path="multiple-regression.html"><a href="multiple-regression.html#practical-implications-of-suppression"><i class="fa fa-check"></i><b>11.4.3</b> Practical Implications of Suppression</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html"><i class="fa fa-check"></i><b>12</b> Goodness of Fit</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#what-is-goodness-of-fit"><i class="fa fa-check"></i><b>12.1</b> What is Goodness of Fit?</a>
+<ul>
+<li class="chapter" data-level="12.1.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#why-goodness-of-fit-matters"><i class="fa fa-check"></i><b>12.1.1</b> Why Goodness of Fit Matters</a></li>
+</ul></li>
+<li class="chapter" data-level="12.2" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#chi-square"><i class="fa fa-check"></i><b>12.2</b> Chi-Square</a>
+<ul>
+<li class="chapter" data-level="12.2.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#understanding-the-chi-square-test"><i class="fa fa-check"></i><b>12.2.1</b> Understanding the Chi-Square Test</a></li>
+<li class="chapter" data-level="12.2.2" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#calculating-chi-square-in-r"><i class="fa fa-check"></i><b>12.2.2</b> Calculating Chi-Square in R</a></li>
+<li class="chapter" data-level="12.2.3" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#real-world-applications-3"><i class="fa fa-check"></i><b>12.2.3</b> Real-World Applications</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#r-squared"><i class="fa fa-check"></i><b>12.3</b> R-Squared</a>
+<ul>
+<li class="chapter" data-level="12.3.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#what-is-r-squared"><i class="fa fa-check"></i><b>12.3.1</b> What is R-Squared?</a></li>
+<li class="chapter" data-level="12.3.2" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#calculating-r-squared-in-r"><i class="fa fa-check"></i><b>12.3.2</b> Calculating R-Squared in R</a></li>
+<li class="chapter" data-level="12.3.3" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#adjusted-r-squared"><i class="fa fa-check"></i><b>12.3.3</b> Adjusted R-Squared</a></li>
+<li class="chapter" data-level="12.3.4" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#real-world-applications-4"><i class="fa fa-check"></i><b>12.3.4</b> Real-World Applications</a></li>
+</ul></li>
+<li class="chapter" data-level="12.4" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#the-f-test-for-comparing-models"><i class="fa fa-check"></i><b>12.4</b> The F-Test for Comparing Models</a>
+<ul>
+<li class="chapter" data-level="12.4.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#what-is-the-f-test"><i class="fa fa-check"></i><b>12.4.1</b> What is the F-Test?</a></li>
+<li class="chapter" data-level="12.4.2" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#performing-the-f-test-in-r"><i class="fa fa-check"></i><b>12.4.2</b> Performing the F-Test in R</a></li>
+</ul></li>
+<li class="chapter" data-level="12.5" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#understanding-the-f-distribution"><i class="fa fa-check"></i><b>12.5</b> Understanding the F-Distribution</a>
+<ul>
+<li class="chapter" data-level="12.5.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#what-is-the-f-distribution"><i class="fa fa-check"></i><b>12.5.1</b> What is the F-Distribution?</a></li>
+<li class="chapter" data-level="12.5.2" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#visualizing-the-f-distribution-in-r"><i class="fa fa-check"></i><b>12.5.2</b> Visualizing the F-Distribution in R</a></li>
+<li class="chapter" data-level="12.5.3" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#real-world-applications-5"><i class="fa fa-check"></i><b>12.5.3</b> Real-World Applications</a></li>
+</ul></li>
+<li class="chapter" data-level="12.6" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#putting-it-all-together-assessing-model-fit-in-practice"><i class="fa fa-check"></i><b>12.6</b> Putting It All Together – Assessing Model Fit in Practice</a>
+<ul>
+<li class="chapter" data-level="12.6.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#comprehensive-example"><i class="fa fa-check"></i><b>12.6.1</b> Comprehensive Example</a></li>
+<li class="chapter" data-level="12.6.2" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#best-practices-for-assessing-goodness-of-fit"><i class="fa fa-check"></i><b>12.6.2</b> Best Practices for Assessing Goodness of Fit</a></li>
+</ul></li>
+<li class="chapter" data-level="12.7" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#chapter-summary-10"><i class="fa fa-check"></i><b>12.7</b> Chapter Summary</a></li>
+<li class="chapter" data-level="12.8" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#practice-exercises-9"><i class="fa fa-check"></i><b>12.8</b> Practice Exercises</a>
+<ul>
+<li class="chapter" data-level="12.8.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#section-7-practice-exercises"><i class="fa fa-check"></i><b>12.8.1</b> Section 7: Practice Exercises</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="statistical-power.html"><a href="statistical-power.html"><i class="fa fa-check"></i><b>13</b> Statistical Power</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="statistical-power.html"><a href="statistical-power.html#introduction-to-statistical-power"><i class="fa fa-check"></i><b>13.1</b> Introduction to Statistical Power</a>
+<ul>
+<li class="chapter" data-level="13.1.1" data-path="statistical-power.html"><a href="statistical-power.html#definition-of-statistical-power"><i class="fa fa-check"></i><b>13.1.1</b> Definition of Statistical Power</a></li>
+<li class="chapter" data-level="13.1.2" data-path="statistical-power.html"><a href="statistical-power.html#the-role-of-power-in-psychological-research"><i class="fa fa-check"></i><b>13.1.2</b> The Role of Power in Psychological Research</a></li>
+</ul></li>
+<li class="chapter" data-level="13.2" data-path="statistical-power.html"><a href="statistical-power.html#understanding-type-i-and-type-ii-errors"><i class="fa fa-check"></i><b>13.2</b> Understanding Type I and Type II Errors</a>
+<ul>
+<li class="chapter" data-level="13.2.1" data-path="statistical-power.html"><a href="statistical-power.html#type-i-error-false-positive"><i class="fa fa-check"></i><b>13.2.1</b> Type I Error (False Positive)</a></li>
+<li class="chapter" data-level="13.2.2" data-path="statistical-power.html"><a href="statistical-power.html#type-ii-error-false-negative"><i class="fa fa-check"></i><b>13.2.2</b> Type II Error (False Negative)</a></li>
+<li class="chapter" data-level="13.2.3" data-path="statistical-power.html"><a href="statistical-power.html#balancing-type-i-and-type-ii-errors"><i class="fa fa-check"></i><b>13.2.3</b> Balancing Type I and Type II Errors</a></li>
+</ul></li>
+<li class="chapter" data-level="13.3" data-path="statistical-power.html"><a href="statistical-power.html#factors-affecting-power"><i class="fa fa-check"></i><b>13.3</b> Factors Affecting Power</a>
+<ul>
+<li class="chapter" data-level="13.3.1" data-path="statistical-power.html"><a href="statistical-power.html#sample-size"><i class="fa fa-check"></i><b>13.3.1</b> Sample Size</a></li>
+<li class="chapter" data-level="13.3.2" data-path="statistical-power.html"><a href="statistical-power.html#effect-size"><i class="fa fa-check"></i><b>13.3.2</b> Effect Size</a></li>
+<li class="chapter" data-level="13.3.3" data-path="statistical-power.html"><a href="statistical-power.html#significance-level-alpha"><i class="fa fa-check"></i><b>13.3.3</b> Significance Level (Alpha)</a></li>
+</ul></li>
+<li class="chapter" data-level="13.4" data-path="statistical-power.html"><a href="statistical-power.html#calculating-power-in-r"><i class="fa fa-check"></i><b>13.4</b> Calculating Power in R</a>
+<ul>
+<li class="chapter" data-level="13.4.1" data-path="statistical-power.html"><a href="statistical-power.html#introduction-to-power-analysis"><i class="fa fa-check"></i><b>13.4.1</b> Introduction to Power Analysis</a></li>
+<li class="chapter" data-level="13.4.2" data-path="statistical-power.html"><a href="statistical-power.html#step-by-step-guide-to-conducting-power-analysis-in-r"><i class="fa fa-check"></i><b>13.4.2</b> Step-by-Step Guide to Conducting Power Analysis in R</a></li>
+</ul></li>
+<li class="chapter" data-level="13.5" data-path="statistical-power.html"><a href="statistical-power.html#practical-considerations-and-challenges"><i class="fa fa-check"></i><b>13.5</b> Practical Considerations and Challenges</a>
+<ul>
+<li class="chapter" data-level="13.5.1" data-path="statistical-power.html"><a href="statistical-power.html#common-challenges-in-achieving-adequate-power"><i class="fa fa-check"></i><b>13.5.1</b> Common Challenges in Achieving Adequate Power</a></li>
+<li class="chapter" data-level="13.5.2" data-path="statistical-power.html"><a href="statistical-power.html#ethical-considerations-2"><i class="fa fa-check"></i><b>13.5.2</b> Ethical Considerations</a></li>
+</ul></li>
+<li class="chapter" data-level="13.6" data-path="statistical-power.html"><a href="statistical-power.html#real-world-applications-of-power-analysis-in-psychology"><i class="fa fa-check"></i><b>13.6</b> Real-World Applications of Power Analysis in Psychology</a>
+<ul>
+<li class="chapter" data-level="13.6.1" data-path="statistical-power.html"><a href="statistical-power.html#hypothetical-case-studies"><i class="fa fa-check"></i><b>13.6.1</b> Hypothetical Case Studies</a></li>
+<li class="chapter" data-level="13.6.2" data-path="statistical-power.html"><a href="statistical-power.html#best-practices-for-ensuring-adequate-power"><i class="fa fa-check"></i><b>13.6.2</b> Best Practices for Ensuring Adequate Power</a></li>
+</ul></li>
+<li class="chapter" data-level="13.7" data-path="statistical-power.html"><a href="statistical-power.html#chapter-summary-11"><i class="fa fa-check"></i><b>13.7</b> Chapter Summary</a>
+<ul>
+<li class="chapter" data-level="13.7.1" data-path="statistical-power.html"><a href="statistical-power.html#recap-of-key-concepts-2"><i class="fa fa-check"></i><b>13.7.1</b> Recap of Key Concepts</a></li>
+<li class="chapter" data-level="13.7.2" data-path="statistical-power.html"><a href="statistical-power.html#final-thoughts-2"><i class="fa fa-check"></i><b>13.7.2</b> Final Thoughts</a></li>
+</ul></li>
+<li class="chapter" data-level="13.8" data-path="statistical-power.html"><a href="statistical-power.html#practice-exercises-10"><i class="fa fa-check"></i><b>13.8</b> Practice Exercises</a>
+<ul>
+<li class="chapter" data-level="13.8.1" data-path="statistical-power.html"><a href="statistical-power.html#exercise-1-calculate-the-statistical-power-of-a-study-using-a-given-dataset-and-interpret-the-results"><i class="fa fa-check"></i><b>13.8.1</b> Exercise 1: Calculate the Statistical Power of a Study Using a Given Dataset and Interpret the Results</a></li>
+<li class="chapter" data-level="13.8.2" data-path="statistical-power.html"><a href="statistical-power.html#exercise-2-conduct-a-power-analysis-in-r-to-determine-the-required-sample-size-for-a-psychological-experiment-with-a-specified-effect-size-and-significance-level"><i class="fa fa-check"></i><b>13.8.2</b> Exercise 2: Conduct a Power Analysis in R to Determine the Required Sample Size for a Psychological Experiment with a Specified Effect Size and Significance Level</a></li>
+<li class="chapter" data-level="13.8.3" data-path="statistical-power.html"><a href="statistical-power.html#exercise-3-analyze-a-scenario-where-a-type-i-error-occurred-in-a-psychological-study"><i class="fa fa-check"></i><b>13.8.3</b> Exercise 3: Analyze a Scenario Where a Type I Error Occurred in a Psychological Study</a></li>
+<li class="chapter" data-level="13.8.4" data-path="statistical-power.html"><a href="statistical-power.html#exercise-4-analyze-a-scenario-where-a-type-ii-error-occurred-in-a-psychological-study"><i class="fa fa-check"></i><b>13.8.4</b> Exercise 4: Analyze a Scenario Where a Type II Error Occurred in a Psychological Study</a></li>
+<li class="chapter" data-level="13.8.5" data-path="statistical-power.html"><a href="statistical-power.html#exercise-5-compare-the-impact-of-changing-the-sample-size-effect-size-and-significance-level-on-power-using-different-hypothetical-scenarios-in-r"><i class="fa fa-check"></i><b>13.8.5</b> Exercise 5: Compare the Impact of Changing the Sample Size, Effect Size, and Significance Level on Power Using Different Hypothetical Scenarios in R</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html"><i class="fa fa-check"></i><b>14</b> Appendix: Answers to Chapter Exercises</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-1-exercises"><i class="fa fa-check"></i><b>14.1</b> Answers to Chapter 1 Exercises</a>
+<ul>
+<li class="chapter" data-level="14.1.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-familiarization-with-r-studio-1"><i class="fa fa-check"></i><b>14.1.1</b> Exercise 1: Familiarization with R Studio</a></li>
+<li class="chapter" data-level="14.1.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-basic-data-entry-and-operation-1"><i class="fa fa-check"></i><b>14.1.2</b> Exercise 2: Basic Data Entry and Operation</a></li>
+<li class="chapter" data-level="14.1.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-introduction-to-r-markdown-1"><i class="fa fa-check"></i><b>14.1.3</b> Exercise 3: Introduction to R Markdown</a></li>
+<li class="chapter" data-level="14.1.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-exploring-the-help-pane-1"><i class="fa fa-check"></i><b>14.1.4</b> Exercise 4: Exploring the Help Pane</a></li>
+</ul></li>
+<li class="chapter" data-level="14.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-2-exercises"><i class="fa fa-check"></i><b>14.2</b> Answers to Chapter 2 Exercises</a>
+<ul>
+<li class="chapter" data-level="14.2.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-identifying-data-types-1"><i class="fa fa-check"></i><b>14.2.1</b> Exercise 1: Identifying Data Types</a></li>
+<li class="chapter" data-level="14.2.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-designing-a-study-1"><i class="fa fa-check"></i><b>14.2.2</b> Exercise 2: Designing a Study</a></li>
+<li class="chapter" data-level="14.2.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-evaluating-research-1"><i class="fa fa-check"></i><b>14.2.3</b> Exercise 3: Evaluating Research</a></li>
+</ul></li>
+<li class="chapter" data-level="14.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-3-exercises"><i class="fa fa-check"></i><b>14.3</b> Answers to Chapter 3 Exercises</a>
+<ul>
+<li class="chapter" data-level="14.3.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-evaluating-reliability-1"><i class="fa fa-check"></i><b>14.3.1</b> Exercise 1: Evaluating Reliability</a></li>
+<li class="chapter" data-level="14.3.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-assessing-validity-1"><i class="fa fa-check"></i><b>14.3.2</b> Exercise 2: Assessing Validity</a></li>
+<li class="chapter" data-level="14.3.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-identifying-and-addressing-data-collection-errors-1"><i class="fa fa-check"></i><b>14.3.3</b> Exercise 3: Identifying and Addressing Data Collection Errors</a></li>
+<li class="chapter" data-level="14.3.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-triangulation-to-enhance-validity-1"><i class="fa fa-check"></i><b>14.3.4</b> Exercise 4: Triangulation to Enhance Validity</a></li>
+<li class="chapter" data-level="14.3.5" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-5-role-play-on-ethical-data-collection-1"><i class="fa fa-check"></i><b>14.3.5</b> Exercise 5: Role Play on Ethical Data Collection</a></li>
+<li class="chapter" data-level="14.3.6" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-6-real-world-application-1"><i class="fa fa-check"></i><b>14.3.6</b> Exercise 6: Real-World Application</a></li>
+</ul></li>
+<li class="chapter" data-level="14.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-4-practice-exercises"><i class="fa fa-check"></i><b>14.4</b> Answers to Chapter 4 Practice Exercises</a>
+<ul>
+<li class="chapter" data-level="14.4.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-calculating-descriptive-statistics-1"><i class="fa fa-check"></i><b>14.4.1</b> Exercise 1: Calculating Descriptive Statistics</a></li>
+<li class="chapter" data-level="14.4.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-understanding-the-normal-distribution-1"><i class="fa fa-check"></i><b>14.4.2</b> Exercise 2: Understanding the Normal Distribution</a></li>
+<li class="chapter" data-level="14.4.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-applying-the-t-distribution-1"><i class="fa fa-check"></i><b>14.4.3</b> Exercise 3: Applying the T-Distribution</a></li>
+<li class="chapter" data-level="14.4.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-defining-and-simulating-sample-spaces-1"><i class="fa fa-check"></i><b>14.4.4</b> Exercise 4: Defining and Simulating Sample Spaces</a></li>
+</ul></li>
+<li class="chapter" data-level="14.5" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-5-practice-exercises"><i class="fa fa-check"></i><b>14.5</b> Answers to Chapter 5 Practice Exercises</a>
+<ul>
+<li class="chapter" data-level="14.5.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-importing-data-1"><i class="fa fa-check"></i><b>14.5.1</b> Exercise 1: Importing Data</a></li>
+<li class="chapter" data-level="14.5.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-cleaning-data-with-dplyr-1"><i class="fa fa-check"></i><b>14.5.2</b> Exercise 2: Cleaning Data with dplyr</a></li>
+<li class="chapter" data-level="14.5.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-generating-descriptive-statistics-with-psych-1"><i class="fa fa-check"></i><b>14.5.3</b> Exercise 3: Generating Descriptive Statistics with <code>psych</code></a></li>
+<li class="chapter" data-level="14.5.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-visualizing-data-with-psych-1"><i class="fa fa-check"></i><b>14.5.4</b> Exercise 4: Visualizing Data with psych</a></li>
+</ul></li>
+<li class="chapter" data-level="14.6" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-6-practice-exercises"><i class="fa fa-check"></i><b>14.6</b> Answers to Chapter 6 Practice Exercises</a>
+<ul>
+<li class="chapter" data-level="14.6.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-mean-centering-1"><i class="fa fa-check"></i><b>14.6.1</b> Exercise 1: Mean-Centering</a></li>
+<li class="chapter" data-level="14.6.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-z-scores-1"><i class="fa fa-check"></i><b>14.6.2</b> Exercise 2: Z-Scores</a></li>
+<li class="chapter" data-level="14.6.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-combining-mean-centering-and-z-scores-1"><i class="fa fa-check"></i><b>14.6.3</b> Exercise 3: Combining Mean-Centering and Z-Scores</a></li>
+<li class="chapter" data-level="14.6.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-non-linear-transformations-1"><i class="fa fa-check"></i><b>14.6.4</b> Exercise 4: Non-Linear Transformations</a></li>
+</ul></li>
+<li class="chapter" data-level="14.7" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-7-practice-exercises"><i class="fa fa-check"></i><b>14.7</b> Answers to Chapter 7 Practice Exercises</a>
+<ul>
+<li class="chapter" data-level="14.7.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-create-an-apa-compliant-bar-graph-1"><i class="fa fa-check"></i><b>14.7.1</b> Exercise 1: Create an APA-Compliant Bar Graph</a></li>
+<li class="chapter" data-level="14.7.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-modify-a-basic-ggplot2-plot-to-meet-apa-standards-1"><i class="fa fa-check"></i><b>14.7.2</b> Exercise 2: Modify a Basic ggplot2 Plot to Meet APA Standards</a></li>
+<li class="chapter" data-level="14.7.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-create-an-apa-compliant-line-graph-and-save-it-as-a-high-resolution-image-1"><i class="fa fa-check"></i><b>14.7.3</b> Exercise 3: Create an APA-Compliant Line Graph and Save It as a High-Resolution Image</a></li>
+</ul></li>
+<li class="chapter" data-level="14.8" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-8-practice-exercises"><i class="fa fa-check"></i><b>14.8</b> Answers to Chapter 8 Practice Exercises</a>
+<ul>
+<li class="chapter" data-level="14.8.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-standard-error-calculation-and-interpretation"><i class="fa fa-check"></i><b>14.8.1</b> Exercise 1: Standard Error Calculation and Interpretation</a></li>
+<li class="chapter" data-level="14.8.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-confidence-interval-calculation-and-interpretation"><i class="fa fa-check"></i><b>14.8.2</b> Exercise 2: Confidence Interval Calculation and Interpretation</a></li>
+<li class="chapter" data-level="14.8.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-independent-samples-t-test-interpretation"><i class="fa fa-check"></i><b>14.8.3</b> Exercise 3: Independent Samples t-Test Interpretation</a></li>
+<li class="chapter" data-level="14.8.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-paired-samples-t-test-interpretation"><i class="fa fa-check"></i><b>14.8.4</b> Exercise 4: Paired Samples t-Test Interpretation</a></li>
+<li class="chapter" data-level="14.8.5" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-5-significance-and-effect-size-interpretation"><i class="fa fa-check"></i><b>14.8.5</b> Exercise 5: Significance and Effect Size Interpretation</a></li>
+</ul></li>
+<li class="chapter" data-level="14.9" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-9-practice-exercises"><i class="fa fa-check"></i><b>14.9</b> Answers to Chapter 9 Practice Exercises</a>
+<ul>
+<li class="chapter" data-level="14.9.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-pearson-correlation-coefficient-calculation-and-interpretation"><i class="fa fa-check"></i><b>14.9.1</b> Exercise 1: Pearson Correlation Coefficient Calculation and Interpretation</a></li>
+<li class="chapter" data-level="14.9.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-scatter-plot-with-trend-line"><i class="fa fa-check"></i><b>14.9.2</b> Exercise 2: Scatter Plot with Trend Line</a></li>
+<li class="chapter" data-level="14.9.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-analyzing-the-size-of-the-correlation"><i class="fa fa-check"></i><b>14.9.3</b> Exercise 3: Analyzing the Size of the Correlation</a></li>
+<li class="chapter" data-level="14.9.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-impact-of-a-third-variable-confounder-and-controlling-for-it"><i class="fa fa-check"></i><b>14.9.4</b> Exercise 4: Impact of a Third Variable (Confounder) and Controlling for It</a></li>
+<li class="chapter" data-level="14.9.5" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-5-evaluating-correlation-and-causality"><i class="fa fa-check"></i><b>14.9.5</b> Exercise 5: Evaluating Correlation and Causality</a></li>
+</ul></li>
+<li class="chapter" data-level="14.10" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-10-practice-exercises"><i class="fa fa-check"></i><b>14.10</b> Answers to Chapter 10 Practice Exercises</a>
+<ul>
+<li class="chapter" data-level="14.10.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-create-a-simple-bivariate-linear-model-1"><i class="fa fa-check"></i><b>14.10.1</b> Exercise 1: Create a Simple Bivariate Linear Model</a></li>
+<li class="chapter" data-level="14.10.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-analyze-residuals-to-assess-model-fit-1"><i class="fa fa-check"></i><b>14.10.2</b> Exercise 2: Analyze Residuals to Assess Model Fit</a></li>
+<li class="chapter" data-level="14.10.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-apply-bivariate-linear-models-to-a-real-world-dataset-1"><i class="fa fa-check"></i><b>14.10.3</b> Exercise 3: Apply Bivariate Linear Models to a Real-World Dataset</a></li>
+</ul></li>
+<li class="chapter" data-level="14.11" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-15-practice-exercises"><i class="fa fa-check"></i><b>14.11</b> Answers to Chapter 15 Practice Exercises</a>
+<ul>
+<li class="chapter" data-level="14.11.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-chi-square-goodness-of-fit-test-1"><i class="fa fa-check"></i><b>14.11.1</b> Exercise 1: Chi-Square Goodness of Fit Test</a></li>
+<li class="chapter" data-level="14.11.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-calculating-r-squared"><i class="fa fa-check"></i><b>14.11.2</b> Exercise 2: Calculating R-Squared</a></li>
+<li class="chapter" data-level="14.11.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-f-test-for-comparing-models"><i class="fa fa-check"></i><b>14.11.3</b> Exercise 3: F-Test for Comparing Models</a></li>
+<li class="chapter" data-level="14.11.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-visualizing-the-f-distribution"><i class="fa fa-check"></i><b>14.11.4</b> Exercise 4: Visualizing the F-Distribution</a></li>
+<li class="chapter" data-level="14.11.5" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-5-comprehensive-analysis-1"><i class="fa fa-check"></i><b>14.11.5</b> Exercise 5: Comprehensive Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="14.12" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-16-practice-exercises"><i class="fa fa-check"></i><b>14.12</b> Answers to Chapter 16 Practice Exercises</a>
+<ul>
+<li class="chapter" data-level="14.12.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-power-calculation-interpretation"><i class="fa fa-check"></i><b>14.12.1</b> Exercise 1: Power Calculation Interpretation</a></li>
+<li class="chapter" data-level="14.12.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-sample-size-calculation-interpretation"><i class="fa fa-check"></i><b>14.12.2</b> Exercise 2: Sample Size Calculation Interpretation</a></li>
+<li class="chapter" data-level="14.12.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-type-i-error-analysis-interpretation"><i class="fa fa-check"></i><b>14.12.3</b> Exercise 3: Type I Error Analysis Interpretation</a></li>
+<li class="chapter" data-level="14.12.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-type-ii-error-analysis-interpretation"><i class="fa fa-check"></i><b>14.12.4</b> Exercise 4: Type II Error Analysis Interpretation</a></li>
+<li class="chapter" data-level="14.12.5" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-5-power-comparison-interpretation"><i class="fa fa-check"></i><b>14.12.5</b> Exercise 5: Power Comparison Interpretation</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -741,10 +861,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="bivariate-linear-models" class="section level1 hasAnchor" number="9">
-<h1><span class="header-section-number">Chapter 9</span> Bivariate Linear Models<a href="bivariate-linear-models.html#bivariate-linear-models" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="what-are-bivariate-linear-models" class="section level2 hasAnchor" number="9.1">
-<h2><span class="header-section-number">9.1</span> What Are Bivariate Linear Models?<a href="bivariate-linear-models.html#what-are-bivariate-linear-models" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="bivariate-linear-models" class="section level1 hasAnchor" number="10">
+<h1><span class="header-section-number">Chapter 10</span> Bivariate Linear Models<a href="bivariate-linear-models.html#bivariate-linear-models" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="what-are-bivariate-linear-models" class="section level2 hasAnchor" number="10.1">
+<h2><span class="header-section-number">10.1</span> What Are Bivariate Linear Models?<a href="bivariate-linear-models.html#what-are-bivariate-linear-models" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>Bivariate linear models</strong> are statistical tools that allow researchers
 to examine the relationship between two continuous variables. In
 psychology and other fields, understanding how one variable relates to
@@ -790,8 +910,8 @@ than younger individuals.</p>
 <p>By examining these relationships, bivariate linear models allow
 researchers to make predictions and gain insights into how variables
 interact with each other.</p>
-<div id="why-use-bivariate-linear-models" class="section level3 hasAnchor" number="9.1.1">
-<h3><span class="header-section-number">9.1.1</span> Why Use Bivariate Linear Models?<a href="bivariate-linear-models.html#why-use-bivariate-linear-models" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="why-use-bivariate-linear-models" class="section level3 hasAnchor" number="10.1.1">
+<h3><span class="header-section-number">10.1.1</span> Why Use Bivariate Linear Models?<a href="bivariate-linear-models.html#why-use-bivariate-linear-models" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Bivariate linear models are incredibly useful in testing hypotheses and
 making predictions about the relationships between two variables. When
 researchers have a theory that one variable might influence another,
@@ -847,8 +967,8 @@ inferences and test hypotheses that advance our understanding of various
 phenomena in psychology and other fields.</p>
 </div>
 </div>
-<div id="creating-linear-models-to-test-hypotheses" class="section level2 hasAnchor" number="9.2">
-<h2><span class="header-section-number">9.2</span> Creating Linear Models to Test Hypotheses<a href="bivariate-linear-models.html#creating-linear-models-to-test-hypotheses" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="creating-linear-models-to-test-hypotheses" class="section level2 hasAnchor" number="10.2">
+<h2><span class="header-section-number">10.2</span> Creating Linear Models to Test Hypotheses<a href="bivariate-linear-models.html#creating-linear-models-to-test-hypotheses" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In this section, we will explore how linear models can be used to test
 hypotheses about relationships between variables. We will break down the
 concept of a linear equation and walk through the process of creating a
@@ -856,8 +976,8 @@ simple linear model. Additionally, we will introduce the idea of
 hypothesis testing within the context of linear models, helping you
 understand how researchers determine whether the relationships they
 observe are meaningful.</p>
-<div id="the-concept-of-a-linear-model" class="section level3 hasAnchor" number="9.2.1">
-<h3><span class="header-section-number">9.2.1</span> The Concept of a Linear Model<a href="bivariate-linear-models.html#the-concept-of-a-linear-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="the-concept-of-a-linear-model" class="section level3 hasAnchor" number="10.2.1">
+<h3><span class="header-section-number">10.2.1</span> The Concept of a Linear Model<a href="bivariate-linear-models.html#the-concept-of-a-linear-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>What is a Linear Model?</strong></p>
 <p>A <strong>linear model</strong> is a mathematical tool used to describe the
 relationship between two variables. The relationship is represented by a
@@ -951,8 +1071,8 @@ score around 82.5 points on the exam.</p></li>
 hours studied and exam scores, helping you make informed decisions about
 how much time to dedicate to studying.</p>
 </div>
-<div id="hypothesis-testing-with-linear-models" class="section level3 hasAnchor" number="9.2.2">
-<h3><span class="header-section-number">9.2.2</span> Hypothesis Testing with Linear Models<a href="bivariate-linear-models.html#hypothesis-testing-with-linear-models" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="hypothesis-testing-with-linear-models" class="section level3 hasAnchor" number="10.2.2">
+<h3><span class="header-section-number">10.2.2</span> Hypothesis Testing with Linear Models<a href="bivariate-linear-models.html#hypothesis-testing-with-linear-models" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>What is Hypothesis Testing?</strong></p>
 <p>Hypothesis testing is a method used by researchers to determine whether
 the relationships they observe in data are statistically significant or
@@ -1035,15 +1155,15 @@ contributes to the overall model and what it means in the context of
 your data.</p>
 </div>
 </div>
-<div id="components-of-a-bivariate-linear-model" class="section level2 hasAnchor" number="9.3">
-<h2><span class="header-section-number">9.3</span> Components of a Bivariate Linear Model<a href="bivariate-linear-models.html#components-of-a-bivariate-linear-model" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="components-of-a-bivariate-linear-model" class="section level2 hasAnchor" number="10.3">
+<h2><span class="header-section-number">10.3</span> Components of a Bivariate Linear Model<a href="bivariate-linear-models.html#components-of-a-bivariate-linear-model" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In a bivariate linear model, there are three key components that help
 describe the relationship between two variables: the intercept, the
 slope, and the correlation coefficient. Understanding each of these
 components is crucial for interpreting what the model tells you about
 the data.</p>
-<div id="intercept-b0" class="section level3 hasAnchor" number="9.3.1">
-<h3><span class="header-section-number">9.3.1</span> Intercept (b0)<a href="bivariate-linear-models.html#intercept-b0" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="intercept-b0" class="section level3 hasAnchor" number="10.3.1">
+<h3><span class="header-section-number">10.3.1</span> Intercept (b0)<a href="bivariate-linear-models.html#intercept-b0" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>What is the Intercept?</strong></p>
 <p>The <strong>intercept</strong> is the point where the line of best fit crosses the
 y-axis on a graph. In mathematical terms, it’s represented as <code>b0</code> in
@@ -1081,8 +1201,8 @@ your outcome variable. For example, if you know that a student who
 studies zero hours is predicted to score 65, you can begin to understand
 the impact of studying on improving that score.</p>
 </div>
-<div id="slopes-b1" class="section level3 hasAnchor" number="9.3.2">
-<h3><span class="header-section-number">9.3.2</span> Slope(s) (b1)<a href="bivariate-linear-models.html#slopes-b1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="slopes-b1" class="section level3 hasAnchor" number="10.3.2">
+<h3><span class="header-section-number">10.3.2</span> Slope(s) (b1)<a href="bivariate-linear-models.html#slopes-b1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>What is the Slope?</strong></p>
 <p>The <strong>slope</strong> is the part of the linear equation that tells you how much
 the outcome variable (y) changes for each one-unit change in the
@@ -1121,8 +1241,8 @@ also how strong that relationship is and in what direction. For
 instance, if the slope were 10 instead of 2.5, it would suggest that
 studying has a much larger impact on exam scores.</p>
 </div>
-<div id="correlations" class="section level3 hasAnchor" number="9.3.3">
-<h3><span class="header-section-number">9.3.3</span> Correlations<a href="bivariate-linear-models.html#correlations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="correlations-1" class="section level3 hasAnchor" number="10.3.3">
+<h3><span class="header-section-number">10.3.3</span> Correlations<a href="bivariate-linear-models.html#correlations-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>What is a Correlation Coefficient?</strong></p>
 <p>The <strong>correlation coefficient</strong> is a statistical measure that describes
 the strength and direction of the linear relationship between two
@@ -1187,14 +1307,14 @@ bivariate linear model more effectively, making informed decisions based
 on the relationships within your data.</p>
 </div>
 </div>
-<div id="residuals" class="section level2 hasAnchor" number="9.4">
-<h2><span class="header-section-number">9.4</span> Residuals<a href="bivariate-linear-models.html#residuals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="residuals" class="section level2 hasAnchor" number="10.4">
+<h2><span class="header-section-number">10.4</span> Residuals<a href="bivariate-linear-models.html#residuals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In this section, we’ll explore residuals, an essential concept in
 understanding how well a linear model fits the data. We’ll explain what
 residuals are, why they matter, and how to visualize them using plots in
 R.</p>
-<div id="what-are-residuals" class="section level3 hasAnchor" number="9.4.1">
-<h3><span class="header-section-number">9.4.1</span> What Are Residuals?<a href="bivariate-linear-models.html#what-are-residuals" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="what-are-residuals" class="section level3 hasAnchor" number="10.4.1">
+<h3><span class="header-section-number">10.4.1</span> What Are Residuals?<a href="bivariate-linear-models.html#what-are-residuals" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>What Are Residuals?</strong></p>
 <p>Residuals are the differences between the observed values (the actual
 data points) and the values predicted by the linear model. These
@@ -1273,34 +1393,34 @@ was 85, but the model predicted a score of 80. The residual is 5,
 indicating that the model underpredicted by 5 points. Similarly, for 8
 hours of study, the residual is 3 points.</p>
 <p>To visualize these residuals, let’s plot them in R.</p>
-<div class="sourceCode" id="cb176"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb176-1"><a href="bivariate-linear-models.html#cb176-1" tabindex="-1"></a><span class="co"># Simulating data</span></span>
-<span id="cb176-2"><a href="bivariate-linear-models.html#cb176-2" tabindex="-1"></a>hours_studied <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">10</span>)</span>
-<span id="cb176-3"><a href="bivariate-linear-models.html#cb176-3" tabindex="-1"></a>exam_scores <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">70</span>, <span class="dv">75</span>, <span class="dv">85</span>, <span class="dv">88</span>, <span class="dv">90</span>)</span>
-<span id="cb176-4"><a href="bivariate-linear-models.html#cb176-4" tabindex="-1"></a></span>
-<span id="cb176-5"><a href="bivariate-linear-models.html#cb176-5" tabindex="-1"></a><span class="co"># Creating a linear model</span></span>
-<span id="cb176-6"><a href="bivariate-linear-models.html#cb176-6" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(exam_scores <span class="sc">~</span> hours_studied)</span>
-<span id="cb176-7"><a href="bivariate-linear-models.html#cb176-7" tabindex="-1"></a></span>
-<span id="cb176-8"><a href="bivariate-linear-models.html#cb176-8" tabindex="-1"></a><span class="co"># Predicting values</span></span>
-<span id="cb176-9"><a href="bivariate-linear-models.html#cb176-9" tabindex="-1"></a>predicted_scores <span class="ot">&lt;-</span> <span class="fu">predict</span>(model)</span>
-<span id="cb176-10"><a href="bivariate-linear-models.html#cb176-10" tabindex="-1"></a></span>
-<span id="cb176-11"><a href="bivariate-linear-models.html#cb176-11" tabindex="-1"></a><span class="co"># Calculating residuals</span></span>
-<span id="cb176-12"><a href="bivariate-linear-models.html#cb176-12" tabindex="-1"></a>residuals <span class="ot">&lt;-</span> exam_scores <span class="sc">-</span> predicted_scores</span>
-<span id="cb176-13"><a href="bivariate-linear-models.html#cb176-13" tabindex="-1"></a></span>
-<span id="cb176-14"><a href="bivariate-linear-models.html#cb176-14" tabindex="-1"></a><span class="co"># Plotting the data</span></span>
-<span id="cb176-15"><a href="bivariate-linear-models.html#cb176-15" tabindex="-1"></a><span class="fu">plot</span>(hours_studied, exam_scores, <span class="at">main =</span> <span class="st">&quot;Exam Scores vs. Hours Studied&quot;</span>,</span>
-<span id="cb176-16"><a href="bivariate-linear-models.html#cb176-16" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;Hours Studied&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Exam Scores&quot;</span>, <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>)</span>
-<span id="cb176-17"><a href="bivariate-linear-models.html#cb176-17" tabindex="-1"></a><span class="fu">abline</span>(model, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>)</span>
-<span id="cb176-18"><a href="bivariate-linear-models.html#cb176-18" tabindex="-1"></a></span>
-<span id="cb176-19"><a href="bivariate-linear-models.html#cb176-19" tabindex="-1"></a><span class="co"># Adding residual lines</span></span>
-<span id="cb176-20"><a href="bivariate-linear-models.html#cb176-20" tabindex="-1"></a><span class="fu">segments</span>(hours_studied, exam_scores, hours_studied, predicted_scores, <span class="at">col =</span> <span class="st">&quot;green&quot;</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code></pre></div>
-<p><img src="psych-stats-book_files/figure-html/unnamed-chunk-104-1.png" width="672" /></p>
+<div class="sourceCode" id="cb201"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb201-1"><a href="bivariate-linear-models.html#cb201-1" tabindex="-1"></a><span class="co"># Simulating data</span></span>
+<span id="cb201-2"><a href="bivariate-linear-models.html#cb201-2" tabindex="-1"></a>hours_studied <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">10</span>)</span>
+<span id="cb201-3"><a href="bivariate-linear-models.html#cb201-3" tabindex="-1"></a>exam_scores <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">70</span>, <span class="dv">75</span>, <span class="dv">85</span>, <span class="dv">88</span>, <span class="dv">90</span>)</span>
+<span id="cb201-4"><a href="bivariate-linear-models.html#cb201-4" tabindex="-1"></a></span>
+<span id="cb201-5"><a href="bivariate-linear-models.html#cb201-5" tabindex="-1"></a><span class="co"># Creating a linear model</span></span>
+<span id="cb201-6"><a href="bivariate-linear-models.html#cb201-6" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(exam_scores <span class="sc">~</span> hours_studied)</span>
+<span id="cb201-7"><a href="bivariate-linear-models.html#cb201-7" tabindex="-1"></a></span>
+<span id="cb201-8"><a href="bivariate-linear-models.html#cb201-8" tabindex="-1"></a><span class="co"># Predicting values</span></span>
+<span id="cb201-9"><a href="bivariate-linear-models.html#cb201-9" tabindex="-1"></a>predicted_scores <span class="ot">&lt;-</span> <span class="fu">predict</span>(model)</span>
+<span id="cb201-10"><a href="bivariate-linear-models.html#cb201-10" tabindex="-1"></a></span>
+<span id="cb201-11"><a href="bivariate-linear-models.html#cb201-11" tabindex="-1"></a><span class="co"># Calculating residuals</span></span>
+<span id="cb201-12"><a href="bivariate-linear-models.html#cb201-12" tabindex="-1"></a>residuals <span class="ot">&lt;-</span> exam_scores <span class="sc">-</span> predicted_scores</span>
+<span id="cb201-13"><a href="bivariate-linear-models.html#cb201-13" tabindex="-1"></a></span>
+<span id="cb201-14"><a href="bivariate-linear-models.html#cb201-14" tabindex="-1"></a><span class="co"># Plotting the data</span></span>
+<span id="cb201-15"><a href="bivariate-linear-models.html#cb201-15" tabindex="-1"></a><span class="fu">plot</span>(hours_studied, exam_scores, <span class="at">main =</span> <span class="st">&quot;Exam Scores vs. Hours Studied&quot;</span>,</span>
+<span id="cb201-16"><a href="bivariate-linear-models.html#cb201-16" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;Hours Studied&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Exam Scores&quot;</span>, <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>)</span>
+<span id="cb201-17"><a href="bivariate-linear-models.html#cb201-17" tabindex="-1"></a><span class="fu">abline</span>(model, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>)</span>
+<span id="cb201-18"><a href="bivariate-linear-models.html#cb201-18" tabindex="-1"></a></span>
+<span id="cb201-19"><a href="bivariate-linear-models.html#cb201-19" tabindex="-1"></a><span class="co"># Adding residual lines</span></span>
+<span id="cb201-20"><a href="bivariate-linear-models.html#cb201-20" tabindex="-1"></a><span class="fu">segments</span>(hours_studied, exam_scores, hours_studied, predicted_scores, <span class="at">col =</span> <span class="st">&quot;green&quot;</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code></pre></div>
+<p><img src="psych-stats-book_files/figure-html/unnamed-chunk-118-1.png" width="672" /></p>
 <p>This plot shows the relationship between hours studied and exam scores,
 with the red line representing the linear model. The green lines are the
 residuals, showing the distance between the actual exam scores and the
 scores predicted by the model.</p>
 </div>
-<div id="importance-of-residuals-in-model-evaluation" class="section level3 hasAnchor" number="9.4.2">
-<h3><span class="header-section-number">9.4.2</span> Importance of Residuals in Model Evaluation<a href="bivariate-linear-models.html#importance-of-residuals-in-model-evaluation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="importance-of-residuals-in-model-evaluation" class="section level3 hasAnchor" number="10.4.2">
+<h3><span class="header-section-number">10.4.2</span> Importance of Residuals in Model Evaluation<a href="bivariate-linear-models.html#importance-of-residuals-in-model-evaluation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Why Are Residuals Important?</strong></p>
 <p>Residuals play a crucial role in evaluating the fit of a linear model.
 By analyzing the residuals, we can assess how well the model represents
@@ -1317,11 +1437,11 @@ model’s accuracy.</li>
 <p>Visualizing residuals helps you understand where the model is accurate
 and where it might be off. A common way to do this is by plotting the
 residuals against the predictor variable.</p>
-<div class="sourceCode" id="cb177"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb177-1"><a href="bivariate-linear-models.html#cb177-1" tabindex="-1"></a><span class="co"># Plotting residuals</span></span>
-<span id="cb177-2"><a href="bivariate-linear-models.html#cb177-2" tabindex="-1"></a><span class="fu">plot</span>(hours_studied, residuals, <span class="at">main =</span> <span class="st">&quot;Residuals Plot&quot;</span>,</span>
-<span id="cb177-3"><a href="bivariate-linear-models.html#cb177-3" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;Hours Studied&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Residuals&quot;</span>, <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">col =</span> <span class="st">&quot;purple&quot;</span>)</span>
-<span id="cb177-4"><a href="bivariate-linear-models.html#cb177-4" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code></pre></div>
-<p><img src="psych-stats-book_files/figure-html/unnamed-chunk-105-1.png" width="672" /></p>
+<div class="sourceCode" id="cb202"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb202-1"><a href="bivariate-linear-models.html#cb202-1" tabindex="-1"></a><span class="co"># Plotting residuals</span></span>
+<span id="cb202-2"><a href="bivariate-linear-models.html#cb202-2" tabindex="-1"></a><span class="fu">plot</span>(hours_studied, residuals, <span class="at">main =</span> <span class="st">&quot;Residuals Plot&quot;</span>,</span>
+<span id="cb202-3"><a href="bivariate-linear-models.html#cb202-3" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;Hours Studied&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Residuals&quot;</span>, <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">col =</span> <span class="st">&quot;purple&quot;</span>)</span>
+<span id="cb202-4"><a href="bivariate-linear-models.html#cb202-4" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code></pre></div>
+<p><img src="psych-stats-book_files/figure-html/unnamed-chunk-119-1.png" width="672" /></p>
 <p>In this residuals plot: - The x-axis represents the predictor variable
 (hours studied). - The y-axis represents the residuals (the difference
 between actual and predicted exam scores). - The red line at y = 0
@@ -1333,8 +1453,8 @@ systematic pattern (e.g., they increase or decrease consistently), it
 suggests that the model might not be capturing all aspects of the
 relationship.</p>
 </div>
-<div id="checking-for-patterns-in-residuals" class="section level3 hasAnchor" number="9.4.3">
-<h3><span class="header-section-number">9.4.3</span> Checking for Patterns in Residuals<a href="bivariate-linear-models.html#checking-for-patterns-in-residuals" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="checking-for-patterns-in-residuals" class="section level3 hasAnchor" number="10.4.3">
+<h3><span class="header-section-number">10.4.3</span> Checking for Patterns in Residuals<a href="bivariate-linear-models.html#checking-for-patterns-in-residuals" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Why Check for Patterns in Residuals?</strong></p>
 <p>Checking for patterns in residuals is important because it helps you
 determine whether the linear model is appropriate for the data. Ideally,
@@ -1354,19 +1474,19 @@ Patterns</strong></p>
 <p>Let’s say you’re examining the residuals from a model predicting stress
 levels based on physical activity. You might plot the residuals and
 notice a systematic pattern:</p>
-<div class="sourceCode" id="cb178"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb178-1"><a href="bivariate-linear-models.html#cb178-1" tabindex="-1"></a><span class="co"># Example: Simulating residuals with a pattern</span></span>
-<span id="cb178-2"><a href="bivariate-linear-models.html#cb178-2" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
-<span id="cb178-3"><a href="bivariate-linear-models.html#cb178-3" tabindex="-1"></a>activity <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span></span>
-<span id="cb178-4"><a href="bivariate-linear-models.html#cb178-4" tabindex="-1"></a>stress <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">100</span>, <span class="dv">95</span>, <span class="dv">90</span>, <span class="dv">87</span>, <span class="dv">85</span>, <span class="dv">80</span>, <span class="dv">78</span>, <span class="dv">76</span>, <span class="dv">75</span>, <span class="dv">74</span>) <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">10</span>, <span class="at">sd =</span> <span class="dv">2</span>)</span>
-<span id="cb178-5"><a href="bivariate-linear-models.html#cb178-5" tabindex="-1"></a>model2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(stress <span class="sc">~</span> activity)</span>
-<span id="cb178-6"><a href="bivariate-linear-models.html#cb178-6" tabindex="-1"></a>predicted_stress <span class="ot">&lt;-</span> <span class="fu">predict</span>(model2)</span>
-<span id="cb178-7"><a href="bivariate-linear-models.html#cb178-7" tabindex="-1"></a>residuals2 <span class="ot">&lt;-</span> stress <span class="sc">-</span> predicted_stress</span>
-<span id="cb178-8"><a href="bivariate-linear-models.html#cb178-8" tabindex="-1"></a></span>
-<span id="cb178-9"><a href="bivariate-linear-models.html#cb178-9" tabindex="-1"></a><span class="co"># Plotting residuals</span></span>
-<span id="cb178-10"><a href="bivariate-linear-models.html#cb178-10" tabindex="-1"></a><span class="fu">plot</span>(activity, residuals2, <span class="at">main =</span> <span class="st">&quot;Residuals Plot with a Pattern&quot;</span>,</span>
-<span id="cb178-11"><a href="bivariate-linear-models.html#cb178-11" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;Physical Activity&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Residuals&quot;</span>, <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">col =</span> <span class="st">&quot;orange&quot;</span>)</span>
-<span id="cb178-12"><a href="bivariate-linear-models.html#cb178-12" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code></pre></div>
-<p><img src="psych-stats-book_files/figure-html/unnamed-chunk-106-1.png" width="672" /></p>
+<div class="sourceCode" id="cb203"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb203-1"><a href="bivariate-linear-models.html#cb203-1" tabindex="-1"></a><span class="co"># Example: Simulating residuals with a pattern</span></span>
+<span id="cb203-2"><a href="bivariate-linear-models.html#cb203-2" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb203-3"><a href="bivariate-linear-models.html#cb203-3" tabindex="-1"></a>activity <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span></span>
+<span id="cb203-4"><a href="bivariate-linear-models.html#cb203-4" tabindex="-1"></a>stress <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">100</span>, <span class="dv">95</span>, <span class="dv">90</span>, <span class="dv">87</span>, <span class="dv">85</span>, <span class="dv">80</span>, <span class="dv">78</span>, <span class="dv">76</span>, <span class="dv">75</span>, <span class="dv">74</span>) <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">10</span>, <span class="at">sd =</span> <span class="dv">2</span>)</span>
+<span id="cb203-5"><a href="bivariate-linear-models.html#cb203-5" tabindex="-1"></a>model2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(stress <span class="sc">~</span> activity)</span>
+<span id="cb203-6"><a href="bivariate-linear-models.html#cb203-6" tabindex="-1"></a>predicted_stress <span class="ot">&lt;-</span> <span class="fu">predict</span>(model2)</span>
+<span id="cb203-7"><a href="bivariate-linear-models.html#cb203-7" tabindex="-1"></a>residuals2 <span class="ot">&lt;-</span> stress <span class="sc">-</span> predicted_stress</span>
+<span id="cb203-8"><a href="bivariate-linear-models.html#cb203-8" tabindex="-1"></a></span>
+<span id="cb203-9"><a href="bivariate-linear-models.html#cb203-9" tabindex="-1"></a><span class="co"># Plotting residuals</span></span>
+<span id="cb203-10"><a href="bivariate-linear-models.html#cb203-10" tabindex="-1"></a><span class="fu">plot</span>(activity, residuals2, <span class="at">main =</span> <span class="st">&quot;Residuals Plot with a Pattern&quot;</span>,</span>
+<span id="cb203-11"><a href="bivariate-linear-models.html#cb203-11" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;Physical Activity&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Residuals&quot;</span>, <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">col =</span> <span class="st">&quot;orange&quot;</span>)</span>
+<span id="cb203-12"><a href="bivariate-linear-models.html#cb203-12" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code></pre></div>
+<p><img src="psych-stats-book_files/figure-html/unnamed-chunk-120-1.png" width="672" /></p>
 <p>If you notice that the residuals aren’t randomly distributed but instead
 form a curve or pattern, it might indicate that a simple linear model
 isn’t the best fit for the data. The model might be systematically over-
@@ -1386,8 +1506,8 @@ patterns indicating potential issues.</li>
 into the performance of your linear model and identify areas for
 improvement.</p>
 </div>
-<div id="example-residuals-with-a-pattern-non-normal-distribution" class="section level3 hasAnchor" number="9.4.4">
-<h3><span class="header-section-number">9.4.4</span> Example: Residuals with a Pattern (Non-Normal Distribution)<a href="bivariate-linear-models.html#example-residuals-with-a-pattern-non-normal-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="example-residuals-with-a-pattern-non-normal-distribution" class="section level3 hasAnchor" number="10.4.4">
+<h3><span class="header-section-number">10.4.4</span> Example: Residuals with a Pattern (Non-Normal Distribution)<a href="bivariate-linear-models.html#example-residuals-with-a-pattern-non-normal-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Sometimes, when you plot the residuals of your model, you might notice
 that they are not randomly scattered around zero. Instead, they might
 show a pattern, indicating that the model is not fully capturing the
@@ -1405,29 +1525,29 @@ linear.</p>
 activity and stress levels is quadratic rather than linear, meaning that
 after a certain point, additional physical activity doesn’t continue to
 reduce stress as effectively.</p>
-<div class="sourceCode" id="cb179"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb179-1"><a href="bivariate-linear-models.html#cb179-1" tabindex="-1"></a><span class="co"># Simulating data with a quadratic relationship</span></span>
-<span id="cb179-2"><a href="bivariate-linear-models.html#cb179-2" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
-<span id="cb179-3"><a href="bivariate-linear-models.html#cb179-3" tabindex="-1"></a>activity <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">20</span></span>
-<span id="cb179-4"><a href="bivariate-linear-models.html#cb179-4" tabindex="-1"></a>stress <span class="ot">&lt;-</span> <span class="dv">100</span> <span class="sc">-</span> <span class="dv">5</span> <span class="sc">*</span> activity <span class="sc">+</span> <span class="fl">0.5</span> <span class="sc">*</span> activity<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">20</span>, <span class="at">sd =</span> <span class="dv">5</span>)</span>
-<span id="cb179-5"><a href="bivariate-linear-models.html#cb179-5" tabindex="-1"></a></span>
-<span id="cb179-6"><a href="bivariate-linear-models.html#cb179-6" tabindex="-1"></a><span class="co"># Creating a linear model</span></span>
-<span id="cb179-7"><a href="bivariate-linear-models.html#cb179-7" tabindex="-1"></a>model3 <span class="ot">&lt;-</span> <span class="fu">lm</span>(stress <span class="sc">~</span> activity)</span>
-<span id="cb179-8"><a href="bivariate-linear-models.html#cb179-8" tabindex="-1"></a>predicted_stress <span class="ot">&lt;-</span> <span class="fu">predict</span>(model3)</span>
-<span id="cb179-9"><a href="bivariate-linear-models.html#cb179-9" tabindex="-1"></a>residuals3 <span class="ot">&lt;-</span> stress <span class="sc">-</span> predicted_stress</span>
-<span id="cb179-10"><a href="bivariate-linear-models.html#cb179-10" tabindex="-1"></a></span>
-<span id="cb179-11"><a href="bivariate-linear-models.html#cb179-11" tabindex="-1"></a><span class="co"># Plotting the original data</span></span>
-<span id="cb179-12"><a href="bivariate-linear-models.html#cb179-12" tabindex="-1"></a><span class="fu">plot</span>(activity, stress, <span class="at">main =</span> <span class="st">&quot;Stress Levels vs. Physical Activity&quot;</span>,</span>
-<span id="cb179-13"><a href="bivariate-linear-models.html#cb179-13" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;Physical Activity (Hours per Week)&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Stress Levels&quot;</span>, <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>)</span>
-<span id="cb179-14"><a href="bivariate-linear-models.html#cb179-14" tabindex="-1"></a><span class="fu">abline</span>(model3, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code></pre></div>
-<p><img src="psych-stats-book_files/figure-html/unnamed-chunk-107-1.png" width="672" /></p>
+<div class="sourceCode" id="cb204"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb204-1"><a href="bivariate-linear-models.html#cb204-1" tabindex="-1"></a><span class="co"># Simulating data with a quadratic relationship</span></span>
+<span id="cb204-2"><a href="bivariate-linear-models.html#cb204-2" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb204-3"><a href="bivariate-linear-models.html#cb204-3" tabindex="-1"></a>activity <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">20</span></span>
+<span id="cb204-4"><a href="bivariate-linear-models.html#cb204-4" tabindex="-1"></a>stress <span class="ot">&lt;-</span> <span class="dv">100</span> <span class="sc">-</span> <span class="dv">5</span> <span class="sc">*</span> activity <span class="sc">+</span> <span class="fl">0.5</span> <span class="sc">*</span> activity<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">20</span>, <span class="at">sd =</span> <span class="dv">5</span>)</span>
+<span id="cb204-5"><a href="bivariate-linear-models.html#cb204-5" tabindex="-1"></a></span>
+<span id="cb204-6"><a href="bivariate-linear-models.html#cb204-6" tabindex="-1"></a><span class="co"># Creating a linear model</span></span>
+<span id="cb204-7"><a href="bivariate-linear-models.html#cb204-7" tabindex="-1"></a>model3 <span class="ot">&lt;-</span> <span class="fu">lm</span>(stress <span class="sc">~</span> activity)</span>
+<span id="cb204-8"><a href="bivariate-linear-models.html#cb204-8" tabindex="-1"></a>predicted_stress <span class="ot">&lt;-</span> <span class="fu">predict</span>(model3)</span>
+<span id="cb204-9"><a href="bivariate-linear-models.html#cb204-9" tabindex="-1"></a>residuals3 <span class="ot">&lt;-</span> stress <span class="sc">-</span> predicted_stress</span>
+<span id="cb204-10"><a href="bivariate-linear-models.html#cb204-10" tabindex="-1"></a></span>
+<span id="cb204-11"><a href="bivariate-linear-models.html#cb204-11" tabindex="-1"></a><span class="co"># Plotting the original data</span></span>
+<span id="cb204-12"><a href="bivariate-linear-models.html#cb204-12" tabindex="-1"></a><span class="fu">plot</span>(activity, stress, <span class="at">main =</span> <span class="st">&quot;Stress Levels vs. Physical Activity&quot;</span>,</span>
+<span id="cb204-13"><a href="bivariate-linear-models.html#cb204-13" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;Physical Activity (Hours per Week)&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Stress Levels&quot;</span>, <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>)</span>
+<span id="cb204-14"><a href="bivariate-linear-models.html#cb204-14" tabindex="-1"></a><span class="fu">abline</span>(model3, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code></pre></div>
+<p><img src="psych-stats-book_files/figure-html/unnamed-chunk-121-1.png" width="672" /></p>
 <p>In the plot above, we’ve simulated data with a quadratic relationship,
 but we’ve fitted a simple linear model (the red line). Now, let’s plot
 the residuals to see if there’s a pattern.</p>
-<div class="sourceCode" id="cb180"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb180-1"><a href="bivariate-linear-models.html#cb180-1" tabindex="-1"></a><span class="co"># Plotting residuals with a pattern</span></span>
-<span id="cb180-2"><a href="bivariate-linear-models.html#cb180-2" tabindex="-1"></a><span class="fu">plot</span>(activity, residuals3, <span class="at">main =</span> <span class="st">&quot;Residuals Plot Showing a Pattern&quot;</span>,</span>
-<span id="cb180-3"><a href="bivariate-linear-models.html#cb180-3" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;Physical Activity (Hours per Week)&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Residuals&quot;</span>, <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">col =</span> <span class="st">&quot;purple&quot;</span>)</span>
-<span id="cb180-4"><a href="bivariate-linear-models.html#cb180-4" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code></pre></div>
-<p><img src="psych-stats-book_files/figure-html/unnamed-chunk-108-1.png" width="672" /></p>
+<div class="sourceCode" id="cb205"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb205-1"><a href="bivariate-linear-models.html#cb205-1" tabindex="-1"></a><span class="co"># Plotting residuals with a pattern</span></span>
+<span id="cb205-2"><a href="bivariate-linear-models.html#cb205-2" tabindex="-1"></a><span class="fu">plot</span>(activity, residuals3, <span class="at">main =</span> <span class="st">&quot;Residuals Plot Showing a Pattern&quot;</span>,</span>
+<span id="cb205-3"><a href="bivariate-linear-models.html#cb205-3" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;Physical Activity (Hours per Week)&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Residuals&quot;</span>, <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">col =</span> <span class="st">&quot;purple&quot;</span>)</span>
+<span id="cb205-4"><a href="bivariate-linear-models.html#cb205-4" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code></pre></div>
+<p><img src="psych-stats-book_files/figure-html/unnamed-chunk-122-1.png" width="672" /></p>
 <p><strong>Interpreting the Residuals Plot</strong></p>
 <p>In the residuals plot:</p>
 <ul>
@@ -1456,15 +1576,15 @@ for the predictor variable.</li>
 data.</li>
 </ul></li>
 </ol>
-<div class="sourceCode" id="cb181"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb181-1"><a href="bivariate-linear-models.html#cb181-1" tabindex="-1"></a><span class="co"># Fitting a quadratic (polynomial) model</span></span>
-<span id="cb181-2"><a href="bivariate-linear-models.html#cb181-2" tabindex="-1"></a>model_poly <span class="ot">&lt;-</span> <span class="fu">lm</span>(stress <span class="sc">~</span> activity <span class="sc">+</span> <span class="fu">I</span>(activity<span class="sc">^</span><span class="dv">2</span>))</span>
-<span id="cb181-3"><a href="bivariate-linear-models.html#cb181-3" tabindex="-1"></a>predicted_stress_poly <span class="ot">&lt;-</span> <span class="fu">predict</span>(model_poly)</span>
-<span id="cb181-4"><a href="bivariate-linear-models.html#cb181-4" tabindex="-1"></a></span>
-<span id="cb181-5"><a href="bivariate-linear-models.html#cb181-5" tabindex="-1"></a><span class="co"># Plotting the quadratic model</span></span>
-<span id="cb181-6"><a href="bivariate-linear-models.html#cb181-6" tabindex="-1"></a><span class="fu">plot</span>(activity, stress, <span class="at">main =</span> <span class="st">&quot;Stress Levels vs. Physical Activity with Quadratic Fit&quot;</span>,</span>
-<span id="cb181-7"><a href="bivariate-linear-models.html#cb181-7" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;Physical Activity (Hours per Week)&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Stress Levels&quot;</span>, <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>)</span>
-<span id="cb181-8"><a href="bivariate-linear-models.html#cb181-8" tabindex="-1"></a><span class="fu">lines</span>(activity, predicted_stress_poly, <span class="at">col =</span> <span class="st">&quot;green&quot;</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code></pre></div>
-<p><img src="psych-stats-book_files/figure-html/unnamed-chunk-109-1.png" width="672" /></p>
+<div class="sourceCode" id="cb206"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb206-1"><a href="bivariate-linear-models.html#cb206-1" tabindex="-1"></a><span class="co"># Fitting a quadratic (polynomial) model</span></span>
+<span id="cb206-2"><a href="bivariate-linear-models.html#cb206-2" tabindex="-1"></a>model_poly <span class="ot">&lt;-</span> <span class="fu">lm</span>(stress <span class="sc">~</span> activity <span class="sc">+</span> <span class="fu">I</span>(activity<span class="sc">^</span><span class="dv">2</span>))</span>
+<span id="cb206-3"><a href="bivariate-linear-models.html#cb206-3" tabindex="-1"></a>predicted_stress_poly <span class="ot">&lt;-</span> <span class="fu">predict</span>(model_poly)</span>
+<span id="cb206-4"><a href="bivariate-linear-models.html#cb206-4" tabindex="-1"></a></span>
+<span id="cb206-5"><a href="bivariate-linear-models.html#cb206-5" tabindex="-1"></a><span class="co"># Plotting the quadratic model</span></span>
+<span id="cb206-6"><a href="bivariate-linear-models.html#cb206-6" tabindex="-1"></a><span class="fu">plot</span>(activity, stress, <span class="at">main =</span> <span class="st">&quot;Stress Levels vs. Physical Activity with Quadratic Fit&quot;</span>,</span>
+<span id="cb206-7"><a href="bivariate-linear-models.html#cb206-7" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;Physical Activity (Hours per Week)&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Stress Levels&quot;</span>, <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>)</span>
+<span id="cb206-8"><a href="bivariate-linear-models.html#cb206-8" tabindex="-1"></a><span class="fu">lines</span>(activity, predicted_stress_poly, <span class="at">col =</span> <span class="st">&quot;green&quot;</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code></pre></div>
+<p><img src="psych-stats-book_files/figure-html/unnamed-chunk-123-1.png" width="672" /></p>
 <p>In this plot, the green line represents the quadratic fit, which better
 captures the curvature in the data compared to the linear model.</p>
 <ol start="2" style="list-style-type: decimal">
@@ -1475,12 +1595,12 @@ the residuals again to ensure that they are now randomly
 distributed and that the model is a better fit for the data.</li>
 </ul></li>
 </ol>
-<div class="sourceCode" id="cb182"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb182-1"><a href="bivariate-linear-models.html#cb182-1" tabindex="-1"></a><span class="co"># Plotting residuals of the quadratic model</span></span>
-<span id="cb182-2"><a href="bivariate-linear-models.html#cb182-2" tabindex="-1"></a>residuals_poly <span class="ot">&lt;-</span> <span class="fu">residuals</span>(model_poly)</span>
-<span id="cb182-3"><a href="bivariate-linear-models.html#cb182-3" tabindex="-1"></a><span class="fu">plot</span>(activity, residuals_poly, <span class="at">main =</span> <span class="st">&quot;Residuals of Quadratic Model&quot;</span>,</span>
-<span id="cb182-4"><a href="bivariate-linear-models.html#cb182-4" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;Physical Activity (Hours per Week)&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Residuals&quot;</span>, <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">col =</span> <span class="st">&quot;green&quot;</span>)</span>
-<span id="cb182-5"><a href="bivariate-linear-models.html#cb182-5" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code></pre></div>
-<p><img src="psych-stats-book_files/figure-html/unnamed-chunk-110-1.png" width="672" /></p>
+<div class="sourceCode" id="cb207"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb207-1"><a href="bivariate-linear-models.html#cb207-1" tabindex="-1"></a><span class="co"># Plotting residuals of the quadratic model</span></span>
+<span id="cb207-2"><a href="bivariate-linear-models.html#cb207-2" tabindex="-1"></a>residuals_poly <span class="ot">&lt;-</span> <span class="fu">residuals</span>(model_poly)</span>
+<span id="cb207-3"><a href="bivariate-linear-models.html#cb207-3" tabindex="-1"></a><span class="fu">plot</span>(activity, residuals_poly, <span class="at">main =</span> <span class="st">&quot;Residuals of Quadratic Model&quot;</span>,</span>
+<span id="cb207-4"><a href="bivariate-linear-models.html#cb207-4" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;Physical Activity (Hours per Week)&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Residuals&quot;</span>, <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">col =</span> <span class="st">&quot;green&quot;</span>)</span>
+<span id="cb207-5"><a href="bivariate-linear-models.html#cb207-5" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code></pre></div>
+<p><img src="psych-stats-book_files/figure-html/unnamed-chunk-124-1.png" width="672" /></p>
 <p>In the residuals plot for the quadratic model, the residuals should now
 be more randomly scattered around zero, indicating a better fit.</p>
 <ol start="3" style="list-style-type: decimal">
@@ -1501,15 +1621,15 @@ polynomial model—you can improve the accuracy and reliability of your
 predictions.</p>
 </div>
 </div>
-<div id="real-world-application-of-bivariate-linear-models" class="section level2 hasAnchor" number="9.5">
-<h2><span class="header-section-number">9.5</span> Real-World Application of Bivariate Linear Models<a href="bivariate-linear-models.html#real-world-application-of-bivariate-linear-models" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="real-world-application-of-bivariate-linear-models" class="section level2 hasAnchor" number="10.5">
+<h2><span class="header-section-number">10.5</span> Real-World Application of Bivariate Linear Models<a href="bivariate-linear-models.html#real-world-application-of-bivariate-linear-models" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Bivariate linear models are widely used in psychological research to
 explore and understand relationships between variables. In this section,
 we’ll dive into practical examples of how these models are applied in
 psychology, walk through creating a bivariate linear model in R, and
 discuss the limitations and considerations of using these models.</p>
-<div id="practical-examples-in-psychological-research" class="section level3 hasAnchor" number="9.5.1">
-<h3><span class="header-section-number">9.5.1</span> Practical Examples in Psychological Research<a href="bivariate-linear-models.html#practical-examples-in-psychological-research" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="practical-examples-in-psychological-research" class="section level3 hasAnchor" number="10.5.1">
+<h3><span class="header-section-number">10.5.1</span> Practical Examples in Psychological Research<a href="bivariate-linear-models.html#practical-examples-in-psychological-research" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Overview of Bivariate Linear Models in Psychological Research</strong></p>
 <p>Bivariate linear models are powerful tools that psychologists use to
 analyze the relationships between two variables. These models help
@@ -1557,8 +1677,8 @@ psychological research to explore important relationships between
 variables. By quantifying these relationships, researchers can make
 data-driven decisions and develop effective interventions.</p>
 </div>
-<div id="building-your-own-bivariate-linear-model-in-r" class="section level3 hasAnchor" number="9.5.2">
-<h3><span class="header-section-number">9.5.2</span> Building Your Own Bivariate Linear Model in R<a href="bivariate-linear-models.html#building-your-own-bivariate-linear-model-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="building-your-own-bivariate-linear-model-in-r" class="section level3 hasAnchor" number="10.5.2">
+<h3><span class="header-section-number">10.5.2</span> Building Your Own Bivariate Linear Model in R<a href="bivariate-linear-models.html#building-your-own-bivariate-linear-model-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Step-by-Step Guide to Creating a Bivariate Linear Model in R</strong></p>
 <p>Now that we’ve explored some practical examples, let’s walk through the
 process of creating a bivariate linear model in R using a real dataset.
@@ -1578,13 +1698,13 @@ relationship:</p>
 simulate some data.</li>
 </ul></li>
 </ol>
-<div class="sourceCode" id="cb183"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb183-1"><a href="bivariate-linear-models.html#cb183-1" tabindex="-1"></a><span class="co"># Simulating a psychological dataset</span></span>
-<span id="cb183-2"><a href="bivariate-linear-models.html#cb183-2" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
-<span id="cb183-3"><a href="bivariate-linear-models.html#cb183-3" tabindex="-1"></a>stress <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">50</span>, <span class="at">sd =</span> <span class="dv">10</span>)  <span class="co"># Stress scores (out of 100)</span></span>
-<span id="cb183-4"><a href="bivariate-linear-models.html#cb183-4" tabindex="-1"></a>sleep_hours <span class="ot">&lt;-</span> <span class="dv">8</span> <span class="sc">-</span> <span class="fl">0.05</span> <span class="sc">*</span> stress <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span>)  <span class="co"># Sleep hours</span></span>
-<span id="cb183-5"><a href="bivariate-linear-models.html#cb183-5" tabindex="-1"></a></span>
-<span id="cb183-6"><a href="bivariate-linear-models.html#cb183-6" tabindex="-1"></a><span class="co"># Combine into a data frame</span></span>
-<span id="cb183-7"><a href="bivariate-linear-models.html#cb183-7" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(stress, sleep_hours)</span></code></pre></div>
+<div class="sourceCode" id="cb208"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb208-1"><a href="bivariate-linear-models.html#cb208-1" tabindex="-1"></a><span class="co"># Simulating a psychological dataset</span></span>
+<span id="cb208-2"><a href="bivariate-linear-models.html#cb208-2" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb208-3"><a href="bivariate-linear-models.html#cb208-3" tabindex="-1"></a>stress <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">50</span>, <span class="at">sd =</span> <span class="dv">10</span>)  <span class="co"># Stress scores (out of 100)</span></span>
+<span id="cb208-4"><a href="bivariate-linear-models.html#cb208-4" tabindex="-1"></a>sleep_hours <span class="ot">&lt;-</span> <span class="dv">8</span> <span class="sc">-</span> <span class="fl">0.05</span> <span class="sc">*</span> stress <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span>)  <span class="co"># Sleep hours</span></span>
+<span id="cb208-5"><a href="bivariate-linear-models.html#cb208-5" tabindex="-1"></a></span>
+<span id="cb208-6"><a href="bivariate-linear-models.html#cb208-6" tabindex="-1"></a><span class="co"># Combine into a data frame</span></span>
+<span id="cb208-7"><a href="bivariate-linear-models.html#cb208-7" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(stress, sleep_hours)</span></code></pre></div>
 <ol start="2" style="list-style-type: decimal">
 <li><strong>Visualize the Data</strong>:
 <ul>
@@ -1592,10 +1712,10 @@ simulate some data.</li>
 get a sense of the relationship.</li>
 </ul></li>
 </ol>
-<div class="sourceCode" id="cb184"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb184-1"><a href="bivariate-linear-models.html#cb184-1" tabindex="-1"></a><span class="co"># Plotting the data</span></span>
-<span id="cb184-2"><a href="bivariate-linear-models.html#cb184-2" tabindex="-1"></a><span class="fu">plot</span>(data<span class="sc">$</span>stress, data<span class="sc">$</span>sleep_hours, <span class="at">main =</span> <span class="st">&quot;Stress vs. Sleep Hours&quot;</span>,</span>
-<span id="cb184-3"><a href="bivariate-linear-models.html#cb184-3" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;Stress Scores&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Sleep Hours&quot;</span>, <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>)</span></code></pre></div>
-<p><img src="psych-stats-book_files/figure-html/unnamed-chunk-112-1.png" width="672" /></p>
+<div class="sourceCode" id="cb209"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb209-1"><a href="bivariate-linear-models.html#cb209-1" tabindex="-1"></a><span class="co"># Plotting the data</span></span>
+<span id="cb209-2"><a href="bivariate-linear-models.html#cb209-2" tabindex="-1"></a><span class="fu">plot</span>(data<span class="sc">$</span>stress, data<span class="sc">$</span>sleep_hours, <span class="at">main =</span> <span class="st">&quot;Stress vs. Sleep Hours&quot;</span>,</span>
+<span id="cb209-3"><a href="bivariate-linear-models.html#cb209-3" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;Stress Scores&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Sleep Hours&quot;</span>, <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>)</span></code></pre></div>
+<p><img src="psych-stats-book_files/figure-html/unnamed-chunk-126-1.png" width="672" /></p>
 <ol start="3" style="list-style-type: decimal">
 <li><strong>Create the Linear Model</strong>:
 <ul>
@@ -1603,8 +1723,8 @@ get a sense of the relationship.</li>
 predicts sleep hours based on stress scores.</li>
 </ul></li>
 </ol>
-<div class="sourceCode" id="cb185"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb185-1"><a href="bivariate-linear-models.html#cb185-1" tabindex="-1"></a><span class="co"># Creating the linear model</span></span>
-<span id="cb185-2"><a href="bivariate-linear-models.html#cb185-2" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(sleep_hours <span class="sc">~</span> stress, <span class="at">data =</span> data)</span></code></pre></div>
+<div class="sourceCode" id="cb210"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb210-1"><a href="bivariate-linear-models.html#cb210-1" tabindex="-1"></a><span class="co"># Creating the linear model</span></span>
+<span id="cb210-2"><a href="bivariate-linear-models.html#cb210-2" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(sleep_hours <span class="sc">~</span> stress, <span class="at">data =</span> data)</span></code></pre></div>
 <ol start="4" style="list-style-type: decimal">
 <li><strong>Interpret the Model Output</strong>:
 <ul>
@@ -1613,8 +1733,8 @@ the model’s output and interpret the coefficients, p-values, and
 residuals.</li>
 </ul></li>
 </ol>
-<div class="sourceCode" id="cb186"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb186-1"><a href="bivariate-linear-models.html#cb186-1" tabindex="-1"></a><span class="co"># Viewing the model summary</span></span>
-<span id="cb186-2"><a href="bivariate-linear-models.html#cb186-2" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code></pre></div>
+<div class="sourceCode" id="cb211"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb211-1"><a href="bivariate-linear-models.html#cb211-1" tabindex="-1"></a><span class="co"># Viewing the model summary</span></span>
+<span id="cb211-2"><a href="bivariate-linear-models.html#cb211-2" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = sleep_hours ~ stress, data = data)
@@ -1667,11 +1787,11 @@ previous section.</li>
 to the scatter plot.</li>
 </ul></li>
 </ol>
-<div class="sourceCode" id="cb188"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb188-1"><a href="bivariate-linear-models.html#cb188-1" tabindex="-1"></a><span class="co"># Adding the regression line to the plot</span></span>
-<span id="cb188-2"><a href="bivariate-linear-models.html#cb188-2" tabindex="-1"></a><span class="fu">plot</span>(data<span class="sc">$</span>stress, data<span class="sc">$</span>sleep_hours, <span class="at">main =</span> <span class="st">&quot;Stress vs. Sleep Hours with Regression Line&quot;</span>,</span>
-<span id="cb188-3"><a href="bivariate-linear-models.html#cb188-3" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;Stress Scores&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Sleep Hours&quot;</span>, <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>)</span>
-<span id="cb188-4"><a href="bivariate-linear-models.html#cb188-4" tabindex="-1"></a><span class="fu">abline</span>(model, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code></pre></div>
-<p><img src="psych-stats-book_files/figure-html/unnamed-chunk-115-1.png" width="672" /></p>
+<div class="sourceCode" id="cb213"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb213-1"><a href="bivariate-linear-models.html#cb213-1" tabindex="-1"></a><span class="co"># Adding the regression line to the plot</span></span>
+<span id="cb213-2"><a href="bivariate-linear-models.html#cb213-2" tabindex="-1"></a><span class="fu">plot</span>(data<span class="sc">$</span>stress, data<span class="sc">$</span>sleep_hours, <span class="at">main =</span> <span class="st">&quot;Stress vs. Sleep Hours with Regression Line&quot;</span>,</span>
+<span id="cb213-3"><a href="bivariate-linear-models.html#cb213-3" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;Stress Scores&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Sleep Hours&quot;</span>, <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>)</span>
+<span id="cb213-4"><a href="bivariate-linear-models.html#cb213-4" tabindex="-1"></a><span class="fu">abline</span>(model, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code></pre></div>
+<p><img src="psych-stats-book_files/figure-html/unnamed-chunk-129-1.png" width="672" /></p>
 <p>In this plot, the red line represents the linear relationship between
 stress and sleep as modeled by the regression equation.</p>
 <p><strong>Summary</strong>:</p>
@@ -1679,8 +1799,8 @@ stress and sleep as modeled by the regression equation.</p>
 linear model in R, allowing you to explore relationships between
 variables in your own psychological research.</p>
 </div>
-<div id="limitations-and-considerations" class="section level3 hasAnchor" number="9.5.3">
-<h3><span class="header-section-number">9.5.3</span> Limitations and Considerations<a href="bivariate-linear-models.html#limitations-and-considerations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="limitations-and-considerations" class="section level3 hasAnchor" number="10.5.3">
+<h3><span class="header-section-number">10.5.3</span> Limitations and Considerations<a href="bivariate-linear-models.html#limitations-and-considerations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Understanding the Limitations of Bivariate Linear Models</strong></p>
 <p>While bivariate linear models are powerful tools, they come with certain
 limitations that you should be aware of:</p>
@@ -1746,8 +1866,8 @@ conclusions. By considering these factors, researchers can select the
 most appropriate model for their data and research questions.</p>
 </div>
 </div>
-<div id="chapter-summary-7" class="section level2 hasAnchor" number="9.6">
-<h2><span class="header-section-number">9.6</span> Chapter Summary<a href="bivariate-linear-models.html#chapter-summary-7" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="chapter-summary-9" class="section level2 hasAnchor" number="10.6">
+<h2><span class="header-section-number">10.6</span> Chapter Summary<a href="bivariate-linear-models.html#chapter-summary-9" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In this chapter, we delved into the essential concepts and practical
 applications of bivariate linear models, a powerful tool for
 understanding relationships between two continuous variables. We began
@@ -1787,14 +1907,14 @@ powerful, they are just one tool in your statistical toolkit, and
 knowing when and how to use them appropriately is key to conducting
 rigorous and meaningful research.</p>
 </div>
-<div id="practice-exercises-6" class="section level2 hasAnchor" number="9.7">
-<h2><span class="header-section-number">9.7</span> Practice Exercises<a href="bivariate-linear-models.html#practice-exercises-6" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="practice-exercises-8" class="section level2 hasAnchor" number="10.7">
+<h2><span class="header-section-number">10.7</span> Practice Exercises<a href="bivariate-linear-models.html#practice-exercises-8" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>These practice exercises are designed to reinforce your understanding of
 bivariate linear models by applying the concepts learned in this
 chapter. Each exercise will guide you through creating, interpreting,
 and assessing linear models using real or simulated data.</p>
-<div id="exercise-1-create-a-simple-bivariate-linear-model" class="section level3 hasAnchor" number="9.7.1">
-<h3><span class="header-section-number">9.7.1</span> Exercise 1: Create a Simple Bivariate Linear Model<a href="bivariate-linear-models.html#exercise-1-create-a-simple-bivariate-linear-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="exercise-1-create-a-simple-bivariate-linear-model" class="section level3 hasAnchor" number="10.7.1">
+<h3><span class="header-section-number">10.7.1</span> Exercise 1: Create a Simple Bivariate Linear Model<a href="bivariate-linear-models.html#exercise-1-create-a-simple-bivariate-linear-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Objective</strong>: Create a bivariate linear model using the provided
 dataset, and interpret the slope, intercept, and residuals.</p>
 <p><strong>Dataset</strong>: Suppose you are provided with a dataset that includes
@@ -1845,20 +1965,20 @@ scores.<br />
 each data point and discuss what they indicate about the model’s
 accuracy.</p>
 <p><strong>R Code Starter</strong>:</p>
-<div class="sourceCode" id="cb189"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb189-1"><a href="bivariate-linear-models.html#cb189-1" tabindex="-1"></a><span class="co"># Simulating the provided data</span></span>
-<span id="cb189-2"><a href="bivariate-linear-models.html#cb189-2" tabindex="-1"></a>hours_studied <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">10</span>)</span>
-<span id="cb189-3"><a href="bivariate-linear-models.html#cb189-3" tabindex="-1"></a>exam_scores <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">68</span>, <span class="dv">72</span>, <span class="dv">78</span>, <span class="dv">85</span>, <span class="dv">90</span>, <span class="dv">95</span>)</span>
-<span id="cb189-4"><a href="bivariate-linear-models.html#cb189-4" tabindex="-1"></a></span>
-<span id="cb189-5"><a href="bivariate-linear-models.html#cb189-5" tabindex="-1"></a><span class="co"># Creating the linear model</span></span>
-<span id="cb189-6"><a href="bivariate-linear-models.html#cb189-6" tabindex="-1"></a></span>
-<span id="cb189-7"><a href="bivariate-linear-models.html#cb189-7" tabindex="-1"></a></span>
-<span id="cb189-8"><a href="bivariate-linear-models.html#cb189-8" tabindex="-1"></a><span class="co"># Viewing the summary of the model</span></span>
-<span id="cb189-9"><a href="bivariate-linear-models.html#cb189-9" tabindex="-1"></a></span>
-<span id="cb189-10"><a href="bivariate-linear-models.html#cb189-10" tabindex="-1"></a></span>
-<span id="cb189-11"><a href="bivariate-linear-models.html#cb189-11" tabindex="-1"></a><span class="co"># Calculating the residuals</span></span>
-<span id="cb189-12"><a href="bivariate-linear-models.html#cb189-12" tabindex="-1"></a></span>
-<span id="cb189-13"><a href="bivariate-linear-models.html#cb189-13" tabindex="-1"></a></span>
-<span id="cb189-14"><a href="bivariate-linear-models.html#cb189-14" tabindex="-1"></a><span class="co"># Displaying residuals</span></span></code></pre></div>
+<div class="sourceCode" id="cb214"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb214-1"><a href="bivariate-linear-models.html#cb214-1" tabindex="-1"></a><span class="co"># Simulating the provided data</span></span>
+<span id="cb214-2"><a href="bivariate-linear-models.html#cb214-2" tabindex="-1"></a>hours_studied <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">10</span>)</span>
+<span id="cb214-3"><a href="bivariate-linear-models.html#cb214-3" tabindex="-1"></a>exam_scores <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">68</span>, <span class="dv">72</span>, <span class="dv">78</span>, <span class="dv">85</span>, <span class="dv">90</span>, <span class="dv">95</span>)</span>
+<span id="cb214-4"><a href="bivariate-linear-models.html#cb214-4" tabindex="-1"></a></span>
+<span id="cb214-5"><a href="bivariate-linear-models.html#cb214-5" tabindex="-1"></a><span class="co"># Creating the linear model</span></span>
+<span id="cb214-6"><a href="bivariate-linear-models.html#cb214-6" tabindex="-1"></a></span>
+<span id="cb214-7"><a href="bivariate-linear-models.html#cb214-7" tabindex="-1"></a></span>
+<span id="cb214-8"><a href="bivariate-linear-models.html#cb214-8" tabindex="-1"></a><span class="co"># Viewing the summary of the model</span></span>
+<span id="cb214-9"><a href="bivariate-linear-models.html#cb214-9" tabindex="-1"></a></span>
+<span id="cb214-10"><a href="bivariate-linear-models.html#cb214-10" tabindex="-1"></a></span>
+<span id="cb214-11"><a href="bivariate-linear-models.html#cb214-11" tabindex="-1"></a><span class="co"># Calculating the residuals</span></span>
+<span id="cb214-12"><a href="bivariate-linear-models.html#cb214-12" tabindex="-1"></a></span>
+<span id="cb214-13"><a href="bivariate-linear-models.html#cb214-13" tabindex="-1"></a></span>
+<span id="cb214-14"><a href="bivariate-linear-models.html#cb214-14" tabindex="-1"></a><span class="co"># Displaying residuals</span></span></code></pre></div>
 <p><strong>Questions</strong>:<br />
 - What is the slope of the model, and what does it tell you about the
 relationship between study hours and exam scores?<br />
@@ -1867,8 +1987,8 @@ of this data?<br />
 - Are the residuals small or large? What do they tell you about the
 accuracy of the model?</p>
 </div>
-<div id="exercise-2-analyze-residuals-to-assess-model-fit" class="section level3 hasAnchor" number="9.7.2">
-<h3><span class="header-section-number">9.7.2</span> Exercise 2: Analyze Residuals to Assess Model Fit<a href="bivariate-linear-models.html#exercise-2-analyze-residuals-to-assess-model-fit" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="exercise-2-analyze-residuals-to-assess-model-fit" class="section level3 hasAnchor" number="10.7.2">
+<h3><span class="header-section-number">10.7.2</span> Exercise 2: Analyze Residuals to Assess Model Fit<a href="bivariate-linear-models.html#exercise-2-analyze-residuals-to-assess-model-fit" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Objective</strong>: Analyze the residuals of a linear model to assess its fit
 and discuss any patterns you observe.</p>
 <p><strong>Dataset</strong>: Continuing with the dataset from Exercise 1, analyze the
@@ -1881,7 +2001,7 @@ and discuss what they might indicate about the model.<br />
 3. <strong>Conclusion</strong>: Based on your analysis, discuss whether the linear
 model is appropriate for this data.</p>
 <p><strong>R Code Starter</strong>:</p>
-<div class="sourceCode" id="cb190"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb190-1"><a href="bivariate-linear-models.html#cb190-1" tabindex="-1"></a><span class="co"># Plotting the residuals</span></span></code></pre></div>
+<div class="sourceCode" id="cb215"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb215-1"><a href="bivariate-linear-models.html#cb215-1" tabindex="-1"></a><span class="co"># Plotting the residuals</span></span></code></pre></div>
 <p><strong>Questions</strong>:<br />
 - Do the residuals appear to be randomly distributed, or do you notice
 any patterns?<br />
@@ -1890,8 +2010,8 @@ about the fit of the model?<br />
 - Based on the residuals, do you think the linear model is a good fit
 for the data? Why or why not?</p>
 </div>
-<div id="exercise-3-apply-bivariate-linear-models-to-a-real-world-dataset" class="section level3 hasAnchor" number="9.7.3">
-<h3><span class="header-section-number">9.7.3</span> Exercise 3: Apply Bivariate Linear Models to a Real-World Dataset<a href="bivariate-linear-models.html#exercise-3-apply-bivariate-linear-models-to-a-real-world-dataset" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="exercise-3-apply-bivariate-linear-models-to-a-real-world-dataset" class="section level3 hasAnchor" number="10.7.3">
+<h3><span class="header-section-number">10.7.3</span> Exercise 3: Apply Bivariate Linear Models to a Real-World Dataset<a href="bivariate-linear-models.html#exercise-3-apply-bivariate-linear-models-to-a-real-world-dataset" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Objective</strong>: Apply what you’ve learned to analyze a real-world
 psychological dataset and interpret the results of your linear model.</p>
 <p><strong>Dataset</strong>: The dataset includes information on participants’ anxiety
@@ -1908,16 +2028,16 @@ linear model is appropriate for this data.<br />
 there is a significant relationship between anxiety levels and sleep
 quality, and whether the linear model fits the data well.</p>
 <p><strong>R Code Starter</strong>:</p>
-<div class="sourceCode" id="cb191"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb191-1"><a href="bivariate-linear-models.html#cb191-1" tabindex="-1"></a><span class="co"># Simulating the dataset</span></span>
-<span id="cb191-2"><a href="bivariate-linear-models.html#cb191-2" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
-<span id="cb191-3"><a href="bivariate-linear-models.html#cb191-3" tabindex="-1"></a>anxiety <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">50</span>, <span class="at">sd =</span> <span class="dv">15</span>)  <span class="co"># Anxiety scores (0 to 100)</span></span>
-<span id="cb191-4"><a href="bivariate-linear-models.html#cb191-4" tabindex="-1"></a>sleep_hours <span class="ot">&lt;-</span> <span class="dv">8</span> <span class="sc">-</span> <span class="fl">0.04</span> <span class="sc">*</span> anxiety <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span>)  <span class="co"># Sleep hours</span></span>
-<span id="cb191-5"><a href="bivariate-linear-models.html#cb191-5" tabindex="-1"></a></span>
-<span id="cb191-6"><a href="bivariate-linear-models.html#cb191-6" tabindex="-1"></a><span class="co"># Combining into a data frame</span></span>
-<span id="cb191-7"><a href="bivariate-linear-models.html#cb191-7" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(anxiety, sleep_hours)</span>
-<span id="cb191-8"><a href="bivariate-linear-models.html#cb191-8" tabindex="-1"></a></span>
-<span id="cb191-9"><a href="bivariate-linear-models.html#cb191-9" tabindex="-1"></a><span class="co"># Viewing the first few rows of the dataset</span></span>
-<span id="cb191-10"><a href="bivariate-linear-models.html#cb191-10" tabindex="-1"></a><span class="fu">head</span>(data)</span></code></pre></div>
+<div class="sourceCode" id="cb216"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb216-1"><a href="bivariate-linear-models.html#cb216-1" tabindex="-1"></a><span class="co"># Simulating the dataset</span></span>
+<span id="cb216-2"><a href="bivariate-linear-models.html#cb216-2" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb216-3"><a href="bivariate-linear-models.html#cb216-3" tabindex="-1"></a>anxiety <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">50</span>, <span class="at">sd =</span> <span class="dv">15</span>)  <span class="co"># Anxiety scores (0 to 100)</span></span>
+<span id="cb216-4"><a href="bivariate-linear-models.html#cb216-4" tabindex="-1"></a>sleep_hours <span class="ot">&lt;-</span> <span class="dv">8</span> <span class="sc">-</span> <span class="fl">0.04</span> <span class="sc">*</span> anxiety <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span>)  <span class="co"># Sleep hours</span></span>
+<span id="cb216-5"><a href="bivariate-linear-models.html#cb216-5" tabindex="-1"></a></span>
+<span id="cb216-6"><a href="bivariate-linear-models.html#cb216-6" tabindex="-1"></a><span class="co"># Combining into a data frame</span></span>
+<span id="cb216-7"><a href="bivariate-linear-models.html#cb216-7" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(anxiety, sleep_hours)</span>
+<span id="cb216-8"><a href="bivariate-linear-models.html#cb216-8" tabindex="-1"></a></span>
+<span id="cb216-9"><a href="bivariate-linear-models.html#cb216-9" tabindex="-1"></a><span class="co"># Viewing the first few rows of the dataset</span></span>
+<span id="cb216-10"><a href="bivariate-linear-models.html#cb216-10" tabindex="-1"></a><span class="fu">head</span>(data)</span></code></pre></div>
 <pre><code>##    anxiety sleep_hours
 ## 1 41.59287    5.625879
 ## 2 46.54734    6.394990
@@ -1925,13 +2045,13 @@ quality, and whether the linear model fits the data well.</p>
 ## 4 51.05763    5.610152
 ## 5 51.93932    4.970809
 ## 6 75.72597    4.925933</code></pre>
-<div class="sourceCode" id="cb193"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb193-1"><a href="bivariate-linear-models.html#cb193-1" tabindex="-1"></a><span class="co"># Creating the linear model</span></span>
-<span id="cb193-2"><a href="bivariate-linear-models.html#cb193-2" tabindex="-1"></a></span>
-<span id="cb193-3"><a href="bivariate-linear-models.html#cb193-3" tabindex="-1"></a></span>
-<span id="cb193-4"><a href="bivariate-linear-models.html#cb193-4" tabindex="-1"></a><span class="co"># Viewing the summary of the model</span></span>
-<span id="cb193-5"><a href="bivariate-linear-models.html#cb193-5" tabindex="-1"></a></span>
-<span id="cb193-6"><a href="bivariate-linear-models.html#cb193-6" tabindex="-1"></a></span>
-<span id="cb193-7"><a href="bivariate-linear-models.html#cb193-7" tabindex="-1"></a><span class="co"># Plotting the residuals</span></span></code></pre></div>
+<div class="sourceCode" id="cb218"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb218-1"><a href="bivariate-linear-models.html#cb218-1" tabindex="-1"></a><span class="co"># Creating the linear model</span></span>
+<span id="cb218-2"><a href="bivariate-linear-models.html#cb218-2" tabindex="-1"></a></span>
+<span id="cb218-3"><a href="bivariate-linear-models.html#cb218-3" tabindex="-1"></a></span>
+<span id="cb218-4"><a href="bivariate-linear-models.html#cb218-4" tabindex="-1"></a><span class="co"># Viewing the summary of the model</span></span>
+<span id="cb218-5"><a href="bivariate-linear-models.html#cb218-5" tabindex="-1"></a></span>
+<span id="cb218-6"><a href="bivariate-linear-models.html#cb218-6" tabindex="-1"></a></span>
+<span id="cb218-7"><a href="bivariate-linear-models.html#cb218-7" tabindex="-1"></a><span class="co"># Plotting the residuals</span></span></code></pre></div>
 <p><strong>Questions</strong>:</p>
 <p>- What does the slope of the model tell you about the relationship
 between anxiety levels and sleep hours?<br />
@@ -1950,8 +2070,8 @@ of anxiety on sleep quality?</p>
           </div>
         </div>
       </div>
-<a href="hypothesis-testing-for-samples-from-two-populations.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="goodness-of-fit.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="correlations.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="multiple-regression.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -1982,7 +2102,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/AmandaDPerez/ZTC-RM/edit/main/09-bivariate.Rmd",
+"link": "https://github.com/AmandaDPerez/ZTC-RM/edit/main/10-bivariate.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -1990,7 +2110,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/AmandaDPerez/ZTC-RM/blob/main/09-bivariate.Rmd",
+"link": "https://github.com/AmandaDPerez/ZTC-RM/blob/main/10-bivariate.Rmd",
 "text": null
 },
 "download": null,

@@ -86,14 +86,14 @@ This appendix provides solutions to the exercises given at the end of each chapt
 
 ## Answers to Chapter 2 Exercises
 
-### Answers to Exercise 1: Identifying Data Types
+### Exercise 1: Identifying Data Types
 
 1.  **Scenario Analysis**:
     -   **Children at playground**: The data collection method used here is **observational data**. The psychologist is observing natural behaviors without intervening or manipulating the environment.
     -   **Evening diary entries**: This scenario uses **self-report data** as participants are providing personal accounts of their feelings and activities.
     -   **Noise level manipulation**: This is an example of **experimental manipulation**, where a variable (noise level) is deliberately changed to observe its effect on another variable (productivity).
 
-### Answers to Exercise 2: Designing a Study
+### Exercise 2: Designing a Study
 
 1.  **Study Design**:
     -   **Research Question**: Does listening to classical music while studying improve memory recall?
@@ -101,7 +101,7 @@ This appendix provides solutions to the exercises given at the end of each chapt
     -   **Data Collection Method**: Participants are randomly assigned to two groups. One group studies in silence while the other listens to classical music. Afterwards, both groups take a memory test based on the material studied.
     -   **Ethical Considerations**: Ensure that participants are aware they can withdraw at any time and that all data collected will be confidential. Consider any potential stress or anxiety induced by test conditions and address these in the study design.
 
-### Answers to Exercise 3: Evaluating Research
+### Exercise 3: Evaluating Research
 
 1.  **Research Evaluation**:
     -   **Type of Data Used**: Assuming the study involves assessing the effects of sleep on cognitive performance using different sleep interventions, the data type would likely be **experimental manipulation**.
@@ -110,12 +110,12 @@ This appendix provides solutions to the exercises given at the end of each chapt
 
 ## Answers to Chapter 3 Exercises
 
-### Answers to Exercise 1: Evaluating Reliability
+### Exercise 1: Evaluating Reliability
 
 1.  **Scenario Analysis**:
     -   **Answer**: The Pearson correlation coefficient of 0.65 indicates moderate test-retest reliability. While this isn't considered low, for measures of psychological constructs such as self-esteem, a higher coefficient (typically 0.7 or above) is generally preferred to ensure consistency over time. A coefficient of 0.65 might suggest that the questionnaire could benefit from further refinement to improve reliability.
 
-### Answers to Exercise 2: Assessing Validity
+### Exercise 2: Assessing Validity
 
 1.  **Scenario Development**:
     -   **Answer**: Steps to validate the aptitude test could include:
@@ -124,7 +124,7 @@ This appendix provides solutions to the exercises given at the end of each chapt
         -   **Statistical Analysis**: Perform a correlation analysis to assess the relationship between test scores and GPAs.
         -   **Interpreting Results**: A strong positive correlation would indicate good predictive validity of the aptitude test for college success.
 
-### Answers to Exercise 3: Identifying and Addressing Data Collection Errors
+### Exercise 3: Identifying and Addressing Data Collection Errors
 
 1.  **Problem Solving**:
     -   **Answer**: The miscalibration of the sleep quality device could lead to inaccurate data, potentially skewing the study results. To mitigate this impact:
@@ -132,12 +132,12 @@ This appendix provides solutions to the exercises given at the end of each chapt
         -   **Analyze impacted data**: Assess the extent of the data affected by the miscalibration and consider excluding or adjusting this data in the analysis.
         -   **Transparency in Reporting**: Disclose the issue and the steps taken to address it in any publications or presentations involving this research.
 
-### Answers to Exercise 4: Triangulation to Enhance Validity
+### Exercise 4: Triangulation to Enhance Validity
 
 1.  **Critical Thinking**:
     -   **Answer**: Using multiple data sources like surveys, observations, and performance metrics helps enhance the construct validity of the study. This triangulation approach allows for validation of the findings through different perspectives, reducing the bias that might be present if only one method were used. Each method complements the others, providing a more holistic view of student engagement.
 
-### Answers to Exercise 5: Role Play on Ethical Data Collection
+### Exercise 5: Role Play on Ethical Data Collection
 
 1.  **Discussion**:
     -   **Answer**: Key procedures and safeguards might include:
@@ -145,7 +145,7 @@ This appendix provides solutions to the exercises given at the end of each chapt
         -   **Anonymity and Confidentiality**: Assign codes to participants instead of using names and store personal data securely. Ensure that any reports or publications do not allow individual participants to be identified.
         -   **Minimizing Harm**: Be sensitive to how questions about personal health might affect participants and provide support resources as necessary.
 
-### Answers to Exercise 6: Real-World Application
+### Exercise 6: Real-World Application
 
 1.  **Application**:
     -   **Answer**: This exercise is subjective and would depend on the specific study chosen. Generally, the answer should include an evaluation of the methods section for clarity on measurement tools, reliability coefficients, validity assertions, and a discussion on how well the study accounted for potential data collection errors. Suggestions for improvement might include more rigorous reliability testing, additional validation studies, or enhanced error checking procedures.
@@ -777,6 +777,53 @@ paired_t_test_result
 
 ## Answers to Chapter 9 Practice Exercises
 
+### Exercise 1: Pearson Correlation Coefficient Calculation and Interpretation
+
+```{r}
+# Sample data
+study_hours <- c(2, 4, 6, 8, 10)
+exam_scores <- c(50, 55, 60, 65, 70)
+
+# Calculate Pearson's correlation coefficient
+correlation <- cor(study_hours, exam_scores)
+correlation
+```
+
+-   **Calculated Pearson Correlation Coefficient**: 1
+-   **Interpretation**: The correlation coefficient of 1 indicates a perfect positive correlation between study hours and exam scores. This suggests that as study hours increase, exam scores increase in a perfectly linear relationship.
+
+### Exercise 2: Scatter Plot with Trend Line
+
+```{r}
+library(ggplot2)
+
+# Sample data
+study_hours <- c(2, 4, 6, 8, 10)
+exam_scores <- c(50, 55, 60, 65, 70)
+
+# Create scatter plot with trend line
+ggplot(data = data.frame(study_hours, exam_scores), aes(x = study_hours, y = exam_scores)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  labs(title = "Scatter Plot with Trend Line: Study Hours vs. Exam Scores", x = "Study Hours", y = "Exam Scores")
+```
+
+-   **Interpretation**: The scatter plot with a trend line shows a clear positive relationship between study hours and exam scores. The upward-sloping trend line indicates that higher study hours are associated with higher exam scores, consistent with the calculated Pearson correlation coefficient.
+
+### Exercise 3: Analyzing the Size of the Correlation
+
+-   **Interpretation**: The correlation coefficient of $r = 0.8$ indicates a strong positive relationship between the variables. In a psychological context, this suggests that study habits have a significant impact on academic performance. The large effect size implies that increasing study hours is likely to result in substantial improvements in exam scores, making it an important factor for students to consider.
+
+### Exercise 4: Impact of a Third Variable (Confounder) and Controlling for It
+
+-   **Discussion**: Loneliness could be influencing both social media use and anxiety levels, leading to a spurious correlation. To control for this confounding variable, future research could include loneliness as a covariate in statistical analyses or design an experiment where loneliness is manipulated or controlled.
+-   **Suggestions**: Use methods such as multiple regression to control for loneliness, or conduct a longitudinal study to examine the temporal relationships between social media use, loneliness, and anxiety.
+
+### Exercise 5: Evaluating Correlation and Causality
+
+-   **Discussion**: The correlation between TV watching and obesity does not imply causality. It's possible that other factors, such as physical inactivity or dietary habits, are influencing both TV watching and obesity rates. Examples from the chapter, such as the correlation between ice cream sales and drowning rates, highlight the importance of not inferring causality from correlation alone.
+-   **Examples**: Further research using experimental methods or longitudinal studies would be needed to establish whether TV watching directly contributes to obesity, or if other variables are at play.
+
 ## Answers to Chapter 10 Practice Exercises
 
 ### Exercise 1: Create a Simple Bivariate Linear Model
@@ -871,6 +918,97 @@ abline(h = 0, col = "red", lwd = 2)
 -   **Residuals**: If the residuals are randomly distributed around the horizontal line at zero in the residuals plot, this suggests that the linear model is appropriate for this data. If you notice any patterns (e.g., a systematic curve), it might indicate that the model is not capturing the relationship correctly, and you might need to consider a more complex model.
 
 **Conclusion**: The negative slope indicates that higher anxiety levels are associated with fewer hours of sleep. The statistically significant p-value supports this relationship, suggesting it is unlikely to have occurred by chance. The residuals plot confirms that the linear model is a good fit for the data, as the residuals appear randomly distributed with no apparent pattern. This analysis provides evidence that managing anxiety could be crucial for improving sleep quality.
+
+## Answers to Chapter 11 Practice Exercises
+
+### Exercise 1:
+
+```{r}
+# Sample data
+Study_Time <- c(10, 12, 9, 15, 8, 11, 7, 14, 10, 13)
+Sleep_Quality <- c(7, 6, 8, 5, 7, 6, 7, 4, 8, 5)
+Stress_Levels <- c(3, 5, 2, 6, 4, 5, 3, 7, 2, 6)
+Academic_Performance <- c(85, 88, 80, 90, 75, 84, 78, 87, 82, 89)
+
+# Fit the multiple regression model
+model <- lm(Academic_Performance ~ Study_Time + Sleep_Quality + Stress_Levels)
+summary(model)
+```
+
+-   **Main Effects**: The coefficients for `Study_Time`, `Sleep_Quality`, and `Stress_Levels` represent their unique contributions to predicting `Academic_Performance`.
+    -   If `Study_Time` has a coefficient of 1.96, it means that for each additional hour of study, `Academic_Performance` increases by 1.96 points, holding other variables constant.
+
+### Exercise 2:
+
+```{r}
+# Sample data
+Study_Time <- c(10, 12, 9, 15, 8, 11, 7, 14, 10, 13)
+Stress_Levels <- c(3, 5, 2, 6, 4, 5, 3, 7, 2, 6)
+Academic_Performance <- c(85, 88, 80, 90, 75, 84, 78, 87, 82, 89)
+
+# Bivariate regression (Study_Time only)
+model_bivariate <- lm(Academic_Performance ~ Study_Time)
+summary(model_bivariate)
+
+# Multiple regression with Stress_Levels
+model_multiple <- lm(Academic_Performance ~ Study_Time + Stress_Levels)
+summary(model_multiple)
+```
+
+-   **Suppression Effect**: If the coefficient for `Study_Time` increases after adding `Stress_Levels` to the model, it suggests that `Stress_Levels` was suppressing the true relationship between `Study_Time` and `Academic_Performance`.
+    -   The increase in the coefficient indicates that `Study_Time` has a stronger relationship with `Academic_Performance` when accounting for `Stress_Levels`.
+
+### Exercise 3:
+
+```{r}
+# Sample data
+Sleep_Quality <- c(7, 6, 8, 5, 7, 6, 7, 4, 8, 5)
+Study_Time <- c(10, 12, 9, 15, 8, 11, 7, 14, 10, 13)
+Stress_Levels <- c(3, 5, 2, 6, 4, 5, 3, 7, 2, 6)
+Academic_Performance <- c(85, 88, 80, 90, 75, 84, 78, 87, 82, 89)
+
+# Fit the multiple regression model
+model <- lm(Academic_Performance ~ Sleep_Quality + Study_Time + Stress_Levels)
+
+# Create partial regression plot for Sleep_Quality
+library(ggplot2)
+ggplot(data.frame(Sleep_Quality, Academic_Performance), aes(x = Sleep_Quality, y = resid(lm(Academic_Performance ~ Study_Time + Stress_Levels)))) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  labs(title = "Partial Regression Plot: Sleep Quality and Academic Performance",
+       x = "Sleep Quality",
+       y = "Residuals (Academic Performance)") +
+  theme_minimal() +
+  theme(text = element_text(size = 12),
+        plot.title = element_text(hjust = 0.5, size = 14, face = "bold"),
+        axis.title = element_text(size = 12),
+        axis.text = element_text(size = 10),
+        panel.grid = element_blank(),
+        panel.border = element_rect(color = "black", fill = NA))
+```
+
+-   **Interpretation of Plot**: The partial regression plot shows the relationship between `Sleep_Quality` and `Academic_Performance`, controlling for other variables. A positive trend line suggests that better sleep quality is associated with higher academic performance, even when controlling for study time and stress levels.
+
+### Exercise 4:
+
+```{r}
+# Sample data
+Sleep_Quality <- c(7, 6, 8, 5, 7, 6, 7, 4, 8, 5)
+Study_Time <- c(10, 12, 9, 15, 8, 11, 7, 14, 10, 13)
+Stress_Levels <- c(3, 5, 2, 6, 4, 5, 3, 7, 2, 6)
+Academic_Performance <- c(85, 88, 80, 90, 75, 84, 78, 87, 82, 89)
+
+# Bivariate regression
+model_bivariate <- lm(Academic_Performance ~ Sleep_Quality)
+summary(model_bivariate)
+
+# Multiple regression
+model_multiple <- lm(Academic_Performance ~ Sleep_Quality + Study_Time + Stress_Levels)
+summary(model_multiple)
+```
+
+-   **Comparison of Bivariate and Multiple Regression**: The coefficient for `Sleep_Quality` may change when adding `Study_Time` and `Stress_Levels` to the model.
+    -   If the coefficient for `Sleep_Quality` decreases, it suggests that `Study_Time` and `Stress_Levels` share some variance with `Sleep_Quality` in predicting `Academic_Performance`. This highlights the importance of including all relevant predictors in the model to avoid misleading conclusions.
 
 ## Answers to Chapter 15 Practice Exercises
 

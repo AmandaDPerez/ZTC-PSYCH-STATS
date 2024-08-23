@@ -1,0 +1,184 @@
+---
+title: "Weekly Lab Homework Assignment: Multiple Regresison + Main Effects"
+author: "Your Name"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: pdf_document
+---
+
+*Replace "Your Name" with your actual name.*
+
+## Instructions
+
+This lab will focus on conducting multiple regression analyses and interpreting the coefficients (main effects) with a special emphasis on handling categorical variables using effect coding. You will work with various datasets to predict different outcomes, interpret the results, and understand how effect coding influences the interpretation of categorical variables.
+
+### Exercise 1: Predicting Job Satisfaction
+
+**Dataset**: You are given a dataset with variables `Work_Hours`, `Job_Complexity`, `Salary`, and `Job_Satisfaction`. Your task is to predict `Job_Satisfaction` based on the other three predictors.
+
+**Dataset Creation**:
+
+```{r}
+# Create the dataset
+set.seed(100)
+data_ex1 <- data.frame(
+  Work_Hours = c(40, 35, 45, 50, 38, 42, 48, 37, 44, 41, 40, 35, 45, 50, 38, 42, 48, 37, 44, 41, 40, 35, 45, 50, 38, 42, 48, 37, 44, 41, 40, 35, 45, 50, 38, 42, 48, 37, 44, 41, 40, 35, 45, 50, 38, 42, 48, 37, 44, 41, 40, 35, 45, 50, 38, 42, 48, 37, 44, 41, 40, 35, 45, 50, 38, 42, 48, 37, 44, 41, 40, 35, 45, 50, 38, 42, 48, 37, 44, 41, 40, 35, 45, 50, 38, 42, 48, 37, 44, 41, 40, 35, 45, 50, 38, 42, 48, 37, 44, 41),
+  Job_Complexity = c(7, 6, 8, 9, 5, 7, 8, 6, 7, 8, 7, 6, 8, 9, 5, 7, 8, 6, 7, 8, 7, 6, 8, 9, 5, 7, 8, 6, 7, 8, 7, 6, 8, 9, 5, 7, 8, 6, 7, 8, 7, 6, 8, 9, 5, 7, 8, 6, 7, 8, 7, 6, 8, 9, 5, 7, 8, 6, 7, 8, 7, 6, 8, 9, 5, 7, 8, 6, 7, 8, 7, 6, 8, 9, 5, 7, 8, 6, 7, 8, 7, 6, 8, 9, 5, 7, 8, 6, 7, 8, 7, 6, 8, 9, 5, 7, 8, 6, 7, 8),
+  Salary = c(50000, 48000, 52000, 55000, 47000, 51000, 53000, 46000, 54000, 49500, 50000, 48000, 52000, 55000, 47000, 51000, 53000, 46000, 54000, 49500, 50000, 48000, 52000, 55000, 47000, 51000, 53000, 46000, 54000, 49500, 50000, 48000, 52000, 55000, 47000, 51000, 53000, 46000, 54000, 49500, 50000, 48000, 52000, 55000, 47000, 51000, 53000, 46000, 54000, 49500, 50000, 48000, 52000, 55000, 47000, 51000, 53000, 46000, 54000, 49500, 50000, 48000, 52000, 55000, 47000, 51000, 53000, 46000, 54000, 49500, 50000, 48000, 52000, 55000, 47000, 51000, 53000, 46000, 54000, 49500, 50000, 48000, 52000, 55000, 47000, 51000, 53000, 46000, 54000, 49500, 50000, 48000, 52000, 55000, 47000, 51000, 53000, 46000, 54000, 49500),
+  Job_Satisfaction = c(78, 72, 85, 80, 70, 82, 79, 75, 81, 76, 78, 72, 85, 80, 70, 82, 79, 75, 81, 76, 78, 72, 85, 80, 70, 82, 79, 75, 81, 76, 78, 72, 85, 80, 70, 82, 79, 75, 81, 76, 78, 72, 85, 80, 70, 82, 79, 75, 81, 76, 78, 72, 85, 80, 70, 82, 79, 75, 81, 76, 78, 72, 85, 80, 70, 82, 79, 75, 81, 76, 78, 72, 85, 80, 70, 82, 79, 75, 81, 76, 78, 72, 85, 80, 70, 82, 79, 75, 81, 76, 78, 72, 85, 80, 70, 82, 79, 75, 81, 76)
+)
+
+# View the first few rows of the dataset
+head(data_ex1)
+```
+
+**Task**:
+
+1\. Conduct a multiple regression analysis to predict `Job_Satisfaction` using `Work_Hours`, `Job_Complexity`, and `Salary` as predictors. Be sure to use the `data` argument in the `lm()` function.
+
+2\. Interpret the main effects of each predictor. What does each coefficient tell you about its relationship with `Job_Satisfaction`?
+
+```{r}
+# Multiple regression model
+model_ex1 <- lm(Job_Satisfaction ~ Work_Hours + Job_Complexity + Salary, data = data_ex1)
+summary(model_ex1)
+```
+
+-   **Interpretation of Main Effects**:
+    -   `Work_Hours`: The coefficient shows how job satisfaction changes with the number of work hours, holding other variables constant. Not significant.
+    -   `Job_Complexity`: A positive coefficient suggests that increased job complexity is associated with higher job satisfaction, controlling for other variables. For every one unit increase in job complexity, job satisfaction increases by 1.33.
+    -   `Salary`: The coefficient indicates the relationship between salary and job satisfaction, independent of work hours and job complexity. For every one unit increase in salary, job satisfaction increases by 0.001.
+
+### Exercise 2: Predicting Student Performance
+
+**Dataset**: You are provided with a dataset containing `Study_Hours`, `Attendance`, `Parent_Education_Level`, and `GPA`. Your task is to predict `GPA` based on the other predictors.
+
+**Dataset Creation**:
+
+```{r}
+# Create the dataset with a larger sample size
+set.seed(200)
+data_ex2 <- data.frame(
+  Study_Hours = c(15, 12, 20, 18, 14, 17, 16, 13, 19, 14, 18, 16, 21, 13, 15, 20, 19, 18, 17, 16, 12, 14, 13, 20, 21, 22, 17, 19, 15, 16),
+  Attendance = c(90, 85, 95, 92, 88, 91, 89, 87, 93, 86, 91, 89, 95, 87, 90, 96, 94, 93, 89, 90, 85, 88, 87, 95, 96, 97, 92, 94, 88, 89),
+  Parent_Education_Level = factor(rep(c("High School", "College"), 15))
+)
+
+# Effect coding for Parent_Education_Level: -0.5 for High School, 0.5 for College
+data_ex2$Parent_Education_Level <- ifelse(data_ex2$Parent_Education_Level == "High School", -0.5, 0.5)
+
+# Create GPA with stronger relationships to predictors for significance
+data_ex2$GPA <- 2.5 + 0.07 * data_ex2$Study_Hours + 0.03 * data_ex2$Attendance + 0.4 * data_ex2$Parent_Education_Level + rnorm(30, 0, 0.1)
+
+# View the first few rows of the dataset
+head(data_ex2)
+
+
+```
+
+**Task**:
+
+1\. Conduct a multiple regression analysis to predict `GPA` using `Study_Hours`, `Attendance`, and `Parent_Education_Level` (coded as -0.5 for "High School" and 0.5 for "College") as predictors.
+
+2\. Interpret the main effects. How does each predictor contribute to predicting GPA?
+
+```{r}
+# Multiple regression model
+model_ex2 <- lm(GPA ~ Study_Hours + Attendance + Parent_Education_Level, data = data_ex2)
+summary(model_ex2)
+```
+
+-   **Interpretation of Main Effects**:
+    -   `Study_Hours`: The coefficient shows how much GPA increases for each additional hour studied, holding other factors constant. For every one unit increase in study hours, GPA increases by 0.05.
+    -   `Attendance`: A positive coefficient indicates that higher attendance is associated with a higher GPA, independent of study hours and parental education level. For every one unit increase in attendance, GPA increases by 0.41.
+    -   `Parent_Education_Level`: With effect coding, the coefficient represents the difference in GPA between students with parents who have a college degree versus those with a high school degree, with the intercept representing the grand mean of GPA across both groups. In comparison to having only a HS degree, GPA is 0.41 units higher if the parent has a college degree.
+
+### Exercise 3: Predicting Health Outcomes
+
+**Dataset**: You are provided with a dataset containing `Exercise_Frequency`, `Diet_Quality`, `Sleep_Duration`, and `Health_Index`. Your task is to predict `Health_Index` based on the other predictors.
+
+**Dataset Creation**:
+
+```{r}
+# Create the dataset with a larger sample size
+set.seed(300)
+data_ex3 <- data.frame(
+  Exercise_Frequency = c(4, 5, 3, 6, 2, 5, 4, 3, 5, 4, 6, 7, 3, 6, 2, 5, 7, 8, 4, 5, 3, 6, 7, 2, 4, 5, 6, 3, 7, 8),
+  Diet_Quality = c(8, 7, 9, 6, 5, 8, 7, 6, 8, 7, 9, 8, 6, 7, 5, 8, 9, 7, 8, 7, 9, 6, 8, 5, 7, 6, 9, 8, 7, 6),
+  Sleep_Duration = c(7, 8, 6, 7, 5, 8, 7, 6, 7, 7, 8, 7, 6, 7, 5, 8, 7, 8, 6, 7, 6, 7, 8, 5, 7, 8, 7, 6, 7, 8)
+)
+
+# Create Health_Index with stronger relationships to predictors for significance
+data_ex3$Health_Index <- 50 + 2 * data_ex3$Exercise_Frequency + 1.5 * data_ex3$Diet_Quality + 1 * data_ex3$Sleep_Duration + rnorm(30, 0, 2)
+
+# View the first few rows of the dataset
+head(data_ex3)
+
+```
+
+**Task**:
+
+1\. Conduct a multiple regression analysis to predict `Health_Index` using `Exercise_Frequency`, `Diet_Quality`, and `Sleep_Duration` as predictors.
+
+2\. How do the coefficients inform you about the relative importance of each predictor in determining health outcomes?
+
+```{r}
+# Multiple regression model
+model_ex3 <- lm(Health_Index ~ Exercise_Frequency + Diet_Quality + Sleep_Duration, data = data_ex3)
+summary(model_ex3)
+```
+
+-   **Interpretation of Main Effects**:
+    -   `Exercise_Frequency`: The coefficient indicates the impact of exercise frequency on health outcomes, holding diet quality and sleep duration constant. For every one unit increase in exercise frequency, health index increases by 1.84.
+    -   `Diet_Quality`: A positive coefficient suggests that better diet quality is associated with higher health indices, controlling for other variables. For every one unit increase in diet quality, health index increases by 1.85.
+    -   `Sleep_Duration`: The coefficient reflects how sleep duration influences health outcomes, independent of exercise and diet. For every one unit increase in sleep duration, health index increases by 1.37.
+
+### Exercise 4: Categorical Variables in Regression with Effect Coding
+
+**Dataset**: You have a dataset with variables `Work_Experience`, `Education_Level`, `Gender`, and `Salary`. The `Gender` variable is categorical with levels "Male" and "Female".
+
+**Dataset Creation**:
+
+```{r}
+# Create the dataset with a larger sample size
+set.seed(400)
+data_ex4 <- data.frame(
+  Work_Experience = c(5, 7, 3, 6, 8, 4, 9, 6, 7, 5, 8, 9, 4, 6, 7, 5, 9, 10, 6, 7, 4, 5, 7, 6, 8, 9, 10, 5, 6, 8),
+  Education_Level = c(12, 14, 10, 16, 13, 15, 17, 12, 16, 14, 18, 19, 11, 14, 15, 13, 18, 20, 14, 15, 11, 13, 15, 14, 17, 18, 19, 13, 15, 17),
+  Gender = factor(rep(c("Male", "Female"), 15))
+)
+
+# Effect coding for Gender: -0.5 for Male, 0.5 for Female
+data_ex4$Gender_Effect <- ifelse(data_ex4$Gender == "Male", -0.5, 0.5)
+
+# Create Salary with stronger relationships to predictors for significance
+data_ex4$Salary <- 30000 + 3000 * data_ex4$Work_Experience + 1500 * data_ex4$Education_Level + 5000 * data_ex4$Gender_Effect + rnorm(30, 0, 2000)
+
+# View the first few rows of the dataset
+head(data_ex4)
+
+
+```
+
+**Task**:
+
+1\. Conduct a multiple regression analysis to predict `Salary` using `Work_Experience`, `Education_Level`, and `Gender_Effect` as predictors.
+
+2\. Interpret the coefficients, especially focusing on the effect of `Gender_Effect`.
+
+3\. Discuss how effect coding impacts the interpretation of the `Gender_Effect` variable.
+
+```{r}
+# Multiple regression model with effect coding
+model_ex4 <- lm(Salary ~ Work_Experience + Education_Level + Gender_Effect, data = data_ex4)
+summary(model_ex4)
+```
+
+-   **Interpretation of Main Effects**:
+    -   **Work_Experience**: The coefficient indicates that for each additional year of work experience, the salary increases by approximately \$3,000, holding other factors constant. Given the p-value \< 0.05, this relationship is statistically significant.
+
+    -   **Education_Level**: The coefficient suggests that for each additional year of education, the salary increases by approximately \$1,500, holding other variables constant. This relationship is also statistically significant with a p-value \< 0.05.
+
+    -   **Gender_Effect**: The coefficient for `Gender_Effect` indicates that, on average, females earn approximately \$4,500 more than males, controlling for work experience and education level. The significance of this relationship is confirmed by a p-value \< 0.05.
+-   **Interpretation of Categorical Variables with Effect Coding**:
+    -   `Gender_Effect`: The coefficient for `Gender_Effect` represents the difference in salary between males and females, with the intercept representing the average salary across both genders.
+    -   Effect coding centers the categorical variable, making the intercept the grand mean of the outcome variable.

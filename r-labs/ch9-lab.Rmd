@@ -1,5 +1,5 @@
 ---
-title: "Weekly Lab Homework Assignment: Assessing Model Fit"
+title: "Weekly Lab Homework Assignment: Correlations"
 author: "Your Name"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: pdf_document
@@ -7,149 +7,92 @@ output: pdf_document
 
 *Replace "Your Name" with your actual name.*
 
-## Instructions
+### Instructions
 
-This lab assignment is designed to reinforce your understanding of assessing model fit using Chi-Square tests, R-squared, and F-tests. You will apply these concepts to different datasets, calculate relevant statistics, and interpret the results.
+In this lab assignment, you will apply what you've learned about correlation by calculating, visualizing, and interpreting correlations using different datasets. Make sure to follow the instructions carefully and complete all parts of each exercise. Remember to write your code in the provided code chunks and knit your R Markdown file to PDF before submitting it.
 
-### Exercise 1: Chi-Square Goodness of Fit Test
+### Exercise 1: Calculating Pearson Correlation Coefficient
 
-**Objective**: Perform a Chi-Square goodness of fit test using the provided dataset. Interpret the Chi-Square statistic and p-value to determine whether the observed frequencies differ significantly from the expected frequencies.  
+**Scenario**: You are examining the relationship between the number of hours spent exercising per week and self-reported levels of happiness. The data is as follows:
 
-**Dataset**:  
-- **Observed frequencies**: `observed <- c(20, 30, 50)` (e.g., three different responses to a new therapy)  
-- **Expected frequencies**: `expected <- c(33.3, 33.3, 33.3)` (assuming equal preference for each response)  
+-   **Exercise Hours**: `c(1, 3, 4, 6, 8, 10)`
+-   **Happiness Scores**: `c(50, 55, 60, 65, 70, 75)`
 
-**Tasks**:  
-1. Use the `chisq.test()` function in R to perform the Chi-Square test.  
-2. Include the code output in your .rmd file.  
-3. Write a brief interpretation of the Chi-Square statistic and p-value.  
+**Tasks**:
+
+1\. Calculate the Pearson correlation coefficient using R.
+
+2\. Interpret the correlation coefficient in the context of the relationship between exercise hours and happiness scores.
 
 ```{r}
-# Observed and expected frequencies
-observed <- c(20, 30, 50)
-expected <- c(33.3, 33.3, 33.3)
+# Sample data
+exercise_hours <- c(1, 3, 4, 6, 8, 10)
+happiness_scores <- c(50, 55, 60, 65, 70, 75)
 
-# Perform Chi-Square test
+# Calculate Pearson's correlation coefficient
 
 ```
 
-### Exercise 2: Calculating R-Squared for a Linear Regression Model
+-   **Calculated Pearson Correlation Coefficient**: 0.996
+-   **Interpretation**: The correlation coefficient of 0.996 indicates a very strong positive correlation between exercise hours and happiness scores. This suggests that as exercise hours increase, happiness scores increase in a closely related manner.
 
-**Objective**: Calculate the R-squared value for a linear regression model using the provided dataset. Interpret the R-squared value and discuss what it indicates about the model’s fit.  
+### Exercise 2: Visualizing Correlation with ggplot2
 
-**Dataset**:  
-- **Independent variable**: `hours_practiced <- c(2, 3, 5, 7, 8, 10, 12, 14, 15)`  
-- **Dependent variable**: `performance_score <- c(50, 55, 60, 65, 70, 75, 80, 85, 88)`  
+**Scenario**: You are investigating the relationship between daily water intake (in liters) and energy levels throughout the day. The data is as follows:
 
-**Tasks**:  
-1. Fit a linear regression model using the `lm()` function in R.  
-2. Calculate the R-squared value.  
-3. Include the R output and your interpretation in the .rmd file.  
+-   **Water Intake (liters)**: `c(0.5, 1, 1.5, 2, 2.5, 3)`
+-   **Energy Levels**: `c(40, 50, 60, 65, 70, 80)`
 
-```{r}
-# Data for regression analysis
-hours_practiced <- c(2, 3, 5, 7, 8, 10, 12, 14, 15)
-performance_score <- c(50, 55, 60, 65, 70, 75, 80, 85, 88)
+**Tasks**:
 
-# Fit linear regression model
+1\. Create a scatter plot using ggplot2 in R to visualize the relationship between water intake and energy levels.
 
-# Calculate R-squared
+2\. Add a trend line to the scatter plot to show the direction and strength of the correlation.
 
-```
+**R Code Chunk**:
 
-### Exercise 3: Comparing Nested Models Using the F-Test
-
-**Objective**: Compare two nested linear regression models using the F-test. Determine whether adding an additional predictor variable significantly improves the model. Interpret the F-statistic and p-value.  
-
-**Dataset**:  
-- **Predictor 1**: `study_hours <- c(2, 4, 6, 8, 10, 12, 14, 16, 18)`  
-- **Predictor 2**: `part_time_job <- c(0, 1, 0, 1, 0, 1, 0, 1, 0)` (0 = no, 1 = yes)  
-- **Dependent variable**: `exam_score <- c(55, 60, 62, 70, 72, 78, 80, 85, 87)`  
-
-**Tasks**:  
-1. Fit a simple linear regression model using `study_hours` as the predictor.  
-2. Fit a more complex model using both `study_hours` and `part_time_job` as predictors.  
-3. Perform an F-test using the `anova()` function to compare the models.  
-4. Include the code, F-statistic, p-value, and your interpretation.  
-
-```{r}
-# Data for regression analysis
-study_hours <- c(2, 4, 6, 8, 10, 12, 14, 16, 18)
-part_time_job <- c(0, 1, 0, 1, 0, 1, 0, 1, 0)
-exam_score <- c(55, 60, 62, 70, 72, 78, 80, 85, 87)
-
-# Fit simple model
- 
-
-# Fit more complex model
- 
-# Perform F-test to compare models
-
-```
-
-### Exercise 4: Visualizing the F-Distribution
-
-**Objective**: Visualize the F-distribution with different degrees of freedom in R. Discuss how the shape of the F-distribution affects the critical value used in the F-test.  
-
-**Tasks**:  
-1. Plot the F-distribution in R using different degrees of freedom.  
-2. Observe how the shape of the F-distribution changes with different degrees of freedom.  
-3. Include the plots and a brief discussion in your .rmd file.  
-
-```{r}
-# Load ggplot2
+```{r, warning = F}
 library(ggplot2)
 
-# Define F-values
-f_values <- seq(0, 4, length.out = 100)
+# Sample data
+water_intake <- c(0.5, 1, 1.5, 2, 2.5, 3)
+energy_levels <- c(40, 50, 60, 65, 70, 80)
 
-# Plot F-distribution for different degrees of freedom
-
-```
-
-### Exercise 5: Comprehensive Analysis
-
-**Objective**: Conduct a comprehensive analysis that includes a Chi-Square test, R-squared calculation, and an F-test. Use the provided dataset and write a summary report of your findings.  
-
-**Dataset**:  
-- **Observed frequencies**: `observed_frequencies <- c(25, 40, 35)`  
-- **Expected frequencies**: `expected_frequencies <- c(33.3, 33.3, 33.3)`  
-- **Independent variable**: `study_time <- c(5, 6, 7, 8, 9, 10, 11, 12, 13)`  
-- **Dependent variable**: `stress_levels <- c(7, 8, 6, 7, 8, 9, 10, 11, 12)`  
-- **Additional predictor**: `exercise_hours <- c(2, 3, 1, 4, 2, 3, 5, 6, 4)`  
-
-**Tasks**:  
-1. Perform a Chi-Square goodness of fit test using the observed and expected frequencies.  
-2. Fit a regression model and calculate R-squared using `study_time` to predict `stress_levels`.  
-3. Compare two models using the F-test by adding `exercise_hours` as an additional predictor.  
-4. Include all code, output, and a summary interpretation in your .rmd file.  
-
-*Chi-Square Test*:
-```{r}
-observed_frequencies <- c(25, 40, 35)
-expected_frequencies <- c(33.3, 33.3, 33.3)
-
+# Create scatter plot with trend line
 
 ```
 
-*R-Squared Calculation*:
-```{r}
-study_time <- c(5, 6, 7, 8, 9, 10, 11, 12, 13)
-stress_levels <- c(7, 8, 6, 7, 8, 9, 10, 11, 12)
+-   **Interpretation**: The scatter plot with a trend line shows a clear positive relationship between water intake and energy levels. The upward-sloping trend line indicates that higher water intake is associated with higher energy levels, consistent with the likely positive correlation.
 
+### Exercise 3: Analyzing the Size of Correlation
 
-```
+**Scenario**: You have calculated the Pearson correlation coefficient for two variables: screen time per day and sleep duration per night. The correlation coefficient is $r = -0.4$.
 
-*F-Test*:
-```{r}
-exercise_hours <- c(2, 3, 1, 4, 2, 3, 5, 6, 4)
+**Tasks**:
 
-model1 <- lm(stress_levels ~ study_time)
-model2 <- lm(stress_levels ~ study_time + exercise_hours)
+1\. Interpret the size of the correlation.
 
+2\. Discuss the practical significance of this correlation in the context of the relationship between screen time and sleep duration.
 
-```
+### Exercise 4: Impact of a Third Variable (Confounder)
 
+**Scenario**: You observe a correlation between outdoor time and academic performance in a group of students. However, you suspect that physical health might be influencing both.
+
+**Tasks**:
+
+1\. Discuss how physical health could act as a confounding variable affecting both outdoor time and academic performance.
+
+2\. Suggest methods to control for this third variable in future research.
+
+### Exercise 5: Evaluating Correlation and Causality
+
+**Scenario**: A study finds a strong positive correlation between eating breakfast and overall cognitive performance in children. However, the study does not examine causality.
+
+**Tasks**:
+
+1\. Discuss why the correlation between eating breakfast and cognitive performance does not necessarily imply that eating breakfast causes better cognitive performance.
+
+2\. Provide specific examples of how you could design a study to explore causality between these variables.
 
 **Submission Instructions:**
 

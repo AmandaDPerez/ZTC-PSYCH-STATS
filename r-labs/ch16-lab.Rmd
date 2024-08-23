@@ -1,0 +1,130 @@
+---
+title: "Weekly Lab Homework Assignment: Power"
+author: "Your Name"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: pdf_document
+---
+
+*Replace "Your Name" with your actual name.*
+
+## Instructions
+
+In this lab, you will apply the concepts of statistical power, Type I and Type II errors, and power analysis using R. You will work through a series of exercises designed to help you understand how power is calculated and how it influences study design. This lab will involve conducting power analyses, interpreting results, and exploring the impact of various factors on power.
+
+### Exercise 1: Power Analysis for a One-Sample t-Test
+
+**Scenario**:  
+You are conducting a study to test whether a new educational technique improves students' test scores compared to the national average, which is known to be 75. You plan to recruit 25 students for the study. You expect a small effect size (Cohen’s d = 0.3) and will use a significance level of 0.05.  
+
+**Tasks**:  
+1. Conduct a power analysis to determine the power of the study using a one-sample t-test.  
+2. Interpret the results and discuss whether the study is likely to detect a significant difference if the new technique is effective.
+
+```{r}
+# Load the pwr package
+library(pwr)
+
+# Conduct power analysis for a one-sample t-test
+
+
+# Output the result
+
+```
+
+**Interpretation**:  
+- Interpret the calculated power and explain if the study is adequately powered to detect the expected effect.
+
+### Exercise 2: Sample Size Determination for a Paired t-Test
+
+**Scenario**:  
+You are planning a study to measure the effectiveness of a stress-reduction intervention by comparing participants' stress levels before and after the intervention. Based on previous research, you expect a moderate effect size (Cohen’s d = 0.5). You want to achieve 85% power with a significance level of 0.05.
+
+**Tasks**:  
+1. Use R to determine the required sample size for the study using a paired t-test.  
+2. Explain why this sample size is necessary and how it will help achieve the desired power.
+
+```{r}
+# Conduct power analysis for a paired t-test to determine sample size
+
+
+# Output the result
+
+```
+
+**Interpretation**:  
+- Discuss the sample size required to achieve 85% power and why having this number of participants is important for the study's validity.
+
+### Exercise 3: Exploring Type I Error and Significance Level
+
+**Scenario**:  
+Imagine you are testing the effectiveness of a new cognitive training program designed to improve memory. You decide to use a significance level of 0.10 instead of the conventional 0.05, hoping to increase the chances of finding a significant result.  
+
+**Tasks**:  
+1. Conduct a power analysis using a two-sample t-test, assuming a sample size of 30 per group and a small effect size (Cohen’s d = 0.2).  
+2. Compare the power when using an alpha of 0.10 versus 0.05.  
+3. Discuss the trade-offs of using a higher significance level and how it affects Type I error.
+
+```{r}
+# Power analysis with alpha = 0.05
+
+
+# Power analysis with alpha = 0.10
+
+
+# Output the results
+
+```
+
+**Interpretation**:  
+- Compare the power values and discuss how changing the significance level from 0.05 to 0.10 impacts the study's power and the risk of Type I error.
+
+### Exercise 4: Analyzing the Impact of Effect Size on Power
+
+**Scenario**:  
+You are conducting a study to examine the relationship between exercise frequency and happiness levels among adults. You are uncertain about the effect size, so you want to explore how different effect sizes impact the power of your study.  
+
+**Tasks**:  
+1. Conduct power analyses for three different effect sizes (Cohen’s d = 0.2, 0.5, 0.8) using a sample size of 50 per group and an alpha of 0.05.  
+2. Interpret how changes in effect size influence the power of your study.
+
+```{r}
+# Power analysis with small effect size (d = 0.2)
+
+
+# Power analysis with medium effect size (d = 0.5)
+
+
+# Power analysis with large effect size (d = 0.8)
+
+
+# Output the results
+
+```
+
+**Interpretation**:
+- Discuss the differences in power for each effect size and explain why larger effect sizes result in higher power.  
+
+### Exercise 5: Conducting a Power Analysis for a Correlational Study
+
+**Scenario**:  
+You are interested in studying the correlation between daily social media use and levels of anxiety among teenagers. You expect a small to moderate correlation (r = 0.25) and want to achieve 90% power with a significance level of 0.05.  
+
+**Tasks**:
+1. Use R to determine the required sample size for the study.  
+2. Explain the importance of having a sufficient sample size in correlational studies and how it impacts your ability to detect a true relationship.
+
+```{r}
+# Power analysis for correlational study
+
+
+# Output the result
+
+```
+
+**Interpretation**:  
+- Interpret the required sample size and discuss the implications for detecting a significant correlation in your study.
+
+
+**Submission Instructions:**
+
+Ensure to knit your document to PDF format, checking that all content is correctly displayed before submission. Submit this PDF to Canvas Assignments.

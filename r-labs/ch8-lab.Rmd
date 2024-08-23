@@ -1,5 +1,5 @@
 ---
-title: "Weekly Lab Homework Assignment: Bivariate Models"
+title: "Weekly Lab Homework Assignment: Hypothesis Testing for Samples from Two Populations"
 author: "Your Name"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: pdf_document
@@ -9,247 +9,89 @@ output: pdf_document
 
 ### Instructions
 
-In this lab, you will practice creating and interpreting bivariate linear models using various datasets. For each exercise, follow the provided instructions to build a linear model, interpret the slope, and analyze the residuals. Remember to follow the format for interpreting the slope:
+In this lab assignment, you will apply your understanding of hypothesis testing by conducting various tests and interpreting their results. You'll work with different datasets to perform t-tests, calculate confidence intervals, and analyze the results. Make sure to follow the instructions carefully and complete all parts of each exercise. Remember to write your code in the provided code chunks and knit your R Markdown file to PDF before submitting it.
 
-> ***"For every one unit increase in (X/IV), Y (Outcome/DV) increases/decreases by (SLOPE VALUE)."***
+### Exercise 1: Conducting an Independent Samples t-Test
 
-For the above format, it will be EITHER increases OR decreases depending on the sign of the slope (positive or negative).
+**Scenario**: You are studying the effect of two different teaching methods on student performance. You collect test scores from two groups of students who were taught using different methods. The data is as follows:
 
-### Exercise 1: Relationship Between Daily Exercise and Happiness
-
-**Dataset**: You are provided with a dataset that includes the number of hours people spend exercising daily and their happiness scores on a scale from 0 to 100.
-
-**Simulate the Data**:
-
-```{r}
-set.seed(101)
-daily_exercise <- rnorm(100, mean = 1, sd = 0.5)  # Hours of daily exercise
-happiness <- 50 + 5 * daily_exercise + rnorm(100, mean = 0, sd = 5)  # Happiness scores
-
-# Combine into a data frame
-exercise_data <- data.frame(daily_exercise, happiness)
-
-# View the first few rows
-head(exercise_data)
-```
+-   **Group A Scores**: `c(78, 82, 85, 88, 91, 77, 85, 89, 90, 92)`
+-   **Group B Scores**: `c(70, 75, 80, 82, 84, 76, 78, 81, 83, 85)`
 
 **Tasks**:
 
-1\. **Create the Linear Model**: Build a linear model to predict happiness based on daily exercise.
+1\. Conduct an independent samples t-test to compare the means of the two groups using R.
 
-2\. **Interpret the Slope**: Interpret the slope of the model using the provided format.
-
-3\. **Plot the Residuals**: Analyze the residuals and discuss whether the linear model is appropriate.
+2\. Interpret the t-value, degrees of freedom, and p-value from the output.
 
 ```{r}
-# Create the linear model
-model_exercise <- lm(happiness ~ daily_exercise, data = exercise_data)
+# Sample data
+group_A <- c(78, 82, 85, 88, 91, 77, 85, 89, 90, 92)
+group_B <- c(70, 75, 80, 82, 84, 76, 78, 81, 83, 85)
 
-# View the summary of the model
-summary(model_exercise)
+# Conduct the independent samples t-test
 
-# Interpret the slope
-# The slope value is extracted from the summary output
-slope_exercise <- coef(model_exercise)[2]
-
-# Plot the residuals
-residuals_exercise <- residuals(model_exercise)
-plot(exercise_data$daily_exercise, residuals_exercise, 
-     main = "Residuals Plot for Exercise vs. Happiness",
-     xlab = "Daily Exercise (Hours)", ylab = "Residuals", pch = 19, col = "blue")
-abline(h = 0, col = "red", lwd = 2)
 ```
 
-**Interpretation**: - Interpret the slope using the format: "For every one unit increase in study time, academic performance increases/decreases by [SLOPE VALUE]."
+-   **t-Value**:
+-   **Degrees of Freedom**:
+-   **p-Value**:
+-   **Interpretation**:
 
-### Exercise 2: Relationship Between Screen Time and Sleep Quality
+### Exercise 2: Calculating Confidence Intervals
 
-**Dataset**: You have data on the number of hours of screen time before bed and sleep quality scores (0 to 100).
-
-**Simulate the Data**:
-
-```{r}
-set.seed(102)
-screen_time <- rnorm(100, mean = 3, sd = 1)  # Hours of screen time before bed
-sleep_quality <- 80 - 4 * screen_time + rnorm(100, mean = 0, sd = 8)  # Sleep quality scores
-
-# Combine into a data frame
-sleep_data <- data.frame(screen_time, sleep_quality)
-
-# View the first few rows
-head(sleep_data)
-```
+**Scenario**: You want to calculate a 95% confidence interval for the difference between the means of the two groups (Group A and Group B) from Exercise 1.
 
 **Tasks**:
 
-1\. **Create the Linear Model**: Build a linear model to predict sleep quality based on screen time.
+1\. Calculate the 95% confidence interval for the difference between the means of Group A and Group B using the t-test results.
 
-2\. **Interpret the Slope**: Interpret the slope of the model using the provided format.
-
-3\. **Plot the Residuals**: Analyze the residuals and discuss whether the linear model is appropriate.
+2\. Interpret the confidence interval and discuss what it suggests about the difference between the two teaching methods.
 
 ```{r}
-# Create the linear model
-model_sleep <- lm(sleep_quality ~ screen_time, data = sleep_data)
+# Confidence interval from t-test result
 
-# View the summary of the model
-summary(model_sleep)
-
-# Interpret the slope
-# The slope value is extracted from the summary output
-slope_sleep <- coef(model_sleep)[2]
-
-# Plot the residuals
-residuals_sleep <- residuals(model_sleep)
-plot(sleep_data$screen_time, residuals_sleep, 
-     main = "Residuals Plot for Screen Time vs. Sleep Quality",
-     xlab = "Screen Time (Hours)", ylab = "Residuals", pch = 19, col = "purple")
-abline(h = 0, col = "red", lwd = 2)
 ```
 
-**Interpretation**: - Interpret the slope using the format: "For every one unit increase in study time, academic performance increases/decreases by [SLOPE VALUE]."
+-   **95% Confidence Interval**: [ ]
+-   **Interpretation**:
 
-### Exercise 3: Relationship Between Coffee Consumption and Productivity
+### Exercise 3: Conducting a Paired Samples t-Test
 
-**Dataset**: You are given data on the number of cups of coffee consumed daily and productivity scores at work (0 to 100).
+**Scenario**: You collect data on the anxiety levels of participants before and after they complete a stress management program. The data is as follows:
 
-**Simulate the Data**:
-
-```{r}
-set.seed(103)
-coffee_consumption <- rpois(100, lambda = 3)  # Number of cups of coffee
-productivity <- 60 + 2.5 * coffee_consumption + rnorm(100, mean = 0, sd = 7)  # Productivity scores
-
-# Combine into a data frame
-coffee_data <- data.frame(coffee_consumption, productivity)
-
-# View the first few rows
-head(coffee_data)
-```
+-   **Anxiety Levels Before**: `c(60, 62, 65, 68, 70, 72, 74, 76, 78, 80)`
+-   **Anxiety Levels After**: `c(55, 58, 60, 62, 63, 65, 66, 68, 70, 72)`
 
 **Tasks**:
 
-1\. **Create the Linear Model**: Build a linear model to predict productivity based on coffee consumption.
+1\. Conduct a paired samples t-test to determine if there is a significant difference in anxiety levels before and after the program.
 
-2\. **Interpret the Slope**: Interpret the slope of the model using the provided format.
-
-3\. **Plot the Residuals**: Analyze the residuals and discuss whether the linear model is appropriate.
+2\. Interpret the t-value, degrees of freedom, and p-value from the output.
 
 ```{r}
-# Create the linear model
-model_coffee <- lm(productivity ~ coffee_consumption, data = coffee_data)
+# Sample data
+anxiety_before <- c(60, 62, 65, 68, 70, 72, 74, 76, 78, 80)
+anxiety_after <- c(55, 58, 60, 62, 63, 65, 66, 68, 70, 72)
 
-# View the summary of the model
-summary(model_coffee)
+# Conduct the paired samples t-test
 
-# Interpret the slope
-# The slope value is extracted from the summary output
-slope_coffee <- coef(model_coffee)[2]
-
-# Plot the residuals
-residuals_coffee <- residuals(model_coffee)
-plot(coffee_data$coffee_consumption, residuals_coffee, 
-     main = "Residuals Plot for Coffee Consumption vs. Productivity",
-     xlab = "Cups of Coffee", ylab = "Residuals", pch = 19, col = "green")
-abline(h = 0, col = "red", lwd = 2)
 ```
 
-**Interpretation**: - Interpret the slope using the format: "For every one unit increase in study time, academic performance increases/decreases by [SLOPE VALUE]."
+-   **t-Value**:
+-   **Degrees of Freedom**:
+-   **p-Value**:
+-   **Interpretation**:
 
+### Exercise 4: Understanding Significance and Effect Size
 
-### Exercise 4: Relationship Between Social Media Usage and Loneliness
-
-**Dataset**: This dataset includes information on the number of hours spent on social media daily and participants' loneliness scores (0 to 100).
-
-**Simulate the Data**:
-
-```{r}
-set.seed(104)
-social_media <- rnorm(100, mean = 2, sd = 1)  # Hours of social media use
-loneliness <- 40 + 7 * social_media + rnorm(100, mean = 0, sd = 6)  # Loneliness scores
-
-# Combine into a data frame
-social_media_data <- data.frame(social_media, loneliness)
-
-# View the first few rows
-head(social_media_data)
-```
+**Scenario**: You conduct a study comparing the effectiveness of two diets on weight loss. The independent samples t-test yields a p-value of 0.03 and a Cohen's d of 0.5.
 
 **Tasks**:
 
-1\. **Create the Linear Model**: Build a linear model to predict loneliness based on social media usage.
+1\. Discuss whether the result is statistically significant and what the p-value indicates.
 
-2\. **Interpret the Slope**: Interpret the slope of the model using the provided format.
-
-3\. **Plot the Residuals**: Analyze the residuals and discuss whether the linear model is appropriate.
-
-```{r}
-# Create the linear model
-model_social_media <- lm(loneliness ~ social_media, data = social_media_data)
-
-# View the summary of the model
-summary(model_social_media)
-
-# Interpret the slope
-# The slope value is extracted from the summary output
-slope_social_media <- coef(model_social_media)[2]
-
-# Plot the residuals
-residuals_social_media <- residuals(model_social_media)
-plot(social_media_data$social_media, residuals_social_media, 
-     main = "Residuals Plot for Social Media Usage vs. Loneliness",
-     xlab = "Social Media Usage (Hours)", ylab = "Residuals", pch = 19, col = "orange")
-abline(h = 0, col = "red", lwd = 2)
-```
-
-**Interpretation**: - Interpret the slope using the format: "For every one unit increase in study time, academic performance increases/decreases by [SLOPE VALUE]."
-
-
-### Exercise 5: Relationship Between Study Time and Academic Performance
-
-**Dataset**: This dataset includes data on the number of hours students study per week and their academic performance scores (0 to 100).
-
-**Simulate the Data**:
-
-```{r}
-set.seed(105)
-study_time <- rnorm(100, mean = 5, sd = 2)  # Hours of study per week
-academic_performance <- 70 + 3 * study_time + rnorm(100, mean = 0, sd = 10)  # Academic performance scores
-
-# Combine into a data frame
-study_data <- data.frame(study_time, academic_performance)
-
-# View the first few rows
-head(study_data)
-```
-
-**Tasks**:\
-1. **Create the Linear Model**: Build a linear model to predict academic performance based on study time.
-
-2\. **Interpret the Slope**: Interpret the slope of the model using the provided format.
-
-3\. **Plot the Residuals**: Analyze the residuals and discuss whether the linear model is appropriate.
-
-```{r}
-# Create the linear model
-model_study <- lm(academic_performance ~ study_time, data = study_data)
-
-# View the summary of the model
-summary(model_study)
-
-# Interpret the slope
-# The slope value is extracted from the summary output
-slope_study <- coef(model_study)[2]
-
-# Plot the residuals
-residuals_study <- residuals(model_study)
-plot(study_data$study_time, residuals_study, 
-     main = "Residuals Plot for Study Time vs. Academic Performance",
-     xlab = "Study Time (Hours per Week)", ylab = "Residuals", pch = 19, col = "red")
-abline(h = 0, col = "blue", lwd = 2)
-```
-
-**Interpretation**: - Interpret the slope using the format: "For every one unit increase in study time, academic performance increases/decreases by [SLOPE VALUE]."
+2\. Interpret the effect size (Cohen's d = 0.5) and its practical significance in the context of the study's findings.
 
 **Submission Instructions:**
 

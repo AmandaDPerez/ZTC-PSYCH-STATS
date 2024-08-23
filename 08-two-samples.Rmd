@@ -627,9 +627,12 @@ By doing so, you will contribute to a more rigorous and impactful body of resear
 **Scenario**: You are comparing the test scores of two groups of students who used different study methods.
 Group A has a standard deviation of 5 with a sample size of 30, and Group B has a standard deviation of 6 with a sample size of 30.
 
-**Tasks**: 1.
+**Tasks**:
+
+1\.
 Calculate the standard error for the difference between the two group means.
-2.
+
+2\.
 Interpret the standard error in the context of the study.
 
 ```{r}
@@ -640,8 +643,7 @@ n_A <- 30
 n_B <- 30
 
 # Calculate the standard error for the difference between means
-SE_difference <- sqrt((sd_A^2 / n_A) + (sd_B^2 / n_B))
-SE_difference
+
 ```
 
 ### Exercise 2: Calculate Confidence Intervals for the Difference Between Two Sample Means and Interpret the Results
@@ -650,9 +652,12 @@ SE_difference
 You have calculated the standard error as 2.5.
 Calculate a 95% confidence interval for the difference between the two means.
 
-**Tasks**: 1.
+**Tasks**:
+
+1\.
 Calculate the 95% confidence interval for the difference between the two means.
-2.
+
+2\.
 Interpret the confidence interval and what it suggests about the difference between the groups.
 
 ```{r}
@@ -662,9 +667,7 @@ mean_B <- 80
 SE_difference <- 2.5
 
 # Calculate the 95% confidence interval
-CI_lower <- (mean_A - mean_B) - 1.96 * SE_difference
-CI_upper <- (mean_A - mean_B) + 1.96 * SE_difference
-c(CI_lower, CI_upper)
+
 ```
 
 ### Exercise 3: Conduct an Independent Samples t-Test in R and Interpret the Output
@@ -675,9 +678,12 @@ Use the following data to conduct an independent samples t-test.
 -   Therapy A: `c(25, 30, 28, 34, 29, 31, 26, 32, 27, 33)`
 -   Therapy B: `c(22, 24, 26, 23, 27, 29, 25, 24, 26, 27)`
 
-**Tasks**: 1.
+**Tasks**:
+
+1\.
 Conduct an independent samples t-test in R.
-2.
+
+2\.
 Interpret the t-value, degrees of freedom, and p-value from the output.
 
 ```{r}
@@ -686,8 +692,7 @@ therapy_A <- c(25, 30, 28, 34, 29, 31, 26, 32, 27, 33)
 therapy_B <- c(22, 24, 26, 23, 27, 29, 25, 24, 26, 27)
 
 # Conduct the t-test
-t_test_result <- t.test(therapy_A, therapy_B, var.equal = TRUE)
-t_test_result
+
 ```
 
 ### Exercise 4: Conduct a Paired Samples t-Test in R and Interpret the Output
@@ -697,9 +702,12 @@ t_test_result
 -   Before: `c(50, 45, 48, 53, 46, 47, 49, 44, 52, 50)`
 -   After: `c(40, 38, 42, 45, 39, 41, 40, 37, 44, 42)`
 
-**Tasks**: 1.
+**Tasks**:
+
+1\.
 Conduct a paired samples t-test in R.
-2.
+
+2\.
 Interpret the t-value, degrees of freedom, and p-value from the output.
 
 ```{r}
@@ -708,18 +716,21 @@ before <- c(50, 45, 48, 53, 46, 47, 49, 44, 52, 50)
 after <- c(40, 38, 42, 45, 39, 41, 40, 37, 44, 42)
 
 # Conduct the paired t-test
-paired_t_test_result <- t.test(before, after, paired = TRUE)
-paired_t_test_result
+
 ```
 
-#### Exercise 5: Analyze the Significance and Effect Size of a t-Test Result and Discuss the Implications for the Study's Findings
+### Exercise 5: Analyze the Significance and Effect Size of a t-Test Result and Discuss the Implications for the Study's Findings
 
 **Scenario**: You conducted a study comparing the effectiveness of two teaching methods on student performance.
 The independent samples t-test resulted in a p-value of 0.04 and a Cohen's d of 0.6.
 
-**Tasks**: 1.
+**Tasks**:
+
+1\.
 Discuss whether the result is statistically significant.
-2.
+
+2\.
 Interpret the effect size and its implications for the study's findings.
-3.
+
+3\.
 Consider both statistical significance and practical significance in your interpretation.
