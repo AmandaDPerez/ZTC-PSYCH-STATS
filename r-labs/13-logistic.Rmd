@@ -439,9 +439,9 @@ After fitting a logistic regression model, it’s crucial to assess how well the
 - **p-value < 0.05**: If the p-value is less than 0.05, it suggests that the model may not fit the data well.
 
 **Example in R**:
-```r
+```{r}
 # Install and load the necessary package
-install.packages("ResourceSelection")
+if(!require(ResourceSelection)){install.packages("ResourceSelection", dependencies=TRUE)}
 library(ResourceSelection)
 
 # Fit the logistic regression model
