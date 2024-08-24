@@ -1010,6 +1010,186 @@ summary(model_multiple)
 -   **Comparison of Bivariate and Multiple Regression**: The coefficient for `Sleep_Quality` may change when adding `Study_Time` and `Stress_Levels` to the model.
     -   If the coefficient for `Sleep_Quality` decreases, it suggests that `Study_Time` and `Stress_Levels` share some variance with `Sleep_Quality` in predicting `Academic_Performance`. This highlights the importance of including all relevant predictors in the model to avoid misleading conclusions.
 
+## Answers to Chapter 12 Practice Exercises
+
+### Exercise 1: Categorical x Categorical Interaction
+
+-   **Task**: Create a model with a categorical x categorical interaction, interpret the interaction term, and visualize it using `ggplot2`.
+-   **Instructions**:
+    1.  Simulate a dataset with two categorical variables (e.g., Treatment: "A", "B" and Gender: "Male", "Female") and an outcome variable (e.g., Recovery Rate).
+    2.  Fit a linear model that includes an interaction term between the two categorical variables.
+    3.  Interpret the interaction term in the context of the outcome variable.
+    4.  Visualize the interaction using a bar graph with error bars.
+
+```{r, warning = F, message = F}
+# Simulate data
+set.seed(123)
+Treatment <- factor(rep(c("A", "B"), each = 50))
+Gender <- factor(rep(c("Male", "Female"), each = 25, times = 2))
+Recovery_Rate <- ifelse(Treatment == "A", 80 + 5 * (Gender == "Male"), 
+                        70 + 10 * (Gender == "Female")) + rnorm(100, sd = 5)
+
+data <- data.frame(Treatment, Gender, Recovery_Rate)
+
+# Fit the model
+model <- lm(Recovery_Rate ~ Treatment * Gender, data = data)
+
+# Summary of the model
+summary(model)
+
+# Visualize the interaction
+library(ggplot2)
+library(dplyr)
+
+# Calculate group means and standard errors
+group_summary <- data %>%
+  group_by(Treatment, Gender) %>%
+  summarise(
+    Mean_Recovery_Rate = mean(Recovery_Rate),
+    SE_Recovery_Rate = sd(Recovery_Rate) / sqrt(n())
+  )
+
+# Bar graph with error bars
+ggplot(group_summary, aes(x = Treatment, y = Mean_Recovery_Rate, fill = Gender)) +
+  geom_bar(stat = "identity", position = position_dodge(width = 0.9), width = 0.7) +
+  geom_errorbar(aes(ymin = Mean_Recovery_Rate - SE_Recovery_Rate, ymax = Mean_Recovery_Rate + SE_Recovery_Rate),
+                position = position_dodge(width = 0.9), width = 0.25) +
+  labs(title = "Interaction between Treatment and Gender on Recovery Rate",
+       x = "Treatment", y = "Mean Recovery Rate (%)") +
+  theme_minimal()
+```
+
+-   **Interpretation**: The interaction term indicates how the effect of treatment on recovery rate differs by gender. For example, if the interaction term is significant, it may suggest that Treatment A is more effective for males while Treatment B is more effective for females.
+
+### Exercise 2: Linear x Linear Interaction
+
+-   **Task**: Model a linear x linear interaction, interpret the coefficients, and create a graph to visualize the interaction.
+-   **Instructions**:
+    1.  Simulate a dataset with two continuous variables (e.g., Age and Experience) and an outcome variable (e.g., Salary).
+    2.  Fit a linear model that includes an interaction term between the two continuous variables.
+    3.  Interpret the coefficients, especially the interaction term.
+    4.  Create a 3D surface plot to visualize the interaction or use a 2D plot with a median split.
+
+```{r}
+# Simulate data
+set.seed(123)
+Age <- rnorm(100, mean = 40, sd = 10)
+Experience <- rnorm(100, mean = 15, sd = 5)
+Salary <- 30000 + 1000 * Age + 2000 * Experience + 150 * Age * Experience + rnorm(100, sd = 5000)
+
+data <- data.frame(Age, Experience, Salary)
+
+# Fit the model
+model <- lm(Salary ~ Age * Experience, data = data)
+
+# Summary of the model
+summary(model)
+
+# 2D plot using median split
+data <- data %>%
+  mutate(Experience_Level = ifelse(Experience > median(Experience), "High", "Low"))
+
+ggplot(data, aes(x = Age, y = Salary, color = Experience_Level)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  labs(title = "Effect of Age on Salary by Experience Level",
+       x = "Age", y = "Salary") +
+  theme_minimal()
+```
+
+-   **Interpretation**: The interaction term (Age:Experience) represents how the effect of Age on Salary changes depending on the level of Experience. A significant interaction would suggest that the relationship between Age and Salary is different for those with higher versus lower levels of experience.
+
+### Exercise 3: Categorical x Linear Interaction
+
+-   **Task**: Model a categorical x linear interaction, interpret the results, and create an interaction plot to illustrate the relationship.
+-   **Instructions**:
+    1.  Simulate a dataset with one categorical variable (e.g., Gender) and one continuous variable (e.g., Hours of Study) affecting an outcome variable (e.g., Test Scores).
+    2.  Fit a linear model that includes an interaction term between the categorical and continuous variables.
+    3.  Interpret the results, focusing on the interaction term.
+    4.  Create an interaction plot using `ggplot2` to visualize the interaction.
+
+```{r}
+# Simulate data
+set.seed(123)
+Gender <- factor(rep(c("Male", "Female"), each = 50))
+Hours_Study <- rnorm(100, mean = 5, sd = 2)
+Test_Score <- 70 + 5 * Hours_Study + 10 * (Gender == "Female") + 5 * Hours_Study * (Gender == "Female") + rnorm(100, sd = 5)
+
+data <- data.frame(Gender, Hours_Study, Test_Score)
+
+# Fit the model
+model <- lm(Test_Score ~ Gender * Hours_Study, data = data)
+
+# Summary of the model
+summary(model)
+
+# Interaction plot
+ggplot(data, aes(x = Hours_Study, y = Test_Score, color = Gender)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  labs(title = "Interaction between Gender and Hours of Study on Test Scores",
+       x = "Hours of Study", y = "Test Score") +
+  theme_minimal()
+```
+
+-   **Interpretation**: The interaction term (Gender:Hours_Study) tells us how the effect of study hours on test scores differs between males and females. If significant, it suggests that the relationship between study hours and test scores is stronger or weaker depending on gender.
+
+### Exercise 4: Graphing Multivariate Interactions
+
+-   **Task**: Given a multivariate dataset, create different types of graphs to visualize interactions and discuss which type of graph is most appropriate.
+-   **Instructions**:
+    1.  Use a provided dataset (or simulate one) with multiple predictors (both continuous and categorical) and an outcome variable.
+    2.  Create various types of graphs (e.g., interaction plots, 3D surface plots, faceted plots).
+    3.  Discuss which type of graph best represents the interactions in your data and why.
+
+```{r}
+# Simulate a multivariate dataset
+set.seed(123)
+Age <- rnorm(100, mean = 40, sd = 10)
+Experience <- rnorm(100, mean = 15, sd = 5)
+Gender <- factor(rep(c("Male", "Female"), each = 50))
+Salary <- 30000 + 1000 * Age + 2000 * Experience + 150 * Age * Experience + 5000 * (Gender == "Female") + rnorm(100, sd = 5000)
+
+data <- data.frame(Age, Experience, Gender, Salary)
+
+# Interaction plot (categorical x continuous)
+ggplot(data, aes(x = Age, y = Salary, color = Gender)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  labs(title = "Interaction between Gender and Age on Salary",
+       x = "Age", y = "Salary") +
+  theme_minimal()
+
+# 3D surface plot (linear x linear interaction)
+library(rgl)
+
+age_grid <- seq(min(data$Age), max(data$Age), length.out = 30)
+experience_grid <- seq(min(data$Experience), max(data$Experience), length.out = 30)
+
+age_matrix <- outer(age_grid, rep(1, length(experience_grid)))
+experience_matrix <- outer(rep(1, length(age_grid)), experience_grid)
+
+salary_pred <- outer(age_grid, experience_grid, 
+                     function(a, e) 30000 + 1000 * a + 2000 * e + 150 * a * e)
+
+plot3d(age_matrix, experience_matrix, salary_pred, col = "lightblue", alpha = 0.7, type = "n")
+points3d(data$Age, data$Experience, data$Salary, col = "blue", size = 3)
+surface3d(age_matrix, experience_matrix, salary_pred, color = "lightblue", alpha = 0.5)
+rglwidget()
+
+# Faceted plot (continuous x categorical interaction)
+ggplot(data, aes(x = Experience, y = Salary)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  labs(title = "Effect of Experience on Salary by Gender",
+       x = "Experience", y = "Salary") +
+  facet_wrap(~ Gender) +
+  theme_minimal()
+```
+
+-   **Discussion**:
+    -   The **interaction plot** is best for showing how a continuous variable interacts with a categorical variable.
+
 ## Answers to Chapter 15 Practice Exercises
 
 ### Exercise 1: Chi-Square Goodness of Fit Test

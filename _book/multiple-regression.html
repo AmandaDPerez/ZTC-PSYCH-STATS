@@ -23,7 +23,7 @@
 <meta name="author" content="A.D.Perez, PhD" />
 
 
-<meta name="date" content="2024-08-22" />
+<meta name="date" content="2024-08-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="bivariate-linear-models.html"/>
-<link rel="next" href="goodness-of-fit.html"/>
+<link rel="next" href="interactions-in-regression-models.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -52,6 +52,28 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="libs/rglWebGL-binding-1.3.1/rglWebGL.js"></script>
+<link href="libs/rglwidgetClass-1.3.1/rgl.css" rel="stylesheet" />
+<script src="libs/rglwidgetClass-1.3.1/rglClass.src.js"></script>
+<script src="libs/rglwidgetClass-1.3.1/utils.src.js"></script>
+<script src="libs/rglwidgetClass-1.3.1/buffer.src.js"></script>
+<script src="libs/rglwidgetClass-1.3.1/subscenes.src.js"></script>
+<script src="libs/rglwidgetClass-1.3.1/shaders.src.js"></script>
+<script src="libs/rglwidgetClass-1.3.1/shadersrc.src.js"></script>
+<script src="libs/rglwidgetClass-1.3.1/textures.src.js"></script>
+<script src="libs/rglwidgetClass-1.3.1/projection.src.js"></script>
+<script src="libs/rglwidgetClass-1.3.1/mouse.src.js"></script>
+<script src="libs/rglwidgetClass-1.3.1/init.src.js"></script>
+<script src="libs/rglwidgetClass-1.3.1/pieces.src.js"></script>
+<script src="libs/rglwidgetClass-1.3.1/draw.src.js"></script>
+<script src="libs/rglwidgetClass-1.3.1/controls.src.js"></script>
+<script src="libs/rglwidgetClass-1.3.1/selection.src.js"></script>
+<script src="libs/rglwidgetClass-1.3.1/rglTimer.src.js"></script>
+<script src="libs/rglwidgetClass-1.3.1/pretty.src.js"></script>
+<script src="libs/rglwidgetClass-1.3.1/axes.src.js"></script>
+<script src="libs/rglwidgetClass-1.3.1/animation.src.js"></script>
+<script src="libs/CanvasMatrix4-1.3.1/CanvasMatrix.src.js"></script>
 
 
 <style type="text/css">
@@ -662,184 +684,269 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="11.4.2" data-path="multiple-regression.html"><a href="multiple-regression.html#identifying-suppression-effects"><i class="fa fa-check"></i><b>11.4.2</b> Identifying Suppression Effects</a></li>
 <li class="chapter" data-level="11.4.3" data-path="multiple-regression.html"><a href="multiple-regression.html#practical-implications-of-suppression"><i class="fa fa-check"></i><b>11.4.3</b> Practical Implications of Suppression</a></li>
 </ul></li>
+<li class="chapter" data-level="11.5" data-path="multiple-regression.html"><a href="multiple-regression.html#visualizing-multiple-regression-results"><i class="fa fa-check"></i><b>11.5</b> Visualizing Multiple Regression Results</a>
+<ul>
+<li class="chapter" data-level="11.5.1" data-path="multiple-regression.html"><a href="multiple-regression.html#creating-plots-for-multiple-regression-in-r"><i class="fa fa-check"></i><b>11.5.1</b> Creating Plots for Multiple Regression in R</a></li>
+<li class="chapter" data-level="11.5.2" data-path="multiple-regression.html"><a href="multiple-regression.html#interpreting-multiple-regression-plots"><i class="fa fa-check"></i><b>11.5.2</b> Interpreting Multiple Regression Plots</a></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html"><i class="fa fa-check"></i><b>12</b> Goodness of Fit</a>
+<li class="chapter" data-level="11.6" data-path="multiple-regression.html"><a href="multiple-regression.html#including-and-interpreting-categorical-variables-in-multiple-regression"><i class="fa fa-check"></i><b>11.6</b> Including and Interpreting Categorical Variables in Multiple Regression</a>
 <ul>
-<li class="chapter" data-level="12.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#what-is-goodness-of-fit"><i class="fa fa-check"></i><b>12.1</b> What is Goodness of Fit?</a>
-<ul>
-<li class="chapter" data-level="12.1.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#why-goodness-of-fit-matters"><i class="fa fa-check"></i><b>12.1.1</b> Why Goodness of Fit Matters</a></li>
+<li class="chapter" data-level="11.6.1" data-path="multiple-regression.html"><a href="multiple-regression.html#importance-of-reference-levels-in-categorical-variables"><i class="fa fa-check"></i><b>11.6.1</b> Importance of Reference Levels in Categorical Variables</a></li>
+<li class="chapter" data-level="11.6.2" data-path="multiple-regression.html"><a href="multiple-regression.html#interpreting-categorical-variables-in-multiple-regression"><i class="fa fa-check"></i><b>11.6.2</b> Interpreting Categorical Variables in Multiple Regression</a></li>
+<li class="chapter" data-level="11.6.3" data-path="multiple-regression.html"><a href="multiple-regression.html#effect-coding-best-practice-for-categorical-variables"><i class="fa fa-check"></i><b>11.6.3</b> Effect Coding: Best Practice for Categorical Variables</a></li>
+<li class="chapter" data-level="11.6.4" data-path="multiple-regression.html"><a href="multiple-regression.html#contrast-coding-for-categorical-variables-with-more-than-two-levels"><i class="fa fa-check"></i><b>11.6.4</b> Contrast Coding for Categorical Variables with More Than Two Levels</a></li>
 </ul></li>
-<li class="chapter" data-level="12.2" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#chi-square"><i class="fa fa-check"></i><b>12.2</b> Chi-Square</a>
+<li class="chapter" data-level="11.7" data-path="multiple-regression.html"><a href="multiple-regression.html#chapter-summary-10"><i class="fa fa-check"></i><b>11.7</b> Chapter Summary</a>
 <ul>
-<li class="chapter" data-level="12.2.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#understanding-the-chi-square-test"><i class="fa fa-check"></i><b>12.2.1</b> Understanding the Chi-Square Test</a></li>
-<li class="chapter" data-level="12.2.2" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#calculating-chi-square-in-r"><i class="fa fa-check"></i><b>12.2.2</b> Calculating Chi-Square in R</a></li>
-<li class="chapter" data-level="12.2.3" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#real-world-applications-3"><i class="fa fa-check"></i><b>12.2.3</b> Real-World Applications</a></li>
+<li class="chapter" data-level="11.7.1" data-path="multiple-regression.html"><a href="multiple-regression.html#recap-of-key-concepts-2"><i class="fa fa-check"></i><b>11.7.1</b> Recap of Key Concepts</a></li>
+<li class="chapter" data-level="11.7.2" data-path="multiple-regression.html"><a href="multiple-regression.html#final-thoughts-2"><i class="fa fa-check"></i><b>11.7.2</b> Final Thoughts</a></li>
 </ul></li>
-<li class="chapter" data-level="12.3" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#r-squared"><i class="fa fa-check"></i><b>12.3</b> R-Squared</a>
+<li class="chapter" data-level="11.8" data-path="multiple-regression.html"><a href="multiple-regression.html#practice-exercises-9"><i class="fa fa-check"></i><b>11.8</b> Practice Exercises</a>
 <ul>
-<li class="chapter" data-level="12.3.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#what-is-r-squared"><i class="fa fa-check"></i><b>12.3.1</b> What is R-Squared?</a></li>
-<li class="chapter" data-level="12.3.2" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#calculating-r-squared-in-r"><i class="fa fa-check"></i><b>12.3.2</b> Calculating R-Squared in R</a></li>
-<li class="chapter" data-level="12.3.3" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#adjusted-r-squared"><i class="fa fa-check"></i><b>12.3.3</b> Adjusted R-Squared</a></li>
-<li class="chapter" data-level="12.3.4" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#real-world-applications-4"><i class="fa fa-check"></i><b>12.3.4</b> Real-World Applications</a></li>
-</ul></li>
-<li class="chapter" data-level="12.4" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#the-f-test-for-comparing-models"><i class="fa fa-check"></i><b>12.4</b> The F-Test for Comparing Models</a>
-<ul>
-<li class="chapter" data-level="12.4.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#what-is-the-f-test"><i class="fa fa-check"></i><b>12.4.1</b> What is the F-Test?</a></li>
-<li class="chapter" data-level="12.4.2" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#performing-the-f-test-in-r"><i class="fa fa-check"></i><b>12.4.2</b> Performing the F-Test in R</a></li>
-</ul></li>
-<li class="chapter" data-level="12.5" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#understanding-the-f-distribution"><i class="fa fa-check"></i><b>12.5</b> Understanding the F-Distribution</a>
-<ul>
-<li class="chapter" data-level="12.5.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#what-is-the-f-distribution"><i class="fa fa-check"></i><b>12.5.1</b> What is the F-Distribution?</a></li>
-<li class="chapter" data-level="12.5.2" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#visualizing-the-f-distribution-in-r"><i class="fa fa-check"></i><b>12.5.2</b> Visualizing the F-Distribution in R</a></li>
-<li class="chapter" data-level="12.5.3" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#real-world-applications-5"><i class="fa fa-check"></i><b>12.5.3</b> Real-World Applications</a></li>
-</ul></li>
-<li class="chapter" data-level="12.6" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#putting-it-all-together-assessing-model-fit-in-practice"><i class="fa fa-check"></i><b>12.6</b> Putting It All Together – Assessing Model Fit in Practice</a>
-<ul>
-<li class="chapter" data-level="12.6.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#comprehensive-example"><i class="fa fa-check"></i><b>12.6.1</b> Comprehensive Example</a></li>
-<li class="chapter" data-level="12.6.2" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#best-practices-for-assessing-goodness-of-fit"><i class="fa fa-check"></i><b>12.6.2</b> Best Practices for Assessing Goodness of Fit</a></li>
-</ul></li>
-<li class="chapter" data-level="12.7" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#chapter-summary-10"><i class="fa fa-check"></i><b>12.7</b> Chapter Summary</a></li>
-<li class="chapter" data-level="12.8" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#practice-exercises-9"><i class="fa fa-check"></i><b>12.8</b> Practice Exercises</a>
-<ul>
-<li class="chapter" data-level="12.8.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#section-7-practice-exercises"><i class="fa fa-check"></i><b>12.8.1</b> Section 7: Practice Exercises</a></li>
+<li class="chapter" data-level="11.8.1" data-path="multiple-regression.html"><a href="multiple-regression.html#exercise-1-conduct-a-multiple-regression-analysis"><i class="fa fa-check"></i><b>11.8.1</b> Exercise 1: Conduct a Multiple Regression Analysis</a></li>
+<li class="chapter" data-level="11.8.2" data-path="multiple-regression.html"><a href="multiple-regression.html#exercise-2-identifying-a-suppression-effect"><i class="fa fa-check"></i><b>11.8.2</b> Exercise 2: Identifying a Suppression Effect</a></li>
+<li class="chapter" data-level="11.8.3" data-path="multiple-regression.html"><a href="multiple-regression.html#exercise-3-creating-and-interpreting-a-multiple-regression-plot"><i class="fa fa-check"></i><b>11.8.3</b> Exercise 3: Creating and Interpreting a Multiple Regression Plot</a></li>
+<li class="chapter" data-level="11.8.4" data-path="multiple-regression.html"><a href="multiple-regression.html#exercise-4-comparing-bivariate-and-multiple-regression"><i class="fa fa-check"></i><b>11.8.4</b> Exercise 4: Comparing Bivariate and Multiple Regression</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="statistical-power.html"><a href="statistical-power.html"><i class="fa fa-check"></i><b>13</b> Statistical Power</a>
+<li class="chapter" data-level="12" data-path="interactions-in-regression-models.html"><a href="interactions-in-regression-models.html"><i class="fa fa-check"></i><b>12</b> Interactions in Regression Models</a>
 <ul>
-<li class="chapter" data-level="13.1" data-path="statistical-power.html"><a href="statistical-power.html#introduction-to-statistical-power"><i class="fa fa-check"></i><b>13.1</b> Introduction to Statistical Power</a>
+<li class="chapter" data-level="12.1" data-path="interactions-in-regression-models.html"><a href="interactions-in-regression-models.html#introduction-to-interactions"><i class="fa fa-check"></i><b>12.1</b> Introduction to Interactions</a>
 <ul>
-<li class="chapter" data-level="13.1.1" data-path="statistical-power.html"><a href="statistical-power.html#definition-of-statistical-power"><i class="fa fa-check"></i><b>13.1.1</b> Definition of Statistical Power</a></li>
-<li class="chapter" data-level="13.1.2" data-path="statistical-power.html"><a href="statistical-power.html#the-role-of-power-in-psychological-research"><i class="fa fa-check"></i><b>13.1.2</b> The Role of Power in Psychological Research</a></li>
+<li class="chapter" data-level="12.1.1" data-path="interactions-in-regression-models.html"><a href="interactions-in-regression-models.html#what-are-interactions"><i class="fa fa-check"></i><b>12.1.1</b> What Are Interactions?</a></li>
+<li class="chapter" data-level="12.1.2" data-path="interactions-in-regression-models.html"><a href="interactions-in-regression-models.html#why-are-interactions-important"><i class="fa fa-check"></i><b>12.1.2</b> Why Are Interactions Important?</a></li>
 </ul></li>
-<li class="chapter" data-level="13.2" data-path="statistical-power.html"><a href="statistical-power.html#understanding-type-i-and-type-ii-errors"><i class="fa fa-check"></i><b>13.2</b> Understanding Type I and Type II Errors</a>
+<li class="chapter" data-level="12.2" data-path="interactions-in-regression-models.html"><a href="interactions-in-regression-models.html#categorical-x-categorical-interactions"><i class="fa fa-check"></i><b>12.2</b> Categorical x Categorical Interactions</a>
 <ul>
-<li class="chapter" data-level="13.2.1" data-path="statistical-power.html"><a href="statistical-power.html#type-i-error-false-positive"><i class="fa fa-check"></i><b>13.2.1</b> Type I Error (False Positive)</a></li>
-<li class="chapter" data-level="13.2.2" data-path="statistical-power.html"><a href="statistical-power.html#type-ii-error-false-negative"><i class="fa fa-check"></i><b>13.2.2</b> Type II Error (False Negative)</a></li>
-<li class="chapter" data-level="13.2.3" data-path="statistical-power.html"><a href="statistical-power.html#balancing-type-i-and-type-ii-errors"><i class="fa fa-check"></i><b>13.2.3</b> Balancing Type I and Type II Errors</a></li>
+<li class="chapter" data-level="12.2.1" data-path="interactions-in-regression-models.html"><a href="interactions-in-regression-models.html#understanding-categorical-x-categorical-interactions"><i class="fa fa-check"></i><b>12.2.1</b> Understanding Categorical x Categorical Interactions</a></li>
+<li class="chapter" data-level="12.2.2" data-path="interactions-in-regression-models.html"><a href="interactions-in-regression-models.html#step-by-step-guide-to-adding-post-hoc-tests"><i class="fa fa-check"></i><b>12.2.2</b> Step-by-Step Guide to Adding Post Hoc Tests</a></li>
+<li class="chapter" data-level="12.2.3" data-path="interactions-in-regression-models.html"><a href="interactions-in-regression-models.html#visualizing-the-results-with-error-bars"><i class="fa fa-check"></i><b>12.2.3</b> Visualizing the Results with Error Bars</a></li>
+<li class="chapter" data-level="12.2.4" data-path="interactions-in-regression-models.html"><a href="interactions-in-regression-models.html#conclusion-19"><i class="fa fa-check"></i><b>12.2.4</b> Conclusion</a></li>
 </ul></li>
-<li class="chapter" data-level="13.3" data-path="statistical-power.html"><a href="statistical-power.html#factors-affecting-power"><i class="fa fa-check"></i><b>13.3</b> Factors Affecting Power</a>
+<li class="chapter" data-level="12.3" data-path="interactions-in-regression-models.html"><a href="interactions-in-regression-models.html#linear-x-linear-interactions"><i class="fa fa-check"></i><b>12.3</b> Linear x Linear Interactions</a>
 <ul>
-<li class="chapter" data-level="13.3.1" data-path="statistical-power.html"><a href="statistical-power.html#sample-size"><i class="fa fa-check"></i><b>13.3.1</b> Sample Size</a></li>
-<li class="chapter" data-level="13.3.2" data-path="statistical-power.html"><a href="statistical-power.html#effect-size"><i class="fa fa-check"></i><b>13.3.2</b> Effect Size</a></li>
-<li class="chapter" data-level="13.3.3" data-path="statistical-power.html"><a href="statistical-power.html#significance-level-alpha"><i class="fa fa-check"></i><b>13.3.3</b> Significance Level (Alpha)</a></li>
+<li class="chapter" data-level="12.3.1" data-path="interactions-in-regression-models.html"><a href="interactions-in-regression-models.html#understanding-linear-x-linear-interactions"><i class="fa fa-check"></i><b>12.3.1</b> Understanding Linear x Linear Interactions</a></li>
+<li class="chapter" data-level="12.3.2" data-path="interactions-in-regression-models.html"><a href="interactions-in-regression-models.html#modeling-linear-x-linear-interactions"><i class="fa fa-check"></i><b>12.3.2</b> Modeling Linear x Linear Interactions</a></li>
+<li class="chapter" data-level="12.3.3" data-path="interactions-in-regression-models.html"><a href="interactions-in-regression-models.html#visualizing-linear-x-linear-interactions"><i class="fa fa-check"></i><b>12.3.3</b> Visualizing Linear x Linear Interactions</a></li>
+<li class="chapter" data-level="12.3.4" data-path="interactions-in-regression-models.html"><a href="interactions-in-regression-models.html#conclusion-20"><i class="fa fa-check"></i><b>12.3.4</b> Conclusion</a></li>
 </ul></li>
-<li class="chapter" data-level="13.4" data-path="statistical-power.html"><a href="statistical-power.html#calculating-power-in-r"><i class="fa fa-check"></i><b>13.4</b> Calculating Power in R</a>
+<li class="chapter" data-level="12.4" data-path="interactions-in-regression-models.html"><a href="interactions-in-regression-models.html#categorical-x-linear-interactions"><i class="fa fa-check"></i><b>12.4</b> Categorical x Linear Interactions</a>
 <ul>
-<li class="chapter" data-level="13.4.1" data-path="statistical-power.html"><a href="statistical-power.html#introduction-to-power-analysis"><i class="fa fa-check"></i><b>13.4.1</b> Introduction to Power Analysis</a></li>
-<li class="chapter" data-level="13.4.2" data-path="statistical-power.html"><a href="statistical-power.html#step-by-step-guide-to-conducting-power-analysis-in-r"><i class="fa fa-check"></i><b>13.4.2</b> Step-by-Step Guide to Conducting Power Analysis in R</a></li>
+<li class="chapter" data-level="12.4.1" data-path="interactions-in-regression-models.html"><a href="interactions-in-regression-models.html#understanding-categorical-x-linear-interactions"><i class="fa fa-check"></i><b>12.4.1</b> Understanding Categorical x Linear Interactions</a></li>
+<li class="chapter" data-level="12.4.2" data-path="interactions-in-regression-models.html"><a href="interactions-in-regression-models.html#modeling-categorical-x-linear-interactions"><i class="fa fa-check"></i><b>12.4.2</b> Modeling Categorical x Linear Interactions</a></li>
+<li class="chapter" data-level="12.4.3" data-path="interactions-in-regression-models.html"><a href="interactions-in-regression-models.html#visualizing-categorical-x-linear-interactions"><i class="fa fa-check"></i><b>12.4.3</b> Visualizing Categorical x Linear Interactions</a></li>
+<li class="chapter" data-level="12.4.4" data-path="interactions-in-regression-models.html"><a href="interactions-in-regression-models.html#conclusion-21"><i class="fa fa-check"></i><b>12.4.4</b> Conclusion</a></li>
 </ul></li>
-<li class="chapter" data-level="13.5" data-path="statistical-power.html"><a href="statistical-power.html#practical-considerations-and-challenges"><i class="fa fa-check"></i><b>13.5</b> Practical Considerations and Challenges</a>
+<li class="chapter" data-level="12.5" data-path="interactions-in-regression-models.html"><a href="interactions-in-regression-models.html#graphing-multivariate-models"><i class="fa fa-check"></i><b>12.5</b> Graphing Multivariate Models</a>
 <ul>
-<li class="chapter" data-level="13.5.1" data-path="statistical-power.html"><a href="statistical-power.html#common-challenges-in-achieving-adequate-power"><i class="fa fa-check"></i><b>13.5.1</b> Common Challenges in Achieving Adequate Power</a></li>
-<li class="chapter" data-level="13.5.2" data-path="statistical-power.html"><a href="statistical-power.html#ethical-considerations-2"><i class="fa fa-check"></i><b>13.5.2</b> Ethical Considerations</a></li>
+<li class="chapter" data-level="12.5.1" data-path="interactions-in-regression-models.html"><a href="interactions-in-regression-models.html#importance-of-visualizing-multivariate-models"><i class="fa fa-check"></i><b>12.5.1</b> Importance of Visualizing Multivariate Models</a></li>
+<li class="chapter" data-level="12.5.2" data-path="interactions-in-regression-models.html"><a href="interactions-in-regression-models.html#types-of-graphs-for-interactions"><i class="fa fa-check"></i><b>12.5.2</b> Types of Graphs for Interactions</a></li>
+<li class="chapter" data-level="12.5.3" data-path="interactions-in-regression-models.html"><a href="interactions-in-regression-models.html#conclusion-22"><i class="fa fa-check"></i><b>12.5.3</b> Conclusion</a></li>
 </ul></li>
-<li class="chapter" data-level="13.6" data-path="statistical-power.html"><a href="statistical-power.html#real-world-applications-of-power-analysis-in-psychology"><i class="fa fa-check"></i><b>13.6</b> Real-World Applications of Power Analysis in Psychology</a>
+<li class="chapter" data-level="12.6" data-path="interactions-in-regression-models.html"><a href="interactions-in-regression-models.html#chapter-summary-11"><i class="fa fa-check"></i><b>12.6</b> Chapter Summary</a>
 <ul>
-<li class="chapter" data-level="13.6.1" data-path="statistical-power.html"><a href="statistical-power.html#hypothetical-case-studies"><i class="fa fa-check"></i><b>13.6.1</b> Hypothetical Case Studies</a></li>
-<li class="chapter" data-level="13.6.2" data-path="statistical-power.html"><a href="statistical-power.html#best-practices-for-ensuring-adequate-power"><i class="fa fa-check"></i><b>13.6.2</b> Best Practices for Ensuring Adequate Power</a></li>
+<li class="chapter" data-level="12.6.1" data-path="interactions-in-regression-models.html"><a href="interactions-in-regression-models.html#recap-of-key-concepts-3"><i class="fa fa-check"></i><b>12.6.1</b> Recap of Key Concepts</a></li>
+<li class="chapter" data-level="12.6.2" data-path="interactions-in-regression-models.html"><a href="interactions-in-regression-models.html#final-thoughts-3"><i class="fa fa-check"></i><b>12.6.2</b> Final Thoughts</a></li>
 </ul></li>
-<li class="chapter" data-level="13.7" data-path="statistical-power.html"><a href="statistical-power.html#chapter-summary-11"><i class="fa fa-check"></i><b>13.7</b> Chapter Summary</a>
+<li class="chapter" data-level="12.7" data-path="interactions-in-regression-models.html"><a href="interactions-in-regression-models.html#practice-exercises-10"><i class="fa fa-check"></i><b>12.7</b> Practice Exercises</a>
 <ul>
-<li class="chapter" data-level="13.7.1" data-path="statistical-power.html"><a href="statistical-power.html#recap-of-key-concepts-2"><i class="fa fa-check"></i><b>13.7.1</b> Recap of Key Concepts</a></li>
-<li class="chapter" data-level="13.7.2" data-path="statistical-power.html"><a href="statistical-power.html#final-thoughts-2"><i class="fa fa-check"></i><b>13.7.2</b> Final Thoughts</a></li>
-</ul></li>
-<li class="chapter" data-level="13.8" data-path="statistical-power.html"><a href="statistical-power.html#practice-exercises-10"><i class="fa fa-check"></i><b>13.8</b> Practice Exercises</a>
-<ul>
-<li class="chapter" data-level="13.8.1" data-path="statistical-power.html"><a href="statistical-power.html#exercise-1-calculate-the-statistical-power-of-a-study-using-a-given-dataset-and-interpret-the-results"><i class="fa fa-check"></i><b>13.8.1</b> Exercise 1: Calculate the Statistical Power of a Study Using a Given Dataset and Interpret the Results</a></li>
-<li class="chapter" data-level="13.8.2" data-path="statistical-power.html"><a href="statistical-power.html#exercise-2-conduct-a-power-analysis-in-r-to-determine-the-required-sample-size-for-a-psychological-experiment-with-a-specified-effect-size-and-significance-level"><i class="fa fa-check"></i><b>13.8.2</b> Exercise 2: Conduct a Power Analysis in R to Determine the Required Sample Size for a Psychological Experiment with a Specified Effect Size and Significance Level</a></li>
-<li class="chapter" data-level="13.8.3" data-path="statistical-power.html"><a href="statistical-power.html#exercise-3-analyze-a-scenario-where-a-type-i-error-occurred-in-a-psychological-study"><i class="fa fa-check"></i><b>13.8.3</b> Exercise 3: Analyze a Scenario Where a Type I Error Occurred in a Psychological Study</a></li>
-<li class="chapter" data-level="13.8.4" data-path="statistical-power.html"><a href="statistical-power.html#exercise-4-analyze-a-scenario-where-a-type-ii-error-occurred-in-a-psychological-study"><i class="fa fa-check"></i><b>13.8.4</b> Exercise 4: Analyze a Scenario Where a Type II Error Occurred in a Psychological Study</a></li>
-<li class="chapter" data-level="13.8.5" data-path="statistical-power.html"><a href="statistical-power.html#exercise-5-compare-the-impact-of-changing-the-sample-size-effect-size-and-significance-level-on-power-using-different-hypothetical-scenarios-in-r"><i class="fa fa-check"></i><b>13.8.5</b> Exercise 5: Compare the Impact of Changing the Sample Size, Effect Size, and Significance Level on Power Using Different Hypothetical Scenarios in R</a></li>
+<li class="chapter" data-level="12.7.1" data-path="interactions-in-regression-models.html"><a href="interactions-in-regression-models.html#exercise-1-categorical-x-categorical-interaction"><i class="fa fa-check"></i><b>12.7.1</b> Exercise 1: Categorical x Categorical Interaction</a></li>
+<li class="chapter" data-level="12.7.2" data-path="interactions-in-regression-models.html"><a href="interactions-in-regression-models.html#exercise-2-linear-x-linear-interaction"><i class="fa fa-check"></i><b>12.7.2</b> Exercise 2: Linear x Linear Interaction</a></li>
+<li class="chapter" data-level="12.7.3" data-path="interactions-in-regression-models.html"><a href="interactions-in-regression-models.html#exercise-3-categorical-x-linear-interaction"><i class="fa fa-check"></i><b>12.7.3</b> Exercise 3: Categorical x Linear Interaction</a></li>
+<li class="chapter" data-level="12.7.4" data-path="interactions-in-regression-models.html"><a href="interactions-in-regression-models.html#exercise-4-graphing-multivariate-interactions"><i class="fa fa-check"></i><b>12.7.4</b> Exercise 4: Graphing Multivariate Interactions</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html"><i class="fa fa-check"></i><b>14</b> Appendix: Answers to Chapter Exercises</a>
+<li class="chapter" data-level="13" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html"><i class="fa fa-check"></i><b>13</b> Goodness of Fit</a>
 <ul>
-<li class="chapter" data-level="14.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-1-exercises"><i class="fa fa-check"></i><b>14.1</b> Answers to Chapter 1 Exercises</a>
+<li class="chapter" data-level="13.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#what-is-goodness-of-fit"><i class="fa fa-check"></i><b>13.1</b> What is Goodness of Fit?</a>
 <ul>
-<li class="chapter" data-level="14.1.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-familiarization-with-r-studio-1"><i class="fa fa-check"></i><b>14.1.1</b> Exercise 1: Familiarization with R Studio</a></li>
-<li class="chapter" data-level="14.1.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-basic-data-entry-and-operation-1"><i class="fa fa-check"></i><b>14.1.2</b> Exercise 2: Basic Data Entry and Operation</a></li>
-<li class="chapter" data-level="14.1.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-introduction-to-r-markdown-1"><i class="fa fa-check"></i><b>14.1.3</b> Exercise 3: Introduction to R Markdown</a></li>
-<li class="chapter" data-level="14.1.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-exploring-the-help-pane-1"><i class="fa fa-check"></i><b>14.1.4</b> Exercise 4: Exploring the Help Pane</a></li>
+<li class="chapter" data-level="13.1.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#why-goodness-of-fit-matters"><i class="fa fa-check"></i><b>13.1.1</b> Why Goodness of Fit Matters</a></li>
 </ul></li>
-<li class="chapter" data-level="14.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-2-exercises"><i class="fa fa-check"></i><b>14.2</b> Answers to Chapter 2 Exercises</a>
+<li class="chapter" data-level="13.2" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#chi-square"><i class="fa fa-check"></i><b>13.2</b> Chi-Square</a>
 <ul>
-<li class="chapter" data-level="14.2.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-identifying-data-types-1"><i class="fa fa-check"></i><b>14.2.1</b> Exercise 1: Identifying Data Types</a></li>
-<li class="chapter" data-level="14.2.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-designing-a-study-1"><i class="fa fa-check"></i><b>14.2.2</b> Exercise 2: Designing a Study</a></li>
-<li class="chapter" data-level="14.2.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-evaluating-research-1"><i class="fa fa-check"></i><b>14.2.3</b> Exercise 3: Evaluating Research</a></li>
+<li class="chapter" data-level="13.2.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#understanding-the-chi-square-test"><i class="fa fa-check"></i><b>13.2.1</b> Understanding the Chi-Square Test</a></li>
+<li class="chapter" data-level="13.2.2" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#calculating-chi-square-in-r"><i class="fa fa-check"></i><b>13.2.2</b> Calculating Chi-Square in R</a></li>
+<li class="chapter" data-level="13.2.3" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#real-world-applications-3"><i class="fa fa-check"></i><b>13.2.3</b> Real-World Applications</a></li>
 </ul></li>
-<li class="chapter" data-level="14.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-3-exercises"><i class="fa fa-check"></i><b>14.3</b> Answers to Chapter 3 Exercises</a>
+<li class="chapter" data-level="13.3" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#r-squared"><i class="fa fa-check"></i><b>13.3</b> R-Squared</a>
 <ul>
-<li class="chapter" data-level="14.3.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-evaluating-reliability-1"><i class="fa fa-check"></i><b>14.3.1</b> Exercise 1: Evaluating Reliability</a></li>
-<li class="chapter" data-level="14.3.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-assessing-validity-1"><i class="fa fa-check"></i><b>14.3.2</b> Exercise 2: Assessing Validity</a></li>
-<li class="chapter" data-level="14.3.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-identifying-and-addressing-data-collection-errors-1"><i class="fa fa-check"></i><b>14.3.3</b> Exercise 3: Identifying and Addressing Data Collection Errors</a></li>
-<li class="chapter" data-level="14.3.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-triangulation-to-enhance-validity-1"><i class="fa fa-check"></i><b>14.3.4</b> Exercise 4: Triangulation to Enhance Validity</a></li>
-<li class="chapter" data-level="14.3.5" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-5-role-play-on-ethical-data-collection-1"><i class="fa fa-check"></i><b>14.3.5</b> Exercise 5: Role Play on Ethical Data Collection</a></li>
-<li class="chapter" data-level="14.3.6" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-6-real-world-application-1"><i class="fa fa-check"></i><b>14.3.6</b> Exercise 6: Real-World Application</a></li>
+<li class="chapter" data-level="13.3.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#what-is-r-squared"><i class="fa fa-check"></i><b>13.3.1</b> What is R-Squared?</a></li>
+<li class="chapter" data-level="13.3.2" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#calculating-r-squared-in-r"><i class="fa fa-check"></i><b>13.3.2</b> Calculating R-Squared in R</a></li>
+<li class="chapter" data-level="13.3.3" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#adjusted-r-squared"><i class="fa fa-check"></i><b>13.3.3</b> Adjusted R-Squared</a></li>
+<li class="chapter" data-level="13.3.4" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#real-world-applications-4"><i class="fa fa-check"></i><b>13.3.4</b> Real-World Applications</a></li>
 </ul></li>
-<li class="chapter" data-level="14.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-4-practice-exercises"><i class="fa fa-check"></i><b>14.4</b> Answers to Chapter 4 Practice Exercises</a>
+<li class="chapter" data-level="13.4" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#the-f-test-for-comparing-models"><i class="fa fa-check"></i><b>13.4</b> The F-Test for Comparing Models</a>
 <ul>
-<li class="chapter" data-level="14.4.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-calculating-descriptive-statistics-1"><i class="fa fa-check"></i><b>14.4.1</b> Exercise 1: Calculating Descriptive Statistics</a></li>
-<li class="chapter" data-level="14.4.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-understanding-the-normal-distribution-1"><i class="fa fa-check"></i><b>14.4.2</b> Exercise 2: Understanding the Normal Distribution</a></li>
-<li class="chapter" data-level="14.4.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-applying-the-t-distribution-1"><i class="fa fa-check"></i><b>14.4.3</b> Exercise 3: Applying the T-Distribution</a></li>
-<li class="chapter" data-level="14.4.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-defining-and-simulating-sample-spaces-1"><i class="fa fa-check"></i><b>14.4.4</b> Exercise 4: Defining and Simulating Sample Spaces</a></li>
+<li class="chapter" data-level="13.4.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#what-is-the-f-test"><i class="fa fa-check"></i><b>13.4.1</b> What is the F-Test?</a></li>
+<li class="chapter" data-level="13.4.2" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#performing-the-f-test-in-r"><i class="fa fa-check"></i><b>13.4.2</b> Performing the F-Test in R</a></li>
 </ul></li>
-<li class="chapter" data-level="14.5" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-5-practice-exercises"><i class="fa fa-check"></i><b>14.5</b> Answers to Chapter 5 Practice Exercises</a>
+<li class="chapter" data-level="13.5" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#understanding-the-f-distribution"><i class="fa fa-check"></i><b>13.5</b> Understanding the F-Distribution</a>
 <ul>
-<li class="chapter" data-level="14.5.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-importing-data-1"><i class="fa fa-check"></i><b>14.5.1</b> Exercise 1: Importing Data</a></li>
-<li class="chapter" data-level="14.5.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-cleaning-data-with-dplyr-1"><i class="fa fa-check"></i><b>14.5.2</b> Exercise 2: Cleaning Data with dplyr</a></li>
-<li class="chapter" data-level="14.5.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-generating-descriptive-statistics-with-psych-1"><i class="fa fa-check"></i><b>14.5.3</b> Exercise 3: Generating Descriptive Statistics with <code>psych</code></a></li>
-<li class="chapter" data-level="14.5.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-visualizing-data-with-psych-1"><i class="fa fa-check"></i><b>14.5.4</b> Exercise 4: Visualizing Data with psych</a></li>
+<li class="chapter" data-level="13.5.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#what-is-the-f-distribution"><i class="fa fa-check"></i><b>13.5.1</b> What is the F-Distribution?</a></li>
+<li class="chapter" data-level="13.5.2" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#visualizing-the-f-distribution-in-r"><i class="fa fa-check"></i><b>13.5.2</b> Visualizing the F-Distribution in R</a></li>
+<li class="chapter" data-level="13.5.3" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#real-world-applications-5"><i class="fa fa-check"></i><b>13.5.3</b> Real-World Applications</a></li>
 </ul></li>
-<li class="chapter" data-level="14.6" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-6-practice-exercises"><i class="fa fa-check"></i><b>14.6</b> Answers to Chapter 6 Practice Exercises</a>
+<li class="chapter" data-level="13.6" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#putting-it-all-together-assessing-model-fit-in-practice"><i class="fa fa-check"></i><b>13.6</b> Putting It All Together – Assessing Model Fit in Practice</a>
 <ul>
-<li class="chapter" data-level="14.6.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-mean-centering-1"><i class="fa fa-check"></i><b>14.6.1</b> Exercise 1: Mean-Centering</a></li>
-<li class="chapter" data-level="14.6.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-z-scores-1"><i class="fa fa-check"></i><b>14.6.2</b> Exercise 2: Z-Scores</a></li>
-<li class="chapter" data-level="14.6.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-combining-mean-centering-and-z-scores-1"><i class="fa fa-check"></i><b>14.6.3</b> Exercise 3: Combining Mean-Centering and Z-Scores</a></li>
-<li class="chapter" data-level="14.6.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-non-linear-transformations-1"><i class="fa fa-check"></i><b>14.6.4</b> Exercise 4: Non-Linear Transformations</a></li>
+<li class="chapter" data-level="13.6.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#comprehensive-example"><i class="fa fa-check"></i><b>13.6.1</b> Comprehensive Example</a></li>
+<li class="chapter" data-level="13.6.2" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#best-practices-for-assessing-goodness-of-fit"><i class="fa fa-check"></i><b>13.6.2</b> Best Practices for Assessing Goodness of Fit</a></li>
 </ul></li>
-<li class="chapter" data-level="14.7" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-7-practice-exercises"><i class="fa fa-check"></i><b>14.7</b> Answers to Chapter 7 Practice Exercises</a>
+<li class="chapter" data-level="13.7" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#chapter-summary-12"><i class="fa fa-check"></i><b>13.7</b> Chapter Summary</a></li>
+<li class="chapter" data-level="13.8" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#practice-exercises-11"><i class="fa fa-check"></i><b>13.8</b> Practice Exercises</a>
 <ul>
-<li class="chapter" data-level="14.7.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-create-an-apa-compliant-bar-graph-1"><i class="fa fa-check"></i><b>14.7.1</b> Exercise 1: Create an APA-Compliant Bar Graph</a></li>
-<li class="chapter" data-level="14.7.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-modify-a-basic-ggplot2-plot-to-meet-apa-standards-1"><i class="fa fa-check"></i><b>14.7.2</b> Exercise 2: Modify a Basic ggplot2 Plot to Meet APA Standards</a></li>
-<li class="chapter" data-level="14.7.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-create-an-apa-compliant-line-graph-and-save-it-as-a-high-resolution-image-1"><i class="fa fa-check"></i><b>14.7.3</b> Exercise 3: Create an APA-Compliant Line Graph and Save It as a High-Resolution Image</a></li>
+<li class="chapter" data-level="13.8.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#section-7-practice-exercises"><i class="fa fa-check"></i><b>13.8.1</b> Section 7: Practice Exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="14.8" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-8-practice-exercises"><i class="fa fa-check"></i><b>14.8</b> Answers to Chapter 8 Practice Exercises</a>
-<ul>
-<li class="chapter" data-level="14.8.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-standard-error-calculation-and-interpretation"><i class="fa fa-check"></i><b>14.8.1</b> Exercise 1: Standard Error Calculation and Interpretation</a></li>
-<li class="chapter" data-level="14.8.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-confidence-interval-calculation-and-interpretation"><i class="fa fa-check"></i><b>14.8.2</b> Exercise 2: Confidence Interval Calculation and Interpretation</a></li>
-<li class="chapter" data-level="14.8.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-independent-samples-t-test-interpretation"><i class="fa fa-check"></i><b>14.8.3</b> Exercise 3: Independent Samples t-Test Interpretation</a></li>
-<li class="chapter" data-level="14.8.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-paired-samples-t-test-interpretation"><i class="fa fa-check"></i><b>14.8.4</b> Exercise 4: Paired Samples t-Test Interpretation</a></li>
-<li class="chapter" data-level="14.8.5" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-5-significance-and-effect-size-interpretation"><i class="fa fa-check"></i><b>14.8.5</b> Exercise 5: Significance and Effect Size Interpretation</a></li>
 </ul></li>
-<li class="chapter" data-level="14.9" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-9-practice-exercises"><i class="fa fa-check"></i><b>14.9</b> Answers to Chapter 9 Practice Exercises</a>
+<li class="chapter" data-level="14" data-path="statistical-power.html"><a href="statistical-power.html"><i class="fa fa-check"></i><b>14</b> Statistical Power</a>
 <ul>
-<li class="chapter" data-level="14.9.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-pearson-correlation-coefficient-calculation-and-interpretation"><i class="fa fa-check"></i><b>14.9.1</b> Exercise 1: Pearson Correlation Coefficient Calculation and Interpretation</a></li>
-<li class="chapter" data-level="14.9.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-scatter-plot-with-trend-line"><i class="fa fa-check"></i><b>14.9.2</b> Exercise 2: Scatter Plot with Trend Line</a></li>
-<li class="chapter" data-level="14.9.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-analyzing-the-size-of-the-correlation"><i class="fa fa-check"></i><b>14.9.3</b> Exercise 3: Analyzing the Size of the Correlation</a></li>
-<li class="chapter" data-level="14.9.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-impact-of-a-third-variable-confounder-and-controlling-for-it"><i class="fa fa-check"></i><b>14.9.4</b> Exercise 4: Impact of a Third Variable (Confounder) and Controlling for It</a></li>
-<li class="chapter" data-level="14.9.5" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-5-evaluating-correlation-and-causality"><i class="fa fa-check"></i><b>14.9.5</b> Exercise 5: Evaluating Correlation and Causality</a></li>
+<li class="chapter" data-level="14.1" data-path="statistical-power.html"><a href="statistical-power.html#introduction-to-statistical-power"><i class="fa fa-check"></i><b>14.1</b> Introduction to Statistical Power</a>
+<ul>
+<li class="chapter" data-level="14.1.1" data-path="statistical-power.html"><a href="statistical-power.html#definition-of-statistical-power"><i class="fa fa-check"></i><b>14.1.1</b> Definition of Statistical Power</a></li>
+<li class="chapter" data-level="14.1.2" data-path="statistical-power.html"><a href="statistical-power.html#the-role-of-power-in-psychological-research"><i class="fa fa-check"></i><b>14.1.2</b> The Role of Power in Psychological Research</a></li>
 </ul></li>
-<li class="chapter" data-level="14.10" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-10-practice-exercises"><i class="fa fa-check"></i><b>14.10</b> Answers to Chapter 10 Practice Exercises</a>
+<li class="chapter" data-level="14.2" data-path="statistical-power.html"><a href="statistical-power.html#understanding-type-i-and-type-ii-errors"><i class="fa fa-check"></i><b>14.2</b> Understanding Type I and Type II Errors</a>
 <ul>
-<li class="chapter" data-level="14.10.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-create-a-simple-bivariate-linear-model-1"><i class="fa fa-check"></i><b>14.10.1</b> Exercise 1: Create a Simple Bivariate Linear Model</a></li>
-<li class="chapter" data-level="14.10.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-analyze-residuals-to-assess-model-fit-1"><i class="fa fa-check"></i><b>14.10.2</b> Exercise 2: Analyze Residuals to Assess Model Fit</a></li>
-<li class="chapter" data-level="14.10.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-apply-bivariate-linear-models-to-a-real-world-dataset-1"><i class="fa fa-check"></i><b>14.10.3</b> Exercise 3: Apply Bivariate Linear Models to a Real-World Dataset</a></li>
+<li class="chapter" data-level="14.2.1" data-path="statistical-power.html"><a href="statistical-power.html#type-i-error-false-positive"><i class="fa fa-check"></i><b>14.2.1</b> Type I Error (False Positive)</a></li>
+<li class="chapter" data-level="14.2.2" data-path="statistical-power.html"><a href="statistical-power.html#type-ii-error-false-negative"><i class="fa fa-check"></i><b>14.2.2</b> Type II Error (False Negative)</a></li>
+<li class="chapter" data-level="14.2.3" data-path="statistical-power.html"><a href="statistical-power.html#balancing-type-i-and-type-ii-errors"><i class="fa fa-check"></i><b>14.2.3</b> Balancing Type I and Type II Errors</a></li>
 </ul></li>
-<li class="chapter" data-level="14.11" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-15-practice-exercises"><i class="fa fa-check"></i><b>14.11</b> Answers to Chapter 15 Practice Exercises</a>
+<li class="chapter" data-level="14.3" data-path="statistical-power.html"><a href="statistical-power.html#factors-affecting-power"><i class="fa fa-check"></i><b>14.3</b> Factors Affecting Power</a>
 <ul>
-<li class="chapter" data-level="14.11.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-chi-square-goodness-of-fit-test-1"><i class="fa fa-check"></i><b>14.11.1</b> Exercise 1: Chi-Square Goodness of Fit Test</a></li>
-<li class="chapter" data-level="14.11.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-calculating-r-squared"><i class="fa fa-check"></i><b>14.11.2</b> Exercise 2: Calculating R-Squared</a></li>
-<li class="chapter" data-level="14.11.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-f-test-for-comparing-models"><i class="fa fa-check"></i><b>14.11.3</b> Exercise 3: F-Test for Comparing Models</a></li>
-<li class="chapter" data-level="14.11.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-visualizing-the-f-distribution"><i class="fa fa-check"></i><b>14.11.4</b> Exercise 4: Visualizing the F-Distribution</a></li>
-<li class="chapter" data-level="14.11.5" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-5-comprehensive-analysis-1"><i class="fa fa-check"></i><b>14.11.5</b> Exercise 5: Comprehensive Analysis</a></li>
+<li class="chapter" data-level="14.3.1" data-path="statistical-power.html"><a href="statistical-power.html#sample-size"><i class="fa fa-check"></i><b>14.3.1</b> Sample Size</a></li>
+<li class="chapter" data-level="14.3.2" data-path="statistical-power.html"><a href="statistical-power.html#effect-size"><i class="fa fa-check"></i><b>14.3.2</b> Effect Size</a></li>
+<li class="chapter" data-level="14.3.3" data-path="statistical-power.html"><a href="statistical-power.html#significance-level-alpha"><i class="fa fa-check"></i><b>14.3.3</b> Significance Level (Alpha)</a></li>
 </ul></li>
-<li class="chapter" data-level="14.12" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-16-practice-exercises"><i class="fa fa-check"></i><b>14.12</b> Answers to Chapter 16 Practice Exercises</a>
+<li class="chapter" data-level="14.4" data-path="statistical-power.html"><a href="statistical-power.html#calculating-power-in-r"><i class="fa fa-check"></i><b>14.4</b> Calculating Power in R</a>
 <ul>
-<li class="chapter" data-level="14.12.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-power-calculation-interpretation"><i class="fa fa-check"></i><b>14.12.1</b> Exercise 1: Power Calculation Interpretation</a></li>
-<li class="chapter" data-level="14.12.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-sample-size-calculation-interpretation"><i class="fa fa-check"></i><b>14.12.2</b> Exercise 2: Sample Size Calculation Interpretation</a></li>
-<li class="chapter" data-level="14.12.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-type-i-error-analysis-interpretation"><i class="fa fa-check"></i><b>14.12.3</b> Exercise 3: Type I Error Analysis Interpretation</a></li>
-<li class="chapter" data-level="14.12.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-type-ii-error-analysis-interpretation"><i class="fa fa-check"></i><b>14.12.4</b> Exercise 4: Type II Error Analysis Interpretation</a></li>
-<li class="chapter" data-level="14.12.5" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-5-power-comparison-interpretation"><i class="fa fa-check"></i><b>14.12.5</b> Exercise 5: Power Comparison Interpretation</a></li>
+<li class="chapter" data-level="14.4.1" data-path="statistical-power.html"><a href="statistical-power.html#introduction-to-power-analysis"><i class="fa fa-check"></i><b>14.4.1</b> Introduction to Power Analysis</a></li>
+<li class="chapter" data-level="14.4.2" data-path="statistical-power.html"><a href="statistical-power.html#step-by-step-guide-to-conducting-power-analysis-in-r"><i class="fa fa-check"></i><b>14.4.2</b> Step-by-Step Guide to Conducting Power Analysis in R</a></li>
+</ul></li>
+<li class="chapter" data-level="14.5" data-path="statistical-power.html"><a href="statistical-power.html#practical-considerations-and-challenges"><i class="fa fa-check"></i><b>14.5</b> Practical Considerations and Challenges</a>
+<ul>
+<li class="chapter" data-level="14.5.1" data-path="statistical-power.html"><a href="statistical-power.html#common-challenges-in-achieving-adequate-power"><i class="fa fa-check"></i><b>14.5.1</b> Common Challenges in Achieving Adequate Power</a></li>
+<li class="chapter" data-level="14.5.2" data-path="statistical-power.html"><a href="statistical-power.html#ethical-considerations-2"><i class="fa fa-check"></i><b>14.5.2</b> Ethical Considerations</a></li>
+</ul></li>
+<li class="chapter" data-level="14.6" data-path="statistical-power.html"><a href="statistical-power.html#real-world-applications-of-power-analysis-in-psychology"><i class="fa fa-check"></i><b>14.6</b> Real-World Applications of Power Analysis in Psychology</a>
+<ul>
+<li class="chapter" data-level="14.6.1" data-path="statistical-power.html"><a href="statistical-power.html#hypothetical-case-studies"><i class="fa fa-check"></i><b>14.6.1</b> Hypothetical Case Studies</a></li>
+<li class="chapter" data-level="14.6.2" data-path="statistical-power.html"><a href="statistical-power.html#best-practices-for-ensuring-adequate-power"><i class="fa fa-check"></i><b>14.6.2</b> Best Practices for Ensuring Adequate Power</a></li>
+</ul></li>
+<li class="chapter" data-level="14.7" data-path="statistical-power.html"><a href="statistical-power.html#chapter-summary-13"><i class="fa fa-check"></i><b>14.7</b> Chapter Summary</a>
+<ul>
+<li class="chapter" data-level="14.7.1" data-path="statistical-power.html"><a href="statistical-power.html#recap-of-key-concepts-4"><i class="fa fa-check"></i><b>14.7.1</b> Recap of Key Concepts</a></li>
+<li class="chapter" data-level="14.7.2" data-path="statistical-power.html"><a href="statistical-power.html#final-thoughts-4"><i class="fa fa-check"></i><b>14.7.2</b> Final Thoughts</a></li>
+</ul></li>
+<li class="chapter" data-level="14.8" data-path="statistical-power.html"><a href="statistical-power.html#practice-exercises-12"><i class="fa fa-check"></i><b>14.8</b> Practice Exercises</a>
+<ul>
+<li class="chapter" data-level="14.8.1" data-path="statistical-power.html"><a href="statistical-power.html#exercise-1-calculate-the-statistical-power-of-a-study-using-a-given-dataset-and-interpret-the-results"><i class="fa fa-check"></i><b>14.8.1</b> Exercise 1: Calculate the Statistical Power of a Study Using a Given Dataset and Interpret the Results</a></li>
+<li class="chapter" data-level="14.8.2" data-path="statistical-power.html"><a href="statistical-power.html#exercise-2-conduct-a-power-analysis-in-r-to-determine-the-required-sample-size-for-a-psychological-experiment-with-a-specified-effect-size-and-significance-level"><i class="fa fa-check"></i><b>14.8.2</b> Exercise 2: Conduct a Power Analysis in R to Determine the Required Sample Size for a Psychological Experiment with a Specified Effect Size and Significance Level</a></li>
+<li class="chapter" data-level="14.8.3" data-path="statistical-power.html"><a href="statistical-power.html#exercise-3-analyze-a-scenario-where-a-type-i-error-occurred-in-a-psychological-study"><i class="fa fa-check"></i><b>14.8.3</b> Exercise 3: Analyze a Scenario Where a Type I Error Occurred in a Psychological Study</a></li>
+<li class="chapter" data-level="14.8.4" data-path="statistical-power.html"><a href="statistical-power.html#exercise-4-analyze-a-scenario-where-a-type-ii-error-occurred-in-a-psychological-study"><i class="fa fa-check"></i><b>14.8.4</b> Exercise 4: Analyze a Scenario Where a Type II Error Occurred in a Psychological Study</a></li>
+<li class="chapter" data-level="14.8.5" data-path="statistical-power.html"><a href="statistical-power.html#exercise-5-compare-the-impact-of-changing-the-sample-size-effect-size-and-significance-level-on-power-using-different-hypothetical-scenarios-in-r"><i class="fa fa-check"></i><b>14.8.5</b> Exercise 5: Compare the Impact of Changing the Sample Size, Effect Size, and Significance Level on Power Using Different Hypothetical Scenarios in R</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html"><i class="fa fa-check"></i><b>15</b> Appendix: Answers to Chapter Exercises</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-1-exercises"><i class="fa fa-check"></i><b>15.1</b> Answers to Chapter 1 Exercises</a>
+<ul>
+<li class="chapter" data-level="15.1.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-familiarization-with-r-studio-1"><i class="fa fa-check"></i><b>15.1.1</b> Exercise 1: Familiarization with R Studio</a></li>
+<li class="chapter" data-level="15.1.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-basic-data-entry-and-operation-1"><i class="fa fa-check"></i><b>15.1.2</b> Exercise 2: Basic Data Entry and Operation</a></li>
+<li class="chapter" data-level="15.1.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-introduction-to-r-markdown-1"><i class="fa fa-check"></i><b>15.1.3</b> Exercise 3: Introduction to R Markdown</a></li>
+<li class="chapter" data-level="15.1.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-exploring-the-help-pane-1"><i class="fa fa-check"></i><b>15.1.4</b> Exercise 4: Exploring the Help Pane</a></li>
+</ul></li>
+<li class="chapter" data-level="15.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-2-exercises"><i class="fa fa-check"></i><b>15.2</b> Answers to Chapter 2 Exercises</a>
+<ul>
+<li class="chapter" data-level="15.2.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-identifying-data-types-1"><i class="fa fa-check"></i><b>15.2.1</b> Exercise 1: Identifying Data Types</a></li>
+<li class="chapter" data-level="15.2.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-designing-a-study-1"><i class="fa fa-check"></i><b>15.2.2</b> Exercise 2: Designing a Study</a></li>
+<li class="chapter" data-level="15.2.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-evaluating-research-1"><i class="fa fa-check"></i><b>15.2.3</b> Exercise 3: Evaluating Research</a></li>
+</ul></li>
+<li class="chapter" data-level="15.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-3-exercises"><i class="fa fa-check"></i><b>15.3</b> Answers to Chapter 3 Exercises</a>
+<ul>
+<li class="chapter" data-level="15.3.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-evaluating-reliability-1"><i class="fa fa-check"></i><b>15.3.1</b> Exercise 1: Evaluating Reliability</a></li>
+<li class="chapter" data-level="15.3.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-assessing-validity-1"><i class="fa fa-check"></i><b>15.3.2</b> Exercise 2: Assessing Validity</a></li>
+<li class="chapter" data-level="15.3.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-identifying-and-addressing-data-collection-errors-1"><i class="fa fa-check"></i><b>15.3.3</b> Exercise 3: Identifying and Addressing Data Collection Errors</a></li>
+<li class="chapter" data-level="15.3.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-triangulation-to-enhance-validity-1"><i class="fa fa-check"></i><b>15.3.4</b> Exercise 4: Triangulation to Enhance Validity</a></li>
+<li class="chapter" data-level="15.3.5" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-5-role-play-on-ethical-data-collection-1"><i class="fa fa-check"></i><b>15.3.5</b> Exercise 5: Role Play on Ethical Data Collection</a></li>
+<li class="chapter" data-level="15.3.6" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-6-real-world-application-1"><i class="fa fa-check"></i><b>15.3.6</b> Exercise 6: Real-World Application</a></li>
+</ul></li>
+<li class="chapter" data-level="15.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-4-practice-exercises"><i class="fa fa-check"></i><b>15.4</b> Answers to Chapter 4 Practice Exercises</a>
+<ul>
+<li class="chapter" data-level="15.4.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-calculating-descriptive-statistics-1"><i class="fa fa-check"></i><b>15.4.1</b> Exercise 1: Calculating Descriptive Statistics</a></li>
+<li class="chapter" data-level="15.4.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-understanding-the-normal-distribution-1"><i class="fa fa-check"></i><b>15.4.2</b> Exercise 2: Understanding the Normal Distribution</a></li>
+<li class="chapter" data-level="15.4.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-applying-the-t-distribution-1"><i class="fa fa-check"></i><b>15.4.3</b> Exercise 3: Applying the T-Distribution</a></li>
+<li class="chapter" data-level="15.4.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-defining-and-simulating-sample-spaces-1"><i class="fa fa-check"></i><b>15.4.4</b> Exercise 4: Defining and Simulating Sample Spaces</a></li>
+</ul></li>
+<li class="chapter" data-level="15.5" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-5-practice-exercises"><i class="fa fa-check"></i><b>15.5</b> Answers to Chapter 5 Practice Exercises</a>
+<ul>
+<li class="chapter" data-level="15.5.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-importing-data-1"><i class="fa fa-check"></i><b>15.5.1</b> Exercise 1: Importing Data</a></li>
+<li class="chapter" data-level="15.5.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-cleaning-data-with-dplyr-1"><i class="fa fa-check"></i><b>15.5.2</b> Exercise 2: Cleaning Data with dplyr</a></li>
+<li class="chapter" data-level="15.5.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-generating-descriptive-statistics-with-psych-1"><i class="fa fa-check"></i><b>15.5.3</b> Exercise 3: Generating Descriptive Statistics with <code>psych</code></a></li>
+<li class="chapter" data-level="15.5.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-visualizing-data-with-psych-1"><i class="fa fa-check"></i><b>15.5.4</b> Exercise 4: Visualizing Data with psych</a></li>
+</ul></li>
+<li class="chapter" data-level="15.6" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-6-practice-exercises"><i class="fa fa-check"></i><b>15.6</b> Answers to Chapter 6 Practice Exercises</a>
+<ul>
+<li class="chapter" data-level="15.6.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-mean-centering-1"><i class="fa fa-check"></i><b>15.6.1</b> Exercise 1: Mean-Centering</a></li>
+<li class="chapter" data-level="15.6.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-z-scores-1"><i class="fa fa-check"></i><b>15.6.2</b> Exercise 2: Z-Scores</a></li>
+<li class="chapter" data-level="15.6.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-combining-mean-centering-and-z-scores-1"><i class="fa fa-check"></i><b>15.6.3</b> Exercise 3: Combining Mean-Centering and Z-Scores</a></li>
+<li class="chapter" data-level="15.6.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-non-linear-transformations-1"><i class="fa fa-check"></i><b>15.6.4</b> Exercise 4: Non-Linear Transformations</a></li>
+</ul></li>
+<li class="chapter" data-level="15.7" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-7-practice-exercises"><i class="fa fa-check"></i><b>15.7</b> Answers to Chapter 7 Practice Exercises</a>
+<ul>
+<li class="chapter" data-level="15.7.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-create-an-apa-compliant-bar-graph-1"><i class="fa fa-check"></i><b>15.7.1</b> Exercise 1: Create an APA-Compliant Bar Graph</a></li>
+<li class="chapter" data-level="15.7.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-modify-a-basic-ggplot2-plot-to-meet-apa-standards-1"><i class="fa fa-check"></i><b>15.7.2</b> Exercise 2: Modify a Basic ggplot2 Plot to Meet APA Standards</a></li>
+<li class="chapter" data-level="15.7.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-create-an-apa-compliant-line-graph-and-save-it-as-a-high-resolution-image-1"><i class="fa fa-check"></i><b>15.7.3</b> Exercise 3: Create an APA-Compliant Line Graph and Save It as a High-Resolution Image</a></li>
+</ul></li>
+<li class="chapter" data-level="15.8" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-8-practice-exercises"><i class="fa fa-check"></i><b>15.8</b> Answers to Chapter 8 Practice Exercises</a>
+<ul>
+<li class="chapter" data-level="15.8.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-standard-error-calculation-and-interpretation"><i class="fa fa-check"></i><b>15.8.1</b> Exercise 1: Standard Error Calculation and Interpretation</a></li>
+<li class="chapter" data-level="15.8.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-confidence-interval-calculation-and-interpretation"><i class="fa fa-check"></i><b>15.8.2</b> Exercise 2: Confidence Interval Calculation and Interpretation</a></li>
+<li class="chapter" data-level="15.8.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-independent-samples-t-test-interpretation"><i class="fa fa-check"></i><b>15.8.3</b> Exercise 3: Independent Samples t-Test Interpretation</a></li>
+<li class="chapter" data-level="15.8.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-paired-samples-t-test-interpretation"><i class="fa fa-check"></i><b>15.8.4</b> Exercise 4: Paired Samples t-Test Interpretation</a></li>
+<li class="chapter" data-level="15.8.5" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-5-significance-and-effect-size-interpretation"><i class="fa fa-check"></i><b>15.8.5</b> Exercise 5: Significance and Effect Size Interpretation</a></li>
+</ul></li>
+<li class="chapter" data-level="15.9" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-9-practice-exercises"><i class="fa fa-check"></i><b>15.9</b> Answers to Chapter 9 Practice Exercises</a>
+<ul>
+<li class="chapter" data-level="15.9.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-pearson-correlation-coefficient-calculation-and-interpretation"><i class="fa fa-check"></i><b>15.9.1</b> Exercise 1: Pearson Correlation Coefficient Calculation and Interpretation</a></li>
+<li class="chapter" data-level="15.9.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-scatter-plot-with-trend-line"><i class="fa fa-check"></i><b>15.9.2</b> Exercise 2: Scatter Plot with Trend Line</a></li>
+<li class="chapter" data-level="15.9.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-analyzing-the-size-of-the-correlation"><i class="fa fa-check"></i><b>15.9.3</b> Exercise 3: Analyzing the Size of the Correlation</a></li>
+<li class="chapter" data-level="15.9.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-impact-of-a-third-variable-confounder-and-controlling-for-it"><i class="fa fa-check"></i><b>15.9.4</b> Exercise 4: Impact of a Third Variable (Confounder) and Controlling for It</a></li>
+<li class="chapter" data-level="15.9.5" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-5-evaluating-correlation-and-causality"><i class="fa fa-check"></i><b>15.9.5</b> Exercise 5: Evaluating Correlation and Causality</a></li>
+</ul></li>
+<li class="chapter" data-level="15.10" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-10-practice-exercises"><i class="fa fa-check"></i><b>15.10</b> Answers to Chapter 10 Practice Exercises</a>
+<ul>
+<li class="chapter" data-level="15.10.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-create-a-simple-bivariate-linear-model-1"><i class="fa fa-check"></i><b>15.10.1</b> Exercise 1: Create a Simple Bivariate Linear Model</a></li>
+<li class="chapter" data-level="15.10.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-analyze-residuals-to-assess-model-fit-1"><i class="fa fa-check"></i><b>15.10.2</b> Exercise 2: Analyze Residuals to Assess Model Fit</a></li>
+<li class="chapter" data-level="15.10.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-apply-bivariate-linear-models-to-a-real-world-dataset-1"><i class="fa fa-check"></i><b>15.10.3</b> Exercise 3: Apply Bivariate Linear Models to a Real-World Dataset</a></li>
+</ul></li>
+<li class="chapter" data-level="15.11" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-11-practice-exercises"><i class="fa fa-check"></i><b>15.11</b> Answers to Chapter 11 Practice Exercises</a>
+<ul>
+<li class="chapter" data-level="15.11.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1"><i class="fa fa-check"></i><b>15.11.1</b> Exercise 1:</a></li>
+<li class="chapter" data-level="15.11.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2"><i class="fa fa-check"></i><b>15.11.2</b> Exercise 2:</a></li>
+<li class="chapter" data-level="15.11.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3"><i class="fa fa-check"></i><b>15.11.3</b> Exercise 3:</a></li>
+<li class="chapter" data-level="15.11.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4"><i class="fa fa-check"></i><b>15.11.4</b> Exercise 4:</a></li>
+</ul></li>
+<li class="chapter" data-level="15.12" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-12-practice-exercises"><i class="fa fa-check"></i><b>15.12</b> Answers to Chapter 12 Practice Exercises</a>
+<ul>
+<li class="chapter" data-level="15.12.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-categorical-x-categorical-interaction-1"><i class="fa fa-check"></i><b>15.12.1</b> Exercise 1: Categorical x Categorical Interaction</a></li>
+<li class="chapter" data-level="15.12.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-linear-x-linear-interaction-1"><i class="fa fa-check"></i><b>15.12.2</b> Exercise 2: Linear x Linear Interaction</a></li>
+<li class="chapter" data-level="15.12.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-categorical-x-linear-interaction-1"><i class="fa fa-check"></i><b>15.12.3</b> Exercise 3: Categorical x Linear Interaction</a></li>
+<li class="chapter" data-level="15.12.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-graphing-multivariate-interactions-1"><i class="fa fa-check"></i><b>15.12.4</b> Exercise 4: Graphing Multivariate Interactions</a></li>
+</ul></li>
+<li class="chapter" data-level="15.13" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-15-practice-exercises"><i class="fa fa-check"></i><b>15.13</b> Answers to Chapter 15 Practice Exercises</a>
+<ul>
+<li class="chapter" data-level="15.13.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-chi-square-goodness-of-fit-test-1"><i class="fa fa-check"></i><b>15.13.1</b> Exercise 1: Chi-Square Goodness of Fit Test</a></li>
+<li class="chapter" data-level="15.13.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-calculating-r-squared"><i class="fa fa-check"></i><b>15.13.2</b> Exercise 2: Calculating R-Squared</a></li>
+<li class="chapter" data-level="15.13.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-f-test-for-comparing-models"><i class="fa fa-check"></i><b>15.13.3</b> Exercise 3: F-Test for Comparing Models</a></li>
+<li class="chapter" data-level="15.13.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-visualizing-the-f-distribution"><i class="fa fa-check"></i><b>15.13.4</b> Exercise 4: Visualizing the F-Distribution</a></li>
+<li class="chapter" data-level="15.13.5" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-5-comprehensive-analysis-1"><i class="fa fa-check"></i><b>15.13.5</b> Exercise 5: Comprehensive Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="15.14" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-16-practice-exercises"><i class="fa fa-check"></i><b>15.14</b> Answers to Chapter 16 Practice Exercises</a>
+<ul>
+<li class="chapter" data-level="15.14.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-power-calculation-interpretation"><i class="fa fa-check"></i><b>15.14.1</b> Exercise 1: Power Calculation Interpretation</a></li>
+<li class="chapter" data-level="15.14.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-sample-size-calculation-interpretation"><i class="fa fa-check"></i><b>15.14.2</b> Exercise 2: Sample Size Calculation Interpretation</a></li>
+<li class="chapter" data-level="15.14.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-type-i-error-analysis-interpretation"><i class="fa fa-check"></i><b>15.14.3</b> Exercise 3: Type I Error Analysis Interpretation</a></li>
+<li class="chapter" data-level="15.14.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-type-ii-error-analysis-interpretation"><i class="fa fa-check"></i><b>15.14.4</b> Exercise 4: Type II Error Analysis Interpretation</a></li>
+<li class="chapter" data-level="15.14.5" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-5-power-comparison-interpretation"><i class="fa fa-check"></i><b>15.14.5</b> Exercise 5: Power Comparison Interpretation</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -1063,11 +1170,8 @@ Social_Support      -2.00      0.70  -2.86   0.0089 **</code></pre></li>
 <span id="cb225-10"><a href="multiple-regression.html#cb225-10" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb225-11"><a href="multiple-regression.html#cb225-11" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">color =</span> <span class="st">&quot;blue&quot;</span>) <span class="sc">+</span></span>
 <span id="cb225-12"><a href="multiple-regression.html#cb225-12" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Relationship between Sleep Quality and Academic Performance&quot;</span>, <span class="at">x =</span> <span class="st">&quot;Sleep Quality&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Academic Performance&quot;</span>)</span></code></pre></div>
-<pre><code>## `geom_smooth()` using formula
-## = &#39;y ~ x&#39;</code></pre>
-<p><img src="psych-stats-book_files/figure-html/unnamed-chunk-133-1.png" width="672" /></p>
-<div class="sourceCode" id="cb227"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb227-1"><a href="multiple-regression.html#cb227-1" tabindex="-1"></a><span class="co"># Visualize the relationship between Sleep Quality and Academic Performance, controlling for Stress Levels</span></span>
-<span id="cb227-2"><a href="multiple-regression.html#cb227-2" tabindex="-1"></a><span class="co"># Use partial residuals or similar techniques</span></span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
+<p><img src="psych-stats-book_files/figure-html/unnamed-chunk-134-1.png" width="672" /></p>
 <p>This kind of plot can help you see how the relationship changes when you control for the suppressor variable (in this case, stress levels).</p>
 </div>
 <div id="practical-implications-of-suppression" class="section level3 hasAnchor" number="11.4.3">
@@ -1080,6 +1184,297 @@ Social_Support      -2.00      0.70  -2.86   0.0089 **</code></pre></li>
 </ol>
 <p><strong>Example</strong>: Suppose a researcher finds that adding a variable for social support increases the predictive power of a model examining the relationship between exercise frequency and depression. This suggests that social support was a suppressor, and by including it, the researcher can now see the true impact of exercise on depression. Recognizing this effect might lead to new insights and potentially more effective interventions.</p>
 <p>In summary, suppression is a valuable concept in multiple regression that helps researchers uncover hidden relationships and improve the accuracy of their models. By understanding and identifying suppression effects, you can gain deeper insights into the complex interactions between variables in psychological research.</p>
+</div>
+</div>
+<div id="visualizing-multiple-regression-results" class="section level2 hasAnchor" number="11.5">
+<h2><span class="header-section-number">11.5</span> Visualizing Multiple Regression Results<a href="multiple-regression.html#visualizing-multiple-regression-results" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Visualizing the results of a multiple regression analysis can help you better understand the relationships between the predictors and the outcome variable. In this section, we’ll explore how to create and interpret these visualizations using R and ggplot2, with a focus on ensuring the graphs are APA-compliant.</p>
+<div id="creating-plots-for-multiple-regression-in-r" class="section level3 hasAnchor" number="11.5.1">
+<h3><span class="header-section-number">11.5.1</span> Creating Plots for Multiple Regression in R<a href="multiple-regression.html#creating-plots-for-multiple-regression-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Introduction to Plotting Multiple Regression Results</strong></p>
+<p>Visualizing your multiple regression results allows you to see how each predictor relates to the outcome variable while controlling for the other predictors. There are various types of plots you can create to help you understand these relationships, such as scatter plots with regression lines and partial regression plots.</p>
+<p><strong>Example: Visualizing the Relationship Between Predictors and the Dependent Variable</strong></p>
+<p>Let’s say you’ve conducted a multiple regression analysis to predict academic performance based on three predictors: stress levels, sleep quality, and exercise frequency. You can create a scatter plot with a regression line to visualize the relationship between each predictor and academic performance while controlling for the other predictors.</p>
+<p>Here’s how to do it in R using ggplot2:</p>
+<div class="sourceCode" id="cb227"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb227-1"><a href="multiple-regression.html#cb227-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb227-2"><a href="multiple-regression.html#cb227-2" tabindex="-1"></a></span>
+<span id="cb227-3"><a href="multiple-regression.html#cb227-3" tabindex="-1"></a><span class="co"># Sample data</span></span>
+<span id="cb227-4"><a href="multiple-regression.html#cb227-4" tabindex="-1"></a>Stress_Levels <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>, <span class="dv">7</span>, <span class="dv">6</span>)</span>
+<span id="cb227-5"><a href="multiple-regression.html#cb227-5" tabindex="-1"></a>Sleep_Quality <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">8</span>, <span class="dv">7</span>, <span class="dv">6</span>, <span class="dv">9</span>, <span class="dv">8</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">6</span>, <span class="dv">7</span>)</span>
+<span id="cb227-6"><a href="multiple-regression.html#cb227-6" tabindex="-1"></a>Exercise_Frequency <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">5</span>, <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">4</span>)</span>
+<span id="cb227-7"><a href="multiple-regression.html#cb227-7" tabindex="-1"></a>Academic_Performance <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">75</span>, <span class="dv">70</span>, <span class="dv">68</span>, <span class="dv">80</span>, <span class="dv">77</span>, <span class="dv">60</span>, <span class="dv">58</span>, <span class="dv">55</span>, <span class="dv">65</span>, <span class="dv">70</span>)</span>
+<span id="cb227-8"><a href="multiple-regression.html#cb227-8" tabindex="-1"></a></span>
+<span id="cb227-9"><a href="multiple-regression.html#cb227-9" tabindex="-1"></a><span class="co"># Create a data frame</span></span>
+<span id="cb227-10"><a href="multiple-regression.html#cb227-10" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(Stress_Levels, Sleep_Quality, Exercise_Frequency, Academic_Performance)</span>
+<span id="cb227-11"><a href="multiple-regression.html#cb227-11" tabindex="-1"></a></span>
+<span id="cb227-12"><a href="multiple-regression.html#cb227-12" tabindex="-1"></a><span class="co"># Fit the multiple regression model</span></span>
+<span id="cb227-13"><a href="multiple-regression.html#cb227-13" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(Academic_Performance <span class="sc">~</span> Stress_Levels <span class="sc">+</span> Sleep_Quality <span class="sc">+</span> Exercise_Frequency, <span class="at">data =</span> data)</span>
+<span id="cb227-14"><a href="multiple-regression.html#cb227-14" tabindex="-1"></a></span>
+<span id="cb227-15"><a href="multiple-regression.html#cb227-15" tabindex="-1"></a><span class="co"># Partial regression plot for Stress Levels (controlling for Sleep Quality and Exercise Frequency)</span></span>
+<span id="cb227-16"><a href="multiple-regression.html#cb227-16" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> Stress_Levels, <span class="at">y =</span> <span class="fu">resid</span>(<span class="fu">lm</span>(Academic_Performance <span class="sc">~</span> Sleep_Quality <span class="sc">+</span> Exercise_Frequency, <span class="at">data =</span> data)))) <span class="sc">+</span></span>
+<span id="cb227-17"><a href="multiple-regression.html#cb227-17" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb227-18"><a href="multiple-regression.html#cb227-18" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb227-19"><a href="multiple-regression.html#cb227-19" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Partial Regression Plot: Stress Levels and Academic Performance&quot;</span>,</span>
+<span id="cb227-20"><a href="multiple-regression.html#cb227-20" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Stress Levels&quot;</span>,</span>
+<span id="cb227-21"><a href="multiple-regression.html#cb227-21" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Residuals (Academic Performance)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb227-22"><a href="multiple-regression.html#cb227-22" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb227-23"><a href="multiple-regression.html#cb227-23" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb227-24"><a href="multiple-regression.html#cb227-24" tabindex="-1"></a>    <span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">12</span>),</span>
+<span id="cb227-25"><a href="multiple-regression.html#cb227-25" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">14</span>, <span class="at">face =</span> <span class="st">&quot;bold&quot;</span>),</span>
+<span id="cb227-26"><a href="multiple-regression.html#cb227-26" tabindex="-1"></a>    <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">12</span>),</span>
+<span id="cb227-27"><a href="multiple-regression.html#cb227-27" tabindex="-1"></a>    <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">10</span>),</span>
+<span id="cb227-28"><a href="multiple-regression.html#cb227-28" tabindex="-1"></a>    <span class="at">panel.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">&quot;white&quot;</span>, <span class="at">color =</span> <span class="st">&quot;black&quot;</span>),  <span class="co"># Ensure the background is visible</span></span>
+<span id="cb227-29"><a href="multiple-regression.html#cb227-29" tabindex="-1"></a>    <span class="at">panel.grid =</span> <span class="fu">element_blank</span>(),  <span class="co"># Remove grid lines for clarity</span></span>
+<span id="cb227-30"><a href="multiple-regression.html#cb227-30" tabindex="-1"></a>    <span class="at">panel.border =</span> <span class="fu">element_rect</span>(<span class="at">color =</span> <span class="st">&quot;black&quot;</span>, <span class="at">fill =</span> <span class="cn">NA</span>)  <span class="co"># Define the panel border</span></span>
+<span id="cb227-31"><a href="multiple-regression.html#cb227-31" tabindex="-1"></a>  )</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
+<p><img src="psych-stats-book_files/figure-html/unnamed-chunk-135-1.png" width="672" /></p>
+<p><strong>Explanation</strong>:</p>
+<p>- <strong>Partial Regression Plot</strong>: This plot shows the relationship between stress levels and academic performance after controlling for the effects of sleep quality and exercise frequency. The x-axis represents stress levels, and the y-axis represents the residuals of academic performance after accounting for the other predictors.</p>
+<ul>
+<li><strong>APA Compliance</strong>: The plot is formatted according to APA guidelines, with minimal grid lines, clear and readable text, and a centered title. The axis labels are descriptive, and the plot is free of unnecessary elements.</li>
+</ul>
+</div>
+<div id="interpreting-multiple-regression-plots" class="section level3 hasAnchor" number="11.5.2">
+<h3><span class="header-section-number">11.5.2</span> Interpreting Multiple Regression Plots<a href="multiple-regression.html#interpreting-multiple-regression-plots" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Interpreting the Plots Generated from Multiple Regression Analyses</strong></p>
+<p>Once you’ve created the plots, the next step is to interpret what they show. The visualizations help you see how each predictor relates to the outcome variable while considering the influence of other predictors.</p>
+<p><strong>Example: Visualizing the Relationship Between Stress Levels and Academic Performance</strong></p>
+<p>In the example above, the partial regression plot for stress levels shows how academic performance is related to stress levels, after accounting for sleep quality and exercise frequency. Here’s how you might interpret the plot:</p>
+<ul>
+<li><p><strong>Trend Line</strong>: The slope of the trend line in the partial regression plot indicates the direction and strength of the relationship between stress levels and academic performance. If the trend line slopes downward, it suggests that higher stress levels are associated with lower academic performance, even when controlling for sleep quality and exercise frequency.</p></li>
+<li><p><strong>Spread of Points</strong>: The spread of points around the trend line gives you an idea of how well stress levels predict academic performance. If the points are tightly clustered around the line, it suggests a strong relationship. If they’re more spread out, the relationship might be weaker.</p></li>
+<li><p><strong>Residuals</strong>: The y-axis in a partial regression plot represents the residuals, or the part of academic performance that isn’t explained by the other predictors (sleep quality and exercise frequency). A strong trend in these residuals indicates that stress levels are an important predictor of academic performance.</p></li>
+</ul>
+<p><strong>Practical Significance</strong>: Visualizing multiple regression results can provide insights into the practical significance of your findings. For example, if the plot shows that stress levels have a strong negative relationship with academic performance, this might suggest that interventions aimed at reducing stress could have a meaningful impact on students’ academic success.</p>
+<p><strong>Additional Considerations</strong>:</p>
+<p>- <strong>Checking for Outliers</strong>: Visualizations can help you spot outliers or unusual data points that might affect your model’s accuracy.</p>
+<p>- <strong>Assessing Model Fit</strong>: By looking at how well the trend line fits the data, you can assess whether your model provides a good fit for the data.</p>
+<p>By creating and interpreting APA-compliant visualizations, you can effectively communicate the results of your multiple regression analyses, making it easier to understand complex relationships between variables. This process is crucial in psychological research, where clear and accurate visualizations can greatly enhance the interpretation and presentation of data.</p>
+</div>
+</div>
+<div id="including-and-interpreting-categorical-variables-in-multiple-regression" class="section level2 hasAnchor" number="11.6">
+<h2><span class="header-section-number">11.6</span> Including and Interpreting Categorical Variables in Multiple Regression<a href="multiple-regression.html#including-and-interpreting-categorical-variables-in-multiple-regression" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>When conducting a multiple regression analysis, you might encounter categorical variables—variables that represent categories or groups, such as gender (male vs. female) or treatment group (control vs. experimental). Including these variables in your regression model requires special handling, as they are not continuous variables like age or income. This section will guide you through the process of including categorical variables in a multiple regression, interpreting their effects, and understanding the best practices for coding these variables in R.</p>
+<div id="importance-of-reference-levels-in-categorical-variables" class="section level3 hasAnchor" number="11.6.1">
+<h3><span class="header-section-number">11.6.1</span> Importance of Reference Levels in Categorical Variables<a href="multiple-regression.html#importance-of-reference-levels-in-categorical-variables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Reference Levels</strong>: When you include a categorical variable in a multiple regression model, R automatically converts it into a set of binary (dummy) variables. One category is used as the reference level, against which the other categories are compared. The reference level is crucial because it determines how the other categories are interpreted in the model.</p>
+<p><strong>Default Reference Level</strong>: By default, R chooses the reference level alphabetically. For example, if you have a variable <code>Gender</code> with levels “Female” and “Male”, R will automatically use “Female” as the reference level because “Female” comes before “Male” alphabetically.</p>
+<p><strong>Changing the Reference Level</strong>: You can change the reference level if you want to compare against a different category. For instance, if you prefer “Male” to be the reference level, you can set it explicitly in R.</p>
+<p><strong>Example</strong>:</p>
+<div class="sourceCode" id="cb229"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb229-1"><a href="multiple-regression.html#cb229-1" tabindex="-1"></a><span class="co"># Sample data</span></span>
+<span id="cb229-2"><a href="multiple-regression.html#cb229-2" tabindex="-1"></a>Gender <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">&quot;Male&quot;</span>, <span class="st">&quot;Female&quot;</span>, <span class="st">&quot;Male&quot;</span>, <span class="st">&quot;Female&quot;</span>, <span class="st">&quot;Male&quot;</span>, <span class="st">&quot;Female&quot;</span>, <span class="st">&quot;Male&quot;</span>, <span class="st">&quot;Female&quot;</span>, <span class="st">&quot;Male&quot;</span>, <span class="st">&quot;Female&quot;</span>))</span>
+<span id="cb229-3"><a href="multiple-regression.html#cb229-3" tabindex="-1"></a></span>
+<span id="cb229-4"><a href="multiple-regression.html#cb229-4" tabindex="-1"></a><span class="co"># Set &quot;Male&quot; as the reference level</span></span>
+<span id="cb229-5"><a href="multiple-regression.html#cb229-5" tabindex="-1"></a>Gender <span class="ot">&lt;-</span> <span class="fu">relevel</span>(Gender, <span class="at">ref =</span> <span class="st">&quot;Male&quot;</span>)</span></code></pre></div>
+<p>In this example, “Male” is now the reference level, meaning that the model will compare “Female” against “Male”.</p>
+</div>
+<div id="interpreting-categorical-variables-in-multiple-regression" class="section level3 hasAnchor" number="11.6.2">
+<h3><span class="header-section-number">11.6.2</span> Interpreting Categorical Variables in Multiple Regression<a href="multiple-regression.html#interpreting-categorical-variables-in-multiple-regression" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>When you include a categorical variable in your regression model, the coefficients for the non-reference levels tell you how much the dependent variable changes relative to the reference level.</p>
+<p><strong>Example</strong>: Suppose you’re predicting academic performance based on <code>Gender</code> (Male vs. Female) and <code>Sleep_Quality</code>. If “Male” is the reference level, the coefficient for “Female” would represent the difference in academic performance between females and males, holding sleep quality constant.</p>
+<p><strong>R Code Example</strong>:</p>
+<div class="sourceCode" id="cb230"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb230-1"><a href="multiple-regression.html#cb230-1" tabindex="-1"></a><span class="co"># Sample data</span></span>
+<span id="cb230-2"><a href="multiple-regression.html#cb230-2" tabindex="-1"></a>Academic_Performance <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">75</span>, <span class="dv">70</span>, <span class="dv">68</span>, <span class="dv">80</span>, <span class="dv">77</span>, <span class="dv">60</span>, <span class="dv">58</span>, <span class="dv">55</span>, <span class="dv">65</span>, <span class="dv">70</span>)</span>
+<span id="cb230-3"><a href="multiple-regression.html#cb230-3" tabindex="-1"></a>Sleep_Quality <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">8</span>, <span class="dv">7</span>, <span class="dv">6</span>, <span class="dv">9</span>, <span class="dv">8</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">6</span>, <span class="dv">7</span>)</span>
+<span id="cb230-4"><a href="multiple-regression.html#cb230-4" tabindex="-1"></a>Gender <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">&quot;Male&quot;</span>, <span class="st">&quot;Female&quot;</span>, <span class="st">&quot;Male&quot;</span>, <span class="st">&quot;Female&quot;</span>, <span class="st">&quot;Male&quot;</span>, <span class="st">&quot;Female&quot;</span>, <span class="st">&quot;Male&quot;</span>, <span class="st">&quot;Female&quot;</span>, <span class="st">&quot;Male&quot;</span>, <span class="st">&quot;Female&quot;</span>))</span>
+<span id="cb230-5"><a href="multiple-regression.html#cb230-5" tabindex="-1"></a></span>
+<span id="cb230-6"><a href="multiple-regression.html#cb230-6" tabindex="-1"></a><span class="co"># Set &quot;Male&quot; as the reference level</span></span>
+<span id="cb230-7"><a href="multiple-regression.html#cb230-7" tabindex="-1"></a>Gender <span class="ot">&lt;-</span> <span class="fu">relevel</span>(Gender, <span class="at">ref =</span> <span class="st">&quot;Male&quot;</span>)</span>
+<span id="cb230-8"><a href="multiple-regression.html#cb230-8" tabindex="-1"></a></span>
+<span id="cb230-9"><a href="multiple-regression.html#cb230-9" tabindex="-1"></a><span class="co"># Fit the regression model</span></span>
+<span id="cb230-10"><a href="multiple-regression.html#cb230-10" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(Academic_Performance <span class="sc">~</span> Sleep_Quality <span class="sc">+</span> Gender)</span>
+<span id="cb230-11"><a href="multiple-regression.html#cb230-11" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = Academic_Performance ~ Sleep_Quality + Gender)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -1.8650 -0.5225 -0.3300  1.0650  1.8800 
+## 
+## Coefficients:
+##               Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)    40.8400     1.7900  22.815 7.87e-08 ***
+## Sleep_Quality   4.3375     0.2601  16.676 6.82e-07 ***
+## GenderFemale   -0.7325     0.9320  -0.786    0.458    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 1.471 on 7 degrees of freedom
+## Multiple R-squared:  0.9757, Adjusted R-squared:  0.9688 
+## F-statistic: 140.5 on 2 and 7 DF,  p-value: 2.238e-06</code></pre>
+<p><strong>Interpreting the Output</strong>:</p>
+<p>- The intercept represents the predicted academic performance for males (the reference level) when sleep quality is zero.</p>
+<p>- The coefficient for “Female” shows the difference in academic performance between females and males, holding sleep quality constant.</p>
+</div>
+<div id="effect-coding-best-practice-for-categorical-variables" class="section level3 hasAnchor" number="11.6.3">
+<h3><span class="header-section-number">11.6.3</span> Effect Coding: Best Practice for Categorical Variables<a href="multiple-regression.html#effect-coding-best-practice-for-categorical-variables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>What is Effect Coding?</strong>: Effect coding is an alternative to dummy coding (which uses 0 and 1). It is considered a better practice, especially in psychological research, because it centers the categorical variable, making the interpretation of the intercept more meaningful.</p>
+<p><strong>How Effect Coding Works</strong>:</p>
+<p>- <strong>Dummy Coding</strong>: Uses 0 and 1 to indicate group membership (e.g., 0 for Male, 1 for Female). The intercept represents the mean of the reference group.</p>
+<p>- <strong>Effect Coding</strong>: Uses -0.5 and 0.5 (or sometimes -1 and 1) to code the categories. The intercept now represents the grand mean of all groups, rather than just the mean of the reference group.</p>
+<p><strong>Why -0.5 and 0.5 is Preferable</strong>: Using -0.5 and 0.5 is preferable because it centers the predictors, which can reduce multicollinearity and make the interpretation of main effects and interactions more straightforward. It also makes the intercept the average outcome across all groups, which is often more meaningful.</p>
+<p><strong>Example of Effect Coding in R</strong>:</p>
+<div class="sourceCode" id="cb232"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb232-1"><a href="multiple-regression.html#cb232-1" tabindex="-1"></a><span class="co"># Sample data</span></span>
+<span id="cb232-2"><a href="multiple-regression.html#cb232-2" tabindex="-1"></a>Gender <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">&quot;Male&quot;</span>, <span class="st">&quot;Female&quot;</span>, <span class="st">&quot;Male&quot;</span>, <span class="st">&quot;Female&quot;</span>, <span class="st">&quot;Male&quot;</span>, <span class="st">&quot;Female&quot;</span>, <span class="st">&quot;Male&quot;</span>, <span class="st">&quot;Female&quot;</span>, <span class="st">&quot;Male&quot;</span>, <span class="st">&quot;Female&quot;</span>))</span>
+<span id="cb232-3"><a href="multiple-regression.html#cb232-3" tabindex="-1"></a></span>
+<span id="cb232-4"><a href="multiple-regression.html#cb232-4" tabindex="-1"></a><span class="co"># Create effect codes: -0.5 for Male, 0.5 for Female</span></span>
+<span id="cb232-5"><a href="multiple-regression.html#cb232-5" tabindex="-1"></a>Gender_Effect <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(Gender <span class="sc">==</span> <span class="st">&quot;Male&quot;</span>, <span class="sc">-</span><span class="fl">0.5</span>, <span class="fl">0.5</span>)</span>
+<span id="cb232-6"><a href="multiple-regression.html#cb232-6" tabindex="-1"></a></span>
+<span id="cb232-7"><a href="multiple-regression.html#cb232-7" tabindex="-1"></a><span class="co"># Fit the regression model with effect coding</span></span>
+<span id="cb232-8"><a href="multiple-regression.html#cb232-8" tabindex="-1"></a>model_effect <span class="ot">&lt;-</span> <span class="fu">lm</span>(Academic_Performance <span class="sc">~</span> Sleep_Quality <span class="sc">+</span> Gender_Effect)</span>
+<span id="cb232-9"><a href="multiple-regression.html#cb232-9" tabindex="-1"></a><span class="fu">summary</span>(model_effect)</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = Academic_Performance ~ Sleep_Quality + Gender_Effect)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -1.8650 -0.5225 -0.3300  1.0650  1.8800 
+## 
+## Coefficients:
+##               Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)    40.4737     1.7035  23.760 5.95e-08 ***
+## Sleep_Quality   4.3375     0.2601  16.676 6.82e-07 ***
+## Gender_Effect  -0.7325     0.9320  -0.786    0.458    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 1.471 on 7 degrees of freedom
+## Multiple R-squared:  0.9757, Adjusted R-squared:  0.9688 
+## F-statistic: 140.5 on 2 and 7 DF,  p-value: 2.238e-06</code></pre>
+<p><strong>Interpreting the Effect Coded Model</strong>:</p>
+<p>- The intercept represents the grand mean of academic performance across both genders.</p>
+<p>- The coefficient for <code>Gender_Effect</code> represents the difference in academic performance between males and females, with a positive coefficient indicating that females (coded as 0.5) score higher than males (coded as -0.5).</p>
+</div>
+<div id="contrast-coding-for-categorical-variables-with-more-than-two-levels" class="section level3 hasAnchor" number="11.6.4">
+<h3><span class="header-section-number">11.6.4</span> Contrast Coding for Categorical Variables with More Than Two Levels<a href="multiple-regression.html#contrast-coding-for-categorical-variables-with-more-than-two-levels" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>When There Are More Than Two Levels</strong>: When your categorical variable has more than two levels (e.g., Treatment: Control, Drug A, Drug B), you need to use contrast coding to compare each group against a baseline or to compare specific groups against each other.</p>
+<p><strong>Example</strong>: Suppose you have three groups: “Control”, “Drug_A”, and “Drug_B”. You might want to compare “Drug_A” and “Drug_B” to “Control” and each other.</p>
+<p><strong>Setting Up Contrast Coding in R</strong>:</p>
+<div class="sourceCode" id="cb234"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb234-1"><a href="multiple-regression.html#cb234-1" tabindex="-1"></a><span class="co"># Sample data</span></span>
+<span id="cb234-2"><a href="multiple-regression.html#cb234-2" tabindex="-1"></a>Treatment <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">&quot;Control&quot;</span>, <span class="st">&quot;Drug_A&quot;</span>, <span class="st">&quot;Drug_B&quot;</span>, <span class="st">&quot;Control&quot;</span>, <span class="st">&quot;Drug_A&quot;</span>, <span class="st">&quot;Drug_B&quot;</span>, </span>
+<span id="cb234-3"><a href="multiple-regression.html#cb234-3" tabindex="-1"></a>                      <span class="st">&quot;Control&quot;</span>, <span class="st">&quot;Drug_A&quot;</span>, <span class="st">&quot;Drug_B&quot;</span>, <span class="st">&quot;Control&quot;</span>, <span class="st">&quot;Drug_A&quot;</span>, <span class="st">&quot;Drug_B&quot;</span>))</span>
+<span id="cb234-4"><a href="multiple-regression.html#cb234-4" tabindex="-1"></a></span>
+<span id="cb234-5"><a href="multiple-regression.html#cb234-5" tabindex="-1"></a><span class="co"># Define contrasts</span></span>
+<span id="cb234-6"><a href="multiple-regression.html#cb234-6" tabindex="-1"></a><span class="fu">contrasts</span>(Treatment) <span class="ot">&lt;-</span> <span class="fu">cbind</span>(<span class="st">&quot;Drug_A_vs_Control&quot;</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>),</span>
+<span id="cb234-7"><a href="multiple-regression.html#cb234-7" tabindex="-1"></a>                              <span class="st">&quot;Drug_B_vs_Control&quot;</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>),</span>
+<span id="cb234-8"><a href="multiple-regression.html#cb234-8" tabindex="-1"></a>                              <span class="st">&quot;Drug_A_vs_Drug_B&quot;</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>))</span>
+<span id="cb234-9"><a href="multiple-regression.html#cb234-9" tabindex="-1"></a></span>
+<span id="cb234-10"><a href="multiple-regression.html#cb234-10" tabindex="-1"></a><span class="co"># Simulated outcome data</span></span>
+<span id="cb234-11"><a href="multiple-regression.html#cb234-11" tabindex="-1"></a>Outcome <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">50</span>, <span class="dv">55</span>, <span class="dv">53</span>, <span class="dv">52</span>, <span class="dv">58</span>, <span class="dv">56</span>, <span class="dv">48</span>, <span class="dv">54</span>, <span class="dv">52</span>, <span class="dv">51</span>, <span class="dv">57</span>, <span class="dv">55</span>)</span>
+<span id="cb234-12"><a href="multiple-regression.html#cb234-12" tabindex="-1"></a></span>
+<span id="cb234-13"><a href="multiple-regression.html#cb234-13" tabindex="-1"></a><span class="co"># Fit the regression model</span></span>
+<span id="cb234-14"><a href="multiple-regression.html#cb234-14" tabindex="-1"></a>model_contrast <span class="ot">&lt;-</span> <span class="fu">lm</span>(Outcome <span class="sc">~</span> Treatment)</span>
+<span id="cb234-15"><a href="multiple-regression.html#cb234-15" tabindex="-1"></a><span class="fu">summary</span>(model_contrast)</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = Outcome ~ Treatment)
+## 
+## Residuals:
+##    Min     1Q Median     3Q    Max 
+## -2.250 -1.250  0.250  1.188  2.000 
+## 
+## Coefficients:
+##                            Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)                 53.4167     0.5159 103.531 3.71e-15 ***
+## TreatmentDrug_A_vs_Control   2.5833     0.7297   3.540  0.00631 ** 
+## TreatmentDrug_B_vs_Control   0.5833     0.7297   0.799  0.44461    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 1.787 on 9 degrees of freedom
+## Multiple R-squared:  0.7034, Adjusted R-squared:  0.6374 
+## F-statistic: 10.67 on 2 and 9 DF,  p-value: 0.004218</code></pre>
+<p><strong>Interpreting the Contrasts</strong>: - The coefficients represent the difference between each coded group. For example, <code>Drug_A_vs_Control</code> would tell you the difference in the outcome between Drug A and the Control group, while <code>Drug_A_vs_Drug_B</code> would tell you the difference between Drug A and Drug B.</p>
+<p>By understanding and correctly applying effect coding and contrast coding, you can ensure that your categorical variables are appropriately represented in your regression models, leading to more accurate and meaningful interpretations of your data. This is particularly important in psychological research, where understanding the nuances of categorical variables can provide deeper insights into human behavior and outcomes.</p>
+</div>
+</div>
+<div id="chapter-summary-10" class="section level2 hasAnchor" number="11.7">
+<h2><span class="header-section-number">11.7</span> Chapter Summary<a href="multiple-regression.html#chapter-summary-10" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="recap-of-key-concepts-2" class="section level3 hasAnchor" number="11.7.1">
+<h3><span class="header-section-number">11.7.1</span> Recap of Key Concepts<a href="multiple-regression.html#recap-of-key-concepts-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In this chapter, we delved into the essentials of multiple regression, a fundamental tool in psychological research for understanding how multiple predictors interact to influence an outcome. We started by exploring the <strong>basics of multiple regression</strong>, discussing how it allows us to examine the relationship between one dependent variable and several independent variables simultaneously. We then moved on to the <strong>interpretation of main effects</strong>, where we learned how to assess the unique contribution of each predictor to the outcome, and how to interpret the coefficients in a meaningful way.</p>
+<p>We also covered the importance of <strong>including categorical variables</strong> in multiple regression models. We discussed how R defaults to the alphabetical reference level for categorical variables and how to change the reference level if needed. We introduced <strong>effect coding</strong> as a best practice for handling categorical variables, emphasizing how it centers the predictors and makes the interpretation of the intercept more meaningful. We also touched on how to handle categorical variables with more than two levels using <strong>contrast coding</strong>.</p>
+<p>Finally, we explored the concept of <strong>suppression</strong> in multiple regression, a phenomenon where adding a predictor increases the predictive validity of another predictor by revealing hidden relationships that are not apparent in bivariate analyses. We learned how to identify suppression effects and discussed their practical implications for psychological research.</p>
+<p>Understanding these key concepts is crucial for conducting accurate and insightful analyses in psychology, where multiple variables often interact in complex ways to influence behavior and outcomes.</p>
+</div>
+<div id="final-thoughts-2" class="section level3 hasAnchor" number="11.7.2">
+<h3><span class="header-section-number">11.7.2</span> Final Thoughts<a href="multiple-regression.html#final-thoughts-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Multiple regression is a powerful tool for exploring and understanding the intricate relationships between variables in psychological research. It allows us to control for confounding variables, examine the unique contributions of each predictor, and uncover hidden relationships through the identification of suppression effects.</p>
+<p>As you apply multiple regression in your own research, remember to carefully interpret the results, particularly when dealing with categorical variables and suppression effects. These nuanced aspects of multiple regression can greatly impact the conclusions you draw from your data. By mastering these techniques, you’ll be better equipped to explore complex relationships and draw meaningful, accurate conclusions in your psychological research.</p>
+</div>
+</div>
+<div id="practice-exercises-9" class="section level2 hasAnchor" number="11.8">
+<h2><span class="header-section-number">11.8</span> Practice Exercises<a href="multiple-regression.html#practice-exercises-9" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="exercise-1-conduct-a-multiple-regression-analysis" class="section level3 hasAnchor" number="11.8.1">
+<h3><span class="header-section-number">11.8.1</span> Exercise 1: Conduct a Multiple Regression Analysis<a href="multiple-regression.html#exercise-1-conduct-a-multiple-regression-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Task</strong>: Using the provided dataset, conduct a multiple regression analysis to predict academic performance based on three predictors: <code>Study_Time</code>, <code>Sleep_Quality</code>, and <code>Stress_Levels</code>. Interpret the main effects of each predictor.</p>
+<p><strong>Dataset</strong>:</p>
+<div class="sourceCode" id="cb236"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb236-1"><a href="multiple-regression.html#cb236-1" tabindex="-1"></a><span class="co"># Sample data</span></span>
+<span id="cb236-2"><a href="multiple-regression.html#cb236-2" tabindex="-1"></a>Study_Time <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">12</span>, <span class="dv">9</span>, <span class="dv">15</span>, <span class="dv">8</span>, <span class="dv">11</span>, <span class="dv">7</span>, <span class="dv">14</span>, <span class="dv">10</span>, <span class="dv">13</span>)</span>
+<span id="cb236-3"><a href="multiple-regression.html#cb236-3" tabindex="-1"></a>Sleep_Quality <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">7</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">4</span>, <span class="dv">8</span>, <span class="dv">5</span>)</span>
+<span id="cb236-4"><a href="multiple-regression.html#cb236-4" tabindex="-1"></a>Stress_Levels <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">6</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">3</span>, <span class="dv">7</span>, <span class="dv">2</span>, <span class="dv">6</span>)</span>
+<span id="cb236-5"><a href="multiple-regression.html#cb236-5" tabindex="-1"></a>Academic_Performance <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">85</span>, <span class="dv">88</span>, <span class="dv">80</span>, <span class="dv">90</span>, <span class="dv">75</span>, <span class="dv">84</span>, <span class="dv">78</span>, <span class="dv">87</span>, <span class="dv">82</span>, <span class="dv">89</span>)</span>
+<span id="cb236-6"><a href="multiple-regression.html#cb236-6" tabindex="-1"></a></span>
+<span id="cb236-7"><a href="multiple-regression.html#cb236-7" tabindex="-1"></a><span class="co"># Fit the multiple regression model</span></span></code></pre></div>
+<p><strong>Questions</strong>:</p>
+<p>1. What are the main effects of <code>Study_Time</code>, <code>Sleep_Quality</code>, and <code>Stress_Levels</code> on <code>Academic_Performance</code>?</p>
+<p>2. How would you interpret the coefficients for each predictor?</p>
+</div>
+<div id="exercise-2-identifying-a-suppression-effect" class="section level3 hasAnchor" number="11.8.2">
+<h3><span class="header-section-number">11.8.2</span> Exercise 2: Identifying a Suppression Effect<a href="multiple-regression.html#exercise-2-identifying-a-suppression-effect" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Task</strong>: Suppose you’re studying the relationship between <code>Study_Time</code> and <code>Academic_Performance</code> and suspect that <code>Stress_Levels</code> might be a suppressor variable. Conduct a multiple regression analysis to identify any suppression effects and discuss their implications.</p>
+<p><strong>Dataset</strong>:</p>
+<div class="sourceCode" id="cb237"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb237-1"><a href="multiple-regression.html#cb237-1" tabindex="-1"></a><span class="co"># Sample data</span></span>
+<span id="cb237-2"><a href="multiple-regression.html#cb237-2" tabindex="-1"></a>Study_Time <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">12</span>, <span class="dv">9</span>, <span class="dv">15</span>, <span class="dv">8</span>, <span class="dv">11</span>, <span class="dv">7</span>, <span class="dv">14</span>, <span class="dv">10</span>, <span class="dv">13</span>)</span>
+<span id="cb237-3"><a href="multiple-regression.html#cb237-3" tabindex="-1"></a>Stress_Levels <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">6</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">3</span>, <span class="dv">7</span>, <span class="dv">2</span>, <span class="dv">6</span>)</span>
+<span id="cb237-4"><a href="multiple-regression.html#cb237-4" tabindex="-1"></a>Academic_Performance <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">85</span>, <span class="dv">88</span>, <span class="dv">80</span>, <span class="dv">90</span>, <span class="dv">75</span>, <span class="dv">84</span>, <span class="dv">78</span>, <span class="dv">87</span>, <span class="dv">82</span>, <span class="dv">89</span>)</span>
+<span id="cb237-5"><a href="multiple-regression.html#cb237-5" tabindex="-1"></a></span>
+<span id="cb237-6"><a href="multiple-regression.html#cb237-6" tabindex="-1"></a><span class="co"># Bivariate regression (Study_Time only)</span></span>
+<span id="cb237-7"><a href="multiple-regression.html#cb237-7" tabindex="-1"></a></span>
+<span id="cb237-8"><a href="multiple-regression.html#cb237-8" tabindex="-1"></a></span>
+<span id="cb237-9"><a href="multiple-regression.html#cb237-9" tabindex="-1"></a><span class="co"># Multiple regression with Stress_Levels</span></span></code></pre></div>
+<p><strong>Questions</strong>:</p>
+<p>1. Does including <code>Stress_Levels</code> as a predictor reveal a suppression effect?</p>
+<p>2. How do the coefficients for <code>Study_Time</code> change between the bivariate and multiple regression models? What does this suggest?</p>
+</div>
+<div id="exercise-3-creating-and-interpreting-a-multiple-regression-plot" class="section level3 hasAnchor" number="11.8.3">
+<h3><span class="header-section-number">11.8.3</span> Exercise 3: Creating and Interpreting a Multiple Regression Plot<a href="multiple-regression.html#exercise-3-creating-and-interpreting-a-multiple-regression-plot" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Task</strong>: Create a scatter plot with a regression line to visualize the relationship between <code>Sleep_Quality</code> and <code>Academic_Performance</code>, controlling for <code>Study_Time</code> and <code>Stress_Levels</code>. Use ggplot2 to create an APA-compliant plot and interpret the visualized relationships.</p>
+<p><strong>Dataset</strong>:</p>
+<div class="sourceCode" id="cb238"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb238-1"><a href="multiple-regression.html#cb238-1" tabindex="-1"></a><span class="co"># Sample data</span></span>
+<span id="cb238-2"><a href="multiple-regression.html#cb238-2" tabindex="-1"></a>Sleep_Quality <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">7</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">4</span>, <span class="dv">8</span>, <span class="dv">5</span>)</span>
+<span id="cb238-3"><a href="multiple-regression.html#cb238-3" tabindex="-1"></a>Study_Time <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">12</span>, <span class="dv">9</span>, <span class="dv">15</span>, <span class="dv">8</span>, <span class="dv">11</span>, <span class="dv">7</span>, <span class="dv">14</span>, <span class="dv">10</span>, <span class="dv">13</span>)</span>
+<span id="cb238-4"><a href="multiple-regression.html#cb238-4" tabindex="-1"></a>Stress_Levels <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">6</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">3</span>, <span class="dv">7</span>, <span class="dv">2</span>, <span class="dv">6</span>)</span>
+<span id="cb238-5"><a href="multiple-regression.html#cb238-5" tabindex="-1"></a>Academic_Performance <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">85</span>, <span class="dv">88</span>, <span class="dv">80</span>, <span class="dv">90</span>, <span class="dv">75</span>, <span class="dv">84</span>, <span class="dv">78</span>, <span class="dv">87</span>, <span class="dv">82</span>, <span class="dv">89</span>)</span>
+<span id="cb238-6"><a href="multiple-regression.html#cb238-6" tabindex="-1"></a></span>
+<span id="cb238-7"><a href="multiple-regression.html#cb238-7" tabindex="-1"></a><span class="co"># Fit the multiple regression model</span></span>
+<span id="cb238-8"><a href="multiple-regression.html#cb238-8" tabindex="-1"></a></span>
+<span id="cb238-9"><a href="multiple-regression.html#cb238-9" tabindex="-1"></a><span class="co"># Create partial regression plot for Sleep_Quality</span></span>
+<span id="cb238-10"><a href="multiple-regression.html#cb238-10" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div>
+<p><strong>Questions</strong>:</p>
+<p>1. How does <code>Sleep_Quality</code> relate to <code>Academic_Performance</code> after controlling for <code>Study_Time</code> and <code>Stress_Levels</code>?</p>
+<p>2. What does the trend line in the plot indicate?</p>
+</div>
+<div id="exercise-4-comparing-bivariate-and-multiple-regression" class="section level3 hasAnchor" number="11.8.4">
+<h3><span class="header-section-number">11.8.4</span> Exercise 4: Comparing Bivariate and Multiple Regression<a href="multiple-regression.html#exercise-4-comparing-bivariate-and-multiple-regression" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Task</strong>: Run a bivariate regression analysis predicting <code>Academic_Performance</code> based on <code>Sleep_Quality</code> alone. Then, run a multiple regression analysis including <code>Study_Time</code> and <code>Stress_Levels</code> as additional predictors. Compare the results and discuss how adding predictors changes the interpretation of the coefficients.</p>
+<p><strong>Dataset</strong>:</p>
+<div class="sourceCode" id="cb239"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb239-1"><a href="multiple-regression.html#cb239-1" tabindex="-1"></a><span class="co"># Sample data</span></span>
+<span id="cb239-2"><a href="multiple-regression.html#cb239-2" tabindex="-1"></a>Sleep_Quality <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">7</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">4</span>, <span class="dv">8</span>, <span class="dv">5</span>)</span>
+<span id="cb239-3"><a href="multiple-regression.html#cb239-3" tabindex="-1"></a>Study_Time <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">12</span>, <span class="dv">9</span>, <span class="dv">15</span>, <span class="dv">8</span>, <span class="dv">11</span>, <span class="dv">7</span>, <span class="dv">14</span>, <span class="dv">10</span>, <span class="dv">13</span>)</span>
+<span id="cb239-4"><a href="multiple-regression.html#cb239-4" tabindex="-1"></a>Stress_Levels <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">6</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">3</span>, <span class="dv">7</span>, <span class="dv">2</span>, <span class="dv">6</span>)</span>
+<span id="cb239-5"><a href="multiple-regression.html#cb239-5" tabindex="-1"></a>Academic_Performance <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">85</span>, <span class="dv">88</span>, <span class="dv">80</span>, <span class="dv">90</span>, <span class="dv">75</span>, <span class="dv">84</span>, <span class="dv">78</span>, <span class="dv">87</span>, <span class="dv">82</span>, <span class="dv">89</span>)</span>
+<span id="cb239-6"><a href="multiple-regression.html#cb239-6" tabindex="-1"></a></span>
+<span id="cb239-7"><a href="multiple-regression.html#cb239-7" tabindex="-1"></a><span class="co"># Bivariate regression</span></span>
+<span id="cb239-8"><a href="multiple-regression.html#cb239-8" tabindex="-1"></a></span>
+<span id="cb239-9"><a href="multiple-regression.html#cb239-9" tabindex="-1"></a></span>
+<span id="cb239-10"><a href="multiple-regression.html#cb239-10" tabindex="-1"></a><span class="co"># Multiple regression</span></span></code></pre></div>
+<p><strong>Questions</strong>:</p>
+<p>1. How do the coefficients for <code>Sleep_Quality</code> change when you add <code>Study_Time</code> and <code>Stress_Levels</code> to the model?</p>
+<p>2. What does this change in coefficients suggest about the relationships between these variables?</p>
 
 </div>
 </div>
@@ -1090,7 +1485,7 @@ Social_Support      -2.00      0.70  -2.86   0.0089 **</code></pre></li>
         </div>
       </div>
 <a href="bivariate-linear-models.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="goodness-of-fit.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="interactions-in-regression-models.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

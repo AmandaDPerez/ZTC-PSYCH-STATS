@@ -1,0 +1,167 @@
+---
+title: "Weekly Lab Homework Assignment: Interaction Effects"
+author: "Your Name"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: pdf_document
+---
+
+*Replace "Your Name" with your actual name.*
+
+## Instructions
+
+In this lab assignment, you will practice interpreting interactions by visualizing them with different types of graphs. You'll work with simulated datasets and explore interactions between categorical x categorical, linear x linear, and categorical x linear variables.
+
+Please follow the instructions for each exercise, and use `ggplot2` for all visualizations.
+
+### Exercise 1: Categorical x Categorical Interaction
+
+**Task**: Use the dataset with two categorical variables and one outcome variable. Fit a model with a categorical x categorical interaction, and visualize the interaction using a bar graph with error bars.
+
+1.  Use the dataset with two categorical variables: `Education_Level` (e.g., "High School", "College") and `Job_Type` (e.g., "Office", "Field"), and an outcome variable `Job_Satisfaction`.
+2.  Fit a linear model including the interaction between `Education_Level` and `Job_Type` on `Job_Satisfaction`.
+3.  Create a bar graph with error bars to visualize the interaction.
+4.  Interpret the interaction term and the graph.
+
+```{r, warning = F, message = F}
+library(ggplot2)
+library(dplyr)
+
+# Simulate data
+set.seed(123)
+Education_Level <- factor(rep(c("High School", "College"), each = 50))
+Job_Type <- factor(rep(c("Office", "Field"), each = 25, times = 2))
+Job_Satisfaction <- ifelse(Education_Level == "College", 
+                           70 + 10 * (Job_Type == "Office"), 
+                           60 + 5 * (Job_Type == "Field")) + rnorm(100, sd = 5)
+
+data1 <- data.frame(Education_Level, Job_Type, Job_Satisfaction)
+
+# Calculate means and standard errors with correct handling
+means1 <- data1 %>%
+  group_by(Education_Level, Job_Type) %>%
+  summarise(
+    Job_Satisfaction_Mean = mean(Job_Satisfaction),
+    SE = (sd(Job_Satisfaction) / sqrt(n())),  # Calculate SE 
+    lower = Job_Satisfaction_Mean - 1.96 * SE,  # Lower bound of the confidence interval
+    upper = Job_Satisfaction_Mean + 1.96 * SE   # Upper bound of the confidence interval
+  )
+
+# Check the calculated values
+print(means1)
+
+# Plot the bar graph with error bars
+
+
+```
+
+**Interpretation**:
+
+### Exercise 2: Linear x Linear Interaction
+
+**Task**: Use the dataset with two continuous variables and one outcome variable. Fit a model with a linear x linear interaction, and visualize the interaction using a 2D plot with a median split of one variable.
+
+1.  Use the two continious predictors from the dataset: `Age` and `Weekly_Hours_Worked`, and an outcome variable `Income`.
+2.  Fit a linear model including the interaction between `Age` and `Weekly_Hours_Worked`.
+3.  Create a 2D plot using a median split of `Weekly_Hours_Worked` to visualize the interaction.
+4.  Interpret the interaction term and the graph.
+
+```{r}
+# Simulate data
+set.seed(123)
+Age <- rnorm(100, mean = 40, sd = 10)
+Weekly_Hours_Worked <- rnorm(100, mean = 40, sd = 5)
+Income <- 30000 + 500 * Age + 1000 * Weekly_Hours_Worked + 50 * Age * Weekly_Hours_Worked + rnorm(100, sd = 5000)
+
+data2 <- data.frame(Age, Weekly_Hours_Worked, Income)
+
+# Fit the model
+model2 <- lm(Income ~ Age * Weekly_Hours_Worked, data = data2)
+
+# Summary of the model
+summary(model2)
+
+# Create a median split for Weekly_Hours_Worked
+
+# Plot the interaction
+
+```
+
+**Interpretation**:
+
+### Exercise 3: Categorical x Linear Interaction
+
+**Task**: Use the simulated dataset with one categorical variable and one continuous variable as predictors. Fit a model with a categorical x linear interaction, and visualize the interaction using an interaction plot.
+
+1.  Use the dataset with the two predictos: one categorical variable `Gender` and one continuous variable `Study_Hours`, and an outcome variable `Test_Score`.
+2.  Fit a linear model including the interaction between `Gender` and `Study_Hours`.
+3.  Create an interaction plot using `ggplot2` to visualize the interaction.
+4.  Interpret the interaction term and the graph.
+
+```{r}
+# Simulate data
+set.seed(123)
+Gender <- factor(rep(c("Male", "Female"), each = 50))
+Study_Hours <- rnorm(100, mean = 5, sd = 2)
+Test_Score <- 60 + 10 * (Gender == "Female") + 5 * Study_Hours + 5 * (Gender == "Female") * Study_Hours + rnorm(100, sd = 5)
+
+data3 <- data.frame(Gender, Study_Hours, Test_Score)
+
+# Fit the model
+model3 <- lm(Test_Score ~ Gender * Study_Hours, data = data3)
+
+# Summary of the model
+summary(model3)
+
+# Plot the interaction
+
+```
+
+**Interpretation**:
+
+### Exercise 4: Visualizing Multivariate Interactions
+
+**Task**: Given a multivariate dataset, create different types of graphs to visualize interactions and discuss which type of graph is most appropriate.
+
+1.  Use the simulated multivariate dataset with both continuous and categorical variables.
+2.  Create a graph for each type of interaction (categorical x categorical, categorical x continuous, continuous x continuous) . Use a median split for the continuous x continuous interaction.
+3.  Discuss which type of graph best represents the interactions in your data and why.
+
+```{r, warning = F, message = F}
+# Simulate data
+set.seed(123)
+Age <- rnorm(100, mean = 35, sd = 8)
+Experience <- rnorm(100, mean = 10, sd = 5)
+Gender <- factor(rep(c("Male", "Female"), each = 50))
+Job_Type <- factor(rep(c("Office", "Field"), each = 25, times = 2))
+Salary <- 30000 + 1000 * Age + 2000 * Experience + 150 * Age * Experience + 
+  5000 * (Gender == "Female") + rnorm(100, sd = 5000)
+
+data4 <- data.frame(Age, Experience, Gender, Job_Type, Salary)
+
+# Categorical x Categorical Interaction (Bar graph with means and SE)
+## Summarizing means and standard errors
+means4 <- data4 %>%
+  group_by(Gender, Job_Type) %>%
+  summarise(
+    Mean_Salary = mean(Salary),
+    SE_Salary = sd(Salary) / sqrt(n())
+  )
+
+## Plot the bar graph with error bars
+
+
+# Categorical x Continuous plot
+
+
+# Median split for Experience to visualize the linear x linear interaction
+
+
+# Plot the interaction using the median split
+
+```
+
+**Discussion**:
+
+**Submission Instructions:**
+
+Ensure to knit your document to PDF format, checking that all content is correctly displayed before submission. Submit this PDF to Canvas Assignments.

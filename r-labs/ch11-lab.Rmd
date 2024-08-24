@@ -177,3 +177,7 @@ head(data_ex4)
     -   **Gender_Effect**:
 -   **Interpretation of Categorical Variables with Effect Coding**:
     -   `Gender_Effect`:
+
+**Submission Instructions:**
+
+Ensure to knit your document to PDF format, checking that all content is correctly displayed before submission. Submit this PDF to Canvas Assignments.
