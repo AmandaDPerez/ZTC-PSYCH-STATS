@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.8.25)  25 AUG 2024 15:43
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.8.25)  25 AUG 2024 15:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1864,8 +1864,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [230]
 
 [231]
-File: ../../../AppData/Local/Temp/Rtmp2TRmfa/file4f382f313426.png Graphic file (type bmp)
-<../../../AppData/Local/Temp/Rtmp2TRmfa/file4f382f313426.png>
+File: ../../../AppData/Local/Temp/Rtmp46Ilwh/file83f474a02e39.png Graphic file (type bmp)
+<../../../AppData/Local/Temp/Rtmp46Ilwh/file83f474a02e39.png>
 
 
 [232]
@@ -1894,8 +1894,8 @@ File: psych-stats-book_files/figure-latex/unnamed-chunk-155-1.pdf Graphic file (
 [239]
 
 [240]
-File: ../../../AppData/Local/Temp/Rtmp2TRmfa/file4f385fc8160.png Graphic file (type bmp)
-<../../../AppData/Local/Temp/Rtmp2TRmfa/file4f385fc8160.png>
+File: ../../../AppData/Local/Temp/Rtmp46Ilwh/file83f46c855383.png Graphic file (type bmp)
+<../../../AppData/Local/Temp/Rtmp46Ilwh/file83f46c855383.png>
 
 
 [241]
@@ -2275,8 +2275,8 @@ File: psych-stats-book_files/figure-latex/unnamed-chunk-236-1.pdf Graphic file (
 
 
 [351]
-File: ../../../AppData/Local/Temp/Rtmp2TRmfa/file4f385edf4c1a.png Graphic file (type bmp)
-<../../../AppData/Local/Temp/Rtmp2TRmfa/file4f385edf4c1a.png>
+File: ../../../AppData/Local/Temp/Rtmp46Ilwh/file83f4101c425a.png Graphic file (type bmp)
+<../../../AppData/Local/Temp/Rtmp46Ilwh/file83f4101c425a.png>
 File: psych-stats-book_files/figure-latex/unnamed-chunk-236-3.pdf Graphic file (type pdf)
 <use psych-stats-book_files/figure-latex/unnamed-chunk-236-3.pdf>
 
@@ -2347,7 +2347,7 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
  ) 
 Here is how much of TeX's memory you used:
  21821 strings out of 476233
- 447256 string characters out of 5785517
+ 447292 string characters out of 5785517
  1931612 words of memory out of 5000000
  43992 multiletter control sequences out of 15000+600000
  623025 words of font info for 99 fonts, out of 8000000 for 9000

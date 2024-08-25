@@ -2,7 +2,7 @@
 
 This appendix provides solutions to the exercises given at the end of each chapter. These solutions are intended to help you verify your work and understand the correct approach to each task.
 
-## Answers to Chapter 1 Exercises {.unnumbered}
+## Answers to Chapter 1 Practice Exercises {.unnumbered}
 
 ### Exercise 1: Familiarization with R Studio {.unnumbered}
 
@@ -83,7 +83,7 @@ This appendix provides solutions to the exercises given at the end of each chapt
         plot(1:10, 1:10, main = "Simple Linear Plot")
         ```
 
-## Answers to Chapter 2 Exercises {.unnumbered}
+## Answers to Chapter 2 Practice Exercises {.unnumbered}
 
 ### Exercise 1: Identifying Data Types {.unnumbered}
 
@@ -107,7 +107,7 @@ This appendix provides solutions to the exercises given at the end of each chapt
     -   **Potential Biases**: If the study does not adequately randomize participants or control for other factors affecting sleep (like caffeine intake or room conditions), results could be biased.
     -   **Influence on Conclusions**: The use of experimental manipulation allows the researcher to make stronger causal claims about the effect of sleep on cognitive performance compared to observational or self-report data. However, biases and experimental design flaws can undermine these claims.
 
-## Answers to Chapter 3 Exercises {.unnumbered}
+## Answers to Practice Exercises {.unnumbered}
 
 ### Exercise 1: Evaluating Reliability {.unnumbered}
 
