@@ -1,0 +1,153 @@
+---
+title: "Weekly Lab Homework Assignment: Logistic Regression"
+author: "Your Name"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: pdf_document
+---
+
+*Replace "Your Name" with your actual name.*
+
+## Instructions
+
+In this lab, you will apply logistic regression to a new dataset to predict binary outcomes. You will fit logistic regression models, interpret the coefficients and odds ratios, visualize the results, and assess the model's fit. You will also explore how different predictors impact the probability of the outcome.
+
+1.  **Fit a Logistic Regression Model**: Use the provided dataset to predict the binary outcome.
+2.  **Interpret the Coefficients**: Interpret the logistic regression coefficients by exponentiating them to obtain odds ratios.
+3.  **Visualize the Results**: Create visualizations to display the relationship between the predictors and the outcome.
+4.  **Assess Model Fit**: Use the ROC curve to assess the fit of your model.
+5.  **Submit Your Work**: Make sure to knit your `.Rmd` file to PDF before submitting.
+
+### Exercise 1: Fitting a Logistic Regression Model
+
+**Dataset**: You will predict whether a customer will buy a product (`Purchase`, 0 = No, 1 = Yes) based on predictors `Income`, `Age`, and `MaritalStatus`.
+
+```{r}
+# Load necessary packages
+library(dplyr)
+
+# Generate a new dataset
+set.seed(123)
+customer_data <- data.frame(
+  Purchase = rbinom(1000, 1, prob = 0.5),
+  Income = round(rnorm(1000, mean = 50000, sd = 20000)),
+  Age = sample(18:70, 1000, replace = TRUE),
+  MaritalStatus = factor(sample(c("Single", "Married"), 1000, replace = TRUE))
+)
+
+customer_data$Purchase[customer_data$Income > 60000] <- rbinom(sum(customer_data$Income > 60000), 1, prob = 0.85)
+customer_data$Purchase[customer_data$Age < 40] <- rbinom(sum(customer_data$Age < 40), 1, prob = 0.88)
+customer_data$Purchase[customer_data$MaritalStatus == "Married"] <- rbinom(sum(customer_data$MaritalStatus == "Married"), 1, prob = 0.8)
+
+# Fit the logistic regression model
+model <- glm(Purchase ~ Income + Age + MaritalStatus, data = customer_data, family = binomial)
+
+# Print model summary
+summary(model)
+```
+
+-   The logistic regression model shows significant predictors for `Income`, `Age`, and `MaritalStatus`.
+
+### Exercise 2: Interpreting the Coefficients and Odds Ratios
+
+**Task**:
+
+1\. Exponentiate the coefficients from the logistic regression model to obtain odds ratios.
+
+2\. Interpret the odds ratios. What does an odds ratio greater than 1 signify for each predictor? What about less than 1?
+
+```{r}
+# Exponentiate the coefficients to obtain odds ratios
+odds_ratios <- exp(coef(model))
+conf_int <- exp(confint(model))
+
+# Display odds ratios and confidence intervals
+odds_ratios
+conf_int
+```
+
+-   **Income**: An odds ratio greater than 1 indicates that higher income increases the likelihood of purchasing the product.
+-   **Age**: An odds ratio less than 1 indicates that as age increases, the likelihood of purchasing decreases.
+-   **MaritalStatus (Married vs. Single)**: An odds rat less than 1 suggests that being single decreases the likelihood of purchase.
+
+### Exercise 3: Visualizing the Logistic Regression Results
+
+**Task**:
+
+1\. Create a plot to visualize the predicted probability of `Purchase` based on `Income`.
+
+2\. Use `ggplot2` to generate the logistic regression curve.
+
+```{r}
+# Load ggplot2
+library(ggplot2)
+
+# Generate predicted probabilities
+customer_data$predicted_prob <- predict(model, newdata = customer_data, type = "response")
+
+# Plot the logistic regression curve
+ggplot(customer_data, aes(x = Income, y = predicted_prob)) +
+  geom_point(alpha = 0.5) +
+  geom_smooth(method = "glm", method.args = list(family = binomial), color = "blue") +
+  labs(title = "Predicted Probability of Purchase by Income",
+       x = "Income", y = "Predicted Probability") +
+  theme_minimal()
+```
+
+-   The logistic regression curve illustrates how increasing income increases the predicted probability of purchase.
+
+### Exercise 4: Checking Model Fit with ROC Curve
+
+**Task**:
+
+1\. Generate the ROC curve for the logistic regression model to assess its fit.
+
+2\. Calculate and interpret the AUC value.
+
+```{r}
+# Load pROC package
+library(pROC)
+
+# Generate the ROC curve
+roc_curve <- roc(customer_data$Purchase, customer_data$predicted_prob)
+
+# Plot ROC curve
+plot(roc_curve, col = "blue", main = "ROC Curve for Purchase Prediction Model")
+
+# Display the AUC value
+auc(roc_curve)
+```
+
+-   AUC should be around 0.8 or higher, indicating that this model has poor model performance.
+
+### Exercise 5: Exploring the Impact of Marital Status
+
+**Task**:
+
+1\. Create a bar plot to visualize the odds ratio for `MaritalStatus`.
+
+2\. Discuss how marital status affects the likelihood of purchasing the product.
+
+```{r}
+# Create a data frame with the odds ratios for Marital Status only
+marital_status_odds <- data.frame(
+  OddsRatio = odds_ratios[grep("MaritalStatus", names(odds_ratios))],
+  Predictor = names(odds_ratios[grep("MaritalStatus", names(odds_ratios))]),
+  row.names = NULL
+)
+
+# Create a bar plot for the odds ratios of Marital Status
+ggplot(marital_status_odds, aes(x = Predictor, y = OddsRatio)) +
+  geom_bar(stat = "identity", fill = "lightblue") +
+  geom_text(aes(label = round(OddsRatio, 2)), vjust = -0.5) +
+  labs(title = "Odds Ratios for Marital Status", 
+       x = "Marital Status - Single (vs Married)", y = "Odds Ratio") +
+  ylim(0,1) +
+  theme_minimal()
+
+```
+
+-   The bar plot will show that marital status has a significant impact on the likelihood of purchasing, with married individuals being more likely to purchase.
+
+**Submission Instructions:**
+
+Ensure to knit your document to PDF format, checking that all content is correctly displayed before submission. Submit this PDF to Canvas Assignments.
