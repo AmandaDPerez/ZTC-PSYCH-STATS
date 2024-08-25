@@ -1,11 +1,10 @@
-::: foreword
-# Appendix: Answers to Chapter Exercises
+# Appendix: Answers to Chapter Exercises {-}
 
 This appendix provides solutions to the exercises given at the end of each chapter. These solutions are intended to help you verify your work and understand the correct approach to each task.
 
-## Answers to Chapter 1 Exercises
+## Answers to Chapter 1 Exercises {.unnumbered}
 
-### Exercise 1: Familiarization with R Studio
+### Exercise 1: Familiarization with R Studio {.unnumbered}
 
 1.  **Create a new R script and save it**
     -   Open R Studio, go to `File > New File > R Script`. This will open a new script tab in the Source Pane.
@@ -26,7 +25,7 @@ This appendix provides solutions to the exercises given at the end of each chapt
         8 * 9
         ```
 
-### Exercise 2: Basic Data Entry and Operation
+### Exercise 2: Basic Data Entry and Operation {.unnumbered}
 
 1.  **Create a vector of numbers**
     -   Write the following line in an R script to create the vector:
@@ -43,7 +42,7 @@ This appendix provides solutions to the exercises given at the end of each chapt
 3.  **Save the script**
     -   Ensure your work is saved in the script `practice_script.R` or in a new script file if preferred.
 
-### Exercise 3: Introduction to R Markdown
+### Exercise 3: Introduction to R Markdown {.unnumbered}
 
 1.  **Create a new R Markdown document**
     -   Go to `File > New File > R Markdown...`, provide a title "My First R Markdown", and fill in your name as the author.
@@ -67,7 +66,7 @@ This appendix provides solutions to the exercises given at the end of each chapt
 4.  **Knit the document to HTML**
     -   Click the `Knit` button and select `Knit to HTML`. Save the output in your project directory.
 
-### Exercise 4: Exploring the Help Pane
+### Exercise 4: Exploring the Help Pane {.unnumbered}
 
 1.  **Find help on the `plot` function**
     -   In the Console, type `?plot` and press Enter. Review the help file that appears in the Help pane.
@@ -84,16 +83,16 @@ This appendix provides solutions to the exercises given at the end of each chapt
         plot(1:10, 1:10, main = "Simple Linear Plot")
         ```
 
-## Answers to Chapter 2 Exercises
+## Answers to Chapter 2 Exercises {.unnumbered}
 
-### Exercise 1: Identifying Data Types
+### Exercise 1: Identifying Data Types {.unnumbered}
 
 1.  **Scenario Analysis**:
     -   **Children at playground**: The data collection method used here is **observational data**. The psychologist is observing natural behaviors without intervening or manipulating the environment.
     -   **Evening diary entries**: This scenario uses **self-report data** as participants are providing personal accounts of their feelings and activities.
     -   **Noise level manipulation**: This is an example of **experimental manipulation**, where a variable (noise level) is deliberately changed to observe its effect on another variable (productivity).
 
-### Exercise 2: Designing a Study
+### Exercise 2: Designing a Study {.unnumbered}
 
 1.  **Study Design**:
     -   **Research Question**: Does listening to classical music while studying improve memory recall?
@@ -101,21 +100,21 @@ This appendix provides solutions to the exercises given at the end of each chapt
     -   **Data Collection Method**: Participants are randomly assigned to two groups. One group studies in silence while the other listens to classical music. Afterwards, both groups take a memory test based on the material studied.
     -   **Ethical Considerations**: Ensure that participants are aware they can withdraw at any time and that all data collected will be confidential. Consider any potential stress or anxiety induced by test conditions and address these in the study design.
 
-### Exercise 3: Evaluating Research
+### Exercise 3: Evaluating Research {.unnumbered}
 
 1.  **Research Evaluation**:
     -   **Type of Data Used**: Assuming the study involves assessing the effects of sleep on cognitive performance using different sleep interventions, the data type would likely be **experimental manipulation**.
     -   **Potential Biases**: If the study does not adequately randomize participants or control for other factors affecting sleep (like caffeine intake or room conditions), results could be biased.
     -   **Influence on Conclusions**: The use of experimental manipulation allows the researcher to make stronger causal claims about the effect of sleep on cognitive performance compared to observational or self-report data. However, biases and experimental design flaws can undermine these claims.
 
-## Answers to Chapter 3 Exercises
+## Answers to Chapter 3 Exercises {.unnumbered}
 
-### Exercise 1: Evaluating Reliability
+### Exercise 1: Evaluating Reliability {.unnumbered}
 
 1.  **Scenario Analysis**:
     -   **Answer**: The Pearson correlation coefficient of 0.65 indicates moderate test-retest reliability. While this isn't considered low, for measures of psychological constructs such as self-esteem, a higher coefficient (typically 0.7 or above) is generally preferred to ensure consistency over time. A coefficient of 0.65 might suggest that the questionnaire could benefit from further refinement to improve reliability.
 
-### Exercise 2: Assessing Validity
+### Exercise 2: Assessing Validity {.unnumbered}
 
 1.  **Scenario Development**:
     -   **Answer**: Steps to validate the aptitude test could include:
@@ -124,7 +123,7 @@ This appendix provides solutions to the exercises given at the end of each chapt
         -   **Statistical Analysis**: Perform a correlation analysis to assess the relationship between test scores and GPAs.
         -   **Interpreting Results**: A strong positive correlation would indicate good predictive validity of the aptitude test for college success.
 
-### Exercise 3: Identifying and Addressing Data Collection Errors
+### Exercise 3: Identifying and Addressing Data Collection Errors {.unnumbered}
 
 1.  **Problem Solving**:
     -   **Answer**: The miscalibration of the sleep quality device could lead to inaccurate data, potentially skewing the study results. To mitigate this impact:
@@ -132,12 +131,12 @@ This appendix provides solutions to the exercises given at the end of each chapt
         -   **Analyze impacted data**: Assess the extent of the data affected by the miscalibration and consider excluding or adjusting this data in the analysis.
         -   **Transparency in Reporting**: Disclose the issue and the steps taken to address it in any publications or presentations involving this research.
 
-### Exercise 4: Triangulation to Enhance Validity
+### Exercise 4: Triangulation to Enhance Validity {.unnumbered}
 
 1.  **Critical Thinking**:
     -   **Answer**: Using multiple data sources like surveys, observations, and performance metrics helps enhance the construct validity of the study. This triangulation approach allows for validation of the findings through different perspectives, reducing the bias that might be present if only one method were used. Each method complements the others, providing a more holistic view of student engagement.
 
-### Exercise 5: Role Play on Ethical Data Collection
+### Exercise 5: Role Play on Ethical Data Collection {.unnumbered}
 
 1.  **Discussion**:
     -   **Answer**: Key procedures and safeguards might include:
@@ -145,14 +144,14 @@ This appendix provides solutions to the exercises given at the end of each chapt
         -   **Anonymity and Confidentiality**: Assign codes to participants instead of using names and store personal data securely. Ensure that any reports or publications do not allow individual participants to be identified.
         -   **Minimizing Harm**: Be sensitive to how questions about personal health might affect participants and provide support resources as necessary.
 
-### Exercise 6: Real-World Application
+### Exercise 6: Real-World Application {.unnumbered}
 
 1.  **Application**:
     -   **Answer**: This exercise is subjective and would depend on the specific study chosen. Generally, the answer should include an evaluation of the methods section for clarity on measurement tools, reliability coefficients, validity assertions, and a discussion on how well the study accounted for potential data collection errors. Suggestions for improvement might include more rigorous reliability testing, additional validation studies, or enhanced error checking procedures.
 
-## Answers to Chapter 4 Practice Exercises
+## Answers to Chapter 4 Practice Exercises {.unnumbered}
 
-### Exercise 1: Calculating Descriptive Statistics
+### Exercise 1: Calculating Descriptive Statistics {.unnumbered}
 
 **Dataset**: `c(55, 65, 75, 85, 95, 105, 115, 125, 135, 145)`
 
@@ -210,7 +209,7 @@ print(paste("Outliers:", paste(outliers, collapse = ", ")))
 
 -   **Outliers**: There are no outliers in this dataset as all values lie within the lower and upper bounds.
 
-### Exercise 2: Understanding the Normal Distribution
+### Exercise 2: Understanding the Normal Distribution {.unnumbered}
 
 Assume a psychological test follows a normal distribution with a mean of 100 and a standard deviation of 15.
 
@@ -235,7 +234,7 @@ print(paste("Probability of a score between 85 and 115:", prob_between_85_and_11
 
 -   **Probability of a score between 85 and 115**: 0.6826895 (or 68.27%)
 
-### Exercise 3: Applying the T-Distribution
+### Exercise 3: Applying the T-Distribution {.unnumbered}
 
 You are conducting a small-scale study with 12 participants.
 
@@ -258,7 +257,7 @@ print(paste("Probability of a t-score between -1 and 1:", prob_between_minus1_an
 
 -   **Probability of a t-score between -1 and 1**: 0.5764421 (or 57.64%)
 
-### Exercise 4: Defining and Simulating Sample Spaces
+### Exercise 4: Defining and Simulating Sample Spaces {.unnumbered}
 
 Define a sample space for a study where participants can choose between three types of exercises (Yoga, Pilates, Aerobics). Simulate responses from 100 participants.
 
@@ -294,9 +293,9 @@ print(exercise_frequency)
 
 This analysis shows the distribution of exercise preferences among the 100 participants, providing insights into the most and least popular choices.
 
-## Answers to Chapter 5 Practice Exercises
+## Answers to Chapter 5 Practice Exercises {.unnumbered}
 
-### Exercise 1: Importing Data
+### Exercise 1: Importing Data {.unnumbered}
 
 ```{r, eval = F}
 # Load necessary package
@@ -325,7 +324,7 @@ head(experiment_data)
 
 ```
 
-### Exercise 2: Cleaning Data with dplyr
+### Exercise 2: Cleaning Data with dplyr {.unnumbered}
 
 ```{r}
 # Sample data
@@ -365,7 +364,7 @@ print(cleaned_data)
 
 -   The `age_group` column was re-leveled to set "30 or Below" as the reference level.
 
-### Exercise 3: Generating Descriptive Statistics with `psych`
+### Exercise 3: Generating Descriptive Statistics with `psych` {.unnumbered}
 
 ```{r, message = F, warning = F}
 # Sample data
@@ -394,7 +393,7 @@ describe(test_scores)
 
 -   Kurtosis: The peakedness of the distribution.
 
-### Exercise 4: Visualizing Data with psych
+### Exercise 4: Visualizing Data with psych {.unnumbered}
 
 ```{r}
 # Sample data
@@ -442,9 +441,9 @@ pairs.panels(multi_var_data,
 
 -   Correlation ellipses provide a visual representation of confidence intervals for the correlations.
 
-## Answers to Chapter 6 Practice Exercises
+## Answers to Chapter 6 Practice Exercises {.unnumbered}
 
-### Exercise 1: Mean-Centering
+### Exercise 1: Mean-Centering {.unnumbered}
 
 **Dataset**: - `expenses <- c(1200, 1500, 1100, 1800, 1300, 1700, 1250, 1400, 1600, 1350)`
 
@@ -480,7 +479,7 @@ mean_expenses
 **Interpretation**:\
 - **Answer**: A positive mean-centered value indicates that the expense for that month is above the average expense, while a negative value indicates that the expense is below the average. Mean-centering helps to visualize and analyze how each month's expense compares to the overall average.
 
-### Exercise 2: Z-Scores
+### Exercise 2: Z-Scores {.unnumbered}
 
 **Dataset**: - `test_scores <- c(65, 78, 82, 91, 70, 88, 75, 95, 80, 85)`
 
@@ -515,7 +514,7 @@ test_scores <- c(65, 78, 82, 91, 70, 88, 75, 95, 80, 85)
 **Interpretation**:\
 - **Answer**: A Z-score greater than 0 indicates that the test score is above the average, while a Z-score less than 0 indicates that the test score is below the average. Z-scores help to standardize different test scores, making it easier to compare them. Outliers are typically identified as Z-scores beyond ±2 or ±3.
 
-### Exercise 3: Combining Mean-Centering and Z-Scores
+### Exercise 3: Combining Mean-Centering and Z-Scores {.unnumbered}
 
 **Dataset**: - `reaction_times <- c(250, 340, 295, 310, 275, 325, 290, 360, 285, 310)`
 
@@ -552,7 +551,7 @@ reaction_times <- c(250, 340, 295, 310, 275, 325, 290, 360, 285, 310)
 **Interpretation**:\
 - **Answer**: Mean-centering adjusts the reaction times by subtracting the average, making it easier to see how each participant's time compares to the average. Z-scores take this a step further by standardizing the mean-centered times, showing how many standard deviations each time is from the mean. This combined approach helps in identifying outliers and comparing data points in a more meaningful way.
 
-### Exercise 4: Non-Linear Transformations
+### Exercise 4: Non-Linear Transformations {.unnumbered}
 
 **Dataset**: - `income <- c(30, 45, 70, 120, 25, 60, 100, 85, 40, 300)`
 
@@ -599,9 +598,9 @@ reaction_times <- c(250, 340, 295, 310, 275, 325, 290, 360, 285, 310)
 - **Square Root Transformation**: Stabilizes variance, making the spread of the data more consistent across different values. Useful for data where variability increases with the value.\
 - **Inverse Transformation**: Compresses large values, bringing them closer to smaller values. Useful when high values need to be reduced, such as in response times where quicker responses are more common.
 
-## Answers to Chapter 7 Practice Exercises
+## Answers to Chapter 7 Practice Exercises {.unnumbered}
 
-### Exercise 1: Create an APA-Compliant Bar Graph
+### Exercise 1: Create an APA-Compliant Bar Graph {.unnumbered}
 
 **Objective**: Create a bar graph comparing the mean values of a categorical variable, including error bars to represent variability.
 
@@ -633,7 +632,7 @@ ggplot(mtcars, aes(x = factor(am), y = mpg)) +
 - `geom_bar()` creates the bar graph, while `geom_errorbar()` adds error bars representing the standard error of the mean.\
 - APA formatting is applied using `theme_minimal()` with additional customization to meet APA standards.
 
-### Exercise 2: Modify a Basic ggplot2 Plot to Meet APA Standards
+### Exercise 2: Modify a Basic ggplot2 Plot to Meet APA Standards {.unnumbered}
 
 **Objective**: Modify a basic scatter plot to adhere to APA formatting guidelines.
 
@@ -663,7 +662,7 @@ ggplot(mtcars, aes(x = wt, y = mpg)) +
 - A trend line is added using `geom_smooth(method = "lm", se = FALSE)`.\
 - The plot is customized to meet APA standards by adjusting font sizes, adding a dashed trend line, and removing unnecessary grid lines.
 
-### Exercise 3: Create an APA-Compliant Line Graph and Save It as a High-Resolution Image
+### Exercise 3: Create an APA-Compliant Line Graph and Save It as a High-Resolution Image {.unnumbered}
 
 **Objective**: Create a line graph comparing trends across groups, and save the graph as a high-resolution image.
 
@@ -699,7 +698,7 @@ ggsave("mpg_vs_weight_by_cyl.png", plot = p, width = 8, height = 6, dpi = 300)
 - APA formatting is applied using `theme_minimal()` with further customization for titles, axis labels, and legend placement.\
 - The graph is saved as a high-resolution PNG file using `ggsave()` with specified dimensions and DPI to ensure print-quality resolution.
 
-## Answers to Chapter 8 Practice Exercises
+## Answers to Chapter 8 Practice Exercises {.unnumbered}
 
 ### Exercise 1: Standard Error Calculation and Interpretation
 
@@ -718,7 +717,7 @@ SE_difference
 -   **Standard Error**: The standard error of the difference between the means was calculated as approximately 1.52.
 -   **Interpretation**: This standard error suggests that the difference in sample means could vary by about 1.52 points due to random sampling variability. A smaller standard error would indicate more precise estimates of the true population means.
 
-### Exercise 2: Confidence Interval Calculation and Interpretation
+### Exercise 2: Confidence Interval Calculation and Interpretation {.unnumbered}
 
 ```{r}
 # Means and standard error
@@ -735,7 +734,7 @@ c(CI_lower, CI_upper)
 -   **95% Confidence Interval**: The 95% confidence interval for the difference between the means was calculated as [0.1, 9.9].
 -   **Interpretation**: This confidence interval suggests that the true difference in test scores between the two groups is likely between 0.1 and 9.9 points. Since the interval does not include zero, it supports the conclusion that there is a statistically significant difference between the two groups.
 
-### Exercise 3: Independent Samples t-Test Interpretation
+### Exercise 3: Independent Samples t-Test Interpretation {.unnumbered}
 
 ```{r}
 # Sample data
@@ -752,7 +751,7 @@ t_test_result
 -   **p-Value**: The p-value was 0.008.
 -   **Interpretation**: Since the p-value is less than 0.05, we reject the null hypothesis and conclude that there is a statistically significant difference between the two therapies in terms of reducing depression levels.
 
-### Exercise 4: Paired Samples t-Test Interpretation
+### Exercise 4: Paired Samples t-Test Interpretation {.unnumbered}
 
 ```{r}
 # Sample data
@@ -769,15 +768,15 @@ paired_t_test_result
 -   **p-Value**: The p-value was 0.0001.
 -   **Interpretation**: The very low p-value suggests a significant reduction in anxiety levels after the mindfulness workshop. The large t-value indicates that the difference between pre- and post-intervention scores is substantial.
 
-### Exercise 5: Significance and Effect Size Interpretation
+### Exercise 5: Significance and Effect Size Interpretation {.unnumbered}
 
 -   **Statistical Significance**: The p-value of 0.04 indicates that the difference between the teaching methods is statistically significant at the 0.05 level.
 -   **Effect Size (Cohen's d = 0.6)**: This medium effect size suggests that the difference between the teaching methods is not only statistically significant but also meaningful in practical terms. The teaching method has a moderate impact on student performance.
 -   **Implications**: The study's findings suggest that the new teaching method is likely to result in better student performance, and the effect is both statistically and practically significant. The results may justify the adoption of the new method in educational settings.
 
-## Answers to Chapter 9 Practice Exercises
+## Answers to Chapter 9 Practice Exercises {.unnumbered}
 
-### Exercise 1: Pearson Correlation Coefficient Calculation and Interpretation
+### Exercise 1: Pearson Correlation Coefficient Calculation and Interpretation {.unnumbered}
 
 ```{r}
 # Sample data
@@ -792,7 +791,7 @@ correlation
 -   **Calculated Pearson Correlation Coefficient**: 1
 -   **Interpretation**: The correlation coefficient of 1 indicates a perfect positive correlation between study hours and exam scores. This suggests that as study hours increase, exam scores increase in a perfectly linear relationship.
 
-### Exercise 2: Scatter Plot with Trend Line
+### Exercise 2: Scatter Plot with Trend Line {.unnumbered}
 
 ```{r}
 library(ggplot2)
@@ -819,14 +818,14 @@ ggplot(data = data.frame(study_hours, exam_scores), aes(x = study_hours, y = exa
 -   **Discussion**: Loneliness could be influencing both social media use and anxiety levels, leading to a spurious correlation. To control for this confounding variable, future research could include loneliness as a covariate in statistical analyses or design an experiment where loneliness is manipulated or controlled.
 -   **Suggestions**: Use methods such as multiple regression to control for loneliness, or conduct a longitudinal study to examine the temporal relationships between social media use, loneliness, and anxiety.
 
-### Exercise 5: Evaluating Correlation and Causality
+### Exercise 5: Evaluating Correlation and Causality {.unnumbered}
 
 -   **Discussion**: The correlation between TV watching and obesity does not imply causality. It's possible that other factors, such as physical inactivity or dietary habits, are influencing both TV watching and obesity rates. Examples from the chapter, such as the correlation between ice cream sales and drowning rates, highlight the importance of not inferring causality from correlation alone.
 -   **Examples**: Further research using experimental methods or longitudinal studies would be needed to establish whether TV watching directly contributes to obesity, or if other variables are at play.
 
-## Answers to Chapter 10 Practice Exercises
+## Answers to Chapter 10 Practice Exercises {.unnumbered}
 
-### Exercise 1: Create a Simple Bivariate Linear Model
+### Exercise 1: Create a Simple Bivariate Linear Model {.unnumbered}
 
 **Objective**: Create a bivariate linear model using the provided dataset, and interpret the slope, intercept, and residuals.
 
@@ -858,7 +857,7 @@ residuals
 
 -   **Residuals**: The residuals represent the differences between the observed exam scores and those predicted by the model. For example, if a student who studied for 6 hours scored 85, but the model predicted a score of 83, the residual would be 2 (85 - 83). If the residuals are small, it indicates that the model's predictions are close to the actual data. In this case, the residuals might be small, suggesting that the model fits the data well.
 
-### Exercise 2: Analyze Residuals to Assess Model Fit
+### Exercise 2: Analyze Residuals to Assess Model Fit {.unnumbered}
 
 **Objective**: Analyze the residuals of a linear model to assess its fit and discuss any patterns you observe.
 
@@ -879,7 +878,7 @@ abline(h = 0, col = "red", lwd = 2)
 
 **Conclusion**: Assuming the residuals are randomly distributed in this scenario, you can conclude that the linear model is a good fit for the data. There are no evident patterns in the residuals, suggesting that the model appropriately captures the relationship between study hours and exam scores.
 
-### Exercise 3: Apply Bivariate Linear Models to a Real-World Dataset
+### Exercise 3: Apply Bivariate Linear Models to a Real-World Dataset {.unnumbered}
 
 **Objective**: Apply what you've learned to analyze a real-world psychological dataset and interpret the results of your linear model.
 
@@ -919,9 +918,9 @@ abline(h = 0, col = "red", lwd = 2)
 
 **Conclusion**: The negative slope indicates that higher anxiety levels are associated with fewer hours of sleep. The statistically significant p-value supports this relationship, suggesting it is unlikely to have occurred by chance. The residuals plot confirms that the linear model is a good fit for the data, as the residuals appear randomly distributed with no apparent pattern. This analysis provides evidence that managing anxiety could be crucial for improving sleep quality.
 
-## Answers to Chapter 11 Practice Exercises
+## Answers to Chapter 11 Practice Exercises {.unnumbered}
 
-### Exercise 1: Fit the Multiple Regression
+### Exercise 1: Fit the Multiple Regression {.unnumbered}
 
 ```{r}
 # Sample data
@@ -938,7 +937,7 @@ summary(model)
 -   **Main Effects**: The coefficients for `Study_Time`, `Sleep_Quality`, and `Stress_Levels` represent their unique contributions to predicting `Academic_Performance`.
     -   If `Study_Time` has a coefficient of 1.96, it means that for each additional hour of study, `Academic_Performance` increases by 1.96 points, holding other variables constant.
 
-### Exercise 2: Compare Bivariate vs Multivariate
+### Exercise 2: Compare Bivariate vs Multivariate {.unnumbered}
 
 ```{r}
 # Sample data
@@ -958,7 +957,7 @@ summary(model_multiple)
 -   **Suppression Effect**: If the coefficient for `Study_Time` increases after adding `Stress_Levels` to the model, it suggests that `Stress_Levels` was suppressing the true relationship between `Study_Time` and `Academic_Performance`.
     -   The increase in the coefficient indicates that `Study_Time` has a stronger relationship with `Academic_Performance` when accounting for `Stress_Levels`.
 
-### Exercise 3: Plot Sleep Quality
+### Exercise 3: Plot Sleep Quality {.unnumbered}
 
 ```{r}
 # Sample data
@@ -989,7 +988,7 @@ ggplot(data.frame(Sleep_Quality, Academic_Performance), aes(x = Sleep_Quality, y
 
 -   **Interpretation of Plot**: The partial regression plot shows the relationship between `Sleep_Quality` and `Academic_Performance`, controlling for other variables. A positive trend line suggests that better sleep quality is associated with higher academic performance, even when controlling for study time and stress levels.
 
-### Exercise 4: Bivariate vs Multivariate
+### Exercise 4: Bivariate vs Multivariate {.unnumbered}
 
 ```{r}
 # Sample data
@@ -1010,9 +1009,9 @@ summary(model_multiple)
 -   **Comparison of Bivariate and Multiple Regression**: The coefficient for `Sleep_Quality` may change when adding `Study_Time` and `Stress_Levels` to the model.
     -   If the coefficient for `Sleep_Quality` decreases, it suggests that `Study_Time` and `Stress_Levels` share some variance with `Sleep_Quality` in predicting `Academic_Performance`. This highlights the importance of including all relevant predictors in the model to avoid misleading conclusions.
 
-## Answers to Chapter 12 Practice Exercises
+## Answers to Chapter 12 Practice Exercises {.unnumbered}
 
-### Exercise 1: Categorical x Categorical Interaction
+### Exercise 1: Categorical x Categorical Interaction {.unnumbered}
 
 -   **Task**: Create a model with a categorical x categorical interaction, interpret the interaction term, and visualize it using `ggplot2`.
 -   **Instructions**:
@@ -1061,7 +1060,7 @@ ggplot(group_summary, aes(x = Treatment, y = Mean_Recovery_Rate, fill = Gender))
 
 -   **Interpretation**: The interaction term indicates how the effect of treatment on recovery rate differs by gender. For example, if the interaction term is significant, it may suggest that Treatment A is more effective for males while Treatment B is more effective for females.
 
-### Exercise 2: Linear x Linear Interaction
+### Exercise 2: Linear x Linear Interaction {.unnumbered}
 
 -   **Task**: Model a linear x linear interaction, interpret the coefficients, and create a graph to visualize the interaction.
 -   **Instructions**:
@@ -1099,7 +1098,7 @@ ggplot(data, aes(x = Age, y = Salary, color = Experience_Level)) +
 
 -   **Interpretation**: The interaction term (Age:Experience) represents how the effect of Age on Salary changes depending on the level of Experience. A significant interaction would suggest that the relationship between Age and Salary is different for those with higher versus lower levels of experience.
 
-### Exercise 3: Categorical x Linear Interaction
+### Exercise 3: Categorical x Linear Interaction {.unnumbered}
 
 -   **Task**: Model a categorical x linear interaction, interpret the results, and create an interaction plot to illustrate the relationship.
 -   **Instructions**:
@@ -1134,7 +1133,7 @@ ggplot(data, aes(x = Hours_Study, y = Test_Score, color = Gender)) +
 
 -   **Interpretation**: The interaction term (Gender:Hours_Study) tells us how the effect of study hours on test scores differs between males and females. If significant, it suggests that the relationship between study hours and test scores is stronger or weaker depending on gender.
 
-### Exercise 4: Graphing Multivariate Interactions
+### Exercise 4: Graphing Multivariate Interactions {.unnumbered}
 
 -   **Task**: Given a multivariate dataset, create different types of graphs to visualize interactions and discuss which type of graph is most appropriate.
 -   **Instructions**:
@@ -1190,10 +1189,10 @@ ggplot(data, aes(x = Experience, y = Salary)) +
 -   **Discussion**:
     -   The **interaction plot** is best for showing how a continuous variable interacts with a categorical variable.
 
-## Answers to Chapter 13 Practice Exercises
+## Answers to Chapter 13 Practice Exercises {.unnumbered}
 
 
-### Exercise 1: Fitting a Logistic Regression Model
+### Exercise 1: Fitting a Logistic Regression Model {.unnumbered}
 **Task**: Using the provided dataset, fit a logistic regression model to predict whether a person survived the Titanic disaster (`Survived`), based on the predictors `Sex`, `Age`, and `Pclass`. Interpret the exponentiated coefficients (odds ratios) for each predictor.
 
 ```{r, warning = F, message = F}
@@ -1237,7 +1236,7 @@ conf_int
   - **Age**: Older age  decreases the odds of survival.
   - **Pclass (1st vs. 2nd/3rd)**: Passengers in 1st class have significantly higher odds of survival compared to those in 2nd or 3rd class.
 
-###  Exercise 2: Visualizing Logistic Regression Results
+###  Exercise 2: Visualizing Logistic Regression Results {.unnumbered}
 **Task**: Create a plot to visualize the predicted probabilities of survival (`Survived`) based on `Age`. Use the `ggplot2` package to plot the logistic regression curve.
 
 ```{r}
@@ -1258,7 +1257,7 @@ ggplot(titanic_data, aes(x = Age, y = predicted_prob)) +
 
   - The logistic regression curve shows that as age increases, the predicted probability of survival decreases, illustrating the negative impact of age on survival.
   
-### Exercise 3: Interpreting Odds Ratios
+### Exercise 3: Interpreting Odds Ratios {.unnumbered}
 **Task**: Interpret the odds ratios obtained in Exercise 1. Specifically, discuss the practical significance of the odds ratios for `Sex`, `Age`, and `Pclass` in predicting survival on the Titanic.
 
 ```{r}
@@ -1272,7 +1271,7 @@ ggplot(titanic_data, aes(x = Age, y = predicted_prob)) +
   - **Age**: A value slightly less than 1 indicates that increasing age decreases survival odds.
   - **Pclass**: Higher class status increases the likelihood of survival.
   
-### Exercise 4: Checking Model Fit
+### Exercise 4: Checking Model Fit {.unnumbered}
 **Task**: Assess the fit of the logistic regression model you fitted in Exercise 1. Plot an ROC curve. Discuss the ROC.
 
 ```{r}
@@ -1293,9 +1292,9 @@ auc(roc_curve)
 - **ROC Curve**: AUC value closer to 1 indicates good model performance. For example, an AUC of 0.85 suggests good discriminative ability.
 
 
-## Answers to Chapter 14 Practice Exercises
+## Answers to Chapter 14 Practice Exercises {.unnumbered}
 
-### Exercise 1: Chi-Square Goodness of Fit Test
+### Exercise 1: Chi-Square Goodness of Fit Test {.unnumbered}
 
 ```{r}
 # Observed and expected frequencies
@@ -1311,7 +1310,7 @@ chi_square_test
 - **Chi-Square Statistic**: The test will output the Chi-Square statistic. A large value suggests that the observed frequencies differ significantly from the expected frequencies.\
 - **P-Value**: If the p-value is less than 0.05, reject the null hypothesis and conclude that the observed frequencies are significantly different from the expected frequencies.
 
-### Exercise 2: Calculating R-Squared
+### Exercise 2: Calculating R-Squared {.unnumbered}
 
 ```{r}
 # Data for regression analysis
@@ -1328,7 +1327,7 @@ summary(model)$r.squared
 **Interpretation**:\
 - **R-Squared**: If R-squared is close to 1, it indicates that the model explains a large proportion of the variance in exam scores. If it's closer to 0, the model explains very little of the variance.
 
-### Exercise 3: F-Test for Comparing Models
+### Exercise 3: F-Test for Comparing Models {.unnumbered}
 
 ```{r}
 # Data for regression analysis
@@ -1350,7 +1349,7 @@ anova(model1, model2)
 - **F-Statistic**: A higher F-statistic indicates that the more complex model explains significantly more variance than the simpler model.\
 - **P-Value**: If the p-value is less than 0.05, the more complex model provides a significantly better fit.
 
-### Exercise 4: Visualizing the F-Distribution
+### Exercise 4: Visualizing the F-Distribution {.unnumbered}
 
 ```{r}
 # Load ggplot2
@@ -1379,7 +1378,7 @@ ggplot(plot_df, aes(x = F_Values)) +
 **Interpretation**:\
 - The shape of the F-distribution changes depending on the degrees of freedom. More degrees of freedom result in a distribution that is closer to normal, with a higher peak and narrower spread. This influences the critical value used in the F-test, making it easier or harder to achieve statistical significance.
 
-### Exercise 5: Comprehensive Analysis
+### Exercise 5: Comprehensive Analysis {.unnumbered}
 
 **Step 1: Chi-Square Test**
 
@@ -1415,27 +1414,27 @@ anova(model1, model2)
 
 **Interpretation**: Write a comprehensive report summarizing the findings from the Chi-Square test, R-squared calculation, and F-test. Discuss how these results contribute to understanding the factors influencing the dependent variables and the overall goodness of fit for the models.
 
-## Answers to Chapter 15 Practice Exercises
+## Answers to Chapter 15 Practice Exercises {.unnumbered}
 
-### Exercise 1: Power Calculation Interpretation
+### Exercise 1: Power Calculation Interpretation {.unnumbered}
 
 -   The power calculation output will show a power value (e.g., 0.73). If the power is less than 0.80, the study is underpowered, meaning there is a higher risk of not detecting a true effect. Ideally, the study should have a power of at least 0.80 to ensure a reasonable chance of detecting the expected effect.
 
-### Exercise 2: Sample Size Calculation Interpretation
+### Exercise 2: Sample Size Calculation Interpretation {.unnumbered}
 
 -   The output will show the required sample size per group (e.g., 64). This sample size is necessary to achieve 80% power, meaning that with this number of participants, you have an 80% chance of detecting a true effect if it exists.
 
-### Exercise 3: Type I Error Analysis Interpretation
+### Exercise 3: Type I Error Analysis Interpretation {.unnumbered}
 
 -   **Potential Consequences**: Publishing a false positive can mislead other researchers, lead to ineffective interventions being adopted in clinical practice, and damage the credibility of the field.\
 -   **Improvement Suggestions**: The study design could have been improved by using a more stringent significance level (e.g., 0.01) or increasing the sample size to ensure that any detected effect was more likely to be genuine.
 
-### Exercise 4: Type II Error Analysis Interpretation
+### Exercise 4: Type II Error Analysis Interpretation {.unnumbered}
 
 -   **Potential Consequences**: Missing a true effect means that a potentially effective therapy might be dismissed, depriving patients of a beneficial treatment. This could delay advancements in treatment for PTSD.\
 -   **Strategies to Increase Power**: Increasing the sample size, using more sensitive measures, and conducting a thorough power analysis before the study could help reduce the risk of Type II errors.
 
-### Exercise 5: Power Comparison Interpretation
+### Exercise 5: Power Comparison Interpretation {.unnumbered}
 
 -   **Scenario 1**: With a small effect size, small sample size, and alpha = 0.05, the power is likely to be very low (e.g., 0.20), indicating a high risk of Type II error.\
 -   **Scenario 2**: With a moderate effect size and medium sample size, the power should be around 0.80, which is adequate for detecting the effect.\
@@ -1444,4 +1443,4 @@ anova(model1, model2)
 ------------------------------------------------------------------------
 
 This appendix will be continuously updated as new exercises and chapters are added to the textbook, providing a comprehensive resource for students to check their work and ensure they understand the material thoroughly.
-:::
+

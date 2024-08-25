@@ -228,16 +228,16 @@ To begin scripting in R:
 1.  **Open R Studio** and click on `File` in the menu bar.
 2.  Select `New File` and then `R Script`. This will open a new script tab in the Source Pane.
 
-![Create New R Script](path/to/your/screenshot_create_new_script.png)
+![Create New R Script](images/r-new_script.png)
 
-#### Saving Scripts
+#### Saving Scripts 
 
 To save your script:
 
 1.  Click on the floppy disk icon or press `Ctrl + S` (Windows) or `Cmd + S` (macOS).
 2.  Choose a location on your computer, name your file, and ensure it has the `.R` extension.
 
-![Save R Script](path/to/your/screenshot_save_script.png)
+![Save R Script](images/r-floppy.png)
 
 ### Writing and Executing Code
 
@@ -258,7 +258,7 @@ To import data into R Studio:
 1.  Use the `read.csv()` function for CSV files: `data <- read.csv("path/to/your/datafile.csv")`
 2.  You can also use the Import Dataset feature in the Environment Pane for a GUI approach.
 
-![Import Data](path/to/your/screenshot_import_data.png)
+![Import Data](images/r-import.png)
 
 ### Using R Markdown for Assignments
 
@@ -284,7 +284,7 @@ It integrates your R code with Markdown text and can output to formats like PDF,
 1.  Go to `File > New File > R Markdown...`.
 2.  Fill out the dialog box (title, author, and output format).
 
-![New R Markdown File](path/to/your/screenshot_new_rmarkdown.png)
+![New R Markdown File](images/r-rmd.png)
 
 #### Writing in R Markdown
 
@@ -295,7 +295,7 @@ It integrates your R code with Markdown text and can output to formats like PDF,
 
 -   Insert triple backticks to close a code chunk.\
 -   A code chunk will look like this:\
-    ![R Markdown Code Chunk](path/to/your/screenshot_new_rmarkdown.png)
+    ![R Markdown Code Chunk](images/r-chunk.png)
 
 ## Using R Markdown for Assignments
 
