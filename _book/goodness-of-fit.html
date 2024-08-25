@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 13 Goodness of Fit | Introduction to Psychological Statistics</title>
-  <meta name="description" content="Chapter 13 Goodness of Fit | Introduction to Psychological Statistics" />
+  <title>Chapter 14 Goodness of Fit | Introduction to Psychological Statistics</title>
+  <meta name="description" content="Chapter 14 Goodness of Fit | Introduction to Psychological Statistics" />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 13 Goodness of Fit | Introduction to Psychological Statistics" />
+  <meta property="og:title" content="Chapter 14 Goodness of Fit | Introduction to Psychological Statistics" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 13 Goodness of Fit | Introduction to Psychological Statistics" />
+  <meta name="twitter:title" content="Chapter 14 Goodness of Fit | Introduction to Psychological Statistics" />
   
   
   
@@ -23,14 +23,14 @@
 <meta name="author" content="A.D.Perez, PhD" />
 
 
-<meta name="date" content="2024-08-23" />
+<meta name="date" content="2024-08-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="interactions-in-regression-models.html"/>
+<link rel="prev" href="logistic-regression.html"/>
 <link rel="next" href="statistical-power.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -756,197 +756,259 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="12.7.4" data-path="interactions-in-regression-models.html"><a href="interactions-in-regression-models.html#exercise-4-graphing-multivariate-interactions"><i class="fa fa-check"></i><b>12.7.4</b> Exercise 4: Graphing Multivariate Interactions</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html"><i class="fa fa-check"></i><b>13</b> Goodness of Fit</a>
+<li class="chapter" data-level="13" data-path="logistic-regression.html"><a href="logistic-regression.html"><i class="fa fa-check"></i><b>13</b> Logistic Regression</a>
 <ul>
-<li class="chapter" data-level="13.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#what-is-goodness-of-fit"><i class="fa fa-check"></i><b>13.1</b> What is Goodness of Fit?</a>
+<li class="chapter" data-level="13.1" data-path="logistic-regression.html"><a href="logistic-regression.html#introduction-to-logistic-regression"><i class="fa fa-check"></i><b>13.1</b> Introduction to Logistic Regression</a>
 <ul>
-<li class="chapter" data-level="13.1.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#why-goodness-of-fit-matters"><i class="fa fa-check"></i><b>13.1.1</b> Why Goodness of Fit Matters</a></li>
+<li class="chapter" data-level="13.1.1" data-path="logistic-regression.html"><a href="logistic-regression.html#what-is-logistic-regression"><i class="fa fa-check"></i><b>13.1.1</b> What is Logistic Regression?</a></li>
+<li class="chapter" data-level="13.1.2" data-path="logistic-regression.html"><a href="logistic-regression.html#applications-of-logistic-regression-in-psychology"><i class="fa fa-check"></i><b>13.1.2</b> Applications of Logistic Regression in Psychology</a></li>
 </ul></li>
-<li class="chapter" data-level="13.2" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#chi-square"><i class="fa fa-check"></i><b>13.2</b> Chi-Square</a>
+<li class="chapter" data-level="13.2" data-path="logistic-regression.html"><a href="logistic-regression.html#the-logistic-regression-model"><i class="fa fa-check"></i><b>13.2</b> The Logistic Regression Model</a>
 <ul>
-<li class="chapter" data-level="13.2.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#understanding-the-chi-square-test"><i class="fa fa-check"></i><b>13.2.1</b> Understanding the Chi-Square Test</a></li>
-<li class="chapter" data-level="13.2.2" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#calculating-chi-square-in-r"><i class="fa fa-check"></i><b>13.2.2</b> Calculating Chi-Square in R</a></li>
-<li class="chapter" data-level="13.2.3" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#real-world-applications-3"><i class="fa fa-check"></i><b>13.2.3</b> Real-World Applications</a></li>
+<li class="chapter" data-level="13.2.1" data-path="logistic-regression.html"><a href="logistic-regression.html#understanding-the-logistic-function"><i class="fa fa-check"></i><b>13.2.1</b> Understanding the Logistic Function</a></li>
+<li class="chapter" data-level="13.2.2" data-path="logistic-regression.html"><a href="logistic-regression.html#fitting-a-logistic-regression-model"><i class="fa fa-check"></i><b>13.2.2</b> Fitting a Logistic Regression Model</a></li>
 </ul></li>
-<li class="chapter" data-level="13.3" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#r-squared"><i class="fa fa-check"></i><b>13.3</b> R-Squared</a>
+<li class="chapter" data-level="13.3" data-path="logistic-regression.html"><a href="logistic-regression.html#interpreting-logistic-regression-coefficients"><i class="fa fa-check"></i><b>13.3</b> Interpreting Logistic Regression Coefficients</a>
 <ul>
-<li class="chapter" data-level="13.3.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#what-is-r-squared"><i class="fa fa-check"></i><b>13.3.1</b> What is R-Squared?</a></li>
-<li class="chapter" data-level="13.3.2" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#calculating-r-squared-in-r"><i class="fa fa-check"></i><b>13.3.2</b> Calculating R-Squared in R</a></li>
-<li class="chapter" data-level="13.3.3" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#adjusted-r-squared"><i class="fa fa-check"></i><b>13.3.3</b> Adjusted R-Squared</a></li>
-<li class="chapter" data-level="13.3.4" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#real-world-applications-4"><i class="fa fa-check"></i><b>13.3.4</b> Real-World Applications</a></li>
+<li class="chapter" data-level="13.3.1" data-path="logistic-regression.html"><a href="logistic-regression.html#exponentiating-the-coefficients"><i class="fa fa-check"></i><b>13.3.1</b> Exponentiating the Coefficients</a></li>
+<li class="chapter" data-level="13.3.2" data-path="logistic-regression.html"><a href="logistic-regression.html#understanding-the-odds-ratio"><i class="fa fa-check"></i><b>13.3.2</b> Understanding the Odds Ratio</a></li>
+<li class="chapter" data-level="13.3.3" data-path="logistic-regression.html"><a href="logistic-regression.html#summary-2"><i class="fa fa-check"></i><b>13.3.3</b> Summary:</a></li>
 </ul></li>
-<li class="chapter" data-level="13.4" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#the-f-test-for-comparing-models"><i class="fa fa-check"></i><b>13.4</b> The F-Test for Comparing Models</a>
+<li class="chapter" data-level="13.4" data-path="logistic-regression.html"><a href="logistic-regression.html#visualizing-the-odds-ratio"><i class="fa fa-check"></i><b>13.4</b> Visualizing the Odds Ratio</a>
 <ul>
-<li class="chapter" data-level="13.4.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#what-is-the-f-test"><i class="fa fa-check"></i><b>13.4.1</b> What is the F-Test?</a></li>
-<li class="chapter" data-level="13.4.2" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#performing-the-f-test-in-r"><i class="fa fa-check"></i><b>13.4.2</b> Performing the F-Test in R</a></li>
+<li class="chapter" data-level="13.4.1" data-path="logistic-regression.html"><a href="logistic-regression.html#step-1-loading-and-preparing-the-titanic-dataset"><i class="fa fa-check"></i><b>13.4.1</b> Step 1: Loading and Preparing the Titanic Dataset</a></li>
+<li class="chapter" data-level="13.4.2" data-path="logistic-regression.html"><a href="logistic-regression.html#step-2-calculating-the-odds-ratios"><i class="fa fa-check"></i><b>13.4.2</b> Step 2: Calculating the Odds Ratios</a></li>
+<li class="chapter" data-level="13.4.3" data-path="logistic-regression.html"><a href="logistic-regression.html#step-3-creating-a-dot-plot"><i class="fa fa-check"></i><b>13.4.3</b> Step 3: Creating a Dot Plot</a></li>
+<li class="chapter" data-level="13.4.4" data-path="logistic-regression.html"><a href="logistic-regression.html#step-4-creating-a-bar-graph"><i class="fa fa-check"></i><b>13.4.4</b> Step 4: Creating a Bar Graph</a></li>
+<li class="chapter" data-level="13.4.5" data-path="logistic-regression.html"><a href="logistic-regression.html#interpreting-the-graphs"><i class="fa fa-check"></i><b>13.4.5</b> Interpreting the Graphs</a></li>
+<li class="chapter" data-level="13.4.6" data-path="logistic-regression.html"><a href="logistic-regression.html#communicating-the-results"><i class="fa fa-check"></i><b>13.4.6</b> Communicating the Results</a></li>
+<li class="chapter" data-level="13.4.7" data-path="logistic-regression.html"><a href="logistic-regression.html#summary-3"><i class="fa fa-check"></i><b>13.4.7</b> Summary:</a></li>
 </ul></li>
-<li class="chapter" data-level="13.5" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#understanding-the-f-distribution"><i class="fa fa-check"></i><b>13.5</b> Understanding the F-Distribution</a>
+<li class="chapter" data-level="13.5" data-path="logistic-regression.html"><a href="logistic-regression.html#comparing-logistic-regression-with-linear-regression"><i class="fa fa-check"></i><b>13.5</b> Comparing Logistic Regression with Linear Regression</a>
 <ul>
-<li class="chapter" data-level="13.5.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#what-is-the-f-distribution"><i class="fa fa-check"></i><b>13.5.1</b> What is the F-Distribution?</a></li>
-<li class="chapter" data-level="13.5.2" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#visualizing-the-f-distribution-in-r"><i class="fa fa-check"></i><b>13.5.2</b> Visualizing the F-Distribution in R</a></li>
-<li class="chapter" data-level="13.5.3" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#real-world-applications-5"><i class="fa fa-check"></i><b>13.5.3</b> Real-World Applications</a></li>
+<li class="chapter" data-level="13.5.1" data-path="logistic-regression.html"><a href="logistic-regression.html#why-not-use-linear-regression-for-binary-outcomes"><i class="fa fa-check"></i><b>13.5.1</b> Why Not Use Linear Regression for Binary Outcomes?</a></li>
+<li class="chapter" data-level="13.5.2" data-path="logistic-regression.html"><a href="logistic-regression.html#advantages-of-logistic-regression"><i class="fa fa-check"></i><b>13.5.2</b> Advantages of Logistic Regression</a></li>
+<li class="chapter" data-level="13.5.3" data-path="logistic-regression.html"><a href="logistic-regression.html#recap"><i class="fa fa-check"></i><b>13.5.3</b> Recap:</a></li>
 </ul></li>
-<li class="chapter" data-level="13.6" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#putting-it-all-together-assessing-model-fit-in-practice"><i class="fa fa-check"></i><b>13.6</b> Putting It All Together – Assessing Model Fit in Practice</a>
+<li class="chapter" data-level="13.6" data-path="logistic-regression.html"><a href="logistic-regression.html#checking-model-fit"><i class="fa fa-check"></i><b>13.6</b> Checking Model Fit</a>
 <ul>
-<li class="chapter" data-level="13.6.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#comprehensive-example"><i class="fa fa-check"></i><b>13.6.1</b> Comprehensive Example</a></li>
-<li class="chapter" data-level="13.6.2" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#best-practices-for-assessing-goodness-of-fit"><i class="fa fa-check"></i><b>13.6.2</b> Best Practices for Assessing Goodness of Fit</a></li>
+<li class="chapter" data-level="13.6.1" data-path="logistic-regression.html"><a href="logistic-regression.html#why-check-model-fit"><i class="fa fa-check"></i><b>13.6.1</b> Why Check Model Fit?</a></li>
+<li class="chapter" data-level="13.6.2" data-path="logistic-regression.html"><a href="logistic-regression.html#methods-for-assessing-model-fit-in-logistic-regression"><i class="fa fa-check"></i><b>13.6.2</b> Methods for Assessing Model Fit in Logistic Regression</a></li>
+<li class="chapter" data-level="13.6.3" data-path="logistic-regression.html"><a href="logistic-regression.html#techniques-for-diagnosing-potential-issues"><i class="fa fa-check"></i><b>13.6.3</b> Techniques for Diagnosing Potential Issues</a></li>
+<li class="chapter" data-level="13.6.4" data-path="logistic-regression.html"><a href="logistic-regression.html#summary-of-diagnostic-techniques"><i class="fa fa-check"></i><b>13.6.4</b> Summary of Diagnostic Techniques:</a></li>
+<li class="chapter" data-level="13.6.5" data-path="logistic-regression.html"><a href="logistic-regression.html#recap-1"><i class="fa fa-check"></i><b>13.6.5</b> Recap:</a></li>
 </ul></li>
-<li class="chapter" data-level="13.7" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#chapter-summary-12"><i class="fa fa-check"></i><b>13.7</b> Chapter Summary</a></li>
-<li class="chapter" data-level="13.8" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#practice-exercises-11"><i class="fa fa-check"></i><b>13.8</b> Practice Exercises</a>
+<li class="chapter" data-level="13.7" data-path="logistic-regression.html"><a href="logistic-regression.html#chapter-summary-12"><i class="fa fa-check"></i><b>13.7</b> Chapter Summary</a>
 <ul>
-<li class="chapter" data-level="13.8.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#section-7-practice-exercises"><i class="fa fa-check"></i><b>13.8.1</b> Section 7: Practice Exercises</a></li>
+<li class="chapter" data-level="13.7.1" data-path="logistic-regression.html"><a href="logistic-regression.html#recap-of-key-concepts-4"><i class="fa fa-check"></i><b>13.7.1</b> Recap of Key Concepts</a></li>
+<li class="chapter" data-level="13.7.2" data-path="logistic-regression.html"><a href="logistic-regression.html#final-thoughts-4"><i class="fa fa-check"></i><b>13.7.2</b> Final Thoughts</a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="14" data-path="statistical-power.html"><a href="statistical-power.html"><i class="fa fa-check"></i><b>14</b> Statistical Power</a>
+<li class="chapter" data-level="13.8" data-path="logistic-regression.html"><a href="logistic-regression.html#practice-exercises-11"><i class="fa fa-check"></i><b>13.8</b> Practice Exercises</a>
 <ul>
-<li class="chapter" data-level="14.1" data-path="statistical-power.html"><a href="statistical-power.html#introduction-to-statistical-power"><i class="fa fa-check"></i><b>14.1</b> Introduction to Statistical Power</a>
-<ul>
-<li class="chapter" data-level="14.1.1" data-path="statistical-power.html"><a href="statistical-power.html#definition-of-statistical-power"><i class="fa fa-check"></i><b>14.1.1</b> Definition of Statistical Power</a></li>
-<li class="chapter" data-level="14.1.2" data-path="statistical-power.html"><a href="statistical-power.html#the-role-of-power-in-psychological-research"><i class="fa fa-check"></i><b>14.1.2</b> The Role of Power in Psychological Research</a></li>
-</ul></li>
-<li class="chapter" data-level="14.2" data-path="statistical-power.html"><a href="statistical-power.html#understanding-type-i-and-type-ii-errors"><i class="fa fa-check"></i><b>14.2</b> Understanding Type I and Type II Errors</a>
-<ul>
-<li class="chapter" data-level="14.2.1" data-path="statistical-power.html"><a href="statistical-power.html#type-i-error-false-positive"><i class="fa fa-check"></i><b>14.2.1</b> Type I Error (False Positive)</a></li>
-<li class="chapter" data-level="14.2.2" data-path="statistical-power.html"><a href="statistical-power.html#type-ii-error-false-negative"><i class="fa fa-check"></i><b>14.2.2</b> Type II Error (False Negative)</a></li>
-<li class="chapter" data-level="14.2.3" data-path="statistical-power.html"><a href="statistical-power.html#balancing-type-i-and-type-ii-errors"><i class="fa fa-check"></i><b>14.2.3</b> Balancing Type I and Type II Errors</a></li>
-</ul></li>
-<li class="chapter" data-level="14.3" data-path="statistical-power.html"><a href="statistical-power.html#factors-affecting-power"><i class="fa fa-check"></i><b>14.3</b> Factors Affecting Power</a>
-<ul>
-<li class="chapter" data-level="14.3.1" data-path="statistical-power.html"><a href="statistical-power.html#sample-size"><i class="fa fa-check"></i><b>14.3.1</b> Sample Size</a></li>
-<li class="chapter" data-level="14.3.2" data-path="statistical-power.html"><a href="statistical-power.html#effect-size"><i class="fa fa-check"></i><b>14.3.2</b> Effect Size</a></li>
-<li class="chapter" data-level="14.3.3" data-path="statistical-power.html"><a href="statistical-power.html#significance-level-alpha"><i class="fa fa-check"></i><b>14.3.3</b> Significance Level (Alpha)</a></li>
-</ul></li>
-<li class="chapter" data-level="14.4" data-path="statistical-power.html"><a href="statistical-power.html#calculating-power-in-r"><i class="fa fa-check"></i><b>14.4</b> Calculating Power in R</a>
-<ul>
-<li class="chapter" data-level="14.4.1" data-path="statistical-power.html"><a href="statistical-power.html#introduction-to-power-analysis"><i class="fa fa-check"></i><b>14.4.1</b> Introduction to Power Analysis</a></li>
-<li class="chapter" data-level="14.4.2" data-path="statistical-power.html"><a href="statistical-power.html#step-by-step-guide-to-conducting-power-analysis-in-r"><i class="fa fa-check"></i><b>14.4.2</b> Step-by-Step Guide to Conducting Power Analysis in R</a></li>
-</ul></li>
-<li class="chapter" data-level="14.5" data-path="statistical-power.html"><a href="statistical-power.html#practical-considerations-and-challenges"><i class="fa fa-check"></i><b>14.5</b> Practical Considerations and Challenges</a>
-<ul>
-<li class="chapter" data-level="14.5.1" data-path="statistical-power.html"><a href="statistical-power.html#common-challenges-in-achieving-adequate-power"><i class="fa fa-check"></i><b>14.5.1</b> Common Challenges in Achieving Adequate Power</a></li>
-<li class="chapter" data-level="14.5.2" data-path="statistical-power.html"><a href="statistical-power.html#ethical-considerations-2"><i class="fa fa-check"></i><b>14.5.2</b> Ethical Considerations</a></li>
-</ul></li>
-<li class="chapter" data-level="14.6" data-path="statistical-power.html"><a href="statistical-power.html#real-world-applications-of-power-analysis-in-psychology"><i class="fa fa-check"></i><b>14.6</b> Real-World Applications of Power Analysis in Psychology</a>
-<ul>
-<li class="chapter" data-level="14.6.1" data-path="statistical-power.html"><a href="statistical-power.html#hypothetical-case-studies"><i class="fa fa-check"></i><b>14.6.1</b> Hypothetical Case Studies</a></li>
-<li class="chapter" data-level="14.6.2" data-path="statistical-power.html"><a href="statistical-power.html#best-practices-for-ensuring-adequate-power"><i class="fa fa-check"></i><b>14.6.2</b> Best Practices for Ensuring Adequate Power</a></li>
-</ul></li>
-<li class="chapter" data-level="14.7" data-path="statistical-power.html"><a href="statistical-power.html#chapter-summary-13"><i class="fa fa-check"></i><b>14.7</b> Chapter Summary</a>
-<ul>
-<li class="chapter" data-level="14.7.1" data-path="statistical-power.html"><a href="statistical-power.html#recap-of-key-concepts-4"><i class="fa fa-check"></i><b>14.7.1</b> Recap of Key Concepts</a></li>
-<li class="chapter" data-level="14.7.2" data-path="statistical-power.html"><a href="statistical-power.html#final-thoughts-4"><i class="fa fa-check"></i><b>14.7.2</b> Final Thoughts</a></li>
-</ul></li>
-<li class="chapter" data-level="14.8" data-path="statistical-power.html"><a href="statistical-power.html#practice-exercises-12"><i class="fa fa-check"></i><b>14.8</b> Practice Exercises</a>
-<ul>
-<li class="chapter" data-level="14.8.1" data-path="statistical-power.html"><a href="statistical-power.html#exercise-1-calculate-the-statistical-power-of-a-study-using-a-given-dataset-and-interpret-the-results"><i class="fa fa-check"></i><b>14.8.1</b> Exercise 1: Calculate the Statistical Power of a Study Using a Given Dataset and Interpret the Results</a></li>
-<li class="chapter" data-level="14.8.2" data-path="statistical-power.html"><a href="statistical-power.html#exercise-2-conduct-a-power-analysis-in-r-to-determine-the-required-sample-size-for-a-psychological-experiment-with-a-specified-effect-size-and-significance-level"><i class="fa fa-check"></i><b>14.8.2</b> Exercise 2: Conduct a Power Analysis in R to Determine the Required Sample Size for a Psychological Experiment with a Specified Effect Size and Significance Level</a></li>
-<li class="chapter" data-level="14.8.3" data-path="statistical-power.html"><a href="statistical-power.html#exercise-3-analyze-a-scenario-where-a-type-i-error-occurred-in-a-psychological-study"><i class="fa fa-check"></i><b>14.8.3</b> Exercise 3: Analyze a Scenario Where a Type I Error Occurred in a Psychological Study</a></li>
-<li class="chapter" data-level="14.8.4" data-path="statistical-power.html"><a href="statistical-power.html#exercise-4-analyze-a-scenario-where-a-type-ii-error-occurred-in-a-psychological-study"><i class="fa fa-check"></i><b>14.8.4</b> Exercise 4: Analyze a Scenario Where a Type II Error Occurred in a Psychological Study</a></li>
-<li class="chapter" data-level="14.8.5" data-path="statistical-power.html"><a href="statistical-power.html#exercise-5-compare-the-impact-of-changing-the-sample-size-effect-size-and-significance-level-on-power-using-different-hypothetical-scenarios-in-r"><i class="fa fa-check"></i><b>14.8.5</b> Exercise 5: Compare the Impact of Changing the Sample Size, Effect Size, and Significance Level on Power Using Different Hypothetical Scenarios in R</a></li>
+<li class="chapter" data-level="13.8.1" data-path="logistic-regression.html"><a href="logistic-regression.html#exercise-1-fitting-a-logistic-regression-model"><i class="fa fa-check"></i><b>13.8.1</b> Exercise 1: Fitting a Logistic Regression Model</a></li>
+<li class="chapter" data-level="13.8.2" data-path="logistic-regression.html"><a href="logistic-regression.html#exercise-2-visualizing-logistic-regression-results"><i class="fa fa-check"></i><b>13.8.2</b> Exercise 2: Visualizing Logistic Regression Results</a></li>
+<li class="chapter" data-level="13.8.3" data-path="logistic-regression.html"><a href="logistic-regression.html#exercise-3-interpreting-odds-ratios"><i class="fa fa-check"></i><b>13.8.3</b> Exercise 3: Interpreting Odds Ratios</a></li>
+<li class="chapter" data-level="13.8.4" data-path="logistic-regression.html"><a href="logistic-regression.html#exercise-4-checking-model-fit"><i class="fa fa-check"></i><b>13.8.4</b> Exercise 4: Checking Model Fit</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="15" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html"><i class="fa fa-check"></i><b>15</b> Appendix: Answers to Chapter Exercises</a>
+<li class="chapter" data-level="14" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html"><i class="fa fa-check"></i><b>14</b> Goodness of Fit</a>
 <ul>
-<li class="chapter" data-level="15.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-1-exercises"><i class="fa fa-check"></i><b>15.1</b> Answers to Chapter 1 Exercises</a>
+<li class="chapter" data-level="14.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#what-is-goodness-of-fit"><i class="fa fa-check"></i><b>14.1</b> What is Goodness of Fit?</a>
 <ul>
-<li class="chapter" data-level="15.1.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-familiarization-with-r-studio-1"><i class="fa fa-check"></i><b>15.1.1</b> Exercise 1: Familiarization with R Studio</a></li>
-<li class="chapter" data-level="15.1.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-basic-data-entry-and-operation-1"><i class="fa fa-check"></i><b>15.1.2</b> Exercise 2: Basic Data Entry and Operation</a></li>
-<li class="chapter" data-level="15.1.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-introduction-to-r-markdown-1"><i class="fa fa-check"></i><b>15.1.3</b> Exercise 3: Introduction to R Markdown</a></li>
-<li class="chapter" data-level="15.1.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-exploring-the-help-pane-1"><i class="fa fa-check"></i><b>15.1.4</b> Exercise 4: Exploring the Help Pane</a></li>
+<li class="chapter" data-level="14.1.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#why-goodness-of-fit-matters"><i class="fa fa-check"></i><b>14.1.1</b> Why Goodness of Fit Matters</a></li>
 </ul></li>
-<li class="chapter" data-level="15.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-2-exercises"><i class="fa fa-check"></i><b>15.2</b> Answers to Chapter 2 Exercises</a>
+<li class="chapter" data-level="14.2" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#chi-square"><i class="fa fa-check"></i><b>14.2</b> Chi-Square</a>
 <ul>
-<li class="chapter" data-level="15.2.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-identifying-data-types-1"><i class="fa fa-check"></i><b>15.2.1</b> Exercise 1: Identifying Data Types</a></li>
-<li class="chapter" data-level="15.2.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-designing-a-study-1"><i class="fa fa-check"></i><b>15.2.2</b> Exercise 2: Designing a Study</a></li>
-<li class="chapter" data-level="15.2.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-evaluating-research-1"><i class="fa fa-check"></i><b>15.2.3</b> Exercise 3: Evaluating Research</a></li>
+<li class="chapter" data-level="14.2.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#understanding-the-chi-square-test"><i class="fa fa-check"></i><b>14.2.1</b> Understanding the Chi-Square Test</a></li>
+<li class="chapter" data-level="14.2.2" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#calculating-chi-square-in-r"><i class="fa fa-check"></i><b>14.2.2</b> Calculating Chi-Square in R</a></li>
+<li class="chapter" data-level="14.2.3" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#real-world-applications-3"><i class="fa fa-check"></i><b>14.2.3</b> Real-World Applications</a></li>
 </ul></li>
-<li class="chapter" data-level="15.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-3-exercises"><i class="fa fa-check"></i><b>15.3</b> Answers to Chapter 3 Exercises</a>
+<li class="chapter" data-level="14.3" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#r-squared"><i class="fa fa-check"></i><b>14.3</b> R-Squared</a>
 <ul>
-<li class="chapter" data-level="15.3.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-evaluating-reliability-1"><i class="fa fa-check"></i><b>15.3.1</b> Exercise 1: Evaluating Reliability</a></li>
-<li class="chapter" data-level="15.3.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-assessing-validity-1"><i class="fa fa-check"></i><b>15.3.2</b> Exercise 2: Assessing Validity</a></li>
-<li class="chapter" data-level="15.3.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-identifying-and-addressing-data-collection-errors-1"><i class="fa fa-check"></i><b>15.3.3</b> Exercise 3: Identifying and Addressing Data Collection Errors</a></li>
-<li class="chapter" data-level="15.3.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-triangulation-to-enhance-validity-1"><i class="fa fa-check"></i><b>15.3.4</b> Exercise 4: Triangulation to Enhance Validity</a></li>
-<li class="chapter" data-level="15.3.5" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-5-role-play-on-ethical-data-collection-1"><i class="fa fa-check"></i><b>15.3.5</b> Exercise 5: Role Play on Ethical Data Collection</a></li>
-<li class="chapter" data-level="15.3.6" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-6-real-world-application-1"><i class="fa fa-check"></i><b>15.3.6</b> Exercise 6: Real-World Application</a></li>
+<li class="chapter" data-level="14.3.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#what-is-r-squared"><i class="fa fa-check"></i><b>14.3.1</b> What is R-Squared?</a></li>
+<li class="chapter" data-level="14.3.2" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#calculating-r-squared-in-r"><i class="fa fa-check"></i><b>14.3.2</b> Calculating R-Squared in R</a></li>
+<li class="chapter" data-level="14.3.3" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#adjusted-r-squared"><i class="fa fa-check"></i><b>14.3.3</b> Adjusted R-Squared</a></li>
+<li class="chapter" data-level="14.3.4" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#real-world-applications-4"><i class="fa fa-check"></i><b>14.3.4</b> Real-World Applications</a></li>
 </ul></li>
-<li class="chapter" data-level="15.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-4-practice-exercises"><i class="fa fa-check"></i><b>15.4</b> Answers to Chapter 4 Practice Exercises</a>
+<li class="chapter" data-level="14.4" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#the-f-test-for-comparing-models"><i class="fa fa-check"></i><b>14.4</b> The F-Test for Comparing Models</a>
 <ul>
-<li class="chapter" data-level="15.4.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-calculating-descriptive-statistics-1"><i class="fa fa-check"></i><b>15.4.1</b> Exercise 1: Calculating Descriptive Statistics</a></li>
-<li class="chapter" data-level="15.4.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-understanding-the-normal-distribution-1"><i class="fa fa-check"></i><b>15.4.2</b> Exercise 2: Understanding the Normal Distribution</a></li>
-<li class="chapter" data-level="15.4.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-applying-the-t-distribution-1"><i class="fa fa-check"></i><b>15.4.3</b> Exercise 3: Applying the T-Distribution</a></li>
-<li class="chapter" data-level="15.4.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-defining-and-simulating-sample-spaces-1"><i class="fa fa-check"></i><b>15.4.4</b> Exercise 4: Defining and Simulating Sample Spaces</a></li>
+<li class="chapter" data-level="14.4.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#what-is-the-f-test"><i class="fa fa-check"></i><b>14.4.1</b> What is the F-Test?</a></li>
+<li class="chapter" data-level="14.4.2" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#performing-the-f-test-in-r"><i class="fa fa-check"></i><b>14.4.2</b> Performing the F-Test in R</a></li>
 </ul></li>
-<li class="chapter" data-level="15.5" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-5-practice-exercises"><i class="fa fa-check"></i><b>15.5</b> Answers to Chapter 5 Practice Exercises</a>
+<li class="chapter" data-level="14.5" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#understanding-the-f-distribution"><i class="fa fa-check"></i><b>14.5</b> Understanding the F-Distribution</a>
 <ul>
-<li class="chapter" data-level="15.5.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-importing-data-1"><i class="fa fa-check"></i><b>15.5.1</b> Exercise 1: Importing Data</a></li>
-<li class="chapter" data-level="15.5.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-cleaning-data-with-dplyr-1"><i class="fa fa-check"></i><b>15.5.2</b> Exercise 2: Cleaning Data with dplyr</a></li>
-<li class="chapter" data-level="15.5.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-generating-descriptive-statistics-with-psych-1"><i class="fa fa-check"></i><b>15.5.3</b> Exercise 3: Generating Descriptive Statistics with <code>psych</code></a></li>
-<li class="chapter" data-level="15.5.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-visualizing-data-with-psych-1"><i class="fa fa-check"></i><b>15.5.4</b> Exercise 4: Visualizing Data with psych</a></li>
+<li class="chapter" data-level="14.5.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#what-is-the-f-distribution"><i class="fa fa-check"></i><b>14.5.1</b> What is the F-Distribution?</a></li>
+<li class="chapter" data-level="14.5.2" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#visualizing-the-f-distribution-in-r"><i class="fa fa-check"></i><b>14.5.2</b> Visualizing the F-Distribution in R</a></li>
+<li class="chapter" data-level="14.5.3" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#real-world-applications-5"><i class="fa fa-check"></i><b>14.5.3</b> Real-World Applications</a></li>
 </ul></li>
-<li class="chapter" data-level="15.6" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-6-practice-exercises"><i class="fa fa-check"></i><b>15.6</b> Answers to Chapter 6 Practice Exercises</a>
+<li class="chapter" data-level="14.6" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#putting-it-all-together-assessing-model-fit-in-practice"><i class="fa fa-check"></i><b>14.6</b> Putting It All Together – Assessing Model Fit in Practice</a>
 <ul>
-<li class="chapter" data-level="15.6.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-mean-centering-1"><i class="fa fa-check"></i><b>15.6.1</b> Exercise 1: Mean-Centering</a></li>
-<li class="chapter" data-level="15.6.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-z-scores-1"><i class="fa fa-check"></i><b>15.6.2</b> Exercise 2: Z-Scores</a></li>
-<li class="chapter" data-level="15.6.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-combining-mean-centering-and-z-scores-1"><i class="fa fa-check"></i><b>15.6.3</b> Exercise 3: Combining Mean-Centering and Z-Scores</a></li>
-<li class="chapter" data-level="15.6.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-non-linear-transformations-1"><i class="fa fa-check"></i><b>15.6.4</b> Exercise 4: Non-Linear Transformations</a></li>
+<li class="chapter" data-level="14.6.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#comprehensive-example"><i class="fa fa-check"></i><b>14.6.1</b> Comprehensive Example</a></li>
+<li class="chapter" data-level="14.6.2" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#best-practices-for-assessing-goodness-of-fit"><i class="fa fa-check"></i><b>14.6.2</b> Best Practices for Assessing Goodness of Fit</a></li>
 </ul></li>
-<li class="chapter" data-level="15.7" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-7-practice-exercises"><i class="fa fa-check"></i><b>15.7</b> Answers to Chapter 7 Practice Exercises</a>
+<li class="chapter" data-level="14.7" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#chapter-summary-13"><i class="fa fa-check"></i><b>14.7</b> Chapter Summary</a></li>
+<li class="chapter" data-level="14.8" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#practice-exercises-12"><i class="fa fa-check"></i><b>14.8</b> Practice Exercises</a>
 <ul>
-<li class="chapter" data-level="15.7.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-create-an-apa-compliant-bar-graph-1"><i class="fa fa-check"></i><b>15.7.1</b> Exercise 1: Create an APA-Compliant Bar Graph</a></li>
-<li class="chapter" data-level="15.7.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-modify-a-basic-ggplot2-plot-to-meet-apa-standards-1"><i class="fa fa-check"></i><b>15.7.2</b> Exercise 2: Modify a Basic ggplot2 Plot to Meet APA Standards</a></li>
-<li class="chapter" data-level="15.7.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-create-an-apa-compliant-line-graph-and-save-it-as-a-high-resolution-image-1"><i class="fa fa-check"></i><b>15.7.3</b> Exercise 3: Create an APA-Compliant Line Graph and Save It as a High-Resolution Image</a></li>
+<li class="chapter" data-level="14.8.1" data-path="goodness-of-fit.html"><a href="goodness-of-fit.html#section-7-practice-exercises"><i class="fa fa-check"></i><b>14.8.1</b> Section 7: Practice Exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="15.8" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-8-practice-exercises"><i class="fa fa-check"></i><b>15.8</b> Answers to Chapter 8 Practice Exercises</a>
-<ul>
-<li class="chapter" data-level="15.8.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-standard-error-calculation-and-interpretation"><i class="fa fa-check"></i><b>15.8.1</b> Exercise 1: Standard Error Calculation and Interpretation</a></li>
-<li class="chapter" data-level="15.8.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-confidence-interval-calculation-and-interpretation"><i class="fa fa-check"></i><b>15.8.2</b> Exercise 2: Confidence Interval Calculation and Interpretation</a></li>
-<li class="chapter" data-level="15.8.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-independent-samples-t-test-interpretation"><i class="fa fa-check"></i><b>15.8.3</b> Exercise 3: Independent Samples t-Test Interpretation</a></li>
-<li class="chapter" data-level="15.8.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-paired-samples-t-test-interpretation"><i class="fa fa-check"></i><b>15.8.4</b> Exercise 4: Paired Samples t-Test Interpretation</a></li>
-<li class="chapter" data-level="15.8.5" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-5-significance-and-effect-size-interpretation"><i class="fa fa-check"></i><b>15.8.5</b> Exercise 5: Significance and Effect Size Interpretation</a></li>
 </ul></li>
-<li class="chapter" data-level="15.9" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-9-practice-exercises"><i class="fa fa-check"></i><b>15.9</b> Answers to Chapter 9 Practice Exercises</a>
+<li class="chapter" data-level="15" data-path="statistical-power.html"><a href="statistical-power.html"><i class="fa fa-check"></i><b>15</b> Statistical Power</a>
 <ul>
-<li class="chapter" data-level="15.9.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-pearson-correlation-coefficient-calculation-and-interpretation"><i class="fa fa-check"></i><b>15.9.1</b> Exercise 1: Pearson Correlation Coefficient Calculation and Interpretation</a></li>
-<li class="chapter" data-level="15.9.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-scatter-plot-with-trend-line"><i class="fa fa-check"></i><b>15.9.2</b> Exercise 2: Scatter Plot with Trend Line</a></li>
-<li class="chapter" data-level="15.9.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-analyzing-the-size-of-the-correlation"><i class="fa fa-check"></i><b>15.9.3</b> Exercise 3: Analyzing the Size of the Correlation</a></li>
-<li class="chapter" data-level="15.9.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-impact-of-a-third-variable-confounder-and-controlling-for-it"><i class="fa fa-check"></i><b>15.9.4</b> Exercise 4: Impact of a Third Variable (Confounder) and Controlling for It</a></li>
-<li class="chapter" data-level="15.9.5" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-5-evaluating-correlation-and-causality"><i class="fa fa-check"></i><b>15.9.5</b> Exercise 5: Evaluating Correlation and Causality</a></li>
+<li class="chapter" data-level="15.1" data-path="statistical-power.html"><a href="statistical-power.html#introduction-to-statistical-power"><i class="fa fa-check"></i><b>15.1</b> Introduction to Statistical Power</a>
+<ul>
+<li class="chapter" data-level="15.1.1" data-path="statistical-power.html"><a href="statistical-power.html#definition-of-statistical-power"><i class="fa fa-check"></i><b>15.1.1</b> Definition of Statistical Power</a></li>
+<li class="chapter" data-level="15.1.2" data-path="statistical-power.html"><a href="statistical-power.html#the-role-of-power-in-psychological-research"><i class="fa fa-check"></i><b>15.1.2</b> The Role of Power in Psychological Research</a></li>
 </ul></li>
-<li class="chapter" data-level="15.10" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-10-practice-exercises"><i class="fa fa-check"></i><b>15.10</b> Answers to Chapter 10 Practice Exercises</a>
+<li class="chapter" data-level="15.2" data-path="statistical-power.html"><a href="statistical-power.html#understanding-type-i-and-type-ii-errors"><i class="fa fa-check"></i><b>15.2</b> Understanding Type I and Type II Errors</a>
 <ul>
-<li class="chapter" data-level="15.10.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-create-a-simple-bivariate-linear-model-1"><i class="fa fa-check"></i><b>15.10.1</b> Exercise 1: Create a Simple Bivariate Linear Model</a></li>
-<li class="chapter" data-level="15.10.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-analyze-residuals-to-assess-model-fit-1"><i class="fa fa-check"></i><b>15.10.2</b> Exercise 2: Analyze Residuals to Assess Model Fit</a></li>
-<li class="chapter" data-level="15.10.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-apply-bivariate-linear-models-to-a-real-world-dataset-1"><i class="fa fa-check"></i><b>15.10.3</b> Exercise 3: Apply Bivariate Linear Models to a Real-World Dataset</a></li>
+<li class="chapter" data-level="15.2.1" data-path="statistical-power.html"><a href="statistical-power.html#type-i-error-false-positive"><i class="fa fa-check"></i><b>15.2.1</b> Type I Error (False Positive)</a></li>
+<li class="chapter" data-level="15.2.2" data-path="statistical-power.html"><a href="statistical-power.html#type-ii-error-false-negative"><i class="fa fa-check"></i><b>15.2.2</b> Type II Error (False Negative)</a></li>
+<li class="chapter" data-level="15.2.3" data-path="statistical-power.html"><a href="statistical-power.html#balancing-type-i-and-type-ii-errors"><i class="fa fa-check"></i><b>15.2.3</b> Balancing Type I and Type II Errors</a></li>
 </ul></li>
-<li class="chapter" data-level="15.11" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-11-practice-exercises"><i class="fa fa-check"></i><b>15.11</b> Answers to Chapter 11 Practice Exercises</a>
+<li class="chapter" data-level="15.3" data-path="statistical-power.html"><a href="statistical-power.html#factors-affecting-power"><i class="fa fa-check"></i><b>15.3</b> Factors Affecting Power</a>
 <ul>
-<li class="chapter" data-level="15.11.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1"><i class="fa fa-check"></i><b>15.11.1</b> Exercise 1:</a></li>
-<li class="chapter" data-level="15.11.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2"><i class="fa fa-check"></i><b>15.11.2</b> Exercise 2:</a></li>
-<li class="chapter" data-level="15.11.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3"><i class="fa fa-check"></i><b>15.11.3</b> Exercise 3:</a></li>
-<li class="chapter" data-level="15.11.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4"><i class="fa fa-check"></i><b>15.11.4</b> Exercise 4:</a></li>
+<li class="chapter" data-level="15.3.1" data-path="statistical-power.html"><a href="statistical-power.html#sample-size"><i class="fa fa-check"></i><b>15.3.1</b> Sample Size</a></li>
+<li class="chapter" data-level="15.3.2" data-path="statistical-power.html"><a href="statistical-power.html#effect-size"><i class="fa fa-check"></i><b>15.3.2</b> Effect Size</a></li>
+<li class="chapter" data-level="15.3.3" data-path="statistical-power.html"><a href="statistical-power.html#significance-level-alpha"><i class="fa fa-check"></i><b>15.3.3</b> Significance Level (Alpha)</a></li>
 </ul></li>
-<li class="chapter" data-level="15.12" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-12-practice-exercises"><i class="fa fa-check"></i><b>15.12</b> Answers to Chapter 12 Practice Exercises</a>
+<li class="chapter" data-level="15.4" data-path="statistical-power.html"><a href="statistical-power.html#calculating-power-in-r"><i class="fa fa-check"></i><b>15.4</b> Calculating Power in R</a>
 <ul>
-<li class="chapter" data-level="15.12.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-categorical-x-categorical-interaction-1"><i class="fa fa-check"></i><b>15.12.1</b> Exercise 1: Categorical x Categorical Interaction</a></li>
-<li class="chapter" data-level="15.12.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-linear-x-linear-interaction-1"><i class="fa fa-check"></i><b>15.12.2</b> Exercise 2: Linear x Linear Interaction</a></li>
-<li class="chapter" data-level="15.12.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-categorical-x-linear-interaction-1"><i class="fa fa-check"></i><b>15.12.3</b> Exercise 3: Categorical x Linear Interaction</a></li>
-<li class="chapter" data-level="15.12.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-graphing-multivariate-interactions-1"><i class="fa fa-check"></i><b>15.12.4</b> Exercise 4: Graphing Multivariate Interactions</a></li>
+<li class="chapter" data-level="15.4.1" data-path="statistical-power.html"><a href="statistical-power.html#introduction-to-power-analysis"><i class="fa fa-check"></i><b>15.4.1</b> Introduction to Power Analysis</a></li>
+<li class="chapter" data-level="15.4.2" data-path="statistical-power.html"><a href="statistical-power.html#step-by-step-guide-to-conducting-power-analysis-in-r"><i class="fa fa-check"></i><b>15.4.2</b> Step-by-Step Guide to Conducting Power Analysis in R</a></li>
 </ul></li>
-<li class="chapter" data-level="15.13" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-15-practice-exercises"><i class="fa fa-check"></i><b>15.13</b> Answers to Chapter 15 Practice Exercises</a>
+<li class="chapter" data-level="15.5" data-path="statistical-power.html"><a href="statistical-power.html#practical-considerations-and-challenges"><i class="fa fa-check"></i><b>15.5</b> Practical Considerations and Challenges</a>
 <ul>
-<li class="chapter" data-level="15.13.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-chi-square-goodness-of-fit-test-1"><i class="fa fa-check"></i><b>15.13.1</b> Exercise 1: Chi-Square Goodness of Fit Test</a></li>
-<li class="chapter" data-level="15.13.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-calculating-r-squared"><i class="fa fa-check"></i><b>15.13.2</b> Exercise 2: Calculating R-Squared</a></li>
-<li class="chapter" data-level="15.13.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-f-test-for-comparing-models"><i class="fa fa-check"></i><b>15.13.3</b> Exercise 3: F-Test for Comparing Models</a></li>
-<li class="chapter" data-level="15.13.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-visualizing-the-f-distribution"><i class="fa fa-check"></i><b>15.13.4</b> Exercise 4: Visualizing the F-Distribution</a></li>
-<li class="chapter" data-level="15.13.5" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-5-comprehensive-analysis-1"><i class="fa fa-check"></i><b>15.13.5</b> Exercise 5: Comprehensive Analysis</a></li>
+<li class="chapter" data-level="15.5.1" data-path="statistical-power.html"><a href="statistical-power.html#common-challenges-in-achieving-adequate-power"><i class="fa fa-check"></i><b>15.5.1</b> Common Challenges in Achieving Adequate Power</a></li>
+<li class="chapter" data-level="15.5.2" data-path="statistical-power.html"><a href="statistical-power.html#ethical-considerations-2"><i class="fa fa-check"></i><b>15.5.2</b> Ethical Considerations</a></li>
 </ul></li>
-<li class="chapter" data-level="15.14" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-16-practice-exercises"><i class="fa fa-check"></i><b>15.14</b> Answers to Chapter 16 Practice Exercises</a>
+<li class="chapter" data-level="15.6" data-path="statistical-power.html"><a href="statistical-power.html#real-world-applications-of-power-analysis-in-psychology"><i class="fa fa-check"></i><b>15.6</b> Real-World Applications of Power Analysis in Psychology</a>
 <ul>
-<li class="chapter" data-level="15.14.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-power-calculation-interpretation"><i class="fa fa-check"></i><b>15.14.1</b> Exercise 1: Power Calculation Interpretation</a></li>
-<li class="chapter" data-level="15.14.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-sample-size-calculation-interpretation"><i class="fa fa-check"></i><b>15.14.2</b> Exercise 2: Sample Size Calculation Interpretation</a></li>
-<li class="chapter" data-level="15.14.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-type-i-error-analysis-interpretation"><i class="fa fa-check"></i><b>15.14.3</b> Exercise 3: Type I Error Analysis Interpretation</a></li>
-<li class="chapter" data-level="15.14.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-type-ii-error-analysis-interpretation"><i class="fa fa-check"></i><b>15.14.4</b> Exercise 4: Type II Error Analysis Interpretation</a></li>
-<li class="chapter" data-level="15.14.5" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-5-power-comparison-interpretation"><i class="fa fa-check"></i><b>15.14.5</b> Exercise 5: Power Comparison Interpretation</a></li>
+<li class="chapter" data-level="15.6.1" data-path="statistical-power.html"><a href="statistical-power.html#hypothetical-case-studies"><i class="fa fa-check"></i><b>15.6.1</b> Hypothetical Case Studies</a></li>
+<li class="chapter" data-level="15.6.2" data-path="statistical-power.html"><a href="statistical-power.html#best-practices-for-ensuring-adequate-power"><i class="fa fa-check"></i><b>15.6.2</b> Best Practices for Ensuring Adequate Power</a></li>
+</ul></li>
+<li class="chapter" data-level="15.7" data-path="statistical-power.html"><a href="statistical-power.html#chapter-summary-14"><i class="fa fa-check"></i><b>15.7</b> Chapter Summary</a>
+<ul>
+<li class="chapter" data-level="15.7.1" data-path="statistical-power.html"><a href="statistical-power.html#recap-of-key-concepts-5"><i class="fa fa-check"></i><b>15.7.1</b> Recap of Key Concepts</a></li>
+<li class="chapter" data-level="15.7.2" data-path="statistical-power.html"><a href="statistical-power.html#final-thoughts-5"><i class="fa fa-check"></i><b>15.7.2</b> Final Thoughts</a></li>
+</ul></li>
+<li class="chapter" data-level="15.8" data-path="statistical-power.html"><a href="statistical-power.html#practice-exercises-13"><i class="fa fa-check"></i><b>15.8</b> Practice Exercises</a>
+<ul>
+<li class="chapter" data-level="15.8.1" data-path="statistical-power.html"><a href="statistical-power.html#exercise-1-calculate-the-statistical-power-of-a-study-using-a-given-dataset-and-interpret-the-results"><i class="fa fa-check"></i><b>15.8.1</b> Exercise 1: Calculate the Statistical Power of a Study Using a Given Dataset and Interpret the Results</a></li>
+<li class="chapter" data-level="15.8.2" data-path="statistical-power.html"><a href="statistical-power.html#exercise-2-conduct-a-power-analysis-in-r-to-determine-the-required-sample-size-for-a-psychological-experiment-with-a-specified-effect-size-and-significance-level"><i class="fa fa-check"></i><b>15.8.2</b> Exercise 2: Conduct a Power Analysis in R to Determine the Required Sample Size for a Psychological Experiment with a Specified Effect Size and Significance Level</a></li>
+<li class="chapter" data-level="15.8.3" data-path="statistical-power.html"><a href="statistical-power.html#exercise-3-analyze-a-scenario-where-a-type-i-error-occurred-in-a-psychological-study"><i class="fa fa-check"></i><b>15.8.3</b> Exercise 3: Analyze a Scenario Where a Type I Error Occurred in a Psychological Study</a></li>
+<li class="chapter" data-level="15.8.4" data-path="statistical-power.html"><a href="statistical-power.html#exercise-4-analyze-a-scenario-where-a-type-ii-error-occurred-in-a-psychological-study"><i class="fa fa-check"></i><b>15.8.4</b> Exercise 4: Analyze a Scenario Where a Type II Error Occurred in a Psychological Study</a></li>
+<li class="chapter" data-level="15.8.5" data-path="statistical-power.html"><a href="statistical-power.html#exercise-5-compare-the-impact-of-changing-the-sample-size-effect-size-and-significance-level-on-power-using-different-hypothetical-scenarios-in-r"><i class="fa fa-check"></i><b>15.8.5</b> Exercise 5: Compare the Impact of Changing the Sample Size, Effect Size, and Significance Level on Power Using Different Hypothetical Scenarios in R</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html"><i class="fa fa-check"></i><b>16</b> Appendix: Answers to Chapter Exercises</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-1-exercises"><i class="fa fa-check"></i><b>16.1</b> Answers to Chapter 1 Exercises</a>
+<ul>
+<li class="chapter" data-level="16.1.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-familiarization-with-r-studio-1"><i class="fa fa-check"></i><b>16.1.1</b> Exercise 1: Familiarization with R Studio</a></li>
+<li class="chapter" data-level="16.1.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-basic-data-entry-and-operation-1"><i class="fa fa-check"></i><b>16.1.2</b> Exercise 2: Basic Data Entry and Operation</a></li>
+<li class="chapter" data-level="16.1.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-introduction-to-r-markdown-1"><i class="fa fa-check"></i><b>16.1.3</b> Exercise 3: Introduction to R Markdown</a></li>
+<li class="chapter" data-level="16.1.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-exploring-the-help-pane-1"><i class="fa fa-check"></i><b>16.1.4</b> Exercise 4: Exploring the Help Pane</a></li>
+</ul></li>
+<li class="chapter" data-level="16.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-2-exercises"><i class="fa fa-check"></i><b>16.2</b> Answers to Chapter 2 Exercises</a>
+<ul>
+<li class="chapter" data-level="16.2.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-identifying-data-types-1"><i class="fa fa-check"></i><b>16.2.1</b> Exercise 1: Identifying Data Types</a></li>
+<li class="chapter" data-level="16.2.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-designing-a-study-1"><i class="fa fa-check"></i><b>16.2.2</b> Exercise 2: Designing a Study</a></li>
+<li class="chapter" data-level="16.2.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-evaluating-research-1"><i class="fa fa-check"></i><b>16.2.3</b> Exercise 3: Evaluating Research</a></li>
+</ul></li>
+<li class="chapter" data-level="16.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-3-exercises"><i class="fa fa-check"></i><b>16.3</b> Answers to Chapter 3 Exercises</a>
+<ul>
+<li class="chapter" data-level="16.3.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-evaluating-reliability-1"><i class="fa fa-check"></i><b>16.3.1</b> Exercise 1: Evaluating Reliability</a></li>
+<li class="chapter" data-level="16.3.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-assessing-validity-1"><i class="fa fa-check"></i><b>16.3.2</b> Exercise 2: Assessing Validity</a></li>
+<li class="chapter" data-level="16.3.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-identifying-and-addressing-data-collection-errors-1"><i class="fa fa-check"></i><b>16.3.3</b> Exercise 3: Identifying and Addressing Data Collection Errors</a></li>
+<li class="chapter" data-level="16.3.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-triangulation-to-enhance-validity-1"><i class="fa fa-check"></i><b>16.3.4</b> Exercise 4: Triangulation to Enhance Validity</a></li>
+<li class="chapter" data-level="16.3.5" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-5-role-play-on-ethical-data-collection-1"><i class="fa fa-check"></i><b>16.3.5</b> Exercise 5: Role Play on Ethical Data Collection</a></li>
+<li class="chapter" data-level="16.3.6" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-6-real-world-application-1"><i class="fa fa-check"></i><b>16.3.6</b> Exercise 6: Real-World Application</a></li>
+</ul></li>
+<li class="chapter" data-level="16.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-4-practice-exercises"><i class="fa fa-check"></i><b>16.4</b> Answers to Chapter 4 Practice Exercises</a>
+<ul>
+<li class="chapter" data-level="16.4.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-calculating-descriptive-statistics-1"><i class="fa fa-check"></i><b>16.4.1</b> Exercise 1: Calculating Descriptive Statistics</a></li>
+<li class="chapter" data-level="16.4.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-understanding-the-normal-distribution-1"><i class="fa fa-check"></i><b>16.4.2</b> Exercise 2: Understanding the Normal Distribution</a></li>
+<li class="chapter" data-level="16.4.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-applying-the-t-distribution-1"><i class="fa fa-check"></i><b>16.4.3</b> Exercise 3: Applying the T-Distribution</a></li>
+<li class="chapter" data-level="16.4.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-defining-and-simulating-sample-spaces-1"><i class="fa fa-check"></i><b>16.4.4</b> Exercise 4: Defining and Simulating Sample Spaces</a></li>
+</ul></li>
+<li class="chapter" data-level="16.5" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-5-practice-exercises"><i class="fa fa-check"></i><b>16.5</b> Answers to Chapter 5 Practice Exercises</a>
+<ul>
+<li class="chapter" data-level="16.5.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-importing-data-1"><i class="fa fa-check"></i><b>16.5.1</b> Exercise 1: Importing Data</a></li>
+<li class="chapter" data-level="16.5.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-cleaning-data-with-dplyr-1"><i class="fa fa-check"></i><b>16.5.2</b> Exercise 2: Cleaning Data with dplyr</a></li>
+<li class="chapter" data-level="16.5.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-generating-descriptive-statistics-with-psych-1"><i class="fa fa-check"></i><b>16.5.3</b> Exercise 3: Generating Descriptive Statistics with <code>psych</code></a></li>
+<li class="chapter" data-level="16.5.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-visualizing-data-with-psych-1"><i class="fa fa-check"></i><b>16.5.4</b> Exercise 4: Visualizing Data with psych</a></li>
+</ul></li>
+<li class="chapter" data-level="16.6" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-6-practice-exercises"><i class="fa fa-check"></i><b>16.6</b> Answers to Chapter 6 Practice Exercises</a>
+<ul>
+<li class="chapter" data-level="16.6.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-mean-centering-1"><i class="fa fa-check"></i><b>16.6.1</b> Exercise 1: Mean-Centering</a></li>
+<li class="chapter" data-level="16.6.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-z-scores-1"><i class="fa fa-check"></i><b>16.6.2</b> Exercise 2: Z-Scores</a></li>
+<li class="chapter" data-level="16.6.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-combining-mean-centering-and-z-scores-1"><i class="fa fa-check"></i><b>16.6.3</b> Exercise 3: Combining Mean-Centering and Z-Scores</a></li>
+<li class="chapter" data-level="16.6.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-non-linear-transformations-1"><i class="fa fa-check"></i><b>16.6.4</b> Exercise 4: Non-Linear Transformations</a></li>
+</ul></li>
+<li class="chapter" data-level="16.7" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-7-practice-exercises"><i class="fa fa-check"></i><b>16.7</b> Answers to Chapter 7 Practice Exercises</a>
+<ul>
+<li class="chapter" data-level="16.7.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-create-an-apa-compliant-bar-graph-1"><i class="fa fa-check"></i><b>16.7.1</b> Exercise 1: Create an APA-Compliant Bar Graph</a></li>
+<li class="chapter" data-level="16.7.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-modify-a-basic-ggplot2-plot-to-meet-apa-standards-1"><i class="fa fa-check"></i><b>16.7.2</b> Exercise 2: Modify a Basic ggplot2 Plot to Meet APA Standards</a></li>
+<li class="chapter" data-level="16.7.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-create-an-apa-compliant-line-graph-and-save-it-as-a-high-resolution-image-1"><i class="fa fa-check"></i><b>16.7.3</b> Exercise 3: Create an APA-Compliant Line Graph and Save It as a High-Resolution Image</a></li>
+</ul></li>
+<li class="chapter" data-level="16.8" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-8-practice-exercises"><i class="fa fa-check"></i><b>16.8</b> Answers to Chapter 8 Practice Exercises</a>
+<ul>
+<li class="chapter" data-level="16.8.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-standard-error-calculation-and-interpretation"><i class="fa fa-check"></i><b>16.8.1</b> Exercise 1: Standard Error Calculation and Interpretation</a></li>
+<li class="chapter" data-level="16.8.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-confidence-interval-calculation-and-interpretation"><i class="fa fa-check"></i><b>16.8.2</b> Exercise 2: Confidence Interval Calculation and Interpretation</a></li>
+<li class="chapter" data-level="16.8.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-independent-samples-t-test-interpretation"><i class="fa fa-check"></i><b>16.8.3</b> Exercise 3: Independent Samples t-Test Interpretation</a></li>
+<li class="chapter" data-level="16.8.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-paired-samples-t-test-interpretation"><i class="fa fa-check"></i><b>16.8.4</b> Exercise 4: Paired Samples t-Test Interpretation</a></li>
+<li class="chapter" data-level="16.8.5" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-5-significance-and-effect-size-interpretation"><i class="fa fa-check"></i><b>16.8.5</b> Exercise 5: Significance and Effect Size Interpretation</a></li>
+</ul></li>
+<li class="chapter" data-level="16.9" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-9-practice-exercises"><i class="fa fa-check"></i><b>16.9</b> Answers to Chapter 9 Practice Exercises</a>
+<ul>
+<li class="chapter" data-level="16.9.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-pearson-correlation-coefficient-calculation-and-interpretation"><i class="fa fa-check"></i><b>16.9.1</b> Exercise 1: Pearson Correlation Coefficient Calculation and Interpretation</a></li>
+<li class="chapter" data-level="16.9.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-scatter-plot-with-trend-line"><i class="fa fa-check"></i><b>16.9.2</b> Exercise 2: Scatter Plot with Trend Line</a></li>
+<li class="chapter" data-level="16.9.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-analyzing-the-size-of-the-correlation"><i class="fa fa-check"></i><b>16.9.3</b> Exercise 3: Analyzing the Size of the Correlation</a></li>
+<li class="chapter" data-level="16.9.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-impact-of-a-third-variable-confounder-and-controlling-for-it"><i class="fa fa-check"></i><b>16.9.4</b> Exercise 4: Impact of a Third Variable (Confounder) and Controlling for It</a></li>
+<li class="chapter" data-level="16.9.5" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-5-evaluating-correlation-and-causality"><i class="fa fa-check"></i><b>16.9.5</b> Exercise 5: Evaluating Correlation and Causality</a></li>
+</ul></li>
+<li class="chapter" data-level="16.10" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-10-practice-exercises"><i class="fa fa-check"></i><b>16.10</b> Answers to Chapter 10 Practice Exercises</a>
+<ul>
+<li class="chapter" data-level="16.10.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-create-a-simple-bivariate-linear-model-1"><i class="fa fa-check"></i><b>16.10.1</b> Exercise 1: Create a Simple Bivariate Linear Model</a></li>
+<li class="chapter" data-level="16.10.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-analyze-residuals-to-assess-model-fit-1"><i class="fa fa-check"></i><b>16.10.2</b> Exercise 2: Analyze Residuals to Assess Model Fit</a></li>
+<li class="chapter" data-level="16.10.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-apply-bivariate-linear-models-to-a-real-world-dataset-1"><i class="fa fa-check"></i><b>16.10.3</b> Exercise 3: Apply Bivariate Linear Models to a Real-World Dataset</a></li>
+</ul></li>
+<li class="chapter" data-level="16.11" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-11-practice-exercises"><i class="fa fa-check"></i><b>16.11</b> Answers to Chapter 11 Practice Exercises</a>
+<ul>
+<li class="chapter" data-level="16.11.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-fit-the-multiple-regression"><i class="fa fa-check"></i><b>16.11.1</b> Exercise 1: Fit the Multiple Regression</a></li>
+<li class="chapter" data-level="16.11.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-compare-bivariate-vs-multivariate"><i class="fa fa-check"></i><b>16.11.2</b> Exercise 2: Compare Bivariate vs Multivariate</a></li>
+<li class="chapter" data-level="16.11.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-plot-sleep-quality"><i class="fa fa-check"></i><b>16.11.3</b> Exercise 3: Plot Sleep Quality</a></li>
+<li class="chapter" data-level="16.11.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-bivariate-vs-multivariate"><i class="fa fa-check"></i><b>16.11.4</b> Exercise 4: Bivariate vs Multivariate</a></li>
+</ul></li>
+<li class="chapter" data-level="16.12" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-12-practice-exercises"><i class="fa fa-check"></i><b>16.12</b> Answers to Chapter 12 Practice Exercises</a>
+<ul>
+<li class="chapter" data-level="16.12.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-categorical-x-categorical-interaction-1"><i class="fa fa-check"></i><b>16.12.1</b> Exercise 1: Categorical x Categorical Interaction</a></li>
+<li class="chapter" data-level="16.12.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-linear-x-linear-interaction-1"><i class="fa fa-check"></i><b>16.12.2</b> Exercise 2: Linear x Linear Interaction</a></li>
+<li class="chapter" data-level="16.12.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-categorical-x-linear-interaction-1"><i class="fa fa-check"></i><b>16.12.3</b> Exercise 3: Categorical x Linear Interaction</a></li>
+<li class="chapter" data-level="16.12.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-graphing-multivariate-interactions-1"><i class="fa fa-check"></i><b>16.12.4</b> Exercise 4: Graphing Multivariate Interactions</a></li>
+</ul></li>
+<li class="chapter" data-level="16.13" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-13-practice-exercises"><i class="fa fa-check"></i><b>16.13</b> Answers to Chapter 13 Practice Exercises</a>
+<ul>
+<li class="chapter" data-level="16.13.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-fitting-a-logistic-regression-model-1"><i class="fa fa-check"></i><b>16.13.1</b> Exercise 1: Fitting a Logistic Regression Model</a></li>
+<li class="chapter" data-level="16.13.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-visualizing-logistic-regression-results-1"><i class="fa fa-check"></i><b>16.13.2</b> Exercise 2: Visualizing Logistic Regression Results</a></li>
+<li class="chapter" data-level="16.13.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-interpreting-odds-ratios-1"><i class="fa fa-check"></i><b>16.13.3</b> Exercise 3: Interpreting Odds Ratios</a></li>
+<li class="chapter" data-level="16.13.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-checking-model-fit-1"><i class="fa fa-check"></i><b>16.13.4</b> Exercise 4: Checking Model Fit</a></li>
+</ul></li>
+<li class="chapter" data-level="16.14" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-14-practice-exercises"><i class="fa fa-check"></i><b>16.14</b> Answers to Chapter 14 Practice Exercises</a>
+<ul>
+<li class="chapter" data-level="16.14.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-chi-square-goodness-of-fit-test-1"><i class="fa fa-check"></i><b>16.14.1</b> Exercise 1: Chi-Square Goodness of Fit Test</a></li>
+<li class="chapter" data-level="16.14.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-calculating-r-squared"><i class="fa fa-check"></i><b>16.14.2</b> Exercise 2: Calculating R-Squared</a></li>
+<li class="chapter" data-level="16.14.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-f-test-for-comparing-models"><i class="fa fa-check"></i><b>16.14.3</b> Exercise 3: F-Test for Comparing Models</a></li>
+<li class="chapter" data-level="16.14.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-visualizing-the-f-distribution"><i class="fa fa-check"></i><b>16.14.4</b> Exercise 4: Visualizing the F-Distribution</a></li>
+<li class="chapter" data-level="16.14.5" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-5-comprehensive-analysis-1"><i class="fa fa-check"></i><b>16.14.5</b> Exercise 5: Comprehensive Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="16.15" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#answers-to-chapter-15-practice-exercises"><i class="fa fa-check"></i><b>16.15</b> Answers to Chapter 15 Practice Exercises</a>
+<ul>
+<li class="chapter" data-level="16.15.1" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-1-power-calculation-interpretation"><i class="fa fa-check"></i><b>16.15.1</b> Exercise 1: Power Calculation Interpretation</a></li>
+<li class="chapter" data-level="16.15.2" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-2-sample-size-calculation-interpretation"><i class="fa fa-check"></i><b>16.15.2</b> Exercise 2: Sample Size Calculation Interpretation</a></li>
+<li class="chapter" data-level="16.15.3" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-3-type-i-error-analysis-interpretation"><i class="fa fa-check"></i><b>16.15.3</b> Exercise 3: Type I Error Analysis Interpretation</a></li>
+<li class="chapter" data-level="16.15.4" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-4-type-ii-error-analysis-interpretation"><i class="fa fa-check"></i><b>16.15.4</b> Exercise 4: Type II Error Analysis Interpretation</a></li>
+<li class="chapter" data-level="16.15.5" data-path="appendix-answers-to-chapter-exercises.html"><a href="appendix-answers-to-chapter-exercises.html#exercise-5-power-comparison-interpretation"><i class="fa fa-check"></i><b>16.15.5</b> Exercise 5: Power Comparison Interpretation</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -968,10 +1030,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="goodness-of-fit" class="section level1 hasAnchor" number="13">
-<h1><span class="header-section-number">Chapter 13</span> Goodness of Fit<a href="goodness-of-fit.html#goodness-of-fit" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="what-is-goodness-of-fit" class="section level2 hasAnchor" number="13.1">
-<h2><span class="header-section-number">13.1</span> What is Goodness of Fit?<a href="goodness-of-fit.html#what-is-goodness-of-fit" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="goodness-of-fit" class="section level1 hasAnchor" number="14">
+<h1><span class="header-section-number">Chapter 14</span> Goodness of Fit<a href="goodness-of-fit.html#goodness-of-fit" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="what-is-goodness-of-fit" class="section level2 hasAnchor" number="14.1">
+<h2><span class="header-section-number">14.1</span> What is Goodness of Fit?<a href="goodness-of-fit.html#what-is-goodness-of-fit" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>Definition of Goodness of Fit</strong></p>
 <p>Goodness of fit refers to the extent to which a statistical model
 accurately represents the observed data. It is a measure of how well the
@@ -998,8 +1060,8 @@ variables. A high goodness of fit would suggest that the model is valid
 and that the relationships identified are meaningful. In contrast, a
 poor fit might indicate that important variables have been overlooked or
 that the model’s assumptions are incorrect.</p>
-<div id="why-goodness-of-fit-matters" class="section level3 hasAnchor" number="13.1.1">
-<h3><span class="header-section-number">13.1.1</span> Why Goodness of Fit Matters<a href="goodness-of-fit.html#why-goodness-of-fit-matters" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="why-goodness-of-fit-matters" class="section level3 hasAnchor" number="14.1.1">
+<h3><span class="header-section-number">14.1.1</span> Why Goodness of Fit Matters<a href="goodness-of-fit.html#why-goodness-of-fit-matters" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Implications of a Good or Poor Fit</strong></p>
 <p>The goodness of fit of a model has significant implications for the
 validity and reliability of research findings. A good fit indicates that
@@ -1055,10 +1117,10 @@ is essential for developing valid theories, making accurate predictions,
 and designing effective interventions.</p>
 </div>
 </div>
-<div id="chi-square" class="section level2 hasAnchor" number="13.2">
-<h2><span class="header-section-number">13.2</span> Chi-Square<a href="goodness-of-fit.html#chi-square" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="understanding-the-chi-square-test" class="section level3 hasAnchor" number="13.2.1">
-<h3><span class="header-section-number">13.2.1</span> Understanding the Chi-Square Test<a href="goodness-of-fit.html#understanding-the-chi-square-test" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="chi-square" class="section level2 hasAnchor" number="14.2">
+<h2><span class="header-section-number">14.2</span> Chi-Square<a href="goodness-of-fit.html#chi-square" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="understanding-the-chi-square-test" class="section level3 hasAnchor" number="14.2.1">
+<h3><span class="header-section-number">14.2.1</span> Understanding the Chi-Square Test<a href="goodness-of-fit.html#understanding-the-chi-square-test" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Explanation of the Chi-Square Test</strong></p>
 <p>The Chi-Square test is a statistical method used to determine whether
 there is a significant difference between the observed frequencies in
@@ -1111,8 +1173,8 @@ equally across different conditions. A Chi-Square test can help you
 determine if there’s a significant deviation from this expectation.</p></li>
 </ul>
 </div>
-<div id="calculating-chi-square-in-r" class="section level3 hasAnchor" number="13.2.2">
-<h3><span class="header-section-number">13.2.2</span> Calculating Chi-Square in R<a href="goodness-of-fit.html#calculating-chi-square-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="calculating-chi-square-in-r" class="section level3 hasAnchor" number="14.2.2">
+<h3><span class="header-section-number">14.2.2</span> Calculating Chi-Square in R<a href="goodness-of-fit.html#calculating-chi-square-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Step-by-Step Guide to Performing a Chi-Square Goodness of Fit Test in
 R</strong></p>
 <p>Let’s walk through how you can perform a Chi-Square goodness of fit test
@@ -1127,14 +1189,14 @@ You hypothesize that participants would choose each symbol equally
 running the experiment, you want to see if the actual choices match this
 expectation.</p>
 <p>Here’s how you can do it in R:</p>
-<div class="sourceCode" id="cb274"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb274-1"><a href="goodness-of-fit.html#cb274-1" tabindex="-1"></a><span class="co"># Step 1: Input your observed data</span></span>
-<span id="cb274-2"><a href="goodness-of-fit.html#cb274-2" tabindex="-1"></a>observed <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">30</span>, <span class="dv">25</span>, <span class="dv">20</span>, <span class="dv">25</span>)  <span class="co"># These are the counts of how many participants chose each symbol</span></span>
-<span id="cb274-3"><a href="goodness-of-fit.html#cb274-3" tabindex="-1"></a></span>
-<span id="cb274-4"><a href="goodness-of-fit.html#cb274-4" tabindex="-1"></a><span class="co"># Step 2: Define your expected frequencies</span></span>
-<span id="cb274-5"><a href="goodness-of-fit.html#cb274-5" tabindex="-1"></a>expected <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">25</span>, <span class="dv">25</span>, <span class="dv">25</span>, <span class="dv">25</span>)  <span class="co"># You expect each symbol to be chosen equally</span></span>
-<span id="cb274-6"><a href="goodness-of-fit.html#cb274-6" tabindex="-1"></a></span>
-<span id="cb274-7"><a href="goodness-of-fit.html#cb274-7" tabindex="-1"></a><span class="co"># Step 3: Perform the Chi-Square test</span></span>
-<span id="cb274-8"><a href="goodness-of-fit.html#cb274-8" tabindex="-1"></a><span class="fu">chisq.test</span>(observed, <span class="at">p =</span> expected <span class="sc">/</span> <span class="fu">sum</span>(expected))</span></code></pre></div>
+<div class="sourceCode" id="cb314"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb314-1"><a href="goodness-of-fit.html#cb314-1" tabindex="-1"></a><span class="co"># Step 1: Input your observed data</span></span>
+<span id="cb314-2"><a href="goodness-of-fit.html#cb314-2" tabindex="-1"></a>observed <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">30</span>, <span class="dv">25</span>, <span class="dv">20</span>, <span class="dv">25</span>)  <span class="co"># These are the counts of how many participants chose each symbol</span></span>
+<span id="cb314-3"><a href="goodness-of-fit.html#cb314-3" tabindex="-1"></a></span>
+<span id="cb314-4"><a href="goodness-of-fit.html#cb314-4" tabindex="-1"></a><span class="co"># Step 2: Define your expected frequencies</span></span>
+<span id="cb314-5"><a href="goodness-of-fit.html#cb314-5" tabindex="-1"></a>expected <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">25</span>, <span class="dv">25</span>, <span class="dv">25</span>, <span class="dv">25</span>)  <span class="co"># You expect each symbol to be chosen equally</span></span>
+<span id="cb314-6"><a href="goodness-of-fit.html#cb314-6" tabindex="-1"></a></span>
+<span id="cb314-7"><a href="goodness-of-fit.html#cb314-7" tabindex="-1"></a><span class="co"># Step 3: Perform the Chi-Square test</span></span>
+<span id="cb314-8"><a href="goodness-of-fit.html#cb314-8" tabindex="-1"></a><span class="fu">chisq.test</span>(observed, <span class="at">p =</span> expected <span class="sc">/</span> <span class="fu">sum</span>(expected))</span></code></pre></div>
 <pre><code>## 
 ##  Chi-squared test for given probabilities
 ## 
@@ -1154,8 +1216,8 @@ different from the expected frequencies, meaning your theoretical
 distribution doesn’t fit the data well.</p></li>
 </ul>
 </div>
-<div id="real-world-applications-3" class="section level3 hasAnchor" number="13.2.3">
-<h3><span class="header-section-number">13.2.3</span> Real-World Applications<a href="goodness-of-fit.html#real-world-applications-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="real-world-applications-3" class="section level3 hasAnchor" number="14.2.3">
+<h3><span class="header-section-number">14.2.3</span> Real-World Applications<a href="goodness-of-fit.html#real-world-applications-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Examples of Using the Chi-Square Test in Psychological Research</strong></p>
 <p>The Chi-Square test is widely used in psychological research to compare
 observed data with expected outcomes. Here are a few examples:</p>
@@ -1197,10 +1259,10 @@ researchers understand whether their observed data matches their
 theoretical expectations.</p>
 </div>
 </div>
-<div id="r-squared" class="section level2 hasAnchor" number="13.3">
-<h2><span class="header-section-number">13.3</span> R-Squared<a href="goodness-of-fit.html#r-squared" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="what-is-r-squared" class="section level3 hasAnchor" number="13.3.1">
-<h3><span class="header-section-number">13.3.1</span> What is R-Squared?<a href="goodness-of-fit.html#what-is-r-squared" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="r-squared" class="section level2 hasAnchor" number="14.3">
+<h2><span class="header-section-number">14.3</span> R-Squared<a href="goodness-of-fit.html#r-squared" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="what-is-r-squared" class="section level3 hasAnchor" number="14.3.1">
+<h3><span class="header-section-number">14.3.1</span> What is R-Squared?<a href="goodness-of-fit.html#what-is-r-squared" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Explanation of R-Squared</strong></p>
 <p>R-squared is a key concept in statistics, particularly in regression
 analysis. It’s a measure that tells us how well the independent
@@ -1262,23 +1324,23 @@ might be too tailored to the specific dataset and may not generalize
 well to other data.</p></li>
 </ul>
 </div>
-<div id="calculating-r-squared-in-r" class="section level3 hasAnchor" number="13.3.2">
-<h3><span class="header-section-number">13.3.2</span> Calculating R-Squared in R<a href="goodness-of-fit.html#calculating-r-squared-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="calculating-r-squared-in-r" class="section level3 hasAnchor" number="14.3.2">
+<h3><span class="header-section-number">14.3.2</span> Calculating R-Squared in R<a href="goodness-of-fit.html#calculating-r-squared-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Step-by-Step Guide to Calculating R-Squared in R Using a Linear
 Regression Model</strong></p>
 <p>Let’s walk through how to calculate R-squared in R using a simple linear
 regression model. Suppose you are trying to predict anxiety levels based
 on the number of hours of sleep.</p>
 <p>Here’s how you can do it in R:</p>
-<div class="sourceCode" id="cb276"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb276-1"><a href="goodness-of-fit.html#cb276-1" tabindex="-1"></a><span class="co"># Step 1: Input your data</span></span>
-<span id="cb276-2"><a href="goodness-of-fit.html#cb276-2" tabindex="-1"></a>sleep_hours <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">8</span>, <span class="dv">7</span>, <span class="dv">6</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">9</span>, <span class="dv">7</span>, <span class="dv">6</span>, <span class="dv">5</span>, <span class="dv">8</span>)  <span class="co"># Hours of sleep</span></span>
-<span id="cb276-3"><a href="goodness-of-fit.html#cb276-3" tabindex="-1"></a>anxiety_levels <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">5</span>)  <span class="co"># Anxiety levels</span></span>
-<span id="cb276-4"><a href="goodness-of-fit.html#cb276-4" tabindex="-1"></a></span>
-<span id="cb276-5"><a href="goodness-of-fit.html#cb276-5" tabindex="-1"></a><span class="co"># Step 2: Fit a linear regression model</span></span>
-<span id="cb276-6"><a href="goodness-of-fit.html#cb276-6" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(anxiety_levels <span class="sc">~</span> sleep_hours)</span>
-<span id="cb276-7"><a href="goodness-of-fit.html#cb276-7" tabindex="-1"></a></span>
-<span id="cb276-8"><a href="goodness-of-fit.html#cb276-8" tabindex="-1"></a><span class="co"># Step 3: View the summary of the model, which includes R-squared</span></span>
-<span id="cb276-9"><a href="goodness-of-fit.html#cb276-9" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code></pre></div>
+<div class="sourceCode" id="cb316"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb316-1"><a href="goodness-of-fit.html#cb316-1" tabindex="-1"></a><span class="co"># Step 1: Input your data</span></span>
+<span id="cb316-2"><a href="goodness-of-fit.html#cb316-2" tabindex="-1"></a>sleep_hours <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">8</span>, <span class="dv">7</span>, <span class="dv">6</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">9</span>, <span class="dv">7</span>, <span class="dv">6</span>, <span class="dv">5</span>, <span class="dv">8</span>)  <span class="co"># Hours of sleep</span></span>
+<span id="cb316-3"><a href="goodness-of-fit.html#cb316-3" tabindex="-1"></a>anxiety_levels <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">5</span>)  <span class="co"># Anxiety levels</span></span>
+<span id="cb316-4"><a href="goodness-of-fit.html#cb316-4" tabindex="-1"></a></span>
+<span id="cb316-5"><a href="goodness-of-fit.html#cb316-5" tabindex="-1"></a><span class="co"># Step 2: Fit a linear regression model</span></span>
+<span id="cb316-6"><a href="goodness-of-fit.html#cb316-6" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(anxiety_levels <span class="sc">~</span> sleep_hours)</span>
+<span id="cb316-7"><a href="goodness-of-fit.html#cb316-7" tabindex="-1"></a></span>
+<span id="cb316-8"><a href="goodness-of-fit.html#cb316-8" tabindex="-1"></a><span class="co"># Step 3: View the summary of the model, which includes R-squared</span></span>
+<span id="cb316-9"><a href="goodness-of-fit.html#cb316-9" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code></pre></div>
 <pre><code>## Warning in summary.lm(model): essentially perfect fit: summary may be
 ## unreliable</code></pre>
 <pre><code>## 
@@ -1312,8 +1374,8 @@ often influenced by multiple factors. The remaining 35% of the variation
 might be due to other factors like stress, diet, or personality traits,
 which are not included in the model.</p>
 </div>
-<div id="adjusted-r-squared" class="section level3 hasAnchor" number="13.3.3">
-<h3><span class="header-section-number">13.3.3</span> Adjusted R-Squared<a href="goodness-of-fit.html#adjusted-r-squared" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="adjusted-r-squared" class="section level3 hasAnchor" number="14.3.3">
+<h3><span class="header-section-number">14.3.3</span> Adjusted R-Squared<a href="goodness-of-fit.html#adjusted-r-squared" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Introduction to Adjusted R-Squared</strong></p>
 <p>While R-squared is useful, it has a limitation: it can artificially
 increase as more predictors are added to the model, even if those
@@ -1335,19 +1397,19 @@ but this could be just because you added another predictor. Adjusted
 R-squared takes into account the number of predictors and tells you
 whether adding the extra predictor actually improved the model’s fit.</p>
 <p>Here’s how you can compare these models in R:</p>
-<div class="sourceCode" id="cb279"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb279-1"><a href="goodness-of-fit.html#cb279-1" tabindex="-1"></a><span class="co"># Model 1: Anxiety ~ Sleep Hours</span></span>
-<span id="cb279-2"><a href="goodness-of-fit.html#cb279-2" tabindex="-1"></a>model1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(anxiety_levels <span class="sc">~</span> sleep_hours)</span>
-<span id="cb279-3"><a href="goodness-of-fit.html#cb279-3" tabindex="-1"></a></span>
-<span id="cb279-4"><a href="goodness-of-fit.html#cb279-4" tabindex="-1"></a><span class="co"># Model 2: Anxiety ~ Sleep Hours + Social Support</span></span>
-<span id="cb279-5"><a href="goodness-of-fit.html#cb279-5" tabindex="-1"></a>social_support <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">6</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">7</span>, <span class="dv">6</span>, <span class="dv">5</span>, <span class="dv">7</span>)  <span class="co"># Example data</span></span>
-<span id="cb279-6"><a href="goodness-of-fit.html#cb279-6" tabindex="-1"></a>model2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(anxiety_levels <span class="sc">~</span> sleep_hours <span class="sc">+</span> social_support)</span>
-<span id="cb279-7"><a href="goodness-of-fit.html#cb279-7" tabindex="-1"></a></span>
-<span id="cb279-8"><a href="goodness-of-fit.html#cb279-8" tabindex="-1"></a><span class="co"># View the summaries to compare adjusted R-squared</span></span>
-<span id="cb279-9"><a href="goodness-of-fit.html#cb279-9" tabindex="-1"></a><span class="fu">summary</span>(model1)<span class="sc">$</span>adj.r.squared</span></code></pre></div>
+<div class="sourceCode" id="cb319"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb319-1"><a href="goodness-of-fit.html#cb319-1" tabindex="-1"></a><span class="co"># Model 1: Anxiety ~ Sleep Hours</span></span>
+<span id="cb319-2"><a href="goodness-of-fit.html#cb319-2" tabindex="-1"></a>model1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(anxiety_levels <span class="sc">~</span> sleep_hours)</span>
+<span id="cb319-3"><a href="goodness-of-fit.html#cb319-3" tabindex="-1"></a></span>
+<span id="cb319-4"><a href="goodness-of-fit.html#cb319-4" tabindex="-1"></a><span class="co"># Model 2: Anxiety ~ Sleep Hours + Social Support</span></span>
+<span id="cb319-5"><a href="goodness-of-fit.html#cb319-5" tabindex="-1"></a>social_support <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">6</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">7</span>, <span class="dv">6</span>, <span class="dv">5</span>, <span class="dv">7</span>)  <span class="co"># Example data</span></span>
+<span id="cb319-6"><a href="goodness-of-fit.html#cb319-6" tabindex="-1"></a>model2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(anxiety_levels <span class="sc">~</span> sleep_hours <span class="sc">+</span> social_support)</span>
+<span id="cb319-7"><a href="goodness-of-fit.html#cb319-7" tabindex="-1"></a></span>
+<span id="cb319-8"><a href="goodness-of-fit.html#cb319-8" tabindex="-1"></a><span class="co"># View the summaries to compare adjusted R-squared</span></span>
+<span id="cb319-9"><a href="goodness-of-fit.html#cb319-9" tabindex="-1"></a><span class="fu">summary</span>(model1)<span class="sc">$</span>adj.r.squared</span></code></pre></div>
 <pre><code>## Warning in summary.lm(model1): essentially perfect fit: summary may be
 ## unreliable</code></pre>
 <pre><code>## [1] 1</code></pre>
-<div class="sourceCode" id="cb282"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb282-1"><a href="goodness-of-fit.html#cb282-1" tabindex="-1"></a><span class="fu">summary</span>(model2)<span class="sc">$</span>adj.r.squared</span></code></pre></div>
+<div class="sourceCode" id="cb322"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb322-1"><a href="goodness-of-fit.html#cb322-1" tabindex="-1"></a><span class="fu">summary</span>(model2)<span class="sc">$</span>adj.r.squared</span></code></pre></div>
 <pre><code>## Warning in summary.lm(model2): essentially perfect fit: summary may be
 ## unreliable</code></pre>
 <pre><code>## [1] 1</code></pre>
@@ -1361,8 +1423,8 @@ addition of unnecessary predictors. In practice, a model with a higher
 adjusted R-squared is generally considered better because it balances
 model complexity with explanatory power.</p>
 </div>
-<div id="real-world-applications-4" class="section level3 hasAnchor" number="13.3.4">
-<h3><span class="header-section-number">13.3.4</span> Real-World Applications<a href="goodness-of-fit.html#real-world-applications-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="real-world-applications-4" class="section level3 hasAnchor" number="14.3.4">
+<h3><span class="header-section-number">14.3.4</span> Real-World Applications<a href="goodness-of-fit.html#real-world-applications-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Examples of Using R-Squared in Psychological Research</strong></p>
 <p>R-squared is widely used in psychological research to evaluate the fit
 of models that predict behavior or assess the effectiveness of
@@ -1408,10 +1470,10 @@ researchers can make more informed decisions when building and
 evaluating their models.</p>
 </div>
 </div>
-<div id="the-f-test-for-comparing-models" class="section level2 hasAnchor" number="13.4">
-<h2><span class="header-section-number">13.4</span> The F-Test for Comparing Models<a href="goodness-of-fit.html#the-f-test-for-comparing-models" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="what-is-the-f-test" class="section level3 hasAnchor" number="13.4.1">
-<h3><span class="header-section-number">13.4.1</span> What is the F-Test?<a href="goodness-of-fit.html#what-is-the-f-test" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="the-f-test-for-comparing-models" class="section level2 hasAnchor" number="14.4">
+<h2><span class="header-section-number">14.4</span> The F-Test for Comparing Models<a href="goodness-of-fit.html#the-f-test-for-comparing-models" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="what-is-the-f-test" class="section level3 hasAnchor" number="14.4.1">
+<h3><span class="header-section-number">14.4.1</span> What is the F-Test?<a href="goodness-of-fit.html#what-is-the-f-test" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Explanation of the F-Test</strong></p>
 <p>The F-test is a statistical method used to compare the fits of two
 models to determine if one model provides a significantly better
@@ -1471,8 +1533,8 @@ without them, helping you decide if the interaction effect is
 significant.</p></li>
 </ul>
 </div>
-<div id="performing-the-f-test-in-r" class="section level3 hasAnchor" number="13.4.2">
-<h3><span class="header-section-number">13.4.2</span> Performing the F-Test in R<a href="goodness-of-fit.html#performing-the-f-test-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="performing-the-f-test-in-r" class="section level3 hasAnchor" number="14.4.2">
+<h3><span class="header-section-number">14.4.2</span> Performing the F-Test in R<a href="goodness-of-fit.html#performing-the-f-test-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Step-by-Step Guide to Conducting an F-Test in R to Compare Two
 Regression Models</strong></p>
 <p>Let’s go through how you can perform an F-test in R using a practical
@@ -1481,19 +1543,19 @@ workload. Initially, you create a simple model that only includes
 workload as a predictor. Then, you decide to test whether adding gender
 as a predictor improves the model.</p>
 <p>Here’s how you can do this in R:</p>
-<div class="sourceCode" id="cb285"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb285-1"><a href="goodness-of-fit.html#cb285-1" tabindex="-1"></a><span class="co"># Step 1: Input your data</span></span>
-<span id="cb285-2"><a href="goodness-of-fit.html#cb285-2" tabindex="-1"></a>workload <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">4</span>, <span class="dv">8</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">5</span>, <span class="dv">9</span>, <span class="dv">6</span>)  <span class="co"># Workload scores</span></span>
-<span id="cb285-3"><a href="goodness-of-fit.html#cb285-3" tabindex="-1"></a>stress_levels <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">6</span>, <span class="dv">10</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">6</span>, <span class="dv">11</span>, <span class="dv">8</span>)  <span class="co"># Stress levels</span></span>
-<span id="cb285-4"><a href="goodness-of-fit.html#cb285-4" tabindex="-1"></a>gender <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">&#39;M&#39;</span>, <span class="st">&#39;F&#39;</span>, <span class="st">&#39;M&#39;</span>, <span class="st">&#39;F&#39;</span>, <span class="st">&#39;M&#39;</span>, <span class="st">&#39;F&#39;</span>, <span class="st">&#39;M&#39;</span>, <span class="st">&#39;F&#39;</span>, <span class="st">&#39;M&#39;</span>, <span class="st">&#39;F&#39;</span>))  <span class="co"># Gender</span></span>
-<span id="cb285-5"><a href="goodness-of-fit.html#cb285-5" tabindex="-1"></a></span>
-<span id="cb285-6"><a href="goodness-of-fit.html#cb285-6" tabindex="-1"></a><span class="co"># Step 2: Fit the simpler model (Model 1: Stress ~ Workload)</span></span>
-<span id="cb285-7"><a href="goodness-of-fit.html#cb285-7" tabindex="-1"></a>model1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(stress_levels <span class="sc">~</span> workload)</span>
-<span id="cb285-8"><a href="goodness-of-fit.html#cb285-8" tabindex="-1"></a></span>
-<span id="cb285-9"><a href="goodness-of-fit.html#cb285-9" tabindex="-1"></a><span class="co"># Step 3: Fit the more complex model (Model 2: Stress ~ Workload + Gender)</span></span>
-<span id="cb285-10"><a href="goodness-of-fit.html#cb285-10" tabindex="-1"></a>model2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(stress_levels <span class="sc">~</span> workload <span class="sc">+</span> gender)</span>
-<span id="cb285-11"><a href="goodness-of-fit.html#cb285-11" tabindex="-1"></a></span>
-<span id="cb285-12"><a href="goodness-of-fit.html#cb285-12" tabindex="-1"></a><span class="co"># Step 4: Perform the F-test to compare the two models</span></span>
-<span id="cb285-13"><a href="goodness-of-fit.html#cb285-13" tabindex="-1"></a><span class="fu">anova</span>(model1, model2)</span></code></pre></div>
+<div class="sourceCode" id="cb325"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb325-1"><a href="goodness-of-fit.html#cb325-1" tabindex="-1"></a><span class="co"># Step 1: Input your data</span></span>
+<span id="cb325-2"><a href="goodness-of-fit.html#cb325-2" tabindex="-1"></a>workload <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">4</span>, <span class="dv">8</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">5</span>, <span class="dv">9</span>, <span class="dv">6</span>)  <span class="co"># Workload scores</span></span>
+<span id="cb325-3"><a href="goodness-of-fit.html#cb325-3" tabindex="-1"></a>stress_levels <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">6</span>, <span class="dv">10</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">6</span>, <span class="dv">11</span>, <span class="dv">8</span>)  <span class="co"># Stress levels</span></span>
+<span id="cb325-4"><a href="goodness-of-fit.html#cb325-4" tabindex="-1"></a>gender <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">&#39;M&#39;</span>, <span class="st">&#39;F&#39;</span>, <span class="st">&#39;M&#39;</span>, <span class="st">&#39;F&#39;</span>, <span class="st">&#39;M&#39;</span>, <span class="st">&#39;F&#39;</span>, <span class="st">&#39;M&#39;</span>, <span class="st">&#39;F&#39;</span>, <span class="st">&#39;M&#39;</span>, <span class="st">&#39;F&#39;</span>))  <span class="co"># Gender</span></span>
+<span id="cb325-5"><a href="goodness-of-fit.html#cb325-5" tabindex="-1"></a></span>
+<span id="cb325-6"><a href="goodness-of-fit.html#cb325-6" tabindex="-1"></a><span class="co"># Step 2: Fit the simpler model (Model 1: Stress ~ Workload)</span></span>
+<span id="cb325-7"><a href="goodness-of-fit.html#cb325-7" tabindex="-1"></a>model1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(stress_levels <span class="sc">~</span> workload)</span>
+<span id="cb325-8"><a href="goodness-of-fit.html#cb325-8" tabindex="-1"></a></span>
+<span id="cb325-9"><a href="goodness-of-fit.html#cb325-9" tabindex="-1"></a><span class="co"># Step 3: Fit the more complex model (Model 2: Stress ~ Workload + Gender)</span></span>
+<span id="cb325-10"><a href="goodness-of-fit.html#cb325-10" tabindex="-1"></a>model2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(stress_levels <span class="sc">~</span> workload <span class="sc">+</span> gender)</span>
+<span id="cb325-11"><a href="goodness-of-fit.html#cb325-11" tabindex="-1"></a></span>
+<span id="cb325-12"><a href="goodness-of-fit.html#cb325-12" tabindex="-1"></a><span class="co"># Step 4: Perform the F-test to compare the two models</span></span>
+<span id="cb325-13"><a href="goodness-of-fit.html#cb325-13" tabindex="-1"></a><span class="fu">anova</span>(model1, model2)</span></code></pre></div>
 <pre><code>## Analysis of Variance Table
 ## 
 ## Model 1: stress_levels ~ workload
@@ -1532,10 +1594,10 @@ selection and ensure that your models are both accurate and
 parsimonious.</p>
 </div>
 </div>
-<div id="understanding-the-f-distribution" class="section level2 hasAnchor" number="13.5">
-<h2><span class="header-section-number">13.5</span> Understanding the F-Distribution<a href="goodness-of-fit.html#understanding-the-f-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="what-is-the-f-distribution" class="section level3 hasAnchor" number="13.5.1">
-<h3><span class="header-section-number">13.5.1</span> What is the F-Distribution?<a href="goodness-of-fit.html#what-is-the-f-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="understanding-the-f-distribution" class="section level2 hasAnchor" number="14.5">
+<h2><span class="header-section-number">14.5</span> Understanding the F-Distribution<a href="goodness-of-fit.html#understanding-the-f-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="what-is-the-f-distribution" class="section level3 hasAnchor" number="14.5.1">
+<h3><span class="header-section-number">14.5.1</span> What is the F-Distribution?<a href="goodness-of-fit.html#what-is-the-f-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Explanation of the F-Distribution and Its Role in the F-Test</strong></p>
 <p>The F-distribution is a fundamental concept in statistics, particularly
 in the context of the F-test. It’s a probability distribution that
@@ -1594,35 +1656,35 @@ clear. The higher the F-statistic (relative to the critical value), the
 stronger the evidence that the additional predictors in your model
 significantly improve its fit.</p>
 </div>
-<div id="visualizing-the-f-distribution-in-r" class="section level3 hasAnchor" number="13.5.2">
-<h3><span class="header-section-number">13.5.2</span> Visualizing the F-Distribution in R<a href="goodness-of-fit.html#visualizing-the-f-distribution-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="visualizing-the-f-distribution-in-r" class="section level3 hasAnchor" number="14.5.2">
+<h3><span class="header-section-number">14.5.2</span> Visualizing the F-Distribution in R<a href="goodness-of-fit.html#visualizing-the-f-distribution-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>R Code for Plotting the F-Distribution</strong></p>
 <p>To really grasp the F-distribution, it helps to visualize it. R makes it
 easy to create plots that show how the F-distribution looks with
 different degrees of freedom. Let’s go through how you can visualize it.</p>
 <p>Here’s a basic R code to plot the F-distribution:</p>
-<div class="sourceCode" id="cb287"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb287-1"><a href="goodness-of-fit.html#cb287-1" tabindex="-1"></a><span class="co"># Step 1: Load necessary package for plotting</span></span>
-<span id="cb287-2"><a href="goodness-of-fit.html#cb287-2" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb287-3"><a href="goodness-of-fit.html#cb287-3" tabindex="-1"></a></span>
-<span id="cb287-4"><a href="goodness-of-fit.html#cb287-4" tabindex="-1"></a><span class="co"># Step 2: Define a sequence of F-values</span></span>
-<span id="cb287-5"><a href="goodness-of-fit.html#cb287-5" tabindex="-1"></a>f_values <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">5</span>, <span class="at">length.out =</span> <span class="dv">100</span>)</span>
-<span id="cb287-6"><a href="goodness-of-fit.html#cb287-6" tabindex="-1"></a></span>
-<span id="cb287-7"><a href="goodness-of-fit.html#cb287-7" tabindex="-1"></a><span class="co"># Step 3: Plot the F-distribution for different degrees of freedom</span></span>
-<span id="cb287-8"><a href="goodness-of-fit.html#cb287-8" tabindex="-1"></a>plot_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb287-9"><a href="goodness-of-fit.html#cb287-9" tabindex="-1"></a>  <span class="at">F_Values =</span> f_values,</span>
-<span id="cb287-10"><a href="goodness-of-fit.html#cb287-10" tabindex="-1"></a>  <span class="at">DF1_5_DF2_10 =</span> <span class="fu">df</span>(f_values, <span class="at">df1 =</span> <span class="dv">5</span>, <span class="at">df2 =</span> <span class="dv">10</span>),</span>
-<span id="cb287-11"><a href="goodness-of-fit.html#cb287-11" tabindex="-1"></a>  <span class="at">DF1_10_DF2_20 =</span> <span class="fu">df</span>(f_values, <span class="at">df1 =</span> <span class="dv">10</span>, <span class="at">df2 =</span> <span class="dv">20</span>)</span>
-<span id="cb287-12"><a href="goodness-of-fit.html#cb287-12" tabindex="-1"></a>)</span>
-<span id="cb287-13"><a href="goodness-of-fit.html#cb287-13" tabindex="-1"></a></span>
-<span id="cb287-14"><a href="goodness-of-fit.html#cb287-14" tabindex="-1"></a><span class="fu">ggplot</span>(plot_df, <span class="fu">aes</span>(<span class="at">x =</span> F_Values)) <span class="sc">+</span></span>
-<span id="cb287-15"><a href="goodness-of-fit.html#cb287-15" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> DF1_5_DF2_10, <span class="at">color =</span> <span class="st">&quot;DF1 = 5, DF2 = 10&quot;</span>)) <span class="sc">+</span></span>
-<span id="cb287-16"><a href="goodness-of-fit.html#cb287-16" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> DF1_10_DF2_20, <span class="at">color =</span> <span class="st">&quot;DF1 = 10, DF2 = 20&quot;</span>)) <span class="sc">+</span></span>
-<span id="cb287-17"><a href="goodness-of-fit.html#cb287-17" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;F-Distribution for Different Degrees of Freedom&quot;</span>,</span>
-<span id="cb287-18"><a href="goodness-of-fit.html#cb287-18" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;F-Value&quot;</span>,</span>
-<span id="cb287-19"><a href="goodness-of-fit.html#cb287-19" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Density&quot;</span>,</span>
-<span id="cb287-20"><a href="goodness-of-fit.html#cb287-20" tabindex="-1"></a>       <span class="at">color =</span> <span class="st">&quot;Degrees of Freedom&quot;</span>) <span class="sc">+</span></span>
-<span id="cb287-21"><a href="goodness-of-fit.html#cb287-21" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div>
-<p><img src="psych-stats-book_files/figure-html/unnamed-chunk-167-1.png" width="672" /></p>
+<div class="sourceCode" id="cb327"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb327-1"><a href="goodness-of-fit.html#cb327-1" tabindex="-1"></a><span class="co"># Step 1: Load necessary package for plotting</span></span>
+<span id="cb327-2"><a href="goodness-of-fit.html#cb327-2" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb327-3"><a href="goodness-of-fit.html#cb327-3" tabindex="-1"></a></span>
+<span id="cb327-4"><a href="goodness-of-fit.html#cb327-4" tabindex="-1"></a><span class="co"># Step 2: Define a sequence of F-values</span></span>
+<span id="cb327-5"><a href="goodness-of-fit.html#cb327-5" tabindex="-1"></a>f_values <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">5</span>, <span class="at">length.out =</span> <span class="dv">100</span>)</span>
+<span id="cb327-6"><a href="goodness-of-fit.html#cb327-6" tabindex="-1"></a></span>
+<span id="cb327-7"><a href="goodness-of-fit.html#cb327-7" tabindex="-1"></a><span class="co"># Step 3: Plot the F-distribution for different degrees of freedom</span></span>
+<span id="cb327-8"><a href="goodness-of-fit.html#cb327-8" tabindex="-1"></a>plot_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb327-9"><a href="goodness-of-fit.html#cb327-9" tabindex="-1"></a>  <span class="at">F_Values =</span> f_values,</span>
+<span id="cb327-10"><a href="goodness-of-fit.html#cb327-10" tabindex="-1"></a>  <span class="at">DF1_5_DF2_10 =</span> <span class="fu">df</span>(f_values, <span class="at">df1 =</span> <span class="dv">5</span>, <span class="at">df2 =</span> <span class="dv">10</span>),</span>
+<span id="cb327-11"><a href="goodness-of-fit.html#cb327-11" tabindex="-1"></a>  <span class="at">DF1_10_DF2_20 =</span> <span class="fu">df</span>(f_values, <span class="at">df1 =</span> <span class="dv">10</span>, <span class="at">df2 =</span> <span class="dv">20</span>)</span>
+<span id="cb327-12"><a href="goodness-of-fit.html#cb327-12" tabindex="-1"></a>)</span>
+<span id="cb327-13"><a href="goodness-of-fit.html#cb327-13" tabindex="-1"></a></span>
+<span id="cb327-14"><a href="goodness-of-fit.html#cb327-14" tabindex="-1"></a><span class="fu">ggplot</span>(plot_df, <span class="fu">aes</span>(<span class="at">x =</span> F_Values)) <span class="sc">+</span></span>
+<span id="cb327-15"><a href="goodness-of-fit.html#cb327-15" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> DF1_5_DF2_10, <span class="at">color =</span> <span class="st">&quot;DF1 = 5, DF2 = 10&quot;</span>)) <span class="sc">+</span></span>
+<span id="cb327-16"><a href="goodness-of-fit.html#cb327-16" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> DF1_10_DF2_20, <span class="at">color =</span> <span class="st">&quot;DF1 = 10, DF2 = 20&quot;</span>)) <span class="sc">+</span></span>
+<span id="cb327-17"><a href="goodness-of-fit.html#cb327-17" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;F-Distribution for Different Degrees of Freedom&quot;</span>,</span>
+<span id="cb327-18"><a href="goodness-of-fit.html#cb327-18" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;F-Value&quot;</span>,</span>
+<span id="cb327-19"><a href="goodness-of-fit.html#cb327-19" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Density&quot;</span>,</span>
+<span id="cb327-20"><a href="goodness-of-fit.html#cb327-20" tabindex="-1"></a>       <span class="at">color =</span> <span class="st">&quot;Degrees of Freedom&quot;</span>) <span class="sc">+</span></span>
+<span id="cb327-21"><a href="goodness-of-fit.html#cb327-21" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div>
+<p><img src="psych-stats-book_files/figure-html/unnamed-chunk-185-1.png" width="672" /></p>
 <p><strong>Example: Visualizing the F-Distribution with Different Degrees of
 Freedom to Understand Its Shape and How It Affects the F-Test</strong></p>
 <p>In the plot generated by the code above, you’ll see two F-distribution
@@ -1642,8 +1704,8 @@ determine where the critical value lies on this curve, which in turn
 influences whether your F-statistic is large enough to be considered
 significant.</p>
 </div>
-<div id="real-world-applications-5" class="section level3 hasAnchor" number="13.5.3">
-<h3><span class="header-section-number">13.5.3</span> Real-World Applications<a href="goodness-of-fit.html#real-world-applications-5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="real-world-applications-5" class="section level3 hasAnchor" number="14.5.3">
+<h3><span class="header-section-number">14.5.3</span> Real-World Applications<a href="goodness-of-fit.html#real-world-applications-5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Examples of Interpreting the F-Distribution in the Context of
 Psychological Research</strong></p>
 <p>The F-distribution plays a vital role in many types of psychological
@@ -1686,10 +1748,10 @@ data-driven decisions, ultimately leading to more robust and reliable
 research outcomes.</p>
 </div>
 </div>
-<div id="putting-it-all-together-assessing-model-fit-in-practice" class="section level2 hasAnchor" number="13.6">
-<h2><span class="header-section-number">13.6</span> Putting It All Together – Assessing Model Fit in Practice<a href="goodness-of-fit.html#putting-it-all-together-assessing-model-fit-in-practice" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="comprehensive-example" class="section level3 hasAnchor" number="13.6.1">
-<h3><span class="header-section-number">13.6.1</span> Comprehensive Example<a href="goodness-of-fit.html#comprehensive-example" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="putting-it-all-together-assessing-model-fit-in-practice" class="section level2 hasAnchor" number="14.6">
+<h2><span class="header-section-number">14.6</span> Putting It All Together – Assessing Model Fit in Practice<a href="goodness-of-fit.html#putting-it-all-together-assessing-model-fit-in-practice" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="comprehensive-example" class="section level3 hasAnchor" number="14.6.1">
+<h3><span class="header-section-number">14.6.1</span> Comprehensive Example<a href="goodness-of-fit.html#comprehensive-example" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>In this section, we will bring together the concepts of Chi-Square,
 R-squared, and the F-test to assess the goodness of fit for different
 models within the context of psychological research. This comprehensive
@@ -1712,15 +1774,15 @@ Access</strong></p>
 <p>First, you want to test whether access to mental health resources is
 evenly distributed among the student population. You hypothesize that
 half the students have access and half do not.</p>
-<div class="sourceCode" id="cb288"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb288-1"><a href="goodness-of-fit.html#cb288-1" tabindex="-1"></a><span class="co"># Data for Chi-Square test</span></span>
-<span id="cb288-2"><a href="goodness-of-fit.html#cb288-2" tabindex="-1"></a>observed_access <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">45</span>, <span class="dv">55</span>)  <span class="co"># Observed counts: 45 with access, 55 without access</span></span>
-<span id="cb288-3"><a href="goodness-of-fit.html#cb288-3" tabindex="-1"></a>expected_access <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">50</span>, <span class="dv">50</span>)  <span class="co"># Expected counts if distribution is equal</span></span>
-<span id="cb288-4"><a href="goodness-of-fit.html#cb288-4" tabindex="-1"></a></span>
-<span id="cb288-5"><a href="goodness-of-fit.html#cb288-5" tabindex="-1"></a><span class="co"># Perform the Chi-Square test</span></span>
-<span id="cb288-6"><a href="goodness-of-fit.html#cb288-6" tabindex="-1"></a>chi_square_test <span class="ot">&lt;-</span> <span class="fu">chisq.test</span>(observed_access, <span class="at">p =</span> expected_access <span class="sc">/</span> <span class="fu">sum</span>(expected_access))</span>
-<span id="cb288-7"><a href="goodness-of-fit.html#cb288-7" tabindex="-1"></a></span>
-<span id="cb288-8"><a href="goodness-of-fit.html#cb288-8" tabindex="-1"></a><span class="co"># Output results</span></span>
-<span id="cb288-9"><a href="goodness-of-fit.html#cb288-9" tabindex="-1"></a>chi_square_test</span></code></pre></div>
+<div class="sourceCode" id="cb328"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb328-1"><a href="goodness-of-fit.html#cb328-1" tabindex="-1"></a><span class="co"># Data for Chi-Square test</span></span>
+<span id="cb328-2"><a href="goodness-of-fit.html#cb328-2" tabindex="-1"></a>observed_access <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">45</span>, <span class="dv">55</span>)  <span class="co"># Observed counts: 45 with access, 55 without access</span></span>
+<span id="cb328-3"><a href="goodness-of-fit.html#cb328-3" tabindex="-1"></a>expected_access <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">50</span>, <span class="dv">50</span>)  <span class="co"># Expected counts if distribution is equal</span></span>
+<span id="cb328-4"><a href="goodness-of-fit.html#cb328-4" tabindex="-1"></a></span>
+<span id="cb328-5"><a href="goodness-of-fit.html#cb328-5" tabindex="-1"></a><span class="co"># Perform the Chi-Square test</span></span>
+<span id="cb328-6"><a href="goodness-of-fit.html#cb328-6" tabindex="-1"></a>chi_square_test <span class="ot">&lt;-</span> <span class="fu">chisq.test</span>(observed_access, <span class="at">p =</span> expected_access <span class="sc">/</span> <span class="fu">sum</span>(expected_access))</span>
+<span id="cb328-7"><a href="goodness-of-fit.html#cb328-7" tabindex="-1"></a></span>
+<span id="cb328-8"><a href="goodness-of-fit.html#cb328-8" tabindex="-1"></a><span class="co"># Output results</span></span>
+<span id="cb328-9"><a href="goodness-of-fit.html#cb328-9" tabindex="-1"></a>chi_square_test</span></code></pre></div>
 <p><strong>Interpretation</strong>: The Chi-Square test will provide a statistic and a
 p-value. If the p-value is greater than 0.05, you fail to reject the
 null hypothesis, meaning the distribution of access to mental health
@@ -1732,20 +1794,20 @@ difference.</p>
 support explain the variance in anxiety levels. You start with a simple
 linear regression model using only study hours and then include social
 support as an additional predictor.</p>
-<div class="sourceCode" id="cb289"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb289-1"><a href="goodness-of-fit.html#cb289-1" tabindex="-1"></a><span class="co"># Data for regression analysis</span></span>
-<span id="cb289-2"><a href="goodness-of-fit.html#cb289-2" tabindex="-1"></a>study_hours <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">8</span>, <span class="dv">12</span>, <span class="dv">15</span>, <span class="dv">7</span>, <span class="dv">9</span>, <span class="dv">11</span>, <span class="dv">13</span>, <span class="dv">14</span>, <span class="dv">10</span>)</span>
-<span id="cb289-3"><a href="goodness-of-fit.html#cb289-3" tabindex="-1"></a>social_support <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">4</span>, <span class="dv">8</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">7</span>)</span>
-<span id="cb289-4"><a href="goodness-of-fit.html#cb289-4" tabindex="-1"></a>anxiety_levels <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">6</span>, <span class="dv">9</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">9</span>, <span class="dv">7</span>)</span>
-<span id="cb289-5"><a href="goodness-of-fit.html#cb289-5" tabindex="-1"></a></span>
-<span id="cb289-6"><a href="goodness-of-fit.html#cb289-6" tabindex="-1"></a><span class="co"># Simple regression model: Anxiety ~ Study Hours</span></span>
-<span id="cb289-7"><a href="goodness-of-fit.html#cb289-7" tabindex="-1"></a>model1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(anxiety_levels <span class="sc">~</span> study_hours)</span>
-<span id="cb289-8"><a href="goodness-of-fit.html#cb289-8" tabindex="-1"></a></span>
-<span id="cb289-9"><a href="goodness-of-fit.html#cb289-9" tabindex="-1"></a><span class="co"># Multiple regression model: Anxiety ~ Study Hours + Social Support</span></span>
-<span id="cb289-10"><a href="goodness-of-fit.html#cb289-10" tabindex="-1"></a>model2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(anxiety_levels <span class="sc">~</span> study_hours <span class="sc">+</span> social_support)</span>
-<span id="cb289-11"><a href="goodness-of-fit.html#cb289-11" tabindex="-1"></a></span>
-<span id="cb289-12"><a href="goodness-of-fit.html#cb289-12" tabindex="-1"></a><span class="co"># Summary of models</span></span>
-<span id="cb289-13"><a href="goodness-of-fit.html#cb289-13" tabindex="-1"></a><span class="fu">summary</span>(model1)<span class="sc">$</span>r.squared  <span class="co"># R-squared for model1</span></span>
-<span id="cb289-14"><a href="goodness-of-fit.html#cb289-14" tabindex="-1"></a><span class="fu">summary</span>(model2)<span class="sc">$</span>r.squared  <span class="co"># R-squared for model2</span></span></code></pre></div>
+<div class="sourceCode" id="cb329"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb329-1"><a href="goodness-of-fit.html#cb329-1" tabindex="-1"></a><span class="co"># Data for regression analysis</span></span>
+<span id="cb329-2"><a href="goodness-of-fit.html#cb329-2" tabindex="-1"></a>study_hours <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">8</span>, <span class="dv">12</span>, <span class="dv">15</span>, <span class="dv">7</span>, <span class="dv">9</span>, <span class="dv">11</span>, <span class="dv">13</span>, <span class="dv">14</span>, <span class="dv">10</span>)</span>
+<span id="cb329-3"><a href="goodness-of-fit.html#cb329-3" tabindex="-1"></a>social_support <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">4</span>, <span class="dv">8</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">7</span>)</span>
+<span id="cb329-4"><a href="goodness-of-fit.html#cb329-4" tabindex="-1"></a>anxiety_levels <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">6</span>, <span class="dv">9</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">9</span>, <span class="dv">7</span>)</span>
+<span id="cb329-5"><a href="goodness-of-fit.html#cb329-5" tabindex="-1"></a></span>
+<span id="cb329-6"><a href="goodness-of-fit.html#cb329-6" tabindex="-1"></a><span class="co"># Simple regression model: Anxiety ~ Study Hours</span></span>
+<span id="cb329-7"><a href="goodness-of-fit.html#cb329-7" tabindex="-1"></a>model1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(anxiety_levels <span class="sc">~</span> study_hours)</span>
+<span id="cb329-8"><a href="goodness-of-fit.html#cb329-8" tabindex="-1"></a></span>
+<span id="cb329-9"><a href="goodness-of-fit.html#cb329-9" tabindex="-1"></a><span class="co"># Multiple regression model: Anxiety ~ Study Hours + Social Support</span></span>
+<span id="cb329-10"><a href="goodness-of-fit.html#cb329-10" tabindex="-1"></a>model2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(anxiety_levels <span class="sc">~</span> study_hours <span class="sc">+</span> social_support)</span>
+<span id="cb329-11"><a href="goodness-of-fit.html#cb329-11" tabindex="-1"></a></span>
+<span id="cb329-12"><a href="goodness-of-fit.html#cb329-12" tabindex="-1"></a><span class="co"># Summary of models</span></span>
+<span id="cb329-13"><a href="goodness-of-fit.html#cb329-13" tabindex="-1"></a><span class="fu">summary</span>(model1)<span class="sc">$</span>r.squared  <span class="co"># R-squared for model1</span></span>
+<span id="cb329-14"><a href="goodness-of-fit.html#cb329-14" tabindex="-1"></a><span class="fu">summary</span>(model2)<span class="sc">$</span>r.squared  <span class="co"># R-squared for model2</span></span></code></pre></div>
 <p><strong>Interpretation</strong>: The R-squared values from the summaries tell you how
 much of the variance in anxiety levels is explained by each model. For
 example, if R-squared for model1 is 0.60, then 60% of the variance in
@@ -1756,8 +1818,8 @@ explained, suggesting that social support is an important predictor.</p>
 <p>To determine if adding social support significantly improves the model,
 you use the F-test to compare the simpler model (study hours only) with
 the more complex model (study hours + social support).</p>
-<div class="sourceCode" id="cb290"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb290-1"><a href="goodness-of-fit.html#cb290-1" tabindex="-1"></a><span class="co"># Perform the F-test to compare the two models</span></span>
-<span id="cb290-2"><a href="goodness-of-fit.html#cb290-2" tabindex="-1"></a><span class="fu">anova</span>(model1, model2)</span></code></pre></div>
+<div class="sourceCode" id="cb330"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb330-1"><a href="goodness-of-fit.html#cb330-1" tabindex="-1"></a><span class="co"># Perform the F-test to compare the two models</span></span>
+<span id="cb330-2"><a href="goodness-of-fit.html#cb330-2" tabindex="-1"></a><span class="fu">anova</span>(model1, model2)</span></code></pre></div>
 <p><strong>Interpretation</strong>: The F-test will yield an F-statistic and a p-value.
 If the p-value is less than 0.05, you conclude that the more complex
 model significantly improves the fit, justifying the inclusion of social
@@ -1769,8 +1831,8 @@ the data and whether adding additional predictors is beneficial. This
 process ensures that your conclusions about the factors influencing
 anxiety are based on solid statistical evidence.</p>
 </div>
-<div id="best-practices-for-assessing-goodness-of-fit" class="section level3 hasAnchor" number="13.6.2">
-<h3><span class="header-section-number">13.6.2</span> Best Practices for Assessing Goodness of Fit<a href="goodness-of-fit.html#best-practices-for-assessing-goodness-of-fit" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="best-practices-for-assessing-goodness-of-fit" class="section level3 hasAnchor" number="14.6.2">
+<h3><span class="header-section-number">14.6.2</span> Best Practices for Assessing Goodness of Fit<a href="goodness-of-fit.html#best-practices-for-assessing-goodness-of-fit" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Tips on When to Use Each Test and Measure</strong></p>
 <ul>
 <li><p><strong>Chi-Square Test</strong>: Use when you’re dealing with categorical data
@@ -1819,8 +1881,8 @@ research, where the complexity of human behavior often requires a
 thorough and comprehensive analysis.</p>
 </div>
 </div>
-<div id="chapter-summary-12" class="section level2 hasAnchor" number="13.7">
-<h2><span class="header-section-number">13.7</span> Chapter Summary<a href="goodness-of-fit.html#chapter-summary-12" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="chapter-summary-13" class="section level2 hasAnchor" number="14.7">
+<h2><span class="header-section-number">14.7</span> Chapter Summary<a href="goodness-of-fit.html#chapter-summary-13" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In this chapter, we explored the concept of goodness of fit, which is
 crucial in determining how well a statistical model represents the data
 it aims to explain. We began by understanding the fundamental importance
@@ -1870,16 +1932,16 @@ F-tests. This knowledge will enable you to build more accurate,
 reliable, and meaningful models that better represent the complexities
 of the data you are studying.</p>
 </div>
-<div id="practice-exercises-11" class="section level2 hasAnchor" number="13.8">
-<h2><span class="header-section-number">13.8</span> Practice Exercises<a href="goodness-of-fit.html#practice-exercises-11" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="section-7-practice-exercises" class="section level3 hasAnchor" number="13.8.1">
-<h3><span class="header-section-number">13.8.1</span> Section 7: Practice Exercises<a href="goodness-of-fit.html#section-7-practice-exercises" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="practice-exercises-12" class="section level2 hasAnchor" number="14.8">
+<h2><span class="header-section-number">14.8</span> Practice Exercises<a href="goodness-of-fit.html#practice-exercises-12" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="section-7-practice-exercises" class="section level3 hasAnchor" number="14.8.1">
+<h3><span class="header-section-number">14.8.1</span> Section 7: Practice Exercises<a href="goodness-of-fit.html#section-7-practice-exercises" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Below are the practice exercises for you to apply what you’ve learned in
 this chapter. After completing these exercises, you’ll have the
 opportunity to compare your answers with the answer key provided in the
 appendix.</p>
-<div id="exercise-1-chi-square-goodness-of-fit-test" class="section level4 hasAnchor" number="13.8.1.1">
-<h4><span class="header-section-number">13.8.1.1</span> Exercise 1: Chi-Square Goodness of Fit Test<a href="goodness-of-fit.html#exercise-1-chi-square-goodness-of-fit-test" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="exercise-1-chi-square-goodness-of-fit-test" class="section level4 hasAnchor" number="14.8.1.1">
+<h4><span class="header-section-number">14.8.1.1</span> Exercise 1: Chi-Square Goodness of Fit Test<a href="goodness-of-fit.html#exercise-1-chi-square-goodness-of-fit-test" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><strong>Objective</strong>: Perform a Chi-Square goodness of fit test using the
 provided dataset. Interpret the Chi-Square statistic and p-value to
 determine whether the observed frequencies differ significantly from the
@@ -1895,8 +1957,8 @@ equal distribution across categories)</p>
 3. Determine whether the observed frequencies are significantly
 different from the expected frequencies.</p>
 </div>
-<div id="exercise-2-calculating-r-squared-for-a-linear-regression-model" class="section level4 hasAnchor" number="13.8.1.2">
-<h4><span class="header-section-number">13.8.1.2</span> Exercise 2: Calculating R-Squared for a Linear Regression Model<a href="goodness-of-fit.html#exercise-2-calculating-r-squared-for-a-linear-regression-model" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="exercise-2-calculating-r-squared-for-a-linear-regression-model" class="section level4 hasAnchor" number="14.8.1.2">
+<h4><span class="header-section-number">14.8.1.2</span> Exercise 2: Calculating R-Squared for a Linear Regression Model<a href="goodness-of-fit.html#exercise-2-calculating-r-squared-for-a-linear-regression-model" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><strong>Objective</strong>: Calculate the R-squared value for a linear regression
 model using the provided dataset. Interpret the R-squared value and
 discuss what it indicates about the model’s fit.</p>
@@ -1909,8 +1971,8 @@ discuss what it indicates about the model’s fit.</p>
 2. Calculate the R-squared value.<br />
 3. Interpret the R-squared value in the context of the model’s fit.</p>
 </div>
-<div id="exercise-3-comparing-nested-models-using-the-f-test" class="section level4 hasAnchor" number="13.8.1.3">
-<h4><span class="header-section-number">13.8.1.3</span> Exercise 3: Comparing Nested Models Using the F-Test<a href="goodness-of-fit.html#exercise-3-comparing-nested-models-using-the-f-test" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="exercise-3-comparing-nested-models-using-the-f-test" class="section level4 hasAnchor" number="14.8.1.3">
+<h4><span class="header-section-number">14.8.1.3</span> Exercise 3: Comparing Nested Models Using the F-Test<a href="goodness-of-fit.html#exercise-3-comparing-nested-models-using-the-f-test" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><strong>Objective</strong>: Compare two nested linear regression models using the
 F-test. Use the provided dataset and determine whether adding an
 additional predictor variable significantly improves the model.
@@ -1929,8 +1991,8 @@ predictor.<br />
 4. Interpret the F-statistic and p-value to determine if the more
 complex model is significantly better.</p>
 </div>
-<div id="exercise-4-visualizing-the-f-distribution-in-r" class="section level4 hasAnchor" number="13.8.1.4">
-<h4><span class="header-section-number">13.8.1.4</span> Exercise 4: Visualizing the F-Distribution in R<a href="goodness-of-fit.html#exercise-4-visualizing-the-f-distribution-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="exercise-4-visualizing-the-f-distribution-in-r" class="section level4 hasAnchor" number="14.8.1.4">
+<h4><span class="header-section-number">14.8.1.4</span> Exercise 4: Visualizing the F-Distribution in R<a href="goodness-of-fit.html#exercise-4-visualizing-the-f-distribution-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><strong>Objective</strong>: Visualize the F-distribution with different degrees of
 freedom in R. Discuss how the shape of the F-distribution affects the
 critical value used in the F-test.</p>
@@ -1941,8 +2003,8 @@ degrees of freedom.<br />
 3. Discuss how these changes affect the critical value used in the
 F-test.</p>
 </div>
-<div id="exercise-5-comprehensive-analysis" class="section level4 hasAnchor" number="13.8.1.5">
-<h4><span class="header-section-number">13.8.1.5</span> Exercise 5: Comprehensive Analysis<a href="goodness-of-fit.html#exercise-5-comprehensive-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="exercise-5-comprehensive-analysis" class="section level4 hasAnchor" number="14.8.1.5">
+<h4><span class="header-section-number">14.8.1.5</span> Exercise 5: Comprehensive Analysis<a href="goodness-of-fit.html#exercise-5-comprehensive-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><strong>Objective</strong>: Apply what you’ve learned by conducting a comprehensive
 analysis that includes a Chi-Square test, R-squared calculation, and an
 F-test. Use the provided dataset and write a report summarizing your
@@ -1974,7 +2036,7 @@ of the statistical results.</p>
           </div>
         </div>
       </div>
-<a href="interactions-in-regression-models.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="logistic-regression.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="statistical-power.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
@@ -2006,7 +2068,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/AmandaDPerez/ZTC-RM/edit/main/15-fit.Rmd",
+"link": "https://github.com/AmandaDPerez/ZTC-RM/edit/main/14-fit.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -2014,7 +2076,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/AmandaDPerez/ZTC-RM/blob/main/15-fit.Rmd",
+"link": "https://github.com/AmandaDPerez/ZTC-RM/blob/main/14-fit.Rmd",
 "text": null
 },
 "download": null,

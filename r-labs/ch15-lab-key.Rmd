@@ -1,5 +1,5 @@
 ---
-title: "Weekly Lab Homework Assignment: Assessing Model Fit"
+title: "Weekly Lab Homework Assignment: Power"
 author: "Your Name"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: pdf_document
@@ -9,164 +9,128 @@ output: pdf_document
 
 ## Instructions
 
-This lab assignment is designed to reinforce your understanding of assessing model fit using Chi-Square tests, R-squared, and F-tests. You will apply these concepts to different datasets, calculate relevant statistics, and interpret the results.
+In this lab, you will apply the concepts of statistical power, Type I and Type II errors, and power analysis using R. You will work through a series of exercises designed to help you understand how power is calculated and how it influences study design. This lab will involve conducting power analyses, interpreting results, and exploring the impact of various factors on power.
 
-### Exercise 1: Chi-Square Goodness of Fit Test
+### Exercise 1: Power Analysis for a One-Sample t-Test
 
-**Objective**: Perform a Chi-Square goodness of fit test using the provided dataset. Interpret the Chi-Square statistic and p-value to determine whether the observed frequencies differ significantly from the expected frequencies.  
-
-**Dataset**:  
-- **Observed frequencies**: `observed <- c(20, 30, 50)` (e.g., three different responses to a new therapy)  
-- **Expected frequencies**: `expected <- c(33.3, 33.3, 33.3)` (assuming equal preference for each response)  
+**Scenario**:  
+You are conducting a study to test whether a new educational technique improves students' test scores compared to the national average, which is known to be 75. You plan to recruit 25 students for the study. You expect a small effect size (Cohen’s d = 0.3) and will use a significance level of 0.05.  
 
 **Tasks**:  
-1. Use the `chisq.test()` function in R to perform the Chi-Square test.  
-2. Include the code output in your .rmd file.  
-3. Write a brief interpretation of the Chi-Square statistic and p-value.  
+1. Conduct a power analysis to determine the power of the study using a one-sample t-test.  
+2. Interpret the results and discuss whether the study is likely to detect a significant difference if the new technique is effective.
 
 ```{r}
-# Observed and expected frequencies
-observed <- c(20, 30, 50)
-expected <- c(33.3, 33.3, 33.3)
+# Load the pwr package
+library(pwr)
 
-# Perform Chi-Square test
-chi_square_test <- chisq.test(observed, p = expected / sum(expected))
-chi_square_test
+# Conduct power analysis for a one-sample t-test
+power_one_sample <- pwr.t.test(n = 25, d = 0.3, sig.level = 0.05, type = "one.sample")
+
+# Output the result
+power_one_sample
 ```
 
-### Exercise 2: Calculating R-Squared for a Linear Regression Model
+- **Power Interpretation**: The calculated power may be around 0.40, indicating that the study is underpowered. With such low power, there is a high risk of failing to detect a true effect if it exists. The study should consider increasing the sample size to improve power.
 
-**Objective**: Calculate the R-squared value for a linear regression model using the provided dataset. Interpret the R-squared value and discuss what it indicates about the model’s fit.  
+### Exercise 2: Sample Size Determination for a Paired t-Test
 
-**Dataset**:  
-- **Independent variable**: `hours_practiced <- c(2, 3, 5, 7, 8, 10, 12, 14, 15)`  
-- **Dependent variable**: `performance_score <- c(50, 55, 60, 65, 70, 75, 80, 85, 88)`  
+**Scenario**:  
+You are planning a study to measure the effectiveness of a stress-reduction intervention by comparing participants' stress levels before and after the intervention. Based on previous research, you expect a moderate effect size (Cohen’s d = 0.5). You want to achieve 85% power with a significance level of 0.05.
 
 **Tasks**:  
-1. Fit a linear regression model using the `lm()` function in R.  
-2. Calculate the R-squared value.  
-3. Include the R output and your interpretation in the .rmd file.  
+1. Use R to determine the required sample size for the study using a paired t-test.  
+2. Explain why this sample size is necessary and how it will help achieve the desired power.
 
 ```{r}
-# Data for regression analysis
-hours_practiced <- c(2, 3, 5, 7, 8, 10, 12, 14, 15)
-performance_score <- c(50, 55, 60, 65, 70, 75, 80, 85, 88)
+# Conduct power analysis for a paired t-test to determine sample size
+sample_size_paired <- pwr.t.test(d = 0.5, power = 0.85, sig.level = 0.05, type = "paired")
 
-# Fit linear regression model
-model <- lm(performance_score ~ hours_practiced)
-
-# Calculate R-squared
-summary(model)$r.squared
+# Output the result
+sample_size_paired
 ```
 
-### Exercise 3: Comparing Nested Models Using the F-Test
+- **Sample Size Interpretation**: The required sample size might be around 35 pairs (70 total participants) to achieve 85% power. This sample size is necessary to ensure that the study can detect a moderate effect size and produce reliable results.
 
-**Objective**: Compare two nested linear regression models using the F-test. Determine whether adding an additional predictor variable significantly improves the model. Interpret the F-statistic and p-value.  
+### Exercise 3: Exploring Type I Error and Significance Level
 
-**Dataset**:  
-- **Predictor 1**: `study_hours <- c(2, 4, 6, 8, 10, 12, 14, 16, 18)`  
-- **Predictor 2**: `part_time_job <- c(0, 1, 0, 1, 0, 1, 0, 1, 0)` (0 = no, 1 = yes)  
-- **Dependent variable**: `exam_score <- c(55, 60, 62, 70, 72, 78, 80, 85, 87)`  
+**Scenario**:  
+Imagine you are testing the effectiveness of a new cognitive training program designed to improve memory. You decide to use a significance level of 0.10 instead of the conventional 0.05, hoping to increase the chances of finding a significant result.  
 
 **Tasks**:  
-1. Fit a simple linear regression model using `study_hours` as the predictor.  
-2. Fit a more complex model using both `study_hours` and `part_time_job` as predictors.  
-3. Perform an F-test using the `anova()` function to compare the models.  
-4. Include the code, F-statistic, p-value, and your interpretation.  
+1. Conduct a power analysis using a two-sample t-test, assuming a sample size of 30 per group and a small effect size (Cohen’s d = 0.2).  
+2. Compare the power when using an alpha of 0.10 versus 0.05.  
+3. Discuss the trade-offs of using a higher significance level and how it affects Type I error.
 
 ```{r}
-# Data for regression analysis
-study_hours <- c(2, 4, 6, 8, 10, 12, 14, 16, 18)
-part_time_job <- c(0, 1, 0, 1, 0, 1, 0, 1, 0)
-exam_score <- c(55, 60, 62, 70, 72, 78, 80, 85, 87)
+# Power analysis with alpha = 0.05
+power_alpha_05 <- pwr.t.test(n = 30, d = 0.2, sig.level = 0.05, type = "two.sample")
 
-# Fit simple model
-model1 <- lm(exam_score ~ study_hours)
+# Power analysis with alpha = 0.10
+power_alpha_10 <- pwr.t.test(n = 30, d = 0.2, sig.level = 0.10, type = "two.sample")
 
-# Fit more complex model
-model2 <- lm(exam_score ~ study_hours + part_time_job)
-
-# Perform F-test to compare models
-anova(model1, model2)
+# Output the results
+power_alpha_05
+power_alpha_10
 ```
 
-### Exercise 4: Visualizing the F-Distribution
+### Exercise 3: Exploring Type I Error and Significance Level
 
-**Objective**: Visualize the F-distribution with different degrees of freedom in R. Discuss how the shape of the F-distribution affects the critical value used in the F-test.  
+- **Power Interpretation**:
+  - **Alpha = 0.05**: Power might be around 0.17, which is quite low.
+  - **Alpha = 0.10**: Power might increase to around 0.26.
+  - **Trade-Off Discussion**: Increasing alpha increases the power of the study but also raises the risk of committing a Type I error (false positive). The trade-off between sensitivity and specificity must be carefully considered based on the study's goals.
+
+
+### Exercise 4: Analyzing the Impact of Effect Size on Power
+
+**Scenario**:  
+You are conducting a study to examine the relationship between exercise frequency and happiness levels among adults. You are uncertain about the effect size, so you want to explore how different effect sizes impact the power of your study.  
 
 **Tasks**:  
-1. Plot the F-distribution in R using different degrees of freedom.  
-2. Observe how the shape of the F-distribution changes with different degrees of freedom.  
-3. Include the plots and a brief discussion in your .rmd file.  
+1. Conduct power analyses for three different effect sizes (Cohen’s d = 0.2, 0.5, 0.8) using a sample size of 50 per group and an alpha of 0.05.  
+2. Interpret how changes in effect size influence the power of your study.
 
 ```{r}
-# Load ggplot2
-library(ggplot2)
+# Power analysis with small effect size (d = 0.2)
+power_small_effect <- pwr.t.test(n = 50, d = 0.2, sig.level = 0.05, type = "two.sample")
 
-# Define F-values
-f_values <- seq(0, 4, length.out = 100)
+# Power analysis with medium effect size (d = 0.5)
+power_medium_effect <- pwr.t.test(n = 50, d = 0.5, sig.level = 0.05, type = "two.sample")
 
-# Plot F-distribution for different degrees of freedom
-plot_df <- data.frame(
-  F_Values = f_values,
-  DF1_4_DF2_15 = df(f_values, df1 = 4, df2 = 15),
-  DF1_8_DF2_30 = df(f_values, df1 = 8, df2 = 30)
-)
+# Power analysis with large effect size (d = 0.8)
+power_large_effect <- pwr.t.test(n = 50, d = 0.8, sig.level = 0.05, type = "two.sample")
 
-ggplot(plot_df, aes(x = F_Values)) +
-  geom_line(aes(y = DF1_4_DF2_15, color = "DF1 = 4, DF2 = 15")) +
-  geom_line(aes(y = DF1_8_DF2_30, color = "DF1 = 8, DF2 = 30")) +
-  labs(title = "F-Distribution for Different Degrees of Freedom",
-       x = "F-Value",
-       y = "Density",
-       color = "Degrees of Freedom") +
-  theme_minimal()
+# Output the results
+power_small_effect
+power_medium_effect
+power_large_effect
 ```
 
-### Exercise 5: Comprehensive Analysis
+- **Power Interpretation**:
+  - **Small Effect Size (d = 0.2)**: Power might be around 0.21, indicating low power.
+  - **Medium Effect Size (d = 0.5)**: Power might increase to around 0.80, which is adequate.
+  - **Large Effect Size (d = 0.8)**: Power might be around 0.99, indicating very high power.
+  - **Conclusion**: Larger effect sizes require smaller sample sizes to achieve high power, while small effect sizes require much larger samples to ensure adequate power. 
 
-**Objective**: Conduct a comprehensive analysis that includes a Chi-Square test, R-squared calculation, and an F-test. Use the provided dataset and write a summary report of your findings.  
+### Exercise 5: Conducting a Power Analysis for a Correlational Study
 
-**Dataset**:  
-- **Observed frequencies**: `observed_frequencies <- c(25, 40, 35)`  
-- **Expected frequencies**: `expected_frequencies <- c(33.3, 33.3, 33.3)`  
-- **Independent variable**: `study_time <- c(5, 6, 7, 8, 9, 10, 11, 12, 13)`  
-- **Dependent variable**: `stress_levels <- c(7, 8, 6, 7, 8, 9, 10, 11, 12)`  
-- **Additional predictor**: `exercise_hours <- c(2, 3, 1, 4, 2, 3, 5, 6, 4)`  
+**Scenario**:  
+You are interested in studying the correlation between daily social media use and levels of anxiety among teenagers. You expect a small to moderate correlation (r = 0.25) and want to achieve 90% power with a significance level of 0.05.  
 
-**Tasks**:  
-1. Perform a Chi-Square goodness of fit test using the observed and expected frequencies.  
-2. Fit a regression model and calculate R-squared using `study_time` to predict `stress_levels`.  
-3. Compare two models using the F-test by adding `exercise_hours` as an additional predictor.  
-4. Include all code, output, and a summary interpretation in your .rmd file.  
+**Tasks**:
+1. Use R to determine the required sample size for the study.  
+2. Explain the importance of having a sufficient sample size in correlational studies and how it impacts your ability to detect a true relationship.
 
-*Chi-Square Test*:
 ```{r}
-observed_frequencies <- c(25, 40, 35)
-expected_frequencies <- c(33.3, 33.3, 33.3)
+# Power analysis for correlational study
+sample_size_corr <- pwr.r.test(r = 0.25, power = 0.90, sig.level = 0.05)
 
-chi_square_test <- chisq.test(observed_frequencies, p = expected_frequencies / sum(expected_frequencies))
-chi_square_test
+# Output the result
+sample_size_corr
 ```
 
-*R-Squared Calculation*:
-```{r}
-study_time <- c(5, 6, 7, 8, 9, 10, 11, 12, 13)
-stress_levels <- c(7, 8, 6, 7, 8, 9, 10, 11, 12)
-
-model <- lm(stress_levels ~ study_time)
-summary(model)$r.squared
-```
-
-*F-Test*:
-```{r}
-exercise_hours <- c(2, 3, 1, 4, 2, 3, 5, 6, 4)
-
-model1 <- lm(stress_levels ~ study_time)
-model2 <- lm(stress_levels ~ study_time + exercise_hours)
-
-anova(model1, model2)
-```
+- **Sample Size Interpretation**: The required sample size might be around 132 participants to achieve 90% power. This larger sample size is necessary to reliably detect a small to moderate correlation, ensuring that the study can identify a significant relationship between social media use and anxiety if it exists.
 
 
 **Submission Instructions:**

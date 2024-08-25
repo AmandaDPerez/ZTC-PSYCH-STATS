@@ -921,7 +921,7 @@ abline(h = 0, col = "red", lwd = 2)
 
 ## Answers to Chapter 11 Practice Exercises
 
-### Exercise 1:
+### Exercise 1: Fit the Multiple Regression
 
 ```{r}
 # Sample data
@@ -938,7 +938,7 @@ summary(model)
 -   **Main Effects**: The coefficients for `Study_Time`, `Sleep_Quality`, and `Stress_Levels` represent their unique contributions to predicting `Academic_Performance`.
     -   If `Study_Time` has a coefficient of 1.96, it means that for each additional hour of study, `Academic_Performance` increases by 1.96 points, holding other variables constant.
 
-### Exercise 2:
+### Exercise 2: Compare Bivariate vs Multivariate
 
 ```{r}
 # Sample data
@@ -958,7 +958,7 @@ summary(model_multiple)
 -   **Suppression Effect**: If the coefficient for `Study_Time` increases after adding `Stress_Levels` to the model, it suggests that `Stress_Levels` was suppressing the true relationship between `Study_Time` and `Academic_Performance`.
     -   The increase in the coefficient indicates that `Study_Time` has a stronger relationship with `Academic_Performance` when accounting for `Stress_Levels`.
 
-### Exercise 3:
+### Exercise 3: Plot Sleep Quality
 
 ```{r}
 # Sample data
@@ -989,7 +989,7 @@ ggplot(data.frame(Sleep_Quality, Academic_Performance), aes(x = Sleep_Quality, y
 
 -   **Interpretation of Plot**: The partial regression plot shows the relationship between `Sleep_Quality` and `Academic_Performance`, controlling for other variables. A positive trend line suggests that better sleep quality is associated with higher academic performance, even when controlling for study time and stress levels.
 
-### Exercise 4:
+### Exercise 4: Bivariate vs Multivariate
 
 ```{r}
 # Sample data
@@ -1190,7 +1190,110 @@ ggplot(data, aes(x = Experience, y = Salary)) +
 -   **Discussion**:
     -   The **interaction plot** is best for showing how a continuous variable interacts with a categorical variable.
 
-## Answers to Chapter 15 Practice Exercises
+## Answers to Chapter 13 Practice Exercises
+
+
+### Exercise 1: Fitting a Logistic Regression Model
+**Task**: Using the provided dataset, fit a logistic regression model to predict whether a person survived the Titanic disaster (`Survived`), based on the predictors `Sex`, `Age`, and `Pclass`. Interpret the exponentiated coefficients (odds ratios) for each predictor.
+
+```{r, warning = F, message = F}
+# Load necessary packages
+library(dplyr)
+
+# Generate a new example dataset with significant effects
+set.seed(123)
+titanic_data <- data.frame(
+  Survived = rbinom(800, 1, prob = 0.5),
+  Sex = factor(sample(c("Male", "Female"), 800, replace = TRUE)),
+  Age = sample(0:95, 800, replace = TRUE),
+  Pclass = factor(sample(1:3, 800, replace = TRUE), levels = c("1", "2", "3"))
+)
+
+# Adjust the dataset to create significant relationships
+titanic_data$Survived[titanic_data$Age > 10] <- rbinom(sum(titanic_data$Age > 10), 1, prob = 0.1)
+titanic_data$Survived[titanic_data$Age <= 10] <- rbinom(sum(titanic_data$Age <= 10), 1, prob = 0.9)
+titanic_data$Survived[titanic_data$Sex == "Female"] <- rbinom(sum(titanic_data$Sex == "Female"), 1, prob = 0.7)
+titanic_data$Survived[titanic_data$Pclass == "1"] <- rbinom(sum(titanic_data$Pclass == "1"), 1, prob = 0.8)
+titanic_data$Survived[titanic_data$Pclass == "3"] <- rbinom(sum(titanic_data$Pclass == "3"), 1, prob = 0.2)
+
+# Ensure Pclass has "1" as the reference level
+titanic_data$Pclass <- relevel(titanic_data$Pclass, ref = "1")
+
+# Fit the logistic regression model
+model <- glm(Survived ~ Sex + Age + Pclass, data = titanic_data, family = binomial)
+
+# Exponentiate coefficients to get odds ratios
+odds_ratios <- exp(coef(model))
+conf_int <- exp(confint(model))
+
+# Display the results
+summary(model)
+odds_ratios
+conf_int
+
+```
+- **Interpretation**:
+  - **Sex (Female vs. Male)**: Females have higher odds of surviving compared to males.
+  - **Age**: Older age  decreases the odds of survival.
+  - **Pclass (1st vs. 2nd/3rd)**: Passengers in 1st class have significantly higher odds of survival compared to those in 2nd or 3rd class.
+
+###  Exercise 2: Visualizing Logistic Regression Results
+**Task**: Create a plot to visualize the predicted probabilities of survival (`Survived`) based on `Age`. Use the `ggplot2` package to plot the logistic regression curve.
+
+```{r}
+# Load necessary packages
+library(ggplot2)
+
+# Generate predicted probabilities
+titanic_data$predicted_prob <- predict(model, newdata = titanic_data, type = "response")
+
+# Plot the logistic regression curve
+ggplot(titanic_data, aes(x = Age, y = predicted_prob)) +
+  geom_point(alpha = 0.5) +
+  geom_smooth(method = "glm", method.args = list(family = binomial), color = "blue") +
+  labs(title = "Predicted Probability of Survival by Age",
+       x = "Age", y = "Predicted Probability") +
+  theme_minimal()
+```
+
+  - The logistic regression curve shows that as age increases, the predicted probability of survival decreases, illustrating the negative impact of age on survival.
+  
+### Exercise 3: Interpreting Odds Ratios
+**Task**: Interpret the odds ratios obtained in Exercise 1. Specifically, discuss the practical significance of the odds ratios for `Sex`, `Age`, and `Pclass` in predicting survival on the Titanic.
+
+```{r}
+# Odds ratios interpretation (example text)
+# Odds ratio for Sex (Female vs. Male): If the odds ratio for 'Female' is 2.5, it means that females were 2.5 times more likely to survive compared to males, holding all other factors constant.
+
+```
+
+- **Odds Ratios**:
+  - **Sex**: An odds ratio greater than 1 for females suggests they were more likely to survive than males.
+  - **Age**: A value slightly less than 1 indicates that increasing age decreases survival odds.
+  - **Pclass**: Higher class status increases the likelihood of survival.
+  
+### Exercise 4: Checking Model Fit
+**Task**: Assess the fit of the logistic regression model you fitted in Exercise 1. Plot an ROC curve. Discuss the ROC.
+
+```{r}
+# Load necessary packages
+library(ResourceSelection)
+library(pROC)
+
+# ROC curve
+roc_curve <- roc(titanic_data$Survived, titanic_data$predicted_prob)
+
+# Plot ROC curve
+plot(roc_curve, col = "blue", main = "ROC Curve for Titanic Survival Model")
+auc(roc_curve)
+
+
+```
+
+- **ROC Curve**: AUC value closer to 1 indicates good model performance. For example, an AUC of 0.85 suggests good discriminative ability.
+
+
+## Answers to Chapter 14 Practice Exercises
 
 ### Exercise 1: Chi-Square Goodness of Fit Test
 
@@ -1312,7 +1415,7 @@ anova(model1, model2)
 
 **Interpretation**: Write a comprehensive report summarizing the findings from the Chi-Square test, R-squared calculation, and F-test. Discuss how these results contribute to understanding the factors influencing the dependent variables and the overall goodness of fit for the models.
 
-## Answers to Chapter 16 Practice Exercises
+## Answers to Chapter 15 Practice Exercises
 
 ### Exercise 1: Power Calculation Interpretation
 
