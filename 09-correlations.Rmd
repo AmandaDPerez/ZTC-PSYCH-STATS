@@ -120,7 +120,7 @@ Pearson's r ranges from -1 to +1, and this range tells you a lot:
 
 ### Step-by-Step Guide to Calculating Correlation in R
 
-Calculating Pearson's r in R is straightforward, and it only requires a single function: `cor()`. Let's walk through a simple example to illustrate how to do this.
+Calculating Pearson's r in R is straightforward, and it only requires a single function: `cor.test()`. Let's walk through a simple example to illustrate how to do this.
 
 **Example: Calculating the Correlation Between Study Time and Exam Scores**
 
@@ -134,7 +134,7 @@ study_time <- c(2, 4, 6, 8, 10)
 exam_scores <- c(50, 55, 60, 65, 70)
 
 # Calculate Pearson's correlation coefficient
-correlation <- cor(study_time, exam_scores)
+correlation <- cor.test(study_time, exam_scores)
 correlation
 ```
 
@@ -265,8 +265,8 @@ stress <- c(7, 6, 5, 4, 3)
 sleep_quality <- c(60, 65, 70, 75, 80)
 
 # Calculate correlation in both directions
-cor(stress, sleep_quality)
-cor(sleep_quality, stress)
+cor.test(stress, sleep_quality)
+cor.test(sleep_quality, stress)
 ```
 
 **Interpretation**: In this example, the correlation between stress and sleep quality is -1, indicating a perfect negative correlation. However, note that the correlation value is the same regardless of whether stress is considered the independent variable and sleep quality the dependent variable or vice versa. This demonstrates that the order in which you analyze the variables does not affect the correlation value---highlighting the lack of directionality in correlation.

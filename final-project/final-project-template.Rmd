@@ -1,0 +1,146 @@
+---
+title: "Final Project: [Your Research Title Here]"
+author: "[Your Name Here]"
+date: "[Due Date Here]"
+output: pdf_document
+---
+
+# Introduction
+
+Provide a brief introduction to your research question. Explain the significance of the topic and why it is important in the field of psychology. Summarize the two empirical articles you reviewed, highlighting how they set up your research question.
+
+## Literature Review
+
+### Article 1 Summary
+Summarize the first empirical article. Discuss the key findings and how they relate to your research question.
+
+### Article 2 Summary
+Summarize the second empirical article. Discuss the key findings and how they relate to your research question.
+
+# Hypothesis
+
+State your directional hypothesis. Specify the expected relationship between your variables. This section should be clear and concise.
+
+# Method
+
+## Sample
+Describe the sample used in your study. Include details about the population, sample size, and any relevant demographic information.
+
+## Variables and Operationalization
+List your independent and dependent variables. Explain how each variable was operationalized, including the range for continuous variables and levels for categorical variables.
+
+## Loading Required Libraries
+
+```{r, warning = F, message = F}
+# Load necessary libraries
+library(ggplot2)
+library(dplyr)
+library(psych)
+library(effsize)
+library(pwr)
+library(knitr)
+```
+
+# Descriptive Statistics
+
+Present the descriptive statistics for your variables. Include appropriate measures of central tendency (mean, median, mode), variability (standard deviation, range), and frequency distributions where applicable. Use R code chunks to generate and display your results.
+
+```{r}
+# Example R code for descriptive statistics
+psych::describe(iris)
+psych::describeBy(iris ~ Species)
+```
+
+# Statistical Analysis
+
+## Analysis
+Perform your chosen analysis (Multiple Linear Regression with an Interaction or Logistic Regression with Main Effects) using the provided dataset. Include the R code used for the analysis.
+
+```{r}
+
+```
+
+## Results
+Present the results of your analysis. Interpret the findings and explain whether they support your hypothesis. Use APA format for reporting statistical results.
+
+# Post-hoc Power Analysis
+
+Calculate the effect size of your study and conduct a post-hoc power analysis. Include the R code used for this analysis.
+
+```{r, echo=TRUE}
+# Example R code for post-hoc power analysis
+# Subset the data for Virginica and Setosa species
+virginica <- subset(iris, Species == "virginica")$Sepal.Length
+setosa <- subset(iris, Species == "setosa")$Sepal.Length
+
+# Calculate Cohen's d
+cohen_d_result <- cohen.d(virginica, setosa)
+effect_size <- unname(cohen_d_result$estimate)  # Extract the numeric value
+
+# Perform a power analysis
+# Assuming a two-sample t-test with a significance level of 0.05
+sample_size <- length(virginica) + length(setosa)
+power_result <- pwr.t.test(n = sample_size / 2, d = effect_size, sig.level = 0.05, type = "two.sample")
+
+# Print the result
+print(power_result)
+```
+
+Interpret the findings of your post-hoc power analysis. Discuss whether your study had sufficient power given the sample size and observed effect size.
+
+# Tables and Graphs
+
+Include at least one table and one graph that effectively summarize your analysis and findings. Use R code chunks to generate these visualizations.
+
+```{r, echo=TRUE}
+# Example R code for creating a table
+# Create a summary table by Species
+summary_table <- iris %>%
+  group_by(Species) %>%
+  summarise(
+    Sepal.Length.Mean = mean(Sepal.Length),
+    Sepal.Length.SD = sd(Sepal.Length),
+    Sepal.Length.Min = min(Sepal.Length),
+    Sepal.Length.Max = max(Sepal.Length)
+  )
+
+# Display the table using knitr::kable()
+kable(summary_table, caption = "Descriptive Statistics for Iris Sepal Length by Species")
+
+```
+
+
+```{r, warning = F, message = F}
+#Example R code for creating a graph
+
+# Calculate mean and standard error for Sepal Length by Species
+summary_stats <- iris %>%
+  group_by(Species) %>%
+  summarise(
+    Sepal.Length.Mean = mean(Sepal.Length),
+    Sepal.Length.SEM = sd(Sepal.Length) / sqrt(n())
+  )
+
+# Create the ggplot
+ggplot(summary_stats, aes(x = Species, y = Sepal.Length.Mean)) +
+  geom_bar(stat = "identity", fill = "skyblue", color = "black") +
+  geom_errorbar(aes(ymin = Sepal.Length.Mean - Sepal.Length.SEM, ymax = Sepal.Length.Mean + Sepal.Length.SEM), 
+                width = 0.2, color = "black") +
+  labs(title = "Mean Sepal Length by Species", 
+       x = "Species", 
+       y = "Mean Sepal Length") +
+  theme_minimal()
+
+```
+
+# Discussion
+
+Discuss the implications of your results for psychological theory or practice. Address the following points:
+
+- **Implications:** What do your findings mean in the context of existing research?
+- **Limitations:** Identify any limitations of your study. How might these limitations have affected your results?
+- **Future Directions:** Suggest potential future research directions based on your findings.
+
+# References
+
+List all references in APA format. Include the two articles you reviewed and any other sources used in your analysis.

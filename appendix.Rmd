@@ -784,7 +784,7 @@ study_hours <- c(2, 4, 6, 8, 10)
 exam_scores <- c(50, 55, 60, 65, 70)
 
 # Calculate Pearson's correlation coefficient
-correlation <- cor(study_hours, exam_scores)
+correlation <- cor.test(study_hours, exam_scores)
 correlation
 ```
 
